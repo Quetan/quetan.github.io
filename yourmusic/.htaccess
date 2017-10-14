@@ -1,7 +1,0 @@
-DirectoryIndex index.html
-ErrorDocument 403 /403.php
-ErrorDocument 404 /404.php
-ErrorDocument 500 /500.php
-RewriteEngine on RewriteCond %{ HTTP_REFERER}! ^$ RewriteCond %{ HTTP_REFERER}! ^http ://( www\.)?quetan.github.io/.*$ [NC] RewriteRule \. (gif|jpg|js|css)$ - [F]
-RewriteRule \. (jpg|png|gif)$ [NC, R, L]
-AddType application/octet-stream .doc .mov .avi .pdf .xls .mp4
