@@ -1,27 +1,3 @@
-DirectoryIndex index.html
-ErrorDocument 403 /403.php
-ErrorDocument 404 /404.php
-ErrorDocument 500 /500.php
-RewriteEngine on RewriteCond %{ HTTP_REFERER}! ^$ RewriteCond %{ HTTP_REFERER}! ^http ://( www\.)?quetan.github.io/.*$ [NC] RewriteRule \. (gif|jpg|js|css)$ - [F]
-RewriteRule \. (jpg|png|gif)$ [NC, R, L]
-AddType application/octet-stream .doc .mov .avi .pdf .xls .mp4
-
-<IfModule mod_deflate.c>
-  <IfModule mod_filter.c>
-      AddOutputFilterByType DEFLATE text/plain text/html
-      AddOutputFilterByType DEFLATE text/css
-      AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
-      AddOutputFilterByType DEFLATE text/xml application/xml application/xhtml+xml application/rss+xml
-      AddOutputFilterByType DEFLATE application/json
-      AddOutputFilterByType DEFLATE application/vnd.ms-fontobject application/x-font-ttf font/opentype image/svg+xml image/x-icon
-  </ifModule>
-</IfModule>
-<IfModule mod_expires.c>
-  <Filesmatch "\.(jpg|jpeg|png|gif|js|css|swf|ico|woff|mp3)$">
-      ExpiresActive on
-      ExpiresDefault "access plus 365 days"
-  </Filesmatch>
-</IfModule>
 # кеширование в браузере пользователя
 
 <IfModule mod_expires.c>
@@ -45,7 +21,7 @@ ExpiresByType application/x-shockwave-flash "access 1 year"
 <ifModule mod_headers.c>
 
 # 30 суток
-<filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+<filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|swf|woff)$">
 Header set Cache-Control "max-age=2592000, public"
 </filesMatch>
 
@@ -65,3 +41,15 @@ Header set Cache-Control "max-age=172800, private, must-revalidate"
 </filesMatch>
 
 </ifModule>
+
+<IfModule mod_deflate.c>
+  <IfModule mod_filter.c>
+      AddOutputFilterByType DEFLATE text/plain text/html
+      AddOutputFilterByType DEFLATE text/css
+      AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+      AddOutputFilterByType DEFLATE text/xml application/xml application/xhtml+xml application/rss+xml
+      AddOutputFilterByType DEFLATE application/json
+      AddOutputFilterByType DEFLATE application/vnd.ms-fontobject application/x-font-ttf font/opentype image/svg+xml image/x-icon
+  </ifModule>
+
+
