@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+				<script> 
+    function showContent(link) { 
+        var cont = document.getElementById('content'); 
+        var loading = document.getElementById('loading'); 
+        cont.innerHTML = loading.innerHTML;   
+        var http = createRequestObject(); 
+        if( http )  
+        { http.open('get', link); 
+            http.onreadystatechange = function ()  
+            {   if(http.readyState == 4)  
+                {   cont.innerHTML = http.responseText;  }    } 
+            http.send(null);  } 
+        else  
+        {  document.location = link;   }   } 
+    // ajax объект
+    function createRequestObject()  
+    {  try { return new XMLHttpRequest() } 
+        catch(e)  
+        {  try { return new ActiveXObject('Msxml2.XMLHTTP') } 
+            catch(e)  
+            {   try { return new ActiveXObject('Microsoft.XMLHTTP') } 
+                catch(e) { return null; }   } } } 
+</script>
+
+
+		<title>Download</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body class="loading">
+		<div id="content">
+    <!-- CONTENT -->
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+				<script>
+					showContent('buy.html') // страница по умолчанию
+				</script>
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Download project <i class="fa fa-usd" aria-hidden="true"></i></h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus laboriosam soluta quae vitae est recusandae, sit dignissimos ratione voluptatibus eligendi, esse quia eum ea! A excepturi error quae accusantium illo.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aliquam a debitis expedita doloribus, reiciendis minima labore at, consequuntur non nemo laboriosam qui esse quasi eaque? Animi quia autem quisquam.</p>
+
+						
+							<nav>
+							<ul>
+								<li><a href="#" onClick="showContent('buy.html')" class="icon fa-download"><span class="label">download</span></a></li>
+								<li><a href="/index.html" onClick="showContent('index.html')" class="icon fa-angle-left"><span class="label">Turn Back</span></a></li>
+							</ul>
+						</nav>
+					
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+									
+	
+					</footer>
+
+			</div>
+		</div>
+		</div> 
+<!--//-->
+<div id="loading" style="display: none"> 
+    Идет загрузка... 
+    </div> 
+		<script>
+			window.onload = function() { document.body.className = ''; }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+				<script> 
+    function showContent(link) { 
+        var cont = document.getElementById('content'); 
+        var loading = document.getElementById('loading'); 
+        cont.innerHTML = loading.innerHTML;   
+        var http = createRequestObject(); 
+        if( http )  
+        { http.open('get', link); 
+            http.onreadystatechange = function ()  
+            {   if(http.readyState == 4)  
+                {   cont.innerHTML = http.responseText;  }    } 
+            http.send(null);  } 
+        else  
+        {  document.location = link;   }   } 
+    // ajax объект
+    function createRequestObject()  
+    {  try { return new XMLHttpRequest() } 
+        catch(e)  
+        {  try { return new ActiveXObject('Msxml2.XMLHTTP') } 
+            catch(e)  
+            {   try { return new ActiveXObject('Microsoft.XMLHTTP') } 
+                catch(e) { return null; }   } } } 
+</script>
+
+
+		<title>More</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body class="loading">
+		<div id="content">
+    <!-- CONTENT -->
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+				<script>
+					showContent('more.html') // страница по умолчанию
+				</script>
+
+				<!-- Header -->
+					<header id="header">
+						<h1>We love you! <i class="fa fa-heart " aria-hidden="true"></i></h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus laboriosam soluta quae vitae est recusandae, sit dignissimos ratione voluptatibus eligendi, esse quia eum ea! A excepturi error quae accusantium illo.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aliquam a debitis expedita doloribus, reiciendis minima labore at, consequuntur non nemo laboriosam qui esse quasi eaque? Animi quia autem quisquam.</p>
+
+						
+							<nav>
+							<ul>
+								<li><a href="/about.html" onClick="showContent('about.html')" class="icon fa-diamond"><span class="label">About Us</span></a></li>
+								<li><a href="/news.html" onClick="showContent('news.html')" class="icon fa-newspaper-o"><span class="label">News</span></a></li>
+								<li><a href="/videos.html" onClick="showContent('videos.html')" class="icon fa-youtube-play"><span class="label">YouTube Lessons</span></a></li>
+								<li><a href="#" onClick="showContent('buy.html')" class="icon fa-download"><span class="label">download</span></a></li>
+								<li><a href="/index.html" onClick="showContent('index.html')" class="icon fa-angle-left"><span class="label">Back</span></a></li>
+							</ul>
+						</nav>
+					
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+									
+	
+					</footer>
+
+			</div>
+		</div>
+
+		</div> 
+<!--//-->
+	<div id="loading" style="display: none"> 
+    Идет загрузка... 
+    </div> 
+		<script>
+			window.onload = function() { document.body.className = ''; }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
