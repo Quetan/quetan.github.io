@@ -128,11 +128,11 @@ footer h4 {
 
 }
 .fav_sub {
-    float: right;
+    float: left;
     border: 1px solid black;
     border-radius: 15px;
      margin: 30px;
-     margin-right: 25%;
+     margin-left: 15%;
      padding: 30px;
      padding-top: 5px;
      padding-left: 0px;
