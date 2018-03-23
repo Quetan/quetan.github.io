@@ -121,10 +121,8 @@ footer h4 {
     border: 1px solid black;
     border-radius: 15px;
     margin: 30px;
-    margin-left: 25%;
-     padding: 30px;
-     padding-top: 5px;
-     padding-left: 0px;
+    margin-left: 20%;
+    padding: 5px 30px 30px 0px;
 
 }
 .fav_sub {
@@ -132,10 +130,10 @@ footer h4 {
     border: 1px solid black;
     border-radius: 15px;
      margin: 30px;
-     margin-left: 15%;
-     padding: 30px;
-     padding-top: 5px;
-     padding-left: 0px;
+     margin-left: 25%;
+     padding: 5px 30px 30px 0px;
+     
+     
 }
 .video {
     position: relative;
