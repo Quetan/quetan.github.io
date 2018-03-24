@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <!--  ViewVersion -->
+      <script type="text/javascript" src="http://insideonline.ru/free_versia_dla_slabovidyashih/special.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- jQuerry -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Hello, world!</title>
+  </head>
+<!-- View -->
+<div id="infobardm">
+<div class="eye">
+Размер шрифта: 
+<a onclick="dmfunctsizeone();" class="dmchangea1">A</a>
+<a onclick="dmfunctsizetwo();" class="dmchangea2">A</a>
+<a onclick="dmfunctsizethree();" class="dmchangea3">A</a>
+</div>
+<div class="eye">
+Изображения <a onclick="dmdisableimage();" class="dmdisableimage">Выключить</a>
+<a onclick="dmenableimage();" class="dmenableimage">Включить</a>
+</div>
+<div class="eye">
+Цвет сайта <a onclick="dmcolor1();" class="dmcolor1">Ц</a>
+<a onclick="dmcolor2();" class="dmcolor2">Ц</a>
+<a onclick="dmcolor3();" class="dmcolor3">Ц</a>
+</div>
+<a onclick="dmreset();" class="dmcolor4">
+<i class="fa fa-eye-slash" aria-hidden="true"></i>
+обычная версия сайта
+</a>
+</div>
+
+<!-- END OF SCRIPT -->
+
+  <body>
+      <!-- HEADER -->
+      <header>
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-2 header_logo">
+                      <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                  </div>
+
+                <div class="col-lg-7 header_text">
+                    <h1>Сайт учителя начальных классов</h1>
+                  </div>
+                
+                <div class="col-lg-3 header_contact">
+                    <i class="far fa-envelope mail"></i><span>   korkina1975@mail.ru</span>
+                </div>
+              </div>
+
+          </div>
+    <!--View Version -->
+<div class="container-fluid viewVersion">
+            <div class="uk-panel">
+        <a href="/<?= $_SERVER['REQUEST_URI'] ?>" onclick="dmuGostSettings();" id="enableuGost">
+        <button class="sscf-popup">
+        <i class="fa fa-eye" aria-hidden="true"></i>
+        версия сайта для слабовидящих
+        </button>
+        </a>
+        </div>
+</div>
+     </header>
+     <!--NAVIGATION -->
+<navbar>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Меню</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Главная <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Обо мне</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Наш класс</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Для Вас, ребята!</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>       
+</navbar>
+<!-- CONTENT -->
+<div class="container content">
+<div class="row">
+    <div class="col col-lg-8 block main_block">
+        <h2>Коркина Светлана Александровна</h2>
+        <img src="https://korkinablog.files.wordpress.com/2017/01/d181d0bdd0b8d0bcd0bed0ba.png" alt="main_photo" align="left">        
+        <p>Приветствую Вас на моем сайте! <br> Меня зовут 
+        <a href="about.html">Коркина Светлана Александровна</a>,<br>я — учитель начальных классов МБОУ НОШ №1 <br> г. Оби Новосибирской области.</p>
+    </div>
+<!-- ADVERTISES -->
+    <div class="col-lg-3 adv">
+        <div class="row">
+            <div class="container-fluid adv_school">
+                        <h3>Наша школа</h3>
+                <a href="http://s_1.g_ob.edu54.ru/">
+                <img src="https://korkinablog.files.wordpress.com/2017/01/d18bd181d180d189d189d0b4.jpg?w=840&h=593" alt="school">
+                </a>  
+                <span>Сайт школы №1</span>
+            </div>
+            <div class="container-fluid adv_loc">
+                <h3>Наше местоположение</h3>
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2288.6704829551195!2d82.69256941590129!3d54.9964111803579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42e00a25262a8c83%3A0xdaaf701d7754633b!2sUlitsa+Zhko+Aeroporta%2C+32%2C+Ob&#39;%2C+Novosibirskaya+oblast&#39;%2C+633103!5e0!3m2!1sen!2sru!4v1521886940486" 
+                    width="220" height="200" frameborder="0" 
+                    style="border:0" allowfullscreen>
+                    </iframe>
+                <br><span>г.Обь</span>
+            </div>
+    </div>
+
+    </div> 
+<!-- END OF ADVERTISES --> 
+
+</div>
+</div>
+<!-- END OF CONTENT -->
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <hr>
+                <span>Made by Korkin Kirill</span>
+            </div>
+        </div>
+    
+    </div>
+</footer>
+
+    <!-- Optional JavaScript -->
+
+    <!--FontAwesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="/js/uGost11.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
