@@ -47,9 +47,19 @@ header h2 {
 }
 .block {
     background-color: #fff;
-    padding: 10px;
+    padding-left: 30px;
     margin: 30px;
     text-align: left;
+    padding-right: 30px;
+
+}
+.block h2 {
+    margin-top: 20px;
+}
+.block_header {
+padding-left: 10%;
+    width:90%;
+    margin-bottom: 20px;
 }
 .car {
     padding: 30px; 
@@ -76,6 +86,7 @@ font-size: 1.3em;
     color: white;
 
 }
+.adv h3 {font-size: 1.4em;}
 .adv_school {
     background-image: url("../img/adv_texture.jpg");
     background-repeat: repeat-x;
@@ -117,4 +128,45 @@ footer{
 .about img {
     width: 60%;
 }
+/*PORTFOLIO*/
+.portfolio {
+ text-align: center;
+}
+/*ACHIEVMENTS*/
+.achievments {
+    text-align: center;
+}
+.achievments img{
+    width:100%;
+}
+/*FOR KIDS */
+for_kids img{
+    width: 100%;
+}
+.for_parents h4{
+    text-align: center;
+}
+.my_projects{
+    text-align: center;
+}
+.out_classes_into {
+    border: 1px gray solid;
+    border-radius: 15px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.out_classes_into img{
+    margin: 0px;
+
+}
+.out_classes_into a{
+    text-align: center;
+
+}
+.out_classes_into h3{
+ text-align: center;
+ margin-bottom: 10px;
+}
+
 

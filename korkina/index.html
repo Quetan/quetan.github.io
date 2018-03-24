@@ -8,21 +8,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
-    <link rel="import" href="header.html">
 
     <title>Сайт учителя начальных классов</title>
   </head>
   <body>
       <!-- HEADER -->
-    <script>
-    var doc = document.querySelector('link[rel="import"]').import;
-    // Grab DOM from doc.html's document.
-    var text = doc.querySelector('.header');
-    document.body.appendChild(text.cloneNode(true));
-    </script>
-      <!-- FineView-->
-   <div id="finevision_banner" onclick="finevision.activate_navbar()" style="cursor: pointer; z-index: 9999; background: rgb(255, 255, 255); border: 2px solid rgb(0, 0, 0); float: left; position: fixed; top: 0px; left: 0px; right: auto;"><img width="90" src="http://finevision.ru/static/banner2.jpg"><script src="http://finevision.ru/static/js/finevision_banner.js"></script></div>
-      <!--END of FineView-->
       <header>
           <div class="container">
               <div class="row">
@@ -33,6 +23,9 @@
                 
                 <div class="col-lg-3 header_contact">
                     <i class="far fa-envelope mail"></i><span>   korkina1975@mail.ru</span>
+ <!-- FineView-->
+  <div id="finevision_banner" onclick="finevision.activate_navbar()" style="cursor: pointer; z-index: 9999; background: rgb(255, 255, 255); border: 2px solid rgb(0, 0, 0); float: right; top: 0px;"><img width="100" src="http://finevision.ru/static/banner2.jpg"><script src="http://finevision.ru/static/js/finevision_banner.js"></script></div>
+      <!--END of FineView-->
                 </div>
               </div>
 
@@ -40,7 +33,7 @@
      </header>
      <!--NAVIGATION -->
 <navbar>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <a class="navbar-brand" href="#">Меню</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -50,16 +43,35 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.html">Главная <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about.html">Обо мне</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/about.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Обо мне
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="about.html">Обо мне</a>
+          <a class="dropdown-item" href="portfolio.html">Портфолио</a>
+          <a class="dropdown-item" href="achievements.html">Достижения</a>
+          <a class="dropdown-item" href="ch_achievements.html">Достижения учеников</a>
+        
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Наш класс</a>
+        <a class="nav-link" href="for_kids.html">Для Вас, ребята!</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Для Вас, ребята!</a>
+        <a class="nav-link" href="for_parents.html">В помощь родителям</a>
       </li>
-
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Мои работы
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="my_projects.html">Разработки уроков</a>
+          <a class="dropdown-item" href="out_classes.html">Внеурочная деятельность</a>
+          <a class="dropdown-item" href="off_classes.html">Внекласные мероприятия</a>      
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="our_class.html">Наш класс</a>
+      </li>
     </ul>
   </div>
 </nav>       
@@ -127,9 +139,10 @@
                     </div>
             </div>
 </div>
-</div>
-<!-- END OF CONTENT -->
 
+<!-- END OF CONTENT -->
+</div>
+</div>
 <footer>
     <div class="container-fluid">
         <div class="row">
