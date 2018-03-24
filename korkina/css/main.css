@@ -26,13 +26,6 @@ header {
     font-size: 1.5em;
     padding-top: 25px;
 }
-.viewVersion {
-    width: 100%;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 0px;
-}
 .content img {
     margin: 10px;
     border-radius: 15px;
@@ -43,6 +36,10 @@ header {
     padding: 10px;
     margin: 30px;
     text-align: left;
+}
+.car {
+    padding: 30px; 
+
 }
 .block h2 {
     text-align: center;
