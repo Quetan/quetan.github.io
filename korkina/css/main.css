@@ -41,8 +41,6 @@ header {
 .block {
     background-color: #fff;
     padding: 10px;
-    border: 1px solid gray;
-    border-radius: 15px;
     margin: 30px;
     text-align: left;
 }
