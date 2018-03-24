@@ -5,6 +5,7 @@ body {
     background-image: url("../img/main_bg.jpg");
     background-size: 1000%;
     background-repeat: repeat-y;
+    font-size: 1em;
 }
 header {
     padding-top: 20px;
