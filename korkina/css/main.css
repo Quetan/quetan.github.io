@@ -60,13 +60,13 @@ font-size: 1.3em;
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    color: seagreen;
+    color: white;
 }
 .adv_school {
     background-image: url("../img/adv_texture.jpg");
-    background-size: 110%;
+    background-repeat: repeat-x;
+    background-size: 300%;
     margin-top: 20px;
-    height: 1%;
     border: 1px solid gray;
     border-radius: 15px;
 
@@ -74,10 +74,12 @@ font-size: 1.3em;
 .adv_school img {
     height: 150px;
     width: 200px;
+    margin-right: 0px;
 }
 .adv_loc{
     background-image: url("../img/adv_texture.jpg");
-    background-size: 110%;
+     background-repeat: repeat-x;
+    background-size: 300%;
     margin-top: 30px;
     height: 1%;
     border: 1px solid gray;
