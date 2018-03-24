@@ -126,33 +126,36 @@ footer{
         text-align: left;
 }
 .about img {
-    width: 20%;
+    width: 30%;
 }
 /*PORTFOLIO*/
 .portfolio {
  text-align: center;
 }
-.portfolio img {width: 20%;}
+.portfolio img {width: 30%;}
 /*ACHIEVMENTS*/
 .achievments {
     text-align: center;
 }
 .achievments img{
-    width:20%;
+    width:30%;
 }
 /*CHILDREN'S ACHIEVEMENTS*/
 ch_achievements img{
-    width: 20%;
+    width: 30%;
 }
 /*FOR KIDS */
 for_kids img{
-    width: 20%;
+    width: 30%;
 }
 .for_parents h4{
     text-align: center;
 }
 .my_projects{
     text-align: center;
+}
+.diplom {
+    width: 40%;
 }
 .out_classes_into {
     border: 1px gray solid;
@@ -161,6 +164,7 @@ for_kids img{
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 10px;
+    padding-bottom: 10px;
 }
 .out_classes_into img{
     margin: 0px;
