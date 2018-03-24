@@ -54,7 +54,9 @@ header {
 text-align: left;
 padding-top: 10%;
 font-size: 1.3em;
-
+}
+.main_block img {
+    width: 60%;
 }
 .adv{
     padding-top: 10px;
@@ -99,4 +101,7 @@ footer{
 }
 .about p{
         text-align: left;
+}
+.about img {
+    width: 60%;
 }
