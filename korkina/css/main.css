@@ -13,7 +13,7 @@ header {
 }
 .header_text {
     text-align: center;
-    padding-top: 10%;
+    padding-top: 50px;
 
 }
 .header_logo img{
@@ -24,7 +24,7 @@ header {
 .header_contact {
     text-align: center;
     font-size: 1.5em;
-    padding-top: 17%;
+    padding-top: 25px;
 }
 .viewVersion {
     width: 100%;
