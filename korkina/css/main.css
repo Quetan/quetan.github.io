@@ -10,10 +10,10 @@ header {
     padding-top: 20px;
     background-color: #fff;
     background-image: url("../img/header_bg.png");
-    background-size: 120%;
-    background-repeat: initial;
-    min-height: 200px;
+    background-size: 100%;
+    background-repeat: repeat-x;
     max-height: 400px;
+    min-height: 200px;
 }
 .header_text {
     text-align: center;
@@ -63,6 +63,7 @@ font-size: 1.3em;
     padding-bottom: 10px;
     text-align: center;
     color: white;
+
 }
 .adv_school {
     background-image: url("../img/adv_texture.jpg");
