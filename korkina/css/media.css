@@ -26,7 +26,7 @@ for_kids img{width: 30%;}
     margin-right: 0px;
 }
 .about img {width: 60%;}
-.portfolio img {width: 60%;}
+.portfolio img {width: 50%;}
 .achievments img{width:60%;}
 ch_achievements img{width: 60%;}
 for_kids img{width: 60%;}
@@ -42,7 +42,7 @@ for_kids img{width: 60%;}
     color: black;
 }
 .about img {width: 70%;}
-.portfolio img {width: 70%;}
+.portfolio img {width: 50%;}
 .achievments img{width:70%;}
 ch_achievements img{width: 70%;}
 for_kids img{width: 70%;}
@@ -54,7 +54,7 @@ for_kids img{width: 70%;}
     background-size: 100%;
 }
 .about img {width: 100%;}
-.portfolio img {width: 100%;}
+.portfolio img {width: 50%;}
 .achievments img{width:100%;}
 ch_achievements img{width: 100%;}
 for_kids img{width: 100%;}
