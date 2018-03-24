@@ -16,6 +16,9 @@ header h2 {
     header {
     background-size: 130%;
 }
+.adv{
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 /* Большие девайсы (десктопы, >= 992px)*/
