@@ -1,7 +1,7 @@
 /* Малые девайсы («ландшафтные телефоны», >= 576px) */
 @media (min-width: 576px) { 
 header {
-    background-size: 150%;
+    background-size: 250%;
 }
 .header_contact {
     text-align: center;
@@ -12,7 +12,7 @@ header {
 /* Средние девайсы («таблетки», >= 768px)*/
 @media (min-width: 768px) {
     header {
-    background-size: 120%;
+    background-size: 200%;
 }
 .header_contact {
     text-align: center;
@@ -23,7 +23,7 @@ header {
 /* Большие девайсы (десктопы, >= 992px)*/
 @media (min-width: 992px) {
     header {
-    background-size: 110%;
+    background-size: 150%;
 }
 .header_contact {
     text-align: center;
