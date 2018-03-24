@@ -10,8 +10,8 @@ header {
     padding-top: 20px;
     background-color: #fff;
     background-image: url("../img/header_bg.png");
-    background-size: 100%;
-    background-repeat: repeat-x;
+    background-size: 120%;
+    background-repeat: initial;
     min-height: 200px;
     max-height: 400px;
 }
@@ -91,4 +91,12 @@ font-size: 1.3em;
 footer{
     padding: 10px;
     text-align: center;
+}
+/*ABOUT*/
+.about {
+    padding: 40px;
+    text-align: center;
+}
+.about p{
+        text-align: left;
 }
