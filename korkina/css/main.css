@@ -10,10 +10,19 @@ header {
     padding-top: 20px;
     background-color: #fff;
     background-image: url("../img/header_bg.png");
-    background-size: 500%;
     background-repeat: repeat-x;
+    background-size: 400%;
     max-height: 400px;
     min-height: 200px;
+}
+header h1 {
+    font-size: 2em;
+}
+header h2 {
+ font-size: 1em;
+}
+.header_contact {
+    color: white;
 }
 .header_text {
     text-align: center;
