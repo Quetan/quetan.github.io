@@ -9,6 +9,11 @@ header h1 {
 header h2 {
  font-size: 2em;
 }
+.about img {width: 30%;}
+.portfolio img {width: 30%;}
+.achievments img{width:30%;}
+ch_achievements img{width: 30%;}
+for_kids img{width: 30%;}
 }
 
 /* Средние девайсы («таблетки», >= 768px)*/
@@ -20,6 +25,12 @@ header h2 {
     margin-left: 0px;
     margin-right: 0px;
 }
+.about img {width: 60%;}
+.portfolio img {width: 60%;}
+.achievments img{width:60%;}
+ch_achievements img{width: 60%;}
+for_kids img{width: 60%;}
+}
 
 /* Большие девайсы (десктопы, >= 992px)*/
 @media (min-width: 992px) {
@@ -30,6 +41,11 @@ header h2 {
     text-align: center;
     color: black;
 }
+.about img {width: 70%;}
+.portfolio img {width: 70%;}
+.achievments img{width:70%;}
+ch_achievements img{width: 70%;}
+for_kids img{width: 70%;}
 }
 
 /*Экстрабольшие девайсы (большие десктопы, >= 1200px)*/
@@ -37,5 +53,9 @@ header h2 {
     header {
     background-size: 100%;
 }
-
+.about img {width: 100%;}
+.portfolio img {width: 100%;}
+.achievments img{width:100%;}
+ch_achievements img{width: 100%;}
+for_kids img{width: 100%;}
 }

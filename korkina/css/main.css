@@ -126,27 +126,27 @@ footer{
         text-align: left;
 }
 .about img {
-    width: 60%;
+    width: 20%;
 }
 /*PORTFOLIO*/
 .portfolio {
  text-align: center;
 }
-.portfolio img {width: 60%;}
+.portfolio img {width: 20%;}
 /*ACHIEVMENTS*/
 .achievments {
     text-align: center;
 }
 .achievments img{
-    width:100%;
+    width:20%;
 }
 /*CHILDREN'S ACHIEVEMENTS*/
 ch_achievements img{
-    width: 60%;
+    width: 20%;
 }
 /*FOR KIDS */
 for_kids img{
-    width: 100%;
+    width: 20%;
 }
 .for_parents h4{
     text-align: center;
