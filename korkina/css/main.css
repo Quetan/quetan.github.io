@@ -132,12 +132,17 @@ footer{
 .portfolio {
  text-align: center;
 }
+.portfolio img {width: 60%;}
 /*ACHIEVMENTS*/
 .achievments {
     text-align: center;
 }
 .achievments img{
     width:100%;
+}
+/*CHILDREN'S ACHIEVEMENTS*/
+ch_achievements img{
+    width: 60%;
 }
 /*FOR KIDS */
 for_kids img{
@@ -155,6 +160,7 @@ for_kids img{
     margin: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-left: 10px;
 }
 .out_classes_into img{
     margin: 0px;
@@ -167,6 +173,7 @@ for_kids img{
 .out_classes_into h3{
  text-align: center;
  margin-bottom: 10px;
+ padding-top: 20px;
 }
 
 
