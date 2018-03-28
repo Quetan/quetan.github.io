@@ -33,37 +33,49 @@
 
 <header>
 
-	<div class="menu">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-			<a class="navbar-brand" href="#">Navbar</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+<div class="menu">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<a class="navbar-brand" href="index.html">Меню сайта</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a class="nav-link" href="index.html">Главная <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link" href="#about">Обо мне</a>
+</li>
+<li class="nav-item">
+<div class="dropdown show">
+<a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мои работы</a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+<a class="dropdown-item" href="work.html">Разработки уроков</a>
+<a class="dropdown-item" href="outclasses.html">Внеурочная деятельность</a>
+<a class="dropdown-item" href="events.html">Внеклассные мероприятия</a>
+</div>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#email_form">Обратная связь</a>
+</li>
+<li class="nav-item">
+<div class="dropdown show">
+<a class=" nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Полезные ссылки</a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+<a class="dropdown-item" href="for_kids.html">В помощь детям</a>
+<a class="dropdown-item" href="for_parents.html">Информация для родителей</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Обо мне</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Наш класс</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Для Вас, ребята!</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Мои работы</a>
-				</li>
-
-				</ul>
-			</div>
-			</nav>
-	</div>
-
-<div class="container-fluid header_carousel">
+<div class="container-fluid header_carousel cd-scrolling-bg">
                     <div id="carouselHeader" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -115,7 +127,7 @@
 	<div class="row">
 	
 
-			<div class="col-12 qualification">
+			<div class="col-12 qualification" id="about">
 				<h2>Учитель начальных классов </h2>
 				<h3>Коркина Светлана Александровна</h3>
 				<p><span>Образование</span> - высшее: Барнаульский государственный педагогический университет, 1997г. </p>
@@ -124,7 +136,7 @@
 			</div>
 
 				<div class="col-12 about_teacher">
-					<img src="img/main.png" alt="Учитель" align="left">
+					<img src="img/main.png" alt="Учитель" align="left" class="img-responsive">
 					<p>
 						Выбранная мною профессия – это сбывшаяся мечта. 
 						Мне нравится снова и снова погружаться в кипучую школьную жизнь с веселым гомоном детских голосов,
@@ -154,21 +166,21 @@
 			<h2 class="h2">Мои работы</h2>
 		</div>
 		<div class="col-4">
-			<a href="#"><img src="img/works1.svg" alt="Работы" id="works_item_1"></a><br>	
+			<a href="work.html"><img src="img/works1.svg" alt="Работы" id="works_item_1" class="img-responsive"></a><br>	
 			<span>Разработки уроков</span>
 		</div>
 		<div class="col-4">
-			<a href="#"><img src="img/works2.svg" alt="Работы" id="works_item_2"></a><br>
+			<a href="#"><img src="img/works2.svg" alt="Работы" id="works_item_2" class="img-responsive"></a><br>
 			<span>Внеурочная деятельность</span>
 		</div>
 		<div class="col-4">
-			<a href="#"><img src="img/works3.svg" alt="Работы" id="works_item_3"></a><br>
+			<a href="#"><img src="img/works3.svg" alt="Работы" id="works_item_3" class="img-responsive"></a><br>
 			<span>Внеклассные мероприятия</span>
 		</div>
 	</div>
 </div>
 
-<div class="container-fluid email_form cd-scrolling-bg">
+<div class="container-fluid email_form cd-scrolling-bg" id="email_form">
 
 	<div class="row">
 
@@ -196,7 +208,7 @@
 						<textarea class="form-control" id="textArea" rows="1"></textarea>
 					</div>
 					<input name="bezspama" type="text" style="display:none" value="" />
-					<button class="button" type="submit">Отправить</button>
+					<center><button class="button margin_button" type="submit">Отправить</button></center>
 				</form>
 
 			</div>
@@ -205,38 +217,25 @@
 
 </div>
 
-<div class="container-fluid help cd-fixed-bg">
-	<div class="row">
-		<div class="col-6 for_parents">
-			<h2>Родителям</h2>
-			<h3>Советую посетить эти ресурсы:</h3>
-			<div class="row">
-				<div class="col-6">
-					<img src="img/help_par_1.svg" alt="Онлайн-Библиотека" id="help_par_1">
-					<br><span>Детская онлайн библиотека</span>
-				</div>
-				<div class="col-6">
-					<img src="img/help_par_2.svg" alt="Интернет урок" id="help_par_2">
-					<br><span>Интернет урок</span>
-				</div>
-				<div class="w-100">
-
-				</div>
-				<div class="col-6">
-					<img src="img/help_par_3.svg" alt="Страна знаек" id="help_par_3">
-					<br><span>Страна Знаек</span>
-				</div>
-				<div class="col-6">
-					<img src="img/help_par_4.svg" alt="Я - ученик"id="help_par_4">
-					<br><span>Я — ученик</span>
-				</div>
+<div class="container-fluid help cd-fixed-bg" id="help">
+		<div class="row">
+			<div class="col-12 help_text">
+				<h2>Полезные ресурсы</h2>
 			</div>
+			<div class="w-100"></div>
+			<div class="col-6 for_parents">
+				<h3>Родителям</h3>
+				<h4>Советую посетить эти ресурсы:</h4><br>
+				<a href="for_parents.html"><img src="img/help_par.svg" alt="Помощь родителям" id="help_parents" class="img-responsive"></a>	
 
-		</div>
+			</div>
 		<div class="col-6 for_kids">
 
-			<h2>Детям</h2>
-			<h3>Вам это понравится!</h3>
+			<h3>Детям</h3>
+			<h4>Вам это понравится!</h4><br>
+		<a href="for_kids.html"><img src="img/help_kids.svg" alt="Помощь родителям" id="help_kids" class="img-responsive"></a>	
+
+		</div>
 
 		</div>
 	</div>
