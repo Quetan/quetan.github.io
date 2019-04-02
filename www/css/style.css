@@ -408,6 +408,9 @@ canvas{
     margin-bottom: 10px;
 }
 
+#home-text{
+    font-size: 4rem;
+}
 .intro h1 {
     color: #ffffff;
     font-size: 60px;
@@ -803,7 +806,7 @@ canvas{
 	background-position: center center;
 	position: relative;
 }
-
+/*
 .testimonial-area:before{
 	position: absolute;
 	content: '';
@@ -844,7 +847,7 @@ canvas{
 .block-quote h3 {
 	font-size: 16px;
 }
-
+*/
 .testi-img {
 	width: 100px;
 	height: 100px;
@@ -857,7 +860,7 @@ canvas{
 	width: 100%;
 	border-radius: 100%;
 }
-
+/*
 #testimonial-carousel:before{
 	content: "";
 	position: absolute;
@@ -876,7 +879,7 @@ canvas{
 .testimonial-area .section-header h2 {
 	color: #ffffff;
 }
-
+*/
 /*-------Testimonial area ends----------*/
 
 /*------ 11. Contact area starts-------*/
