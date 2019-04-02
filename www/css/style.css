@@ -798,88 +798,15 @@ canvas{
 
 /*--------------Portfolio area Ends-----------*/
 
-/*-------- 10. Testimonial area starts-----------*/
+/*-------- 10. Map area starts-----------*/
 
-.testimonial-area{
-	background-image: url(../images/testimonial/testimonial.png);
+.map-area{
+	background-color: #F3F4F3;
 	background-size:cover;
 	background-position: center center;
-	position: relative;
-}
-/*
-.testimonial-area:before{
-	position: absolute;
-	content: '';
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.5);
+  position: relative;
 }
 
-.block-quote p {
-	margin: 0;
-	font-size: 20px;
-	font-weight: 500;
-	color: #444;
-	line-height: 160%;
-	font-style: italic;
-}
-
-.block-quote p:before {
-	content: "\275D";
-	display: inline-block;
-	margin-right: 5px;
-}
-
-.block-quote p:after {
-	content: "\275E";
-	display: inline-block;
-	margin-left: 5px;
-}
-
-.block-quote h2 {
-	text-transform: uppercase;
-	font-size: 25px;
-	color: #b8ad20;
-}
-
-.block-quote h3 {
-	font-size: 16px;
-}
-*/
-.testi-img {
-	width: 100px;
-	height: 100px;
-	display: inline-block;
-	border-radius: 100%;
-}
-
-.testi-img img {
-	overflow: hidden;
-	width: 100%;
-	border-radius: 100%;
-}
-/*
-#testimonial-carousel:before{
-	content: "";
-	position: absolute;
-	left: 20px;
-	top: 20px;
-	right: 20px;
-	bottom: 20px;
-	border: 1px solid #CCC;
-}
-
-#testimonial-carousel {
-	background: rgba(255, 255, 255, 0.9);
-	padding: 10%;
-}
-
-.testimonial-area .section-header h2 {
-	color: #ffffff;
-}
-*/
 /*-------Testimonial area ends----------*/
 
 /*------ 11. Contact area starts-------*/
@@ -956,21 +883,6 @@ canvas{
 }
 
 /*-------- Contact area ends----------- */
-
-/*-------- 12. Brand area starts-----------*/
-
-.brand-logo-img{
-    border:1px solid #ddd;
-    transition: all 300ms ease-in-out;
-    padding: 10px;
-}
-
-.brand-logo-img:hover{
-    border-color: transparent;
-    box-shadow: 0 20px 40px rgba(0,0,0,.2);
-}
-
-/*--------Brand area ends-----------*/
 
 /*--------------13. Footer area starts -------------*/
 
