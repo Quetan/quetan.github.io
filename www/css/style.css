@@ -240,7 +240,7 @@ img {
 }
 
 .nav-area.sticky_navigation{
-    background: #ffffff;
+    background: #f3f4f3;
     height: 80px;
 }
 
@@ -801,7 +801,7 @@ canvas{
 /*-------- 10. Map area starts-----------*/
 
 .map-area{
-	background-color: #F3F4F3;
+	background-color: #ffffff;
 	background-size:cover;
 	background-position: center center;
   position: relative;
