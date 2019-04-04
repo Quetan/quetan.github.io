@@ -53,19 +53,6 @@ $(document).ready(function () {
 		animationType: 'clip'
 	});
 
-	//***** Skill bar js
-
-	var skillbar = $(".skillbar");
-
-	skillbar.waypoint(function () {
-		skillbar.each(function () {
-			$(this).find(".skillbar-child").animate({
-				width: $(this).data("percent")
-			}, 1000);
-		});
-	}, {
-		offset: "80%"
-	});
 
 	//*** wow js
 
@@ -116,29 +103,6 @@ $(document).ready(function () {
 		midClick: true
 	});
 	
-	//**** testimonial carousel
-
-	$("#testimonial-carousel").owlCarousel({
-		navigation: false,
-		pagination: true,
-		slideSpeed: 800,
-		paginationSpeed: 800,
-		smartSpeed: 500,
-		autoplay: true,
-		singleItem: true,
-		loop: true,
-		responsive:{
-			0:{
-				items:1
-			},
-			680:{
-				items:1
-			},
-			1000:{
-				items:1
-			}
-		}
-	});
 
 	//***********YTplayer js
 
