@@ -1,25 +1,4 @@
 
-/*Table of Content
-
-
-    1. Default css
-    2. Preloader css
-    3. Mouse Animation css
-    4. Nav Area css
-    5. Banner Area css
-    6. About Area css
-    7. Services Area css
-    8. Number Area css
-    9. Portfolio Area css
-    10. Testimonial Area css
-    11. Contact Area css
-    12. Brand Area css
-    13. Footer Area css
-
-
-
-
-*/
 
 /*--- 1. Default css strats---*/
 
@@ -265,7 +244,7 @@ img {
 }
 
 .sticky_navigation .navbar-brand:hover, .sticky_navigation .navbar-brand:focus, .sticky_navigation .navbar-brand span {
-    color: 00efef;
+    color: rgb(14, 13, 13);
 }
 
 .sticky_navigation .nav li a {
@@ -308,7 +287,7 @@ img {
 }
 
 .navbar-brand{
-    padding: 25px 0;
+    padding: 30px 0;
     text-transform: uppercase;
     font-size: 25px;
     display: block;
@@ -499,37 +478,35 @@ canvas{
     margin-bottom: 50px;
 }
 
-.skillbar {
-    margin-bottom: 24px;
-    position: relative;
-    width: 100%;
-    display: block
+.advantages{
+  margin-bottom: 24px;
+  position: relative;
+  width: 100%;
+  display: block;
 }
 
-.skillbar .skillbar-title {
-    display: inline-block;
-    vertical-align: middle
+.advantages h3{
+  font-weight: 600;
+  font-size: 28px;
+  color: #212121;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.skillbar .skillbar-percent {
-    float: right;
-    display: inline-block;
-    vertical-align: middle
+.advantages-list{
+  padding-left: 15px;
+  margin-top: 20px;
 }
 
-.skillbar-bar {
-    background-color: #ededed;
-    width: 100%;
-    height: 5px
+.advantages-list li{
+  list-style-type: none;
 }
 
-.skillbar-bar .skillbar-child {
-    width: 0;
-    height: 100%;
-    background-color: #606060;
-    -webkit-transition-property: width, background-color;
-    -o-transition-property: width, background-color;
-    transition-property: width, background-color
+#advantages-text{
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: 1.1em;
 }
 
 /*-------About area css ends--------------*/
@@ -806,6 +783,11 @@ canvas{
 	background-position: center center;
   position: relative;
 }
+
+#map_canv{
+  height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+ }
 
 /*-------Testimonial area ends----------*/
 

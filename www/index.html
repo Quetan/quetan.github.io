@@ -186,100 +186,44 @@
                 <div class="col-md-4 col-xs-12 col-sm-12 col-lg-4">
                     <div class="about-text-right">
 
-                        <div id="skills">
+                        <div class="advantages">
+                            <h3>Преимущества технологии</h3>
 
-                            <h3>Плюсы</h3>
+                              <ul class="advantages-list">
+                                <li>
+                                  <h6 id="advantages-text">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                    Независимость от провайдеров                                      
+                                  </h6>
+                                </li>
 
-                            <div class="row">
+                                <li>
+                                  <h6 id="advantages-text">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                    Возможность построить свою сеть
+                                  </h6>
+                                </li>
 
-                                <div class="col-md-12">
+                                <li>
+                                  <h6 id="advantages-text">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                    Никаких сложностей при подключении
+                                  </h6>
+                                </li>
 
-                                    <!-- skillbar -->
-                                    <div class="skillbar" data-percent="100%"> <!--edit percentage-->
+                                <li>
+                                  <h6 id="advantages-text">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                    Каждый клиент увеличивает ёмкость сети
+                                  </h6>
+                                </li>
 
-                                        <h6 class="skillbar-title">Независимость от провайдеров</h6> <!--edit skills-->
-                                        <h6 class="skillbar-percent">100%</h6> <!--edit percentage-->
-
-                                        <div class="skillbar-bar">
-                                            <div class="skillbar-child"></div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end skillbar-->
-
-                                </div>
-
-
-                                <div class="col-md-12">
-
-                                    <!-- skillbar-->
-                                    <div class="skillbar" data-percent="100%"> <!--edit percentage-->
-
-                                        <h6 class="skillbar-title">Возможность построить свою сеть</h6> <!--edit skills-->
-                                        <h6 class="skillbar-percent">100%</h6> <!--edit percentage-->
-
-                                        <div class="skillbar-bar">
-                                            <div class="skillbar-child"></div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end skillbar--> 
-
-                                </div>
-
-                                <div class="col-md-12">
-
-                                    <!-- skillbar-->
-                                    <div class="skillbar" data-percent="100%"> <!--edit percentage-->
-
-                                        <h6 class="skillbar-title">Никаких сложностей при подключении</h6> <!--edit skills-->
-                                        <h6 class="skillbar-percent">100%</h6> <!--edit percentage-->
-
-                                        <div class="skillbar-bar">
-                                            <div class="skillbar-child"></div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end skillbar-->
-
-                                </div>
-
-
-                                <div class="col-md-12">
-
-                                    <!-- skillbar -->
-                                    <div class="skillbar" data-percent="100%"> <!--edit percentage-->
-
-                                        <h6 class="skillbar-title">Каждый клиент увеличивает ёмкость сети</h6> <!--edit skills-->
-                                        <h6 class="skillbar-percent">100%</h6> <!--edit percentage-->
-
-                                        <div class="skillbar-bar">
-                                            <div class="skillbar-child"></div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end skillbar -->
-
-                                </div>
-
-                                <div class="col-md-12">
-
-                                    <!-- skillbar -->
-                                    <div class="skillbar" data-percent="100%"> <!--edit percentage-->
-
-                                        <h6 class="skillbar-title">Бесплатный WiFi теперь везде!</h6> <!--edit skills-->
-                                        <h6 class="skillbar-percent">100%</h6> <!--edit percentage-->
-
-                                        <div class="skillbar-bar">
-                                            <div class="skillbar-child"></div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end skillbar -->
-
-                                </div>
-
-                            </div>
+                                <li>
+                                  <h6 id="advantages-text">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                    Бесплатный WiFi теперь везде!</h6>
+                                </li>
+                              </ul>
 
                         </div>
 
@@ -424,7 +368,20 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="review-area">
-                            <img src="images/map/map.png" alt="map">
+                            <!--<img src="images/map/map.png" alt="map">-->
+                          <div id="map_canv"></div>
+                          <script>
+                              // Initialize and add the map
+                              function initMap() {
+                                // The location of Barnaul
+                                var altay_region = {lat: 53.36056, lng: 83.76361};
+                                // The map, centered at Barnaul
+                                var map = new google.maps.Map(
+                                    document.getElementById('map_canv'), {zoom: 6, center: altay_region});
+                                // The marker, positioned at Uluru
+                                var marker = new google.maps.Marker({position: altay_region, map: map});
+                              }
+                          </script>
                         </div>
                     </div>
                 </div>
@@ -901,23 +858,22 @@
 	<!--counter up js-->
   <script src="js/jquery.counterup.min.js"></script>
   
-  <!--particles js
-  <script src="js/particles.js"></script>
-  <script src="js/app.js"></script>-->
-
-  <!--sergio-->
+  <!--particles js-->
     <script src="js/particles.js"></script>
     <script src="js/app.js"></script>
+
+  <!--Google Maps js-->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZFJFgDuayGZ67AFGjN1nT3lTQrqSsXZ8&callback=initMap"></script>
   
 
-    <!--Validator js-->
+  <!--Validator js-->
     <script src="js/validator.js"></script>
 
-    <!--Contact js-->
-    <script src="js/contact.js"></script>
+  <!--Contact js-->
+  <script src="js/contact.js"></script>
 
-    <!--Main js-->
-    <script src="js/main.js"></script>
+  <!--Main js-->
+  <script src="js/main.js"></script>
     
     <script>
 

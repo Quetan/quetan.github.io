@@ -15,6 +15,7 @@ NB: This is the responsive stylesheet of this theme.
 
 /* Tablet Layout: 768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
     .section-padding {
         padding: 35px 0;
     }
@@ -157,6 +158,7 @@ NB: This is the responsive stylesheet of this theme.
 
     .about-text-right {
         margin-top: 40px;
+        text-align: center;
     }
 
     .services-area .section-header {

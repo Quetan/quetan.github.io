@@ -150,8 +150,8 @@ $(document).ready(function () {
 		startAt:0,
 		opacity:1,
 		quality:'default'
-	});
-	
+  });
 
 
 });
+
