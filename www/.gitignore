@@ -1,0 +1,5 @@
+/node_modules/
+/production/
+package-lock.json
+.idea
+.DS_store

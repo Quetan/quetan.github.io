@@ -96,12 +96,12 @@
                             <div class="navbar-collapse collapse">
                                 <nav>
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li class="active"><a class="smooth-menu" href="#home">Главная</a></li>
+                                        <li id="hidden" class="active"><a class="smooth-menu" href="#home">Главная</a></li>
                                         <li><a class="smooth-menu" href="#about">О технологии</a></li>
                                         <li><a class="smooth-menu" href="#services">Услуги</a></li>
                                         <li><a class="smooth-menu" href="#map">Карта точек</a></li>
-                                        <li><a class="smooth-menu" href="#portfolio">Продукты</a></li>
-                                        <li><a class="smooth-menu" href="#contact">Обратная связь</a></li>
+                                        <li id="hidden"><a class="smooth-menu" href="#portfolio">Продукты</a></li>
+                                        <li><a class="smooth-menu" href="#contact">Контакты</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -726,9 +726,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header wow fadeInDown" data-wow-delay="0.2s">
+                    <div class="section-header wow fadeInDown" data-wow-delay="0.1s">
                         <p class="line-one"></p>
-                        <h2>Обратная связь</h2>
+                        <h2>Контакты</h2>
                         <p class="line-one"></p>
                     </div>
                 </div>
@@ -736,79 +736,122 @@
 
             <div class="row">
                 <div class="col-md-3 col-sm-6">
-                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.4s">
+                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.2s">
                         <i class="fa fa-home"></i>
                         <h2>Наш адрес:</h2>
                         <p>Барнаул, Ленина 61</p> <!--edit here-->
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.6s">
+                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.4s">
                         <i class="fa fa-phone"></i>
                         <h2>Телефон: </h2>
                         <p>(+7) 123 456 7890</p> <!--edit here-->
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.8s">
+                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.6s">
                         <i class="fa fa-envelope-o"></i>
                         <h2>Электронный адрес:</h2>
                         <p>wifiMesh@asu.ru</p> <!--edit here-->
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="1s">
+                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.8s">
                         <i class="fa fa-gg"></i>
                         <h2>Социальные ссылки: </h2>
                         <div class="socials">
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> <!--your facebook profile link here-->
-                            <a href="https://www.vk.com/" target="_blank"><i class="fa fa-vk"></i></a> <!--your linkedin profile link here-->
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a> <!--your twitter profile link here-->
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> <!--facebook profile link here-->
+                            <a href="https://www.vk.com/" target="_blank"><i class="fa fa-vk"></i></a> <!--vk group link here-->
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a> <!--twitter profile link here-->
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row">
+              <div class="col-md-12">
+                <div class="login-area wow text-center fadeInDown" data-wow-delay="1s">
 
-                <div class="col-md-10 col-md-offset-1">
-                    <form id="contact-form" method="post" action="contact.php" class="wow fadeInDown" data-wow-delay="1.2s">
+                  <div id="login" class="col-md-6">
+                    <a href="#login-popup" data-effect="mfp-zoom-out" class="login-btn">Авторизация</a>
+                  </div>
 
-                        <div class="messages"></div> <!--you can change the message in contact.php file -->
+                  <div id="login-popup" class="high-popup mfp-with-anim mfp-hide">
+                      <div class="row">
+                          <div class="col-md-12">
+                               <div class="login-text text-center">
+                                  <h2>Авторизация</h2>
+                              </div>
+                               <div class="login-fields text-center">
+                                <div class="row">
+                                  <div class="col-md-12 input-field">
+                                    <label for="loginField">Логин</label> <br>
+                                    <input id="loginField" type="text" name="login" placeholder="example@mail.com">
+                                  </div>    
+                                  <div class="col-md-12 input-field">
+                                    <label for="passwordField">Пароль</label> <br>
+                                    <input id="passwordField" type="password" name="password" placeholder="Пароль">
+                                  </div>
+                                  <div class="col-md-12 text-center">
+                                      <a href="#LOGIN_URL_LINK" class="send-btn">Войти</a>
+                                  </div>
+                                </div> 
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                      
+                    <div id="signup" class="col-md-6">
+                      <a href="#signup-popup" class="login-btn" data-effect="mfp-zoom-out">Регистрация</a>
+                    </div>
 
-                        <div class="controls">
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Введите Ваше полное имя *" required="required" data-error="Введите Ваше полное имя!">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
+                    <div id="signup-popup" class="high-popup mfp-with-anim mfp-hide">
+                        <div class="row">
+                            <div class="col-md-12">
+                                 <div class="login-text text-center">
+                                    <h2>Регистрация</h2>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Ваш E-Mail *" required="required" data-error="Введите существующий адрес электронной почты!.">
-                                        <div class="help-block with-errors"></div>
+                                 <div class="login-fields">
+                                  <div class="row">
+                                    <div class="col-md-12 input-field">
+                                      <label for="emailField">Введите почту:</label> <br>
+                                      <input id="emailField" type="email" name="email" placeholder="example@mail.com *">
+                                    </div>    
+                                    <div class="col-md-12 input-field">
+                                      <label for="passwordField">Введите пароль:</label> <br>
+                                      <input id="passwordField" type="password" name="password" placeholder="Пароль *">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea id="form_message" name="message" class="form-control" placeholder="Ваше сообщение *" rows="4" required="required" data-error="Оставьте сообщение!"></textarea>
-                                        <div class="help-block with-errors"></div>
+                                    <div class="col-md-12 input-field">
+                                      <label for="passwordCheckField">Пароль еще раз:</label> <br>
+                                      <input id="passwordCheckField" type="password" name="passwordCheck" placeholder="Пароль *">
                                     </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <button class="btn btn-send" value="">Отправить</button>
+                                    <div class="col-md-12 input-field">
+                                      <label for="name">Ваше имя:</label> <br>
+                                      <input id="name" type="text" name="name" placeholder="Иванов Иван">
+                                    </div>
+                                    <div class="col-md-12 input-field">
+                                      <label for="phoneNumber">Номер телефона:</label> <br>
+                                      <input id="phoneNumber" type="tel" name="phoneNumber" placeholder="+7-(123)-456-78-90 *">
+                                    </div>
+                                    <div class="col-md-12 input-field">
+                                      <label for="smsCheck">Код из СМС сообщения:</label> <br>
+                                      <input id="smsCheck" type="text" name="smsCheck" placeholder="0000 *">
+                                    </div>
+
+                                    <div class="col-md-12 text-center">
+                                        <a href="#SIGNIN_URL_LINK" class="send-btn">Отправить</a>
+                                    </div>
+                                  </div> 
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                    </form>
                 </div>
-
+              </div>
             </div>
+
         </div>
     </div>
 
@@ -832,11 +875,11 @@
 
 
 
-    <!--Latest version JQuery-->
-    <script src="js/jquery-3.2.1.min.js"></script>
+  <!--Latest version JQuery-->
+  <script src="js/jquery-3.2.1.min.js"></script>
 
-    <!--Bootstrap js-->
-    <script src="js/bootstrap.min.js"></script>
+  <!--Bootstrap js-->
+  <script src="js/bootstrap.min.js"></script>
 
 	<!--Magnific popup js-->
 	<script src="js/jquery.magnific-popup.js"></script>
@@ -846,32 +889,27 @@
 
 
 
-    <!--Animated headline js-->
-    <script src="js/jquery.animatedheadline.js"></script>
+  <!--Animated headline js-->
+  <script src="js/jquery.animatedheadline.js"></script>
 
-  	<!--wow js-->
-	  <script src="js/wow.min.js"></script>
+  <!--wow js-->
+	<script src="js/wow.min.js"></script>
     
-    <!--Validator js-->
-    <script src="js/jquery.waypoints.js"></script>
+  <!--Validator js-->
+  <script src="js/jquery.waypoints.js"></script>
     
 	<!--counter up js-->
   <script src="js/jquery.counterup.min.js"></script>
   
   <!--particles js-->
-    <script src="js/particles.js"></script>
-    <script src="js/app.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
+  <!--------------->
 
   <!--Google Maps js-->
   <!--API key should be changed. It used with www.quetan.github.io/www at the moment-->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZFJFgDuayGZ67AFGjN1nT3lTQrqSsXZ8&callback=initMap"></script>
   
-
-  <!--Validator js-->
-    <script src="js/validator.js"></script>
-
-  <!--Contact js-->
-  <script src="js/contact.js"></script>
 
   <!--Main js-->
   <script src="js/main.js"></script>

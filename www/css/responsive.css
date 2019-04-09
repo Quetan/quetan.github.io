@@ -1,17 +1,12 @@
-/* =================================================
-
-Template Name:  MASON - Personal Portfolio HTML Template
-Author: MouriTheme
-Version: 1.0
-Design and Developed by: MouriTheme
-
-NB: This is the responsive stylesheet of this theme.
-
-=================================================== */
-
 
 /* Medium Layout: 1280px. */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+  #hidden{
+    display: none;
+  }
+
+}
 
 /* Tablet Layout: 768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -27,6 +22,11 @@ NB: This is the responsive stylesheet of this theme.
     .navbar-nav {
         margin: 15px 0;
     }
+    
+    #hidden{
+      display: none;
+    }
+  
 
     .navbar-brand {
         padding: 20px 0;
@@ -60,6 +60,10 @@ NB: This is the responsive stylesheet of this theme.
         padding-top: 3%;
     }
 
+    #login,#signup{
+      text-align: center;
+    }
+    
 }
 
 /* Mobile Layout: 320px. */
@@ -181,6 +185,10 @@ NB: This is the responsive stylesheet of this theme.
         padding: 10px;
         max-width: 95%;
     }
+    .high-popup {
+      padding: 10px;
+      max-width: 95%;
+  }
 
     .por-text h2 {
         margin-top: 25px;
@@ -191,18 +199,8 @@ NB: This is the responsive stylesheet of this theme.
         font-size: 12px;
     }
 
-    .block-quote p {
-        margin-top: 20px;
-        font-size: 16px;
-        line-height: 150%;
-    }
-
     .single-contact {
         margin-bottom: 30px;
-    }
-
-    #contact-form {
-        margin-top: 20px;
     }
 
     .contact-area .form-control {
@@ -218,7 +216,9 @@ NB: This is the responsive stylesheet of this theme.
         margin-bottom: 30px;
     }
 
-
+    #login,#signup{
+      text-align: center;
+    }
 
 }
 
@@ -242,13 +242,18 @@ NB: This is the responsive stylesheet of this theme.
         background-position: inherit;
     }
 
-
+    #login,#signup{
+      text-align: center;
+    }
 
 }
 
 
 @media only screen and (min-width: 360px) and (max-width: 767px){
 
+  #login,#signup{
+    text-align: center;
+  }
 
 }
 
@@ -260,6 +265,7 @@ NB: This is the responsive stylesheet of this theme.
     .portfolio-area ul.list-inline li {
         margin: 7px;
     }
+
 }
 
 @media only screen and (min-width: 411px) and (max-width: 767px){

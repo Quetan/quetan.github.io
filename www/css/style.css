@@ -1,4 +1,18 @@
 
+/*-----SETTINGS----------
+---1.Default settings
+---2.Preloader settings
+---3.Mouse animation settings
+---4.Navigation settings
+---5.Banner area settings
+---6.About area settings
+---7.Services area settings
+---8.Numbers area settings
+---9.Portfolio area setting
+---10.Map area settings
+---11.Contacts area settings
+---12.Footer area settings
+-------SETTINGS--------*/
 
 /*--- 1. Default css strats---*/
 
@@ -338,7 +352,7 @@ img {
 
 
 .banner-area{
-    background-image: url(../images/home/home-bg-1.png); /*--edit image--*/
+    background-image: url(../images/home/1.jpg); /*--edit image--*/
     background-position: center;
     background-size:cover;
     position: relative;
@@ -789,15 +803,9 @@ canvas{
   width: 100%;  /* The width is the width of the web page */
  }
 
-/*-------Testimonial area ends----------*/
+/*-------Map area ends----------*/
 
 /*------ 11. Contact area starts-------*/
-
-
-#contact-form {
-    box-shadow: 0 20px 40px rgba(0,0,0,.2);
-    padding: 5%;
-}
 
 .single-contact i {
     font-size: 30px;
@@ -817,33 +825,9 @@ canvas{
     margin-bottom: 50px;
 }
 
-.contact-area .form-control{
-    border: none;
-    border-bottom: 2px solid #a2a2a2;
-    box-shadow: none;
-    padding: 6px 0;
-    border-radius: 0;
-    margin-bottom: 30px;
-}
-
-.contact-area textarea.form-control{
-    border:2px solid #a2a2a2;
-    padding: 6px;
-    height: 250px;
-    margin-bottom: 30px;
-}
-
 .single-contact h2 {
     text-transform: uppercase;
     font-size: 16px;
-}
-
-.btn.btn-send {
-    background: #b8ad20;
-    color: #ffffff;
-    padding: 15px 20px;
-    text-transform: uppercase;
-    font-weight: 600;
 }
 
 .contact-right h2 {
@@ -864,9 +848,88 @@ canvas{
     padding: 5%;
 }
 
+
+.login-btn {
+  background: #a02f2cd4;
+  text-decoration: none;
+  padding: 6px 30px;
+  margin: 0px;
+  display: inline-block;
+  margin-top: 25px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+.login-btn:hover, .login-btn:focus {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.login-text h2 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #b8ad20;
+  padding-bottom: 10px;
+}
+
+.high-popup {
+	position: relative;
+	background: #FFF;
+	padding: 30px;
+	width: auto;
+  max-width: 45%;
+  min-height: 350px;
+  margin: 0 auto;
+}
+
+
+.login-fields input{
+  border:2px solid #a2a2a2;
+  padding: 6px;
+  height: 30px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  width: 350px; 
+}
+
+.login-fields label{
+  margin-right: 20px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.send-btn {
+  background: #b8ad20;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: inline-block;
+  margin-top: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+.send-btn:hover, .send-btn:focus {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#login{
+  text-align: right;
+}
+#signup{
+  text-align: left;
+}
+
 /*-------- Contact area ends----------- */
 
-/*--------------13. Footer area starts -------------*/
+/*--------------12. Footer area starts -------------*/
 
 .footer-area {
     background: #232323;
