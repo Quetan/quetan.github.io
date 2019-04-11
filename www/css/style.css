@@ -26,7 +26,7 @@ body{
     height: 100%;
     font-size: 15px;
     line-height: 1.7;
-    color: #333333;
+    color: #251D1B;
     font-weight: 400;
 }
 
@@ -36,7 +36,7 @@ h3,
 h4,
 h5,
 h6{
-    color: #333333;
+    color: #251D1B;
     font-weight: 600;
 }
 
@@ -85,7 +85,7 @@ img {
 .line-one {
     height: 1px;
     width: 100px;
-    background: #b8ad20;
+    background: #0069A8;
     display: block;
     margin: 0 auto;
     padding: 0;
@@ -115,7 +115,7 @@ img {
 
 .loader:before, .loader:after {
     content: '';
-    border: 1em solid #b8ad20;
+    border: 1em solid #0069A8;
     border-radius: 50%;
     width: inherit;
     height: inherit;
@@ -233,7 +233,7 @@ img {
 }
 
 .nav-area.sticky_navigation{
-    background: #fff;
+    background: #ffffff;
     height: 80px;
 }
 
@@ -254,30 +254,30 @@ img {
 }
 
 .sticky_navigation .navbar-brand, .sticky_navigation .navbar-brand span {
-    color: #000000;
+    color: #251D1B;
 }
 
 .sticky_navigation .navbar-brand:hover, .sticky_navigation .navbar-brand:focus, .sticky_navigation .navbar-brand span {
-    color: rgb(14, 13, 13);
+    color: #251D1B;
 }
 
 .sticky_navigation .nav li a {
-    color: #333333;
+    color: #251D1B;
 }
 
 .sticky_navigation .nav li.active a{
-    color: #b8ad20;
+    color: #0069A8;
 }
 
 .sticky_navigation .nav li.active::before {
-    border-top: 1px solid #b8ad20;
+    border-top: 1px solid #0069A8;
     content: "";
     display: block;
     margin: 0 auto;
     width: 50%;
 }
 .sticky_navigation .nav li.active::after {
-    border-bottom: 1px solid #b8ad20;
+    border-bottom: 1px solid #0069A8;
     content: "";
     display: block;
     margin: 0 auto;
@@ -311,8 +311,8 @@ img {
 
 .logo {
     padding: 5px;
-    font-size: 32px;
-    letter-spacing: 3px;
+    font-size: 1.2em;
+    letter-spacing: 2px;
 }
 
 .navbar-brand:focus, .navbar-brand:hover {
@@ -335,6 +335,25 @@ img {
     font-weight: bold;
     color: #ffffff;
 }
+
+
+#auth{
+  padding: 20px;
+  line-height: 0;
+}
+
+#auth a{
+  font-size: 2.7em;
+  color: #033D75;
+}
+
+#auth i{
+  background-color: #fff;
+  border-radius:  100%;
+  text-shadow: #fff 0 0 10px;
+}
+
+
 
 .nav > li > a:hover,
 .nav > li > a:active,
@@ -416,7 +435,7 @@ canvas{
 }
 
 .banner-btn {
-    background: #b8ad20;
+    background: #0069A8;
     text-decoration: none;
     padding: 10px 30px;
     display: inline-block;
@@ -445,14 +464,14 @@ canvas{
 .about-text-left h2 {
     font-weight: 700;
     font-size: 36px;
-    color: #212121;
+    color: #251D1B;
     line-height: 1;
     text-align: right;
     margin-bottom: 5px;
 }
 
 .about-text-left h3 {
-    color: #212121;
+    color: #251D1B;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -471,7 +490,7 @@ canvas{
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
-    background: #b8ad20;
+    background: #0069A8;
     padding: 15px;
     float: right;
     text-decoration: none;
@@ -533,7 +552,7 @@ canvas{
 
 .services-icon i {
 	font-size: 35px;
-	color: #b8ad20;
+	color: #251D1B;
 }
 
 .single-services:hover i{
@@ -588,11 +607,11 @@ canvas{
 }
 
 .single-services:hover .services-content {
-	color: #000000;
+	color: #251D1B;
 }
 
 .single-services:hover .services-content h3 {
-	color: #b8ad20;
+	color: #0069A8;
 }
 
 /*--------------- Services area ends --------------*/
@@ -600,7 +619,7 @@ canvas{
 /*-------- 8. Number area css starts-----------*/
 
 .number-area {
-	background: #b8ad20;
+	background: #0069A8;
 	color: #fff;
 }
 
@@ -625,7 +644,7 @@ canvas{
 .por-text-details .col-xs-4 p {
 	font-weight: bold;
 	text-transform: uppercase;
-	color: #b8ad20;
+	color: #0069A8;
 }
 
 .mfp-zoom-out .mfp-with-anim {
@@ -666,7 +685,7 @@ canvas{
 	margin: 0;
 	font-size: 22px;
 	margin-bottom: 15px;
-	border-bottom: 3px solid #b8ad20;
+	border-bottom: 3px solid #0069A8;
 	padding-bottom: 10px;
 }
 
@@ -692,7 +711,7 @@ canvas{
 	position: relative;
 	text-align: center;
 	cursor: pointer;
-	background: #b8ad20d5;
+	background: #0069A8d5;
 }
 
 .hovereffect .overlay {
@@ -809,12 +828,12 @@ canvas{
 
 .single-contact i {
     font-size: 30px;
-    color: #b8ad20;
+    color: #0069A8;
 }
 
 .single-contact .socials i {
     font-size: 14px;
-    color: #000000;
+    color: #251D1B;
 }
 
 .socials i:hover {
@@ -850,7 +869,7 @@ canvas{
 
 
 .login-btn {
-  background: #a02f2cd4;
+  background: #4D8B62;
   text-decoration: none;
   padding: 6px 30px;
   margin: 0px;
@@ -873,7 +892,7 @@ canvas{
   margin: 0;
   font-size: 22px;
   margin-bottom: 15px;
-  border-bottom: 3px solid #b8ad20;
+  border-bottom: 3px solid #0069A8;
   padding-bottom: 10px;
 }
 
@@ -887,6 +906,9 @@ canvas{
   margin: 0 auto;
 }
 
+.login-fields{
+  padding-left: 30px;
+}
 
 .login-fields input{
   border:2px solid #a2a2a2;
@@ -896,7 +918,6 @@ canvas{
   font-size: 1.1em;
   width: 70%; 
 }
-
 .login-fields input:focus{
   outline: none;
 }
@@ -908,7 +929,7 @@ canvas{
 }
 
 .send-btn {
-  background: #b8ad20;
+  background: #0069A8;
   text-decoration: none;
   padding: 10px 30px;
   display: inline-block;
@@ -919,10 +940,15 @@ canvas{
   -moz-border-radius:5px;
   border-radius:5px;
 }
+
 .send-btn:hover, .send-btn:focus {
   text-decoration: none;
   color: #ffffff;
   outline: none;
+}
+
+.registration-link{
+  margin-top: 10px;
 }
 
 #login{

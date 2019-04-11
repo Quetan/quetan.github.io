@@ -76,11 +76,11 @@
     <!--navigation area starts-->
 
     <header class="nav-area navbar-fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <!--main menu starts-->
 
-                <div class="col-md-12">
+                <div class="col-md-10">
                     <div class="main-menu">
                         <div class="navbar navbar-cus">
                             <div class="navbar-header">
@@ -96,18 +96,21 @@
                             <div class="navbar-collapse collapse">
                                 <nav>
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li id="hidden" class="active"><a class="smooth-menu" href="#home">Главная</a></li>
+                                        <li id="hidden"><a class="smooth-menu" href="#home">Главная</a></li>
                                         <li><a class="smooth-menu" href="#about">О технологии</a></li>
                                         <li><a class="smooth-menu" href="#services">Услуги</a></li>
                                         <li><a class="smooth-menu" href="#map">Карта точек</a></li>
                                         <li id="hidden"><a class="smooth-menu" href="#portfolio">Продукты</a></li>
-                                        <li><a class="smooth-menu" href="#contact">Контакты</a></li>
-                                    </ul>
+																				<li><a class="smooth-menu" href="#contact">Контакты</a></li>
+																			</ul>
                                 </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+														</div>
+												</div>
+										</div>
+								</div>
+								<div class="col-md-2 navbar text-center" id="auth" data-effect="mfp-zoom-out">
+										<a href="#login-popup"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+								</div>
 
                 <!--main menu ends-->
             </div>
@@ -308,9 +311,107 @@
                         </div>
 
                     </div>
-                </div>
-
-            </div>
+								</div>
+						</div>
+						<!--Sign In and Sign Up area starts here-->
+            <div class="row">
+								<div class="col-md-12">
+									<div class="login-area wow text-center fadeInDown" data-wow-delay="0.2s">
+	
+										<div id="login" class="col-md-6">
+											<a href="#login-popup" data-effect="mfp-zoom-out" class="login-btn">Авторизация</a>
+										</div>
+	
+										<div id="login-popup" class="high-popup mfp-with-anim mfp-hide">
+												<div class="row">
+														<div class="col-md-12">
+																 <div class="login-text text-center">
+																		<h2>Авторизация</h2>
+																</div>
+																 <div class="login-fields text-center">
+																	<div class="row">
+																		<!--Form starts here-->
+																		<form action="">
+																			<div class="col-md-12 input-field">
+																				<label for="loginField">Логин:</label> <br>
+																				<input id="loginField" type="email" name="login" placeholder="example@mail.com" required>
+																			</div>    
+																			<div class="col-md-12 input-field">
+																				<label for="passwordField">Пароль:</label> <br>
+																				<input id="passwordField" type="password" name="password" placeholder="Пароль" required>
+																			</div>
+																			<div class="col-md-12 text-center">
+																					<button href="#LOGIN_URL_LINK" class="send-btn" type="submit">Войти</button>
+																			</div>
+																			<div class="col-md-12 registration-link">
+																				<div id="registration-link">
+																					<p>Еще не зарегистрированы? <a href="#signup-popup">Присоединяйтесь</a> прямо сейчас!</p>																				
+																				</div>
+																			</div>
+																	</form>
+																	<!--Form ends here-->
+																	</div> 
+																</div>
+														</div>
+												</div>
+										</div>
+												
+											<div id="signup" class="col-md-6">
+												<a href="#signup-popup" class="login-btn" data-effect="mfp-zoom-out">Регистрация</a>
+											</div>
+	
+											<div id="signup-popup" class="high-popup mfp-with-anim mfp-hide">
+													<div class="row">
+															<div class="col-md-12">
+																	 <div class="login-text text-center">
+																			<h2>Регистрация</h2>
+																			<p>Пожалуйста, заполните поля данной формы!
+																			<br>Поля с символом * являются обязательными!</p> 
+																	</div>
+																	 <div class="login-fields">
+																		<div class="row">
+																			<!--Form starts here-->
+																			<form action="">
+																				<div class="col-md-12 input-field">
+																					<label for="emailField">Введите почту:</label> <br>
+																					<input id="emailField" type="email" name="email" placeholder="example@mail.com *" required>
+																				</div>    
+																				<div class="col-md-12 input-field">
+																					<label for="passwordField">Введите пароль:</label> <br>
+																					<input id="passwordField" type="password" name="password" placeholder="Используйте не менее 6 символов *" onkeyup="checkPass(); return false;" required>
+																				</div>
+																				<div class="col-md-12 input-field">
+																					<label for="passwordCheckField">Пароль еще раз:</label> <br>
+																					<input id="passwordCheckField" type="password" name="passwordCheck" placeholder="Повторите пароль *" onkeyup="checkPass(); return false;" required>
+																					<div id="error-nwl"></div>
+																				</div>
+																				<div class="col-md-12 input-field">
+																					<label for="name">Ваше имя:</label> <br>
+																					<input id="name" type="text" name="name" placeholder="Иванов Иван">
+																				</div>
+																				<div class="col-md-12 input-field">
+																					<label for="phoneNumber">Номер телефона:</label> <br>
+																					<input id="phoneNumber" type="tel" name="phoneNumber" placeholder="+7-(123)-456-78-90 *" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+																				</div>
+																				<div class="col-md-12 input-field">
+																					<label for="smsCheck">Код из СМС сообщения:</label> <br>
+																					<input id="smsCheck" type="text" name="smsCheck" placeholder="000000 *" required>
+																				</div>
+																				<div class="col-md-12 text-center">
+																						<button href="#SIGNIN_URL_LINK" class="send-btn" type="submit">Отправить</button>
+																				</div>
+																		</form>
+																		<!--Form ends here-->
+																		</div> 
+																	</div>
+															</div>
+													</div>
+											</div>
+	
+									</div>
+								</div>
+							</div>
+							<!--Sign In and Sign Up area ends here-->	
         </div>
     </div>
 
@@ -768,100 +869,6 @@
                     </div>
                 </div>
             </div>
-						<!--Sign In and Sign Up area starts here-->
-            <div class="row">
-              <div class="col-md-12">
-                <div class="login-area wow text-center fadeInDown" data-wow-delay="1s">
-
-                  <div id="login" class="col-md-6">
-                    <a href="#login-popup" data-effect="mfp-zoom-out" class="login-btn">Авторизация</a>
-                  </div>
-
-                  <div id="login-popup" class="high-popup mfp-with-anim mfp-hide">
-                      <div class="row">
-                          <div class="col-md-12">
-                               <div class="login-text text-center">
-                                  <h2>Авторизация</h2>
-                              </div>
-                               <div class="login-fields text-center">
-                                <div class="row">
-																	<!--Form starts here-->
-																	<form action="">
-																		<div class="col-md-12 input-field">
-																			<label for="loginField">Логин</label> <br>
-																			<input id="loginField" type="email" name="login" placeholder="example@mail.com" required>
-																		</div>    
-																		<div class="col-md-12 input-field">
-																			<label for="passwordField">Пароль</label> <br>
-																			<input id="passwordField" type="password" name="password" placeholder="Пароль" required>
-																		</div>
-																		<div class="col-md-12 text-center">
-																				<button href="#LOGIN_URL_LINK" class="send-btn" type="submit">Войти</button>
-																		</div>
-																</form>
-																<!--Form ends here-->
-                                </div> 
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                      
-                    <div id="signup" class="col-md-6">
-                      <a href="#signup-popup" class="login-btn" data-effect="mfp-zoom-out">Регистрация</a>
-                    </div>
-
-                    <div id="signup-popup" class="high-popup mfp-with-anim mfp-hide">
-                        <div class="row">
-                            <div class="col-md-12">
-                                 <div class="login-text text-center">
-                                    <h2>Регистрация</h2>
-                                    <p>Пожалуйста, заполните поля данной формы!
-                                    <br>Поля с символом * являются обязательными!</p> 
-                                </div>
-                                 <div class="login-fields">
-                                  <div class="row">
-																		<!--Form starts here-->
-																		<form action="">
-																			<div class="col-md-12 input-field">
-																				<label for="emailField">Введите почту:</label> <br>
-																				<input id="emailField" type="email" name="email" placeholder="example@mail.com *" required>
-																			</div>    
-																			<div class="col-md-12 input-field">
-																				<label for="passwordField">Введите пароль:</label> <br>
-																				<input id="passwordField" type="password" name="password" placeholder="Используйте не менее 6 символов *" onkeyup="checkPass(); return false;" required>
-																			</div>
-																			<div class="col-md-12 input-field">
-																				<label for="passwordCheckField">Пароль еще раз:</label> <br>
-																				<input id="passwordCheckField" type="password" name="passwordCheck" placeholder="Повторите пароль *" onkeyup="checkPass(); return false;" required>
-																				<div id="error-nwl"></div>
-																			</div>
-																			<div class="col-md-12 input-field">
-																				<label for="name">Ваше имя:</label> <br>
-																				<input id="name" type="text" name="name" placeholder="Иванов Иван">
-																			</div>
-																			<div class="col-md-12 input-field">
-																				<label for="phoneNumber">Номер телефона:</label> <br>
-																				<input id="phoneNumber" type="tel" name="phoneNumber" placeholder="+7-(123)-456-78-90 *" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
-																			</div>
-																			<div class="col-md-12 input-field">
-																				<label for="smsCheck">Код из СМС сообщения:</label> <br>
-																				<input id="smsCheck" type="text" name="smsCheck" placeholder="000000 *" required>
-																			</div>
-																			<div class="col-md-12 text-center">
-																					<button href="#SIGNIN_URL_LINK" class="send-btn" type="submit">Отправить</button>
-																			</div>
-																	</form>
-																	<!--Form ends here-->
-                                  </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-              </div>
-            </div>
-						<!--Sign In and Sign Up area ends here-->	
         </div>
     </div>
 
