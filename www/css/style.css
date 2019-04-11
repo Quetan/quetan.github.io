@@ -894,7 +894,11 @@ canvas{
   height: 30px;
   margin-bottom: 15px;
   font-size: 1.1em;
-  width: 350px; 
+  width: 70%; 
+}
+
+.login-fields input:focus{
+    outline: none;
 }
 
 .login-fields label{
@@ -918,6 +922,7 @@ canvas{
 .send-btn:hover, .send-btn:focus {
   text-decoration: none;
   color: #ffffff;
+  outline: none;
 }
 
 #login{
