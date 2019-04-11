@@ -233,7 +233,7 @@ img {
 }
 
 .nav-area.sticky_navigation{
-    background: #f3f4f3;
+    background: #fff;
     height: 80px;
 }
 
@@ -881,7 +881,7 @@ canvas{
 	position: relative;
 	background: #FFF;
 	padding: 30px;
-	width: auto;
+  width: auto;
   max-width: 45%;
   min-height: 350px;
   margin: 0 auto;
@@ -898,13 +898,13 @@ canvas{
 }
 
 .login-fields input:focus{
-    outline: none;
+  outline: none;
 }
 
 .login-fields label{
   margin-right: 20px;
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 .send-btn {
