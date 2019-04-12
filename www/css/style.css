@@ -1,4 +1,3 @@
-
 /*-----SETTINGS----------
 ---1.Default settings
 ---2.Preloader settings
@@ -338,9 +337,13 @@ img {
 
 
 #auth{
-  padding: 20px;
+  display: inline-block;
+  margin-top:20px;
+  margin-left: 30px;
+  padding:0;
   line-height: 0;
-  width: 100px;
+  width: 60px;
+  height: 60px;
 }
 
 #auth a{
@@ -970,19 +973,3 @@ canvas{
 }
 
 /*--------------- Footer area ends -------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
