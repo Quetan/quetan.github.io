@@ -5,6 +5,15 @@ body{
     line-height: 1.65;
     font-weight: 400;
 }
+
+img.lazy{ 
+    position: relative;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+}
+
+
 p{
     margin: 0;
     padding: 0;
@@ -17,6 +26,13 @@ button{
     border: none;
     cursor: pointer;
 }
+
+button:hover, button:focus, button:active{
+    outline: none;
+    border: none;
+    box-shadow: none !important;
+}
+
 
 .mb50{
     margin-bottom: 50px;
@@ -34,9 +50,13 @@ button{
     color: #999999;
 }
 
+.no-padding{
+    padding: 0;
+}
+
 .header{
     height: 100vh;
-    background: url(../img/header-bg.jpg) no-repeat center center;
+    background: url(../img/@2x/header-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -80,7 +100,7 @@ button{
 }
 .hamburger{
     background-color: #f7654a;
-    padding: 13px 14px 7px 15px;
+    padding: 13px 15px 7px 14px;
 }
 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
     background-color: #fff;
@@ -101,12 +121,16 @@ button{
 .hamburger-box{
     width: 21px;
 }
+.hamburger.is-active:hover, 
+.hamburger:hover {
+    opacity: 1;
+}
 
 
 
 .header__composition{
     text-align: center;
-    padding-top: 12%;
+    padding-top: 130px;
     
 }
 
@@ -116,13 +140,14 @@ button{
     text-transform: uppercase;
     letter-spacing: 0.02em;
     margin-bottom: 35px;
-    font-size: 2.2em;
+    font-size: 2.5em;
     line-height: 1.5;
 }
 
 .header__p{
     font-weight: 400;
     color: #ffffff;
+    font-size: 1.6em;
     text-transform: uppercase;
 }
 
@@ -161,8 +186,8 @@ button{
 }
 
 .numbers__p{
-    font-weight: 500;
-    font-size: 0.7em;
+    font-weight: 400;
+    font-size: 1em;
     color: #999999;
     margin-top: 0px;
     margin-bottom: 57px;
@@ -180,6 +205,9 @@ button{
     
 }
 .project__img{
+    width: 100%;
+    display: block;
+    background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7);
     transition: .75s ease;
 }
 .project__img:hover{
@@ -414,10 +442,10 @@ margin: 0;
 }
 
 .footer{
-    height: 10vh;
     background-color: #404149;
     display: flex;
     align-items: center;
+    padding: 15px 0;
 }
 .footer__span{
     color: #f7f7f7;
@@ -457,14 +485,11 @@ margin: 0;
 /*PRELOADER STYLES*/
 
 .preloader{
-    display: flex;
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    justify-content: center;
-    align-items: center;
     background-color: #e5e5e5;
     z-index: 999;
     
@@ -474,6 +499,11 @@ margin: 0;
     position: relative;
     width: 100px;
     height: 100px;
+    left: 50%;
+    top: 50vh;
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-top: -50px;
     -webkit-perspective: 780px;
     perspective: 780px;
 
@@ -502,7 +532,7 @@ margin: 0;
     -ms-animation: cssload-rotate-one 1.15s linear infinite;
     -webkit-animation: cssload-rotate-one 1.15s linear infinite;
     -moz-animation: cssload-rotate-one 1.15s linear infinite;
-    border-bottom: 3px solid #5C5EDC;
+    border-bottom: 5px solid rgb(75, 77, 211);
   }
   .cssload-inner.cssload-two {
     right: 0%;
@@ -512,7 +542,7 @@ margin: 0;
     -ms-animation: cssload-rotate-two 1.15s linear infinite;
     -webkit-animation: cssload-rotate-two 1.15s linear infinite;
     -moz-animation: cssload-rotate-two 1.15s linear infinite;
-    border-right: 3px solid rgba(76, 70, 101, 0.99);
+    border-right: 5px solid rgba(76, 70, 101, 0.99);
   }
   .cssload-inner.cssload-three {
     right: 0%;
@@ -522,7 +552,7 @@ margin: 0;
     -ms-animation: cssload-rotate-three 1.15s linear infinite;
     -webkit-animation: cssload-rotate-three 1.15s linear infinite;
     -moz-animation: cssload-rotate-three 1.15s linear infinite;
-    border-top: 3px solid #e9908a;
+    border-top: 5px solid #f7654a;
   }
   
   @keyframes cssload-rotate-one {
@@ -599,12 +629,59 @@ margin: 0;
     .scroll-top{
         display: none;
     }
+    .hamburger{
+        background-color: #f7654a;
+        padding: 7px 8px 1px 9px;
+    }
+    .header__composition{
+        padding-top: 70px;        
+    }
+    .mm-navbar__title{
+        text-align: left;
+        margin-left: 20px;
+    }
 }
 
 @media (max-width: 768px) {
     .questions__item{
         margin-left: 0px;
         text-align: center;
+    }
+    .no-padding{
+        padding: 0 15px;
+    }
+    .header__composition{
+        padding-top: 90px;        
+    }
+
+    .header__h1{
+        font-size: 2.2em;
+    }
+    .header__p{
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .header__h1{
+        margin-top: 130px;
+        font-size: 3.5em;
+    }
+    .header__p{
+        font-size: 2.2em;
+    }
+}
+
+@media (min-width: 425px){
+    @media(max-width: 1024px)
+    {
+        .numbers__span{
+            font-size: 1.7em;
+        }
+        .numbers__p{
+            font-size: 0.9em;
+        }
     }
 }
 

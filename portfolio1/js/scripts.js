@@ -1,15 +1,38 @@
 document.addEventListener("DOMContentLoaded", function() {
-//MMENU animations
-    $('#header__menu').mmenu({
-        extensions: ['widescreen', 'effect-menu-slide', 'position-bottom', 'theme-white', 'border-none', 'pagedim-black'],
-        navbar: {
-            title: '<span class="nav-menu__text color-accent">Меню</span>'
-        }
+
+//Lazy load
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
     });
+
 //Preloader function
     $(window).on('load', function(){
         $('.preloader').delay(1000).fadeOut('slow');
     });
+
+
+//MMENU animations
+    $('#header__menu').mmenu({
+        extensions: ['widescreen', 'fx-menu-fade','fx-listitems-fade' , 'position-right', 'theme-white', 'border-none', 'pagedim-black', 'multiline'],
+        navbar: {
+            title: '<span class="nav-menu__text color-accent">Меню</span>'
+        }
+    });
+
+
+
+//Main menu scroll animation
+    $(".nav__item a").on("click", function() {
+
+        var get_id = $(this).attr("data-item");
+        var target = $("#"+get_id).offset().top;
+
+        $("html, body").animate({scrollTop: target}, 800);
+
+    });
+
+
+
 
 //Hamburger animations
     var api = $('#header__menu').data('mmenu');
