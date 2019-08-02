@@ -33,6 +33,14 @@ button:hover, button:focus, button:active{
     box-shadow: none !important;
 }
 
+.btn{
+    transition: none;
+    outline: none;
+    border: none;
+    padding: 0px;
+
+}
+
 
 .mb50{
     margin-bottom: 50px;
