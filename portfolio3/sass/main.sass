@@ -1,0 +1,223 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Montserrat', sans-serif
+	overflow-x: hidden
+	color: $text
+
+ul
+	list-style-type: none
+	margin: 0
+	padding: 0
+	
+
+a
+	color: #fff
+	&:hover, &:focus
+		color: #fff
+		text-decoration: none
+
+button
+	outline: none
+	background-color: transparent
+	border: none
+	&:hover, &:focus, &:active
+		outline: none
+
+
+
+.parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
+	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
+.h1
+	font-weight: 900
+	color: #fff
+	font-size: 48px
+
+.h2
+	font-weight: 700
+	font-size: 36px
+	line-height: 1.5
+
+.h3
+	font-weight: 600
+	font-size: 18px
+	line-height: 1.4
+
+.h3 p
+	font-size: 14px
+
+.btn-accent
+	background-color: $accent
+
+
+// Custom Sass / Remove before use
+header
+	height: 100vh
+	background-position: center
+	background-size: cover
+	background-image: url(../img/@2x/header-bg.jpg)
+	
+
+.header__topline
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 15
+	height: 100px
+	width: 100%
+	padding: 40px 20% 0px 10%	
+	text-align: right
+	border-bottom: 1px solid rgba(#A1A1A1 , .5 )
+
+.hamburger
+	display: none
+	height: 50px
+	width: 50px
+	margin-left: auto
+	margin-right: 25px
+	margin-bottom: auto
+	margin-top: 25px
+	align-items: center
+	padding: 0
+	justify-content: center
+
+.hamburger-box
+	display: flex
+	justify-content: center
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	width: 30px
+	background-color: #fff
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
+	background-color: #fff
+
+.hamburger.is-active:hover, .hamburger:hover
+	opacity: 1
+
+.header-nav__item
+	display: inline-block
+	margin-left: 40px
+
+.header-nav__item.is-active
+	&:after
+		content: ''
+		display: block
+		width: 140%
+		margin-left: -20%
+		height: 2.5px
+		margin-top: 31px
+		background-color: #fff
+
+.header-nav__item:first-child
+	margin-left: 0
+
+
+
+.nav__text
+	color: #ffffff
+	font-size: 16px
+	line-height: 20px
+	font-weight: 500
+	cursor: pointer
+
+.header-composition__container
+	display: flex
+	height: 100vh
+	justify-content: center
+	align-items: center
+	text-align: center
+
+.header__p
+	color: #fff
+
+.header__button
+	height: 45px
+	width: 200px
+	border-radius: 1.3em
+	color: #fff
+	font-weight: 500
+	font-size: 16px
+	transition: background-color 0.5s ease
+	margin-top: 50px
+	&:hover
+		background-color: darken($accent, 10%)
+		&:active
+			background-color: darken($accent, 20%)
+
+
+
+@media screen and (max-width: 1023px) 
+	.header__topline
+		padding: 0
+	.header__nav
+		display: none
+	.hamburger
+		display: flex
+
+@media screen and (min-width:767px) and (max-width: 1023px)
+	.h1
+		font-size: 32px
+	
+@media screen and (max-width: 767px)
+	.h1
+		font-size: 22px
+	.header__p
+		font-size: 12px
+
+//_________HEIGHT________
+@media screen and (max-height:470px)
+	.header__topline
+		height: 60px
+		padding: 0
+	.header__button
+		margin-top: 20px
+	.h1
+		font-size: 22px
+	.header__p
+		font-size: 12px
+	.hamburger
+		height: 30px
+		width: 30px
+		margin-left: auto
+		margin-right: 15px
+		margin-bottom: auto
+		margin-top: 15px
+		align-items: center
+
+
+@media screen and (max-height:310px)
+	.header__topline
+		height: 40px
+		padding: 0
+	.header__button
+		margin-top: 10px
+	.h1
+		font-size: 22px
+	.header__p
+		font-size: 12px
+
+	@media screen and (max-height:470px) and (min-width: 1023px)
+	.header__topline
+		height: 40px
+		padding: 20px 20% 0px 10%	
+
