@@ -90,29 +90,6 @@ header
 	text-align: right
 	border-bottom: 1px solid rgba(#A1A1A1 , .5 )
 
-.hamburger
-	display: none
-	height: 50px
-	width: 50px
-	margin-left: auto
-	margin-right: 25px
-	margin-bottom: auto
-	margin-top: 25px
-	align-items: center
-	padding: 0
-	justify-content: center
-
-.hamburger-box
-	display: flex
-	justify-content: center
-.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
-	width: 30px
-	background-color: #fff
-.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
-	background-color: #fff
-
-.hamburger.is-active:hover, .hamburger:hover
-	opacity: 1
 
 .header-nav__item
 	display: inline-block
@@ -131,14 +108,74 @@ header
 .header-nav__item:first-child
 	margin-left: 0
 
-
-
 .nav__text
 	color: #ffffff
 	font-size: 16px
 	line-height: 20px
 	font-weight: 500
 	cursor: pointer
+
+.hamburger
+	display: none
+	position: absolute
+	top: 25px
+	left: -65px
+	height: 50px
+	width: 50px
+	padding: 0
+	
+.hamburger-box
+	display: flex
+	margin-left: auto
+	margin-top: auto
+
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	width: 30px
+	background-color: #fff
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
+	background-color: #fff
+
+.hamburger.is-active:hover, .hamburger:hover
+	opacity: 1
+
+.menu-fixed
+	position: fixed
+	top: 0
+	right: 0
+	z-index: 99
+	width: 60%
+	background-color: $dark
+	height: 100vh
+	display: flex
+	padding-top: 30px
+	justify-content: center
+	
+	transition: transform 0.5s ease
+	transform: translateX(100%)
+
+.menu-fixed.is-active
+	transform: translateX(0%)
+
+.menu-fixed__list
+	display: flex
+	height: 50%
+	flex-direction: column
+
+.header__fixed-nav-item
+	text-align: left
+	margin: 10px
+
+.fixed-nav__menu-text
+	color: $accent
+	text-align: center
+	font-size: 2em
+
+.fixed-nav__text
+	font-weight: 700
+	font-size: 1.5em
+	
 
 .header-composition__container
 	display: flex
@@ -172,7 +209,8 @@ header
 	.header__nav
 		display: none
 	.hamburger
-		display: flex
+		display: block
+	
 
 @media screen and (min-width:767px) and (max-width: 1023px)
 	.h1
@@ -183,6 +221,9 @@ header
 		font-size: 22px
 	.header__p
 		font-size: 12px
+	
+	.fixed-nav__text
+		font-size: 1.3em
 
 //_________HEIGHT________
 @media screen and (max-height:470px)
@@ -198,11 +239,10 @@ header
 	.hamburger
 		height: 30px
 		width: 30px
-		margin-left: auto
-		margin-right: 15px
-		margin-bottom: auto
-		margin-top: 15px
+		left: -55px
+		top: 15px
 		align-items: center
+
 
 
 @media screen and (max-height:310px)
