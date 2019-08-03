@@ -19,13 +19,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		$("html, body").animate({scrollTop: target}, 800);
 		});
 
-	$(".header__fixed-nav-item a").on("click", function() {
-
+		$(".header__fixed-nav-item a").on("click", function() {
 			var get_id = $(this).attr("data-item");
 			var target = $("#"+get_id).offset().top;
-	
 			$("html, body").animate({scrollTop: target}, 800);
-	});
+			$('.hamburger').removeClass('is-active');
+			$('.menu-fixed').removeClass('is-active');
+			$('.backdrop').css({"left":"-100%", "opacity":"0"});
+		});
 
 //Active menu item
 
@@ -36,16 +37,21 @@ document.addEventListener("DOMContentLoaded", function() {
 			var bottom = top +$(el).height();
 			var scroll = $(window).scrollTop();
 			var id = $(el).attr('id');
-
+			
 			if(scroll > top && scroll < bottom){
 				$('a.is-active').removeClass('is-active');
 				$('a[href="#'+id+'"]').addClass('is-active');
 			}
 			else{
 				$('a[href="#'+id+'"]').removeClass('is-active');
-			}
+			};
+			if(scroll < $(this).height()-160){
+				$('a[href="#header"]').addClass('is-active');
+			};
 		});
 	});
+	
+//Swipable menu
 
 
 // Dark topline
