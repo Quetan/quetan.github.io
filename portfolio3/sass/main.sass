@@ -24,6 +24,15 @@ body
 	font-family: 'Montserrat', sans-serif
 	overflow-x: hidden
 	color: $text
+body.is-active
+	&:after
+		content: ''
+		width: 100vh
+		height: 100vw
+		background-color: rgba($dark, .1)
+		display: block
+		position: fixed
+		z-index: 999
 
 ul
 	list-style-type: none
@@ -33,7 +42,8 @@ ul
 
 a
 	color: #fff
-	&:hover, &:focus
+	cursor: pointer
+	&:hover, &:focus, &:active
 		color: #fff
 		text-decoration: none
 
@@ -89,20 +99,25 @@ header
 	padding: 40px 20% 0px 10%	
 	text-align: right
 	border-bottom: 1px solid rgba(#A1A1A1 , .5 )
+	transition: background-color 0.5s ease
+
+.header__topline.header__dark
+	background-color: $dark
+
 
 
 .header-nav__item
 	display: inline-block
 	margin-left: 40px
 
-.header-nav__item.is-active
+.nav__text.is-active
 	&:after
 		content: ''
 		display: block
 		width: 140%
 		margin-left: -20%
-		height: 2.5px
-		margin-top: 31px
+		height: 3px
+		margin-top: 30px
 		background-color: #fff
 
 .header-nav__item:first-child
@@ -117,8 +132,9 @@ header
 
 .hamburger
 	display: none
+	z-index: 100
 	position: absolute
-	top: 25px
+	top: 15px
 	left: -65px
 	height: 50px
 	width: 50px
@@ -144,16 +160,26 @@ header
 	position: fixed
 	top: 0
 	right: 0
-	z-index: 99
+	z-index: 999
 	width: 60%
-	background-color: $dark
+	background-color: white
 	height: 100vh
 	display: flex
 	padding-top: 30px
 	justify-content: center
-	
 	transition: transform 0.5s ease
 	transform: translateX(100%)
+
+.backdrop
+	position: fixed
+	z-index: 10
+	left: -100%
+	top: 0
+	width: 100%
+	height: 100%
+	background: rgba(#000, .7)
+	opacity: 0
+	transition: opacity 0.3s ease
 
 .menu-fixed.is-active
 	transform: translateX(0%)
@@ -167,6 +193,8 @@ header
 	text-align: left
 	margin: 10px
 
+		
+
 .fixed-nav__menu-text
 	color: $accent
 	text-align: center
@@ -175,7 +203,26 @@ header
 .fixed-nav__text
 	font-weight: 700
 	font-size: 1.5em
-	
+	color: $dark
+	&:after
+		content: ''
+		display: block
+		margin-top: 10px
+		width: 0px
+		height: 2px
+		background-color: $dark
+		transition: width	0.5s ease
+	&:hover
+		color: $dark
+		&:after
+			width: 130%
+			margin-left: -15%
+
+.fixed-nav__text.is-active
+	&:after
+		width: 130%
+		margin-left: -15%
+		transition: width	0.5s ease	
 
 .header-composition__container
 	display: flex
@@ -201,11 +248,18 @@ header
 		&:active
 			background-color: darken($accent, 20%)
 
+.section
+	height: 100vh
+	text-align: center
+	font-weight: 900
+	font-size: 48px
+	margin-top: 150px
 
-
+//__________MEDIA___________
 @media screen and (max-width: 1023px) 
 	.header__topline
 		padding: 0
+		height: 80px
 	.header__nav
 		display: none
 	.hamburger
@@ -224,6 +278,12 @@ header
 	
 	.fixed-nav__text
 		font-size: 1.3em
+
+@media screen and (max-width:525px)
+	.menu-fixed
+		width:	80%
+	.hamburger
+		left: -55px
 
 //_________HEIGHT________
 @media screen and (max-height:470px)
