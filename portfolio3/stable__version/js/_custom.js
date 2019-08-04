@@ -51,9 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 	
-//Video player
-
-
+//Swipable menu
 
 
 // Dark topline

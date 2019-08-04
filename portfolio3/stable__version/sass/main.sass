@@ -48,9 +48,6 @@ a
 		color: #fff
 		text-decoration: none
 
-p	
-	margin: 0
-
 button
 	outline: none
 	background-color: transparent
@@ -58,12 +55,11 @@ button
 	&:hover, &:focus, &:active
 		outline: none
 
-img
-	.lazy
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
+
+
+.parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
+	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
 .h1
 	font-weight: 900
 	color: #fff
@@ -110,6 +106,7 @@ header
 .header-nav__item
 	display: inline-block
 	margin-left: 40px
+
 
 .nav__text.is-active
 	&:after
@@ -288,8 +285,7 @@ header
 	padding-right: 120px
 
 .about-us__link 
-	color: $accent
-	&:hover, &:active
+	&:hover
 		color: $accent
 		text-decoration: underline
 .about-us__img
@@ -314,109 +310,21 @@ header
 	margin-left: 10px
 	font-size: 36px
 	margin-bottom: 15px
+
 	
-.all-services__container
-	padding-top: 100px
-	background-color: #504DC2
-	padding-left: 11%
-	padding-right: 11%
-
-.all-services__text	
-	text-align: left
-	color: #fff
-	margin-bottom: 310px
-
-.all-services__btn
-	text-align: right
-	button
-		margin-left: auto
-.all-services__items
-	border-bottom: 1px solid $light-grey 
-	padding-bottom: 80px
-
-.all-services__item
-	margin-top: -240px
-	padding-left: 15px
-	padding-right: 15px
-	a
-		color: $accent
-		&:hover, &:active
-			color: $accent
-			text-decoration: underline
-
-	img
-		border-radius: 10px
-		margin-bottom: 30px
-		width: 100%
-		height: auto
-		transition: transform 0.5s ease
-		&:hover
-			transform: scale(1.03)
-
-.all-projects
-	background-color: #F6F6F8
-	margin-top: 65px
-	padding-top: 80px
-	padding-bottom: 90px
-
-.all-projects__text
-	text-align: center
-
-.all-projects__item
-	margin-top: 70px
-	img
-		width: 100%
-		height: auto
-		border-radius: 10px
-		transition: transform 0.5s ease
-		&:hover, &:active
-			transform: scale(1.03)
-		
-.all-projects__button
-	text-align: center
-
-.video
-	background-image: url(../img/@2x/video-bg.jpg)
-	background-size: cover
-	background-position: center
-	height: 90vh
-	padding-top: 70px
-.video__text
-	text-align: center
-	color: #fff
-
-.video-palyer__container
-	padding-top: 10vh
-
-.video-player
-	display: flex
-	justify-content: center
-	align-items: center
-	padding-bottom: 85px
-	border-bottom: 1px solid $light-grey
-	margin-bottom: 100px
-	// img
-	// 	display: none
-	// 	width: auto
-	// 	height: 60vh
-	// 	border-radius: 10px
-	iframe
-		display: relative
-		height: 60vh
-		border-radius: 10px
-
 
 	//////////////////////////////////////////////////////////
 
+.section
+	height: 100vh
+	text-align: center
+	font-weight: 900
+	font-size: 48px
+	display: flex
+	justify-content: center
+	align-items: center
 
 //__________MEDIA___________
-
-@media screen and (max-width: 1199px)
-	.all-services__item
-		margin-top: -200px
-	.all-services__text	
-		margin-bottom: 240px
-
 @media screen and (max-width: 1023px) 
 	.header__topline
 		padding: 0
@@ -450,11 +358,6 @@ header
 	.about-us__text
 		padding-top: 50px
 		padding-right: 30px
-		
-	.all-services__item
-		margin-top: 20px
-	.all-services__text	
-		margin-bottom: 70px
 	
 @media screen and (max-width: 767px)
 	.h1
@@ -465,25 +368,6 @@ header
 	
 	.h3
 		font-size: 20px
-
-	p
-		font-size: 12px
-
-	.all-services__item
-		img
-			margin-left: 9%
-			margin-right: 11%
-			
-
-	.all-services__item img
-		width: 80%
-
-	.about-us__img
-		display: flex
-		align-items: center
-		justify-content: center
-	.about-us__img img
-		width: 80%
 
 	.header__p
 		font-size: 12px
@@ -500,36 +384,10 @@ header
 		padding-top: 50px
 		padding-right: 10px
 		margin-bottom: 20px
-	
-	.numbers__item:first-child
-		margin-top: 0px
-	.numbers__item
-		margin-top: 30px
-
-	.all-services__text
-		text-align: center
-		margin-bottom: 20px
-
-	.all-services__item
-		margin-top: 20px
-	
-	.all-services__btn
-		text-align: center
-		padding-bottom: 40px
-		button
-			margin-top: 20px
-	
-	.all-projects__item
-		text-align: center
-		img
-			width: 80%
-
-
-
 
 @media screen and (max-width:525px)
 	.menu-fixed
-		width: 80%
+		width:	80%
 	.hamburger
 		left: -55px
 	
