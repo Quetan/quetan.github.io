@@ -19,6 +19,10 @@
 
 <body>
 
+	<div id="preloader">
+			<div id="loader"></div>
+		</div>
+
 	<div class="backdrop"></div>
 	<!-- Custom HTML / Remove before use -->
 
@@ -72,7 +76,7 @@
 									Главная
 								</a>
 							</li>
-							<li id="projects-menu-item" class="header-nav__item">
+							<li class="header-nav__item">
 								<a href="#projects" class="nav__text" data-item="projects">
 									Приложения
 								</a>
@@ -107,7 +111,7 @@
 							Мы создаем легкие решения <br> 
 							сложных задач и проблем
 						</h1>
-						<button class="btn-accent">Наши проекты</button>
+						<button class="btn-accent btn-scroll" data-item="all-projects">Наши проекты</button>
 					</div>
 				</div>
 			</div>
@@ -182,7 +186,7 @@
 								Подробнее о компании
 						</a>
 					</div>
-					<div class="col-md-6 col-sm-12 about-us__img">
+					<div class="col-md-6 col-sm-12 about-us__img parent">
 							<img class="lazy img-fluid" src="img/about-us-thumb.gif" data-src="img/_src/about-us.jpg" data-srcset="img/@1x/about-us.jpg 1x, img/@2x/about-us.jpg 2x">
 					</div>
 				</div>
@@ -259,7 +263,7 @@
 			</div>
 			<div class="container all-services__items">
 				<div class="row">
-					<div class="col-md-4 all-services__item">
+					<div class="col-md-4 all-services__item parent">
 						<img class="lazy img-fluid" src="img/all-services-thumb.gif" data-src="img/_src/all-services-item.jpg" data-srcset="img/@1x/all-services-item.jpg 1x, img/@2x/all-services-item.jpg 2x">
 						<h3 class="h3 mb-3">
 							<span class="color-accent">
@@ -274,7 +278,7 @@
 									Подробнее
 							</a>
 						</div>
-						<div class="col-md-4 all-services__item">
+						<div class="col-md-4 all-services__item parent">
 							<img class="lazy img-fluid" src="img/all-services-thumb.gif" data-src="img/_src/all-services-item.jpg" data-srcset="img/@1x/all-services-item.jpg 1x, img/@2x/all-services-item.jpg 2x">
 							<h3 class="h3 mb-3">
 								<span class="color-accent">
@@ -289,7 +293,7 @@
 								Подробнее
 							</a>
 						</div>
-						<div class="col-md-4 all-services__item">
+						<div class="col-md-4 all-services__item parent">
 							<img class="lazy img-fluid" src="img/all-services-thumb.gif" data-src="img/_src/all-services-item.jpg" data-srcset="img/@1x/all-services-item.jpg 1x, img/@2x/all-services-item.jpg 2x">
 							<h3 class="h3 mb-3">
 								<span class="color-accent">
@@ -318,16 +322,16 @@
 								Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
 						</p>
 					</div>
-					<div class="col-md-3 all-projects__item">
+					<div class="col-md-3 all-projects__item parent">
 						<img src="img/all-projects-thumb.gif" data-src="img/_src/all-projects-item.jpg" data-srcset="img/@1x/all-projects-item.jpg 1x, img/@2x/all-projects-item.jpg 2x" alt="Проект" class="img-fluid lazy">
 					</div>
-					<div class="col-md-3 all-projects__item">
+					<div class="col-md-3 all-projects__item parent">
 						<img src="img/all-projects-thumb.gif" data-src="img/_src/all-projects-item.jpg" data-srcset="img/@1x/all-projects-item.jpg 1x, img/@2x/all-projects-item.jpg 2x" alt="Проект" class="img-fluid lazy">
 					</div>
-					<div class="col-md-3 all-projects__item">
+					<div class="col-md-3 all-projects__item parent">
 						<img src="img/all-projects-thumb.gif" data-src="img/_src/all-projects-item.jpg" data-srcset="img/@1x/all-projects-item.jpg 1x, img/@2x/all-projects-item.jpg 2x" alt="Проект" class="img-fluid lazy">
 					</div>
-					<div class="col-md-3 all-projects__item">
+					<div class="col-md-3 all-projects__item parent">
 						<img src="img/all-projects-thumb.gif" data-src="img/_src/all-projects-item.jpg" data-srcset="img/@1x/all-projects-item.jpg 1x, img/@2x/all-projects-item.jpg 2x" alt="Проект" class="img-fluid lazy">
 					</div>
 					<div class="col-sm-12 all-projects__button">
@@ -352,11 +356,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="container video-palyer__container">
+			<div class="container video-player__container">
 				<div class="row">
 					<div class="col-sm-12 video-player">
-							<!-- <img id="video-play-button" class="lazy img-fluid" src="img/video-content-thumb.gif" data-src="img/_src/video-content.jpg" data-srcset="img/@1x/video-content.jpg 1x, img/@2x/video-content.jpg 2x"> -->
-							<iframe id="player" src="https://www.youtube.com/embed/6aFdEhEZQjE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<video id="player" preload="none" autoplay  loop muted>
+							<source src="video.mp4">
+							</video>
+							
 							
 					</div>
 				</div>
@@ -376,7 +382,7 @@
 							<input value="Подписаться" class="subscription__button" type="submit">
 						</form>
 						<p class="color-grey">
-							Мы не шлем спам, и передаем никому ваши данные.
+							Мы не шлем спам, и никому не передаем ваши данные.
 						</p>
 					</div>
 				</div>
@@ -455,7 +461,7 @@
 			</div>
 			<div class="bottom-line">
 				<span class="bottom-line__text">
-						(с) 2019. Все права защищены.
+					Коркин Кирилл (с) 2019. Все права защищены
 				</span>
 			</div>
 			

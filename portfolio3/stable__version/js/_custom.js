@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+	//preloader animation
+
+	$(window).on('load', function(){
+		$('#preloader').delay(1000).fadeOut('slow');
+	});
 
 	// Hamburger animation
 	$('.hamburger').on('click',function(){
@@ -28,6 +33,14 @@ document.addEventListener("DOMContentLoaded", function() {
 			$('.backdrop').css({"left":"-100%", "opacity":"0"});
 		});
 
+		$(".btn-scroll").on("click", function() {	
+			var get_id = $(this).attr("data-item");
+			var target = $("#"+get_id).offset().top;	
+			$("html, body").animate({scrollTop: target}, 800);
+			});
+
+		
+
 //Active menu item
 
 	$(window).scroll(function(){
@@ -45,9 +58,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			else{
 				$('a[href="#'+id+'"]').removeClass('is-active');
 			};
-			if(scroll < $(this).height()-160){
+			if(scroll > $(this).height()-100){
+				$('a[href="#header"]').removeClass('is-active');
+			}
+			else{
 				$('a[href="#header"]').addClass('is-active');
-			};
+			}
 		});
 	});
 	

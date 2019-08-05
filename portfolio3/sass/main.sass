@@ -13,7 +13,7 @@
 	color: $light-grey
 
 ::placeholder
-	color: #666
+	color: $grey
 
 ::selection
 	background-color: $accent
@@ -109,9 +109,9 @@ header
 	top: 0
 	left: 0
 	z-index: 15
-	height: 100px
+	height: 80px
 	width: 100%
-	padding: 40px 20% 0px 10%	
+	padding: 30px 20% 0px 10%	
 	text-align: right
 	border-bottom: 1px solid rgba(#A1A1A1 , .5 )
 	transition: background-color 0.5s ease
@@ -130,14 +130,15 @@ header
 		width: 140%
 		margin-left: -20%
 		height: 4px
-		margin-top: 30px
+		margin-top: 20px
 		background-color: #fff
+			
 
 .header-nav__item:first-child
 	margin-left: 0
 
 .nav__text
-	color: #ffffff
+	color: #fff
 	font-size: 16px
 	line-height: 20px
 	font-weight: 500
@@ -715,6 +716,12 @@ footer
 	.header__topline
 		height: 60px
 		padding: 0
+		padding-top: 15px
+		padding-right: 10vw
+	.nav__text.is-active
+		&:after
+			margin-top: 15px
+
 	.header__button
 		margin-top: 20px
 	.h1

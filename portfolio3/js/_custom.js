@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 	//preloader animation
-
 	$(window).on('load', function(){
 		$('#preloader').delay(1000).fadeOut('slow');
 	});

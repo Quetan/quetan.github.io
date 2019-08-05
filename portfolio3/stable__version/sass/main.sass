@@ -1,6 +1,7 @@
 @import vars
 @import fonts
 @import libs
+@import preloader
 
 .color-accent
 	color: $accent
@@ -58,12 +59,23 @@ button
 	&:hover, &:focus, &:active
 		outline: none
 
-img
-	.lazy
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
+// img
+// 	.lazy
+// 		position: absolute
+// 		top: 0
+// 		left: 0
+// 		width: 100%
+
+.parent
+	border-radius: 3px
+	overflow: hidden
+	margin: 20px 0
+
+.parent img 
+	width: 100%
+	display: block
+	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
 .h1
 	font-weight: 900
 	color: #fff
@@ -87,9 +99,9 @@ img
 // Custom Sass / Remove before use
 header
 	height: 100vh
+	background-image: url(../img/@1x/header-bg.jpg)
 	background-position: center
 	background-size: cover
-	background-image: url(../img/@2x/header-bg.jpg)
 	
 
 .header__topline
@@ -105,7 +117,7 @@ header
 	transition: background-color 0.5s ease
 
 .header__topline.header__dark
-	background-color: rgba($dark , .6)
+	background-color: rgba($dark , .85)
 
 .header-nav__item
 	display: inline-block
@@ -335,7 +347,7 @@ header
 	padding-bottom: 80px
 
 .all-services__item
-	margin-top: -240px
+	margin-top: -220px
 	padding-left: 15px
 	padding-right: 15px
 	a
@@ -381,11 +393,12 @@ header
 	background-position: center
 	height: 90vh
 	padding-top: 70px
+
 .video__text
 	text-align: center
 	color: #fff
 
-.video-palyer__container
+.video-player__container
 	padding-top: 10vh
 
 .video-player
@@ -395,17 +408,18 @@ header
 	padding-bottom: 85px
 	border-bottom: 1px solid $light-grey
 	margin-bottom: 100px
+	width: auto
+	height: 80vh
 	// img
 	// 	display: none
 	// 	width: auto
 	// 	height: 60vh
 	// 	border-radius: 10px
-	iframe
-		display: relative
-		height: auto
-		width: 600px
-		height: 60vh
-		border-radius: 10px
+	#player
+		height: 100%
+		width: 100%
+		
+		
 
 .subscription
 	margin-top: 140px
@@ -472,14 +486,14 @@ footer
 	margin-bottom: 20px
 	.h3
 		margin-bottom: 25px
-	i
-		padding-top: 8px
 	a
 		display: flex
 		margin-bottom: 20px
+		line-height: 16px
 		.fa
-			font-size: 12px
-			font-weight: 400
+			font-size: 8px
+			line-height: 16px
+			
 		
 .bottom-line
 	width: 100%
@@ -505,6 +519,9 @@ footer
 		margin-top: -200px
 	.all-services__text	
 		margin-bottom: 240px
+	.video
+		height: 90vh
+
 
 @media screen and (max-width: 1023px) 
 	.header__topline
@@ -544,6 +561,13 @@ footer
 		margin-top: 20px
 	.all-services__text	
 		margin-bottom: 70px
+	.subscription__input
+		font-size: 12px
+	.subscription__button
+		font-size: 12px
+
+	.video-player
+		border: none
 	
 @media screen and (max-width: 767px)
 	.h1
@@ -557,10 +581,18 @@ footer
 
 	p
 		font-size: 12px
+	
+	a
+		font-size: 12px
 
 	.all-services__item
 		img
-			margin-left: 9%
+			margin-left: 11%
+			margin-right: 11%
+
+	.all-projects__item
+		img
+			margin-left: 11%
 			margin-right: 11%
 			
 
@@ -621,6 +653,10 @@ footer
 		height: 30px
 		width: 25vw
 
+	.video-player
+		border: none
+
+
 @media screen and (max-width: 576px)
 
 	footer
@@ -628,7 +664,10 @@ footer
 	.footer__item 
 		a
 			display: block
-
+	
+	.video-player
+		display: flex
+		align-items: flex-start
 
 
 @media screen and (max-width:525px)
@@ -662,9 +701,16 @@ footer
 		width: 30vw
 		font-size: 12px
 
+	.subscription
+		margin-top: 0	
+	
+	.video-player__container
+		padding-top: 20px
+
 
 
 //_________HEIGHT________
+
 @media screen and (max-height:470px)
 	.header__topline
 		height: 60px
@@ -682,6 +728,8 @@ footer
 		top: 15px
 		align-items: center
 
+	.video-player
+		border: none
 
 
 @media screen and (max-height:310px)
