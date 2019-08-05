@@ -22,7 +22,7 @@
 	<div class="backdrop"></div>
 	<!-- Custom HTML / Remove before use -->
 
-	<header class="header" id="header">
+	<header class="header lazy-background" data-bg="/img/@1x/header-bg.jpg" id="header">
 		<div class="container nav__container">
 			<div class="row">
 				<div class="col-md-12">
@@ -339,7 +339,7 @@
 			</div>
 		</section>
 
-		<section id="video" class="video">
+		<section id="video lazy-background" data-bg="/img/@2x/video-bg.jpg" class="video">
 			<div class="container video__container">
 				<div class="row">
 					<div class="col-sm-12 video__text">
@@ -352,11 +352,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="container video-palyer__container">
+			<div class="container video-player__container">
 				<div class="row">
 					<div class="col-sm-12 video-player">
-							<!-- <img id="video-play-button" class="lazy img-fluid" src="img/video-content-thumb.gif" data-src="img/_src/video-content.jpg" data-srcset="img/@1x/video-content.jpg 1x, img/@2x/video-content.jpg 2x"> -->
-							<!-- <iframe id="player" src="https://www.youtube.com/embed/6aFdEhEZQjE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 							<video id="player" preload="none" autoplay  loop muted>
 							<source src="video.mp4">
 							</video>

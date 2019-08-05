@@ -98,7 +98,7 @@ button
 // Custom Sass / Remove before use
 header
 	height: 100vh
-	background-image: url(/img/@1x/header-bg.jpg)
+	//background-image: url(../img/1x/header-bg.jpg)
 	background-position: center
 	background-size: cover
 	
@@ -387,7 +387,7 @@ header
 	text-align: center
 
 .video
-	background-image: url(../img/@2x/video-bg.jpg)
+	//background-image: url(../img/2x/video-bg.jpg)
 	background-size: cover
 	background-position: center
 	height: 90vh
@@ -397,7 +397,7 @@ header
 	text-align: center
 	color: #fff
 
-.video-palyer__container
+.video-player__container
 	padding-top: 10vh
 
 .video-player
@@ -407,6 +407,8 @@ header
 	padding-bottom: 85px
 	border-bottom: 1px solid $light-grey
 	margin-bottom: 100px
+	width: auto
+	height: 80vh
 	// img
 	// 	display: none
 	// 	width: auto
@@ -417,10 +419,7 @@ header
 		height: auto
 		width: 100%
 		height: 100%
-		border-radius: 10px
-		box-shadow: 0px 0px 10px rgba(111, 111, 111, .6)
-		-webkit-box-shadow: 0px 0px 10px rgba(111, 111, 111, .6)
-		-moz-box-shadow: 0px 0px 10px rgba(111, 111, 111, .6)
+		
 		
 
 .subscription
@@ -521,6 +520,9 @@ footer
 		margin-top: -200px
 	.all-services__text	
 		margin-bottom: 240px
+	.video
+		height: 90vh
+
 
 @media screen and (max-width: 1023px) 
 	.header__topline
@@ -560,6 +562,13 @@ footer
 		margin-top: 20px
 	.all-services__text	
 		margin-bottom: 70px
+	.subscription__input
+		font-size: 12px
+	.subscription__button
+		font-size: 12px
+
+	.video-player
+		border: none
 	
 @media screen and (max-width: 767px)
 	.h1
@@ -642,6 +651,10 @@ footer
 		height: 30px
 		width: 25vw
 
+	.video-player
+		border: none
+
+
 @media screen and (max-width: 576px)
 
 	footer
@@ -683,11 +696,11 @@ footer
 		width: 30vw
 		font-size: 12px
 
-	.video-player
-		border: none
-
 	.subscription
 		margin-top: 0	
+	
+	.video-player__container
+		padding-top: 20px
 
 
 
