@@ -98,6 +98,7 @@ button
 // Custom Sass / Remove before use
 header
 	height: 100vh
+	background-image: url(/img/@1x/header-bg.jpg)
 	background-position: center
 	background-size: cover
 	
@@ -345,7 +346,7 @@ header
 	padding-bottom: 80px
 
 .all-services__item
-	margin-top: -240px
+	margin-top: -220px
 	padding-left: 15px
 	padding-right: 15px
 	a
@@ -386,10 +387,12 @@ header
 	text-align: center
 
 .video
+	background-image: url(../img/@2x/video-bg.jpg)
 	background-size: cover
 	background-position: center
 	height: 90vh
 	padding-top: 70px
+
 .video__text
 	text-align: center
 	color: #fff
@@ -409,12 +412,16 @@ header
 	// 	width: auto
 	// 	height: 60vh
 	// 	border-radius: 10px
-	video
+	#player
 		display: relative
 		height: auto
-		width: 600px
-		height: 60vh
+		width: 100%
+		height: 100%
 		border-radius: 10px
+		box-shadow: 0px 0px 10px rgba(111, 111, 111, .6)
+		-webkit-box-shadow: 0px 0px 10px rgba(111, 111, 111, .6)
+		-moz-box-shadow: 0px 0px 10px rgba(111, 111, 111, .6)
+		
 
 .subscription
 	margin-top: 140px
@@ -676,9 +683,16 @@ footer
 		width: 30vw
 		font-size: 12px
 
+	.video-player
+		border: none
+
+	.subscription
+		margin-top: 0	
+
 
 
 //_________HEIGHT________
+
 @media screen and (max-height:470px)
 	.header__topline
 		height: 60px
@@ -696,6 +710,8 @@ footer
 		top: 15px
 		align-items: center
 
+	.video-player
+		border: none
 
 
 @media screen and (max-height:310px)
