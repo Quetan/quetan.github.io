@@ -58,12 +58,23 @@ button
 	&:hover, &:focus, &:active
 		outline: none
 
-img
-	.lazy
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
+// img
+// 	.lazy
+// 		position: absolute
+// 		top: 0
+// 		left: 0
+// 		width: 100%
+
+.parent
+	border-radius: 3px
+	overflow: hidden
+	margin: 20px 0
+
+.parent img 
+	width: 100%
+	display: block
+	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
 .h1
 	font-weight: 900
 	color: #fff
@@ -89,7 +100,6 @@ header
 	height: 100vh
 	background-position: center
 	background-size: cover
-	background-image: url(../img/@2x/header-bg.jpg)
 	
 
 .header__topline
@@ -105,7 +115,7 @@ header
 	transition: background-color 0.5s ease
 
 .header__topline.header__dark
-	background-color: rgba($dark , .6)
+	background-color: rgba($dark , .85)
 
 .header-nav__item
 	display: inline-block
@@ -376,7 +386,6 @@ header
 	text-align: center
 
 .video
-	background-image: url(../img/@2x/video-bg.jpg)
 	background-size: cover
 	background-position: center
 	height: 90vh
@@ -400,7 +409,7 @@ header
 	// 	width: auto
 	// 	height: 60vh
 	// 	border-radius: 10px
-	iframe
+	video
 		display: relative
 		height: auto
 		width: 600px
@@ -560,7 +569,12 @@ footer
 
 	.all-services__item
 		img
-			margin-left: 9%
+			margin-left: 11%
+			margin-right: 11%
+
+	.all-projects__item
+		img
+			margin-left: 11%
 			margin-right: 11%
 			
 

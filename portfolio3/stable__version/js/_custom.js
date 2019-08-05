@@ -51,7 +51,21 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 	
-//Swipable menu
+//Video player
+
+		var video_player = $('#player');
+		var video_position = video_player.offset().top;
+		var window_height = $(window).height();
+		scroll_difference = video_position - window_height;
+
+		$(window).scroll(function(){
+			scroll = $(this).scrollTop();
+			if (scroll > scroll_difference - 200){
+				video_player.css("display","relative");
+			};
+		});
+
+		
 
 
 // Dark topline
