@@ -1,5 +1,6 @@
 {
- "name": "App",
+  "short_name": "Ternex",
+ "name": "Ternex",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",

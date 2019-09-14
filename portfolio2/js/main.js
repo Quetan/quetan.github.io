@@ -1,109 +1,94 @@
-$(document).ready(function () {
-    'use strict';
+$(document).ready(function() {
+  "use strict";
 
-	//********* page loader js
+  //********* page loader js
 
-	setTimeout(function () {
-		$('.loader_bg').fadeToggle();
-	}, 2000);
+  setTimeout(function() {
+    $(".loader_bg").fadeToggle();
+  }, 1500);
 
+  //********** menu background color change while scroll
 
-	//********** menu background color change while scroll
+  $(window).on("scroll", function() {
+    var menu_area = $(".nav-area");
+    var offset = $("#about").offset().top - 150;
+    if ($(window).scrollTop() > offset) {
+      menu_area.addClass("sticky_navigation");
+    } else {
+      menu_area.removeClass("sticky_navigation");
+    }
+  });
 
-	$(window).on('scroll', function () {
-		var menu_area = $('.nav-area');
-		if ($(window).scrollTop() > 200) {
-			menu_area.addClass('sticky_navigation');
-		} else {
-			menu_area.removeClass('sticky_navigation');
-		}
-	});
+  //********** menu hides after click (mobile menu)
 
+  $(document).on("click", ".navbar-collapse.in", function(e) {
+    if ($(e.target).is("a") && $(e.target).attr("class") != "dropdown-toggle") {
+      $(this).collapse("hide");
+    }
+  });
 
-	//********** menu hides after click (mobile menu)
+  //*********** scrollspy js
 
-	$(document).on('click', '.navbar-collapse.in', function (e) {
-		if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
-			$(this).collapse('hide');
-		}
-	});
+  $("body").scrollspy({
+    target: ".navbar-collapse",
+    offset: 195
+  });
 
+  //************ smooth scroll js
 
-	//*********** scrollspy js
+  $("a.smooth-menu,a.custom-btn,a.banner-btn,a.mouse-scroll").on(
+    "click",
+    function(e) {
+      e.preventDefault();
+      var anchor = $(this);
+      $("html, body")
+        .stop()
+        .animate(
+          {
+            scrollTop: $(anchor.attr("href")).offset().top - 50
+          },
+          1000
+        );
+    }
+  );
 
-	$('body').scrollspy({
-		target: '.navbar-collapse',
-		offset: 195
-	});
+  //*********** Animated headline js
 
+  $(".animate-scale").animatedHeadline({
+    animationType: "clip"
+  });
 
-	//************ smooth scroll js
+  //*** wow js
 
-	$('a.smooth-menu,a.custom-btn,a.banner-btn').on("click", function (e) {
-		e.preventDefault();
-		var anchor = $(this);
-		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top - 50
-		}, 1000);
-	});
+  new WOW().init();
 
-	//*********** Animated headline js
+  //*** Services carousel
 
-	$('.animate-scale').animatedHeadline({
-		animationType: 'clip'
-	});
+  $("#services-carousel").owlCarousel({
+    navigation: false,
+    pagination: true,
+    slideSpeed: 800,
+    paginationSpeed: 800,
+    smartSpeed: 500,
+    autoplay: true,
+    singleItem: true,
+    loop: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      680: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
 
-
-	//*** wow js
-
-	new WOW().init();
-
-	//*** Services carousel
-
-	$("#services-carousel").owlCarousel({
-		navigation: false,
-		pagination: true,
-		slideSpeed: 800,
-		paginationSpeed: 800,
-		smartSpeed: 500,
-		autoplay: true,
-		singleItem: true,
-		loop: true,
-		responsive:{
-			0:{
-				items:1
-			},
-			680:{
-				items:2
-			},
-			1000:{
-				items:3
-			}
-		}
-	});
-
-	//*****Counter up js
-
-
-	$('.counter').counterUp({
-		delay: 50,
-		time: 8000
-	});
-
-	//*****Magnific Pop up js
-
-	$('#inline-popups,#inline-popups-2,#inline-popups-3,#inline-popups-4,#inline-popups-5,#inline-popups-6,#login,#signup, #auth,#registration-link,#footer-auth').magnificPopup({
-		delegate: 'a',
-		removalDelay: 400, //delay removal by X to allow out-animation
-		callbacks: {
-			beforeOpen: function() {
-				this.st.mainClass = this.st.el.attr('data-effect');
-			}
-		},
-		midClick: true
-	});
-	
-
-
-
+  //*****Counter up js
+  $(".counter").counterUp({
+    delay: 50,
+    time: 2000
+  });
 });

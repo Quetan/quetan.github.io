@@ -1,117 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <!--meta tags-->
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="WiFi MESH сети">
-    <meta name="keywords" content="WiFi, developers, mesh, modern, technologies">
-    <meta name="author" content="ASU">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="WiFi MESH сети" />
+    <meta
+      name="keywords"
+      content="WiFi, developers, mesh, modern, technologies"
+    />
+    <meta name="author" content="Ternex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ternex</title>
 
-    <!--template title-->
-    <title>WiFi mesh</title>
+    <!--favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./images/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./images/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./images/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./images/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./images/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./images/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./images/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./images/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./images/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./images/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-    <!--==========Favicon==========-->
+    <!-- styles -->
 
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/animatedheadline.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
-    <!--========== Theme Fonts ==========-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700,800" rel="stylesheet">
+    <!-- leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+      integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+      crossorigin=""
+    ></script>
+  </head>
 
-    <!--Font Awesome css-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-
-    <!--Bootstrap css-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!--Animate css-->
-    <link rel="stylesheet" href="css/animate.css">
-
-    <!--Animated headline css-->
-    <link rel="stylesheet" href="css/jquery.animatedheadline.css">
-    
-	<!--Owl carousel css-->
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/owl.theme.default.css">
-    
-	<!--Magnific popup css-->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-    
-	<!--Normalizer css-->
-	<link rel="stylesheet" href="css/normalize.css">
-
-    <!--Theme css-->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!--Responsive css-->
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
-<body>
-
+  <body>
     <!--preloader starts-->
-
-
-    <div class="loader_bg"><div class="loader"></div></div>
-
-
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
     <!--preloader ends-->
+    <!--navigation area starts-->
 
-		<!--navigation area starts-->
-		
-		<header class="nav-area navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="row">
-                <!--main menu starts-->
-                <div class="col-md-10">
-                    <div class="main-menu">
-                        <div class="navbar navbar-cus">
-                            <div class="navbar-header">
-                                <a href="index.html" class="navbar-brand"><span class="logo">WiFi mesh</span></a> <!--edit site name here-->
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                              <div class="text-center" id="auth" data-effect="mfp-zoom-out">
-                              	<a href="#login-popup"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-                            	</div>
-                            </div>
-                            <div class="navbar-collapse collapse">
-                                <nav>
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li id="hidden"><a class="smooth-menu" href="#home">Главная</a></li>
-                                        <li><a class="smooth-menu" href="#about">О технологии</a></li>
-                                        <li><a class="smooth-menu" href="#services">Услуги</a></li>
-                                        <li><a class="smooth-menu" href="#map">Карта точек</a></li>
-                                        <li id="hidden"><a class="smooth-menu" href="#portfolio">Продукты</a></li>
-										<li><a class="smooth-menu" href="#contact">Контакты</a></li>
-									</ul>
-                                </nav>
-                            </div>
-						</div>
-					</div>
-			    </div>
-                <!--main menu ends-->
+    <header class="nav-area navbar-fixed-top">
+      <div class="container">
+        <div class="navbar navbar-cus">
+          <div class="navbar-header">
+            <a href="/" class="brand"><span class="logo">Ternex</span></a>
+
+            <div class="text-center" id="auth">
+              <a href="#">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+              </a>
             </div>
+
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target=".navbar-collapse"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div class="navbar-collapse collapse">
+            <nav>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a class="smooth-menu" href="#about">О технологии</a></li>
+                <li><a class="smooth-menu" href="#services">Услуги</a></li>
+                <li><a class="smooth-menu" href="#map">Карта точек</a></li>
+                <li><a class="smooth-menu" href="#contact">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
+      </div>
     </header>
 
     <!--navigation area ends-->
@@ -119,45 +169,41 @@
     <!--Banner area starts-->
 
     <div class="banner-area" id="home">
-        <div class="banner-table">
-            <div class="banner-table-cell">
-                <div class="welcome-text">
-                    <div class="container">
-                        <div class="home-particles" id="particles-js"></div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <section class="intro animate-scale">
+      <div class="banner-table">
+        <div class="banner-table-cell">
+          <div class="welcome-text">
+            <div class="container">
+              <div class="home-particles" id="particles-js"></div>
+              <div class="row">
+                <div class="col-md-12">
+                  <section class="intro animate-scale">
+                    <h3 id="home-text">Расширяй границы!</h3>
 
-                                    <h3 id="home-text">Расширяй границы!</h3>
+                    <h1 class="ah-headline">
+                      <span class="ah-words-wrapper">
+                        <b class="is-visible">Mesh сети</b>
+                        <b>Просто.</b>
+                        <b>Удобно.</b>
+                        <b>Практично.</b>
+                      </span>
+                    </h1>
 
-                                    <h1 class="ah-headline">
+                    <a href="#contact" class="banner-btn">Узнать больше</a>
+                  </section>
 
-                                        <span class="ah-words-wrapper">
-                                            <b class="is-visible">WiFi mesh</b> <!--edit the name to your name-->
-                                            <b>Просто.</b> <!--edit the designation if you are in different profession-->
-                                            <b>Удобно.</b> <!--edit the designation if you are in different profession-->
-                                            <b>Практично.</b> <!--edit the designation if you are in different profession-->
-                                        </span>
-                                    </h1>
+                  <div class="clearfix"></div>
 
-                                    <a href="#contact" class="banner-btn">Узнать больше</a>
-
-
-                                </section>
-
-                                <div class="clearfix"></div>
-
-                                <a class="mouse-scroll hidden-xs" href="#about">
-                                    <span class="mouse">
-                                        <span class="mouse-movement"></span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                  <a class="mouse-scroll hidden-xs" href="#about">
+                    <span class="mouse">
+                      <span class="mouse-movement"></span>
+                    </span>
+                  </a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!--Banner area ends-->
@@ -165,778 +211,395 @@
     <!--about area starts -->
 
     <div class="about-area section-padding" id="about">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-                    <div class="about-text-left">
-                        <h2>Mesh-сети</h2> <!--edit name-->
-                        <h3>Зачем такие сети нужны</h3> <!--edit designation-->
-                        <p>Mesh сети — это вполне осмысленный следующий шаг в развитии беспроводных сетей, 
-                          в mesh сети вы «сам себе провайдер», вас нельзя отключить от этой сети,
-                           с вами нельзя разорвать договор о пользовании интернетом,
-                            вас нельзя подслушивать СОРМ'ом спец оборудованием.
-                            Какие проблемы решает эта технология. </p>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <img src="images/about/about.png"  class="img-responsive" alt="about image"> <!--add your image here-->
-                </div>
-                <div class="col-md-4 col-xs-12 col-sm-12 col-lg-4">
-                    <div class="about-text-right">
-
-                        <div class="advantages">
-                            <h3>Преимущества технологии</h3>
-
-                              <ul class="advantages-list">
-                                <li>
-                                  <h6 id="advantages-text">
-                                    <i class="fa fa-check" aria-hidden="true"></i>
-                                    Независимость от провайдеров                                      
-                                  </h6>
-                                </li>
-
-                                <li>
-                                  <h6 id="advantages-text">
-                                    <i class="fa fa-check" aria-hidden="true"></i>
-                                    Возможность построить свою сеть
-                                  </h6>
-                                </li>
-
-                                <li>
-                                  <h6 id="advantages-text">
-                                    <i class="fa fa-check" aria-hidden="true"></i>
-                                    Никаких сложностей при подключении
-                                  </h6>
-                                </li>
-
-                                <li>
-                                  <h6 id="advantages-text">
-                                    <i class="fa fa-check" aria-hidden="true"></i>
-                                    Каждый клиент увеличивает ёмкость сети
-                                  </h6>
-                                </li>
-
-                                <li>
-                                  <h6 id="advantages-text">
-                                    <i class="fa fa-check" aria-hidden="true"></i>
-                                    Бесплатный WiFi теперь везде!</h6>
-                                </li>
-                              </ul>
-
-                        </div>
-
-                    </div>
-
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+            <div class="about-text-left">
+              <h2>Mesh-сети</h2>
+              <h3>Зачем такие сети нужны</h3>
+              <p>
+                Mesh сети — это вполне осмысленный следующий шаг в развитии
+                беспроводных сетей, в mesh сети вы «сам себе провайдер», вас
+                нельзя отключить от этой сети, с вами нельзя разорвать договор о
+                пользовании интернетом, вас нельзя подслушивать СОРМ'ом спец
+                оборудованием. Какие проблемы решает эта технология.
+              </p>
             </div>
+          </div>
 
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="about-image">
+              <img
+                src="./images/about/about.png"
+                class="img-responsive"
+                alt="about image"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-4 col-xs-12 col-sm-12 col-lg-4">
+            <div class="about-text-right">
+              <div class="advantages">
+                <h3>Преимущества технологии</h3>
+
+                <ul class="advantages-list">
+                  <li>
+                    <h6 class="advantages-text">
+                      <i class="fa fa-check" aria-hidden="true"></i>
+                      Независимость от провайдеров
+                    </h6>
+                  </li>
+
+                  <li>
+                    <h6 class="advantages-text">
+                      <i class="fa fa-check" aria-hidden="true"></i> Возможность
+                      построить свою сеть
+                    </h6>
+                  </li>
+
+                  <li>
+                    <h6 class="advantages-text">
+                      <i class="fa fa-check" aria-hidden="true"></i> Никаких
+                      сложностей при подключении
+                    </h6>
+                  </li>
+
+                  <li>
+                    <h6 class="advantages-text">
+                      <i class="fa fa-check" aria-hidden="true"></i> Каждый
+                      клиент увеличивает ёмкость сети
+                    </h6>
+                  </li>
+
+                  <li>
+                    <h6 class="advantages-text">
+                      <i class="fa fa-check" aria-hidden="true"></i> Бесплатный
+                      WiFi теперь везде!
+                    </h6>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!--about area ends-->
-    
+
     <!--Services Area Starts-->
 
     <div id="services" class="services-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-header wow fadeInDown" data-wow-delay="0.2s">
-                        <p class="line-one"></p>
-                        <h2>Что мы предлагаем</h2>
-                        <p class="line-one"></p>
-
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header wow fadeInDown" data-wow-delay="0.2s">
+              <p class="line-one"></p>
+              <h2>Что мы предлагаем</h2>
+              <p class="line-one"></p>
             </div>
-            <div class="row">
-                <div id="services-carousel" class="owl-carousel owl-theme">
-
-                    <div class="single-services text-center item">
-                        <div class="services-icon">
-                            <i class="fa fa-user"></i>
-                        </div>
-                        <div class="services-content">
-                            <h3>Потребителям</h3> <!--edit the service you give-->
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="single-services text-center item">
-                        <div class="services-icon">
-                            <i class="fa fa-bullhorn"></i>
-                        </div>
-                        <div class="services-content">
-                            <h3>Рекламодателям</h3> <!--edit the service you give-->
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="single-services text-center item">
-                        <div class="services-icon">
-                            <i class="fa fa-handshake-o"></i>
-                        </div>
-                        <div class="services-content">
-                            <h3>Провайдерам</h3> <!--edit the service you give-->
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="single-services text-center item">
-                        <div class="services-icon">
-                            <i class="fa fa-suitcase"></i>
-                        </div>
-                        <div class="services-content">
-                            <h3>Предпринимателям</h3> <!--edit the service you give-->
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="single-services text-center item">
-                        <div class="services-icon">
-                            <i class="fa fa-keyboard-o"></i>
-                        </div>
-                        <div class="services-content">
-                            <h3>Разработчикам</h3> <!--edit the service you give-->
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        </div>
-
-                    </div>
-								</div>
-						</div>
-						<!--Sign In and Sign Up area starts here-->
-            <div class="row">
-								<div class="col-md-12">
-									<div class="login-area wow text-center fadeInDown" data-wow-delay="0.2s">
-	
-										<div id="login" class="col-md-6">
-											<a href="#login-popup" data-effect="mfp-zoom-out" class="login-btn">Авторизация</a>
-										</div>
-	
-										<div id="login-popup" class="high-popup mfp-with-anim mfp-hide">
-												<div class="row">
-														<div class="col-md-12">
-																 <div class="login-text text-center">
-																		<h2>Авторизация</h2>
-																</div>
-																 <div class="login-fields text-center">
-																	<div class="row">
-																		<!--Form starts here-->
-																		<form action="">
-																			<div class="col-md-12 input-field">
-																				<label for="loginField">Логин:</label> <br>
-																				<input id="loginField" type="email" name="login" placeholder="example@mail.com" required>
-																			</div>    
-																			<div class="col-md-12 input-field">
-																				<label for="passwordField">Пароль:</label> <br>
-																				<input id="passwordField" type="password" name="password" placeholder="Пароль" required>
-																			</div>
-																			<div class="col-md-12 text-center">
-																					<button href="#LOGIN_URL_LINK" class="send-btn" type="submit">Войти</button>
-																			</div>
-																			<div class="col-md-12 registration-link">
-																				<div id="registration-link">
-																					<p>Еще не зарегистрированы? <a href="#signup-popup">Присоединяйтесь</a> прямо сейчас!</p>																				
-																				</div>
-																			</div>
-																	</form>
-																	<!--Form ends here-->
-																	</div> 
-																</div>
-														</div>
-												</div>
-										</div>
-												
-											<div id="signup" class="col-md-6">
-												<a href="#signup-popup" class="login-btn" data-effect="mfp-zoom-out">Регистрация</a>
-											</div>
-	
-											<div id="signup-popup" class="high-popup mfp-with-anim mfp-hide">
-													<div class="row">
-															<div class="col-md-12">
-																	 <div class="login-text text-center">
-																			<h2>Регистрация</h2>
-																			<p>Пожалуйста, заполните поля данной формы!
-																			<br>Поля с символом * являются обязательными!</p> 
-																	</div>
-																	 <div class="login-fields text-center">
-																		<div class="row">
-																			<!--Form starts here-->
-																			<form action="">
-																				<div class="col-md-12 input-field">
-																					<label for="emailField">Введите почту:</label> <br>
-																					<input id="emailField" type="email" name="email" placeholder="example@mail.com *" required>
-																				</div>    
-																				<div class="col-md-12 input-field">
-																					<label for="passwordField">Введите пароль:</label> <br>
-																					<input id="passwordField" type="password" name="password" placeholder="Используйте не менее 6 символов *" onkeyup="checkPass(); return false;" required>
-																				</div>
-																				<div class="col-md-12 input-field">
-																					<label for="passwordCheckField">Пароль еще раз:</label> <br>
-																					<input id="passwordCheckField" type="password" name="passwordCheck" placeholder="Повторите пароль *" onkeyup="checkPass(); return false;" required>
-																					<div id="error-nwl"></div>
-																				</div>
-																				<div class="col-md-12 input-field">
-																					<label for="name">Ваше имя:</label> <br>
-																					<input id="name" type="text" name="name" placeholder="Иванов Иван">
-																				</div>
-																				<div class="col-md-12 input-field">
-																					<label for="phoneNumber">Номер телефона:</label> <br>
-																					<input id="phoneNumber" type="tel" name="phoneNumber" placeholder="+7-(123)-456-78-90 *" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
-																				</div>
-																				<div class="col-md-12 input-field">
-																					<label for="smsCheck">Код из СМС сообщения:</label> <br>
-																					<input id="smsCheck" type="text" name="smsCheck" placeholder="000000 *" required>
-																				</div>
-																				<div class="col-md-12 text-center">
-																						<button href="#SIGNIN_URL_LINK" class="send-btn" type="submit">Отправить</button>
-																				</div>
-																		</form>
-																		<!--Form ends here-->
-																		</div> 
-																	</div>
-															</div>
-													</div>
-											</div>
-	
-									</div>
-								</div>
-							</div>
-							<!--Sign In and Sign Up area ends here-->	
+          </div>
         </div>
+        <div class="row">
+          <div id="services-carousel" class="owl-carousel owl-theme">
+            <div class="single-services text-center item">
+              <div class="services-icon">
+                <i class="fa fa-user"></i>
+              </div>
+              <div class="services-content">
+                <h3>Потребителям</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            <div class="single-services text-center item">
+              <div class="services-icon">
+                <i class="fa fa-bullhorn"></i>
+              </div>
+              <div class="services-content">
+                <h3>Рекламодателям</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            <div class="single-services text-center item">
+              <div class="services-icon">
+                <i class="fa fa-handshake-o"></i>
+              </div>
+              <div class="services-content">
+                <h3>Провайдерам</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            <div class="single-services text-center item">
+              <div class="services-icon">
+                <i class="fa fa-suitcase"></i>
+              </div>
+              <div class="services-content">
+                <h3>Предпринимателям</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            <div class="single-services text-center item">
+              <div class="services-icon">
+                <i class="fa fa-keyboard-o"></i>
+              </div>
+              <div class="services-content">
+                <h3>Разработчикам</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Sign In and Sign Up area starts here-->
+        <div class="row">
+          <div class="col-md-12">
+            <div
+              class="login-area wow text-center fadeInDown"
+              data-wow-delay="0.2s"
+            >
+              <div id="login" class="col-md-6">
+                <a href="#" class="login-btn">Авторизация</a>
+              </div>
+
+              <div id="signup" class="col-md-6">
+                <a href="#" class="login-btn">Регистрация</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Sign In and Sign Up area ends here-->
+      </div>
     </div>
 
     <!--Services Area Ends-->
 
-  <!--number area starts-->
-	<div class="number-area section-padding">
+    <!--number area starts-->
+    <div class="number-area section-padding">
       <div class="container">
         <div class="row">
           <div class="col-md-3 col-xs-6">
             <div class="single-number text-center">
               <i class="fa fa-clock-o"></i>
-              <h2 class="counter">536</h2> <!--edit-->
+              <h2 class="counter">536</h2>
               <p>Часов работы</p>
             </div>
           </div>
           <div class="col-md-3 col-xs-6">
             <div class="single-number text-center">
               <i class="fa fa-code"></i>
-              <h2 class="counter">5327</h2> <!--edit-->
+              <h2 class="counter">5327</h2>
               <p>Строк кода</p>
             </div>
           </div>
           <div class="col-md-3 col-xs-6">
             <div class="single-number text-center">
               <i class="fa fa-wifi"></i>
-              <h2 class="counter">46</h2> <!--edit-->
+              <h2 class="counter">46</h2>
               <p>Точек доступа</p>
             </div>
           </div>
           <div class="col-md-3 col-xs-6">
             <div class="single-number text-center">
               <i class="fa fa-user"></i>
-              <h2 class="counter">430</h2> <!--edit-->
+              <h2 class="counter">430</h2>
               <p>Довольных пользователей</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  <!--number area ends-->
+    <!--number area ends-->
 
     <!--Map Section Starts-->
-	<div id="map" class="map-area section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-header wow fadeInDown" data-wow-delay="0.2s">
-                            <p class="line-one"></p>
-                            <h2>Карта точек</h2>
-                            <p class="line-one"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="review-area">
-                            <!--<img src="images/map/map.png" alt="map">-->
-                          <div id="map_canv"></div>
-                          <script>
-                              // Initialize and add the map
-                              function initMap() {
-                                // The location of Barnaul
-                                var altay_region = {lat: 53.36056, lng: 83.76361};
-                                // The map, centered at Barnaul
-                                var map = new google.maps.Map(
-                                    document.getElementById('map_canv'), {zoom: 6, center: altay_region});
-                                // The marker, positioned at Barnaul
-                                var marker = new google.maps.Marker({position: altay_region, map: map});
-                              }
-                          </script>
-                        </div>
-                    </div>
-                </div>
+    <div id="map" class="map-area section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header wow fadeInDown" data-wow-delay="0.2s">
+              <p class="line-one"></p>
+              <h2>Карта точек</h2>
+              <p class="line-one"></p>
             </div>
-        </div>    
-    <!--Map Section Ends-->  
-    
-    
-	<!--Portfolio Area Starts-->
+          </div>
+        </div>
 
-	<div id="portfolio" class="portfolio-area section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-header wow fadeInDown" data-wow-delay="0.2s">
-						<p class="line-one"></p>
-						<h2>Продукты</h2>
-						<p class="line-one"></p>
-					</div>
-				</div>
-			</div>
+        <div class="review-area">
+          <div id="mapid" style="height: 500px; width: 100%;"></div>
+          <!-- <script type="application/json" id="coordinatesData">
+                    <?php echo json_encode($routers); ?>
+                </script> -->
+          <script>
+            let mymap = L.map("mapid", {
+              scrollWheelZoom: false
+            }).setView([53.34795462, 83.77565922], 13); //создаем карту с центром в Барнауле
+            L.tileLayer(
+              "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
+              {
+                attribution:
+                  'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: "mapbox.streets",
+                accessToken:
+                  "pk.eyJ1Ijoic3Bpcml0MDRlayIsImEiOiJjanZwNmtreTcxZHkyNGF2bmpocGlvbzh2In0.Lu2brpXppB3r8HrVUOdt8g"
+              }
+            ).addTo(mymap); //Добавляем дефолтные слои на карту
 
-			<div class="row">
+            //(function() {
+            //     let coordinatesData = document.getElementById("coordinatesData").innerHTML;
+            //     let myCoordinatesData = JSON.parse(coordinatesData);
+            //     let obj = {
+            //         lat: 0,
+            //         lng: 0
+            //     };
+            //     for (let i = 0; i < myCoordinatesData.length; i++) {
+            //         let str = myCoordinatesData[i].coordinates.split(';');
+            //         obj.lat = str[0].replace(/(\w+):/, "");
+            //         obj.lng = str[1].replace(/(\w+):/, "");
+            //         marker = new L.Marker([obj.lat, obj.lng], {
+            //             draggable: false
+            //         });
+            //         circle = new L.circle([obj.lat, obj.lng], {
+            //             radius: 400
+            //         });
+            //         mymap.addLayer(marker);
+            //         // mymap.addLayer(circle);
+            //     }
 
-                <div class="portfolio-items">
-
-                    <div class="col-md-4 col-sm-6 col-xs-12 no-pad">
-                        <div id="inline-popups" class="port-box">
-                            <a href="#test-popup" data-effect="mfp-zoom-out">
-                                <div class="hovereffect">
-
-                                    <img src="images/portfolio/port1.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    <div class="overlay">
-                                        <h2>Продукт один</h2> <!--your project name-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, dolores, velit. Accusantium mollitia obcaecati quos.</p>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div id="test-popup" class="white-popup mfp-with-anim mfp-hide">
-                            <div class="row">
-                                <div class="col-md-7 col-xs-12">
-                                    <div class="por-img">
-                                        <img src="images/portfolio/port1.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    </div>
-                                </div>
-                                <div class="col-md-5 col-xs-12">
-                                    <div class="por-text">
-                                        <h2>My Project Title</h2> <!--your project title-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, delectus deserunt eum eveniet, illo iste magni nobis non omnis quia</p>
-                                        <div class="por-text-details">
-                                            <div class="row">
-                                                <div class="col-xs-4">
-                                                    <p>Client: </p>
-                                                    <p>Completed:</p>
-                                                    <p>Type:</p>
-                                                    <p>link:</p>
-                                                </div>
-                                                <div class="col-xs-offset-1 col-xs-7">
-                                                    <p>Reebok</p> <!--edit here-->
-                                                    <p>15/03/2018</p> <!--edit here-->
-                                                    <p>WordPress Site</p> <!--edit here-->
-                                                    <p>www.reebok.com</p> <!--edit here-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 col-xs-12 no-pad">
-
-                        <div id="inline-popups-2">
-                            <a href="#test-popup-2" data-effect="mfp-zoom-out">
-                                <div class="hovereffect">
-
-                                    <img src="images/portfolio/port2.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    <div class="overlay">
-                                        <h2>Продукт два</h2> <!--your project name-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, dolores, velit. Accusantium mollitia obcaecati quos.</p>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div id="test-popup-2" class="white-popup mfp-with-anim mfp-hide">
-                            <div class="row">
-
-                                <div class="col-md-7">
-                                    <div class="por-img">
-                                        <img src="images/portfolio/port2.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="por-text">
-                                        <h2>My Project Title</h2> <!--your project title-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, delectus deserunt eum eveniet, illo iste magni nobis non omnis quia</p>
-                                        <div class="por-text-details">
-                                            <div class="row">
-                                                <div class="col-xs-4">
-                                                    <p>Client: </p>
-                                                    <p>Completed:</p>
-                                                    <p>Type:</p>
-                                                    <p>link:</p>
-                                                </div>
-                                                <div class="col-xs-offset-1 col-xs-7">
-                                                    <p>SportsDirect</p> <!--edit here-->
-                                                    <p>15/03/2018</p> <!--edit here-->
-                                                    <p>Joomla Site</p> <!--edit here-->
-                                                    <p>www.sportsdirect.com</p> <!--edit here-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 col-xs-12 no-pad">
-
-                        <div id="inline-popups-3">
-                            <a href="#test-popup-3" data-effect="mfp-zoom-out">
-                                <div class="hovereffect">
-
-                                    <img src="images/portfolio/port3.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    <div class="overlay">
-                                        <h2>Продукт три</h2> <!--your project name-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, dolores, velit. Accusantium mollitia obcaecati quos.</p>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div id="test-popup-3" class="white-popup mfp-with-anim mfp-hide">
-                            <div class="row">
-
-                                <div class="col-md-7">
-                                    <div class="por-img">
-                                        <img src="images/portfolio/port3.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="por-text">
-                                        <h2>My Project Title</h2> <!--your project title-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, delectus deserunt eum eveniet, illo iste magni nobis non omnis quia</p>
-                                        <div class="por-text-details">
-                                            <div class="row">
-                                                <div class="col-xs-4">
-                                                    <p>Client: </p>
-                                                    <p>Completed:</p>
-                                                    <p>Type:</p>
-                                                    <p>link:</p>
-                                                </div>
-                                                <div class="col-xs-offset-1 col-xs-7">
-                                                    <p>Sainsbury</p> <!--edit here-->
-                                                    <p>15/03/2018</p> <!--edit here-->
-                                                    <p>Drupal Site</p> <!--edit here-->
-                                                    <p>www.sainsbury.co.uk</p> <!--edit here-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 col-xs-12 no-pad">
-
-                        <div id="inline-popups-4">
-                            <a href="#test-popup-4" data-effect="mfp-zoom-out">
-                                <div class="hovereffect">
-
-                                    <img src="images/portfolio/port4.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    <div class="overlay">
-                                        <h2>Продукт четыре</h2> <!--your project name-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, dolores, velit. Accusantium mollitia obcaecati quos.</p>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div id="test-popup-4" class="white-popup mfp-with-anim mfp-hide">
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <div class="por-img">
-                                        <img src="images/portfolio/port4.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="por-text">
-                                        <h2>My Project Title</h2> <!--your project title-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, delectus deserunt eum eveniet, illo iste magni nobis non omnis quia</p>
-                                        <div class="por-text-details">
-                                            <div class="row">
-                                                <div class="col-xs-4">
-                                                    <p>Client: </p>
-                                                    <p>Completed:</p>
-                                                    <p>Type:</p>
-                                                    <p>link:</p>
-                                                </div>
-                                                <div class="col-xs-offset-1 col-xs-7">
-                                                    <p>Woolworths</p> <!--edit here-->
-                                                    <p>25/03/2018</p> <!--edit here-->
-                                                    <p>Shopify Site</p> <!--edit here-->
-                                                    <p>www.woolworths.co.au</p> <!--edit here-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 col-xs-12 no-pad">
-
-                        <div id="inline-popups-5">
-                            <a href="#test-popup-5" data-effect="mfp-zoom-out">
-                                <div class="hovereffect">
-
-                                    <img src="images/portfolio/port5.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    <div class="overlay">
-                                        <h2>Продукт пять</h2> <!--your project name-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, dolores, velit. Accusantium mollitia obcaecati quos.</p>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div id="test-popup-5" class="white-popup mfp-with-anim mfp-hide">
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <div class="por-img">
-                                        <img src="images/portfolio/port5.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="por-text">
-                                        <h2>My Project Title</h2> <!--your project title-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, delectus deserunt eum eveniet, illo iste magni nobis non omnis quia</p>
-                                        <div class="por-text-details">
-                                            <div class="row">
-                                                <div class="col-xs-4">
-                                                    <p>Client: </p>
-                                                    <p>Completed:</p>
-                                                    <p>Type:</p>
-                                                    <p>link:</p>
-                                                </div>
-                                                <div class="col-xs-offset-1 col-xs-7">
-                                                    <p>Titan</p> <!--edit here-->
-                                                    <p>15/03/2018</p> <!--edit here-->
-                                                    <p>Magento Site</p> <!--edit here-->
-                                                    <p>www.titan.co.in</p> <!--edit here-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 col-xs-12 no-pad">
-
-                        <div id="inline-popups-6">
-                            <a href="#test-popup-6" data-effect="mfp-zoom-out">
-                                <div class="hovereffect">
-
-                                    <img src="images/portfolio/port6.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    <div class="overlay">
-                                        <h2>Продукт шесть</h2> <!--your project name-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, dolores, velit. Accusantium mollitia obcaecati quos.</p>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div id="test-popup-6" class="white-popup mfp-with-anim mfp-hide">
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <div class="por-img">
-                                        <img src="images/portfolio/port6.png" alt="portfolio image" class="img-responsive"> <!--edit image-->
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="por-text">
-                                        <h2>My Project Title</h2> <!--your project title-->
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, delectus deserunt eum eveniet, illo iste magni nobis non omnis quia</p>
-                                        <div class="por-text-details">
-                                            <div class="row">
-                                                <div class="col-xs-4">
-                                                    <p>Client: </p>
-                                                    <p>Completed:</p>
-                                                    <p>Type:</p>
-                                                    <p>link:</p>
-                                                </div>
-                                                <div class="col-xs-offset-1 col-xs-7">
-                                                    <p>Vodafone</p> <!--edit here-->
-                                                    <p>27/03/2018</p> <!--edit here-->
-                                                    <p>PrestaShop Site</p> <!--edit here-->
-                                                    <p>www.vodafone.com</p> <!--edit here-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div> <!--end portfolio grid -->
-
-            </div>
-
-
-		</div>
-	</div>
-
-	<!--Portfolio Area Ends-->
-   
-
+            //     mymap.on('click', function() {
+            //         if (mymap.scrollWheelZoom.enabled()) {
+            //             mymap.scrollWheelZoom.disable();
+            //         } else {
+            //             mymap.scrollWheelZoom.enable();
+            //         }
+            //     });
+            // })();
+          </script>
+        </div>
+      </div>
+    </div>
+    <!--Map Section Ends-->
 
     <!--contact area starts-->
-
     <div class="contact-area section-padding" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-header wow fadeInDown" data-wow-delay="0.1s">
-                        <p class="line-one"></p>
-                        <h2>Контакты</h2>
-                        <p class="line-one"></p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header wow fadeInDown" data-wow-delay="0.1s">
+              <p class="line-one"></p>
+              <h2>Контакты</h2>
+              <p class="line-one"></p>
             </div>
-
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.2s">
-                        <i class="fa fa-home"></i>
-                        <h2>Наш адрес:</h2>
-                        <p>Барнаул, Ленина 61</p> <!--edit here-->
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.4s">
-                        <i class="fa fa-phone"></i>
-                        <h2>Телефон: </h2>
-                        <p>(+7) 123 456 7890</p> <!--edit here-->
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.6s">
-                        <i class="fa fa-envelope-o"></i>
-                        <h2>Электронный адрес:</h2>
-                        <p>wifiMesh@asu.ru</p> <!--edit here-->
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.8s">
-                        <i class="fa fa-gg"></i>
-                        <h2>Социальные ссылки: </h2>
-                        <div class="socials">
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> <!--facebook profile link here-->
-                            <a href="https://www.vk.com/" target="_blank"><i class="fa fa-vk"></i></a> <!--vk group link here-->
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a> <!--twitter profile link here-->
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="single-contact text-center wow fadeInDown"
+              data-wow-delay="0.2s"
+            >
+              <i class="fa fa-home"></i>
+              <h2>Наш адрес:</h2>
+              <p>Барнаул, Ленина 61</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="single-contact text-center wow fadeInDown"
+              data-wow-delay="0.4s"
+            >
+              <i class="fa fa-phone"></i>
+              <h2>Телефон:</h2>
+              <p>(+7) 123 456 7890</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="single-contact text-center wow fadeInDown"
+              data-wow-delay="0.6s"
+            >
+              <i class="fa fa-envelope-o"></i>
+              <h2>Электронный адрес:</h2>
+              <p>wifiMesh@ternex.ru</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="single-contact text-center wow fadeInDown"
+              data-wow-delay="0.8s"
+            >
+              <i class="fa fa-gg"></i>
+              <h2>Социальные ссылки:</h2>
+              <div class="socials">
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+                <a href="https://www.vk.com/" target="_blank"
+                  ><i class="fa fa-vk"></i
+                ></a>
+                <a href="https://twitter.com/" target="_blank"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--contact area ends-->
 
     <!--Footer Area Starts-->
-
     <div class="footer-area">
-        <div class="container">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <p>
+              2019 &copy; Все права защищены.
+              <a href="https://www.ternex.ru" target="_blank">&copy;Ternex</a>
+            </p>
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                    <p>&copy; Все права защищены <a href="https://www.asu.ru" target="_blank">АГУ Барнаул</a></p> <!--edit here-->
-                    <div class="row">
-                      <div class="col-md-12">
-                          <div id="footer-auth" data-effect="mfp-zoom-out"><a href="#signup-popup">Зарегистрироваться</a></div>
-                          <div id="footer-auth"data-effect="mfp-zoom-out"><a href="#login-popup">Войти в аккаунт</a></div> 
-                      </div>
-                    </div>
-                </div>
+              <div class="col-md-12">
+                <a href="#">Зарегистрироваться</a>
+                <span class="text-muted">/</span>
+                <a href="#">Войти в аккаунт</a>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-
     <!--Footer Area Ends-->
 
-    
-
-
-
-  <!--Latest version JQuery-->
-  <script src="js/jquery-3.2.1.min.js"></script>
-
-  <!--Bootstrap js-->
-  <script src="js/bootstrap.min.js"></script>
-
-	<!--Magnific popup js-->
-	<script src="js/jquery.magnific-popup.js"></script>
-
-	<!--Owl Carousel js-->
-	<script src="js/owl.carousel.js"></script>
-
-
-
-  <!--Animated headline js-->
-  <script src="js/jquery.animatedheadline.js"></script>
-
-  <!--wow js-->
-	<script src="js/wow.min.js"></script>
-    
-  <!--Validator js-->
-  <script src="js/jquery.waypoints.js"></script>
-    
-	<!--counter up js-->
-  <script src="js/jquery.counterup.min.js"></script>
-  
-  <!--particles js-->
-  <script src="js/particles.js"></script>
-  <script src="js/app.js"></script>
-  <!--------------->
-
-  <!--Google Maps js-->
-  <!--API key should be changed. It used with www.quetan.github.io/www at the moment-->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZFJFgDuayGZ67AFGjN1nT3lTQrqSsXZ8&callback=initMap"></script>
-	
-	<!--Check Pass js-->
-	<script src="js/checkPass.js"></script>
-
-  <!--Main js-->
-  <script src="js/main.js"></script>
-
-
-
-</body>
+    <!--Scripts-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/animatedheadline.js"></script>
+    <script src="./js/counterup.min.js"></script>
+    <script src="./js/waypoints.js"></script>
+    <script src="./js/checkPass.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/particles-settings.js"></script>
+    <script src="./js/owl.carousel.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
