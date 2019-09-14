@@ -62,8 +62,9 @@ li {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  margin: 0;
 }
 
 .section-padding {
@@ -88,6 +89,19 @@ img {
   display: block;
   margin: 0 auto;
   padding: 0;
+}
+
+.lazy {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.lazy-bg {
+  overflow: hidden;
+  position: relative;
+  background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7);
 }
 
 /*---Default css ends---*/
@@ -813,9 +827,6 @@ canvas {
 
 .map-area {
   background-color: #ffffff;
-  background-size: cover;
-  background-position: center center;
-  position: relative;
 }
 
 #map_canv {
@@ -823,6 +834,10 @@ canvas {
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */
+}
+
+#mapid {
+  display: none;
 }
 
 /*-------Map area ends----------*/

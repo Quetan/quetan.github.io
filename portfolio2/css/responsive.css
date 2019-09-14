@@ -1,12 +1,9 @@
-@media (width: 1280px) {
-  .navbar-right li a {
-    font-size: 14px;
-  }
-}
-
 /* Medium Layout: 1280px. */
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .services-content > h3 {
+    font-size: 20px;
+  }
 }
 
 /* Tablet Layout: 768px. */
@@ -31,7 +28,7 @@
     line-height: 0;
   }
   .nav > li > a {
-    padding: 10px 5px !important;
+    padding: 10px 5px;
   }
   .sticky_navigation .nav li.active::before {
     margin: 5px auto;
@@ -47,7 +44,7 @@
   }
   #login,
   #signup {
-    text-align: center !important;
+    text-align: center;
   }
 }
 
@@ -60,7 +57,6 @@
   #auth {
     margin: 0;
     margin-top: -3px;
-    padding: 10px;
     text-align: left;
   }
   .section-padding {
@@ -97,7 +93,7 @@
     max-height: 100%;
   }
   .sticky_navigation .nav li a {
-    color: #ffffff !important;
+    color: #ffffff;
   }
   .welcome-text h2 {
     font-size: 2em;
@@ -106,7 +102,7 @@
     text-align: center;
   }
   .nav-area.sticky_navigation {
-    height: 60px !important;
+    height: 60px;
   }
   .welcome-text h1.ah-headline {
     font-size: 30px;
@@ -163,7 +159,7 @@
 
   #login,
   #signup {
-    text-align: center !important;
+    text-align: center;
   }
 }
 
@@ -184,14 +180,14 @@
   }
   #login,
   #signup {
-    text-align: center !important;
+    text-align: center;
   }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
   #login,
   #signup {
-    text-align: center !important;
+    text-align: center;
   }
 }
 
@@ -199,7 +195,7 @@
   .navbar-header,
   .nav-area,
   .navbar {
-    display: block !important;
+    display: block;
   }
   .advantages-list {
     text-align: left;
@@ -222,5 +218,14 @@
   .welcome-text h3 {
     font-size: 25px;
     margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .services-content > h3 {
+    font-size: 20px;
+  }
+  .single-number.counter {
+    font-size: 30px;
   }
 }

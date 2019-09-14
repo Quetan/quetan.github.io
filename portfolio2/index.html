@@ -95,13 +95,13 @@
 
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
-    <link rel="stylesheet" href="./css/responsive.css" />
-    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
     <link rel="stylesheet" href="./css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./css/animatedheadline.css" />
-    <link rel="stylesheet" href="./css/owl.carousel.css" />
+    <link rel="stylesheet" href="./css/animatedheadline.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
     <link rel="stylesheet" href="./css/owl.theme.default.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
 
     <!-- leaflet -->
     <link
@@ -168,7 +168,7 @@
 
     <!--Banner area starts-->
 
-    <div class="banner-area" id="home">
+    <div class="banner-area lazy-background" id="home">
       <div class="banner-table">
         <div class="banner-table-cell">
           <div class="welcome-text">
@@ -213,7 +213,7 @@
     <div class="about-area section-padding" id="about">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
             <div class="about-text-left">
               <h2>Mesh-сети</h2>
               <h3>Зачем такие сети нужны</h3>
@@ -226,18 +226,21 @@
               </p>
             </div>
           </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="about-image">
+          <div class="col-sm-6 col-md-6 col-lg-4 hidden-xs hidden-sm">
+            <div class="about-image lazy-bg">
               <img
-                src="./images/about/about.png"
-                class="img-responsive"
+                class="lazy img-responsive"
+                src="./images/about/about-thumb.gif"
+                data-src="./images/about/about-min.png"
+                data-srcset="./images/about/about-min.png"
                 alt="about image"
               />
             </div>
           </div>
 
-          <div class="col-md-4 col-xs-12 col-sm-12 col-lg-4">
+          <div
+            class="col-xs-12 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-0 col-lg-4"
+          >
             <div class="about-text-right">
               <div class="advantages">
                 <h3>Преимущества технологии</h3>
@@ -441,56 +444,14 @@
           </div>
         </div>
 
-        <div class="review-area">
+        <div class="map-area">
           <div id="mapid" style="height: 500px; width: 100%;"></div>
           <!-- <script type="application/json" id="coordinatesData">
                     <?php echo json_encode($routers); ?>
                 </script> -->
+
           <script>
-            let mymap = L.map("mapid", {
-              scrollWheelZoom: false
-            }).setView([53.34795462, 83.77565922], 13); //создаем карту с центром в Барнауле
-            L.tileLayer(
-              "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
-              {
-                attribution:
-                  'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                maxZoom: 18,
-                id: "mapbox.streets",
-                accessToken:
-                  "pk.eyJ1Ijoic3Bpcml0MDRlayIsImEiOiJjanZwNmtreTcxZHkyNGF2bmpocGlvbzh2In0.Lu2brpXppB3r8HrVUOdt8g"
-              }
-            ).addTo(mymap); //Добавляем дефолтные слои на карту
-
-            //(function() {
-            //     let coordinatesData = document.getElementById("coordinatesData").innerHTML;
-            //     let myCoordinatesData = JSON.parse(coordinatesData);
-            //     let obj = {
-            //         lat: 0,
-            //         lng: 0
-            //     };
-            //     for (let i = 0; i < myCoordinatesData.length; i++) {
-            //         let str = myCoordinatesData[i].coordinates.split(';');
-            //         obj.lat = str[0].replace(/(\w+):/, "");
-            //         obj.lng = str[1].replace(/(\w+):/, "");
-            //         marker = new L.Marker([obj.lat, obj.lng], {
-            //             draggable: false
-            //         });
-            //         circle = new L.circle([obj.lat, obj.lng], {
-            //             radius: 400
-            //         });
-            //         mymap.addLayer(marker);
-            //         // mymap.addLayer(circle);
-            //     }
-
-            //     mymap.on('click', function() {
-            //         if (mymap.scrollWheelZoom.enabled()) {
-            //             mymap.scrollWheelZoom.disable();
-            //         } else {
-            //             mymap.scrollWheelZoom.enable();
-            //         }
-            //     });
-            // })();
+            
           </script>
         </div>
       </div>
@@ -591,6 +552,7 @@
 
     <!--Scripts-->
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/lazyloading.js"></script>
     <script src="./js/animatedheadline.js"></script>
     <script src="./js/counterup.min.js"></script>
     <script src="./js/waypoints.js"></script>
