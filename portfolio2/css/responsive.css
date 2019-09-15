@@ -68,9 +68,7 @@
   .navbar-toggle {
     margin-top: 15px;
   }
-  .navbar-toggle .icon-bar {
-    background: #0069a8;
-  }
+
   .navbar-nav {
     float: right;
     margin: 11px 21px;
@@ -168,9 +166,6 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .navbar-nav {
     margin-right: 38%;
-  }
-  .navbar-toggle .icon-bar {
-    background: #0069a8;
   }
   .single-portfolio img {
     width: 100%;
