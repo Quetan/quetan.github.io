@@ -1,449 +1,480 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <!--meta tags-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="WiFi MESH сети" />
+    <meta
+      name="keywords"
+      content="WiFi, developers, mesh, modern, technologies"
+    />
+    <meta name="author" content="Ternex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ternex</title>
 
-<head>
-  <!--meta tags-->
-  <meta charset="UTF-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="description" content="WiFi MESH сети" />
-  <meta name="keywords" content="WiFi, developers, mesh, modern, technologies" />
-  <meta name="author" content="Ternex" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ternex</title>
+    <!--favicon-->
+    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
 
-  <!--favicon-->
-  <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="theme-color" content="#ffffff" />
+    <!-- styles -->
 
-  <!-- styles -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/animatedheadline.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/leaflet.css">
+  </head>
 
-  <link rel="stylesheet" href="./css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
-  <link rel="stylesheet" href="./css/animate.min.css" />
-  <link rel="stylesheet" href="./css/font-awesome.min.css" />
-  <link rel="stylesheet" href="./css/animatedheadline.min.css" />
-  <link rel="stylesheet" href="./css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="./css/owl.theme.default.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/responsive.css" />
-  <link rel="stylesheet" href="./css/leaflet.css">
-</head>
+  <body>
+    <!--preloader starts-->
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
+    <!--preloader ends-->
+    <!--navigation area starts-->
 
-<body>
-  <!--preloader starts-->
-  <div class="loader_bg">
-    <div class="loader"></div>
-  </div>
-  <!--preloader ends-->
-  <!--navigation area starts-->
+    <header class="nav-area navbar-fixed-top">
+      <div class="container">
+        <div class="navbar navbar-cus">
+          <div class="navbar-header">
+            <a href="/" class="brand"><span class="logo">Ternex</span></a>
 
-  <header class="nav-area navbar-fixed-top">
-    <div class="container">
-      <div class="navbar navbar-cus">
-        <div class="navbar-header">
-          <a href="/" class="brand"><span class="logo">Ternex</span></a>
+            <div class="text-center" id="auth">
+              <a href="#">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+              </a>
+            </div>
 
-          <div class="text-center" id="auth">
-            <a href="#">
-              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-            </a>
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target=".navbar-collapse"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
           </div>
 
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-
-        <div class="navbar-collapse collapse">
-          <nav>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a class="smooth-menu" href="#about">О технологии</a></li>
-              <li><a class="smooth-menu" href="#services">Услуги</a></li>
-              <li><a class="smooth-menu" href="#map">Карта точек</a></li>
-              <li><a class="smooth-menu" href="#contact">Контакты</a></li>
-            </ul>
-          </nav>
+          <div class="navbar-collapse collapse">
+            <nav>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a class="smooth-menu" href="#about">О технологии</a></li>
+                <li><a class="smooth-menu" href="#services">Услуги</a></li>
+                <li><a class="smooth-menu" href="#map">Карта точек</a></li>
+                <li><a class="smooth-menu" href="#contact">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!--navigation area ends-->
+    <!--navigation area ends-->
 
-  <!--Banner area starts-->
+    <!--Banner area starts-->
 
-  <div class="banner-area lazy-background" id="home">
-    <div class="banner-table">
-      <div class="banner-table-cell">
-        <div class="welcome-text">
-          <div class="container">
-            <div class="home-particles" id="particles-js"></div>
-            <div class="row">
-              <div class="col-md-12">
-                <section class="intro animate-scale">
-                  <h3 id="home-text">Расширяй границы!</h3>
+    <div class="banner-area lazy-background" id="home">
+      <div class="banner-table">
+        <div class="banner-table-cell">
+          <div class="welcome-text">
+            <div class="container">
+              <div class="home-particles" id="particles-js"></div>
+              <div class="row">
+                <div class="col-md-12">
+                  <section class="intro animate-scale">
+                    <h3 id="home-text">Расширяй границы!</h3>
 
-                  <h1 class="ah-headline">
-                    <span class="ah-words-wrapper">
-                      <b class="is-visible">Mesh сети</b>
-                      <b>Просто.</b>
-                      <b>Удобно.</b>
-                      <b>Практично.</b>
+                    <h1 class="ah-headline">
+                      <span class="ah-words-wrapper">
+                        <b class="is-visible">Mesh сети</b>
+                        <b>Просто.</b>
+                        <b>Удобно.</b>
+                        <b>Практично.</b>
+                      </span>
+                    </h1>
+
+                    <a href="#contact" class="banner-btn">Узнать больше</a>
+                  </section>
+
+                  <div class="clearfix"></div>
+
+                  <a class="mouse-scroll hidden-xs" href="#about">
+                    <span class="mouse">
+                      <span class="mouse-movement"></span>
                     </span>
-                  </h1>
-
-                  <a href="#contact" class="banner-btn">Узнать больше</a>
-                </section>
-
-                <div class="clearfix"></div>
-
-                <a class="mouse-scroll hidden-xs" href="#about">
-                  <span class="mouse">
-                    <span class="mouse-movement"></span>
-                  </span>
-                </a>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!--Banner area ends-->
+    <!--Banner area ends-->
 
-  <!--about area starts -->
+    <!--about area starts -->
 
-  <div class="about-area section-padding" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-          <div class="about-text-left">
-            <h2>Mesh-сети</h2>
-            <h3>Зачем такие сети нужны</h3>
-            <p>
-              Mesh сети — это вполне осмысленный следующий шаг в развитии
-              беспроводных сетей, в mesh сети вы «сам себе провайдер», вас
-              нельзя отключить от этой сети, с вами нельзя разорвать договор о
-              пользовании интернетом, вас нельзя подслушивать СОРМ'ом спец
-              оборудованием. Какие проблемы решает эта технология.
-            </p>
+    <div class="about-area section-padding" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="about-text-left">
+              <h2>Mesh-сети</h2>
+              <h3>Зачем такие сети нужны</h3>
+              <p>
+                Mesh сети — это вполне осмысленный следующий шаг в развитии
+                беспроводных сетей, в mesh сети вы «сам себе провайдер», вас
+                нельзя отключить от этой сети, с вами нельзя разорвать договор о
+                пользовании интернетом, вас нельзя подслушивать СОРМ'ом спец
+                оборудованием. Какие проблемы решает эта технология.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-4 hidden-xs hidden-sm">
-          <div class="about-image lazy-bg">
-            <img class="lazy img-responsive" src="./images/about/about-thumb.gif"
-              data-src="./images/about/about-min.png" data-srcset="./images/about/about-min.png" alt="about image" />
+          <div class="col-sm-6 col-md-6 col-lg-4 hidden-xs hidden-sm">
+            <div class="about-image lazy-bg">
+              <img
+                class="lazy img-responsive"
+                src="./images/about/about-thumb.gif"
+                data-src="./images/about/about-min.png"
+                data-srcset="./images/about/about-min.png"
+                alt="about image"
+              />
+            </div>
           </div>
-        </div>
 
-        <div class="col-xs-12 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-0 col-lg-4">
-          <div class="about-text-right">
-            <div class="advantages">
-              <h3>Преимущества технологии</h3>
+          <div
+            class="col-xs-12 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-0 col-lg-4"
+          >
+            <div class="about-text-right">
+              <div class="advantages">
+                <h3>Преимущества технологии</h3>
 
-              <ul class="advantages-list">
-                <li>
-                  <h6 class="advantages-text">
-                    <i class="fa fa-check" aria-hidden="true"></i>
-                    Независимость от провайдеров
-                  </h6>
-                </li>
+                <ul class="advantages-list">
+                  <li>
+                    <h6 class="advantages-text">
+                      <i class="fa fa-check" aria-hidden="true"></i>
+                      Независимость от провайдеров
+                    </h6>
+                  </li>
 
-                <li>
-                  <h6 class="advantages-text">
-                    <i class="fa fa-check" aria-hidden="true"></i> Возможность
-                    построить свою сеть
-                  </h6>
-                </li>
+                  <li>
+                    <h6 class="advantages-text">
+                      <i class="fa fa-check" aria-hidden="true"></i> Возможность
+                      построить свою сеть
+                    </h6>
+                  </li>
 
-                <li>
-                  <h6 class="advantages-text">
-                    <i class="fa fa-check" aria-hidden="true"></i> Никаких
-                    сложностей при подключении
-                  </h6>
-                </li>
+                  <li>
+                    <h6 class="advantages-text">
+                      <i class="fa fa-check" aria-hidden="true"></i> Никаких
+                      сложностей при подключении
+                    </h6>
+                  </li>
 
-                <li>
-                  <h6 class="advantages-text">
-                    <i class="fa fa-check" aria-hidden="true"></i> Каждый
-                    клиент увеличивает ёмкость сети
-                  </h6>
-                </li>
+                  <li>
+                    <h6 class="advantages-text">
+                      <i class="fa fa-check" aria-hidden="true"></i> Каждый
+                      клиент увеличивает ёмкость сети
+                    </h6>
+                  </li>
 
-                <li>
-                  <h6 class="advantages-text">
-                    <i class="fa fa-check" aria-hidden="true"></i> Бесплатный
-                    WiFi теперь везде!
-                  </h6>
-                </li>
-              </ul>
+                  <li>
+                    <h6 class="advantages-text">
+                      <i class="fa fa-check" aria-hidden="true"></i> Бесплатный
+                      WiFi теперь везде!
+                    </h6>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!--about area ends-->
+    <!--about area ends-->
 
-  <!--Services Area Starts-->
+    <!--Services Area Starts-->
 
-  <div id="services" class="services-area section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-header wow fadeInDown" data-wow-delay="0.2s">
-            <p class="line-one"></p>
-            <h2>Что мы предлагаем</h2>
-            <p class="line-one"></p>
+    <div id="services" class="services-area section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header wow fadeInDown" data-wow-delay="0.2s">
+              <p class="line-one"></p>
+              <h2>Что мы предлагаем</h2>
+              <p class="line-one"></p>
+            </div>
           </div>
         </div>
+        <div class="row">
+          <div id="services-carousel" class="owl-carousel owl-theme">
+            <div class="single-services text-center item">
+              <div class="services-icon">
+                <i class="fa fa-user"></i>
+              </div>
+              <div class="services-content">
+                <h3>Потребителям</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            <div class="single-services text-center item">
+              <div class="services-icon">
+                <i class="fa fa-bullhorn"></i>
+              </div>
+              <div class="services-content">
+                <h3>Рекламодателям</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            <div class="single-services text-center item">
+              <div class="services-icon">
+                <i class="fa fa-handshake-o"></i>
+              </div>
+              <div class="services-content">
+                <h3>Провайдерам</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            <div class="single-services text-center item">
+              <div class="services-icon">
+                <i class="fa fa-suitcase"></i>
+              </div>
+              <div class="services-content">
+                <h3>Предпринимателям</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            <div class="single-services text-center item">
+              <div class="services-icon">
+                <i class="fa fa-keyboard-o"></i>
+              </div>
+              <div class="services-content">
+                <h3>Разработчикам</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Sign In and Sign Up area starts here-->
+        <div class="row">
+          <div class="col-md-12">
+            <div
+              class="login-area wow text-center fadeInDown"
+              data-wow-delay="0.2s"
+            >
+              <div id="login" class="col-md-6">
+                <a href="#" class="login-btn">Авторизация</a>
+              </div>
+
+              <div id="signup" class="col-md-6">
+                <a href="#" class="login-btn">Регистрация</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Sign In and Sign Up area ends here-->
       </div>
-      <div class="row">
-        <div id="services-carousel" class="owl-carousel owl-theme">
-          <div class="single-services text-center item">
-            <div class="services-icon">
+    </div>
+
+    <!--Services Area Ends-->
+
+    <!--number area starts-->
+    <div class="number-area section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-xs-6">
+            <div class="single-number text-center">
+              <i class="fa fa-clock-o"></i>
+              <h2 class="counter">536</h2>
+              <p>Часов работы</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="single-number text-center">
+              <i class="fa fa-code"></i>
+              <h2 class="counter">5327</h2>
+              <p>Строк кода</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="single-number text-center">
+              <i class="fa fa-wifi"></i>
+              <h2 class="counter">46</h2>
+              <p>Точек доступа</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="single-number text-center">
               <i class="fa fa-user"></i>
+              <h2 class="counter">430</h2>
+              <p>Довольных пользователей</p>
             </div>
-            <div class="services-content">
-              <h3>Потребителям</h3>
-              <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-            </div>
-          </div>
-
-          <div class="single-services text-center item">
-            <div class="services-icon">
-              <i class="fa fa-bullhorn"></i>
-            </div>
-            <div class="services-content">
-              <h3>Рекламодателям</h3>
-              <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-            </div>
-          </div>
-
-          <div class="single-services text-center item">
-            <div class="services-icon">
-              <i class="fa fa-handshake-o"></i>
-            </div>
-            <div class="services-content">
-              <h3>Провайдерам</h3>
-              <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-            </div>
-          </div>
-
-          <div class="single-services text-center item">
-            <div class="services-icon">
-              <i class="fa fa-suitcase"></i>
-            </div>
-            <div class="services-content">
-              <h3>Предпринимателям</h3>
-              <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-            </div>
-          </div>
-
-          <div class="single-services text-center item">
-            <div class="services-icon">
-              <i class="fa fa-keyboard-o"></i>
-            </div>
-            <div class="services-content">
-              <h3>Разработчикам</h3>
-              <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Sign In and Sign Up area starts here-->
-      <div class="row">
-        <div class="col-md-12">
-          <div class="login-area wow text-center fadeInDown" data-wow-delay="0.2s">
-            <div id="login" class="col-md-6">
-              <a href="#" class="login-btn">Авторизация</a>
-            </div>
-
-            <div id="signup" class="col-md-6">
-              <a href="#" class="login-btn">Регистрация</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Sign In and Sign Up area ends here-->
-    </div>
-  </div>
-
-  <!--Services Area Ends-->
-
-  <!--number area starts-->
-  <div class="number-area section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-xs-6">
-          <div class="single-number text-center">
-            <i class="fa fa-clock-o"></i>
-            <h2 class="counter">536</h2>
-            <p>Часов работы</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-xs-6">
-          <div class="single-number text-center">
-            <i class="fa fa-code"></i>
-            <h2 class="counter">5327</h2>
-            <p>Строк кода</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-xs-6">
-          <div class="single-number text-center">
-            <i class="fa fa-wifi"></i>
-            <h2 class="counter">46</h2>
-            <p>Точек доступа</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-xs-6">
-          <div class="single-number text-center">
-            <i class="fa fa-user"></i>
-            <h2 class="counter">430</h2>
-            <p>Довольных пользователей</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!--number area ends-->
+    <!--number area ends-->
 
-  <!--Map Section Starts-->
-  <div id="map" class="map-area section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-header wow fadeInDown" data-wow-delay="0.2s">
-            <p class="line-one"></p>
-            <h2>Карта точек</h2>
-            <p class="line-one"></p>
+    <!--Map Section Starts-->
+    <div id="map" class="map-area section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header wow fadeInDown" data-wow-delay="0.2s">
+              <p class="line-one"></p>
+              <h2>Карта точек</h2>
+              <p class="line-one"></p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="map-area">
-        <div id="mapid" style="height: 500px; width: 100%;"></div>
-        <!-- <script type="application/json" id="coordinatesData">
+        <div class="map-area">
+          <div id="mapid" style="height: 500px; width: 100%;"></div>
+          <!-- <script type="application/json" id="coordinatesData">
                     <?php echo json_encode($routers); ?>
                 </script> -->
 
-        <script></script>
+          <script></script>
+        </div>
       </div>
     </div>
-  </div>
-  <!--Map Section Ends-->
+    <!--Map Section Ends-->
 
-  <!--contact area starts-->
-  <div class="contact-area section-padding" id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-header wow fadeInDown" data-wow-delay="0.1s">
-            <p class="line-one"></p>
-            <h2>Контакты</h2>
-            <p class="line-one"></p>
+    <!--contact area starts-->
+    <div class="contact-area section-padding" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header wow fadeInDown" data-wow-delay="0.1s">
+              <p class="line-one"></p>
+              <h2>Контакты</h2>
+              <p class="line-one"></p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.2s">
-            <i class="fa fa-home"></i>
-            <h2>Наш адрес:</h2>
-            <p>Барнаул, Ленина 61</p>
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="single-contact text-center wow fadeInDown"
+              data-wow-delay="0.2s"
+            >
+              <i class="fa fa-home"></i>
+              <h2>Наш адрес:</h2>
+              <p>Барнаул, Ленина 61</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.4s">
-            <i class="fa fa-phone"></i>
-            <h2>Телефон:</h2>
-            <p>(+7) 123 456 7890</p>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="single-contact text-center wow fadeInDown"
+              data-wow-delay="0.4s"
+            >
+              <i class="fa fa-phone"></i>
+              <h2>Телефон:</h2>
+              <p>(+7) 123 456 7890</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.6s">
-            <i class="fa fa-envelope-o"></i>
-            <h2>Электронный адрес:</h2>
-            <p>wifiMesh@ternex.ru</p>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="single-contact text-center wow fadeInDown"
+              data-wow-delay="0.6s"
+            >
+              <i class="fa fa-envelope-o"></i>
+              <h2>Электронный адрес:</h2>
+              <p>wifiMesh@ternex.ru</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="single-contact text-center wow fadeInDown" data-wow-delay="0.8s">
-            <i class="fa fa-gg"></i>
-            <h2>Социальные ссылки:</h2>
-            <div class="socials">
-              <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.vk.com/" target="_blank"><i class="fa fa-vk"></i></a>
-              <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="single-contact text-center wow fadeInDown"
+              data-wow-delay="0.8s"
+            >
+              <i class="fa fa-gg"></i>
+              <h2>Социальные ссылки:</h2>
+              <div class="socials">
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+                <a href="https://www.vk.com/" target="_blank"
+                  ><i class="fa fa-vk"></i
+                ></a>
+                <a href="https://twitter.com/" target="_blank"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!--contact area ends-->
+    <!--contact area ends-->
 
-  <!--Footer Area Starts-->
-  <div class="footer-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-          <p>
-            2019 &copy; Все права защищены.
-            <a href="https://www.ternex.ru" target="_blank">&copy;Ternex</a>
-          </p>
-          <div class="row">
-            <div class="col-md-12">
-              <a href="#">Зарегистрироваться</a>
-              <span class="text-muted">/</span>
-              <a href="#">Войти в аккаунт</a>
+    <!--Footer Area Starts-->
+    <div class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <p>
+              2019 &copy; Все права защищены.
+              <a href="https://www.ternex.ru" target="_blank">&copy;Ternex</a>
+            </p>
+            <div class="row">
+              <div class="col-md-12">
+                <a href="#">Зарегистрироваться</a>
+                <span class="text-muted">/</span>
+                <a href="#">Войти в аккаунт</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!--Footer Area Ends-->
+    <!--Footer Area Ends-->
 
-  <!--Scripts-->
-  <!-- <script src="./js/jquery.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="./js/lazyloading.js" async></script>
-  <script src="./js/animatedheadline.js"></script>
-  <script src="./js/waypoints.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/owl.carousel.js"></script>
-  <script src="./js/wow.min.js"></script>
-  <script src="./js/checkPass.js" async></script>
-  <script src="./js/counterup.min.js"></script>
-  <script src="./js/particles.js" defer></script>
-  <script src="./js/particles-settings.js" defer></script>
-  <script src="./js/leaflet.min.js" async defer></script>
-  <script src="./js/main.js"></script>
-</body>
-
+    <!--Scripts-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/lazyloading.js"></script>
+    <script src="./js/animatedheadline.js"></script>
+    <script src="./js/waypoints.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/owl.carousel.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/counterup.min.js"></script>
+    <script src="./js/particles.js" defer></script>
+    <script src="./js/particles-settings.js" defer></script>
+    <script src="./js/leaflet.min.js" async defer></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
