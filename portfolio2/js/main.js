@@ -22,7 +22,7 @@ $(document).ready(function() {
   //********** lazy loading map
   var loaded = false;
   $(document).on("scroll", function() {
-    var offset = $(".map-area").offset().top - 500;
+    var offset = $(".services-area").offset().top;
     if ($(window).scrollTop() > offset && !loaded) {
       loaded = true;
       $("#mapid").show();
