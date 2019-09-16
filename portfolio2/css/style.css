@@ -579,7 +579,7 @@ img {
 /*----------- 5. Banner area css starts--------------*/
 
 .banner-area {
-  background-image: url("../images/home/header-background.jpg");
+  background-image: url("../images/home/header-background-min.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
