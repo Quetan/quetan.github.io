@@ -615,33 +615,27 @@ canvas {
   margin-bottom: 18px;
 }
 
-.about-text-left a {
-  color: #fff;
-  font-size: 14px;
-  text-transform: uppercase;
-  background: #0069a8;
-  padding: 15px;
-  float: right;
-  text-decoration: none;
-}
-
 .about-text-left p {
   text-align: left;
   font-size: 15px;
   color: #222;
-  margin-bottom: 50px;
 }
 
 .about-image {
-  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.about-image img {
+  height: 470px;
+  max-width: 100%;
 }
 
 .about-text-right {
-  margin-top: 90px;
+  margin-top: 40px;
 }
 
 .about-text-left {
-  margin-top: 90px;
+  margin-top: 40px;
 }
 
 .advantages {
@@ -785,6 +779,7 @@ canvas {
 
 #mapid {
   display: none;
+  border-radius: 10px;
 }
 
 /*-------Map area ends----------*/
@@ -828,6 +823,7 @@ canvas {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   padding: 15px 10px;
   height: 165px;
+  border-radius: 5px;
 }
 
 .single-contact h2 {
