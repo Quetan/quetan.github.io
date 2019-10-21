@@ -1,0 +1,5 @@
+*, html, body{
+    box-sizing: border-box;
+}
+
+#router_position { height: 90vh; }
