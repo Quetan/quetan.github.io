@@ -1,23 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./leaflet/leaflet.css">
-        <!-- <script src="./leaflet/leaflet-src.js"></script>
-        <script src="./leaflet/leaflet-src.esm.js"></script> -->
-    <script src="./leaflet/leaflet.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="./style.css">
-    <script src="./main.js"></script>
+    <!-- base leaflet -->
+    <link rel="stylesheet" href="./leaflet/leaflet.css" />
+    <script src="./leaflet/leaflet.js"></script>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Main -->
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+
     <title>Leaflet</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <form>
+      <input
+        type="text"
+        id="address"
+        placeholder="Введите адрес установки роутера."
+        value="Барнаул,Микронная,137"
+      />
+      <input type="submit" value="OK" id="submit" />
+    </form>
     <div id="router_position"></div>
 
+    <script>
+      let map = L.map("router_position").setView([55.751244, 37.618423], 13);
+      L.tileLayer(
+        "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
+        {
+          attribution:
+            'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+          maxZoom: 18,
+          id: "mapbox.streets",
+          accessToken:
+            "pk.eyJ1Ijoic3Bpcml0MDRlayIsImEiOiJjanZwNmtreTcxZHkyNGF2bmpocGlvbzh2In0.Lu2brpXppB3r8HrVUOdt8g"
+        }
+      ).addTo(map);
 
-</body>
+      map.locate({ setView: true, maxZoom: 15 });
+      function onLocationFound(e) {
+        var radius = e.accuracy;
+        L.circle(e.latlng, radius / 3)
+          .addTo(map)
+          .bindPopup(
+            "Вы находитесь в радиусе " + radius / 3 + " метров от этой точки."
+          )
+          .openPopup();
+      }
+
+      map.on("locationfound", onLocationFound);
+
+      function onLocationError(e) {
+        e.message =
+          "Ваша геолокация не определена. Включите геолокацию в настройках Вашего устройства или разрешите доступ к получению вашего местоположения.";
+        e.message;
+      }
+
+      map.on("locationerror", onLocationError);
+
+
+      $.get(
+        location.protocol +
+          "//nominatim.openstreetmap.org/search?format=json&q=Барнаул,Ленина,61",
+        function(data) {
+          console.log(data);
+
+          lat = data[0].lat;
+          lon = data[0].lon;
+          console.log(lat + " " + lon);
+          map.panTo(new L.LatLng(lat, lon));
+          L.marker([lat, lon]).addTo(map);
+          map.setZoom(17);
+        }
+      );
+      
+    </script>
+  </body>
 </html>

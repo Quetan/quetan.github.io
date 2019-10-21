@@ -3,3 +3,26 @@
 }
 
 #router_position { height: 90vh; }
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#address{
+    width: 30vw;
+    height: 40px;
+    padding: 0px 15px;
+    border-radius: 15px;
+    text-transform: none;
+    outline: none;
+}
+
+#submit{
+    height: 40px;
+    width: 45px;
+    border-radius: 15px;
+    margin-left: 15px;
+    outline: none;
+}
