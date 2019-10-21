@@ -11,21 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
         "pk.eyJ1Ijoic3Bpcml0MDRlayIsImEiOiJjanZwNmtreTcxZHkyNGF2bmpocGlvbzh2In0.Lu2brpXppB3r8HrVUOdt8g"
     }
   ).addTo(map);
-  map.locate({ setView: true, maxZoom: 16 });
-  function onLocationFound(e) {
-    var radius = e.accuracy;
-
-    L.circle(e.latlng, radius)
-      .addTo(map)
-      .bindPopup("Вы находитесь в радиусе " + radius + " метров от этой точки.")
-      .openPopup();
-  }
-
-  map.on("locationfound", onLocationFound);
-
-  function onLocationError(e) {
-    alert(e.message);
-  }
-
-  map.on("locationerror", onLocationError);
+  navigator.geolocation.getCurrentPosition(function(position) {
+    function onLocationFound(e) {
+      var radius = e.accuracy;
+      map.locate({ setView: true, maxZoom: 16 });
+      L.circle(e.latlng, radius)
+        .addTo(map)
+        .bindPopup(
+          "Вы находитесь в радиусе " + radius + " метров от этой точки."
+        )
+        .openPopup();
+    }
+  });
 });
