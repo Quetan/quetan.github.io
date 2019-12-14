@@ -1,0 +1,39 @@
+.header-menu{
+  min-height: 50px;
+}
+.header-title{
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+ul.menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item{
+  color: #fff;
+  list-style-type: none;
+}
+
+ul.menu a:hover{
+  text-decoration: none !important;
+}
+
+.section-title{
+  font-weight: 700;
+  font-size: 1.4rem;
+  
+}
+
+.card-img-top{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;
+
+}
+.card-img-top.article-1{
+  background-image: url("./article-1.jpg");
+}
