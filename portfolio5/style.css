@@ -21,7 +21,7 @@ summary:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("./bg.jpg");
+  background-image: url("./bg-min.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -52,7 +52,7 @@ summary:focus {
   letter-spacing: 0.3px;
   color: #1d2124;
   padding: 10px 25px;
-  min-width: 100px;
+  min-width: 200px;
   z-index: 4;
 }
 
@@ -109,23 +109,23 @@ summary:focus {
 
 .card-img-top.article-1 {
   z-index: 2;
-  background-image: url("./article-1.jpg");
+  background-image: url("./article-1-min.jpg");
 }
 .card-img-top.article-2 {
   z-index: 2;
-  background-image: url("./article-2.jpg");
+  background-image: url("./article-2-min.jpg");
 }
 .card-img-top.article-3 {
   z-index: 2;
-  background-image: url("./article-3.jpg");
+  background-image: url("./article-3-min.jpg");
 }
 .card-img-top.article-4 {
   z-index: 2;
-  background-image: url("./article-4.jpg");
+  background-image: url("./article-4-min.jpg");
 }
 .card-img-top.article-5 {
   z-index: 2;
-  background-image: url("./article-5.jpg");
+  background-image: url("./article-5-min.jpg");
 }
 
 .footer{
