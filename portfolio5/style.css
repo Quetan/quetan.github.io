@@ -41,6 +41,13 @@ summary:focus {
   z-index: 4;
 }
 
+.header p{
+  z-index: 4;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  font-size: 1.2rem;
+}
+
 .header::after {
   content: "";
   background-color: #0000009e;
