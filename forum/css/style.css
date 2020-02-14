@@ -792,29 +792,27 @@ h4,
 
 .hero-banner h1 {
   color: #fff;
-  margin-bottom: 25px;
-  font-size: 28px;
+  font-size: 3rem;
 }
 
-@media (min-width: 768px) {
+.hero-banner h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* @media (min-width: 768px) {
   .hero-banner h1 {
     font-size: 60px;
     margin-bottom: 45px;
   }
-}
+} */
 
-.hero-banner h2 {
-  font-size: 22px;
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .hero-banner h2 {
     font-size: 42px;
   }
-}
+} */
 
 .hero-banner p {
   font-size: 22px;
@@ -1241,6 +1239,16 @@ transition: transform 0.4s ease;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-identity i{
+    font-size: 3rem;
+    margin-top: 1.5rem;
 }
 
 .card-identity > * {
@@ -1260,17 +1268,12 @@ transition: transform 0.4s ease;
 }
 
 .schedule-content {
-  padding: 10px;
+  color: #242424;
 }
-
-@media (min-width: 768px) {
-  .schedule-content {
-    padding: 5px 40px 5px 40px;
-  }
-}
-
-.schedule-content .schedule-date {
-  font-size: 14px;
+.schedule-content ul>li{
+  list-style-type: disc;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
 }
 
 .schedule-content .schedule-title {
@@ -1285,10 +1288,16 @@ transition: transform 0.4s ease;
 
 .schedule-card p {
   margin-bottom: 0;
+  transition: transform 0.3s ease;
 }
 
 .schedule-card:hover .card-identity {
   background: #ea0763;
+}
+
+.schedule-card:hover p,
+.schedule-card:hover ul>li {
+  transform: scale(1.01);
 }
 
 .schedule-card:last-child {
