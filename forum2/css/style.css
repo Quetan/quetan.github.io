@@ -162,6 +162,22 @@ h4,
   animation: slide-down 0.5s ease-out;
 }
 
+.tab-header h2{
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+}
+
+.tab-header::after{
+  content: '';
+  display: block;
+  position: relative;
+  width: 30%;
+  margin-top: 5px;
+  border-bottom: 6px solid #ea0763;
+  transform: rotateZ(0.4deg) skewX(320deg);
+  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
 @keyframes slide-down {
   0% {
     opacity: 0;
@@ -1248,7 +1264,7 @@ transition: transform 0.4s ease;
 
 .card-identity i{
     font-size: 3rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .card-identity > * {
@@ -1272,7 +1288,8 @@ transition: transform 0.4s ease;
 }
 .schedule-content ul>li{
   list-style-type: disc;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  line-height: 1.8;
   transition: transform 0.3s ease;
 }
 
@@ -1289,6 +1306,7 @@ transition: transform 0.4s ease;
 .schedule-card p {
   margin-bottom: 0;
   transition: transform 0.3s ease;
+  line-height: 1.8;
 }
 
 .schedule-card:hover .card-identity {
