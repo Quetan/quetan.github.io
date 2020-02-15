@@ -960,60 +960,6 @@ transition: transform 0.4s ease;
   margin-bottom: 0;
 }
 
-.clockdiv {
-  margin-bottom: 35px;
-}
-
-.clockdiv li {
-  display: inline-block;
-  margin-right: 30px;
-}
-
-@media (max-width: 320px) {
-  .clockdiv li {
-    margin-right: 0;
-  }
-}
-
-.clockdiv li:last-child {
-  margin-right: 0;
-}
-
-.clockdiv h1 {
-  font-size: 27px;
-  font-weight: 500;
-  margin-bottom: 0;
-  line-height: 1;
-  color: #3b1d82;
-}
-
-.clockdiv .smalltext {
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.clockdiv .clockdiv-single {
-  width: 130px;
-  height: 145px;
-  text-align: center;
-  padding-top: 45px;
-}
-
-.clockdiv .clockdiv-day {
-  background: url(../img/home/countdown-day.png) left center no-repeat;
-  background-size: cover;
-}
-
-.clockdiv .clockdiv-hour {
-  background: url(../img/home/countdown-hour.png) left center no-repeat;
-  background-size: cover;
-}
-
-.clockdiv .clockdiv-minute {
-  background: url(../img/home/countdown-minute.png) left center no-repeat;
-  background-size: cover;
-}
-
 .card-feature {
   text-align: center;
 }
@@ -1085,6 +1031,52 @@ transition: transform 0.4s ease;
 .card-feature:hover .feature-icon i,
 .card-feature:hover .feature-icon span {
   color: #fff;
+}
+
+/* .terms-block{
+  border-radius: 15px;
+  text-align: center;
+  background-color: #3b1d82;
+  min-height: 200px;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.terms-block:hover{
+  background-color: #eb0162;
+  transform: scale(1.01);
+}
+
+.terms-block .terms-text{
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.terms-arrow{
+  font-size: 2.5rem;
+  color: #ea0763;
+} */
+
+.box-with-humber {
+  position: relative;
+}
+.box-with-humber .number-behind {
+  font-size: 8rem;
+  position: absolute;
+  z-index: -1;
+  top: -5rem;
+  left: -3rem;
+  font-weight: 900;
+  color: #d8d8d8;
+  font-family: "Oswald", sans-serif;
+}
+
+.box-with-humber p {
+  color: rgb(37, 37, 37);
+}
+
+.box-with-humber h2 {
+  font-size: 1.9rem;
 }
 
 .speaker-bg {
