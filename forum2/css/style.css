@@ -1030,9 +1030,9 @@ transition: transform 0.4s ease;
 }
 
 .card-feature .feature-icon {
-  width: 99px;
-  height: 97px;
-  line-height: 97px;
+  width: 120px;
+  height: auto;
+  line-height: 107px;
   margin-right: auto;
   margin-left: auto;
   display: block;
