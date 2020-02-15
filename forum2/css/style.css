@@ -1060,6 +1060,11 @@ transition: transform 0.4s ease;
 .box-with-humber {
   position: relative;
 }
+
+.box-with-humber:hover .number-behind{
+  left: 7rem;
+}
+
 .box-with-humber .number-behind {
   font-size: 8rem;
   position: absolute;
@@ -1069,6 +1074,7 @@ transition: transform 0.4s ease;
   font-weight: 900;
   color: #d8d8d8;
   font-family: "Oswald", sans-serif;
+  transition: left 0.7s ease;
 }
 
 .box-with-humber p {
@@ -1293,11 +1299,11 @@ transition: transform 0.4s ease;
 .schedule-card {
   background: #f7f7f7;
   margin-bottom: 30px;
+  transition: transform 0.3s ease;
 }
 
 .schedule-card p {
   margin-bottom: 0;
-  transition: transform 0.3s ease;
   line-height: 1.8;
 }
 
@@ -1305,8 +1311,7 @@ transition: transform 0.4s ease;
   background: #ea0763;
 }
 
-.schedule-card:hover p,
-.schedule-card:hover ul>li {
+.schedule-card:hover {
   transform: scale(1.01);
 }
 
