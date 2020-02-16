@@ -6,6 +6,7 @@ body {
   font-size: 15px;
   font-weight: 400;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 ul {
@@ -866,6 +867,7 @@ h4,
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
+  transition: background-image 0.4s ease;
 }
 
 .hero-banner-sm {
