@@ -785,6 +785,12 @@ h4,
   }
 }
 
+.hero-logo img{
+  max-height: 70px;
+  width: auto;
+}
+
+
 .hero-banner-icon {
   color: #fff;
   display: inline-block;
