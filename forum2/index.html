@@ -51,15 +51,27 @@
             >
               <ul class="nav navbar-nav menu_nav justify-content-end">
                 <li class="nav-item active">
-                  <a class="nav-link" href="/">О форуме</a>
+                  <a class="nav-link" href="#about-section">О форуме</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Программа</a>
+                  <a class="nav-link" href="#for-section">Для кого</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Спикеры</a>
+                  <a class="nav-link" href="#reg-section">Участие</a>
                 </li>
-                <li class="nav-item submenu dropdown">
+                <li class="nav-item">
+                  <a class="nav-link" href="#history-section">История</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#program-section">Программа</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#speakers-section">Спикеры</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#partners-section">Партнеры</a>
+                </li>
+                <!-- <li class="nav-item submenu dropdown">
                   <a
                     href="#"
                     class="nav-link dropdown-toggle"
@@ -83,9 +95,9 @@
                       <a class="nav-link" href="#">RU / ENG</a>
                     </li>
                   </ul>
-                </li>
+                </li> -->
 
-                <li class="nav-item submenu dropdown">
+                <!-- <li class="nav-item submenu dropdown">
                   <a
                     href="#"
                     class="nav-link dropdown-toggle"
@@ -103,7 +115,7 @@
                       <a class="nav-link" href="#">Команда</a>
                     </li>
                   </ul>
-                </li>
+                </li> -->
               </ul>
 
               <ul class="nav-right text-center text-lg-right py-4 py-lg-0">
@@ -128,14 +140,16 @@
           Евразийское образовательное пространство – новые вызовы и лучшие
           практики»
         </h2>
-        <a class="button button-header" href="#">Регистрация</a>
+        <a class="button button-header" href="http://konf.asu.ru/"
+          >Регистрация</a
+        >
       </div>
       <div class="hero-banner-overlay"></div>
     </section>
     <!--================Hero Banner Area End =================-->
 
     <!--================ Headteacher section Start =================-->
-    <section class="section-padding--small bg-gray">
+    <section id="about-section" class="section-padding--small bg-gray">
       <div class="container">
         <div class="row px-3">
           <div
@@ -191,7 +205,7 @@
             <div class="feature-icon">
               <span class="feature-number">4</span>
             </div>
-            <h3 class="feature-header">Стратегических трека</h3 class="feature-header">
+            <h3 class="feature-header">Стратегических трека</h3>
           </div>
 
           <div class="col-md-4 card-feature mb-5 mb-lg-0">
@@ -225,39 +239,46 @@
       </div>
     </section>
 
-     <!--================ For section Start =================-->
-     <section class="section-padding bg-gray about-bg">
+    <!--================ For section Start =================-->
+    <section id="for-section" class="section-padding bg-gray about-bg">
       <div class="container">
         <div class="section-intro text-center pb-5">
           <h2 class="text-white">Кому будет интересен наш форум?</h2>
           <img src="./img/home/section-style.png" alt="" />
         </div>
         <div class="row">
-            <div class="offset-md-2 col-md-8 offset-1 col-10">
-              <div class="row">
-                <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
-                  <h3 class="for-text"> <i class="fas fa-user-tie for-text-icon mr-3"></i> Государство и бизнес</h3>
-                </div>
-                <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
-                  <h3 class="for-text"> <i class="fas fa-user for-text-icon mr-3"></i> Представители иностранных организаций</h3>
-                </div>
-                <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
-                  <h3 class="for-text"> <i class="fas fa-user-graduate for-text-icon mr-3"></i> Ученые и специалисты в области образования</h3>
-                </div>
-                <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
-                  <h3 class="for-text"> <i class="fas fa-user-edit for-text-icon mr-3"></i> Эксперты</h3>
-                </div>
-                <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
-                  <h3 class="for-text"> <i class="fas fa-user-friends for-text-icon mr-3"></i> Молодежь</h3>
-                </div>
+          <div class="offset-md-2 col-md-8 offset-1 col-10">
+            <div class="row">
+              <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
+                <i class="fas fa-user-tie for-text-icon mr-3"></i>
+                <h3 class="for-text">Государство и бизнес</h3>
+              </div>
+              <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
+                <i class="fas fa-user for-text-icon mr-3"></i>
+                <h3 class="for-text">Представители иностранных организаций</h3>
+              </div>
+              <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
+                <i class="fas fa-user-graduate for-text-icon mr-3"></i>
+                <h3 class="for-text">
+                  Ученые и специалисты в области образования
+                </h3>
+              </div>
+              <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
+                <i class="fas fa-user-edit for-text-icon mr-3"></i>
+                <h3 class="for-text">Эксперты</h3>
+              </div>
+              <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
+                <i class="fas fa-user-friends for-text-icon mr-3"></i>
+                <h3 class="for-text">Молодежь</h3>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
     <!--================ For section End =================-->
 
-    <section class="section-padding">
+    <section id="reg-section" class="section-padding">
       <div class="container">
         <div class="row mt-5 d-flex justify-content-center">
           <div class="col-md-12">
@@ -304,9 +325,11 @@
     </section>
     <!--================ About section End =================-->
 
-
     <!--================ Gallery section Start =================-->
-    <section class="section-padding gallery-area gallery-bg">
+    <section
+      id="history-section"
+      class="section-padding gallery-area gallery-bg"
+    >
       <div class="container gallery-container">
         <div
           class="section-intro section-intro-white text-center bottom-padding"
@@ -371,7 +394,12 @@
                 </a>
               </div>
               <div class="col-md-12 text-center">
-                <button class="button button-header mt-4">Смотреть</button>
+                <a
+                  class="button button-header mt-4"
+                  href="http://www.asu.ru/education/forums/oaa2014/"
+                >
+                  Смотреть
+                </a>
               </div>
             </div>
           </div>
@@ -429,7 +457,12 @@
                 </a>
               </div>
               <div class="col-md-12 text-center">
-                <button class="button button-header mt-4">Смотреть</button>
+                <a
+                  class="button button-header mt-4"
+                  href="http://www.asu.ru/education/forums/oaa2016/"
+                >
+                  Смотреть
+                </a>
               </div>
             </div>
           </div>
@@ -487,7 +520,12 @@
                 </a>
               </div>
               <div class="col-md-12 text-center">
-                <button class="button button-header mt-4">Смотреть</button>
+                <a
+                  class="button button-header mt-4"
+                  href="https://www.asu.ru/education/contests/education/news/events/30288/"
+                >
+                  Смотреть
+                </a>
               </div>
             </div>
           </div>
@@ -518,7 +556,7 @@
     <!--================ Gallery section End =================-->
 
     <!--================ Schedule section Start =================-->
-    <section class="section-margin mb-5 pb-5">
+    <section id="program-section" class="section-margin mb-5 pb-5">
       <div class="container">
         <div class="section-intro text-center bottom-padding">
           <p class="section-intro__title">Присоединяйтесь к нам</p>
@@ -1017,7 +1055,7 @@
     <!--================ Schedule section End =================-->
 
     <!--================ Speaker section Start =================-->
-    <section class="speaker-bg section-padding">
+    <section id="speakers-section" class="speaker-bg section-padding">
       <div class="container">
         <div
           class="section-intro section-intro-white text-center bottom-padding"
@@ -1211,7 +1249,7 @@
     <!--================ Speaker section End =================-->
 
     <!--================ Sponsor section Start =================-->
-    <section class="section-padding--small sponsor-bg">
+    <section id="partners-section" class="section-padding--small sponsor-bg">
       <div class="container">
         <div class="section-intro text-center pb-80px">
           <p class="section-intro__title">Будь с нами!</p>
@@ -1265,17 +1303,17 @@
               <div class="row">
                 <div class="col">
                   <ul>
-                    <li><a href="#">О форуме</a></li>
-                    <li><a href="#">Программа</a></li>
-                    <li><a href="#">Спикеры</a></li>
-                    <li><a href="#">Партнеры</a></li>
+                    <li><a href="#about-section">О форуме</a></li>
+                    <li><a href="#for-section">Для кого</a></li>
+                    <li><a href="#reg-section">Заявка</a></li>
+                    <li><a href="#history-section">История</a></li>
                   </ul>
                 </div>
                 <div class="col">
                   <ul>
-                    <li><a href="#">Расписание</a></li>
-                    <li><a href="#">Регистрация</a></li>
-                    <li><a href="#">Команда</a></li>
+                    <li><a href="#program-section">Программа</a></li>
+                    <li><a href="#speakers-section">Спикеры</a></li>
+                    <li><a href="#partners-section">Партнеры</a></li>
                   </ul>
                 </div>
               </div>
@@ -1313,8 +1351,6 @@
     <script src="./vendors/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./vendors/owl-carousel/owl.carousel.min.js"></script>
     <script src="./vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script>
-    <script src="./js/jquery.ajaxchimp.min.js"></script>
-    <script src="./js/mail-script.js"></script>
     <script src="./js/jquery.magnific-popup.min.js"></script>
     <script src="./js/video.js"></script>
     <script src="./js/main.js"></script>
