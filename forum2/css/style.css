@@ -880,18 +880,15 @@ h4,
   font-weight: 600;
 }
 
-/* @media (min-width: 768px) {
+@media (max-width: 450px){
   .hero-banner h1 {
-    font-size: 60px;
-    margin-bottom: 45px;
+    font-size: 2rem;
   }
-} */
-
-/* @media (min-width: 768px) {
+  
   .hero-banner h2 {
-    font-size: 42px;
+    font-size: 1.4rem;
   }
-} */
+}
 
 .hero-banner p {
   font-size: 22px;
