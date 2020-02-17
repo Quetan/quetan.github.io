@@ -859,7 +859,7 @@ h4,
   min-height: calc(100vh - 90px);
   position: relative;
   padding: 70px 0;
-  background: url("../img/banner/hero-banner1.jpeg") left center no-repeat;
+  background: url("../img/banner/hero-banner1-min.jpeg") left center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: flex;
@@ -867,7 +867,8 @@ h4,
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  transition: background-image 0.4s ease;
+  -webkit-transition: background-image 0.7s ease;
+  transition: background-image 0.7s ease;
 }
 
 .hero-banner-sm {
@@ -1041,7 +1042,7 @@ h4,
 }
 
 .about-bg {
-  background: url(../img/home/about-bg.jpg) left center no-repeat;
+  background: url(../img/home/about-bg-min.jpg) left center no-repeat;
   background-size: cover;
   position: relative;
   z-index: 2;
@@ -1468,7 +1469,7 @@ h4,
 
 .sponsor-bg::after {
   content: "";
-  background: url(../img/home/sponsor-bg.jpg) left center no-repeat;
+  background: url(../img/home/sponsor-bg-min.jpg) left center no-repeat;
   background-size: cover;
   opacity: 0.1;
   top: 0;
@@ -1522,7 +1523,7 @@ h4,
 }
 
 .gallery-bg {
-  background: url(../img/home/gallery-bg.jpg) left center no-repeat;
+  background: url(../img/home/gallery-bg-min.jpg) left center no-repeat;
   background-size: cover;
   display: block;
   position: relative;
@@ -1666,7 +1667,7 @@ h4,
 }
 
 .button-header:hover {
-  background: #db2c20;
+  background: #4b9258;
   color: #fff;
 }
 

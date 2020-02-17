@@ -21,24 +21,6 @@ $(function() {
   }
   navbarFixed();
 
-  ///////////////////////////////////////
-  // var bg = [
-  //   "url(./img/banner/hero-banner1.jpeg)",
-  //   "url(./img/banner/hero-banner2.jpg)"
-  // ];
-  // var imgIndex = 0;
-  // function changeBackground() {
-  //   // $(document).ready(function() {
-  //   $(".hero-banner")
-  //     .fadeTo(100, 1) //can use any other effect to animate the transition
-  //     .fadeTo(100, 1)
-  //     .css("background-image", bg[imgIndex]); //changing the style
-  //   // });
-  //   imgIndex = (imgIndex + 1) % bg.length; //looping
-  // }
-  // setInterval(changeBackground(), 5000);
-  ///////////////////////////////////////
-
   $(".img-gal").magnificPopup({
     type: "image",
     gallery: {
@@ -112,7 +94,7 @@ nav_items.forEach(item => {
 });
 
 var cycle = 0;
-var allBackgrounds = ["hero-banner6.jpg","hero-banner2.jpg", "hero-banner3.jpg", "hero-banner4.jpg", "hero-banner5.jpg"];
+var allBackgrounds = ["hero-banner6-min.jpg","hero-banner2-min.jpg", "hero-banner3-min.jpg", "hero-banner4-min.jpg", "hero-banner5-min.jpg"];
 setInterval(function() {
 	if (cycle < 5) {
 		document.querySelector(".hero-banner").style.backgroundImage = "url('./img/banner/" + allBackgrounds[cycle] + "')";
@@ -120,4 +102,4 @@ setInterval(function() {
 	} else { 
 		cycle = 0;
 	}
-}, 2200);
+}, 4200);
