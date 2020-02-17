@@ -786,7 +786,7 @@ h4,
 }
 
 .hero-logo img{
-  max-height: 70px;
+  max-height: 110px;
   width: auto;
 }
 
@@ -857,7 +857,7 @@ h4,
   min-height: calc(100vh - 90px);
   position: relative;
   padding: 70px 0;
-  background: url("../img/banner/hero-banner1.jpeg") left center no-repeat;
+  background: url("../img/banner/hero-banner1.jpg") left center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: flex;
