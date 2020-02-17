@@ -849,7 +849,7 @@ h4,
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../img/banner/hero-vector-overlay.png);
+  background-image: url(../img/banner/hero-vector-overlay-min.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1053,7 +1053,7 @@ h4,
 }
 .about-bg::after {
   content: "";
-  background: url(../img/home/speaker-bg.png) left center no-repeat;
+  background: url(../img/home/speaker-bg-min.png) left center no-repeat;
   background-size: cover;
   opacity: 0.7;
   top: 0;
@@ -1213,7 +1213,7 @@ h4,
 }
 
 .speaker-bg {
-  background: url(../img/home/speaker-bg.png) left center no-repeat;
+  background: url(../img/home/speaker-bg-min.png) left center no-repeat;
   background-size: cover;
 }
 
