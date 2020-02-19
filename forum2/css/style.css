@@ -164,6 +164,7 @@ h4,
 	right: 5%;
 	width: 90%;
 	height: 1px;
+	background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgb(48,49,51)), to(transparent));
 	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
 }
 
@@ -175,6 +176,7 @@ h4,
 	right: 5%;
 	width: 90%;
 	height: 1px;
+	background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgb(221, 223, 228)), to(transparent));
 	background-image: linear-gradient(to right, transparent, rgb(221, 223, 228), transparent);
 }
 
@@ -893,7 +895,9 @@ h4,
   background: var(--main-color); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(
     linear,
+    
     left top, left bottom,
+    
     from(var(--main-color)),
     to(var(--main-color--gradient))
   );
@@ -942,6 +946,7 @@ h4,
 .hero-banner h1 {
   color: #fff;
   font-size: 3rem;
+  text-shadow: 0px 3px 4px #000000a6;
 }
 
 .hero-banner h2 {
@@ -1138,6 +1143,7 @@ h4,
 .card-feature .feature-icon span {
   font-size: 38px;
   color: var(--main-color);
+  text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.29);
 }
 
 .card-feature .feature-icon [class^="flaticon-"]:before,
@@ -1574,7 +1580,9 @@ h4,
   background: var(--main-color); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(
     linear,
+    
     left top, left bottom,
+    
     from(var(--main-color)),
     to(var(--main-color--gradient))
   );
