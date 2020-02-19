@@ -2,12 +2,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic");
 
 :root {
-  --main-color: #183db8;
+  --main-color: #383185;
   --main-color--gradient: #393E41;
-  --main-color--opacity: #183db8aa;
-  --accent-color: #E94F37;
-  --accent-color--darker: #cf4732;
-  --accent-color--opacity: #E94F37aa;
+  --main-color--opacity: #383185aa;
+  --accent-color: #dc1f29;
+  --accent-color--darker: #c1151e;
+  --accent-color--opacity: #dc1f29aa;
 }
 
 body {
@@ -150,6 +150,49 @@ h4,
   }
 }
 
+.divider{
+	position: relative;
+  margin-top: 15px;
+  margin-bottom: 25px;
+	height: 3px;
+}
+.div-transparent:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+.div-transparent-white:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(221, 223, 228), transparent);
+}
+
+.div-dot:after{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -9px;
+	left: calc(50% - 9px);
+	width: 18px;
+	height: 18px;
+	background-color: var(--accent-color);
+	border: 1px solid rgb(48,49,51);
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 2px white,
+					0 0 0 4px white;
+}
+
 .pb-80px {
   padding-bottom: 58px;
 }
@@ -174,6 +217,7 @@ h4,
   font-size: 2rem;
 }
 
+/* 
 .tab-header::after {
   content: "";
   display: block;
@@ -184,7 +228,7 @@ h4,
   -webkit-transform: rotateZ(0.4deg) skewX(320deg);
           transform: rotateZ(0.4deg) skewX(320deg);
   box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.2);
-}
+} */
 
 @-webkit-keyframes slide-down {
   0% {
@@ -841,22 +885,31 @@ h4,
   font-family: 'Roboto', serif;
 }
 
-.hero-banner-overlay {
-  height: 100%;
+.hero-banner-overlay::after {
+  content: "";
   width: 100%;
-  background-color: var(--main-color);
-  display: block;
-  position: absolute;
-  opacity: 0.65;
-  z-index: 2;
+  height: 100%;
+  /* background-color: var(--main-color); */
+  background: var(--main-color); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    left top, left bottom,
+    from(var(--main-color)),
+    to(var(--main-color--gradient))
+  );
+  background: linear-gradient(
+    180deg,
+    
+    var(--main-color),
+    var(--main-color--gradient)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  opacity: 0.75;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
-  background-image: url(../img/banner/hero-vector-overlay.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .hero-banner {
@@ -871,6 +924,7 @@ h4,
           justify-content: center;
   -webkit-box-align: center;
           align-items: center;
+          z-index: 1;
 }
 
 .hero-banner-sm {
