@@ -647,7 +647,7 @@ h4,
     display: block;
     width: 25px;
     height: 3px;
-    background: #eb0162;
+    background: var(--accent-color);
     margin: auto;
     margin-bottom: 4px;
     -webkit-transition: all 400ms linear;
@@ -1072,7 +1072,7 @@ h4,
 
 .headteacher-text p {
   font-size: 0.9em;
-  color: #111429;
+  color: #242424;
 }
 
 .section-intro {
@@ -1428,6 +1428,7 @@ h4,
 
 .scheduleTab .nav-item a.active {
   background: var(--main-color);
+  box-shadow: inset 0px 0px 8px 5px #0000003d !important;
 }
 
 .scheduleTab .nav-item a.active > * {
