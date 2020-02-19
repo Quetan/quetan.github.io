@@ -1684,6 +1684,10 @@ h4,
   z-index: 1;
 }
 
+.gallery-header{
+  text-shadow: 0px 5px 3px #00000070;
+}
+
 .team-carousel .item img {
   max-height: 200px;
   border-radius: 100%;
@@ -1739,10 +1743,13 @@ h4,
 .button-header {
   background: var(--accent-color);
   color: #fff;
-  border-color: var(--accent-color);
+  border: none;
+  border-bottom: 5px solid var(--accent-color--darker);
 }
 
-.button-header:hover {
+.button-header:hover, 
+.button-header:focus, 
+.button-header:active {
   background: var(--accent-color--darker);
   color: #fff;
 }
