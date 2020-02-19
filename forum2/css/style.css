@@ -1662,6 +1662,19 @@ h4,
   z-index: 1;
 }
 
+.team-carousel .item img{
+  max-height: 200px;
+  border-radius: 100%;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots{
+  margin-top: 25px;
+}
+.owl-carousel .owl-stage{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .button {
   font-family: "Oswald", sans-serif;
   display: inline-block;
@@ -1810,19 +1823,6 @@ h4,
   color: var(--main-color);
 }
 
-.instafeed {
-  margin: -5px;
-}
-
-.instafeed li {
-  overflow: hidden;
-  width: 25%;
-  margin-bottom: 0 !important;
-}
-
-.instafeed li img {
-  margin: 5px;
-}
 
 .footer-social {
   text-align: right;
