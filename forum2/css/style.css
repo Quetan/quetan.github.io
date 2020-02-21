@@ -1242,7 +1242,7 @@ h4,
 .for-text-icon {
   position: relative;
   font-size: 3rem;
-  color: var(--main-color--gradient);
+  color: var(--main-color--opacity);
   text-shadow: 1px 3px 2px #00000073;
   transition: color 0.3s ease;
 }
