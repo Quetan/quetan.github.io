@@ -1219,19 +1219,6 @@ h4,
   font-size: 1.9rem;
 }
 
-.for-item {
-  border-radius: 15px;
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-direction: row;
-}
-
 @media (max-width: 450px) {
   .for-item {
     -webkit-box-orient: vertical;
@@ -1244,20 +1231,55 @@ h4,
   }
 }
 
-.for-item:hover {
-  -webkit-transform: translateX(10px);
-  transform: translateX(10px);
-}
-
 .for-text {
   font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-weight: 800;
+  text-shadow: 3px 4px 4px #000;
+  transition: transform 0.3s ease;
 }
 
 .for-text-icon {
-  font-size: 2rem;
-  color: #242424;
+  position: relative;
+  font-size: 3rem;
+  color: var(--main-color--gradient);
+  text-shadow: 1px 3px 2px #00000073;
+  transition: color 0.3s ease;
 }
+
+.for-text-icon::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  width: 7rem;
+  height: 7rem;
+  transform: translate(-50%, -50%);
+  background-color: #fffffff3;
+  border: 5px solid #00000015;
+  border-radius: 100%;
+  z-index: -1;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 5px 3px #00000036;
+}
+
+.for-item:hover .for-text-icon::after{
+  background-color: var(--accent-color);
+  transform-origin: center;
+  transform: scale(1.1) translate(-45%, -45%);
+}
+.for-item:hover .for-text-icon{
+  color: #fafafa;
+}
+
+.for-item:hover .for-text{
+  transform: translateY(-2px);
+}
+
+
 
 .speaker-bg {
   background: url(../img/home/speakers-bg.jpg) left center no-repeat;
