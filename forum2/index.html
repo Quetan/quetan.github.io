@@ -47,11 +47,25 @@
               id="navbarSupportedContent"
             >
               <ul class="nav navbar-nav menu_nav justify-content-end">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#about-section">О форуме</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#for-section">Для кого</a>
+                <li class="nav-item submenu dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    О форуме
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about-section">О форуме</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#for-section">Для кого</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#reg-section">Участие</a>
@@ -66,33 +80,11 @@
                   <a class="nav-link" href="#speakers-section">Спикеры</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#partners-section">Партнеры</a>
+                  <a class="nav-link" href="#partners-section">Партнёры</a>
                 </li>
-                <!-- <li class="nav-item submenu dropdown">
-                  <a
-                    href="#"
-                    class="nav-link dropdown-toggle"
-                    data-toggle="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Дропдаун</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Партнеры</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Регистрация</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Команда</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">RU / ENG</a>
-                    </li>
-                  </ul>
-                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="#team-section">Команда</a>
+                </li>
               </ul>
 
               <ul class="nav-right text-center text-lg-right py-4 py-lg-0">
@@ -241,7 +233,7 @@
               <div class="col-md-12 for-item py-3 px-3 px-md-5 bg-gray mb-3 shadow">
                 <i class="fas fa-user-graduate for-text-icon mr-3"></i>
                 <h3 class="for-text">
-                  Ученые и специалисты в области образования
+                  Учёные и специалисты в области образования
                 </h3>
               </div>
               <div class="col-md-12 for-item py-3 px-3 px-md-5 bg-gray mb-3 shadow">
@@ -250,7 +242,7 @@
               </div>
               <div class="col-md-12 for-item py-3 px-3 px-md-5 bg-gray mb-3 shadow">
                 <i class="fas fa-user-friends for-text-icon mr-3"></i>
-                <h3 class="for-text">Молодежь</h3>
+                <h3 class="for-text">Молодёжь</h3>
               </div>
             </div>
           </div>
@@ -271,7 +263,7 @@
 
           <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
             <div class="p-3 box-with-humber">
-              <div class="number-behind">01.</div>
+              <div class="number-behind"><i class="fas fa-user-plus"></i></div>
 
               <h2 class="feature-header">Регистрация</h2>
               <p>
@@ -282,7 +274,7 @@
 
           <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
             <div class="p-3 box-with-humber">
-              <div class="number-behind">02.</div>
+              <div class="number-behind"><i class="far fa-envelope-open"></i></div>
               <h2 class="feature-header">Отправка тезисов</h2>
               <p>
                 Отправка тезисов в соответствии с официальными требованиями
@@ -293,13 +285,19 @@
 
           <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
             <div class="p-3 box-with-humber">
-              <div class="number-behind">03.</div>
+              <div class="number-behind"><i class="far fa-thumbs-up"></i></div>
               <h2 class="feature-header">Участие в форуме</h2>
               <p>
                 Бесплатное участие в форуме будет проходит с <b>24.09.20</b> по
                 <b>26.09.20</b>
               </p>
             </div>
+          </div>
+
+          <div class="col-12 d-flex justify-content-center align-items-center mt-0 mt-md-5">
+            <a class="button button-header" href="http://konf.asu.ru/">
+              Зарегистрироваться
+            </a>
           </div>
         </div>
       </div>
@@ -1327,7 +1325,7 @@
                   <ul>
                     <li><a href="#program-section">Программа</a></li>
                     <li><a href="#speakers-section">Спикеры</a></li>
-                    <li><a href="#partners-section">Партнеры</a></li>
+                    <li><a href="#partners-section">Партнёры</a></li>
                     <li><a href="#team-section">Команда</a></li>
                   </ul>
                 </div>

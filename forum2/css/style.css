@@ -1038,10 +1038,6 @@ h4,
     0 17.7px 14.2px rgba(0, 0, 0, 0.039), 0 25.1px 20.1px rgba(0, 0, 0, 0.043),
     0 36.5px 29.2px rgba(0, 0, 0, 0.048), 0 56.3px 45px rgba(0, 0, 0, 0.055),
     0 100px 80px rgba(0, 0, 0, 0.07);
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 
 @media (max-width: 600px) {
@@ -1056,10 +1052,6 @@ h4,
   }
 }
 
-.headteacher-img img:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
 .headteacher-text {
   border: 6px solid rgba(0, 0, 0, 0.035);
   box-shadow: 0 1.6px 1.2px rgba(0, 0, 0, 0.015),
@@ -1209,7 +1201,7 @@ h4,
   font-size: 8rem;
   position: absolute;
   z-index: -1;
-  top: -6rem;
+  top: -7rem;
   left: -1.5rem;
   font-weight: 900;
   color: var(--main-color);
@@ -1752,10 +1744,11 @@ h4,
 .button-header:active {
   background: var(--accent-color--darker);
   color: #fff;
+  transform: scaleX(1.03) translateY(5px);
 }
 
 .footer-area {
-  background: #111429;
+  background: #080808;
   padding-top: 60px;
 }
 
