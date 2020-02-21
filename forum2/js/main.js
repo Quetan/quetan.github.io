@@ -96,6 +96,9 @@ $(function() {
   
 });
 
+//WOW animations
+new WOW({offset:20}).init();
+
 //Active links
 const clean_active_classes = items => {
   items.forEach(item => {
