@@ -375,7 +375,7 @@ h4,
 
 .header_area .navbar .nav .nav-item:hover .nav-link,
 .header_area .navbar .nav .nav-item.active .nav-link {
-  color: var(--accent-color);
+  color: var(--main-color);
   opacity: 1;
 }
 
@@ -647,7 +647,7 @@ h4,
     display: block;
     width: 25px;
     height: 3px;
-    background: var(--accent-color);
+    background: var(--main-color);
     margin: auto;
     margin-bottom: 4px;
     -webkit-transition: all 400ms linear;
