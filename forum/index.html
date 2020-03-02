@@ -18,29 +18,21 @@
     <link rel="stylesheet" href="./vendors/owl-carousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="./css/magnific-popup.css" />
     <link rel="stylesheet" href="./vendors/flat-icon/font/flaticon.css" />
-    <link rel="stylesheet" href="./css/video.css" />
-    <link rel="stylesheet" href="./css/preloader.css" />
-    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./vendors/animate/fadeInAnimate.css" />
+    <link
+      rel="prefetch prerender"
+      href="./img/home/feature-icon-active-bg.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-
-    <!--================ Preloader start =================-->
-    <div id="loader-wrapper">
-      <div id="loader"></div>
-      <div class="loader-section section-left"></div>
-      <div class="loader-section section-right"></div>
-    </div>
-
-    <!--================ Preloader end =================-->
-
-
     <!--================ Header Menu Area start =================-->
     <header class="header_area">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
             <a class="navbar-brand logo_h" href="./index.html"
-              ><img src="./img/logo-min.png" alt="Логотип Алтай-Азия 2020"
+              ><img src="./img/logo.png" alt="Логотип Алтай-Азия 2020"
             /></a>
             <button
               class="navbar-toggler"
@@ -61,11 +53,25 @@
               id="navbarSupportedContent"
             >
               <ul class="nav navbar-nav menu_nav justify-content-end">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#about-section">О форуме</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#for-section">Для кого</a>
+                <li class="nav-item submenu dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    О форуме
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about-section">О форуме</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#for-section">Для кого</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#reg-section">Участие</a>
@@ -80,33 +86,11 @@
                   <a class="nav-link" href="#speakers-section">Спикеры</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#partners-section">Партнеры</a>
+                  <a class="nav-link" href="#partners-section">Партнёры</a>
                 </li>
-                <!-- <li class="nav-item submenu dropdown">
-                  <a
-                    href="#"
-                    class="nav-link dropdown-toggle"
-                    data-toggle="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Дропдаун</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Партнеры</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Регистрация</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Команда</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">RU / ENG</a>
-                    </li>
-                  </ul>
-                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="#team-section">Команда</a>
+                </li>
               </ul>
 
               <ul class="nav-right text-center text-lg-right py-4 py-lg-0">
@@ -121,23 +105,29 @@
 
     <!--================Hero Banner Area Start =================-->
     <section class="hero-banner">
-      <div class="hero-banner-text container text-center">
-        <div class="hero-logo d-flex justify-content-center align-items-center mb-3">
-          <img src="./img/logo-min.png" alt="" class="logo" />
+      <div class="container px-3 px-lg-5">
+        <div class="row">
+          <div class="col-lg-6 col-12 text-center text-lg-left hero-banner-text">
+            <!-- <div
+                class="hero-logo d-flex justify-content-center align-items-center mb-3"
+              >
+                <img src="./img/logo.png" alt="" class="logo" />
+              </div> -->
+            <p class="hero-date mb-3">24-26 сентября 2020</p>
+            <h1 class="mb-3">
+              IV Международный образовательный форум
+              <wbr /> «Алтай&nbsp;-&nbsp;Азия&nbsp;2020»
+            </h1>
+            <h2 class="mb-5">
+              Евразийское образовательное пространство – новые вызовы и лучшие
+              практики»
+            </h2>
+            <a class="button button-header" href="http://konf.asu.ru/"
+              >Регистрация <i class="ml-3 fas fa-long-arrow-alt-right"></i> </a
+            >
+          </div>
         </div>
-        <p><small>24-26 сентября 2020</small></p>
-        <h1 class="mb-2 px-3">
-          IV Международный образовательный форум «Алтай-Азия 2020»:
-        </h1>
-        <h2 class="mb-5">
-          Евразийское образовательное пространство – новые вызовы и лучшие
-          практики»
-        </h2>
-        <a class="button button-header" href="http://konf.asu.ru/"
-          >Регистрация</a
-        >
       </div>
-      <div class="hero-banner-overlay"></div>
     </section>
     <!--================Hero Banner Area End =================-->
 
@@ -146,37 +136,24 @@
       <div class="container">
         <div class="row px-3">
           <div
-            class="col-lg-6 headteacher-img d-flex justify-content-center align-items-center flex-column p-4 p-md-5"
+            class="col-md-4 d-flex headteacher-img px-3 justify-content-center align-items-center flex-column"
           >
-            <img class="mb-3" src="./img/home/headteacher-min.jpg" alt="Бочаров" />
-          </div>
-          <div class="col-lg-6 headteacher-text p-5">
-            <div class="section-intro text-center mb-3">
-              <p class="section-intro__title">Дорогие друзья!</p>
-              <h3 class="primary-text px-md-5">
-                Приветствую Вас на площадке Форума «Алтай-Азия 2020»
-              </h3>
+          <div class="headteacher-img-cell p-3 mt-5 shadow d-flex flex-wrap justify-content-center align-items-end">
+            <div class="headteacher-img-cell--img shadow"></div>
+            <div class="headteacher-img-cell--text">
+            <h2>БОЧАРОВ <br> Сергей Николаевич</h2>
+              <p>ректор АлтГУ, профессор, доктор экономических наук</p>
             </div>
+          </div>
+          <!--  -->
+            <!-- <img class="mb-3" src="./img/home/headteacher.jpg" alt="Бочаров" /> -->
+          </div>
+          <div class="col-md-8 headteacher-text p-3 p-md-5">
             <p class="text-left">
-              Форум предполагает обсуждение вопросов гармонизация
-              образовательных систем России, стран Центральной Азии и Китая в
-              контексте реализации федерального проекта «Экспорт образования»
-              Национального проекта «Образование». В центре внимания Форума
-              будут вопросы формирования эффективной модели экспорта российского
-              образования, поддержки и продвижения российского образования на
-              евразийском образовательном пространстве, привлечения в
-              национальные университеты талантливых иностранных абитуриентов,
-              обеспечения конкурентоспособности национальных университетов и их
-              позиционирования на мировом и евразийском образовательном рынке,
-              кооперации вузов России и сопредельных государств Азии по развитию
-              экспорта образования, формирования среды, обеспечивающей
-              эффективное обучение и гармоничное развитие иностранных студентов
-              и слушателей.
+              ДОРОГИЕ ДРУЗЬЯ! <br>
+              Приветствую Вас на площадке Форума «Алтай-Азия 2020» <br>
+              Форум предполагает обсуждение вопросов гармонизация образовательных систем России, стран Центральной Азии и Китая в контексте реализации федерального проекта «Экспорт образования» Национального проекта «Образование». В центре внимания Форума будут вопросы формирования эффективной модели экспорта российского образования, поддержки и продвижения российского образования на евразийском образовательном пространстве, привлечения в национальные университеты талантливых иностранных абитуриентов, обеспечения конкурентоспособности национальных университетов и их позиционирования на мировом и евразийском образовательном рынке, кооперации вузов России и сопредельных государств Азии по развитию экспорта образования, формирования среды, обеспечивающей эффективное обучение и гармоничное развитие иностранных студентов и слушателей.
             </p>
-            <h6 class="text-right">
-              Бочаров Сергей Николаевич, ректор АлтГУ, профессор, доктор
-              экономических наук
-            </h6>
           </div>
         </div>
       </div>
@@ -186,9 +163,10 @@
     <!--================ About section Start =================-->
     <section class="section-padding">
       <div class="container">
-        <div class="section-intro text-center bottom-padding">
+        <div class="section-intro text-center pb-5 wow fadeInDown">
           <p class="section-intro__title">Что вы увидите</p>
           <h2 class="primary-text">Как это будет</h2>
+          <div class="divider div-transparent div-dot"></div>
         </div>
 
         <div class="row d-flex justify-content-center">
@@ -231,35 +209,60 @@
     </section>
 
     <!--================ For section Start =================-->
-    <section id="for-section" class="section-padding bg-gray about-bg">
+    <section id="for-section" class="p-5 about-bg section-overlay">
       <div class="container">
-        <div class="section-intro text-center pb-5">
-          <h2 class="text-white">Кому будет интересен наш форум?</h2>
+        <div
+          class="section-intro section-intro-white text-center pb-5 wow fadeInDown"
+        >
+          <h2>Кому будет интересен наш форум?</h2>
+          <div class="divider div-transparent-white div-dot"></div>
         </div>
         <div class="row">
-          <div class="offset-md-2 col-md-8 offset-1 col-10">
+          <div class="col-12">
             <div class="row">
-              <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
-                <i class="fas fa-user-tie for-text-icon mr-3"></i>
-                <h3 class="for-text">Государство и бизнес</h3>
-              </div>
-              <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
-                <i class="fas fa-user for-text-icon mr-3"></i>
-                <h3 class="for-text">Представители иностранных организаций</h3>
-              </div>
-              <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
-                <i class="fas fa-user-graduate for-text-icon mr-3"></i>
-                <h3 class="for-text">
-                  Ученые и специалисты в области образования
+              <div
+                class="col-sm-6 offset-md-1 col-md-2 for-item py-3 px-2 mb-3 d-flex flex-column justify-content-start align-items-center wow fadeInDown"
+                data-wow-duration="0s"
+              >
+                <i class="fas fa-user-tie for-text-icon m-0 p-4"></i>
+                <h3 class="for-text mt-4 text-white text-center">
+                  Государство и бизнес
                 </h3>
               </div>
-              <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
-                <i class="fas fa-user-edit for-text-icon mr-3"></i>
-                <h3 class="for-text">Эксперты</h3>
+              <div
+                class="col-sm-6 col-md-2 for-item py-3 px-2 mb-3 d-flex flex-column justify-content-start align-items-center wow fadeInDown"
+                data-wow-duration="0.7s"
+              >
+                <i class="fas fa-user for-text-icon m-0 p-4"></i>
+                <h3 class="for-text mt-4 text-white text-center">
+                  Представители иностранных организаций
+                </h3>
               </div>
-              <div class="col-md-12 for-item py-3 px-5 bg-gray mb-3 shadow">
-                <i class="fas fa-user-friends for-text-icon mr-3"></i>
-                <h3 class="for-text">Молодежь</h3>
+              <div
+                class="col-sm-6 col-md-2 for-item py-3 px-2 mb-3 d-flex flex-column justify-content-start align-items-center wow fadeInDown"
+                data-wow-duration="1.4s"
+              >
+                <i class="fas fa-user-graduate for-text-icon m-0 p-4"></i>
+                <h3 class="for-text mt-4 text-white text-center">
+                  Учёные и специалисты в области образования
+                </h3>
+              </div>
+              <div
+                class="col-sm-6 col-md-2 for-item py-3 px-2 mb-3 d-flex flex-column justify-content-start align-items-center wow fadeInDown"
+                data-wow-duration="2.1s"
+              >
+                <i
+                  style="padding-left: calc(1.5rem + 8px) !important;"
+                  class="fas fa-user-edit for-text-icon m-0 p-4"
+                ></i>
+                <h3 class="for-text mt-4 text-white text-center">Эксперты</h3>
+              </div>
+              <div
+                class="col-sm-6 col-md-2 for-item py-3 px-2 mb-3 d-flex flex-column justify-content-start align-items-center wow fadeInDown"
+                data-wow-duration="2.8s"
+              >
+                <i class="fas fa-user-friends for-text-icon m-0 p-4 text"></i>
+                <h3 class="for-text mt-4 text-white text-center">Молодёжь</h3>
               </div>
             </div>
           </div>
@@ -272,14 +275,17 @@
       <div class="container">
         <div class="row mt-5 d-flex justify-content-center">
           <div class="col-md-12">
-            <div class="section-intro text-center bottom-padding">
+            <div
+              class="section-intro text-center bottom-padding wow fadeInDown"
+            >
               <h2 class="primary-text">Условия участия</h2>
+              <div class="divider div-transparent div-dot"></div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
             <div class="p-3 box-with-humber">
-              <div class="number-behind">01.</div>
+              <div class="number-behind"><i class="fas fa-user-plus"></i></div>
 
               <h2 class="feature-header">Регистрация</h2>
               <p>
@@ -290,7 +296,9 @@
 
           <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
             <div class="p-3 box-with-humber">
-              <div class="number-behind">02.</div>
+              <div class="number-behind">
+                <i class="far fa-envelope-open"></i>
+              </div>
               <h2 class="feature-header">Отправка тезисов</h2>
               <p>
                 Отправка тезисов в соответствии с официальными требованиями
@@ -301,13 +309,21 @@
 
           <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
             <div class="p-3 box-with-humber">
-              <div class="number-behind">03.</div>
+              <div class="number-behind"><i class="far fa-thumbs-up"></i></div>
               <h2 class="feature-header">Участие в форуме</h2>
               <p>
                 Бесплатное участие в форуме будет проходит с <b>24.09.20</b> по
                 <b>26.09.20</b>
               </p>
             </div>
+          </div>
+
+          <div
+            class="col-12 d-flex justify-content-center align-items-center mt-0 mt-md-5"
+          >
+            <a class="button button-header" href="http://konf.asu.ru/">
+              Зарегистрироваться
+            </a>
           </div>
         </div>
       </div>
@@ -317,24 +333,26 @@
     <!--================ Gallery section Start =================-->
     <section
       id="history-section"
-      class="section-padding gallery-area gallery-bg"
+      class="section-padding gallery-area gallery-bg section-overlay"
     >
       <div class="container gallery-container">
         <div
-          class="section-intro section-intro-white text-center bottom-padding"
+          class="section-intro section-intro-white text-center bottom-padding wow fadeInDown"
         >
-          <!-- <p class="section-intro__title">Как это было</p> -->
           <h2 class="primary-text">Как это было</h2>
+          <div class="divider div-transparent-white div-dot"></div>
         </div>
 
         <div class="row no-gutters">
           <div class="col-sm-12 col-lg-4 d-flex flex-column mb-3 p-1">
             <div class="row">
               <div class="col-12">
-                <h2 class="text-center text-white mb-3">«Алтай-Азия 2014»</h2>
+                <h2 class="text-center text-white gallery-header mb-3">
+                  «Алтай-Азия 2014»
+                </h2>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g1-2014-min.jpg" class="img-gal">
+                <a href="./img/gallery/g1-2014.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g1-2014.jpg);"
@@ -350,7 +368,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g2-2014-min.jpg" class="img-gal">
+                <a href="./img/gallery/g2-2014.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g2-2014.jpg);"
@@ -366,7 +384,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g3-2014-min.jpg" class="img-gal">
+                <a href="./img/gallery/g3-2014.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g3-2014.jpg);"
@@ -394,10 +412,12 @@
           <div class="col-sm-12 col-lg-4 d-flex flex-column mb-3 p-1">
             <div class="row">
               <div class="col-12">
-                <h2 class="text-center text-white mb-3">«Алтай-Азия 2016»</h2>
+                <h2 class="text-center text-white gallery-header mb-3">
+                  «Алтай-Азия 2016»
+                </h2>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g1-2016-min.jpg" class="img-gal">
+                <a href="./img/gallery/g1-2016.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g1-2016.jpg);"
@@ -413,7 +433,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g2-2016-min.jpg" class="img-gal">
+                <a href="./img/gallery/g2-2016.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g2-2016.jpg);"
@@ -429,7 +449,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g3-2016-min.jpg" class="img-gal">
+                <a href="./img/gallery/g3-2016.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g3-2016.jpg);"
@@ -457,10 +477,12 @@
           <div class="col-sm-12 col-lg-4 d-flex flex-column mb-3 p-1">
             <div class="row">
               <div class="col-12">
-                <h2 class="text-center text-white mb-3">«Алтай-Азия 2018»</h2>
+                <h2 class="text-center text-white gallery-header mb-3">
+                  «Алтай-Азия 2018»
+                </h2>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g1-2018-min.jpg" class="img-gal">
+                <a href="./img/gallery/g1-2018.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g1-2018.jpg);"
@@ -476,7 +498,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g2-2018-min.jpg" class="img-gal">
+                <a href="./img/gallery/g2-2018.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g2-2018.jpg);"
@@ -492,7 +514,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g3-2018-min.jpg" class="img-gal">
+                <a href="./img/gallery/g3-2018.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g3-2018.jpg);"
@@ -518,27 +540,6 @@
             </div>
           </div>
         </div>
-        <div class="row mt-5">
-          <div
-            class="col-md-12 px-5 d-flex justify-conten-center align-items-center"
-          >
-            <div class="videoWrapper videoWrapper169 js-videoWrapper">
-              <iframe
-                class="videoIframe js-videoIframe"
-                src="https://www.youtube.com/embed/FZ94K6IPRdU?autoplay=0&modestbranding=1&rel=0&hl=ru"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <button
-                class="videoPoster js-videoPoster"
-                style="background-image:url(./img/home/video-bg-min.jpg);"
-              >
-                Смотреть видео
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
     <!--================ Gallery section End =================-->
@@ -546,35 +547,36 @@
     <!--================ Schedule section Start =================-->
     <section id="program-section" class="section-margin mb-5 pb-5">
       <div class="container">
-        <div class="section-intro text-center bottom-padding">
+        <div class="section-intro text-center bottom-padding wow fadeInDown">
           <p class="section-intro__title">Присоединяйтесь к нам</p>
-          <h2 class="primary-text">Программа форума</h2>
+          <h2 class="primary-text">Архитектура форума</h2>
+          <div class="divider div-transparent div-dot"></div>
         </div>
 
         <div class="row">
           <div class="col-xl-10 offset-xl-1">
             <div class="scheduleTab">
               <ul class="nav nav-tabs">
-                <li class="nav-item text-center">
-                  <a data-toggle="tab" href="#track1">
+                <li class="nav-item mr-md-2 text-center">
+                  <a data-toggle="tab" href="#track1" class="shadow">
                     <h4>Трек 1</h4>
                     <p>23 сент, 2020</p>
                   </a>
                 </li>
-                <li class="nav-item text-center">
-                  <a class="active" data-toggle="tab" href="#track2">
+                <li class="nav-item mr-md-2 text-center">
+                  <a data-toggle="tab" href="#track2" class="shadow active">
                     <h4>Трек 2</h4>
                     <p>24 сент, 2020</p>
                   </a>
                 </li>
-                <li class="nav-item text-center">
-                  <a data-toggle="tab" href="#track3">
+                <li class="nav-item mr-md-2 text-center">
+                  <a data-toggle="tab" href="#track3" class="shadow">
                     <h4>Трек 3</h4>
                     <p>25 сент, 2020</p>
                   </a>
                 </li>
                 <li class="nav-item text-center">
-                  <a data-toggle="tab" href="#track4">
+                  <a data-toggle="tab" href="#track4" class="shadow">
                     <h4>Трек 4</h4>
                     <p>26 сент, 2020</p>
                   </a>
@@ -600,7 +602,7 @@
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <p>
                             Целевые модели экспорта образования в рамках
                             евразийского образовательного пространства.
@@ -627,12 +629,12 @@
                     <div class="row no-gutters shadow">
                       <div class="col-md-3">
                         <div class="card-identity">
-                          <h3>Вопросы для обсуждения</h3>
+                          <h3>Директ</h3>
                           <i class="fas fa-question-circle"></i>
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <ul>
                             <li>
                               Механизмы и инструментарий привлечения иностранных
@@ -674,7 +676,7 @@
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <ul>
                             <li>
                               Фокус-сессия «Управление талантами: формирование
@@ -710,7 +712,7 @@
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <p>
                             Трек посвящен анализу проблем развития национальных
                             университетов, исследованию механизмов обеспечения
@@ -739,12 +741,12 @@
                     <div class="row no-gutters shadow">
                       <div class="col-md-3">
                         <div class="card-identity">
-                          <h3>Вопросы для обсуждения</h3>
+                          <h3>Директ</h3>
                           <i class="fas fa-question-circle"></i>
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <ul>
                             <li>
                               Образовательная среда современного университета.
@@ -793,7 +795,7 @@
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <ul>
                             <li class="mb-3">
                               Заседание Ассоциации Азиатских университетов
@@ -828,7 +830,7 @@
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <p>
                             Внедрение единых подходов подготовки
                             профессиональных кадров на мировом рынке, развитие
@@ -854,12 +856,12 @@
                     <div class="row no-gutters shadow">
                       <div class="col-md-3">
                         <div class="card-identity">
-                          <h3>Вопросы для обсуждения</h3>
+                          <h3>Директ</h3>
                           <i class="fas fa-question-circle"></i>
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <ul>
                             <li>
                               Формирование продуктивного цифрового
@@ -903,7 +905,7 @@
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <ul>
                             <li class="mb-3">
                               Фокус-сессия «Цифровые компетенции современного
@@ -944,7 +946,7 @@
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <p>
                             Произошедшая эволюция системы международных
                             отношений на региональном и глобальном уровнях
@@ -971,12 +973,12 @@
                     <div class="row no-gutters shadow">
                       <div class="col-md-3">
                         <div class="card-identity">
-                          <h3>Вопросы для обсуждения</h3>
+                          <h3>Директ</h3>
                           <i class="fas fa-question-circle"></i>
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <ul>
                             <li>
                               Глобальные процессы интернационализации и
@@ -1017,7 +1019,7 @@
                         </div>
                       </div>
                       <div class="col-md-9 align-self-center">
-                        <div class="schedule-content px-5 py-4">
+                        <div class="schedule-content px-4 px-md-5 py-4">
                           <ul>
                             <li>
                               Фокус-сессия по мультикультуре, Алтаистике или
@@ -1042,13 +1044,17 @@
     <!--================ Schedule section End =================-->
 
     <!--================ Speaker section Start =================-->
-    <section id="speakers-section" class="speaker-bg section-padding">
+    <section
+      id="speakers-section"
+      class="speaker-bg section-overlay section-padding"
+    >
       <div class="container">
         <div
-          class="section-intro section-intro-white text-center bottom-padding"
+          class="section-intro section-intro-white text-center bottom-padding wow fadeInDown"
         >
           <p class="section-intro__title">Участники мероприятия</p>
           <h2 class="primary-text">Спикеры</h2>
+          <div class="divider div-transparent-white div-dot"></div>
         </div>
 
         <div class="row">
@@ -1056,7 +1062,7 @@
             <div class="card-speaker">
               <img
                 class="card-img rounded-0"
-                src="./img/home/speaker-1.jpg"
+                src="./img/home/speaker-1.png"
                 alt=""
               />
               <div class="speaker-footer">
@@ -1085,7 +1091,7 @@
             <div class="card-speaker">
               <img
                 class="card-img rounded-0"
-                src="./img/home/speaker-2.jpg"
+                src="./img/home/speaker-2.png"
                 alt=""
               />
               <div class="speaker-footer">
@@ -1114,7 +1120,7 @@
             <div class="card-speaker">
               <img
                 class="card-img rounded-0"
-                src="./img/home/speaker-3.jpg"
+                src="./img/home/speaker-3.png"
                 alt=""
               />
               <div class="speaker-footer">
@@ -1146,7 +1152,7 @@
             <div class="card-speaker">
               <img
                 class="card-img rounded-0"
-                src="./img/home/speaker-1.jpg"
+                src="./img/home/speaker-1.png"
                 alt=""
               />
               <div class="speaker-footer">
@@ -1175,7 +1181,7 @@
             <div class="card-speaker">
               <img
                 class="card-img rounded-0"
-                src="./img/home/speaker-2.jpg"
+                src="./img/home/speaker-2.png"
                 alt=""
               />
               <div class="speaker-footer">
@@ -1204,7 +1210,7 @@
             <div class="card-speaker">
               <img
                 class="card-img rounded-0"
-                src="./img/home/speaker-3.jpg"
+                src="./img/home/speaker-3.png"
                 alt=""
               />
               <div class="speaker-footer">
@@ -1237,12 +1243,14 @@
     <!--================ Sponsor section Start =================-->
     <section id="partners-section" class="section-padding--small sponsor-bg">
       <div class="container">
-        <div class="section-intro text-center pb-80px">
+        <div class="section-intro text-center pb-80px wow fadeInDown">
           <p class="section-intro__title">Будь с нами!</p>
           <h2 class="primary-text">Партнеры</h2>
+          <div class="divider div-transparent div-dot"></div>
         </div>
 
         <div class="sponsor-wrapper mb-5 pb-4">
+          <h3 class="sponsor-title mb-5">Генеральные партнеры</h3>
           <div class="row d-flex justify-content-center align-items-center">
             <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
               <div class="sponsor-single">
@@ -1263,9 +1271,85 @@
             </div>
           </div>
         </div>
+        <div class="sponsor-wrapper sponsor-wrapper--small">
+          <h3 class="sponsor-title mb-5">Информационные партнеры</h3>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+              <div class="sponsor-single">
+                <img class="img-fluid" src="img/home/sponsor1.png" alt="" />
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+              <div class="sponsor-single">
+                <img class="img-fluid" src="img/home/sponsor2.png" alt="" />
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+              <div class="sponsor-single">
+                <img class="img-fluid" src="img/home/sponsor3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!--================ Sponsor section End =================-->
+
+    <!--================ Team section Start =================-->
+    <section id="team-section" class="team-bg section-padding">
+      <div class="container">
+        <div class="section-intro text-center pb-5 wow fadeInDown">
+          <p class="section-intro__title">Организаторы мероприятия</p>
+          <h2 class="primary-text">Команда</h2>
+          <div class="divider div-transparent div-dot"></div>
+        </div>
+        <div class="row">
+          <div class="offset-1 col-10">
+            <div class="team-carousel owl-carousel owl-theme">
+              <div class="item">
+                <img src="./img/home/speaker-1.png" class="shadow" alt="" />
+              </div>
+              <div class="item">
+                <img src="./img/home/speaker-2.png" class="shadow" alt="" />
+              </div>
+              <div class="item">
+                <img src="./img/home/speaker-3.png" class="shadow" alt="" />
+              </div>
+              <div class="item">
+                <img src="./img/home/speaker-1.png" class="shadow" alt="" />
+              </div>
+              <div class="item">
+                <img src="./img/home/speaker-2.png" class="shadow" alt="" />
+              </div>
+              <div class="item">
+                <img src="./img/home/speaker-3.png" class="shadow" alt="" />
+              </div>
+              <div class="item">
+                <img src="./img/home/speaker-1.png" class="shadow" alt="" />
+              </div>
+              <div class="item">
+                <img src="./img/home/speaker-2.png" class="shadow" alt="" />
+              </div>
+              <div class="item">
+                <img src="./img/home/speaker-3.png" class="shadow" alt="" />
+              </div>
+              <div class="item">
+                <img src="./img/home/speaker-1.png" class="shadow" alt="" />
+              </div>
+              <div class="item">
+                <img src="./img/home/speaker-2.png" class="shadow" alt="" />
+              </div>
+              <div class="item">
+                <img src="./img/home/speaker-3.png" class="shadow" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Team section End =================-->
 
     <!-- ================ start footer Area ================= -->
     <footer class="footer-area">
@@ -1298,7 +1382,8 @@
                   <ul>
                     <li><a href="#program-section">Программа</a></li>
                     <li><a href="#speakers-section">Спикеры</a></li>
-                    <li><a href="#partners-section">Партнеры</a></li>
+                    <li><a href="#partners-section">Партнёры</a></li>
+                    <li><a href="#team-section">Команда</a></li>
                   </ul>
                 </div>
               </div>
@@ -1334,11 +1419,10 @@
 
     <script src="./vendors/jquery/jquery-3.2.1.min.js"></script>
     <script src="./vendors/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="./js/preloader.js"></script>
-    <!-- <script src="./vendors/owl-carousel/owl.carousel.min.js"></script> -->
+    <script src="./vendors/owl-carousel/owl.carousel.min.js"></script>
     <script src="./vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script>
     <script src="./js/jquery.magnific-popup.min.js"></script>
-    <script src="./js/video.js"></script>
+    <script src="./vendors/wow/wow.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
