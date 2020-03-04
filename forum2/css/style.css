@@ -2,17 +2,20 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic");
 
 :root {
-  --main-color: #383185;
+  --main-color: #20459f;
   --main-color--gradient: #393e41;
-  --main-color--opacity: #383185aa;
+  --main-color--opacity: #20459faa;
   --accent-color: #fae013;
   --accent-color--darker: #ccba35;
   --accent-color--opacity: #fae013aa;
+
+  --header-font: Verdana, Geneva, Tahoma, sans-serif;
+  --paragraph-font: "Roboto", sans-serif;
 }
 
 body {
   color: #797979;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--paragraph-font);
   font-size: 15px;
   font-weight: 400;
   line-height: 1.6;
@@ -43,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--header-font);
   color: #242424;
   line-height: 1.5;
 }
@@ -350,9 +353,9 @@ h4,
 
 .header_area .navbar .nav-right a {
   text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
+  font-family: var(--header-font);
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 900;
   color: var(--main-color);
 }
 
@@ -361,7 +364,7 @@ h4,
 }
 
 .header_area .navbar .nav .nav-item .nav-link {
-  font-family: "Roboto", sans-serif;
+  font-family: (var(--paragraph-font));
   color: #242424;
   text-transform: capitalize;
   font-weight: 400;
@@ -910,7 +913,7 @@ h4,
 }
 
 .hero-header-text h2 {
-  font-family: "Roboto", serif;
+  font-family: var(--paragraph-font);
 }
 
 .hero-header-text .hero-date{
@@ -1131,7 +1134,7 @@ h4,
 }
 
 .feature-header {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--paragraph-font);
   color: #242424;
 }
 
@@ -1142,7 +1145,7 @@ h4,
 }
 
 .feature-number {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--header-font);
   font-weight: 700;
 }
 
@@ -1220,7 +1223,7 @@ h4,
   font-weight: 900;
   color: var(--main-color);
   opacity: 0.5;
-  font-family: "Oswald", sans-serif;
+  font-family: var(--header-font);
   -webkit-transition: left 0.7s ease;
   transition: left 0.7s ease;
 }
@@ -1246,11 +1249,14 @@ h4,
 }
 
 .for-text {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--paragraph-font);
   font-size: 1rem;
   font-weight: 800;
   text-shadow: 3px 4px 4px #000;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .for-text-icon {
@@ -1258,6 +1264,7 @@ h4,
   font-size: 3rem;
   color: var(--main-color--opacity);
   text-shadow: 1px 3px 2px #00000073;
+  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -1271,26 +1278,31 @@ h4,
   right: 0;
   width: 7rem;
   height: 7rem;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: #fffffff3;
   border: 5px solid #00000015;
   border-radius: 100%;
   z-index: -1;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   box-shadow: inset 0 0 5px 3px #00000036;
 }
 
 .for-item:hover .for-text-icon::after{
   background-color: var(--accent-color);
-  transform-origin: center;
-  transform: scale(1.1) translate(-45%, -45%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(1.1) translate(-45%, -45%);
+          transform: scale(1.1) translate(-45%, -45%);
 }
 .for-item:hover .for-text-icon{
   color: #fafafa;
 }
 
 .for-item:hover .for-text{
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 
@@ -1536,7 +1548,7 @@ h4,
 }
 
 .schedule-card:hover .card-identity {
-  background: var(--accent-color);
+  background: var(--main-color--gradient);
 }
 
 .schedule-card:hover {
@@ -1730,7 +1742,7 @@ h4,
 }
 
 .button {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--header-font);
   display: inline-block;
   border: 1px solid transparent;
   font-size: 15px;
@@ -1774,6 +1786,8 @@ h4,
   /* border-bottom: 5px solid var(--accent-color--darker); */
   text-align: left;
   padding: 15px 35px;
+  font-weight: 900;
+  box-shadow: 2px 2px 6px 1px #00000020;
 }
 
 .button-header i{
@@ -1785,7 +1799,8 @@ h4,
 .button-header:active {
   background: var(--accent-color--darker);
   color: #173682;
-  transform:translateX(5px);
+  -webkit-transform:translateX(5px);
+          transform:translateX(5px);
 }
 
 .footer-area {
