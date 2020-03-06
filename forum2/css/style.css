@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&display=swap&subset=cyrillic");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic");
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap');
+
 
 :root {
   --main-color: #20459f;
@@ -10,8 +10,10 @@
   --accent-color--opacity: #fae013aa;
 
   --header-font: Verdana, Geneva, Tahoma, sans-serif;
-  --paragraph-font: "Roboto", sans-serif;
+  --paragraph-font: Verdana, Geneva, Tahoma, sans-serif;
+  --numbers-font: 'Kumar One Outline', cursive;
 }
+
 
 body {
   color: #797979;
@@ -215,7 +217,7 @@ h4,
   left: calc(50% - 9px);
   width: 18px;
   height: 18px;
-  background-color: var(--accent-color);
+  background-color: #9a0707;
   border: 1px solid rgb(48, 49, 51);
   border-radius: 50%;
   box-shadow: inset 0 0 0 2px white, 0 0 0 4px white;
@@ -1135,11 +1137,23 @@ h4,
 
 .card-feature {
   text-align: center;
+  cursor: pointer;
+}
+
+.card-feature:hover .feature-number{
+  /* color: #5973af; */
+  text-shadow: 2px 2px 2px #00000099;
 }
 
 .feature-header {
   font-family: var(--paragraph-font);
+  color: #545454;
+  margin: 0 !important;
+}
+
+.rules-header{
   color: #242424;
+  letter-spacing: -1.1px;
 }
 
 @media (min-width: 992px) {
@@ -1149,40 +1163,11 @@ h4,
 }
 
 .feature-number {
-  font-family: var(--header-font);
-  font-weight: 700;
-}
-
-.card-feature .feature-icon {
-  width: 120px;
-  height: auto;
-  line-height: 107px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  background: url(../img/home/feature-icon-bg.png) left center no-repeat;
-  background-size: cover;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  margin-bottom: 18px;
-}
-
-@media (min-width: 991px) {
-  .card-feature .feature-icon {
-    margin-bottom: 25px;
-  }
-}
-
-.card-feature .feature-icon i,
-.card-feature .feature-icon span {
-  font-size: 38px;
-  color: var(--main-color);
-  text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.29);
-}
-
-.card-feature .feature-icon [class^="flaticon-"]:before,
-.card-feature .feature-icon [class*=" flaticon-"]:before {
-  font-size: 38px;
+  font-family: var(--numbers-font);
+  font-weight: 900;
+  font-size: 5.5rem;
+  color: #9a0707;
+  transition: all 0.5s ease;
 }
 
 .card-feature h3 {
@@ -1198,16 +1183,6 @@ h4,
 
 .card-feature p {
   font-weight: 300;
-}
-
-.card-feature:hover .feature-icon {
-  background: url(../img/home/feature-icon-active-bg.png) left center no-repeat;
-  background-size: cover;
-}
-
-.card-feature:hover .feature-icon i,
-.card-feature:hover .feature-icon span {
-  color: #fff;
 }
 
 .box-with-humber {
@@ -1240,6 +1215,10 @@ h4,
   font-size: 1.9rem;
 }
 
+.numbers-section{
+  padding-bottom: 180px;
+}
+
 @media (max-width: 450px) {
   .for-item {
     -webkit-box-orient: vertical;
@@ -1250,6 +1229,10 @@ h4,
   .for-text-icon {
     margin-bottom: 10px;
   }
+}
+
+.for-item{
+  cursor: pointer;
 }
 
 .for-text {
@@ -1285,7 +1268,7 @@ h4,
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-color: #fffffff3;
-  /* border: 5px solid #00000015; */
+  border: 5px solid #00000015;
   border-radius: 100%;
   z-index: -1;
   -webkit-transition: all 0.3s ease;
@@ -1550,7 +1533,8 @@ h4,
 }
 
 .schedule-card:hover .card-identity {
-  background: var(--main-color--gradient);
+  background: #15388f;
+  color: #000000;
 }
 
 .schedule-card:hover {
