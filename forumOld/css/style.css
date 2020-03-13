@@ -1027,17 +1027,31 @@ h4,
   color: #fff;
 }
 
-.headteacher-img img {
-  width: auto;
-  max-height: 450px;
-  border-radius: 100%;
-  border: 6px solid rgba(0, 0, 0, 0.035);
-  box-shadow: 0 1.6px 1.2px rgba(0, 0, 0, 0.015),
-    0 3.4px 2.7px rgba(0, 0, 0, 0.022), 0 5.8px 4.6px rgba(0, 0, 0, 0.027),
-    0 8.7px 6.9px rgba(0, 0, 0, 0.031), 0 12.5px 10px rgba(0, 0, 0, 0.035),
-    0 17.7px 14.2px rgba(0, 0, 0, 0.039), 0 25.1px 20.1px rgba(0, 0, 0, 0.043),
-    0 36.5px 29.2px rgba(0, 0, 0, 0.048), 0 56.3px 45px rgba(0, 0, 0, 0.055),
-    0 100px 80px rgba(0, 0, 0, 0.07);
+.headteacher-img-cell {
+  background-color: #fff;
+}
+
+.headteacher-img-cell--img {
+  background-image: url(../img/home/headteacher.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 300px;
+  margin-top: -100px;
+  margin-right: -75px;
+}
+
+.headteacher-img-cell--text {
+  margin-top: 25px;
+}
+
+.headteacher-img-cell--text h2 {
+  color: var(--main-color);
+  font-size: 20px;
+}
+
+.headteacher-img-cell--text p {
+  color: #252525;
 }
 
 @media (max-width: 600px) {
@@ -1052,19 +1066,8 @@ h4,
   }
 }
 
-.headteacher-text {
-  border: 6px solid rgba(0, 0, 0, 0.035);
-  box-shadow: 0 1.6px 1.2px rgba(0, 0, 0, 0.015),
-    0 3.4px 2.7px rgba(0, 0, 0, 0.022), 0 5.8px 4.6px rgba(0, 0, 0, 0.027),
-    0 8.7px 6.9px rgba(0, 0, 0, 0.031), 0 12.5px 10px rgba(0, 0, 0, 0.035),
-    0 17.7px 14.2px rgba(0, 0, 0, 0.039), 0 25.1px 20.1px rgba(0, 0, 0, 0.043),
-    0 36.5px 29.2px rgba(0, 0, 0, 0.048), 0 56.3px 45px rgba(0, 0, 0, 0.055),
-    0 100px 80px rgba(0, 0, 0, 0.07);
-}
-
-.headteacher-text p {
-  font-size: 0.9em;
-  color: #242424;
+.headteacher-text{
+  line-height: 1.8;
 }
 
 .section-intro {
