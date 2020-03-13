@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap");
 
 :root {
   --main-color: #0168ff;
@@ -11,9 +10,8 @@
 
   --header-font: Verdana, Geneva, Tahoma, sans-serif;
   --paragraph-font: Verdana, Geneva, Tahoma, sans-serif;
-  --numbers-font: 'Kumar One Outline', cursive;
+  --numbers-font: "Kumar One Outline", cursive;
 }
-
 
 body {
   color: #797979;
@@ -245,7 +243,7 @@ h4,
   font-size: 2rem;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
   .tab-header h2 {
     font-size: 1.4rem;
   }
@@ -508,6 +506,8 @@ h4,
   transition: background 500ms ease, -webkit-transform 500ms ease;
   transition: transform 500ms ease, background 500ms ease;
   transition: transform 500ms ease, background 500ms ease, -webkit-transform 500ms ease;
+  transition: transform 500ms ease, background 500ms ease,
+    -webkit-transform 500ms ease;
   transition: transform 500ms ease, background 500ms ease,
     -webkit-transform 500ms ease;
   transition: transform 500ms ease, background 500ms ease,
@@ -1144,7 +1144,7 @@ h4,
   cursor: pointer;
 }
 
-.card-feature:hover .feature-number{
+.card-feature:hover .feature-number {
   /* color: #5973af; */
   text-shadow: 2px 2px 2px #00000099;
 }
@@ -1155,7 +1155,7 @@ h4,
   margin: 0 !important;
 }
 
-.rules-header{
+.rules-header {
   color: #242424;
   letter-spacing: -1.1px;
 }
@@ -1221,7 +1221,7 @@ h4,
   font-size: 1.9rem;
 }
 
-.numbers-section{
+.numbers-section {
   padding-bottom: 180px;
 }
 
@@ -1237,7 +1237,7 @@ h4,
   }
 }
 
-.for-item{
+.for-item {
   cursor: pointer;
 }
 
@@ -1450,7 +1450,6 @@ h4,
 .scheduleTab .nav-item a.active {
   background: var(--main-color);
   box-shadow: inset 0px 0px 9px 6px #0000003d !important;
-  
 }
 
 .scheduleTab .nav-item a.active > * {
