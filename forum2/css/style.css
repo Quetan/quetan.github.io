@@ -171,8 +171,7 @@ h4,
   height: 1px;
   background-image: -webkit-gradient(
     linear,
-    left top,
-    right top,
+    left top, right top,
     from(transparent),
     color-stop(rgb(48, 49, 51)),
     to(transparent)
@@ -195,8 +194,7 @@ h4,
   height: 1px;
   background-image: -webkit-gradient(
     linear,
-    left top,
-    right top,
+    left top, right top,
     from(transparent),
     color-stop(rgb(221, 223, 228)),
     to(transparent)
@@ -503,6 +501,7 @@ h4,
   -webkit-transition: background 500ms ease, -webkit-transform 500ms ease;
   transition: background 500ms ease, -webkit-transform 500ms ease;
   transition: transform 500ms ease, background 500ms ease;
+  transition: transform 500ms ease, background 500ms ease, -webkit-transform 500ms ease;
   transition: transform 500ms ease, background 500ms ease,
     -webkit-transform 500ms ease;
   transition: transform 500ms ease, background 500ms ease,
@@ -936,8 +935,7 @@ h4,
   ); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(
     linear,
-    left top,
-    left bottom,
+    left top, left bottom,
     from(var(--main-color)),
     to(var(--main-color--gradient))
   );
@@ -1168,6 +1166,7 @@ h4,
   font-size: 5.5rem;
   color: #e23030;
   text-shadow: -7px 11px 10px #00000070;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -1632,8 +1631,7 @@ h4,
   ); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(
     linear,
-    left top,
-    left bottom,
+    left top, left bottom,
     from(var(--main-color)),
     to(var(--main-color--gradient))
   );
