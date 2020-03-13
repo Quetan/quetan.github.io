@@ -245,6 +245,12 @@ h4,
   font-size: 2rem;
 }
 
+@media (max-width: 800px){
+  .tab-header h2 {
+    font-size: 1.4rem;
+  }
+}
+
 /* 
 .tab-header::after {
   content: "";
@@ -1410,16 +1416,6 @@ h4,
   }
 }
 
-.scheduleTab .nav-item {
-  margin-right: 10px;
-}
-
-@media (min-width: 992px) {
-  .scheduleTab .nav-item {
-    margin-right: 30px;
-  }
-}
-
 .scheduleTab .nav-item:last-child {
   margin-right: 0;
 }
@@ -1453,7 +1449,8 @@ h4,
 
 .scheduleTab .nav-item a.active {
   background: var(--main-color);
-  box-shadow: inset 0px 0px 8px 5px #0000003d !important;
+  box-shadow: inset 0px 0px 9px 6px #0000003d !important;
+  
 }
 
 .scheduleTab .nav-item a.active > * {
@@ -1610,8 +1607,10 @@ h4,
 }
 
 .gallery-bg {
-  background: url(../img/home/gallery-bg.jpg) left center no-repeat;
-  background-size: cover;
+  background: url(../img/home/gallery-bg.jpg);
+  background-repeat: repeat;
+  background-size: auto;
+  /* background-size: cover; */
   display: block;
   position: relative;
   z-index: 1;
@@ -1625,7 +1624,6 @@ h4,
   content: "";
   width: 100%;
   height: 100%;
-  /* background-color: var(--main-color); */
   background: var(
     --main-color
   ); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */

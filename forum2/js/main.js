@@ -62,6 +62,7 @@ $(function() {
   .not('[href="#track2"]')
   .not('[href="#track3"]')
   .not('[href="#track4"]')
+  .not('[href="#track5"]')
   .click(function(event) {
     // On-page links
     if (
