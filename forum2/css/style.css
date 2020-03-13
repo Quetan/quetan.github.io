@@ -2,7 +2,7 @@
 
 
 :root {
-  --main-color: #20459f;
+  --main-color: #0168ff;
   --main-color--gradient: #393e41;
   --main-color--opacity: #20459faa;
   --accent-color: #fae013;
@@ -310,7 +310,7 @@ h4,
 }
 
 .header_area .navbar-brand img {
-  max-height: 50px;
+  max-height: 70px;
   width: auto;
 }
 
@@ -1064,7 +1064,7 @@ h4,
 }
 
 .headteacher-img-cell--text h2 {
-  color: #20459f;
+  color: var(--main-color);
   font-size: 20px;
 }
 
@@ -1166,7 +1166,8 @@ h4,
   font-family: var(--numbers-font);
   font-weight: 900;
   font-size: 5.5rem;
-  color: #9a0707;
+  color: #e23030;
+  text-shadow: -7px 11px 10px #00000070;
   transition: all 0.5s ease;
 }
 
@@ -1201,7 +1202,7 @@ h4,
   left: -1.5rem;
   font-weight: 900;
   color: var(--main-color);
-  opacity: 0.5;
+  opacity: 0.75;
   font-family: var(--header-font);
   -webkit-transition: left 0.7s ease;
   transition: left 0.7s ease;
@@ -1770,7 +1771,7 @@ h4,
   background: var(--accent-color);
   color: #173682;
   border: none;
-  /* border-bottom: 5px solid var(--accent-color--darker); */
+  border-bottom: 5px solid var(--accent-color--darker);
   text-align: left;
   padding: 15px 35px;
   font-weight: 900;
