@@ -2,12 +2,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic");
 
 :root {
-  --main-color: #383185;
+  --main-color: #4c75d2;
   --main-color--gradient: #393e41;
-  --main-color--opacity: #383185aa;
-  --accent-color: #dc1f29;
-  --accent-color--darker: #c1151e;
-  --accent-color--opacity: #dc1f29aa;
+  --main-color--opacity: #4c75d2aa;
+  --accent-color: #f7b926;
+  --accent-color--darker: #FFA000;
+  --accent-color--opacity: #f7b926aa;
 }
 
 body {
