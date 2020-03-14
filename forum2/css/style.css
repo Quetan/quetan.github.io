@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&display=swap&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic");
 
 :root {
   --main-color: #0168ff;
   --main-color--gradient: #393e41;
   --main-color--opacity: #20459faa;
   --accent-color: #fae013;
-  --accent-color--darker: #ccba35;
+  --accent-color--darker: #fbc02d;
   --accent-color--opacity: #fae013aa;
 
-  --header-font: Verdana, Geneva, Tahoma, sans-serif;
-  --paragraph-font: Verdana, Geneva, Tahoma, sans-serif;
+  --header-font: "Oswald", sans-serif;
+  --paragraph-font: "Roboto", sans-serif;
   --numbers-font: "Kumar One Outline", cursive;
 }
 
@@ -1449,7 +1451,7 @@ h4,
 
 .scheduleTab .nav-item a.active {
   background: var(--main-color);
-  box-shadow: inset 0px 0px 9px 6px #0000003d !important;
+  box-shadow: inset 0px 0px 6px 4px #0000001f !important;
 }
 
 .scheduleTab .nav-item a.active > * {
