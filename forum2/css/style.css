@@ -930,7 +930,13 @@ h4,
 
 .hero-header-text .hero-date {
   color: #7e97d4;
-  font-size: 24px;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 800px){
+  .hero-header-text .hero-date {
+    font-size: 1.4rem;
+  } 
 }
 
 .hero-header-overlay::after {
@@ -1176,6 +1182,12 @@ h4,
   text-shadow: -7px 11px 10px #00000070;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+@media (max-width: 800px){
+  .feature-number {
+    font-size: 4rem;
+  }
 }
 
 .card-feature h3 {
