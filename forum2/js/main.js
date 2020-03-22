@@ -35,15 +35,15 @@ $(function () {
     margin: 25,
     center: true,
     autoplay: true,
-    autoplayTimeout: 1500,
+    autoplayTimeout: 3000,
     autoplayHoverPause: true,
     nav: false,
     responsive: {
       0: {
-        items: 2
+        items: 1
       },
       600: {
-        items: 4
+        items: 3
       },
       1000: {
         items: 5

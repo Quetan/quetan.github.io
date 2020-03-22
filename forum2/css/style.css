@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&display=swap&subset=cyrillic");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap");
+
 
 :root {
   --main-color: #0168ff;
@@ -875,8 +876,8 @@ h4,
   }
 }
 
-.hero-logo img {
-  max-height: 110px;
+.hero-logos img {
+  max-height: 60px;
   width: auto;
 }
 
@@ -931,6 +932,8 @@ h4,
 .hero-header-text .hero-date {
   color: #7e97d4;
   font-size: 1.8rem;
+  text-shadow: 0px 3px 4px #000000a6;
+
 }
 
 @media (max-width: 800px){
@@ -971,7 +974,7 @@ h4,
   min-height: calc(100vh - 90px);
   position: relative;
   padding: 70px 0;
-  background: url("../img/header/header-min.png") left center no-repeat;
+  background: url("../img/header/header-min.png") center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: flex;
@@ -997,13 +1000,15 @@ h4,
 .hero-header h1 {
   color: var(--accent-color);
   font-size: 36px;
-  /* text-shadow: 0px 3px 4px #000000a6; */
+  text-shadow: 0px 3px 4px #000000a6;
 }
 
 .hero-header h2 {
   font-size: 24px;
   color: #fff;
   font-weight: 600;
+  text-shadow: 0px 3px 4px #00000050;
+
 }
 
 @media (max-width: 450px) {
@@ -1725,9 +1730,23 @@ h4,
   text-shadow: 0px 5px 3px #00000070;
 }
 
+.team-item{
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.owl-item.active.center .team-item img{
+  box-shadow: 5px 8px 0px 0px #0000002b !important;
+}
+
 .team-carousel .item img {
   max-height: 200px;
-  border-radius: 100%;
+  width: auto;
+  border-radius: 5px; 
 }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
