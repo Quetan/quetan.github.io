@@ -319,7 +319,18 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 mb-5 mb-md-0 text-center">
+          <style>
+            .buttons-bottom{
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          </style>
+
+          <div class="col-md-6 col-lg-3 mb-5 text-center" style="padding-bottom: 120px;">
             <div class="p-3 pt-5 mt-3 box-with-humber">
               <div class="number-behind"><i class="fas fa-user-plus"></i></div>
 
@@ -328,15 +339,17 @@
                 Регистрация участников на форуме проводится до <b>04.09.20</b>
               </p>
             </div>
-            <a
-              class="button button-header"
-              href="http://konf.asu.ru/altai-asia2020/?anketa"
-            >
-              Зарегистрироваться
-            </a>
+            <div class="buttons-bottom">
+              <a
+                class="button button-header"
+                href="http://konf.asu.ru/altai-asia2020/?anketa"
+              >
+                Зарегистрироваться
+              </a>
+            </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 mb-5 mb-md-0 text-center">
+          <div class="col-md-6 col-lg-3 mb-5 text-center" style="padding-bottom: 120px;">
             <div class="p-3 pt-5 mt-3 box-with-humber">
               <div class="number-behind"><i class="far fa-thumbs-up"></i></div>
               <h2 class="rules-header">Участие в форуме</h2>
@@ -344,12 +357,14 @@
                 Участие в форуме проходит бесплатно
               </p>
             </div>
-            <a class="button button-header text-center" href="./nf_pismo.pdf">
-              Информационное письмо
-            </a>
+            <div class="buttons-bottom">
+              <a class="button button-header text-center" href="./nf_pismo.pdf">
+                Информационное письмо
+              </a>
+            </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 mb-5 mb-md-0 text-center">
+          <div class="col-md-6 col-lg-3 mb-5 text-center" style="padding-bottom: 120px;">
             <div class="p-3 pt-5 mt-3 box-with-humber">
               <div class="number-behind">
                 <i class="fas fa-shuttle-van"></i>
@@ -359,21 +374,23 @@
                 Экскурсионная программа в Горный Алтай
               </p>
             </div>
-            <a
-              class="button button-header mb-2"
-              href="https://www.altai-republic.ru/tourism/tourist_passport.pdf"
-            >
-              По Горному Алтаю
-            </a>
-            <a
-              class="button button-header"
-              href="https://barnaul.org/gorod/tourism/excursions/"
-            >
-              По Барнаулу
-            </a>
+            <div class="buttons-bottom">
+              <a
+                class="button button-header mb-2"
+                href="https://www.altai-republic.ru/tourism/tourist_passport.pdf"
+              >
+                По Горному Алтаю
+              </a>
+              <a
+                class="button button-header"
+                href="https://barnaul.org/gorod/tourism/excursions/"
+              >
+                По Барнаулу
+              </a>
+            </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 mb-5 mb-md-0 text-center">
+          <div class="col-md-6 col-lg-3 mb-5 text-center" style="padding-bottom: 120px;">
             <div class="p-3 pt-5 mt-3 box-with-humber">
               <div class="number-behind">
                 <i class="fas fa-street-view"></i>
@@ -383,23 +400,32 @@
                 Вы можете посмотреть наше местоположение на карте
               </p>
             </div>
-            <button class="button button-header mb-2" id="openMapModal">
-              Смотреть
-            </button>
+            <div class="buttons-bottom">
+              <button class="button button-header mb-2" id="openMapModal">
+                Смотреть
+              </button>
+            </div>
           </div>
 
           <!-- MAP MODAL -->
-          <div id="mapModal" class="modal ">
+          <div id="mapModal" class="modal">
             <div class="modal-content">
-              <div class="modal-header py-3 px-4 d-flex justify-content-between">
+              <div
+                class="modal-header py-3 px-4 d-flex justify-content-between"
+              >
                 <h2 style="color: #fafafa;">Как нас найти</h2>
                 <span class="close">&times;</span>
               </div>
               <div class="modal-body">
-                  <img src="https://www.snapfiles.com/screenfiles/fssgooglemaps.png" style="width: 100%; height: auto;" alt="">
+                <img
+                  src="./img/map-min.jpg"
+                  loading="lazy"
+                  style="width: 100%; height: auto;"
+                  alt=""
+                />
               </div>
               <div class="modal-footer">
-                <p style="color: #2d2d2d">Карта корпусов АлтГУ</p>
+                <p style="color: #2d2d2d;">Карта корпусов АлтГУ</p>
               </div>
             </div>
           </div>
@@ -436,8 +462,8 @@
 
             @media (max-width: 450px) {
               .modal-content {
-              width: 85%;
-            }
+                width: 85%;
+              }
             }
 
             @-webkit-keyframes animatetop {
@@ -482,7 +508,7 @@
             }
 
             .modal-footer {
-              background-color: #ECEFF1;
+              background-color: #eceff1;
             }
           </style>
 
@@ -1551,6 +1577,7 @@
             <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
               <div class="sponsor-single">
                 <img
+                  loading="lazy"
                   style="max-height: 120px; width: auto;"
                   class="img-fluid"
                   src="./img/logo/aauniv.png"
@@ -1563,6 +1590,7 @@
             <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
               <div class="sponsor-single">
                 <img
+                  loading="lazy"
                   style="max-height: 120px; width: auto;"
                   class="img-fluid"
                   src="./img/logo/minobr.png"
@@ -1575,6 +1603,7 @@
             <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
               <div class="sponsor-single">
                 <img
+                  loading="lazy"
                   style="max-height: 120px; width: auto;"
                   class="img-fluid"
                   src="./img/logo/gerb.gif"
@@ -1591,6 +1620,7 @@
             <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
               <div class="sponsor-single">
                 <img
+                  loading="lazy"
                   class="img-fluid"
                   style="max-width: 100px; height: auto;"
                   src="img/logo/Rossiya-24.svg"
@@ -1603,6 +1633,7 @@
             <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
               <div class="sponsor-single">
                 <img
+                  loading="lazy"
                   class="img-fluid"
                   style="max-width: 100px; height: auto;"
                   src="img/logo/tsfukeap.png"
@@ -1615,6 +1646,7 @@
             <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
               <div class="sponsor-single">
                 <img
+                  loading="lazy"
                   class="img-fluid"
                   style="max-width: 100px; height: auto;"
                   src="img/logo/Алтапресс.png"
@@ -1627,6 +1659,7 @@
             <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
               <div class="sponsor-single">
                 <img
+                  loading="lazy"
                   class="img-fluid"
                   style="max-width: 100px; height: auto;"
                   src="img/logo/amitel.svg"
@@ -1654,6 +1687,7 @@
             <div class="team-carousel owl-carousel owl-theme">
               <div class="item team-item">
                 <img
+                  loading="lazy"
                   src="./img/team/bocharov-min.jpeg"
                   class="shadow team-img"
                   alt="Бочаров С.Н."
@@ -1661,6 +1695,7 @@
               </div>
               <div class="item team-item">
                 <img
+                  loading="lazy"
                   src="./img/team/zemlukov-min.jpg"
                   class="shadow team-img"
                   alt="Землюков С.В."
@@ -1668,6 +1703,7 @@
               </div>
               <div class="item team-item">
                 <img
+                  loading="lazy"
                   src="./img/team/zhdanova-min.jpg"
                   class="shadow team-img"
                   alt="Жданова Е.А."
@@ -1675,6 +1711,7 @@
               </div>
               <div class="item team-item">
                 <img
+                  loading="lazy"
                   src="./img/team/raykin-min.jpg"
                   class="shadow team-img"
                   alt="Райкин Р.И."
@@ -1682,6 +1719,7 @@
               </div>
               <div class="item team-item">
                 <img
+                  loading="lazy"
                   src="./img/team/maksimova-min.jpg"
                   class="shadow team-img"
                   alt="Максимова С.Г."
@@ -1689,6 +1727,7 @@
               </div>
               <div class="item team-item">
                 <img
+                  loading="lazy"
                   src="./img/team/shvakov-min.jpg"
                   class="shadow team-img"
                   alt="Шваков Е.Е."
@@ -1696,6 +1735,7 @@
               </div>
               <div class="item team-item">
                 <img
+                  loading="lazy"
                   src="./img/team/goncharova-min.jpg"
                   class="shadow team-img"
                   alt="Гончарова Е.Н."
@@ -1704,6 +1744,7 @@
             </div>
           </div>
         </div>
+        img
       </div>
     </section>
     <!--================ Team section End =================-->
