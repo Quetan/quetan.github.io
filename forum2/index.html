@@ -389,7 +389,7 @@
           </div>
 
           <!-- MAP MODAL -->
-          <div id="mapModal" class="modal shadow">
+          <div id="mapModal" class="modal ">
             <div class="modal-content">
               <div class="modal-header py-3 px-4 d-flex justify-content-between">
                 <h2 style="color: #fafafa;">Как нас найти</h2>
@@ -409,7 +409,8 @@
               display: none;
               position: fixed;
               z-index: 99;
-              padding-top: 70px;
+              padding-top: 40px;
+              padding-bottom: 20px;
               left: 0;
               top: 0;
               width: 100%;
@@ -431,6 +432,12 @@
               -webkit-animation-duration: 0.4s;
               animation-name: animatetop;
               animation-duration: 0.4s;
+            }
+
+            @media (max-width: 450px) {
+              .modal-content {
+              width: 85%;
+            }
             }
 
             @-webkit-keyframes animatetop {
@@ -464,19 +471,18 @@
 
             .close:hover,
             .close:focus {
-              color: #000;
+              color: var(--accent-color) !important;
+              opacity: 1 !important;
               text-decoration: none;
               cursor: pointer;
             }
 
             .modal-header {
-              background-color: #004ba9;
-              color: white;
+              background-color: var(--main-color);
             }
 
             .modal-footer {
               background-color: #ECEFF1;
-              color: white;
             }
           </style>
 
@@ -525,7 +531,7 @@
                 </h2>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g1-2014.jpg" class="img-gal">
+                <a href="./img/gallery/g1-2014-min.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g1-2014.jpg);"
@@ -541,7 +547,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g2-2014.jpg" class="img-gal">
+                <a href="./img/gallery/g2-2014-min.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g2-2014.jpg);"
@@ -557,7 +563,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g3-2014.jpg" class="img-gal">
+                <a href="./img/gallery/g3-2014-min.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g3-2014.jpg);"
@@ -590,7 +596,7 @@
                 </h2>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g1-2016.jpg" class="img-gal">
+                <a href="./img/gallery/g1-2016-min.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g1-2016.jpg);"
@@ -606,7 +612,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g2-2016.jpg" class="img-gal">
+                <a href="./img/gallery/g2-2016-min.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g2-2016.jpg);"
@@ -622,7 +628,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g3-2016.jpg" class="img-gal">
+                <a href="./img/gallery/g3-2016-min.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g3-2016.jpg);"
@@ -655,7 +661,7 @@
                 </h2>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g1-2018.jpg" class="img-gal">
+                <a href="./img/gallery/g1-2018-min.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g1-2018.jpg);"
@@ -671,7 +677,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g2-2018.jpg" class="img-gal">
+                <a href="./img/gallery/g2-2018-min.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g2-2018.jpg);"
@@ -687,7 +693,7 @@
                 </a>
               </div>
               <div class="col-md-12">
-                <a href="./img/gallery/g3-2018.jpg" class="img-gal">
+                <a href="./img/gallery/g3-2018-min.jpg" class="img-gal">
                   <div
                     class="single-imgs relative"
                     style="background-image: url(./img/gallery/g3-2018.jpg);"
@@ -1648,49 +1654,49 @@
             <div class="team-carousel owl-carousel owl-theme">
               <div class="item team-item">
                 <img
-                  src="./img/team/bocharov.jpeg"
+                  src="./img/team/bocharov-min.jpeg"
                   class="shadow team-img"
                   alt="Бочаров С.Н."
                 />
               </div>
               <div class="item team-item">
                 <img
-                  src="./img/team/zemlukov.jpg"
+                  src="./img/team/zemlukov-min.jpg"
                   class="shadow team-img"
                   alt="Землюков С.В."
                 />
               </div>
               <div class="item team-item">
                 <img
-                  src="./img/team/zhdanova.jpg"
+                  src="./img/team/zhdanova-min.jpg"
                   class="shadow team-img"
                   alt="Жданова Е.А."
                 />
               </div>
               <div class="item team-item">
                 <img
-                  src="./img/team/raykin.jpg"
+                  src="./img/team/raykin-min.jpg"
                   class="shadow team-img"
                   alt="Райкин Р.И."
                 />
               </div>
               <div class="item team-item">
                 <img
-                  src="./img/team/maksimova.jpg"
+                  src="./img/team/maksimova-min.jpg"
                   class="shadow team-img"
                   alt="Максимова С.Г."
                 />
               </div>
               <div class="item team-item">
                 <img
-                  src="./img/team/shvakov.jpg"
+                  src="./img/team/shvakov-min.jpg"
                   class="shadow team-img"
                   alt="Шваков Е.Е."
                 />
               </div>
               <div class="item team-item">
                 <img
-                  src="./img/team/goncharova.jpg"
+                  src="./img/team/goncharova-min.jpg"
                   class="shadow team-img"
                   alt="Гончарова Е.Н."
                 />

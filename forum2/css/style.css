@@ -1142,7 +1142,7 @@ h4,
 }
 
 .about-bg {
-  background: url(../img/home/about-bg.jpg) left center no-repeat;
+  background: url(../img/home/about-bg-min.jpg) left center no-repeat;
   background-size: cover;
   position: relative;
   z-index: 2;
@@ -1292,6 +1292,7 @@ h4,
   height: 6rem;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  background-color: #ffffff;
   background-color: #fffffff3;
   border: 5px solid #00000015;
   border-radius: 100%;
@@ -1318,7 +1319,7 @@ h4,
 }
 
 .speaker-bg {
-  background: url(../img/home/speakers-bg.jpg) left center no-repeat;
+  background: url(../img/home/speakers-bg-min.jpg) left center no-repeat;
   background-size: cover;
   display: block;
   position: relative;
@@ -1568,7 +1569,7 @@ h4,
 
 .sponsor-bg::after {
   content: "";
-  background: url(../img/home/sponsor-bg.jpg) left center no-repeat;
+  background: url(../img/home/sponsor-bg-min.jpg) left center no-repeat;
   background-size: cover;
   opacity: 0.1;
   top: 0;
