@@ -328,11 +328,35 @@
               margin-left: auto;
               margin-right: auto;
             }
+
+            .button-case {
+                text-transform: unset;
+                background: var(--accent-color);
+                color: #173682;
+                border: none;
+                border-bottom: 5px solid var(--accent-color--darker);
+                text-align: left;
+                padding: 5px 15px;
+                font-weight: 700;
+                color: #222;
+                text-decoration: unset;
+                box-shadow: 2px 2px 6px 1px #00000020;
+            }
+
+            .button-case:hover,
+            .button-case:active,
+            .button-case:focus
+             {
+              background: var(--accent-color--darker);
+              color: #173682;
+              -webkit-transform: translateY(3px);
+              transform: translateY(3px);
+            }
           </style>
 
           <div
             class="col-md-6 col-lg-3 mb-5 text-center"
-            style="padding-bottom: 120px;"
+            style="padding-bottom: 80px;"
           >
             <div class="p-3 pt-5 mt-3 box-with-humber">
               <div class="number-behind"><i class="fas fa-user-plus"></i></div>
@@ -344,7 +368,7 @@
             </div>
             <div class="buttons-bottom">
               <a
-                class="button button-header"
+                class="button button-case"
                 href="http://konf.asu.ru/altai-asia2020/?anketa"
               >
                 Зарегистрироваться
@@ -354,7 +378,7 @@
 
           <div
             class="col-md-6 col-lg-3 mb-5 text-center"
-            style="padding-bottom: 120px;"
+            style="padding-bottom: 80px;"
           >
             <div class="p-3 pt-5 mt-3 box-with-humber">
               <div class="number-behind"><i class="far fa-thumbs-up"></i></div>
@@ -364,7 +388,7 @@
               </p>
             </div>
             <div class="buttons-bottom">
-              <a class="button button-header text-center" href="./nf_pismo.pdf">
+              <a class="button button-case text-center" href="./nf_pismo.pdf">
                 Информационное письмо
               </a>
             </div>
@@ -372,7 +396,7 @@
 
           <div
             class="col-md-6 col-lg-3 mb-5 text-center"
-            style="padding-bottom: 120px;"
+            style="padding-bottom: 80px;"
           >
             <div class="p-3 pt-5 mt-3 box-with-humber">
               <div class="number-behind">
@@ -385,13 +409,13 @@
             </div>
             <div class="buttons-bottom">
               <a
-                class="button button-header mb-2"
+                class="button button-case mb-2"
                 href="https://www.altai-republic.ru/tourism/tourist_passport.pdf"
               >
                 По Горному Алтаю
               </a>
               <a
-                class="button button-header"
+                class="button button-case"
                 href="https://barnaul.org/gorod/tourism/excursions/"
               >
                 По Барнаулу
@@ -401,7 +425,7 @@
 
           <div
             class="col-md-6 col-lg-3 mb-5 text-center"
-            style="padding-bottom: 120px;"
+            style="padding-bottom: 80px;"
           >
             <div class="p-3 pt-5 mt-3 box-with-humber">
               <div class="number-behind">
@@ -413,7 +437,7 @@
               </p>
             </div>
             <div class="buttons-bottom">
-              <button class="button button-header mb-2" id="openMapModal">
+              <button class="button button-case mb-2" id="openMapModal">
                 Смотреть
               </button>
             </div>
