@@ -30,7 +30,7 @@ $(function () {
     }
   });
 
-  $('.owl-carousel').owlCarousel({
+  $('.owl-team').owlCarousel({
     loop: true,
     margin: 25,
     center: true,
@@ -49,6 +49,17 @@ $(function () {
         items: 5
       }
     }
+  });
+
+  $('.owl-hellos').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:false,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      items: 1,
+      autoHeight:true
   });
 
 

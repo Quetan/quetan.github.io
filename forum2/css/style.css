@@ -1082,6 +1082,16 @@ h4,
   margin-right: -75px;
 }
 
+.kazakh-img-cell--img {
+  background-image: url(../img/home/kazakhstan.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 300px;
+  margin-top: -100px;
+  margin-right: -75px;
+}
+
 .headteacher-img-cell--text {
   margin-top: 25px;
 }
@@ -1827,7 +1837,7 @@ h4,
 }
 
 .footer-area {
-  background: #080808;
+  background: #0c223e;
   padding-top: 60px;
 }
 
@@ -2071,7 +2081,7 @@ h4,
 }
 
 .single-footer-widget p {
-  color: #666;
+  color: #999;
 }
 
 .single-footer-widget ul li {
@@ -2079,7 +2089,7 @@ h4,
 }
 
 .single-footer-widget ul li a {
-  color: #666;
+  color: #999;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
