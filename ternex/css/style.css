@@ -95,6 +95,16 @@ p {
 .navbar-brand {
   padding: 9px 15px;
 }
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #f39c12;
+}
+
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;
@@ -103,6 +113,7 @@ p {
     color: #b5b5b5;
     font-family: var(--paragraph-font);
   }
+
   .navbar-default .navbar-nav > li > a:hover {
     color: #f39c12;
   }
@@ -135,6 +146,14 @@ p {
   }
 }
 @media (max-width: 768px) {
+  .navbar-default .navbar-nav > li > a {
+    color: #b5b5b5;
+  }
+
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: #f39c12;
+  }
   .navbar-brand img {
   }
   .navbar-default {
@@ -687,6 +706,7 @@ div.carousel-inner .item img {
 
 .product {
   padding: 25px;
+  height: 550px;
   border-left: 2px solid #efefef;
   border-right: 2px solid #f39c12;
   border-bottom-right-radius: 70px;
@@ -721,6 +741,7 @@ div.carousel-inner .item img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  max-height: 450px;
 }
 
 .product-line img {
@@ -947,10 +968,13 @@ div.carousel-inner .item img {
   color: #fff;
 }
 .error {
-  color: #f39c12;
+  color: #dc3545;
   display: block;
   padding-bottom: 15px;
   font-size: 18px;
+  padding: 15px 20px;
+  background-color: #ff000020;
+  border-radius: 20px;
 }
 .error i {
   padding-right: 10px;
