@@ -27,6 +27,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   color: #33324e;
+  overflow-x: hidden;
 }
 
 h1,
@@ -1045,7 +1046,7 @@ a {
 .bg-home {
   position: relative;
   background-color: #ffffff;
-  padding: 130px 0px 70px 0px;
+  padding: 90px 0px 70px 0px;
 }
 
 .home-badge p {

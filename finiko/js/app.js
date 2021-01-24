@@ -30,37 +30,37 @@ $(".smoothlink").on("click", function (event) {
   event.preventDefault();
 });
 
-$(".testi-carousel").owlCarousel({
-  autoPlay: 3000,
-  stopOnHover: true,
-  navigation: false,
-  paginationSpeed: 1000,
-  goToFirstSpeed: 2000,
-  singleItem: true,
-  autoHeight: true,
-});
+// $(".testi-carousel").owlCarousel({
+//   autoPlay: 3000,
+//   stopOnHover: true,
+//   navigation: false,
+//   paginationSpeed: 1000,
+//   goToFirstSpeed: 2000,
+//   singleItem: true,
+//   autoHeight: true,
+// });
 
 //  VIDEO
-$(".video-play-icon").magnificPopup({
-  disableOn: 700,
-  type: "iframe",
-  mainClass: "mfp-fade",
-  removalDelay: 160,
-  preloader: false,
-  fixedContentPos: false,
-});
+// $(".video-play-icon").magnificPopup({
+//   disableOn: 700,
+//   type: "iframe",
+//   mainClass: "mfp-fade",
+//   removalDelay: 160,
+//   preloader: false,
+//   fixedContentPos: false,
+// });
 
 // Magnific Popup
-$(".mfp-image").magnificPopup({
-  type: "image",
-  closeOnContentClick: true,
-  mainClass: "mfp-fade",
-  gallery: {
-    enabled: true,
-    navigateByImgClick: true,
-    preload: [0, 1],
-  },
-});
+// $(".mfp-image").magnificPopup({
+//   type: "image",
+//   closeOnContentClick: true,
+//   mainClass: "mfp-fade",
+//   gallery: {
+//     enabled: true,
+//     navigateByImgClick: true,
+//     preload: [0, 1],
+//   },
+// });
 
 // typed
 $(".element").each(function () {
@@ -75,6 +75,40 @@ $(".element").each(function () {
 // WOW
 
 new WOW().init();
+
+// Tilts init
+
+VanillaTilt.init(document.querySelector(".image-tilt"), {
+  max: 5,
+  speed: 100
+});
+
+VanillaTilt.init(document.querySelectorAll(".task-tilt"), {
+  max: 5,
+  speed: 50,
+  gyroscope: true
+});
+
+//player width
+  
+	var $allVideos = $("iframe[src^='https://www.youtube.com']"),
+      $fluidEl = $("#products-desc");
+	$allVideos.each(function() {
+		$(this)
+			.data('aspectRatio', this.height / this.width)
+			.removeAttr('height')
+			.removeAttr('width');
+	});
+	$(window).resize(function() {
+		var newWidth = $fluidEl.width();
+		$allVideos.each(function() {
+			var $el = $(this);
+			$el
+				.width(newWidth)
+				.height(newWidth * $el.data('aspectRatio'));
+		});
+  }).resize();
+  
 
 // video
 $(".player").mb_YTPlayer();
