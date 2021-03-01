@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Колледж АлтГУ</title>
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- OwlCarousel -->
+    <link rel="stylesheet" href="./css/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/assets/owl.theme.default.min.css" />
+
+    <!-- Главный CSS файл -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header d-flex align-items-center flex-column">
+      <div class="container-fluid header-container py-4">
+        <div class="row d-flex justify-content-center">
+          <!-- Navigation -->
+          <div
+            class="col-sm-8 col-lg-7 mb-2 mb-sm-0 justify-content-center justify-content-sm-start"
+          >
+            <nav class="header-navigation">
+              <ul
+                class="list-unstyled d-flex m-0 align-items-center justify-content-center justify-content-sm-start"
+              >
+                <li>
+                  <a class="header-navigation_link" href="#">Университет</a>
+                </li>
+                <li>
+                  <a class="header-navigation_link" href="#">Школьник АлтГУ</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Social links -->
+          <div
+            class="links-container_links col-sm-4 d-flex d-lg-none align-items-center justify-content-center"
+          >
+            <div class="links-socials d-flex">
+              <a href="#"
+                ><img
+                  style="width: 25px; height: 25px"
+                  class="mr-2"
+                  src="./img/main/main-section/instagram.svg"
+                  alt="Instagram"
+              /></a>
+              <a href="#"
+                ><img
+                  style="width: 25px; height: 25px"
+                  class="mr-2"
+                  src="./img/main/main-section/youtube.svg"
+                  alt="YouTube"
+              /></a>
+              <a href="#"
+                ><img
+                  style="width: 25px; height: 25px"
+                  src="./img/main/main-section/vk.svg"
+                  alt="Вконтакте"
+              /></a>
+            </div>
+          </div>
+          <!-- Search -->
+          <div
+            class="d-none col-lg-5 d-lg-flex align-items-center justify-content-end"
+          >
+            <div class="search">
+              <img
+                src="./img/main/preheader/searching-magnifying-glass.svg"
+                alt=""
+              />
+              <input
+                type="text"
+                name="search"
+                id="header-search"
+                placeholder="Поиск по сайту"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container links-container">
+        <div class="row">
+          <div
+            class="links-container_logo col-sm-8 col-lg-5 mb-3 mb-sm-0 d-flex align-items-center justify-content-center justify-content-sm-start"
+          >
+            <img
+              class="mr-2 mr-md-3"
+              src="./img/main/main-section/Logo.svg"
+              alt="Логотип АлтГУ"
+            />
+            <div class="asu-text d-flex flex-column text-center">
+              <span class="asu-text_small"
+                >Алтайский государственный университет</span
+              >
+              <span class="asu-text_large">Абитуриент</span>
+            </div>
+          </div>
+
+          <div
+            class="links-container_links col-lg-4 d-none d-lg-flex align-items-center"
+          >
+            <div class="links-phone d-flex mr-5">
+              <img
+                class="mr-2"
+                src="./img/main/main-section/call.svg"
+                alt="Номер для звонков"
+              />
+              <a href="tel:+73852291222">+7 (3852) 291-222</a>
+            </div>
+            <div class="links-socials d-flex">
+              <a href="#"
+                ><img
+                  class="mr-2"
+                  src="./img/main/main-section/instagram.svg"
+                  alt="Instagram"
+              /></a>
+              <a href="#"
+                ><img
+                  class="mr-2"
+                  src="./img/main/main-section/youtube.svg"
+                  alt="YouTube"
+              /></a>
+              <a href="#"
+                ><img src="./img/main/main-section/vk.svg" alt="Вконтакте"
+              /></a>
+            </div>
+          </div>
+          <div
+            class="links-container_login col-sm-4 col-lg-3 d-flex justify-content-end align-items-center justify-content-center justify-content-sm-start"
+          >
+            <a class="d-flex align-items-center" href="#">
+              <!-- <img
+                class="mr-2"
+                src="./img/main/main-section/user.svg"
+                alt="Пользователь"
+              /> -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18.683"
+                height="21.229"
+                viewBox="0 0 18.683 21.229"
+              >
+                <g transform="translate(-8.189)">
+                  <g transform="translate(8.189)">
+                    <path
+                      d="M24.136,13.526a9.108,9.108,0,0,0-4.341-2.707A5.775,5.775,0,0,0,22.709,5.7,5.462,5.462,0,0,0,17.53,0a5.462,5.462,0,0,0-5.179,5.7,5.775,5.775,0,0,0,2.915,5.122,9.107,9.107,0,0,0-4.341,2.707,10.747,10.747,0,0,0-2.736,7.266.42.42,0,0,0,.4.438H26.473a.42.42,0,0,0,.4-.438A10.747,10.747,0,0,0,24.136,13.526ZM13.149,5.7A4.622,4.622,0,0,1,17.53.876,4.622,4.622,0,0,1,21.912,5.7a4.622,4.622,0,0,1-4.382,4.82A4.622,4.622,0,0,1,13.149,5.7ZM8.995,20.353c.209-4.98,3.957-8.961,8.536-8.961s8.327,3.981,8.536,8.961Z"
+                      transform="translate(-8.189)"
+                      fill="#008ad5"
+                    />
+                  </g>
+                  <g transform="translate(9.947 13.37)">
+                    <g transform="translate(0)">
+                      <path
+                        d="M58.962,322.67a.379.379,0,0,0-.546-.151,8.6,8.6,0,0,0-3.584,5.35.442.442,0,0,0,.294.528.364.364,0,0,0,.093.012.408.408,0,0,0,.387-.336,7.723,7.723,0,0,1,3.218-4.8A.464.464,0,0,0,58.962,322.67Z"
+                        transform="translate(-54.821 -322.457)"
+                        fill="#008ad5"
+                      />
+                    </g>
+                  </g>
+                  <g transform="translate(15.419 12.225)">
+                    <path
+                      d="M202.1,294.835a7.149,7.149,0,0,0-1.8.231.442.442,0,0,0-.3.527.408.408,0,0,0,.387.337.367.367,0,0,0,.092-.012,6.42,6.42,0,0,1,1.621-.208.44.44,0,0,0,0-.876Z"
+                      transform="translate(-199.989 -294.835)"
+                      fill="#008ad5"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <span>Кабинет абитуриента</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Page buttons -->
+      <div
+        class="container page__main-buttons-container main-buttons-container"
+      >
+        <div class="row">
+          <div
+            class="main-button_r dropdown closed main-button col-lg-3 col-md-6 p-0"
+          >
+            <h2 class="icon d-flex justify-content-center align-items-center">
+              Бакалавриат и специалитет
+            </h2>
+            <ul class="menu list-unstyled">
+              <li><a href="#">Пункт 1</a></li>
+              <li><a href="#">Пункт 2</a></li>
+              <li><a href="#">Пункт 3</a></li>
+              <li><a href="#">Пункт 4</a></li>
+              <li><a href="#">Пункт 5</a></li>
+              <li><a href="#">Пункт 6</a></li>
+            </ul>
+          </div>
+          <div
+            class="main-button_o dropdown closed main-button col-lg-3 col-md-6 p-0"
+          >
+            <h2 class="icon d-flex justify-content-center align-items-center">
+              Бакалавриат и магистратура
+            </h2>
+            <ul class="menu list-unstyled">
+              <li><a href="#">Пункт 1</a></li>
+              <li><a href="#">Пункт 2</a></li>
+              <li><a href="#">Пункт 3</a></li>
+              <li><a href="#">Пункт 4</a></li>
+              <li><a href="#">Пункт 5</a></li>
+              <li><a href="#">Пункт 6</a></li>
+            </ul>
+          </div>
+          <div
+            class="main-button_g dropdown closed main-button col-lg-3 col-md-6 p-0"
+          >
+            <h2 class="icon d-flex justify-content-center align-items-center">
+              Колледж АГУ
+            </h2>
+            <ul class="menu list-unstyled">
+              <li><a href="#">Пункт 1</a></li>
+              <li><a href="#">Пункт 2</a></li>
+              <li><a href="#">Пункт 3</a></li>
+              <li><a href="#">Пункт 4</a></li>
+              <li><a href="#">Пункт 5</a></li>
+              <li><a href="#">Пункт 6</a></li>
+            </ul>
+          </div>
+          <div
+            class="main-button_b dropdown closed main-button col-lg-3 col-md-6 p-0"
+          >
+            <h2 class="icon d-flex justify-content-center align-items-center">
+              Рейтинги
+            </h2>
+            <ul class="menu list-unstyled">
+              <li><a href="#">Пункт 1</a></li>
+              <li><a href="#">Пункт 2</a></li>
+              <li><a href="#">Пункт 3</a></li>
+              <li><a href="#">Пункт 4</a></li>
+              <li><a href="#">Пункт 5</a></li>
+              <li><a href="#">Пункт 6</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="section template__main-section">
+        <div class="container template__main-container">
+          <div class="template__breadcrumbs-wrapper">
+            <nav class="breadcrumbs" aria-label="breadcrumb">
+              <ul class="list-unstyled d-flex flex-wrap">
+                <li class="breadcrumbs-item breadcrumbs-item_g">
+                  <a href="#">Главная</a>
+                </li>
+                <li class="breadcrumbs-item breadcrumbs-item_g active">
+                  <a href="#">Колледж АГУ</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 d-none d-lg-block sidebar sidebar_g">
+              <div class="sidebar-header">
+                <h2>Колледж АГУ</h2>
+              </div>
+              <div class="sidebar-menu">
+                <ul
+                  class="list-unstyled d-flex justify-content-center flex-column"
+                >
+                  <li class="sidebar-menu_item">
+                    <a href="#">Нормативные документы</a>
+                  </li>
+                  <li class="sidebar-menu_item">
+                    <a href="#">Приём документов</a>
+                  </li>
+                  <li class="sidebar-menu_item">
+                    <a href="#">Программы вступительных испытаний</a>
+                  </li>
+                  <li class="sidebar-menu_item">
+                    <a href="#">Расписание вступительных испытаний</a>
+                  </li>
+                  <li class="sidebar-menu_item">
+                    <a href="#">Приём иностранных граждан</a>
+                  </li>
+                  <li class="sidebar-menu_item">
+                    <a href="#">Платное образование</a>
+                  </li>
+                  <li class="sidebar-menu_item">
+                    <a href="#">Целевое обучение</a>
+                  </li>
+                  <li class="sidebar-menu_item">
+                    <a href="#">Обязательства по информированию</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8 template__main-content">
+              <h1 class="template__content-header content-header_g">
+                Колледж АГУ
+              </h1>
+              <p class="template__content-paragraph">
+                Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam eaque ipsa,
+                quae ab illo inventore veritatis et quasi architecto beatae
+                vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia
+                voluptas sit, aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos, qui ratione voluptatem sequi
+                nesciunt, neque porro quisquam est, qui dolorem ipsum, quia
+                dolor sit, amet, consectetur, adipisci velit, sed quia non
+                numquam eius modi tempora incidunt, ut labore et dolore magnam
+                aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+                ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+                reprehenderit, qui in ea voluptate velit esse, quam nihil
+                molestiae consequatur, vel illum, qui dolorem eum fugiat, quo
+                voluptas nulla pariatur? At vero eos et accusamus et iusto odio
+                dignissimos ducimus, qui blanditiis praesentium voluptatum
+              </p>
+              <div class="row helper">
+                <div
+                  class="col-md-3 d-flex justify-content-center align-items-center mb-3 mb-md-0"
+                >
+                  <a href="#" class="d-block helper-item helper-item_r">
+                    <img
+                      style="margin-bottom: 5px"
+                      src="./img/college/007-clipboard.svg"
+                      alt="Иконка"
+                    />
+                    <h3>Программы вступительных испытаний</h3>
+                  </a>
+                </div>
+                <div
+                  class="col-md-3 d-flex justify-content-center align-items-center mb-3 mb-md-0"
+                >
+                  <a href="#" class="d-block helper-item helper-item_b">
+                    <img src="./img/college/015-paper.svg" alt="Иконка" />
+                    <h3>Целевое обучение</h3>
+                  </a>
+                </div>
+                <div
+                  class="col-md-3 d-flex justify-content-center align-items-center mb-3 mb-md-0"
+                >
+                  <a href="#" class="d-block helper-item helper-item_o">
+                    <img src="./img/college/wallet.svg" alt="Иконка" />
+                    <h3>Платное образование</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Announces section -->
+      <section class="template__announces-section">
+        <div
+          class="template__announces-section_header d-flex justify-content-center align-items-center"
+        >
+          <h2 class="section-header">Анонсы и объявления</h2>
+        </div>
+
+        <div class="template__announces-section_content">
+          <div
+            class="container announces-container d-flex justify-content-center h-100"
+          >
+            <div class="row owl-carousel announces-carousel">
+              <a class="item template__announces-item_link" href="#">
+                <div
+                  class="template__announces-item d-flex flex-column flex-md-row"
+                >
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-center text-md-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                    <div class="announces-item_content">
+                      <p>
+                        Завершается 2020 год. Несмотря на все трудности, он стал
+                        успешным для нас. Удалось многого достичь и в
+                        академической политике, и в научных исследованиях.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="template__announces-item_date d-flex flex-column align-items-end justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 31 </span>
+                    <span class="announces-date_month"> дек </span>
+                    <span class="announces-date_year"> 2020 </span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="item template__announces-item_link" href="#">
+                <div
+                  class="template__announces-item d-flex flex-column flex-md-row"
+                >
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-center text-md-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                    <div class="announces-item_content">
+                      <p>
+                        Завершается 2020 год. Несмотря на все трудности, он стал
+                        успешным для нас. Удалось многого достичь и в
+                        академической политике, и в научных исследованиях.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="template__announces-item_date d-flex flex-column align-items-end justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 4 </span>
+                    <span class="announces-date_month"> янв </span>
+                    <span class="announces-date_year"> 2021 </span>
+                  </div>
+                </div>
+              </a>
+              <a class="item template__announces-item_link" href="#">
+                <div
+                  class="template__announces-item d-flex flex-column flex-md-row"
+                >
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-center text-md-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                    <div class="announces-item_content">
+                      <p>
+                        Завершается 2020 год. Несмотря на все трудности, он стал
+                        успешным для нас. Удалось многого достичь и в
+                        академической политике, и в научных исследованиях.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="template__announces-item_date d-flex flex-column align-items-end justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 18 </span>
+                    <span class="announces-date_month"> фев </span>
+                    <span class="announces-date_year"> 2021 </span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="item template__announces-item_link" href="#">
+                <div
+                  class="template__announces-item d-flex flex-column flex-md-row"
+                >
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-center text-md-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                    <div class="announces-item_content">
+                      <p>
+                        Завершается 2020 год. Несмотря на все трудности, он стал
+                        успешным для нас. Удалось многого достичь и в
+                        академической политике, и в научных исследованиях.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="template__announces-item_date d-flex flex-column align-items-end justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 24 </span>
+                    <span class="announces-date_month"> фев </span>
+                    <span class="announces-date_year"> 2021 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- College states -->
+      <div class="section college-states-section">
+        <div class="container">
+          <a href="#" class="d-flex flex-column flex-md-row justify-content-center align-items-center text-center w-md-100 main-button_r college-states-button">
+            <img class="mb-4 mb-md-0" src="./img/college/1.svg" alt="Иконка">
+            Специальности колледжа на базе 9 классов
+          </a>
+          <a href="#" class="d-flex flex-column flex-md-row justify-content-center align-items-center text-center w-md-100 main-button_b college-states-button">
+            <img class="mb-4 mb-md-0" src="./img/college/1.svg" alt="Иконка">
+            Специальности колледжа на базе 11 классов
+          </a>
+        </div>
+      </div>
+      <!-- Steps section -->
+      <section class="section steps-section_white">
+        <lottie-player
+          src="./img/template/Steps_white.json"
+          background="transparent"
+          speed="1"
+          style="width: 100%; height: 100vh"
+          loop
+          autoplay
+        ></lottie-player>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer d-flex align-items-center">
+      <div class="container footer-container">
+        <!-- <img
+          src="./img/main/footer/footer-triangle.svg"
+          alt=""
+          class="d-none d-md-block footer-triangle"
+        /> -->
+        <div class="row">
+          <div
+            class="col-md-6 col-xl-2 mb-4 mb-lg-0 footer-logo d-flex flex-column align-items-center align-items-xl-start"
+          >
+            <img
+              src="./img/main/footer/Logo_LightWhite.svg"
+              alt=""
+              class="footer-logo_img"
+            />
+          </div>
+          <div
+            class="col-md-6 col-xl-4 footer-resources d-flex align-items-center align-items-xl-start justify-content-center justify-content-xl-start mb-3 mb-xl-0"
+          >
+            <nav class="footer-nav text-center text-xl-left">
+              <ul class="list-unstyled d-flex flex-column mb-0">
+                <li>
+                  <a href="#" class="footer-resources_link"
+                    >Министерство образования и науки РФ</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="footer-resources_link"
+                    >Федеральный портал "Российское образование"</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="footer-resources_link"
+                    >Министерство образования и науки Алтайского края</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div
+            class="col-md-6 col-xl-3 footer-contacts d-flex flex-column justify-content-center justify-content-xl-start align-items-center align-items-xl-start mb-3 mb-xl-0"
+          >
+            <span class="footer-contacts_address"
+              >г. Барнаул, пр. Ленина, 61</span
+            >
+            <a href="mailto:prcom@asu.ru" class="footer-contacts_email"
+              >e-mail: prcom@asu.ru</a
+            >
+            <a href="tel:+73852291222" class="footer-contacts_phone"
+              >+7 (3852) 291-222</a
+            >
+            <a href="https://www.asu.ru" class="footer-contacts_website"
+              >Перейти на сайт АлтГУ</a
+            >
+          </div>
+          <div
+            class="col-md-6 col-xl-3 footer-social-links d-flex flex-column align-items-center align-items-xl-start"
+          >
+            <span class="footer-social-links_text">Социальные сети:</span>
+            <div class="footer-social-links_icons d-flex">
+              <a href="#">
+                <img
+                  src="./img/main/footer/instagram.svg"
+                  alt="Instagram"
+                  class="footer-social-links_icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./img/main/footer/youtube.svg"
+                  alt="YouTube"
+                  class="footer-social-links_icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./img/main/footer/vk.svg"
+                  alt="Вконтакте"
+                  class="footer-social-links_icon"
+                />
+              </a>
+            </div>
+            <div class="footer-social-links_hashtag d-flex">
+              <img src="./img/main/footer/hashtag.svg" alt="Хэштег" />
+              <div class="footer-social-links_hashtag_text d-flex flex-column">
+                <span>Амбициозность</span>
+                <span>Глобальность</span>
+                <span>Успех</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 d-flex justify-content-center justify-content-xl-start mt-4 mt-xl-0"
+          >
+            <span class="footer-asu text-center text-md-left mt-0">
+              © Алтайский государственный университет. 2021
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Animations player script -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- OwlCarousel -->
+    <script src="./js/owl.carousel.min.js"></script>
+
+    <!-- Главный JS файл -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Абитуриенту АлтГУ</title>
+    <title>Колледж АлтГУ</title>
 
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header class="header d-flex align-items-center">
-      <div class="container header-container py-3">
+    <!-- Header -->
+    <header class="header d-flex align-items-center flex-column">
+      <div class="container-fluid header-container py-4">
         <div class="row d-flex justify-content-center">
           <!-- Navigation -->
           <div
@@ -65,7 +66,6 @@
               /></a>
             </div>
           </div>
-
           <!-- Search -->
           <div
             class="d-none col-lg-5 d-lg-flex align-items-center justify-content-end"
@@ -85,744 +85,127 @@
           </div>
         </div>
       </div>
-    </header>
+      <div class="container links-container">
+        <div class="row">
+          <div
+            class="links-container_logo col-sm-8 col-lg-5 mb-3 mb-sm-0 d-flex align-items-center justify-content-center justify-content-sm-start"
+          >
+            <img
+              class="mr-2 mr-md-3"
+              src="./img/main/main-section/Logo.svg"
+              alt="Логотип АлтГУ"
+            />
+            <div class="asu-text d-flex flex-column text-center">
+              <span class="asu-text_small"
+                >Алтайский государственный университет</span
+              >
+              <span class="asu-text_large">Абитуриент</span>
+            </div>
+          </div>
 
-    <main class="main">
-      <!-- Main section -->
-      <section class="section main-section">
-        <div class="main-section_background d-none d-md-block">
-          <!-- Background animation -->
-          <lottie-player
-            src="./img/main/banner/banner_main.json"
-            class="main-section_background"
-            background="transparent"
-            speed="1"
-            loop
-            autoplay
-          ></lottie-player>
-        </div>
-        <div class="container links-container">
-          <div class="row">
-            <div
-              class="links-container_logo col-sm-8 col-lg-5 mb-3 mb-sm-0 d-flex align-items-center justify-content-center justify-content-sm-start"
-            >
+          <div
+            class="links-container_links col-lg-4 d-none d-lg-flex align-items-center"
+          >
+            <div class="links-phone d-flex mr-5">
               <img
-                class="mr-2 mr-md-3"
-                src="./img/main/main-section/Logo.svg"
-                alt="Логотип АлтГУ"
+                class="mr-2"
+                src="./img/main/main-section/call.svg"
+                alt="Номер для звонков"
               />
-              <div class="asu-text d-flex flex-column text-center">
-                <span class="asu-text_small"
-                  >Алтайский государственный университет</span
-                >
-                <span class="asu-text_large">Абитуриент</span>
-              </div>
+              <a href="tel:+73852291222">+7 (3852) 291-222</a>
             </div>
-
-            <div
-              class="links-container_links col-lg-4 d-none d-lg-flex align-items-center"
-            >
-              <div class="links-phone d-flex mr-5">
-                <img
+            <div class="links-socials d-flex">
+              <a href="#"
+                ><img
                   class="mr-2"
-                  src="./img/main/main-section/call.svg"
-                  alt="Номер для звонков"
-                />
-                <a href="tel:+73852291222">+7 (3852) 291-222</a>
-              </div>
-              <div class="links-socials d-flex">
-                <a href="#"
-                  ><img
-                    class="mr-2"
-                    src="./img/main/main-section/instagram.svg"
-                    alt="Instagram"
-                /></a>
-                <a href="#"
-                  ><img
-                    class="mr-2"
-                    src="./img/main/main-section/youtube.svg"
-                    alt="YouTube"
-                /></a>
-                <a href="#"
-                  ><img src="./img/main/main-section/vk.svg" alt="Вконтакте"
-                /></a>
-              </div>
+                  src="./img/main/main-section/instagram.svg"
+                  alt="Instagram"
+              /></a>
+              <a href="#"
+                ><img
+                  class="mr-2"
+                  src="./img/main/main-section/youtube.svg"
+                  alt="YouTube"
+              /></a>
+              <a href="#"
+                ><img src="./img/main/main-section/vk.svg" alt="Вконтакте"
+              /></a>
             </div>
-            <div
-              class="links-container_login col-sm-4 col-lg-3 d-flex justify-content-end align-items-center justify-content-center justify-content-sm-start"
-            >
-              <a class="d-flex align-items-center" href="#">
-                <!-- <img
-                  class="mr-2"
-                  src="./img/main/main-section/user.svg"
-                  alt="Пользователь"
-                /> -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18.683"
-                  height="21.229"
-                  viewBox="0 0 18.683 21.229"
-                >
-                  <g transform="translate(-8.189)">
-                    <g transform="translate(8.189)">
+          </div>
+          <div
+            class="links-container_login col-sm-4 col-lg-3 d-flex justify-content-end align-items-center justify-content-center justify-content-sm-start"
+          >
+            <a class="d-flex align-items-center" href="#">
+              <!-- <img
+                class="mr-2"
+                src="./img/main/main-section/user.svg"
+                alt="Пользователь"
+              /> -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18.683"
+                height="21.229"
+                viewBox="0 0 18.683 21.229"
+              >
+                <g transform="translate(-8.189)">
+                  <g transform="translate(8.189)">
+                    <path
+                      d="M24.136,13.526a9.108,9.108,0,0,0-4.341-2.707A5.775,5.775,0,0,0,22.709,5.7,5.462,5.462,0,0,0,17.53,0a5.462,5.462,0,0,0-5.179,5.7,5.775,5.775,0,0,0,2.915,5.122,9.107,9.107,0,0,0-4.341,2.707,10.747,10.747,0,0,0-2.736,7.266.42.42,0,0,0,.4.438H26.473a.42.42,0,0,0,.4-.438A10.747,10.747,0,0,0,24.136,13.526ZM13.149,5.7A4.622,4.622,0,0,1,17.53.876,4.622,4.622,0,0,1,21.912,5.7a4.622,4.622,0,0,1-4.382,4.82A4.622,4.622,0,0,1,13.149,5.7ZM8.995,20.353c.209-4.98,3.957-8.961,8.536-8.961s8.327,3.981,8.536,8.961Z"
+                      transform="translate(-8.189)"
+                      fill="#008ad5"
+                    />
+                  </g>
+                  <g transform="translate(9.947 13.37)">
+                    <g transform="translate(0)">
                       <path
-                        d="M24.136,13.526a9.108,9.108,0,0,0-4.341-2.707A5.775,5.775,0,0,0,22.709,5.7,5.462,5.462,0,0,0,17.53,0a5.462,5.462,0,0,0-5.179,5.7,5.775,5.775,0,0,0,2.915,5.122,9.107,9.107,0,0,0-4.341,2.707,10.747,10.747,0,0,0-2.736,7.266.42.42,0,0,0,.4.438H26.473a.42.42,0,0,0,.4-.438A10.747,10.747,0,0,0,24.136,13.526ZM13.149,5.7A4.622,4.622,0,0,1,17.53.876,4.622,4.622,0,0,1,21.912,5.7a4.622,4.622,0,0,1-4.382,4.82A4.622,4.622,0,0,1,13.149,5.7ZM8.995,20.353c.209-4.98,3.957-8.961,8.536-8.961s8.327,3.981,8.536,8.961Z"
-                        transform="translate(-8.189)"
-                        fill="#008ad5"
-                      />
-                    </g>
-                    <g transform="translate(9.947 13.37)">
-                      <g transform="translate(0)">
-                        <path
-                          d="M58.962,322.67a.379.379,0,0,0-.546-.151,8.6,8.6,0,0,0-3.584,5.35.442.442,0,0,0,.294.528.364.364,0,0,0,.093.012.408.408,0,0,0,.387-.336,7.723,7.723,0,0,1,3.218-4.8A.464.464,0,0,0,58.962,322.67Z"
-                          transform="translate(-54.821 -322.457)"
-                          fill="#008ad5"
-                        />
-                      </g>
-                    </g>
-                    <g transform="translate(15.419 12.225)">
-                      <path
-                        d="M202.1,294.835a7.149,7.149,0,0,0-1.8.231.442.442,0,0,0-.3.527.408.408,0,0,0,.387.337.367.367,0,0,0,.092-.012,6.42,6.42,0,0,1,1.621-.208.44.44,0,0,0,0-.876Z"
-                        transform="translate(-199.989 -294.835)"
+                        d="M58.962,322.67a.379.379,0,0,0-.546-.151,8.6,8.6,0,0,0-3.584,5.35.442.442,0,0,0,.294.528.364.364,0,0,0,.093.012.408.408,0,0,0,.387-.336,7.723,7.723,0,0,1,3.218-4.8A.464.464,0,0,0,58.962,322.67Z"
+                        transform="translate(-54.821 -322.457)"
                         fill="#008ad5"
                       />
                     </g>
                   </g>
-                </svg>
-                <span>Кабинет абитуриента</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="container slider-container d-flex justify-content-center align-items-center"
-        >
-          <div class="owl-carousel slider-container_slide">
-            <div class="item">
-              <h1 class="text-center">
-                Абитуриент <br />
-                <span>АГУ</span>
-              </h1>
-            </div>
-            <div class="item">
-              <h1 class="text-center">
-                Абитуриент <br />
-                <span>АГУ</span>
-              </h1>
-            </div>
-            <div class="item">
-              <h1 class="text-center">
-                Абитуриент <br />
-                <span>АГУ</span>
-              </h1>
-            </div>
-            <div class="item">
-              <h1 class="text-center">
-                Абитуриент <br />
-                <span>АГУ</span>
-              </h1>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section advantages-section">
-        <div class="container main-buttons-container">
-          <div class="row">
-            <div
-              class="main-button_r dropdown closed main-button col-lg-3 col-md-6 p-0"
-            >
-              <h2 class="icon d-flex justify-content-center align-items-center">
-                Бакалавриат и специалитет
-              </h2>
-              <ul class="menu list-unstyled">
-                <li><a href="#">Пункт 1</a></li>
-                <li><a href="#">Пункт 2</a></li>
-                <li><a href="#">Пункт 3</a></li>
-                <li><a href="#">Пункт 4</a></li>
-                <li><a href="#">Пункт 5</a></li>
-                <li><a href="#">Пункт 6</a></li>
-              </ul>
-            </div>
-            <div
-              class="main-button_o dropdown closed main-button col-lg-3 col-md-6 p-0"
-            >
-              <h2 class="icon d-flex justify-content-center align-items-center">
-                Магистратура и аспирантура
-              </h2>
-              <ul class="menu list-unstyled">
-                <li><a href="#">Пункт 1</a></li>
-                <li><a href="#">Пункт 2</a></li>
-                <li><a href="#">Пункт 3</a></li>
-                <li><a href="#">Пункт 4</a></li>
-                <li><a href="#">Пункт 5</a></li>
-                <li><a href="#">Пункт 6</a></li>
-              </ul>
-            </div>
-            <div
-              class="main-button_g dropdown closed main-button col-lg-3 col-md-6 p-0"
-            >
-              <h2 class="icon d-flex justify-content-center align-items-center">
-                Колледж АГУ
-              </h2>
-              <ul class="menu list-unstyled">
-                <li><a href="#">Пункт 1</a></li>
-                <li><a href="#">Пункт 2</a></li>
-                <li><a href="#">Пункт 3</a></li>
-                <li><a href="#">Пункт 4</a></li>
-                <li><a href="#">Пункт 5</a></li>
-                <li><a href="#">Пункт 6</a></li>
-              </ul>
-            </div>
-            <div
-              class="main-button_b dropdown closed main-button col-lg-3 col-md-6 p-0"
-            >
-              <h2 class="icon d-flex justify-content-center align-items-center">
-                Рейтинги
-              </h2>
-              <ul class="menu list-unstyled">
-                <li><a href="#">Пункт 1</a></li>
-                <li><a href="#">Пункт 2</a></li>
-                <li><a href="#">Пункт 3</a></li>
-                <li><a href="#">Пункт 4</a></li>
-                <li><a href="#">Пункт 5</a></li>
-                <li><a href="#">Пункт 6</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <h2 class="section-header">Почему АГУ?</h2>
-        <div
-          class="container advantages-container"
-          style="background-image: url(./img/main/advantages/bg.svg)"
-        >
-          <div class="row d-flex justify-content-center">
-            <div
-              class="advantages-item d-flex align-items-center justify-content-center flex-column col-md-6 col-lg-4"
-              style="transform: translateY(8.5px)"
-            >
-              <lottie-player
-                class="advantages-item_anim"
-                src="./img/main/advantages/block1/anim1.json"
-                background="#EFF4FA"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
-              <h4 class="advantages-item_text">
-                Образование международного <br />
-                уровня
-              </h4>
-            </div>
-
-            <div
-              class="advantages-item d-flex align-items-center justify-content-center flex-column col-md-6 col-lg-4"
-            >
-              <lottie-player
-                class="advantages-item_anim"
-                src="./img/main/advantages/block2/anim2.json"
-                background="#EFF4FA"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
-              <h4 class="advantages-item_text">Стажировки в Европе и Азии</h4>
-            </div>
-
-            <div
-              class="advantages-item d-flex align-items-center justify-content-center flex-column col-md-6 col-lg-4"
-            >
-              <lottie-player
-                class="advantages-item_anim"
-                src="./img/main/advantages/block3/anim3.json"
-                background="#EFF4FA"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
-              <h4 class="advantages-item_text">Престижная работа</h4>
-            </div>
-
-            <div
-              class="advantages-item d-flex align-items-center justify-content-center flex-column col-md-6 col-lg-6"
-            >
-              <lottie-player
-                class="advantages-item_anim"
-                src="./img/main/advantages/block4/anim4.json"
-                background="#EFF4FA"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
-              <h4 class="advantages-item_text">5 комфортабельных общежитий</h4>
-            </div>
-
-            <div
-              class="advantages-item d-flex align-items-center justify-content-center flex-column col-md-6 col-lg-6"
-            >
-              <lottie-player
-                class="advantages-item_anim"
-                src="./img/main/advantages/block5/anim5.json"
-                background="#EFF4FA"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
-              <h4 class="advantages-item_text">Яркая студенческая жизнь</h4>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="announces-section">
-        <div
-          class="announces-section_header d-flex justify-content-center align-items-center"
-        >
-          <h2 class="section-header">Анонсы и объявления</h2>
-        </div>
-
-        <div class="announces-triangles d-none d-md-block">
-          <img
-            class="triangle1"
-            src="./img/main/advantages/triangle1.svg"
-            alt=""
-          />
-          <img
-            class="triangle2"
-            src="./img/main/advantages/triangle2.svg"
-            alt=""
-          />
-          <img
-            class="triangle3"
-            src="./img/main/advantages/triangle3.svg"
-            alt=""
-          />
-        </div>
-
-        <div class="announces-section_content">
-          <div
-            class="container announces-container d-flex justify-content-center h-100"
-          >
-            <div class="row owl-carousel announces-carousel">
-              <a class="item announces-item_link" href="#">
-                <div class="announces-item d-flex flex-column flex-md-row">
-                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
-                    <div class="announces-item_header text-center text-md-left">
-                      <h3>
-                        Приемная комиссия поздравляет всех абитуриентов и
-                        студентов с новым годом!
-                      </h3>
-                    </div>
-                    <div class="announces-item_content">
-                      <p>
-                        Завершается 2020 год. Несмотря на все трудности, он стал
-                        успешным для нас. Удалось многого достичь и в
-                        академической политике, и в научных исследованиях.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="announces-item_date d-flex flex-column align-items-end justify-content-center ml-auto"
-                  >
-                    <span class="announces-date_day"> 31 </span>
-                    <span class="announces-date_month"> дек </span>
-                    <span class="announces-date_year"> 2020 </span>
-                  </div>
-                </div>
-              </a>
-
-              <a class="item announces-item_link" href="#">
-                <div class="announces-item d-flex flex-column flex-md-row">
-                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
-                    <div class="announces-item_header text-center text-md-left">
-                      <h3>
-                        Приемная комиссия поздравляет всех абитуриентов и
-                        студентов с новым годом!
-                      </h3>
-                    </div>
-                    <div class="announces-item_content">
-                      <p>
-                        Завершается 2020 год. Несмотря на все трудности, он стал
-                        успешным для нас. Удалось многого достичь и в
-                        академической политике, и в научных исследованиях.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="announces-item_date d-flex flex-column align-items-end justify-content-center ml-auto"
-                  >
-                    <span class="announces-date_day"> 4 </span>
-                    <span class="announces-date_month"> янв </span>
-                    <span class="announces-date_year"> 2021 </span>
-                  </div>
-                </div>
-              </a>
-              <a class="item announces-item_link" href="#">
-                <div class="announces-item d-flex flex-column flex-md-row">
-                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
-                    <div class="announces-item_header text-center text-md-left">
-                      <h3>
-                        Приемная комиссия поздравляет всех абитуриентов и
-                        студентов с новым годом!
-                      </h3>
-                    </div>
-                    <div class="announces-item_content">
-                      <p>
-                        Завершается 2020 год. Несмотря на все трудности, он стал
-                        успешным для нас. Удалось многого достичь и в
-                        академической политике, и в научных исследованиях.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="announces-item_date d-flex flex-column align-items-end justify-content-center ml-auto"
-                  >
-                    <span class="announces-date_day"> 18 </span>
-                    <span class="announces-date_month"> фев </span>
-                    <span class="announces-date_year"> 2021 </span>
-                  </div>
-                </div>
-              </a>
-
-              <a class="item announces-item_link" href="#">
-                <div class="announces-item d-flex flex-column flex-md-row">
-                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
-                    <div class="announces-item_header text-center text-md-left">
-                      <h3>
-                        Приемная комиссия поздравляет всех абитуриентов и
-                        студентов с новым годом!
-                      </h3>
-                    </div>
-                    <div class="announces-item_content">
-                      <p>
-                        Завершается 2020 год. Несмотря на все трудности, он стал
-                        успешным для нас. Удалось многого достичь и в
-                        академической политике, и в научных исследованиях.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="announces-item_date d-flex flex-column align-items-end justify-content-center ml-auto"
-                  >
-                    <span class="announces-date_day"> 24 </span>
-                    <span class="announces-date_month"> фев </span>
-                    <span class="announces-date_year"> 2021 </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section states-section">
-        <h2 class="section-header">Сделай свой выбор</h2>
-
-        <div class="container states-container">
-          <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-sm-6 col-lg-4 states-item states-item_green">
-              <div
-                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-              >
-                <img
-                  class="states-item_icon"
-                  src="./img/main/states/bio-icon.svg"
-                  alt="Институт биологии"
-                />
-                <h5 class="states-item_text">
-                  Институт биологии и биотехнологий
-                </h5>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 states-item states-item_blue">
-              <div
-                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-              >
-                <img
-                  class="states-item_icon"
-                  src="./img/main/states/geography-icon.svg"
-                  alt="Институт географии"
-                />
-                <h5 class="states-item_text">Институт географии</h5>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 states-item states-item_orange">
-              <div
-                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-              >
-                <img
-                  class="states-item_icon"
-                  src="./img/main/states/history-icon.svg"
-                  alt="Институт истории и международных отношений"
-                />
-                <h5 class="states-item_text">
-                  Институт истории и международных отношений
-                </h5>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 states-item states-item_orange">
-              <div
-                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-              >
-                <img
-                  class="states-item_icon"
-                  src="./img/main/states/maths.svg"
-                  alt="Институт математики и информационных технологий"
-                />
-                <h5 class="states-item_text">
-                  Институт математики и информационных технологий
-                </h5>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 states-item states-item_red">
-              <div
-                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-              >
-                <img
-                  class="states-item_icon"
-                  src="./img/main/states/gum-icon.svg"
-                  alt="Институт гуманитарных наук"
-                />
-                <h5 class="states-item_text">Институт гуманитарных наук</h5>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 states-item states-item_blue">
-              <div
-                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-              >
-                <img
-                  class="states-item_icon"
-                  src="./img/main/states/coding.svg"
-                  alt="Институт цифровых технологий, электроники и физики"
-                />
-                <h5 class="states-item_text">
-                  Институт цифровых технологий, электроники и физики
-                </h5>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 states-item states-item_red">
-              <div
-                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-              >
-                <img
-                  class="states-item_icon"
-                  src="./img/main/states/eco-icon.svg"
-                  alt="Международный институт экономики, менеджмента и информационных систем"
-                />
-                <h5 class="states-item_text">
-                  Международный институт экономики, менеджмента и информационных
-                  систем
-                </h5>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 states-item states-item_orange">
-              <div
-                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-              >
-                <img
-                  class="states-item_icon"
-                  src="./img/main/states/law-icon.svg"
-                  alt="Юридический институт"
-                />
-                <h5 class="states-item_text">Юридический институт</h5>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 states-item states-item_green">
-              <div
-                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-              >
-                <img
-                  class="states-item_icon"
-                  src="./img/main/states/chemistry-icon.svg"
-                  alt="Институт химии и химико-фармацевтических технологий"
-                />
-                <h5 class="states-item_text">
-                  Институт химии и химико-фармацевтических технологий
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-steps d-none d-md-block">
-        <lottie-player
-          src="./img/main/steps/steps.json"
-          background="transparent"
-          speed="1"
-          style="width: 100%; height: 100%"
-          loop
-          autoplay
-        ></lottie-player>
-      </section>
-
-      <section class="section tools-section">
-        <div class="container tools-container">
-          <div class="row">
-            <div
-              class="d-none d-lg-flex flex-column justify-content-center col-lg-6 tools-description_wrapper"
-            >
-              <img
-                class="calc"
-                src="./img/main/tools/calc.svg"
-                alt="Калькулятор"
-              />
-              <h3 class="tools-description_header">Калькулятор абитуриента</h3>
-              <p class="tools-description_content">
-                Здесь будет находиться текст. Здесь будет находиться текст.
-                Здесь будет находиться текст. Здесь будет находиться текст.
-                Здесь будет находиться текст. Здесь будет находиться текст.
-                Здесь будет находиться текст. Здесь будет находиться текст.
-                Здесь будет находиться текст. Здесь будет находиться текст.
-                Здесь будет находиться текст. Здесь будет находиться текст.
-                Здесь будет находиться текст. Здесь будет находиться текст.
-                Здесь будет находиться текст. Здесь будет находиться текст.
-                Здесь будет находиться текст.
-              </p>
-              <a href="#" class="tools-description_link">Перейти</a>
-            </div>
-
-            <div class="col-lg-6 tools-items">
-              <h4 class="tools-items_header">Выберите пункт</h4>
-
-              <div class="row">
-                <div class="col-sm-6 tools-item">
-                  <a href="#" class="tools-item_link">
-                    <img
-                      src="./img/main/tools/user.svg"
-                      alt="Icon"
-                      class="tools-item_img"
+                  <g transform="translate(15.419 12.225)">
+                    <path
+                      d="M202.1,294.835a7.149,7.149,0,0,0-1.8.231.442.442,0,0,0-.3.527.408.408,0,0,0,.387.337.367.367,0,0,0,.092-.012,6.42,6.42,0,0,1,1.621-.208.44.44,0,0,0,0-.876Z"
+                      transform="translate(-199.989 -294.835)"
+                      fill="#008ad5"
                     />
-                    <span class="tools-item_header">Личный кабинет</span>
-                  </a>
+                  </g>
+                </g>
+              </svg>
+              <span>Кабинет абитуриента</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+        <div class="section">
+            <h2 class="section-header">Обзор страниц</h2>
+            <div class="container">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-4 p-5">
+                        <a class="p-5 d-flex justify-content-center align-items-center text-bold bg-dark text-center text-white" href="./main-page.html">Главная страница</a>
+                    </div>
+                    <div class="col-md-4 p-5">
+                        <a class="p-5 d-flex justify-content-center align-items-center text-bold main-button_r text-center text-white" href="./bachelors-page.html">Бакалавриат и специалитет</a>
+                    </div>
+                    <div class="col-md-4 p-5">
+                        <a class="p-5 d-flex justify-content-center align-items-center text-bold main-button_o text-center text-white" href="./magisters-page.html">Магистратура и аспирантура</a>
+                    </div>
+                    <div class="col-md-4 p-5">
+                        <a class="p-5 d-flex justify-content-center align-items-center text-bold main-button_g text-center text-white" href="./college-page.html">Колледж</a>
+                    </div>
+                    <div class="col-md-4 p-5">
+                        <a class="p-5 d-flex disabled justify-content-center align-items-center text-bold main-button_b text-center text-white">Рейтинги <br /> (в процессе)</a>
+                    </div>
                 </div>
-                <div class="col-sm-6 tools-item">
-                  <a href="#" class="tools-item_link">
-                    <img
-                      src="./img/main/tools/medal.svg"
-                      alt="Icon"
-                      class="tools-item_img"
-                    />
-                    <span class="tools-item_header">Олимпиадное движение</span>
-                  </a>
-                </div>
-                <div class="col-sm-6 tools-item">
-                  <a href="#" class="tools-item_link">
-                    <img
-                      src="./img/main/tools/money.svg"
-                      alt="Icon"
-                      class="tools-item_img"
-                    />
-                    <span class="tools-item_header"
-                      >Стипендии и материальная поддержка</span
-                    >
-                  </a>
-                </div>
-                <div class="col-sm-6 tools-item">
-                  <a href="#" class="tools-item_link">
-                    <img
-                      src="./img/main/tools/calc.svg"
-                      alt="Icon"
-                      class="tools-item_img"
-                    />
-                    <span class="tools-item_header"
-                      >Калькулятор абитуриента</span
-                    >
-                  </a>
-                </div>
-                <div class="col-sm-6 tools-item">
-                  <a href="#" class="tools-item_link">
-                    <img
-                      src="./img/main/tools/paper.svg"
-                      alt="Icon"
-                      class="tools-item_img"
-                    />
-                    <span class="tools-item_header">Целевое обучение</span>
-                  </a>
-                </div>
-                <div class="col-sm-6 tools-item">
-                  <a href="#" class="tools-item_link">
-                    <img
-                      src="./img/main/tools/wallet.svg"
-                      alt="Icon"
-                      class="tools-item_img"
-                    />
-                    <span class="tools-item_header">Платное образование</span>
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </section>
-
-      <section class="section video-section parallax-wrapper">
-        <img
-          src="./img/main/footer/triangle1.svg"
-          alt=""
-          class="d-none d-md-block video-triangle1 parallax-object"
-          data-speed="0.07"
-        />
-        <img
-          src="./img/main/footer/triangle2.svg"
-          alt=""
-          class="d-none d-md-block video-triangle2 parallax-object"
-          data-speed="0.13"
-        />
-
-        <img
-          src="./img/main/footer/footer-triangle.svg"
-          alt=""
-          class="d-none d-md-block video-triangle3 parallax-object"
-          data-speed="0.06"
-        />
-        <div
-          class="container video-container d-flex justify-content-center align-items-center flex-column"
-        >
-          <h2 class="section-header">
-            Твой выбор - Алтайский государственный университет!
-          </h2>
-
-          <!-- Вариант с Placeholder-ом от YouTube -->
-          <!----------------------------------------->
-
-          <div class="video-player_wrapper">
-            <div
-              class="youtube-player"
-              width="100%"
-              height="auto"
-              style="aspect-ratio: 16 / 9"
-              data-id="alG8CCYoly0"
-            ></div>
-
-            <!-- Вариант с Placeholder-ом со своей картинкой -->
-            <!------------------------------------------------->
-
-            <!-- <div 
-            class="youtube-player" 
-            data-id="id-of-youtube-video" 
-            data-thumbnail="url-to-img">
-            </div> -->
-
-            <!-- Вариант просто с плеером -->
-            <!------------------------------>
-
-            <!-- <iframe
-              class="video-player"
-              width="100%"
-              height="auto"
-              style="aspect-ratio: 16 / 9"
-              src="https://www.youtube.com/embed/alG8CCYoly0/"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-              allowfullscreen
-            ></iframe> -->
-          </div>
-        </div>
-      </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer d-flex align-items-center">
       <div class="container footer-container">
         <!-- <img
