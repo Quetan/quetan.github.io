@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78.208" height="76.83" viewBox="0 0 78.208 76.83">
+  <defs>
+    <filter id="Многоугольник_9" x="0" y="0" width="78.208" height="76.83" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Многоугольник_9)">
+    <path id="Многоугольник_9-2" data-name="Многоугольник 9" d="M23,0,46,39H0Z" transform="matrix(-0.8, -0.6, 0.6, -0.8, 45.74, 64.83)" fill="#e5e5e5"/>
+  </g>
+</svg>

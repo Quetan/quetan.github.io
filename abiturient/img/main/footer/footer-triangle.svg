@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74.608" height="73.427" viewBox="0 0 74.608 73.427">
+  <defs>
+    <filter id="Многоугольник_12" x="0" y="0" width="74.608" height="73.427" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Многоугольник_12)">
+    <g id="Многоугольник_12-2" data-name="Многоугольник 12" transform="matrix(0.8, 0.6, -0.6, 0.8, 31.27, 6)" fill="none">
+      <path d="M21.5,0,43,37H0Z" stroke="none"/>
+      <path d="M 21.5 3.980747222900391 L 3.475299835205078 35 L 39.52470016479492 35 L 21.5 3.980747222900391 M 21.5 0 L 43 37 L 0 37 L 21.5 0 Z" stroke="none" fill="#ff9201"/>
+    </g>
+  </g>
+</svg>
