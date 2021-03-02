@@ -125,13 +125,13 @@ html {
 }
 
 .sidebar .sidebar-menu {
-  padding: 20px 35px 100px 35px;
+  padding: 20px 35px 70px 35px;
   border: 2px solid;
   border-top: none;
 }
 
 .sidebar .sidebar-menu .sidebar-menu_item a {
-  padding: 25px 35px;
+  padding: 15px 35px;
   font-weight: 500;
   padding-left: 0;
   display: block;
@@ -662,6 +662,10 @@ html {
   padding: 15px 30px;
 }
 
+.advantages-container .advantages-item:hover a {
+  text-decoration: none;
+}
+
 .advantages-item .advantages-item_anim {
   box-shadow: 12px 13px 6px 0px rgba(0, 0, 0, 0);
   transition: box-shadow 0.4s ease;
@@ -680,8 +684,32 @@ html {
   transform: translateY(-60px);
 }
 
+/* Steps styles */
+
 .steps-section {
   background-color: #003a59;
+}
+
+.steps-section .steps-anim{
+  width: 100%;
+  height: 100vh;
+}
+
+.steps-section_white .steps-anim{
+  width: 100%;
+  height: 100vh;
+}
+
+
+@media screen and (max-width: 768px){
+  .steps-section .steps-anim{
+    width: 100%;
+    height: 100%;
+  }
+  .steps-section_white .steps-anim{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .steps-section_white {
@@ -856,9 +884,12 @@ html {
 }
 
 .states-section .states-item {
-  /* min-height: 300px; */
   padding: 15px 30px;
   margin-bottom: 35px;
+}
+
+.states-section .states-item:hover a {
+  text-decoration: none;
 }
 
 .states-item:hover .states-item_text {
@@ -1032,6 +1063,26 @@ html {
   background-color: #d7e5f1;
   position: relative;
   transition: background-color 0.4s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.tools-items .tools-item.tablinks.active .tools-item_link {
+  background-color: #b6c9d9;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0; transform: translateX(-750px);}
+  to {opacity: 1; transform: translateX(0px);}
+}
+
+.tools-item .tools-item_link:focus,
+.tools-item .tools-item_link:active {
+  outline: none;
 }
 
 .tools-item .tools-item_link:hover {
@@ -1055,6 +1106,7 @@ html {
   left: 22px;
   font-size: 16px;
   color: var(--asu-adv-blue);
+  text-align: left;
 }
 
 /* Video */
