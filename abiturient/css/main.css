@@ -671,6 +671,7 @@ html {
   transition: box-shadow 0.4s ease;
   width: 100%;
   height: 300px;
+  aspect-ratio: 1 / 1;
 }
 
 .advantages-item:hover .advantages-item_anim {
@@ -703,12 +704,15 @@ html {
 
 @media screen and (max-width: 768px){
   .steps-section .steps-anim{
-    width: 100%;
-    height: 100%;
+    width: 118%;
+    height: auto;
+    transform: translate3d(0,0,0) translateX(-17%) !important;
   }
+  
   .steps-section_white .steps-anim{
-    width: 100%;
-    height: 100%;
+    width: 118%;
+    height: auto;
+    transform: translate3d(0,0,0) translateX(-17%) !important;
   }
 }
 
@@ -899,6 +903,20 @@ html {
 .states-item .states-item_wrapper {
   background-color: transparent;
   transition: background-color 0.4s ease;
+}
+
+@media screen and (max-width: 576px){
+  .states-item .states-item_wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 376px){
+  .states-item .states-item_wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 /* Green */
