@@ -25,6 +25,10 @@ html {
   color: #444444;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .section {
   padding-top: 50px;
   padding-bottom: 70px;

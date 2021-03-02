@@ -688,7 +688,7 @@
                 src="./img/main/tools/user.svg"
                 alt="Пользователь"
               />
-              <h3 class="tools-description_header">Личный кабинет</h3>
+              <h3 class="tools-description_header text-center text-lg-left">Личный кабинет</h3>
               <p class="tools-description_content text-center text-lg-left">
                 Здесь будет находиться текст. Здесь будет находиться текст.
                 Здесь будет находиться текст. Здесь будет находиться текст.
@@ -709,7 +709,7 @@
               class="tabcontent mb-5 mb-lg-0 flex-column justify-content-center align-items-center align-items-lg-start col-lg-6 tools-description_wrapper"
             >
               <img class="calc" src="./img/main/tools/medal.svg" alt="Медаль" />
-              <h3 class="tools-description_header">Олимпиадное движение</h3>
+              <h3 class="tools-description_header text-center text-lg-left">Олимпиадное движение</h3>
               <p class="tools-description_content text-center text-lg-left">
                 Здесь будет находиться текст. Здесь будет находиться текст.
                 Здесь будет находиться текст. Здесь будет находиться текст.
@@ -730,7 +730,7 @@
               class="tabcontent mb-5 mb-lg-0 flex-column justify-content-center align-items-center align-items-lg-start col-lg-6 tools-description_wrapper"
             >
               <img class="calc" src="./img/main/tools/money.svg" alt="Монета" />
-              <h3 class="tools-description_header">
+              <h3 class="tools-description_header text-center text-lg-left">
                 Стипендии и материальная поддержка
               </h3>
               <p class="tools-description_content text-center text-lg-left">
@@ -757,7 +757,7 @@
                 src="./img/main/tools/calc.svg"
                 alt="Калькулятор"
               />
-              <h3 class="tools-description_header">Калькулятор абитуриента</h3>
+              <h3 class="tools-description_header text-center text-lg-left">Калькулятор абитуриента</h3>
               <p class="tools-description_content text-center text-lg-left">
                 Здесь будет находиться текст. Здесь будет находиться текст.
                 Здесь будет находиться текст. Здесь будет находиться текст.
@@ -782,7 +782,7 @@
                 src="./img/main/tools/paper.svg"
                 alt="Договор"
               />
-              <h3 class="tools-description_header">Целевое обучение</h3>
+              <h3 class="tools-description_header text-center text-lg-left">Целевое обучение</h3>
               <p class="tools-description_content text-center text-lg-left">
                 Здесь будет находиться текст. Здесь будет находиться текст.
                 Здесь будет находиться текст. Здесь будет находиться текст.
@@ -807,7 +807,7 @@
                 src="./img/main/tools/wallet.svg"
                 alt="Кошелек"
               />
-              <h3 class="tools-description_header">Платное образование</h3>
+              <h3 class="tools-description_header text-center text-lg-left">Платное образование</h3>
               <p class="tools-description_content text-center text-lg-left">
                 Здесь будет находиться текст. Здесь будет находиться текст.
                 Здесь будет находиться текст. Здесь будет находиться текст.
@@ -929,6 +929,7 @@
             }
             document.getElementById(toolName).style.display = "flex";
             evt.currentTarget.className += " active";
+            document.location.href = "#" + toolName;
           }
         </script>
       </section>
