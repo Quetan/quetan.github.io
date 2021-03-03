@@ -49,11 +49,16 @@ function goodParallax() {
 
 $(".slider-container_slide").owlCarousel({
   loop: true,
+  video: true,
   margin: 10,
   nav: true,
   items: 1,
   nav: false,
   dots: true,
+  // videoWidth: 300,
+  // videoHeight: 300,
+  lazyLoad: true,
+  center: true,
   autoplay: true,
   autoplayTimeout: 4000,
   autoplayHoverPause: true,
