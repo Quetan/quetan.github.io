@@ -147,6 +147,7 @@ function createIframe(v, id) {
   );
   iframe.setAttribute("frameborder", "0");
   iframe.setAttribute("class", "youtube-iframe");
+  iframe.setAttribute("loading", "lazy");
   v.firstChild.replaceWith(iframe);
 }
 
