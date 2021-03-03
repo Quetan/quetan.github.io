@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <title>Абитуриенту АлтГУ</title>
 
     <!-- Bootstrap 4 -->
@@ -35,12 +35,14 @@
                     <a class="header-navigation_link" href="#">Университет</a>
                   </li>
                   <li>
-                    <a class="header-navigation_link" href="#">Школьник АлтГУ</a>
+                    <a class="header-navigation_link" href="#"
+                      >Школьник АлтГУ</a
+                    >
                   </li>
                 </ul>
               </nav>
             </div>
-  
+
             <!-- Social links -->
             <div
               class="links-container_links col-sm-4 d-flex d-lg-none align-items-center justify-content-center justify-content-md-end"
@@ -68,7 +70,7 @@
                 /></a>
               </div>
             </div>
-  
+
             <!-- Search -->
             <div
               class="d-none col-lg-5 d-lg-flex align-items-center justify-content-end"
@@ -92,23 +94,22 @@
 
       <div class="container links-container">
         <div class="row">
-          <div
+          <a
+            href="./"
             class="links-container_logo col-sm-8 col-lg-5 mb-3 mb-sm-0 d-flex align-items-center justify-content-center justify-content-sm-start"
           >
-            <a href="/">
             <img
               class="mr-2 mr-md-3"
               src="./img/main/main-section/Logo.svg"
               alt="Логотип АлтГУ"
             />
-          </a>
             <div class="asu-text d-flex flex-column text-center">
               <span class="asu-text_small"
                 >Алтайский государственный университет</span
               >
               <span class="asu-text_large">Абитуриент</span>
             </div>
-          </div>
+          </a>
 
           <div
             class="links-container_links col-lg-4 d-none d-lg-flex align-items-center"
@@ -153,7 +154,7 @@
     <main class="main">
       <!-- Main section -->
       <section class="section main-section">
-        <div class="main-section_background d-none d-md-block">
+        <div class="main-section_background">
           <!-- Background animation -->
           <lottie-player
             src="./img/main/banner/banner_main.json"
@@ -174,31 +175,41 @@
             </div>
             <div class="item">
               <div class="video-wrapper">
-                <video loading="lazy" class="banner-video" poster="./img/main/banner/video_preview.jpg" preload="none" muted playsinline loop autoplay>
-                  <source src="./img/main/banner/video.mp4" type="video/mp4">
+                <video
+                  loading="lazy"
+                  class="banner-video"
+                  poster="./img/main/banner/video_preview.jpg"
+                  preload="none"
+                  muted
+                  playsinline
+                  loop
+                  autoplay
+                >
+                  <source src="./img/main/banner/video.mp4" type="video/mp4" />
                 </video>
-            </div>
+              </div>
               <style>
-                .video-wrapper{
+                .video-wrapper {
                   position: relative;
                   box-sizing: content-box;
                 }
-                .banner-video{
-                  width: 100% !important; 
+                .banner-video {
+                  width: 100% !important;
                   height: auto !important;
-                  border: none; 
+                  border: none;
                   outline: none;
                   position: relative;
                 }
-                .video-wrapper::after{
+                .video-wrapper::after {
                   display: block;
-                  content: '';
-                  width: 100%;
+                  content: "";
+                  width: 101%;
                   height: 100%;
-                  top: 0;
-                  left: 0;
+                  top: -6px;
+                  right: -6px;
+                  left: -6px;
                   position: absolute;
-                  border: 4px solid #fff;
+                  border: 12px solid #ffffff;
                   border-bottom: none;
                 }
               </style>
@@ -665,7 +676,7 @@
       <!-- Steps section -->
       <section class="section steps-section">
         <lottie-player
-        loading="lazy"
+          loading="lazy"
           class="steps-anim d-none d-lg-block"
           src="./img/main/steps/steps.json"
           background="transparent"
@@ -674,14 +685,14 @@
           autoplay
         ></lottie-player>
         <lottie-player
-        loading="lazy"
-        class="steps-anim d-block d-lg-none"
-        src="./img/main/steps/Steps_mobile_standart.json"
-        background="transparent"
-        speed="1"
-        loop
-        autoplay
-      ></lottie-player>
+          loading="lazy"
+          class="steps-anim d-block d-lg-none"
+          src="./img/main/steps/Steps_mobile_standart.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
       </section>
       <!-- Tools section -->
       <section class="section tools-section">
@@ -697,7 +708,9 @@
                 src="./img/main/tools/user.svg"
                 alt="Пользователь"
               />
-              <h3 class="tools-description_header text-center text-lg-left">Личный кабинет</h3>
+              <h3 class="tools-description_header text-center text-lg-left">
+                Личный кабинет абитуриента
+              </h3>
               <p class="tools-description_content text-center text-lg-left">
                 Здесь будет находиться текст. Здесь будет находиться текст.
                 Здесь будет находиться текст. Здесь будет находиться текст.
@@ -718,7 +731,9 @@
               class="tabcontent mb-5 mb-lg-0 flex-column justify-content-center align-items-center align-items-lg-start col-lg-6 tools-description_wrapper"
             >
               <img class="calc" src="./img/main/tools/medal.svg" alt="Медаль" />
-              <h3 class="tools-description_header text-center text-lg-left">Олимпиадное движение</h3>
+              <h3 class="tools-description_header text-center text-lg-left">
+                Олимпиадное движение
+              </h3>
               <p class="tools-description_content text-center text-lg-left">
                 Здесь будет находиться текст. Здесь будет находиться текст.
                 Здесь будет находиться текст. Здесь будет находиться текст.
@@ -766,7 +781,9 @@
                 src="./img/main/tools/calc.svg"
                 alt="Калькулятор"
               />
-              <h3 class="tools-description_header text-center text-lg-left">Калькулятор абитуриента</h3>
+              <h3 class="tools-description_header text-center text-lg-left">
+                Калькулятор абитуриента
+              </h3>
               <p class="tools-description_content text-center text-lg-left">
                 Здесь будет находиться текст. Здесь будет находиться текст.
                 Здесь будет находиться текст. Здесь будет находиться текст.
@@ -791,7 +808,9 @@
                 src="./img/main/tools/paper.svg"
                 alt="Договор"
               />
-              <h3 class="tools-description_header text-center text-lg-left">Целевое обучение</h3>
+              <h3 class="tools-description_header text-center text-lg-left">
+                Целевое обучение
+              </h3>
               <p class="tools-description_content text-center text-lg-left">
                 Здесь будет находиться текст. Здесь будет находиться текст.
                 Здесь будет находиться текст. Здесь будет находиться текст.
@@ -816,7 +835,9 @@
                 src="./img/main/tools/wallet.svg"
                 alt="Кошелек"
               />
-              <h3 class="tools-description_header text-center text-lg-left">Платное образование</h3>
+              <h3 class="tools-description_header text-center text-lg-left">
+                Платное образование
+              </h3>
               <p class="tools-description_content text-center text-lg-left">
                 Здесь будет находиться текст. Здесь будет находиться текст.
                 Здесь будет находиться текст. Здесь будет находиться текст.
@@ -836,7 +857,7 @@
 
               <div class="row tab">
                 <div
-                  class="col-sm-6 tools-item tablinks active"
+                  class="col-6 tools-item tablinks active"
                   onclick="openTool(event, 'lk')"
                 >
                   <button class="tools-item_link">
@@ -845,11 +866,11 @@
                       alt="Icon"
                       class="tools-item_img"
                     />
-                    <span class="tools-item_header">Личный кабинет</span>
+                    <span class="tools-item_header">Личный кабинет абитуриента</span>
                   </button>
                 </div>
                 <div
-                  class="col-sm-6 tools-item tablinks"
+                  class="col-6 tools-item tablinks"
                   onclick="openTool(event, 'olimp')"
                 >
                   <button class="tools-item_link">
@@ -862,7 +883,7 @@
                   </button>
                 </div>
                 <div
-                  class="col-sm-6 tools-item tablinks"
+                  class="col-6 tools-item tablinks"
                   onclick="openTool(event, 'money')"
                 >
                   <button class="tools-item_link">
@@ -877,7 +898,7 @@
                   </button>
                 </div>
                 <div
-                  class="col-sm-6 tools-item tablinks"
+                  class="col-6 tools-item tablinks"
                   onclick="openTool(event, 'calc')"
                 >
                   <button class="tools-item_link">
@@ -892,7 +913,7 @@
                   </button>
                 </div>
                 <div
-                  class="col-sm-6 tools-item tablinks"
+                  class="col-6 tools-item tablinks"
                   onclick="openTool(event, 'cel')"
                 >
                   <button class="tools-item_link">
@@ -905,7 +926,7 @@
                   </button>
                 </div>
                 <div
-                  class="col-sm-6 tools-item tablinks"
+                  class="col-6 tools-item tablinks"
                   onclick="openTool(event, 'plat')"
                 >
                   <button class="tools-item_link">
@@ -982,19 +1003,19 @@
               data-id="alG8CCYoly0"
             ></div>
 
-            <!-- Вариант с Placeholder-ом со своей картинкой -->
-            <!------------------------------------------------->
+          <!-- Вариант с Placeholder-ом со своей картинкой -->
+          <!------------------------------------------------->
 
-            <!-- <div 
+          <!-- <div 
             class="youtube-player" 
             data-id="id-of-youtube-video" 
             data-thumbnail="url-to-img">
             </div> -->
 
-            <!-- Вариант просто с плеером -->
-            <!------------------------------>
+          <!-- Вариант просто с плеером -->
+          <!------------------------------>
 
-            <!-- <iframe
+          <!-- <iframe
               class="video-player"
               width="100%"
               height="auto"
@@ -1004,7 +1025,23 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
               allowfullscreen
             ></iframe> -->
-          </div>
+
+          <!-- Вариант со своим видео и своей обложкой -->
+            <!-- poster="./img/main/banner/Превью.png" -->
+          <!-- <div class="video-player_wrapper">
+            <video
+              loading="lazy"
+              class="video-section_video"
+              style="width: 100%; height: auto; transform: translateX(-6.5px); box-shadow: 4px 4px 5px 1px rgb(0,0,0,0.33);"
+              preload="none"
+              controls
+              muted
+              playsinline
+              autoplay
+            >
+              <source src="./img/main/video.mp4" type="video/mp4" />
+            </video>
+          </div> -->
         </div>
       </section>
     </main>

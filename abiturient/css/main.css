@@ -364,6 +364,10 @@ html {
   padding-bottom: 25px;
 }
 
+.links-container .links-container_logo:hover{
+  text-decoration: none;
+}
+
 .links-container .links-container_logo img {
   width: 94px;
   height: 94px;
@@ -1174,6 +1178,22 @@ html {
   text-align: left;
 }
 
+@media screen and (max-width: 768px){
+  .tools-item .tools-item_link .tools-item_header {
+    width: 80%;
+    left: 16px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 426px){
+  .tools-item .tools-item_link .tools-item_header {
+    width: 90%;
+    font-size: 14px;
+    left: 8px;
+  }
+}
+
 /* Video */
 
 .youtube-container {
@@ -1307,6 +1327,10 @@ div.youtube-play-btn {
   width: calc(100% + 10px);
   height: 100%;
   border: 3px solid var(--asu-adv-blue);
+}
+
+.video-section .video-section_video:focus{
+  outline: none;
 }
 
 /* Footer */
@@ -1582,7 +1606,15 @@ div.youtube-play-btn {
 @media screen and (max-width: 590px){
   .college-states-button img {
     position: relative;
+    max-height: 35px;
   } 
+  .college-states-button {
+    padding: 15px;
+    font-size: 12px;
+  }
+  .college-states-button:first-child {
+    margin-bottom: 30px;
+  }
 }
 
 .college-states-button.main-button_r::after{
