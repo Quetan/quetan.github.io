@@ -60,7 +60,7 @@ $(".slider-container_slide").owlCarousel({
   lazyLoad: true,
   center: true,
   autoplay: true,
-  autoplayTimeout: 4000,
+  autoplayTimeout: 5000,
   autoplayHoverPause: true,
 });
 
@@ -158,3 +158,43 @@ $("#video-modal").on("hidden.bs.modal", function (e) {
 $("#video-modal").on("show.bs.modal", function (e) {
   getVideos();
 });
+
+//Time countdown
+
+document.addEventListener("DOMContentLoaded", () => {
+  var countDownDate = new Date("Jun 18, 2021 00:00:00").getTime();
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let timeToEvent = document.querySelector('#timeToEvent');
+    timeToEvent.innerHTML = days + "д " + hours + "ч " + minutes + "мин " + seconds + "сек ";
+    if (distance < 0) {
+        clearInterval(x);
+        timeToEvent.innerHTML = "Приемная комиссия ужа стартовала!";
+    }
+}, 1000);
+});
+
+//tabs
+
+function openTool(evt, toolName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(
+      " active",
+      ""
+    );
+  }
+  document.getElementById(toolName).style.display = "flex";
+  evt.currentTarget.className += " active";
+  document.location.href = "#" + toolName;
+}

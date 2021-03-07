@@ -154,78 +154,32 @@
     <main class="main">
       <!-- Main section -->
       <section class="section main-section">
-        <div class="main-section_background">
-          <!-- Background animation -->
-          <lottie-player
-            src="./img/main/banner/banner_main.json"
-            class="main-section_background"
-            background="transparent"
-            speed="1"
-            loop
-            autoplay
-          ></lottie-player>
-        </div>
-        <div class="container slider-container h-100">
+        <div class="container-fluid slider-container h-100">
           <div class="owl-carousel slider-container_slide">
             <div class="item">
-              <h1 class="text-center">
-                Абитуриент <br />
-                <span>АГУ</span>
-              </h1>
+              <lottie-player
+                src="./img/main/banner/bannerWithText.json"
+                background="transparent"
+                style="width: 100%; height: auto"
+                speed="1"
+                loop
+                autoplay
+              ></lottie-player>
             </div>
             <div class="item">
-              <div class="video-wrapper">
-                <video
-                  loading="lazy"
-                  class="banner-video"
-                  poster="./img/main/banner/video_preview.jpg"
-                  preload="none"
-                  muted
-                  playsinline
-                  loop
-                  autoplay
-                >
-                  <source src="./img/main/banner/video.mp4" type="video/mp4" />
-                </video>
-              </div>
-              <style>
-                .video-wrapper {
-                  position: relative;
-                  box-sizing: content-box;
-                }
-                .banner-video {
-                  width: 100% !important;
-                  height: auto !important;
-                  border: none;
-                  outline: none;
-                  position: relative;
-                }
-                .video-wrapper::after {
-                  display: block;
-                  content: "";
-                  width: 101%;
-                  height: 100%;
-                  top: -6px;
-                  right: -6px;
-                  left: -6px;
-                  position: absolute;
-                  border: 12px solid #ffffff;
-                  border-bottom: none;
-                }
-              </style>
+              <lottie-player
+                src="./img/main/banner/slideForeign.json"
+                style="width: 100%; height: auto"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+              ></lottie-player>
             </div>
-            <div class="item">
-              <h1 class="text-center">
-                Абитуриент <br />
-                <span>АГУ</span>
-              </h1>
-            </div>
-            <div class="item">
-              <h1 class="text-center">
-                Абитуриент <br />
-                <span>АГУ</span>
-              </h1>
-            </div>
+            <!-- <div class="item text-center">
+              <h1 class="text-center" id="timeToEvent">1</h1>
+              <p>До приемной комиссии</p>
+            </div> -->
           </div>
         </div>
       </section>
@@ -670,6 +624,49 @@
                 </h5>
               </a>
             </div>
+
+            <!-- Филиалы -->
+            <div class="col-sm-6 col-lg-4 states-item states-item_blue">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/university.svg"
+                  alt="Институт химии и химико-фармацевтических технологий"
+                />
+                <h5 class="states-item_text">
+                  Рубцовский институт (филиал) АлтГУ
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_green">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/university.svg"
+                  alt="Институт химии и химико-фармацевтических технологий"
+                />
+                <h5 class="states-item_text">Филиал АлтГУ в г.Белокурихе</h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_red">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/university.svg"
+                  alt="Институт химии и химико-фармацевтических технологий"
+                />
+                <h5 class="states-item_text">Филиал АлтГУ в г.Бийске</h5>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -866,7 +863,9 @@
                       alt="Icon"
                       class="tools-item_img"
                     />
-                    <span class="tools-item_header">Личный кабинет абитуриента</span>
+                    <span class="tools-item_header"
+                      >Личный кабинет абитуриента</span
+                    >
                   </button>
                 </div>
                 <div
@@ -942,26 +941,6 @@
             </div>
           </div>
         </div>
-
-        <script>
-          function openTool(evt, toolName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-              tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-              tablinks[i].className = tablinks[i].className.replace(
-                " active",
-                ""
-              );
-            }
-            document.getElementById(toolName).style.display = "flex";
-            evt.currentTarget.className += " active";
-            document.location.href = "#" + toolName;
-          }
-        </script>
       </section>
       <!-- Video section -->
       <section class="section video-section parallax-wrapper">
@@ -1003,19 +982,19 @@
               data-id="alG8CCYoly0"
             ></div>
 
-          <!-- Вариант с Placeholder-ом со своей картинкой -->
-          <!------------------------------------------------->
+            <!-- Вариант с Placeholder-ом со своей картинкой -->
+            <!------------------------------------------------->
 
-          <!-- <div 
+            <!-- <div 
             class="youtube-player" 
             data-id="id-of-youtube-video" 
             data-thumbnail="url-to-img">
             </div> -->
 
-          <!-- Вариант просто с плеером -->
-          <!------------------------------>
+            <!-- Вариант просто с плеером -->
+            <!------------------------------>
 
-          <!-- <iframe
+            <!-- <iframe
               class="video-player"
               width="100%"
               height="auto"
@@ -1026,9 +1005,9 @@
               allowfullscreen
             ></iframe> -->
 
-          <!-- Вариант со своим видео и своей обложкой -->
+            <!-- Вариант со своим видео и своей обложкой -->
             <!-- poster="./img/main/banner/Превью.png" -->
-          <!-- <div class="video-player_wrapper">
+            <!-- <div class="video-player_wrapper">
             <video
               loading="lazy"
               class="video-section_video"
@@ -1042,6 +1021,7 @@
               <source src="./img/main/video.mp4" type="video/mp4" />
             </video>
           </div> -->
+          </div>
         </div>
       </section>
     </main>
