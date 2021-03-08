@@ -13,11 +13,11 @@
     <!-- OwlCarousel -->
     <link rel="stylesheet" href="./css/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="./css/assets/owl.theme.default.min.css" />
-
     <!-- Главный CSS файл -->
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+
     <!-- Header -->
     <header class="header d-flex align-items-center flex-column">
       <div class="header-container_bg">
@@ -107,7 +107,7 @@
               <span class="asu-text_small"
                 >Алтайский государственный университет</span
               >
-              <span class="asu-text_large">Абитуриент</span>
+              <h1 class="asu-text_large">Абитуриент</h1>
             </div>
           </a>
 
@@ -176,10 +176,6 @@
                 autoplay
               ></lottie-player>
             </div>
-            <!-- <div class="item text-center">
-              <h1 class="text-center" id="timeToEvent">1</h1>
-              <p>До приемной комиссии</p>
-            </div> -->
           </div>
         </div>
       </section>
@@ -187,6 +183,18 @@
       <section class="section advantages-section">
         <div class="container main-buttons-container">
           <div class="row">
+            <div class="col-12 justify-content-center align-items-center mb-5">
+              <div
+              class="container countdown d-flex flex-column justify-content-center text-center">
+                <h3 class="text-center">До начала работы приемной комиссии:</h3>
+                <div class="countdown-items d-flex flex-column flex-md-row justify-content-center align-items-center">
+                  <span class="countdown-days mr-0 mr-md-2 w-md-auto mb-2 mb-md-0" id="countdown-days"></span>
+                  <span class="countdown-hours mr-0 mr-md-2 w-md-auto mb-2 mb-md-0" id="countdown-hours"></span>
+                  <span class="countdown-minutes mr-0 mr-md-2 w-md-auto mb-2 mb-md-0" id="countdown-minutes"></span>
+                  <span class="countdown-secs w-md-auto mb-2 mb-md-0" id="countdown-secs"></span>
+                </div>
+              </div>
+            </div>
             <div
               class="main-button_r dropdown closed main-button col-lg-3 col-md-6 p-0"
             >
@@ -1140,7 +1148,6 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- OwlCarousel -->
     <script src="./js/owl.carousel.min.js"></script>
-
     <!-- Главный JS файл -->
     <script src="./js/main.js"></script>
   </body>

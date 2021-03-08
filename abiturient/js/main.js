@@ -14,10 +14,9 @@ dropdown.forEach((item) => {
       item.classList.add("closed");
     }
   });
-}); 
+});
 
 // PARALLAX FUNCTIONALITY
-
 function throttle(fn, wait) {
   var time = Date.now();
   return function () {
@@ -29,7 +28,6 @@ function throttle(fn, wait) {
 }
 
 window.addEventListener("scroll", throttle(goodParallax, 14));
-
 function goodParallax() {
   let scrolled = window.pageYOffset;
   let wrappers = document.querySelectorAll(".parallax-wrapper");
@@ -44,19 +42,15 @@ function goodParallax() {
   });
 }
 
-
 // OWL CAROUSEL
-
 $(".slider-container_slide").owlCarousel({
   loop: true,
-  video: true,
   margin: 10,
   nav: true,
   items: 1,
+  singleItem: true,
   nav: false,
   dots: true,
-  // videoWidth: 300,
-  // videoHeight: 300,
   lazyLoad: true,
   center: true,
   autoplay: true,
@@ -81,6 +75,30 @@ $(".announces-carousel").owlCarousel({
     },
   },
 });
+
+// countdown script
+function countDown() {
+  var distance =
+    new Date("Jun 18, 2021 00:00:00").getTime() - new Date().getTime();
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  let daysWrapper = document.getElementById("countdown-days");
+  daysWrapper = daysWrapper.innerHTML = days + " дн";
+  let hoursWrapper = document.getElementById("countdown-hours");
+  hoursWrapper = hoursWrapper.innerHTML = hours + " ч";
+  let minutesWrapper = document.getElementById("countdown-minutes");
+  minutesWrapper = minutesWrapper.innerHTML = minutes + " мин";
+  let secsWrapper = document.getElementById("countdown-secs");
+  secsWrapper = secsWrapper.innerHTML = seconds + " сек";
+  if (distance < 0) {
+    clearInterval(timer);
+    document.querySelector(".countdown-items").innerHTML =
+      "Приемная комиссия ужа стартовала!";
+  }
+}
+let timer = setInterval(countDown, 1000);
 
 // YOUTUBE VIDEO PLACEHOLDER
 
@@ -159,26 +177,6 @@ $("#video-modal").on("show.bs.modal", function (e) {
   getVideos();
 });
 
-//Time countdown
-
-document.addEventListener("DOMContentLoaded", () => {
-  var countDownDate = new Date("Jun 18, 2021 00:00:00").getTime();
-  var x = setInterval(function() {
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    let timeToEvent = document.querySelector('#timeToEvent');
-    timeToEvent.innerHTML = days + "д " + hours + "ч " + minutes + "мин " + seconds + "сек ";
-    if (distance < 0) {
-        clearInterval(x);
-        timeToEvent.innerHTML = "Приемная комиссия ужа стартовала!";
-    }
-}, 1000);
-});
-
 //tabs
 
 function openTool(evt, toolName) {
@@ -189,10 +187,7 @@ function openTool(evt, toolName) {
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(
-      " active",
-      ""
-    );
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(toolName).style.display = "flex";
   evt.currentTarget.className += " active";
