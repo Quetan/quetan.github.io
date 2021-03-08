@@ -330,12 +330,16 @@ html {
   height: 100%;
 }
 
-.header-navigation ul li:first-child {
+.header-navigation ul li{
   margin-right: 50px;
 }
 
+.header-navigation ul li:last-child{
+  margin-right: 0px;
+}
+
 @media screen and (max-width: 768px) {
-  .header-navigation ul li:first-child {
+  .header-navigation ul li {
     margin-right: 15px;
   }
 }
@@ -569,7 +573,7 @@ html {
 }
 
 .countdown h3 {
-  margin-bottom: 35px;
+  margin-bottom: 10px;
   font-size: 33px;
   color: var(--asu-adv-blue);
 }
@@ -587,35 +591,30 @@ html {
   font-weight: 900;
   border-radius: 15px;
   color: #fff;
-  font-size: 25px;
-  /* width: 100%; */
-  text-transform: uppercase;
+  font-size: 44px;
+  text-transform: lowercase;
 }
 
 @media screen and (max-width: 768px) {
   .countdown span {
     padding: 20px 15px;
-    font-weight: 900;
-    border-radius: 15px;
     color: #fff;
-    font-size: 16px;
-    /* width: 100%; */
-    text-transform: uppercase;
+    font-size: 33px;
+    text-transform: lowercase;
     width: 50%;
   }
 }
-
 .countdown-days {
-  background-color: var(--asu-red);
+  color: var(--asu-red) !important;
 }
 .countdown-hours {
-  background-color: var(--asu-orange);
+  color: var(--asu-orange) !important;
 }
 .countdown-minutes {
-  background-color: var(--asu-green);
+  color: var(--asu-green) !important;
 }
 .countdown-secs {
-  background-color: var(--asu-blue);
+  color: var(--asu-blue) !important;
 }
 
 .main-buttons-container {
@@ -990,7 +989,7 @@ html {
 }
 
 .announces-container .announces-item .announces-item_header h3 {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
   color: #ffffff;
   text-transform: uppercase;
