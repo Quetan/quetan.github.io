@@ -1,88 +1,90 @@
 "use strict";
 
 // DROPDOWN FUNCTIONALITY
-
-let dropdown = document.querySelectorAll(".dropdown");
-dropdown.forEach((item) => {
-  item.addEventListener("mouseenter", (e) => {
-    if (item.classList.contains("closed")) {
-      item.classList.remove("closed");
-    }
-  });
-  item.addEventListener("mouseleave", (e) => {
-    if (!item.classList.contains("closed")) {
-      item.classList.add("closed");
-    }
-  });
-});
-
-// PARALLAX FUNCTIONALITY
-function throttle(fn, wait) {
-  var time = Date.now();
-  return function () {
-    if (time + wait - Date.now() < 0) {
-      fn();
-      time = Date.now();
-    }
-  };
-}
-
-window.addEventListener("scroll", throttle(goodParallax, 14));
-function goodParallax() {
-  let scrolled = window.pageYOffset;
-  let wrappers = document.querySelectorAll(".parallax-wrapper");
-  wrappers.forEach((wrapper) => {
-    let offset = Math.abs(wrapper.offsetTop - window.innerHeight / 2);
-    let objects = wrapper.querySelectorAll(".parallax-object");
-    objects.forEach((object) => {
-      let speed = object.dataset.speed;
-      let coords = (scrolled - offset) * speed + "px";
-      object.style.transform = "translateY(-" + coords + ")";
+(function () {
+  let dropdown = document.querySelectorAll(".dropdown");
+  dropdown.forEach((item) => {
+    item.addEventListener("mouseenter", (e) => {
+      if (item.classList.contains("closed")) {
+        item.classList.remove("closed");
+      }
+    });
+    item.addEventListener("mouseleave", (e) => {
+      if (!item.classList.contains("closed")) {
+        item.classList.add("closed");
+      }
     });
   });
-}
+})();
+
+// PARALLAX FUNCTIONALITY
+(function () {
+  function throttle(fn, wait) {
+    var time = Date.now();
+    return function () {
+      if (time + wait - Date.now() < 0) {
+        fn();
+        time = Date.now();
+      }
+    };
+  }
+
+  window.addEventListener("scroll", throttle(goodParallax, 14));
+  function goodParallax() {
+    let scrolled = window.pageYOffset;
+    let wrappers = document.querySelectorAll(".parallax-wrapper");
+    wrappers.forEach((wrapper) => {
+      let offset = Math.abs(wrapper.offsetTop - window.innerHeight / 2);
+      let objects = wrapper.querySelectorAll(".parallax-object");
+      objects.forEach((object) => {
+        let speed = object.dataset.speed;
+        let coords = (scrolled - offset) * speed + "px";
+        object.style.transform = "translateY(-" + coords + ")";
+      });
+    });
+  }
+})();
 
 // OWL CAROUSEL
-$(".slider-container_slide").owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  items: 1,
-  singleItem: true,
-  nav: false,
-  dots: true,
-  lazyLoad: true,
-  center: true,
-  autoplay: true,
-  autoplayTimeout: 5000,
-  autoplayHoverPause: true,
-});
 
-$(".announces-carousel").owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  dots: false,
-  autoplay: true,
-  autoplayTimeout: 2000,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
+(function () {
+  $(".slider-container_slide").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    items: 1,
+    singleItem: true,
+    nav: false,
+    dots: true,
+    lazyLoad: true,
+    center: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+  });
+
+  $(".announces-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      992: {
+        items: 2,
+      },
     },
-    992: {
-      items: 2,
-    },
-  },
-});
+  });
+})();
 
 // YOUTUBE VIDEO PLACEHOLDER
 
 (function () {
-  getVideos();
-})();
-
-function getVideos() {
   var v = document.getElementsByClassName("youtube-player");
   for (var n = 0; n < v.length; n++) {
     var p = document.createElement("div");
@@ -101,71 +103,66 @@ function getVideos() {
       createIframe(parent, parent.getAttribute("data-id"));
     });
   }
-}
+  /**
+   * Create custom thumbnail from data-attribute provided url
+   * @param {string} url
+   * @return {string} The HTML containing the <img> tag
+   */
 
-/**
- * Create custom thumbnail from data-attribute provided url
- * @param {string} url
- * @return {string} The HTML containing the <img> tag
- */
+  function createCustomThumbail(url) {
+    return (
+      '<img class="youtube-thumbnail" src="' +
+      url +
+      '" alt="Youtube Preview" /><div class="youtube-play-btn"></div>'
+    );
+  }
 
-function createCustomThumbail(url) {
-  return (
-    '<img class="youtube-thumbnail" src="' +
-    url +
-    '" alt="Youtube Preview" /><div class="youtube-play-btn"></div>'
-  );
-}
-
-/**
- * Get Youtube default max resolution thumbnail
- * @param {string} id The Youtube video id
- * @return {string} The HTML containing the <img> tag
- */
-function createThumbail(id) {
-  return (
-    '<img class="youtube-thumbnail" src="//i.ytimg.com/vi_webp/' +
-    id +
-    '/maxresdefault.webp" alt="Youtube Preview"><div class="youtube-play-btn"></div>'
-  );
-}
-
-function createIframe(v, id) {
-  var iframe = document.createElement("iframe");
-  // console.log(v);
-  iframe.setAttribute(
-    "src",
-    "//www.youtube.com/embed/" +
+  /**
+   * Get Youtube default max resolution thumbnail
+   * @param {string} id The Youtube video id
+   * @return {string} The HTML containing the <img> tag
+   */
+  function createThumbail(id) {
+    return (
+      '<img class="youtube-thumbnail" src="//i.ytimg.com/vi_webp/' +
       id +
-      "?autoplay=1&color=white&autohide=2&modestbranding=1&border=0&wmode=opaque&enablejsapi=1&showinfo=0&rel=0"
-  );
-  iframe.setAttribute("frameborder", "0");
-  iframe.setAttribute("class", "youtube-iframe");
-  iframe.setAttribute("loading", "lazy");
-  v.firstChild.replaceWith(iframe);
-}
+      '/maxresdefault.webp" alt="Youtube Preview"><div class="youtube-play-btn"></div>'
+    );
+  }
 
-$("#video-modal").on("hidden.bs.modal", function (e) {
-  $(this).find("iframe").remove();
-});
-
-$("#video-modal").on("show.bs.modal", function (e) {
-  getVideos();
-});
+  function createIframe(v, id) {
+    var iframe = document.createElement("iframe");
+    // console.log(v);
+    iframe.setAttribute(
+      "src",
+      "//www.youtube.com/embed/" +
+        id +
+        "?autoplay=1&color=white&autohide=2&modestbranding=1&border=0&wmode=opaque&enablejsapi=1&showinfo=0&rel=0"
+    );
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("class", "youtube-iframe");
+    iframe.setAttribute("loading", "lazy");
+    v.firstChild.replaceWith(iframe);
+  }
+})();
 
 //tabs
-
-function openTool(evt, toolName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(toolName).style.display = "flex";
-  evt.currentTarget.className += " active";
-  document.location.href = "#" + toolName;
-}
+(function () {
+  let tabcontent = document.querySelectorAll(".tabcontent"),
+      tablinks = document.querySelectorAll(".tablinks");
+  tablinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      tablinks.forEach((tab) => {
+        tab.classList.remove("active");
+      });
+      e.currentTarget.className += " active";
+      let toolName = e.currentTarget.dataset.tool;
+      let content = document.getElementById(toolName);
+      tabcontent.forEach((tab) => {
+        tab.style.display = "none";
+      });
+      content.style.display = "flex";
+      document.location.href = "#" + toolName;
+    });
+  });
+})();
