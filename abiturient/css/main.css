@@ -460,23 +460,12 @@ html {
 
 .main-section {
   position: relative;
-  height: calc(100vh - 186px);
+  height: auto;
 }
 
-@media screen and (max-width: 768px) {
-  .main-section {
-    height: calc(100vh - 142.9px);
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .main-section {
-    height: calc(100vh - 226.2px);
-  }
-}
 
 .slider-container .slider-container_slide {
-  height: 100%;
+  height: calc(100vh - 300px);
 }
 
 .slider-container .slider-container_slide h1 {
@@ -493,6 +482,21 @@ html {
   font-size: 150px;
   line-height: 1.1;
   color: var(--asu-blue);
+}
+
+@media screen and (max-width: 768px){
+  .slider-container .slider-container_slide {
+    height: auto;
+  }
+  .slider-container_slide .owl-stage {
+    height: auto;
+  }
+  .slider-container_slide .owl-stage-outer {
+    height: auto;
+  }
+  .main-section {
+    height: auto;
+  }
 }
 
 @media screen and (min-width: 425px) and (max-width: 767px) {
@@ -530,12 +534,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@media screen and (max-width: 767px) {
-  .slider-container_slide .owl-stage {
-    min-height: 60vh;
-  }
 }
 
 .slider-container_slide .owl-dots {
@@ -602,6 +600,9 @@ html {
     font-size: 28px;
     text-transform: lowercase;
     width: 50%;
+  }
+  .countdown h3{
+    font-size: 25px;
   }
 }
 .countdown-days {
@@ -728,7 +729,13 @@ html {
 /* Advantages section */
 
 .advantages-section {
-  padding-bottom: 180px;
+  padding-bottom: 120px;
+}
+
+@media screen and (max-width: 768px){
+  .advantages-section{
+    padding-bottom: 70px;
+  }
 }
 
 .advantages-section .advantages-container {

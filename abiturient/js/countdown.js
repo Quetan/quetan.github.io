@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     let daysWrapper = document.getElementById("countdown-days");
-    daysWrapper = daysWrapper.innerHTML = days + " дн";
+    daysWrapper = daysWrapper.innerHTML = days + "<br /> дн";
     let hoursWrapper = document.getElementById("countdown-hours");
-    hoursWrapper = hoursWrapper.innerHTML = hours + " ч";
+    hoursWrapper = hoursWrapper.innerHTML = hours + "<br /> ч";
     let minutesWrapper = document.getElementById("countdown-minutes");
-    minutesWrapper = minutesWrapper.innerHTML = minutes + " мин";
+    minutesWrapper = minutesWrapper.innerHTML = minutes + "<br /> мин";
     let secsWrapper = document.getElementById("countdown-secs");
-    secsWrapper = secsWrapper.innerHTML = seconds + " сек";
+    secsWrapper = secsWrapper.innerHTML = seconds + "<br /> сек";
     if (distance < 0) {
       clearInterval(timer);
       document.querySelector(".countdown-items").innerHTML =
