@@ -25,13 +25,13 @@
 	<div class="container header__container">
 		<div class="row">
 			
-			<div class="col-md-3 header__logo">
+			<div class="col-12 col-md-3 d-flex justify-content-center align-items-center justify-content-xl-start header__logo">
 				<a href="./">
 					<img src="images/dist/logo.png" alt="Логотип форума Большой Алтай">
 					<span>Большой <br /> Алтай</span>
 				</a>
 			</div>
-			<div class="col-lg-9 d-none d-xl-block header__navigation">
+			<div class="col-xl-9 d-none d-xl-block header__navigation">
 				<nav>
 					<ul class="ul-none">
 						<li class="mr-3"><a href="#" class="nav-item">О центре</a></li>
@@ -43,7 +43,7 @@
 					</ul>
 				</nav>
 			</div>
-			<div class="col-2 ml-auto menu-hamburger d-flex justify-content-end align-items-center d-xl-none">
+			<div class="menu-hamburger d-flex justify-content-end align-items-center d-xl-none">
 				<input id="menu__toggle" type="checkbox" />
 				<label class="menu__btn" for="menu__toggle">
 				  <span></span>
@@ -67,7 +67,7 @@
     <div class="container-fluid main__container">
       <div class="row">
         <div
-          class="col-md-12 col-lg-7 pb-4 d-flex justify-content-center flex-column"
+          class="col-md-12 col-lg-7 main__content pb-4"
         >
           <div class="main-logos">
             <img src="./images/dist/asu_logo.png" alt="Логотип АлтГУ" />
@@ -259,31 +259,31 @@
         Кому будет интересен форум?
       </h2>
       <div class="row for-row d-flex justify-content-center">
-        <div class="col-lg-2 for-item">
+        <div class="col-md-6 col-lg-2 for-item">
           <div class="for-item-wrapper">
             <i class="fas fa-users"></i>
           </div>
           <h3>Государство и бизнес</h3>
         </div>
-        <div class="col-lg-2 for-item">
+        <div class="col-md-6 col-lg-2 for-item">
           <div class="for-item-wrapper">
             <i class="fas fa-user-graduate"></i>
           </div>
           <h3>Научное сообщество</h3>
         </div>
-        <div class="col-lg-2 for-item">
+        <div class="col-md-6 col-lg-2 for-item">
           <div class="for-item-wrapper">
             <i class="fas fa-user-edit"></i>
           </div>
           <h3>Государство и бизнес</h3>
         </div>
-        <div class="col-lg-2 for-item">
+        <div class="col-md-6 col-lg-2 for-item">
           <div class="for-item-wrapper">
             <i class="fas fa-user-tie"></i>
           </div>
           <h3>Государство и бизнес</h3>
         </div>
-        <div class="col-lg-2 for-item">
+        <div class="col-md-6 col-lg-2 for-item">
           <div class="for-item-wrapper">
             <i class="fas fa-user-alt"></i>
           </div>
@@ -719,13 +719,11 @@
       src="./images/dist/patterns/3.png"
       class="gallery-background-pattern-right"
       alt=""
-      loading="lazy"
     />
     <img
       src="./images/dist/patterns/1.png"
       class="gallery-background-pattern-left"
       alt=""
-      loading="lazy"
     />
 
     <div class="container gallery-container">
@@ -865,11 +863,6 @@
   <section class="section tracks-section" id="tab-links">
     <h2 class="section-header">Архитектура форума</h2>
     <div class="container tracks-container">
-      <img
-        src="./images/dist/patterns/2.png"
-        class="tracks-background-pattern"
-        alt=""
-      />
       <div class="row tabs-container">
         <ul
           class="col-lg-3 tabs ul-none row d-flex justify-content-start pt-lg-5 pb-5 pb-lg-0 align-items-center flex-column"
@@ -897,6 +890,11 @@
           </li>
         </ul>
         <div class="col-lg-9 tabs-content" id="tab">
+          <img
+          src="./images/dist/patterns/2.png"
+          class="tracks-background-pattern"
+          alt=""
+        />
           <div class="tabs-panel active" data-index="0">
             <h3 class="track-header">
               Комплексные историко-археологические исследования процессов
