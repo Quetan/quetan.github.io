@@ -23,6 +23,53 @@
   --asu-adv-blue: #004b74;
 }
 
+
+
+/* Borders */
+.border-blue{
+  border-color: var(--asu-blue) !important;
+}
+.border-green{
+  border-color: var(--asu-green) !important;
+}
+.border-orange{
+  border-color: var(--asu-orange) !important;
+}
+.border-red{
+  border-color: var(--asu-red) !important;
+}
+
+/* Text colors */
+.text-blue{
+  color: var(--asu-blue) !important;
+}
+.text-green{
+  color: var(--asu-green) !important;
+}
+.text-orange{
+  color: var(--asu-orange) !important;
+}
+.text-red{
+  color: var(--asu-red) !important;
+}
+
+/* Backgrounds */
+.bg-blue{
+  background-color: var(--asu-blue) !important;
+}
+.bg-green{
+  background-color: var(--asu-green) !important;
+}
+.bg-orange{
+  background-color: var(--asu-orange) !important;
+}
+.bg-red{
+  background-color: var(--asu-red) !important;
+}
+
+
+
+
 body,
 html {
   overflow-x: hidden;
@@ -82,6 +129,7 @@ body {
 .whatsapp-button img {
   width: 60px;
   height: 60px;
+  filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.25));
 }
 
 @media screen and (max-width: 525px) {
