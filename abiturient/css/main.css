@@ -61,6 +61,14 @@
   color: var(--asu-red) !important;
 }
 
+.text-white{
+  color: #fafafa !important;
+}
+
+.text-black{
+  color: #292929 !important;
+}
+
 /* Backgrounds */
 .bg-blue{
   background-color: var(--asu-blue) !important;
@@ -115,10 +123,6 @@ ol.list-orange>li::marker{
 }
 
 /* Links */
-
-.content a:hover{
-  outline: 1px solid var(--asu-blue__low_opacity);
-}
 
 a.link-red{
   color: var(--asu-red__low_opacity) !important;
