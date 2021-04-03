@@ -28,15 +28,23 @@
 /* Borders */
 .border-blue{
   border-color: var(--asu-blue) !important;
+  border-width: 1px;
+  border-style: solid;
 }
 .border-green{
   border-color: var(--asu-green) !important;
+  border-width: 1px;
+  border-style: solid;
 }
 .border-orange{
   border-color: var(--asu-orange) !important;
+  border-width: 1px;
+  border-style: solid;
 }
 .border-red{
   border-color: var(--asu-red) !important;
+  border-width: 1px;
+  border-style: solid;
 }
 
 /* Text colors */
@@ -67,6 +75,86 @@
   background-color: var(--asu-red) !important;
 }
 
+/* Bars */
+.bar-red{
+  background-color: var(--asu-red__low_opacity) !important;
+}
+
+.bar-green{
+  background-color: var(--asu-green__low_opacity) !important;
+}
+
+.bar-orange{
+  background-color: var(--asu-orange__low_opacity) !important;
+}
+
+.bar-blue{
+  background-color: var(--asu-blue__low_opacity) !important;
+}
+
+/* Lists  */
+
+ul.list-red>li::marker,
+ol.list-red>li::marker{
+  color: var(--asu-red__opacity) !important;
+}
+
+ul.list-green>li::marker,
+ol.list-green>li::marker{
+  color: var(--asu-green__opacity) !important;
+}
+
+ul.list-blue>li::marker,
+ol.list-blue>li::marker{
+  color: var(--asu-blue__opacity) !important;
+}
+
+ul.list-orange>li::marker,
+ol.list-orange>li::marker{
+  color: var(--asu-orange__opacity) !important;
+}
+
+/* Links */
+
+.content a:hover{
+  outline: 1px solid var(--asu-blue__low_opacity);
+}
+
+a.link-red{
+  color: var(--asu-red__low_opacity) !important;
+}
+
+a.link-red:hover{
+  color: var(--asu-red) !important;
+  outline: 1px solid var(--asu-red__low_opacity);
+}
+
+a.link-green{
+  color: var(--asu-green__low_opacity) !important;
+}
+
+a.link-green:hover{
+  color: var(--asu-green) !important;
+  outline: 1px solid var(--asu-green__low_opacity);
+}
+
+a.link-orange{
+  color: var(--asu-orange__low_opacity) !important;
+}
+
+a.link-orange:hover{
+  color: var(--asu-orange) !important;
+  outline: 1px solid var(--asu-orange__low_opacity);
+}
+
+a.link-blue{
+  color: var(--asu-blue__low_opacity) !important;
+}
+
+a.link-blue:hover{
+  color: var(--asu-blue) !important;
+  outline: 1px solid var(--asu-blue__low_opacity);
+}
 
 
 
@@ -86,6 +174,23 @@ body {
   flex-flow: column;
   min-height: 100%;
 }
+
+a{
+  transition: all 0.25s ease;
+  color: var(--asu-blue__opacity);
+  position: relative;
+  outline-offset: 3px;
+}
+
+a:hover{
+  text-decoration: none;
+  color: var(--asu-blue);
+}
+
+a:focus{
+  outline: 1px solid var(--asu-blue__low_opacity);
+}
+
 
 .whatsapp-button {
   position: fixed;
@@ -179,6 +284,11 @@ body {
   position: absolute;
   bottom: 0px;
   background-color: rgba(0, 0, 0, 0.25);
+}
+
+.content ul li,
+.content ol li{
+  text-align: justify;
 }
 
 .content ul li::marker {
