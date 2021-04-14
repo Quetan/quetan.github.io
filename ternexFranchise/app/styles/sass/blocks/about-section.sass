@@ -1,0 +1,74 @@
+.about-benefits
+    list-style-type: none
+    padding-inline-start: 0
+    margin: 0
+
+.benefit-item-wrapper
+    display: inline-block
+    margin-bottom: $gutter
+
+.benefit-item
+    height: 100%
+    padding: 2rem 1rem
+    padding-right: 2rem
+    box-shadow: 2px 2px 3px 0px rgba($dark, 0.2)
+    text-align: left
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: row
+    border: 4px solid rgba($accent, 0.4)
+    border-radius: $gutter / 2
+    font-size: 1.4rem
+    svg
+        margin-right: $gutter / 1.5
+        height: 120px
+        width: 120px
+        fill: $accent
+        filter:  drop-shadow(3px 3px 1px rgba($dark, .1))
+
+.about-income-wrapper
+    padding: 0 15px
+
+.about-income
+    padding: 3rem 2rem
+    border-radius: $gutter / 2
+    border: 4px solid rgba($accent, 0.4)
+    box-shadow: 2px 2px 3px 0px rgba($dark, 0.2)
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    font-size: 1.4rem
+    margin-bottom: $gutter / 2
+
+.income-item
+    text-align: center
+    font-weight: 500
+    position: relative
+    &-header
+        font-weight: 400
+        font-size: 1.5rem
+    &-main
+        font-weight: 600
+        font-size: 2rem
+        color: $accent
+        text-shadow: 2px 2px 0 rgba($dark, 0.4)
+
+.income-item:not(:last-child)::after
+    content: ''
+    height: 85%
+    width: 3px
+    border-radius: 15px
+    display: block
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: -20%
+    background-color: rgba($accent, 0.5)
+
+.income-description
+    text-align: center
+    color: lighten($dark, 40%)
+    padding: 0 10%
+    display: block

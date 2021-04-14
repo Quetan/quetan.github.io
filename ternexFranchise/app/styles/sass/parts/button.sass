@@ -1,0 +1,45 @@
+.button
+    padding: 0.6rem 3rem
+    text-align: center
+    border-radius: 10px
+    text-transform: uppercase
+    width: auto
+    letter-spacing: 0.05em
+    font-size: 0.7em
+    opacity: 0.85
+    transition: all 0.25s ease
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    box-shadow: 2px 2px 3px 0px rgba($dark, 0.2)
+    &--accent
+        background-color: $accent
+        &:hover
+            color: $light
+            background-color: darken($accent, 10%)
+    &--dark
+        background-color: $dark
+        color: $light
+    &--lg
+        font-size: 1em
+        padding: 1rem 2.5rem
+        font-weight: 600
+    &:hover
+        color: $light
+        opacity: 1
+
+    &-icon
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        line-height: 1
+        font-size: 2em
+        height: 1rem
+        margin-left: 20px
+
+    &:focus,
+    &:active
+        outline: none
+        box-shadow: 0px 0px 0px 4px scale-color($accent, $lightness: -40%)
+        outline-style: solid

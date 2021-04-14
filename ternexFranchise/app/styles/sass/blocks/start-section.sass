@@ -1,0 +1,77 @@
+.start-requirements
+    list-style: none
+    padding-inline-start: 0
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-top: $gutter * 4
+    margin-bottom: $gutter * 5
+
+.requirement-item
+    display: flex
+    align-items: center
+    flex-direction: row
+    width: 50%
+    padding: 1rem 0
+    position: relative
+    min-height: 125px
+    &-number
+        position: absolute
+        font-size: 4.5rem
+        font-weight: 800
+        top: -0.8em
+        left: -0.2em
+        opacity: 0.15
+        letter-spacing: 0.05em
+        text-shadow: 5px 3px 0px rgba($dark, .3)
+    &-text
+        padding-left: 2.2em
+        padding-top: 1rem
+        font-size: 1.85rem
+        margin: 0
+        z-index: 2
+        opacity: 0.9
+        font-weight: 600
+    svg
+        position: absolute
+        right: 45px
+        bottom: -60px
+        width: 120px
+        height: 120px
+        z-index: 1
+        fill: $lightBlue
+        filter:  drop-shadow(3px 3px 1px rgba($dark, .1))
+
+.start-return
+    padding: $gutter 0
+    border: 4px solid rgba($lightBlue, 0.4)
+    border-radius: $gutter
+    box-shadow: 2px 2px 3px 0px rgba($dark, 0.2)
+
+.return
+    &-header
+        text-align: center
+        margin-bottom: $gutter * 1.5
+        font-size: 2em
+        font-weight: 800
+        opacity: 0.95
+    &-list
+        padding-left: 60px
+        padding-right: 20px
+        margin-bottom: 0
+        display: flex
+        flex-wrap: wrap
+    &-item
+        margin-bottom: 1em
+        font-size: 1.2rem
+        width: 50%
+        padding-left: 15px
+        &:nth-child(odd)
+            padding-right: 60px  
+        &::marker
+            font-size: 2rem
+            line-height: 1
+            color: $lightBlue
+            font-weight: 800 
+
+
