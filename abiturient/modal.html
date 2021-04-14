@@ -1,0 +1,78 @@
+<!-- Call modal content -->
+<div class="callModalContent" id="callModalContent">
+  <div class="callModalHeader">
+    <img
+      src="/img/main/main-section/Logo.svg"
+      width="90"
+      height="90"
+      alt=""
+    />
+    <div class="callModalHeaderText">
+      <h2>Остались вопросы?</h2>
+      <p>
+        Оставь заявку на сайте и мы перезвоним <br />
+        в ближайшее время!
+      </p>
+    </div>
+  </div>
+  <div class="callModalFormWrapper">
+    <form action="#" method="POST">
+      <div class="callModalFormRow">
+        <div class="callModalFormColumn">
+          <label for="name">Имя</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="callModalFormColumn">
+          <label for="secondName">Фамилия</label>
+          <input
+            type="text"
+            id="secondName"
+            name="secondName"
+            required
+          />
+        </div>
+      </div>
+      <div class="callModalFormColumn">
+        <label for="tel">Номер телефона</label>
+        <input
+          type="tel"
+          value="+7"
+          pattern="^[7|8]{0,1}\d{10}$|(^\+7{1}\d{10}$)"
+          maxlength="12"
+          id="tel"
+          name="phoneNumber"
+          required
+        />
+        <small>Пример: +71235641122</small>
+      </div>
+      <div class="callModalFormColumn">
+        <label for="question">Опишите ваш вопрос</label>
+        <textarea
+          rows="10"
+          cols="25"
+          id="question"
+          name="question"
+          placeholder="Напишите интересующий Вас вопрос..."
+          required
+        ></textarea>
+      </div>
+      <div class="callModalFormColumn">
+        <input type="submit" value="отправить" />
+        <small class="text-center"
+          >Нажимая на кнопку, вы принимаете
+          <a href="#">Положение и Согласия</a> на обработку
+          персональных данных.</small
+        >
+      </div>
+    </form>
+  </div>
+  <div class="callModalSuccessAlert">
+    <h3>Успешно!</h3>
+    <p>Форма успешно отправлена! Ожидайте ответ в ближайшее время!</p>
+  </div>
+  <div class="callModalErrorAlert">
+    <h3>Ошибка!</h3>
+    <p>Одно или несколько полей заполнено неправильно!</p>
+  </div>
+</div>
+<!-- Call modal content end -->

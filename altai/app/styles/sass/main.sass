@@ -1,0 +1,879 @@
+@import config
+@import "blocks/**/*"
+
+
+//Hamburger styles
+#menu__toggle
+  opacity: 0
+.menu-hamburger
+    height: 0
+.menu__btn
+  display: flex
+  align-items: center
+  position: fixed
+  top: 30px
+  right: 30px
+  width: 26px
+  height: 26px
+  cursor: pointer
+  z-index: 1010
+  margin-bottom: 0
+  > span
+    display: block
+    position: absolute
+    width: 100%
+    height: 3px
+    background-color: #616161
+    transition: all 0.25s ease-out
+    &::before, &::after
+      display: block
+      position: absolute
+      width: 100%
+      height: 3px
+      background-color: #616161
+    &::before
+      content: ''
+      top: -8px
+    &::after
+      content: ''
+      top: 8px
+
+.menu__box
+  display: block
+  position: fixed
+  visibility: hidden
+  z-index: 999
+  top: 0
+  right: -100%
+  width: 320px
+  height: 100%
+  margin: 0
+  padding: 80px 0
+  list-style: none
+  text-align: center
+  background-color: $dark
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2)
+  transition: all 0.25s ease
+
+.menu__item
+  display: block
+  padding: 12px 24px
+  color: #333
+  font-size: 20px
+  font-weight: 600
+  text-decoration: none
+  position: relative
+  border-bottom: 1px solid rgba(#000, 0.05)
+  a
+      color: #616161
+      font-weight: 400
+      font-family: $headerfont
+      display: block
+      width: 100%
+      height: 100%
+  &.header__languages
+      a
+        color: #616161
+
+  &:hover
+    background-color: #CFD8DC
+
+#menu__toggle:checked ~
+  .menu__btn > span
+    transform: rotate(45deg)
+
+    &::before
+      top: 0
+      transform: rotate(0)
+
+    &::after
+      top: 0
+      transform: rotate(90deg)
+
+  .menu__box
+    visibility: visible
+    right: 0
+
+// Header styles
+
+.header
+    padding: 10px 0
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+    box-shadow: 0 1px 3px rgba(0, 2px, 0, 0.2)
+    display: flex
+    align-items: center
+    position: sticky
+    top: 0
+    z-index: 999
+    background-color: rgba(#fff, 0.9)
+    transition: all 0.25s ease
+    &:hover
+        background-color: rgba(#fff, 1)
+
+.header .row
+    display: flex
+    flex-direction: row
+    align-items: center
+
+.header__logo a
+    display: flex
+    align-items: center
+    flex-direction: row
+
+.header__logo img
+    width: auto
+    height: 60px
+
+.header__logo span
+    line-height: 1.05
+    font-size: 1.5em
+    font-family: $headerfont
+    color: $accent
+    font-weight: 800
+    padding-left: 5px
+
+.header__navigation
+    display: flex
+    justify-content: flex-start
+
+.header__navigation ul
+    display: flex
+    flex-direction: row
+    padding: 0 $gutter
+
+.header__navigation .nav-item
+    font-weight: 400
+    color: $textcolor
+    text-transform: uppercase
+    font-family: $headerfont
+    position: relative
+    padding: 0 10px
+    font-size: 14px
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        width: 0
+        height: 2px
+        background-color: $accent
+        transition: width 0.25s ease-out
+    &:hover
+        color: inherit
+        &::after
+            width: 100%
+
+// Main styles
+
+.main__container
+    position: relative
+    z-index: 15
+    display: flex
+    flex-direction: column
+    padding: 20px 5vw
+
+.main__content
+    display: flex
+    justify-content: center
+    flex-direction: column
+    text-align: left
+
+.main__section
+    min-height: calc(100vh - 83px)
+    background-image: url('../images/dist/bg-header.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #f8f8f8
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: rgba(105, 105, 105, 0.45)
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 0
+        opacity: 0.9
+
+.main-logos
+    margin-bottom: 20px
+
+.main-logos img
+    width: auto
+    height: 60px
+    filter: drop-shadow(0 0 10px #333333aa)
+
+@media screen and ( max-width: 768.98px)
+    .main-logos img
+        height: 45px
+
+.main__date
+    font-size: 1.4em
+    text-transform: uppercase
+    font-family: $headerfont
+    text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3)
+
+.main__logo img
+    height: auto
+    width: 100%
+    padding: 25px 45px
+    opacity: 0.85
+    filter: drop-shadow(0 0 30px #333)
+
+.main__header
+    margin-top: 10px
+    margin-bottom: 15px
+    font-size: 1.5em
+    font-weight: 600
+    line-height: 1.4
+    text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3)
+
+.main__header_naming
+    margin-top: 15px
+    font-size: 1.3em
+    padding-left: 45px
+    display: block
+    text-transform: uppercase
+    width: 85%
+
+.main__city
+    font-size: 1.2em
+    font-family: $headerfont
+    text-transform: uppercase
+    font-weight: 600
+    text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3)
+    margin-bottom: 10px
+
+.button
+    background-color: $accent
+    border-bottom: 5px solid darken($accent, 8)
+    padding: 10px 35px
+    margin-top: 15px
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4)
+    color: #fff
+    font-family: $headerfont
+    font-weight: 600
+    font-size: 1.3em
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: transform 0.25s ease-out
+    position: relative
+    width: fit-content
+    opacity: 0.9
+    &:hover, &:focus
+        color: inherit
+        transform: translateX(10px)
+        opacity: 1
+
+.button__icon
+    height: 1.9em
+    width: auto
+    margin-left: $gutter
+    
+@media screen and ( max-width: 920px )
+    .main__date,
+    .main__header,
+    .main__city,
+    .button
+        font-size: 1.07em
+
+    .main__content
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        text-align: center
+
+    .main__header_naming
+        padding-left: 0px
+        width: 95%
+    
+
+.swiper-wrapper
+    box-sizing: border-box
+
+.swiper-button-prev,
+.swiper-button-next
+    transform: translateY(-60%)
+
+
+.swiper-button-prev:after
+    margin-right: auto
+    color: $accent
+.swiper-button-next:after
+    margin-left: auto
+    color: $accent
+
+// About styles
+
+.about-container
+    width: 100%
+    min-height: 80vh
+    position: relative
+
+.about-section
+    position: relative
+
+.about-background-pattern-center
+    position: absolute
+    display: block
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    opacity: 0.07
+    zoom: 1
+    filter: blur(2px)
+
+.swiper-pagination-bullet-active
+    background-color: $accent
+
+.swiper-button-next, .swiper-button-prev
+    color: $accent
+
+.swiper-button-next
+    right: 20px
+
+.swiper-button-prev
+    left: 20px
+
+.about-slide
+    height: 100%
+    padding-bottom: $gutter*3
+
+.map-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    padding: $gutter
+
+.map-wrapper img
+    width: 50%
+    height: auto
+
+@media screen and ( max-width:  768px )
+    .map-wrapper img
+        width: 100%
+    
+.about-wrapper
+    padding: 0 $gutter * 1.5
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: row
+
+.about-person-wrapper
+    width: 30%
+    display: block
+    height: 100%
+    box-shadow: 5px 4px 12px rgba(#000, 0.25)
+    padding: $gutter
+    position: relative
+    padding-top: 300px
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.about-person-img
+    width: 80%
+    height: auto
+    display: block
+    position: absolute
+    top: -60px
+    right: -15px
+    box-shadow: 5px 4px 12px rgba(#000, 0.25)
+    aspect-ratio: 1 / 1
+    object-fit: cover
+
+.about-person-status
+    font-size: 0.9em
+
+.about-text-wrapper
+    padding: 0 $gutter
+
+.about-text-header
+    font-size: 1.6em
+    font-weight: 600
+
+.about-person-name
+    text-shadow: 0px 0px 4px rgba(#fff, 0.5)
+    font-size: 1.4em
+    font-weight: 600
+    text-align: left
+
+
+// @media screen and ( min-width:2400px )
+//     .about-person-wrapper
+//         padding-top: 800px
+
+// @media screen and ( min-width:1600px )
+//     .about-person-wrapper
+//         padding-top: 400px
+
+// @media screen and ( max-width:1300px )
+//     .about-person-wrapper
+//         padding-top: 250px
+// @media screen and ( max-width:1100px )
+//     .about-person-wrapper
+// @media screen and ( max-width:1024px )
+//     .about-person-wrapper
+//         padding-top: 170px
+
+@media screen and ( max-width:900px )
+    .about-text-header
+        text-align: center
+    .about-wrapper
+        flex-direction: column
+    // .about-person-wrapper
+    //     width: 50%
+    //     padding-top: 300px
+
+// @media screen and ( max-width:768px )
+//     .about-person-wrapper
+//         padding-top: 250px
+//         margin-bottom: $gutter
+@media screen and ( max-width:640px )
+    .about-wrapper
+        padding: 0 $gutter
+    // .about-person-wrapper
+    //     padding: $gutter / 2
+        padding-top: 190px
+    .about-text-wrapper
+        // padding: $gutter 0
+        font-size: 1em
+
+// @media screen and ( max-width:500px )
+//     .about-person-wrapper
+//         width: 90%
+//         padding-top: 260px
+
+// @media screen and ( max-width:400px )
+//     .about-person-wrapper
+//         width: 95%
+//         padding-top: 220px
+
+// Gallery styles
+
+.swiper-container-multirow-column > .swiper-wrapper
+    flex-direction: inherit
+
+.gallery-section
+    background: rgb(255,154,76)
+    background: linear-gradient(0deg, rgba(255,154,76,0.01) 0%, rgba($dark,1) 56%)
+    position: relative
+
+.gallery-background-pattern-right
+    position: absolute
+    display: block
+    bottom: 5%
+    right: -20%
+    opacity: 0.07
+    zoom: 0.8
+    filter: blur(2px)
+
+.gallery-background-pattern-left
+    position: absolute
+    display: block
+    top: 5%
+    left: -20%
+    opacity: 0.05
+    zoom: 0.8
+    filter: blur(2px)
+
+.gallery-item-wrapper
+    overflow: hidden
+
+.gallery-item-wrapper:hover>img
+        filter: blur(2px)
+
+.gallery-item
+    position: relative
+
+.gallery-item-wrapper>img
+    width: 100%
+    height: auto
+    margin-bottom: $gutter
+    position: relative
+    display: block
+    border: 5px solid #ffffff77
+    transition: 0.25s ease all
+    object-fit: cover
+    aspect-ratio: 7 / 5
+
+.gallery-overlay
+    background-color: rgba(#333, 0.5)
+    display: flex
+    position: absolute
+    width: calc(100% - 30px)
+    height: calc(100% - 30px)
+    top: 0
+    z-index: 40
+    align-items: center
+    justify-content: center
+    transform: translateY(-450px)
+    transition: 0.25s ease-out
+
+.gallery-item-wrapper:hover .gallery-overlay
+    transform: translateY(0px)
+
+.gallery-overlay .overlay-icon
+    box-shadow: 0px 2px 3px rgba(#000, 0.4)
+    background-color: rgba(lighten($dark,5), 0.75)
+    border-radius: 100%
+    width: 70px
+    height: 70px
+    padding: 15px
+    transition: transform 0.25s ease
+
+
+.gallery-overlay .overlay-icon img
+    display: block
+    width: 45px
+    height: 45px
+    z-index: 55
+    transform: translate(-2px, -2px)
+    transition: transform 0.25s ease
+    &:hover
+        transform: translate(-2px, -2px) scale(1.1)
+
+//Speakers styles
+
+.speakers-section
+    padding-left: $gutter * 2.5
+    padding-right: $gutter * 2.5
+    position: relative
+
+.speaker-item-wrapper
+    margin: $gutter / 2
+    padding-bottom: 0
+    position: relative
+    overflow: hidden
+
+.speakers-swiper-button-next
+    right: 0
+
+.speakers-swiper-button-prev
+    left: 0
+
+.speaker-about
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    transform: translateY(100px)
+    background-color: rgba($dark, 0.8)
+    font-size: 0.8em
+    padding: 15px
+    color: #efefef
+    visibility: hidden
+    opacity: 0
+    transition: all 0.3s ease-out
+
+.speaker-about .speaker-name
+    text-align: center
+    margin-bottom: 5px
+    line-height: 1
+
+.speaker-item-wrapper:hover .speaker-about
+    transform: translateY(0px)
+    visibility: visible
+    opacity: 1
+
+.speakers-swiper-container
+    padding-bottom: $gutter * 2
+
+.swiper-speakers-button-next
+    right: 0
+
+.swiper-speakers-button-prev
+    left: 0
+
+.speaker-img
+    width: 100%
+    height: auto
+    aspect-ratio: 1 / 1
+    object-fit: cover
+    border: 8px solid rgba($dark, 0.5)
+
+.speaker-item-wrapper:hover .speaker-img
+    border-color: rgba($dark, 0.8)
+
+.speaker-name
+    text-shadow: 0px 1px 2px rgba(#000, 0.3)
+    margin-bottom: 4px
+
+.speaker-text
+    color: #fff
+    line-height: 1.3
+    font-size: 0.95em
+    margin: 0
+    padding-bottom: 5px
+
+@media screen and ( max-width:  625px)
+    .speakers-section
+        padding-left: $gutter
+        padding-right: $gutter
+    .speaker-item-wrapper
+        padding: 0 $gutter
+    .speaker-about
+        width: calc( 100% -  60px)
+        left: 30px
+
+    
+
+// Partners styles
+
+.partners-section
+    position: relative
+    &::before
+        content: ""
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-image: url(../images/dist/sponsor-bg.webp)
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        opacity: 0.1
+        filter: blur(3px)
+
+.partners-header
+    text-align: center
+    color: #333
+    margin-bottom: 25px
+    text-transform: uppercase
+    font-size: 1.2em
+    z-index: 10
+    position: relative
+
+.partners-row
+    padding: 0 60px 50px 60px
+    gap: $gutter / 2
+
+.partner-item
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 7px solid rgba(#000, 0.1)
+    padding: 10px
+    margin: 5px
+    transition: all 0.25s ease
+    background-color: transparent
+    height: 150px
+    max-width: 270px
+    aspect-ratio: 3 / 2
+    background-color: #fff
+    opacity: 0.7
+    &:hover
+        box-shadow: 3px 3px 7px 0px rgba(#000, 0.15)
+        opacity: 1
+
+.partner-item img
+    width: auto
+    height: 100%
+    object-fit: contain
+
+//Tabs styles
+
+.tracks-section,.tracks-container
+    position: relative
+
+.tracks-description
+    margin-bottom: $gutter
+    font-size: 1.1em
+    font-weight: 600
+
+.tracks-wrapper 
+    display: flex
+    align-items: center
+    flex-direction: row
+    flex-wrap: wrap
+    overflow: hidden
+
+.tracks-list
+    width: 60%
+    transform: translateY(-$gutter * 2)
+
+.tracks-image
+    width: 40%
+    padding-left: $gutter * 2
+
+@media screen and (max-width: 1200.9px)
+    .tracks-list
+        transform: translateY(0px)
+    
+@media screen and (max-width: 768.98px)
+    .tracks-list
+        width: 100%
+        transform: translateY(0px)
+    .tracks-image
+        display: none
+    
+
+.tracks-image img
+    width: 100%
+    height: auto
+    transform: translateY(-$gutter)
+    filter: drop-shadow(2px 4px 15px rgba(0,0,0,0.4))
+
+.tracks-list li
+    margin-bottom: $gutter / 1.5
+    padding-left: $gutter
+    position: relative
+
+    &::before
+        content: '▶'
+        color: $accent
+        display: block
+        position: absolute
+        left: 0
+        top: 0.5rem
+
+
+// Team styles
+
+.team-swiper-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.team-swiper-slide
+    transition: all 0.25s ease-out        
+
+.team-swiper-slide img
+    width: 100%
+    max-height: 350px
+    max-width: 350px
+    height: auto
+    margin-bottom: $gutter
+    object-fit: cover
+    aspect-ratio: 1 / 1
+
+.team-about-wrapper
+    text-align: center
+    padding: $gutter / 2
+
+
+// Footer styles
+
+.footer-area
+  background: #3d3d3d
+  padding-top: 60px
+  .footer-nav li
+    margin-top: 18px
+    a
+      color: #fff
+      &:hover
+        color: $dark
+
+  h6
+    text-transform: uppercase
+    color: #fff
+    margin-bottom: 25px
+    font-size: 20px
+
+@media (min-width: 1000px)
+  .footer-area
+    padding-top: 110px
+
+.copy-right-text
+  i, a
+    color: $dark
+
+.footer-social
+  text-align: right
+
+  a
+    width: 20px
+    width: 40px
+    display: inline-table
+    height: 40px
+    text-align: center
+    padding-top: 10px
+    -webkit-transition: all 0.3s ease 0s
+    transition: all 0.3s ease 0s
+
+    &:hover i
+      color: $accent
+
+  i, span
+    font-size: 18px
+    color: rgba(221, 221, 221, 0.5)
+    -webkit-transition: all 0.3s ease 0s
+    transition: all 0.3s ease 0s
+
+@media (max-width: 991.98px)
+  .footer-social
+    text-align: left
+    margin-top: 20px
+
+.single-footer-widget
+  color: #fff
+
+  &::-moz-selection, &::selection
+    background-color: $dark
+    color: #797979
+
+  &::-webkit-input-placeholder
+    color: #797979
+    font-weight: 300
+
+  &:-moz-placeholder, &::-moz-placeholder
+    color: #797979
+    opacity: 1
+    font-weight: 300
+
+  &:-ms-input-placeholder, &::-ms-input-placeholder
+    color: #797979
+    font-weight: 300
+
+  p
+    color: #999
+
+  ul li
+    margin-bottom: 10px
+
+    a
+      color: #999
+      -webkit-transition: all 0.3s ease 0s
+      transition: all 0.3s ease 0s
+
+      &:hover
+        color: $dark
+
+@media (max-width: 960px)
+  .single-footer-widget
+    .nw-btn
+      margin-top: 20px
+
+@media (max-width: 991.98px)
+  .single-footer-widget
+    margin-bottom: 45px
+
+.footer-bottom
+  padding: 20px 0
+  margin-top: 30px
+  border-top: 1px solid rgba(255, 255, 255, 0.1)
+
+@media (min-width: 1000px)
+  .footer-bottom
+    margin-top: 70px
+
+.footer-text
+  a, i
+    color: $dark
+
+.text-secondary
+    color: #dadada

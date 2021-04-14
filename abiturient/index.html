@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-
     <!-- Header -->
     <header class="header d-flex align-items-center flex-column">
       <div class="header-container_bg">
@@ -40,11 +39,40 @@
                     >
                   </li>
                   <li>
-                    <a style="color: #ffffff; padding: 10px 30px; text-decoration: none; font-weight: 700;" class="my-2 my-lg-0 text-center main-button_b header-navigation_link d-flex justify-content-center align-items-center " href="https://pay.asu.ru/"
-                      >
-                      <img src="./img/main/banner/wallet.svg" style="width: 20px; height: auto; margin-right: 10px;" alt="">
-                      Онлайн оплата услуг</a
+                    <a
+                      style="
+                        color: #ffffff;
+                        padding: 10px 30px;
+                        text-decoration: none;
+                        font-weight: 700;
+                      "
+                      class="my-2 my-lg-0 text-center main-button_b header-navigation_link d-flex justify-content-center align-items-center"
+                      href="https://pay.asu.ru/"
                     >
+                      <img
+                        src="./img/main/banner/wallet.svg"
+                        style="width: 20px; height: auto;"
+                        alt="Оплатить"
+                      />
+                      <span class="pay-text">Онлайн оплата услуг</span></a
+                    >
+                  </li>
+                  <li>
+                  <div
+                    class="links-phone d-flex d-lg-none flex-row justify-content-center align-items-center"
+                  >
+                    <div class="phone-wrapper mr-2">
+                      <img
+                        class="mr-1"
+                        src="./img/main/main-section/call.svg"
+                        alt="Номер для звонков"
+                      />
+                      <a style="font-size: 0.85em;" href="tel:+73852291222">+7 (3852) 291-222</a>
+                    </div>
+                    <button style="font-size: 0.8em;" class="call-link" id="showCallModalFromMenu">
+                      Заказать звонок
+                    </button>
+                  </div>
                   </li>
                 </ul>
               </nav>
@@ -121,13 +149,98 @@
           <div
             class="links-container_links col-lg-4 d-none d-lg-flex align-items-center"
           >
-            <div class="links-phone d-flex mr-5">
-              <img
-                class="mr-2"
-                src="./img/main/main-section/call.svg"
-                alt="Номер для звонков"
-              />
-              <a href="tel:+73852291222">+7 (3852) 291-222</a>
+            <div
+              class="links-phone d-flex flex-column justify-content-center align-items-center mr-3"
+            >
+              <div class="phone-wrapper">
+                <img
+                  class="mr-1"
+                  src="./img/main/main-section/call.svg"
+                  alt="Номер для звонков"
+                />
+                <a href="tel:+73852291222">+7 (3852) 291-222</a>
+              </div>
+              <button class="call-link" id="showCallModal">
+                Заказать звонок
+              </button>
+              <!-- Call modal content -->
+              <div class="callModalContent" id="callModalContent">
+                <div class="callModalHeader">
+                  <img
+                    src="/img/main/main-section/Logo.svg"
+                    width="90"
+                    height="90"
+                    alt=""
+                  />
+                  <div class="callModalHeaderText">
+                    <h2>Остались вопросы?</h2>
+                    <p>
+                      Оставь заявку на сайте и мы перезвоним <br />
+                      в ближайшее время!
+                    </p>
+                  </div>
+                </div>
+                <div class="callModalFormWrapper">
+                  <form action="#" method="POST">
+                    <div class="callModalFormRow">
+                      <div class="callModalFormColumn">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required />
+                      </div>
+                      <div class="callModalFormColumn">
+                        <label for="secondName">Фамилия</label>
+                        <input
+                          type="text"
+                          id="secondName"
+                          name="secondName"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="callModalFormColumn">
+                      <label for="tel">Номер телефона</label>
+                      <input
+                        type="tel"
+                        value="+7"
+                        pattern="^[7|8]{0,1}\d{10}$|(^\+7{1}\d{10}$)"
+                        maxlength="12"
+                        id="tel"
+                        name="phoneNumber"
+                        required
+                      />
+                      <small>Пример: +71235641122</small>
+                    </div>
+                    <div class="callModalFormColumn">
+                      <label for="question">Опишите ваш вопрос</label>
+                      <textarea
+                        rows="10"
+                        cols="25"
+                        id="question"
+                        name="question"
+                        placeholder="Напишите интересующий Вас вопрос..."
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="callModalFormColumn">
+                      <input type="submit" value="отправить" />
+                      <small class="text-center"
+                        >Нажимая на кнопку, вы принимаете
+                        <a href="#">Положение и Согласия</a> на обработку
+                        персональных данных.</small
+                      >
+                    </div>
+                  </form>
+                </div>
+                <div class="callModalSuccessAlert">
+                  <h3>Успешно!</h3>
+                  <p>Форма успешно отправлена! Ожидайте ответ в ближайшее время!</p>
+                </div>
+                <div class="callModalErrorAlert">
+                  <h3>Ошибка!</h3>
+                  <p>Одно или несколько полей заполнено неправильно!</p>
+                </div>
+              </div>
+              <!-- Call modal content end -->
             </div>
             <div class="links-socials d-flex">
               <a href="#"
@@ -164,34 +277,40 @@
         <div class="container-fluid slider-container h-md-100">
           <div class="owl-carousel slider-container_slide">
             <div class="item">
-              <lottie-player
-                src="./img/main/banner/bannerWithText.json"
-                background="transparent"
-                style="width: 100%; height: auto"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
+              <a href="#">
+                <lottie-player
+                  src="./img/main/banner/bannerWithText.json"
+                  background="transparent"
+                  style="width: 100%; height: auto"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </a>
             </div>
             <div class="item">
-              <lottie-player
-                src="./img/main/banner/slideForeign.json"
-                style="width: 100%; height: auto"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
+              <a href="#">
+                <lottie-player
+                  src="./img/main/banner/slideForeign.json"
+                  style="width: 100%; height: auto"
+                  background="transparent"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </a>
             </div>
             <div class="item">
-              <lottie-player
-                src="https://assets9.lottiefiles.com/packages/lf20_gcrhfztr.json"
-                style="width: 100%; height: auto"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
+              <a href="#">
+                <lottie-player
+                  src="https://assets9.lottiefiles.com/packages/lf20_gcrhfztr.json"
+                  style="width: 100%; height: auto"
+                  background="transparent"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </a>
             </div>
           </div>
         </div>
@@ -202,13 +321,28 @@
           <div class="row">
             <div class="col-12 justify-content-center align-items-center mb-5">
               <div
-              class="container countdown d-flex flex-column justify-content-center text-center">
+                class="container countdown d-flex flex-column justify-content-center text-center"
+              >
                 <h3 class="text-center">До старта приемной кампании 2021</h3>
-                <div class="countdown-items d-flex flex-row justify-content-center align-items-center">
-                  <span class="countdown-days mr-0 mr-md-2 w-md-auto mb-2 mb-md-0" id="countdown-days"></span>
-                  <span class="countdown-hours mr-0 mr-md-2 w-md-auto mb-2 mb-md-0" id="countdown-hours"></span>
-                  <span class="countdown-minutes mr-0 mr-md-2 w-md-auto mb-2 mb-md-0" id="countdown-minutes"></span>
-                  <span class="countdown-secs w-md-auto mb-2 mb-md-0" id="countdown-secs"></span>
+                <div
+                  class="countdown-items d-flex flex-row justify-content-center align-items-center"
+                >
+                  <span
+                    class="countdown-days mr-0 mr-md-2 w-md-auto mb-2 mb-md-0"
+                    id="countdown-days"
+                  ></span>
+                  <span
+                    class="countdown-hours mr-0 mr-md-2 w-md-auto mb-2 mb-md-0"
+                    id="countdown-hours"
+                  ></span>
+                  <span
+                    class="countdown-minutes mr-0 mr-md-2 w-md-auto mb-2 mb-md-0"
+                    id="countdown-minutes"
+                  ></span>
+                  <span
+                    class="countdown-secs w-md-auto mb-2 mb-md-0"
+                    id="countdown-secs"
+                  ></span>
                 </div>
               </div>
             </div>
@@ -216,7 +350,9 @@
               class="main-button_r dropdown closed main-button col-lg-3 col-md-6 p-0"
             >
               <h2 class="icon d-flex justify-content-center align-items-center">
-                <a href="/fullwidth-template-page.html"> Бакалавриат и специалитет</a>
+                <a href="/fullwidth-template-page.html">
+                  Бакалавриат и специалитет</a
+                >
               </h2>
               <ul class="menu list-unstyled">
                 <li><a href="#">Пункт 1</a></li>
@@ -231,7 +367,9 @@
               class="main-button_o dropdown closed main-button col-lg-3 col-md-6 p-0"
             >
               <h2 class="icon d-flex justify-content-center align-items-center">
-                <a href="/fullwidth-template-page.html"> Магистратура и аспирантура</a>
+                <a href="/fullwidth-template-page.html">
+                  Магистратура и аспирантура</a
+                >
               </h2>
               <ul class="menu list-unstyled">
                 <li><a href="#">Пункт 1</a></li>
@@ -404,20 +542,13 @@
           >
             <div class="row owl-carousel announces-carousel">
               <a class="item announces-item_link" href="#">
-                <div class="announces-item d-flex flex-column flex-md-row">
+                <div class="announces-item d-flex flex-row">
                   <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
-                    <div class="announces-item_header text-center text-md-left">
+                    <div class="announces-item_header text-left">
                       <h3>
                         Приемная комиссия поздравляет всех абитуриентов и
                         студентов с новым годом!
                       </h3>
-                    </div>
-                    <div class="announces-item_content">
-                      <p>
-                        Завершается 2020 год. Несмотря на все трудности, он стал
-                        успешным для нас. Удалось многого достичь и в
-                        академической политике, и в научных исследованиях.
-                      </p>
                     </div>
                   </div>
                   <div
@@ -431,20 +562,13 @@
               </a>
 
               <a class="item announces-item_link" href="#">
-                <div class="announces-item d-flex flex-column flex-md-row">
+                <div class="announces-item d-flex flex-row">
                   <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
-                    <div class="announces-item_header text-center text-md-left">
+                    <div class="announces-item_header text-left">
                       <h3>
                         Приемная комиссия поздравляет всех абитуриентов и
                         студентов с новым годом!
                       </h3>
-                    </div>
-                    <div class="announces-item_content">
-                      <p>
-                        Завершается 2020 год. Несмотря на все трудности, он стал
-                        успешным для нас. Удалось многого достичь и в
-                        академической политике, и в научных исследованиях.
-                      </p>
                     </div>
                   </div>
                   <div
@@ -457,20 +581,13 @@
                 </div>
               </a>
               <a class="item announces-item_link" href="#">
-                <div class="announces-item d-flex flex-column flex-md-row">
+                <div class="announces-item d-flex flex-row">
                   <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
-                    <div class="announces-item_header text-center text-md-left">
+                    <div class="announces-item_header text-left">
                       <h3>
                         Приемная комиссия поздравляет всех абитуриентов и
                         студентов с новым годом!
                       </h3>
-                    </div>
-                    <div class="announces-item_content">
-                      <p>
-                        Завершается 2020 год. Несмотря на все трудности, он стал
-                        успешным для нас. Удалось многого достичь и в
-                        академической политике, и в научных исследованиях.
-                      </p>
                     </div>
                   </div>
                   <div
@@ -484,20 +601,13 @@
               </a>
 
               <a class="item announces-item_link" href="#">
-                <div class="announces-item d-flex flex-column flex-md-row">
+                <div class="announces-item d-flex flex-row">
                   <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
-                    <div class="announces-item_header text-center text-md-left">
+                    <div class="announces-item_header text-left">
                       <h3>
                         Приемная комиссия поздравляет всех абитуриентов и
                         студентов с новым годом!
                       </h3>
-                    </div>
-                    <div class="announces-item_content">
-                      <p>
-                        Завершается 2020 год. Несмотря на все трудности, он стал
-                        успешным для нас. Удалось многого достичь и в
-                        академической политике, и в научных исследованиях.
-                      </p>
                     </div>
                   </div>
                   <div
@@ -661,7 +771,7 @@
                   src="./img/main/states/university.svg"
                   alt="Институт химии и химико-фармацевтических технологий"
                 />
-                <h5 class="states-item_text" style="text-transform: none;">
+                <h5 class="states-item_text" style="text-transform: none">
                   Рубцовский институт (филиал) АлтГУ
                 </h5>
               </a>
@@ -676,7 +786,9 @@
                   src="./img/main/states/university.svg"
                   alt="Институт химии и химико-фармацевтических технологий"
                 />
-                <h5 class="states-item_text" style="text-transform: none;">Филиал АлтГУ в г.Белокурихе</h5>
+                <h5 class="states-item_text" style="text-transform: none">
+                  Филиал АлтГУ в г.Белокурихе
+                </h5>
               </a>
             </div>
             <div class="col-sm-6 col-lg-4 states-item states-item_red">
@@ -689,7 +801,9 @@
                   src="./img/main/states/university.svg"
                   alt="Институт химии и химико-фармацевтических технологий"
                 />
-                <h5 class="states-item_text" style="text-transform: none;">Филиал АлтГУ в г.Бийске</h5>
+                <h5 class="states-item_text" style="text-transform: none">
+                  Филиал АлтГУ в г.Бийске
+                </h5>
               </a>
             </div>
           </div>
@@ -878,10 +992,7 @@
               <h4 class="tools-items_header">Выберите пункт</h4>
 
               <div class="row tab">
-                <div
-                  class="col-6 tools-item tablinks active"
-                  data-tool="lk"
-                >
+                <div class="col-6 tools-item tablinks active" data-tool="lk">
                   <button class="tools-item_link">
                     <img
                       src="./img/main/tools/user.svg"
@@ -893,10 +1004,7 @@
                     >
                   </button>
                 </div>
-                <div
-                  class="col-6 tools-item tablinks"
-                  data-tool="olimp"
-                >
+                <div class="col-6 tools-item tablinks" data-tool="olimp">
                   <button class="tools-item_link">
                     <img
                       src="./img/main/tools/medal.svg"
@@ -906,10 +1014,7 @@
                     <span class="tools-item_header">Олимпиадное движение</span>
                   </button>
                 </div>
-                <div
-                  class="col-6 tools-item tablinks"
-                  data-tool="money"
-                >
+                <div class="col-6 tools-item tablinks" data-tool="money">
                   <button class="tools-item_link">
                     <img
                       src="./img/main/tools/money.svg"
@@ -921,10 +1026,7 @@
                     >
                   </button>
                 </div>
-                <div
-                  class="col-6 tools-item tablinks"
-                  data-tool="calc"
-                >
+                <div class="col-6 tools-item tablinks" data-tool="calc">
                   <button class="tools-item_link">
                     <img
                       src="./img/main/tools/calc.svg"
@@ -936,10 +1038,7 @@
                     >
                   </button>
                 </div>
-                <div
-                  class="col-6 tools-item tablinks"
-                  data-tool="cel"
-                >
+                <div class="col-6 tools-item tablinks" data-tool="cel">
                   <button class="tools-item_link">
                     <img
                       src="./img/main/tools/paper.svg"
@@ -949,10 +1048,7 @@
                     <span class="tools-item_header">Целевое обучение</span>
                   </button>
                 </div>
-                <div
-                  class="col-6 tools-item tablinks"
-                  data-tool="plat"
-                >
+                <div class="col-6 tools-item tablinks" data-tool="plat">
                   <button class="tools-item_link">
                     <img
                       src="./img/main/tools/wallet.svg"

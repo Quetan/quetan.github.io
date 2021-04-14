@@ -1,0 +1,137 @@
+// USER VARIABLES SECTION
+
+$accent: #ff9a4c // Accent Color
+$dark: #cdb686 // Dark color
+$fontsize: 16px // Body Font Size
+$textcolor: #555 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: roboto-oh5, sans-serif // User Font Family
+$headerfont: montserrat, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import 'node_modules/swiper/swiper-bundle' // Swiper
+@import 'node_modules/animate.css/animate' //Animate CSS
+
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		font-display: swap
+		src: url($furl) format('woff2')
+
+@include font('montserrat', normal, 400, '../fonts/montserrat-v15-latin_cyrillic-regular.woff2')
+@include font('montserrat', bold, 600, '../fonts/montserrat-v15-latin_cyrillic-600.woff2')
+@include font('montserrat', bolder, 800, '../fonts/montserrat-v15-latin_cyrillic-800.woff2')
+
+// GENERAL DOCUMENT STYLES
+	
+main
+	overflow-x: hidden
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $headerfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+.ul-none
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+a
+	color: $accent
+	&:hover
+		color: $accent
+		text-decoration: none
+
+h1,h2,h3,h4,h5,h6
+	font-family: $headerfont
+	font-weight: 600
+
+
+.section
+	padding-top: 100px
+	padding-bottom: 120px
+	
+
+.section-header
+	margin-bottom: $gutter * 2
+	padding-bottom: 20px
+	text-align: center
+	font-size: 1.7em
+	font-weight: 600
+	color: $accent
+	text-transform: uppercase
+	display: block
+	position: relative
+	z-index: 10
+	text-shadow: 1px 1px 2px rgba(#000, 0.2)
+	&::after
+			content: "";
+			position: absolute
+			bottom: 10px
+			left: 30%
+			right: 30%
+			width: 40%
+			height: 2px
+			background-image: linear-gradient(to right, transparent, #cdb686, transparent)
+			filter: drop-shadow(2px 2px 2px rgba(#000, 0.2))
+
+.section-header_white
+	color: #fff
+	text-shadow: 1px 1px 2px rgba(#000, 0.45)
+	&::after
+		content: "";
+		position: absolute
+		bottom: 10px
+		left: 30%
+		right: 30%
+		width: 40%
+		height: 2px
+		background-image: linear-gradient(to right, transparent, #fafafa, transparent)
+		filter: drop-shadow(2px 2px 2px rgba(#000, 0.2))
+
+@media screen and ( max-width:  768.9px)
+	.section
+		padding-top: 50px
+		padding-bottom: 60px
+
+	.section-header
+		margin-bottom: $gutter
+
+	
+
+
+
