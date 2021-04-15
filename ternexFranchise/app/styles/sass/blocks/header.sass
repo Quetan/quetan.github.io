@@ -5,10 +5,15 @@
   width: 100%
   height: auto
   padding: $gutter/1.5 0
-  border-bottom: 1px solid rgba(black,0.05)
-  box-shadow: 0 5px 4px rgba(black,0.05)
-  background-color: rgba(white,0.8)
+  border-bottom: 1px solid rgba($dark,0.05)
+  box-shadow: 0 5px 4px rgba($dark,0.05)
+  background-color: $light
+  opacity: 0.9
   z-index: 999
+  transition: opacity 0.25s ease
+  &:hover
+    opacity: 1
+    
 
 .header-container .row
   display: flex
@@ -18,12 +23,9 @@
   font-weight: 600
   font-size: 2rem
   line-height: 1
-  opacity: 0.9
-  transition: opasity 0.25s
   &:hover
     text-decoration: none
     color: inherit
-    opacity: 1
 
 .header-nav
   display: flex
