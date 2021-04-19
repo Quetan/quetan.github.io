@@ -37,7 +37,6 @@
     margin: 0
     padding-inline-start: 0
     li
-      // padding: 0 10px
       font-size: 0.95em
       display: inline-flex
       justify-content: center
@@ -62,7 +61,14 @@
         left: 0
         transition: width 0.25s ease
         border-radius: 100%
-
       &:hover
         a::after
           width: 100%
+
+.header-connect
+  float: right
+
+@media screen and ( max-width: 380px)
+  .header-connect
+    display: none
+  

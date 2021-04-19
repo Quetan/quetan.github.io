@@ -1,8 +1,9 @@
 // USER VARIABLES SECTION
 
 $dark: #343946
-$lightBlue: #c9e8f2
+$lightBlue: #a7d0ff
 $gray: #515765
+$yellow: #f7cf1a
 $light: #f2f5f7
 $green: #c0e0b0
 $lightGreen: #97b5b8
@@ -10,7 +11,6 @@ $accent: $green
 $fontsize: 16px // Body Font Size
 $textcolor: $dark // Text Color
 $lineheight: 1.65 // Document Line Height
-$roboto: roboto-oh5, sans-serif // User Font Family
 $montserrat: montserrat, sans-serif // User Font Family
 $userfont: $montserrat
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
@@ -22,9 +22,8 @@ $gutter: $grid-gutter-width
 // IMPORT SECTION
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-@import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 @import 'node_modules/animate.css/animate' //Animate CSS
 
 // FONTS LOAD SECTION
@@ -34,12 +33,9 @@ $gutter: $grid-gutter-width
 		font-family: $fname
 		font-style: $fstyle
 		font-weight: $fweight
+		font-display: swap
 		src: url($furl) format('woff2')
 
-@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
 @include font('montserrat', normal, 400, '../fonts/montserrat-v15-latin_cyrillic-regular.woff2')
 @include font('montserrat', semi-bold, 500, '../fonts/montserrat-v15-latin_cyrillic-500.woff2')
 @include font('montserrat', bold, 600, '../fonts/montserrat-v15-latin_cyrillic-600.woff2')

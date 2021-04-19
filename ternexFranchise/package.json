@@ -1,9 +1,9 @@
 {
-	"name": "optimizedhtml",
-	"version": "5.0.0",
-	"description": "OptimizedHTML 5 - Lightweight Gulp Starter",
+	"name": "Ternex",
+	"version": "1.0.0",
+	"description": "Создание и обслуживание беспроводных сетей для предприятий, гостиниц, кафе и туристических объектов с помощью инновационных решений от компании «Ternex»",
 	"main": "index.js",
-	"author": "WebDesign Master",
+	"author": "Quetan",
 	"license": "ISC",
 	"devDependencies": {
 		"@babel/core": "^7.13.14",

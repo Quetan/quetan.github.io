@@ -1,0 +1,16 @@
+.connect-links
+    display: flex
+    flex-direction: column
+    position: fixed
+    bottom: 40px
+    right: 20px
+    z-index: 999
+    &-whatsapp,
+    &-telegram
+        opacity: 0.75
+        transition: opacity 0.25s ease
+        position: relative
+        &:hover
+            opacity: 1
+    &-whatsapp
+        margin-bottom: $gutter / 2

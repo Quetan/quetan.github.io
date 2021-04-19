@@ -12,7 +12,7 @@
 
 .main-content
     width: 60%
-    padding: 30px
+    padding: $gutter
     .main-headline
         display: flex
         align-items: center
@@ -97,6 +97,59 @@
     left: 50%
     transform: translateX(-50%)
     a
-        color: $lightGreen
+        color: #023b41
         &:hover
-            color: darken($lightGreen, 20%) 
+            color: darken(#023b41, 20%)
+
+
+@media screen and (max-width: 1200px)
+    .main-triangle
+        position: absolute
+        bottom: -150px
+        left: -20px
+        transform: scale(0.55) rotate(-25deg)
+        opacity: 0.1
+    .main-pentagon
+        position: absolute
+        bottom: 20px
+        right: -200px
+        transform: scale(0.4) rotate(60deg)
+        opacity: 0.1
+    .main-circle
+        position: absolute
+        top: -160px
+        left: -10px
+        transform: scale(0.4)
+        opacity: 0.1
+
+@media screen and (max-width: 992px)
+    .main-triangle
+        position: absolute
+        bottom: -150px
+        left: -65px
+        transform: scale(0.35) rotate(-25deg)
+        opacity: 0.1
+    .main-pentagon
+        position: absolute
+        bottom: -20px
+        right: -200px
+        transform: scale(0.3) rotate(60deg)
+        opacity: 0.1
+    .main-circle
+        position: absolute
+        top: -160px
+        left: -65px
+        transform: scale(0.3)
+        opacity: 0.1
+
+    .main-content
+        padding: $gutter / 2
+        .main-headline
+            font-size: 0.8rem
+            &::before,
+                display: none
+        h1
+            font-size: 2.5rem
+        p
+            font-size: 1rem
+            margin-bottom: $gutter
