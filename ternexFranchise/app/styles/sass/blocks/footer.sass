@@ -9,16 +9,23 @@
     justify-content: space-between
     margin-bottom: $gutter
     opacity: 0.9
+    @media screen and (max-width: 768px)
+        flex-direction: column
 .footer-description
     color: $light
     width: 60%
     padding: 0 15px
+    @media screen and (max-width: 768px)
+        width: 100%
+        margin-bottom: $gutter / 2
     &-text
         margin: 0
 .footer-nav
     color: $light
     width: 30%
     padding: 0 15px
+    @media screen and (max-width: 768px)
+        width: 100%
     &-list
         display: inline-flex
         flex-direction: column
@@ -29,3 +36,5 @@
     color: $light
     text-align: center
     opacity: 0.9
+    @media screen and (max-width: 768px)
+        padding: $gutter / 2

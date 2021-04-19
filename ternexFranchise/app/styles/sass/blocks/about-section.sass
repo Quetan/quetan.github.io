@@ -30,6 +30,16 @@
         width: 120px
         fill: $accent
         filter:  drop-shadow(3px 3px 1px rgba($dark, .1))
+        @media screen and (max-width: 768px)
+            height: 60px
+            width: 60px
+            margin-bottom: $gutter / 1.5
+            
+    @media screen and ( max-width: 768px)
+        padding: 1rem
+        font-size: 1.15rem
+        text-align: center
+        flex-direction: column
 
 .about-income-wrapper
     padding: 0 15px
@@ -50,19 +60,28 @@
     background-color: #fff
     &:hover
         box-shadow: 5px 5px 2px 0px rgba($dark, 0.2)
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        
 
 .income-item
     text-align: center
     font-weight: 500
     position: relative
+    @media screen and (max-width: 768px)
+        margin-bottom: $gutter / 2
     &-header
         font-weight: 400
         font-size: 1.5rem
+        @media screen and (max-width: 768px)
+            font-size: 1.2rem
     &-main
         font-weight: 600
         font-size: 2rem
         color: $accent
         text-shadow: 2px 2px 0 rgba($dark, 0.4)
+        @media screen and (max-width: 768px)
+            font-size: 1.7rem
 
 .income-item:not(:last-child)::after
     content: ''
@@ -75,7 +94,8 @@
     transform: translateY(-50%)
     right: -20%
     background-color: rgba($accent, 0.5)
-
+    @media screen and (max-width: 768px)
+        display: none
 .income-description
     text-align: center
     color: lighten($dark, 40%)

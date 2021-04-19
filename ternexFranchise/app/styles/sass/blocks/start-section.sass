@@ -5,7 +5,9 @@
     flex-direction: row
     align-items: center
     margin-bottom: $gutter * 1.5
-
+    @media screen and (max-width: 768px)
+        flex-direction: column
+    
 .requirement-item
     display: flex
     align-items: center
@@ -19,8 +21,13 @@
     box-shadow: 10px 12px 2px 0px rgba($dark, 0.2)
     transition: box-shadow 0.25s ease
     background-color: #fff
+    @media screen and (max-width: 768px)
+        width: 100%
+        margin-bottom: $gutter / 2
     &:nth-child(1)
         margin-right: $gutter
+        @media screen and (max-width: 768px)
+            margin-right: 0
     &-number
         position: absolute
         font-size: 4.5rem
@@ -31,6 +38,8 @@
         letter-spacing: 0.05em
         text-shadow: 5px 3px 0px rgba($dark, .3)
         transition: opacity 0.25s ease
+        @media screen and (max-width: 768px)
+            font-size: 3rem
     &-text
         padding-left: 2.2em
         padding-top: 1rem
@@ -39,6 +48,10 @@
         z-index: 2
         opacity: 0.9
         font-weight: 600
+        @media screen and (max-width: 768px)
+            padding-left: 1em
+            padding-right: 1em
+            font-size: 1.35rem
     svg
         position: absolute
         right: 15px
@@ -49,6 +62,9 @@
         fill: $lightBlue
         filter:  drop-shadow(3px 3px 1px rgba($dark, .1))
         transition: transform 0.25s ease
+        @media screen and (max-width: 768px)
+            width: 80px
+            height: 80px
     &:hover
         box-shadow: 5px 5px 2px 0px rgba($dark, 0.2)
         svg
@@ -73,31 +89,46 @@
         font-size: 2em
         font-weight: 800
         opacity: 0.95
+        @media screen and (max-width: 768px)
+            font-size: 1.4em
     &-list
-        padding-left: 60px
-        padding-right: 20px
+        padding-left: $gutter * 2
+        padding-right: $gutter / 1.5
         margin-bottom: 0
         display: flex
         flex-wrap: wrap
+        @media screen and (max-width: 768px)
+            flex-direction: column
+            padding-left: $gutter * 1.2
     &-item
         margin-bottom: 1em
         font-size: 1.2rem
         width: 50%
         padding-left: 15px
+        @media screen and (max-width: 768px)
+            width: 100%
+            font-size: 1rem
+            padding-left: 5px
         &::marker
             font-size: 2rem
             line-height: 1
             color: $lightBlue
             font-weight: 800
             transition: color 0.25s ease
+            @media screen and (max-width: 768px)
+                font-size: 1.25rem
         &:hover
             &::marker
                 color: darken($lightBlue, 20%)
 
         &:nth-child(odd)
-            padding-right: $gutter * 2 
+            padding-right: $gutter * 2
+            @media screen and (max-width: 768px)
+                padding-right: 0
         &:nth-child(even)
-            padding-right: $gutter / 2  
+            padding-right: $gutter / 2
+            @media screen and (max-width: 768px)
+                padding-right: 0
 
 .start-bg
     &-triangle,

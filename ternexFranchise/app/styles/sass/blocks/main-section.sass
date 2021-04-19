@@ -72,6 +72,10 @@
     z-index: 5
     opacity: 0.9
 
+.main-buttons-wrapper
+    a:nth-child(1)
+        margin-bottom: $gutter / 2
+
 .main-triangle
     position: absolute
     bottom: -150px
@@ -93,6 +97,7 @@
 
 .main-about
     position: absolute
+    text-align: center
     bottom: $gutter
     left: 50%
     transform: translateX(-50%)
@@ -153,3 +158,15 @@
         p
             font-size: 1rem
             margin-bottom: $gutter
+
+@media screen and (max-width: 768px)
+    .main-container
+        flex-direction: column
+    .main-content
+        width: 100%
+    .main-image
+        display: none
+    .main-buttons-wrapper
+        flex-direction: column
+        justify-content: center
+        align-items: center

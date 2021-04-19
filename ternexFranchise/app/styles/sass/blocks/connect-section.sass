@@ -2,22 +2,39 @@
     padding: $gutter * 2
     h3
         text-align: center
-
+        @media screen and (max-width: 768px)
+            font-size: 0.9em
+    @media screen and (max-width: 768px)
+        padding: 0 $gutter / 2
+    
 .connect-links-wrapper
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
     flex-direction: row
     padding-top: $gutter * 1.5
-
+    @media screen and (max-width: 768px)
+        padding: $gutter / 1.5
+        flex-direction: column
 .connect-link
     padding: $gutter
-    width: 33.333%
+    width: 30%
     height: 100%
     text-align: center
     border-radius: $gutter / 2
     box-shadow: 10px 12px 2px 0px rgba($dark, 0.2)
     transition: box-shadow 0.25s ease
+    &:nth-child(1)
+        border: 6px solid rgba($lightBlue, 0.4)
+    &:nth-child(2)
+        border: 6px solid rgba($accent, 0.4)
+    &:nth-child(3)
+        border: 6px solid rgba(252, 198, 194, 0.3)
+    @media screen and (max-width: 768px)
+        width: 100%
+        margin-bottom: $gutter / 2
+        padding: $gutter / 2
+        
     &:hover
         box-shadow: 5px 5px 2px 0px rgba($dark, 0.2)
     a
@@ -32,3 +49,4 @@
             width: 60px
             height: 60px
             margin-bottom: $gutter / 2
+                

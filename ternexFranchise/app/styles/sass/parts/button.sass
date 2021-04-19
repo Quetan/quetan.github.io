@@ -13,9 +13,16 @@
     justify-content: center
     flex-direction: row
     box-shadow: 2px 2px 3px 0px rgba($dark, 0.2)
+    border: 3px solid transparent
+    &--outlined
+        background-color: transparent
+        border-color: $dark
+        color: $dark
+        &:hover, &:focus
+            background-color: $dark
     &--accent
         background-color: $accent
-        &:hover
+        &:hover, &:focus
             color: $light
             background-color: darken($accent, 10%)
     &--dark
@@ -25,7 +32,7 @@
         font-size: 1em
         padding: 1rem 2.5rem
         font-weight: 600
-    &:hover
+    &:hover, &:focus
         color: $light
         opacity: 1
 
@@ -41,5 +48,11 @@
     &:focus,
     &:active
         outline: none
-        box-shadow: 0px 0px 0px 4px scale-color($accent, $lightness: -40%)
+        box-shadow: 0px 0px 0px 4px scale-color($lightBlue, $lightness: -20%)
         outline-style: solid
+
+@media screen and (max-width: 768px)
+    .button
+        padding: 0.75rem 1.5rem
+        font-size: 0.65em
+
