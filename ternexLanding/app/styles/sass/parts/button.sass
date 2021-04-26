@@ -1,0 +1,62 @@
+.button
+    padding: 1rem 2rem
+    text-align: center
+    border-radius: 10px
+    text-transform: uppercase
+    width: auto
+    letter-spacing: 0.05em
+    font-size: 0.7em
+    opacity: 0.95
+    transition: all 0.25s ease
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    box-shadow: 2px 2px 3px 0px rgba($dark, 0.2)
+    border: 3px solid transparent
+    line-height: 1
+    height: max-content
+    overflow: hidden
+    &--outlined
+        background-color: transparent
+        border-color: $dark
+        color: $dark
+        &:hover, &:focus
+            background-color: $dark
+    &--accent
+        background-color: $accent
+        color: $light
+        &:hover, &:focus
+            color: $light
+            background-color: darken($accent, 5%)
+    &--dark
+        background-color: $dark
+        color: $light
+    &--lg
+        font-size: 1em
+        padding: 1.5rem 3rem
+        font-weight: 600
+    &:hover, &:focus
+        color: $light
+        opacity: 1
+
+    &-icon
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        line-height: inherit
+        font-size: 2em
+        height: 1rem
+        margin-left: 20px
+
+    &:focus,
+    &:active
+        outline: none
+        box-shadow: 0px 0px 0px 4px scale-color($accent, $lightness: -20%)
+        outline-style: solid
+
+@media screen and (max-width: 768px)
+    .button
+        padding: 0.75rem 1.5rem
+        font-size: 0.65em
+
