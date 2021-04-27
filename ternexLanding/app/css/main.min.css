@@ -4417,6 +4417,115 @@ h5,
 h6 {
   font-weight: 600
 }
+.contacts-section {
+  background-color: #ed4747;
+  color: #f2f5f7;
+  min-height: 100vh;
+  z-index: 50
+}
+.contacts-description {
+  text-align: left;
+  font-size: 1.85em;
+  text-transform: uppercase;
+  letter-spacing: -.05em;
+  margin: 0 auto;
+  margin-bottom: 30px
+}
+.contacts-mail {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: 600;
+  font-size: 1.6em;
+  margin-bottom: 15px
+}
+.contacts-mail:focus,
+.contacts-mail:hover {
+  color: #343946
+}
+.contacts-time {
+  font-size: 1.4em;
+  font-weight: 400
+}
+.contacts-wrapper {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40%;
+  margin-left: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row
+}
+.contacts-item {
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #343946;
+  -webkit-transition: background-color .2s ease;
+  -o-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+  border-radius: 100%;
+  overflow: hidden;
+  aspect-ratio: 1;
+  -webkit-filter: saturate(.7);
+  filter: saturate(.7);
+  -webkit-transition: -webkit-filter .3s ease;
+  transition: -webkit-filter .3s ease;
+  -o-transition: filter .3s ease;
+  transition: filter .3s ease;
+  transition: filter .3s ease,-webkit-filter .3s ease;
+  border: 2px solid #343946
+}
+.contacts-item:hover {
+  -webkit-filter: saturate(1);
+  filter: saturate(1)
+}
+.contacts-item:hover a img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1)
+}
+.contacts-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 45px 0
+}
+.contacts-item a img {
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease,-webkit-transform .3s ease
+}
 .franchise-section {
   background-color: #583d72;
   -webkit-box-shadow: inset 0 0 20px 5px rgba(52,57,70,.15);
@@ -4491,12 +4600,98 @@ h6 {
   margin-bottom: 30px
 }
 .how-subheader {
-  font-size: 1.35em;
+  font-size: 1.85em;
   letter-spacing: -.05em;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 45px auto;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content
+}
+.how-products-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around
+}
+.how-product {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(52,57,70,.034),0 6.7px 5.3px rgba(52,57,70,.048),0 12.5px 10px rgba(52,57,70,.06),0 22.3px 17.9px rgba(52,57,70,.072),0 41.8px 33.4px rgba(52,57,70,.086);
+  box-shadow: 0 2.8px 2.2px rgba(52,57,70,.034),0 6.7px 5.3px rgba(52,57,70,.048),0 12.5px 10px rgba(52,57,70,.06),0 22.3px 17.9px rgba(52,57,70,.072),0 41.8px 33.4px rgba(52,57,70,.086);
+  border: 3px solid rgba(52,57,70,.02)
+}
+.how-product--header {
+  margin-bottom: 1rem;
+  font-size: 1.65em;
+  text-transform: uppercase;
+  letter-spacing: -.06em
+}
+.how-product--description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  font-size: .8em
+}
+.how-product--description p {
+  text-align: center
+}
+.how-product--description span {
+  font-weight: 600;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: .02em
+}
+.how-product--description ul {
+  margin: 1rem 0
+}
+.how-product--description li {
+  margin-bottom: .45rem
+}
+.how-product--description li::marker {
+  color: #ff8e71;
+  font-size: 1.3em;
+  line-height: 1
+}
+.how-product--description svg {
+  margin: 2rem auto;
+  width: 150px;
+  height: 150px
+}
+.how-product--description svg .svg-bg {
+  fill: #654683
+}
+.how-product--price {
+  margin-bottom: 2rem
+}
+.how-product--price span {
+  font-weight: 600;
+  font-size: 1.4em;
+  color: #ff8e71
 }
 .main-section {
   position: relative;
@@ -4554,7 +4749,7 @@ h6 {
 .main-section--header {
   font-size: 2.6em;
   margin-bottom: 30px;
-  line-height: 1;
+  line-height: 1.25;
   font-weight: 600;
   text-shadow: 2px 4px 1px rgba(52,57,70,.1);
   letter-spacing: -.06em
@@ -4627,7 +4822,7 @@ h6 {
   margin-bottom: 30px
 }
 .why-subheader {
-  font-size: 1.35em;
+  font-size: 1.75em;
   letter-spacing: -.05em;
   margin-bottom: 20px
 }
@@ -4757,7 +4952,7 @@ h6 {
   text-align: center;
   margin-bottom: 45px;
   font-size: 2.5em;
-  font-weight: 600
+  font-weight: 800
 }
 @media screen and (max-width:768px) {
   .section-header {

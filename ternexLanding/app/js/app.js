@@ -2,14 +2,14 @@ import tinyTypewriter from "tiny-typewriter";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Type effect
-  (function () {
-    const typewritter = document.querySelector("#typewriter");
-    tinyTypewriter(typewritter, {
-      items: ["дома.", "офиса.", "предприятия."],
-      typeSpeed: 150,
-      deleteSpeed: 100,
-    });
-  })();
+  // (function () {
+  //   const typewritter = document.querySelector("#typewriter");
+  //   tinyTypewriter(typewritter, {
+  //     items: ["дома.", "офиса.", "предприятия."],
+  //     typeSpeed: 150,
+  //     deleteSpeed: 100,
+  //   });
+  // })();
   // Smooth scroll
   (function () {
     const links = document.querySelectorAll(".smooth-link");

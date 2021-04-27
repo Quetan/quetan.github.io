@@ -5,7 +5,61 @@
     margin-bottom: $gutter
 
 .how-subheader
-    font-size: 1.35em
+    font-size: 1.85em
     letter-spacing: -0.05em
-    margin: 0 auto $gutter / 1.5 auto
+    margin: 0 auto $gutter * 1.5 auto
     width: max-content
+
+.how-products-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+
+.how-product
+    width: 40%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-direction: column
+    padding: 2rem 3rem
+    background-color: #fff
+    border-radius: 10px
+    box-shadow: 0 2.8px 2.2px rgba($dark, 0.034), 0 6.7px 5.3px rgba($dark, 0.048), 0 12.5px 10px rgba($dark, 0.06), 0 22.3px 17.9px rgba($dark, 0.072), 0 41.8px 33.4px rgba($dark, 0.086)
+    border: 3px solid rgba($dark, 0.02)
+    &--header
+        margin-bottom: 1rem
+        font-size: 1.65em
+        text-transform: uppercase
+        letter-spacing: -0.06em
+    &--description
+        display: flex
+        flex-direction: column
+        margin-bottom: 1.5rem
+        font-size: 0.8em
+        p
+            text-align: center
+        span
+            font-weight: 600
+            text-align: center
+            font-size: 2em
+            letter-spacing: 0.02em
+        ul
+            margin: 1rem 0
+        li
+            margin-bottom: 0.45rem
+            &::marker
+                color: $accent
+                font-size: 1.3em
+                line-height: 1
+        svg
+            margin: 2rem auto
+            width: 150px
+            height: 150px
+            .svg-bg
+                fill: lighten($blue, 5%)
+    &--price
+        margin-bottom: 2rem
+        span
+            font-weight: 600
+            font-size: 1.4em
+            color: $accent
