@@ -1,14 +1,14 @@
 .contacts-section
-    background-color: #ed4747
+    background-color: $blue
     color: $light
     min-height: 100vh
     z-index: 50
     
 .contacts-description
     text-align: left
-    font-size: 1.65em
+    font-size: 1.5em
     text-transform: uppercase
-    letter-spacing: -0.05em
+    letter-spacing: -0.04em
     margin: 0 auto
     margin-bottom: $gutter / 3
 
@@ -24,10 +24,13 @@
     display: block
     width: max-content
     font-weight: 600
-    font-size: 2.5em
+    font-size: 3em
     margin-bottom: $gutter
+    color: $dark
+    letter-spacing: -0.04em
     &:hover, &:focus
         color: $dark
+        text-decoration: underline
 
 .contacts-time
     font-size: 1.4em
@@ -65,7 +68,7 @@
     overflow: hidden
     aspect-ratio: 1
     filter: saturate(0.7)
-    border: 2px solid $dark
+    border: 2px solid rgba($dark, 0.2)
     &:hover, &:focus
         filter: saturate(1)
         transform: scale(1.05)
