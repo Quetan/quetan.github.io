@@ -3,21 +3,29 @@
     color: $light
     min-height: 100vh
     z-index: 50
-
+    
 .contacts-description
     text-align: left
-    font-size: 1.85em
+    font-size: 1.65em
     text-transform: uppercase
     letter-spacing: -0.05em
     margin: 0 auto
-    margin-bottom: $gutter
+    margin-bottom: $gutter / 3
+
+// .contacts-text-wrapper
+//     background-color: rgba($dark, 0.1)
+//     box-shadow: inset 0 0 10px 5px rgba($dark, 0.2)
+//     padding: 2rem
+//     transition: all 0.25s ease
+//     &:hover
+//         box-shadow: inset 0 0 0px 0px rgba($dark, 0.2)
     
 .contacts-mail
     display: block
     width: max-content
     font-weight: 600
-    font-size: 1.6em
-    margin-bottom: $gutter / 2
+    font-size: 2.5em
+    margin-bottom: $gutter
     &:hover, &:focus
         color: $dark
 
@@ -33,7 +41,17 @@
     width: 40%
     margin-left: auto
     flex-direction: row
-    
+    a
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100%
+        img
+            width: 60px
+            height: 60px
+            aspect-ratio: 1
+            transition: transform 0.3s ease
 
 .contacts-item
     width: 100px
@@ -42,27 +60,12 @@
     justify-content: center
     align-items: center
     background-color: $dark
-    transition: background-color 0.2s ease
+    transition: all 0.2s ease
     border-radius: 100%
     overflow: hidden
     aspect-ratio: 1
     filter: saturate(0.7)
-    transition: filter 0.3s ease
     border: 2px solid $dark
-    &:hover
+    &:hover, &:focus
         filter: saturate(1)
-        a
-            img
-                transform: scale(1.1)
-    a
-        display: flex
-        justify-content: center
-        align-items: center
-        width: 100%
-        height: 100%
-        padding: $gutter * 1.5 0
-        img
-            width: 60px
-            height: 60px
-            aspect-ratio: 1
-            transition: transform 0.3s ease
+        transform: scale(1.05)

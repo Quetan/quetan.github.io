@@ -1,0 +1,78 @@
+.instructions-section
+    overflow-y: visible !important
+    padding: 80px $gutter 120px $gutter
+
+.grid
+    display: grid
+    grid-gap: 1em
+    grid-template-columns: 30% 70%
+    width: 100%
+
+    h3
+        margin-bottom: $gutter
+
+#instruction-navigation
+    position: sticky
+    top: $gutter * 1.5
+    color: $dark
+    list-style-type: decimal-leading-zero
+    padding-inline-start: 0
+    a
+        padding: 0.4rem 1rem
+        margin-left: 5px
+        margin-bottom: 1rem
+        width: 100%
+        height: 100%
+        color: $dark
+        &:focus
+            outline: 2px solid $accent
+    li
+        width: 100%
+        transition: all 0.25s ease
+        margin-bottom: 1rem
+    li.active
+        >a   
+            margin-bottom: 40px
+            background-color: $accent
+            color: $light
+
+.instruction-subnav
+    list-style-type: square
+    padding-inline-start: $gutter / 2
+    li
+        margin: 10px 0
+        font-size: 0.9em     
+        &::marker
+            color: $blue 
+
+.instruction-section
+    min-height: 80vh
+    margin: 0
+    padding: $gutter 4em 80px 2em
+    ul, ol
+        margin-bottom: 2rem
+        ul, ol
+            list-style-type: disc
+        li
+            &::marker
+                color: $accent
+                font-weight: 600
+    p
+        margin-bottom: 0.6rem
+    h3
+        font-size: 2em
+        padding-top: 40px
+        letter-spacing: -0.04em
+    h4
+        padding-top: 20px
+        letter-spacing: -0.05em
+    
+    div
+        margin: 1.5rem 0
+
+    .button
+        margin-bottom: 2.5rem
+
+.instruction-top-button
+    text-align: center
+

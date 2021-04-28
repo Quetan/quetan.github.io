@@ -1,4 +1,5 @@
-import tinyTypewriter from "tiny-typewriter";
+// import tinyTypewriter from "tiny-typewriter";
+import Gumshoe from "gumshoejs";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Type effect
@@ -24,5 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: "smooth",
       });
     }
+  })();
+
+  //Scrollspy instruction
+  (function(){
+    var spy = new Gumshoe('#instruction-navigation a', {
+      offset: 80,
+      nested: true,
+      nestedClass: 'active-parent'
+    });
   })();
 });

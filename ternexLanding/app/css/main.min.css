@@ -4425,11 +4425,11 @@ h6 {
 }
 .contacts-description {
   text-align: left;
-  font-size: 1.85em;
+  font-size: 1.65em;
   text-transform: uppercase;
   letter-spacing: -.05em;
   margin: 0 auto;
-  margin-bottom: 30px
+  margin-bottom: 10px
 }
 .contacts-mail {
   display: block;
@@ -4437,8 +4437,8 @@ h6 {
   width: -moz-max-content;
   width: max-content;
   font-weight: 600;
-  font-size: 1.6em;
-  margin-bottom: 15px
+  font-size: 2.5em;
+  margin-bottom: 30px
 }
 .contacts-mail:focus,
 .contacts-mail:hover {
@@ -4465,6 +4465,29 @@ h6 {
   -ms-flex-direction: row;
   flex-direction: row
 }
+.contacts-wrapper a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%
+}
+.contacts-wrapper a img {
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease,-webkit-transform .3s ease
+}
 .contacts-item {
   width: 100px;
   height: 100px;
@@ -4478,53 +4501,23 @@ h6 {
   -ms-flex-align: center;
   align-items: center;
   background-color: #343946;
-  -webkit-transition: background-color .2s ease;
-  -o-transition: background-color .2s ease;
-  transition: background-color .2s ease;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
   border-radius: 100%;
   overflow: hidden;
   aspect-ratio: 1;
   -webkit-filter: saturate(.7);
   filter: saturate(.7);
-  -webkit-transition: -webkit-filter .3s ease;
-  transition: -webkit-filter .3s ease;
-  -o-transition: filter .3s ease;
-  transition: filter .3s ease;
-  transition: filter .3s ease,-webkit-filter .3s ease;
   border: 2px solid #343946
 }
+.contacts-item:focus,
 .contacts-item:hover {
   -webkit-filter: saturate(1);
-  filter: saturate(1)
-}
-.contacts-item:hover a img {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1)
-}
-.contacts-item a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 45px 0
-}
-.contacts-item a img {
-  width: 60px;
-  height: 60px;
-  aspect-ratio: 1;
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
-  -o-transition: transform .3s ease;
-  transition: transform .3s ease;
-  transition: transform .3s ease,-webkit-transform .3s ease
+  filter: saturate(1);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05)
 }
 .franchise-section {
   background-color: #583d72;
@@ -4692,6 +4685,106 @@ h6 {
   font-weight: 600;
   font-size: 1.4em;
   color: #ff8e71
+}
+.instructions-section {
+  overflow-y: visible!important;
+  padding: 80px 30px 120px 30px
+}
+.grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+  -ms-grid-columns: 30% 70%;
+  grid-template-columns: 30% 70%;
+  width: 100%
+}
+.grid h3 {
+  margin-bottom: 30px
+}
+#instruction-navigation {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 45px;
+  color: #343946;
+  list-style-type: decimal-leading-zero;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0
+}
+#instruction-navigation a {
+  padding: .4rem 1rem;
+  margin-left: 5px;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 100%;
+  color: #343946
+}
+#instruction-navigation a:focus {
+  outline: 2px solid #ff8e71
+}
+#instruction-navigation li {
+  width: 100%;
+  -webkit-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+  margin-bottom: 1rem
+}
+#instruction-navigation li.active > a {
+  margin-bottom: 40px;
+  background-color: #ff8e71;
+  color: #f2f5f7
+}
+.instruction-subnav {
+  list-style-type: square;
+  -webkit-padding-start: 15px;
+  padding-inline-start: 15px
+}
+.instruction-subnav li {
+  margin: 10px 0;
+  font-size: .9em
+}
+.instruction-subnav li::marker {
+  color: #583d72
+}
+.instruction-section {
+  min-height: 80vh;
+  margin: 0;
+  padding: 30px 4em 80px 2em
+}
+.instruction-section ol,
+.instruction-section ul {
+  margin-bottom: 2rem
+}
+.instruction-section ol ol,
+.instruction-section ol ul,
+.instruction-section ul ol,
+.instruction-section ul ul {
+  list-style-type: disc
+}
+.instruction-section ol li::marker,
+.instruction-section ul li::marker {
+  color: #ff8e71;
+  font-weight: 600
+}
+.instruction-section p {
+  margin-bottom: .6rem
+}
+.instruction-section h3 {
+  font-size: 2em;
+  padding-top: 40px;
+  letter-spacing: -.04em
+}
+.instruction-section h4 {
+  padding-top: 20px;
+  letter-spacing: -.05em
+}
+.instruction-section div {
+  margin: 1.5rem 0
+}
+.instruction-section .button {
+  margin-bottom: 2.5rem
+}
+.instruction-top-button {
+  text-align: center
 }
 .main-section {
   position: relative;
