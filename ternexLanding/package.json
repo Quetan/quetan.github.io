@@ -31,6 +31,7 @@
 		"webpack-stream": "^6.1.2"
 	},
 	"dependencies": {
+		"@lottiefiles/lottie-player": "^1.0.3",
 		"gumshoejs": "^5.1.2",
 		"tiny-typewriter": "^1.0.4"
 	}

@@ -1,5 +1,6 @@
 // import tinyTypewriter from "tiny-typewriter";
 import Gumshoe from "gumshoejs";
+import "@lottiefiles/lottie-player";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Type effect
