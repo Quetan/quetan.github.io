@@ -1,0 +1,60 @@
+.start-section
+    // background: linear-gradient(180deg, rgba(#fff, 1) 40%, rgba($blue, 1) 80%)
+    background-color: #fff
+    
+.steps-wrapper
+    display: inline-flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: space-around
+    flex-wrap: wrap
+    padding-top: $gutter * 2
+    padding-bottom: $gutter * 5
+
+.steps-item
+    width: 20%
+    min-height: 280px
+    font-size: 0.75em
+    background-color: rgba(lighten($blue, 20%), 0.2)
+    border: 2px solid $dark
+    border-radius: 10px
+    padding: 2rem 1rem  
+    position: relative 
+    box-shadow: 6px -6px 1px 0px rgba($dark, 0.95) 
+    transition: box-shadow 0.25s ease
+    &:hover, &:focus
+        box-shadow: 3px -3px 1px 0px rgba($dark, 0.95)
+        color: inherit
+        &:not(:last-child)::after
+            right: -25%
+        .steps-item--counter
+            transform: scale(1.15)
+            transform-origin: right
+    &:not(:last-child)::after
+        content: '➮'
+        display: block
+        position: absolute
+        top: 50%
+        right: -22%
+        font-size: 4em
+        line-height: 1
+        width: max-content
+        transform: translateY(-50%) 
+        transition: all 0.25s ease
+    &--header
+        font-weight: 600
+        font-size: 1.4em 
+        margin-bottom: 0.8rem
+        letter-spacing: -0.06em
+    &--counter
+        position: absolute
+        bottom: $gutter / 3
+        right: $gutter / 3
+        font-size: 1.4em
+        font-weight: 800
+        color: rgba($dark, 0.25)
+        transition: transform 0.25s ease
+.steps-button-wrapper
+    width: 100%
+    text-align: center
+    padding-bottom: $gutter * 5

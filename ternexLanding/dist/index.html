@@ -26,7 +26,7 @@
 </header>
 
 <main class="main">
-  <section class="section main-section">
+  <section class="main-section">
     <video
       src="./images/video_compressed.mp4"
       class="main-section--bg"
@@ -152,7 +152,7 @@
         предустановленным программным обеспечением от компании Ternex, либо
         установить его самостоятельно. Как это сделать, Вы можете узнать в
         <u
-          ><a href="#instruction" class="smooth-link"
+          ><a href="#start" class="smooth-link"
             >пошаговой инструкции</a
           ></u
         >
@@ -273,6 +273,36 @@
       <p class="month-free">Первые 30 дней бесплатно для всех!</p>
     </div>
   </section>
+  <section class="section start-section" id="start">
+    <div class="container-fluid start-container">
+      <h2 class="section-header">Как начать пользоваться?</h2>
+      <div class="steps-wrapper">
+        <a href="#router" class="steps-item openInstruction">
+          <div class="steps-item--header">Приобретите роутер</div>
+          <div class="steps-item--description">Преобретите один из совместимых роутеров и установите на него программное обеспечение Ternex.</div>
+          <span class="steps-item--counter">01.</span>
+        </a>
+        <a href="#portal" class="steps-item openInstruction">
+          <div class="steps-item--header">Подключите роутер</div>
+          <div class="steps-item--description">С помощью разработанных нами инструментов, Вы можете удобно управлять своими роутерами из любой точки мира!</div>
+          <span class="steps-item--counter">02.</span>
+        </a>
+        <a href="#earn" class="steps-item openInstruction">
+          <div class="steps-item--header">Начните зарабатывать</div>
+          <div class="steps-item--description">Вы будете получать 70% от оплаты лицензии как агент-распространитель нашего программного обеспечения</div>
+          <span class="steps-item--counter">03.</span>
+        </a>
+        <a href="#earn-more" class="steps-item openInstruction">
+          <div class="steps-item--header">Зарабатывайте еще больше!</div>
+          <div class="steps-item--description">Подключайте еще больше своих соседей, расширяйте территорию!</div>
+          <span class="steps-item--counter">04.</span>
+        </a>
+      </div>
+      <div class="steps-button-wrapper">
+        <button class="button button--accent openInstruction">Пошаговая инструкция</button>
+      </div>
+    </div>
+  </section>
   <section class="section contacts-section" id="contacts">
     <div class="container contacts-container">
       <h2 class="section-header">Контакты</h2>
@@ -283,7 +313,7 @@
         <a class="contacts-mail" href="mailto:info@ternex.ru">info@ternex.ru</a>
         <p class="contacts-time">Барнаул, Россия</p>
         <p class="contacts-time">На связи в любое время!</p>
-      </div>
+      </div> 
       <div class="contacts-wrapper">
         <a href="tg://resolve?domain=oleg1251">
           <div class="contacts-item">
@@ -305,64 +335,68 @@
       </div>
     </div>
   </section>
-  <section class="instructions-section" id="instruction">
-    <div class="container-fluid instruction-container">
+  <section class="instructions-section modal" id="instruction" tabindex="-1"
+      role="dialog"
+      aria-labelledby="Пошаговая инструкция"
+      aria-hidden="true">
+    <span class="close">&times;</span>
+    <div class="container-fluid instruction-container" id="top">
       <h2 class="section-header">Инструкция</h2>
-      <div class="instruction-wrapper" id="top">
+      <div class="instruction-wrapper">
         <div class="grid">
           <nav>
             <h3>Оглавление</h3>
             <ol id="instruction-navigation">
               <li>
-                <a class="smooth-link" href="#router">Вам нужен роутер</a>
+                <a href="#router">Вам нужен роутер</a>
                 <ul class="instruction-subnav">
                   <li>
-                    <a class="smooth-link" href="#compatible-routers"
+                    <a href="#compatible-routers"
                       >Совместимые роутеры</a
                     >
                   </li>
                   <li>
-                    <a class="smooth-link" href="#buy-routers"
+                    <a href="#buy-routers"
                       >Роутеры с предустановленным ПО</a
                     >
                   </li>
                 </ul>
               </li>
               <li>
-                <a class="smooth-link" href="#portal"
+                <a href="#portal"
                   >Подключите роутер</a
                 >
                 <ul class="instruction-subnav">
                   <li>
-                    <a class="smooth-link" href="#how-to-connect"
+                    <a href="#how-to-connect"
                       >Как подключить?</a
                     >
                   </li>
                 </ul>
               </li>
               <li>
-                <a class="smooth-link" href="#connect-it"
+                <a href="#connect-it"
                   >Делитесь сетью</a
                 >
               </li>
               <li>
-                <a class="smooth-link" href="#earn">Начните зарабатывать</a>
+                <a href="#earn">Начните зарабатывать</a>
                 <ul class="instruction-subnav">
                   <li>
-                    <a class="smooth-link" href="#how-to-earn"
+                    <a href="#how-to-earn"
                       >Как получить прибыль?</a
                     >
                   </li>
                 </ul>
               </li>
               <li>
-                <a class="smooth-link" href="#earn-more"
+                <a href="#earn-more"
                   >Зарабатывайте еще больше</a
                 >
               </li>
             </ol>
           </nav>
-          <div>
+          <div class="instruction-text-wrapper">
             <div class="instruction-section">
               <h3 id="router">Вам нужен роутер</h3>
               <p>
@@ -376,7 +410,7 @@
                   <li>TP-Link RE650</li>
                   <li>TP-Link 801ND</li>
                 </ul>
-                <a href="" class="button button--dark"
+                <a href="https://ternex.ru/static/landing/html/doc.html" class="button button--outlined"
                   >Инструкция по установке</a
                 >
               </div>
@@ -388,7 +422,7 @@
                   <li>TP-Link RE650 - 7500₽</li>
                   <li>TP-Link 801ND - 2000₽</li>
                 </ul>
-                <a href="#contacts" class="smooth-link button button--dark"
+                <a href="#contacts" class="smooth-link button button--outlined"
                 >Связаться</a
               >
               </div>
@@ -446,7 +480,7 @@
             </div>
 
             <div class="instruction-top-button">
-              <a class=" button button--outlined smooth-link" href="#top">Вернуться</a>
+              <a class=" button button--outlined" href="#top">Вернуться</a>
             </div>
           </div>
         </div>

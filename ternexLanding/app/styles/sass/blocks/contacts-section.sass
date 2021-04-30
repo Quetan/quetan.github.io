@@ -6,6 +6,17 @@
     display: flex
     justify-content: center
     align-items: center
+    overflow: visible !important
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        right: $gutter / 1.5
+        top: -$gutter * 5
+        width: $gutter * 2.2
+        height: $gutter * 5
+        z-index: 60
+        background: linear-gradient(0deg, rgba(#fff,1) 0%, rgba($light, 0) 100%)
 
 // .contacts-container
 //     background-color: rgba($dark, 0.05)
