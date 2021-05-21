@@ -3,17 +3,24 @@
     background-color: rgba($blue, 0.1)
     padding: 1rem 1.5rem
     margin-bottom: $gutter
+    @media screen and (max-width: 425.9px)
+        font-size: 0.9em
+        
 
 .how-subheader
     font-size: 1.85em
     letter-spacing: -0.05em
     margin: 0 auto $gutter * 1.5 auto
     width: max-content
+    @media screen and (max-width: 425.9px)
+        font-size: 1.5em
 
 .how-products-wrapper
     display: flex
     flex-direction: row
     justify-content: space-around
+    @media screen and (max-width: 768.9px)
+        flex-direction: column     
 
 .how-product
     width: 40%
@@ -26,11 +33,16 @@
     border-radius: 10px
     box-shadow: 0 2.8px 2.2px rgba($dark, 0.034), 0 6.7px 5.3px rgba($dark, 0.048), 0 12.5px 10px rgba($dark, 0.06), 0 22.3px 17.9px rgba($dark, 0.072), 0 41.8px 33.4px rgba($dark, 0.086)
     border: 3px solid rgba($dark, 0.02)
+    @media screen and (max-width: 768.9px)
+        width: 100%
+        margin-bottom: $gutter
     &--header
         margin-bottom: 1rem
         font-size: 1.65em
         text-transform: uppercase
         letter-spacing: -0.06em
+        @media screen and (max-width: 425.9px)
+            font-size: 1.3em
     &--description
         display: flex
         flex-direction: column
@@ -43,8 +55,14 @@
             text-align: center
             font-size: 2em
             letter-spacing: 0.02em
+            @media screen and (max-width: 425.9px)
+                font-size: 1.7em
+
         ul
             margin: 1rem 0
+            @media screen and (max-width: 768.9px)
+                padding-inline-start: $gutter / 2
+                
         li
             margin-bottom: 0.45rem
             &::marker
