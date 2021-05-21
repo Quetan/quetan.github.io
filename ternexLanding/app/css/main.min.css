@@ -4616,6 +4616,11 @@ h6 {
 .header-logo a:hover {
   color: #141d27
 }
+@media screen and (max-width:768.99px) {
+  .header {
+    display: none
+  }
+}
 .how-description {
   line-height: 1.35;
   background-color: rgba(63,193,201,.1);
@@ -4833,7 +4838,7 @@ h6 {
 }
 .main-section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: transparent;
   padding: 0 120px;
@@ -4848,6 +4853,11 @@ h6 {
   -ms-flex-align: center;
   align-items: center;
   overflow: hidden
+}
+@media screen and (max-width:1024.9px) {
+  .main-section {
+    padding: 45px 30px
+  }
 }
 .main-section--bg {
   display: block;
@@ -4887,6 +4897,16 @@ h6 {
   line-height: 1;
   letter-spacing: -.04em
 }
+@media screen and (max-width:1024.9px) {
+  .main-section--span {
+    font-size: 1.1em
+  }
+}
+@media screen and (max-width:425.9px) {
+  .main-section--span {
+    font-size: 1em
+  }
+}
 .main-section--header {
   font-size: 2.6em;
   margin-bottom: 30px;
@@ -4895,11 +4915,35 @@ h6 {
   text-shadow: 2px 4px 1px rgba(54,79,107,.1);
   letter-spacing: -.06em
 }
+@media screen and (max-width:1024.9px) {
+  .main-section--header {
+    font-size: 2em
+  }
+}
+@media screen and (max-width:425.9px) {
+  .main-section--header {
+    font-size: 1.6em
+  }
+}
 .main-section--list {
   -webkit-padding-start: 45px;
   padding-inline-start: 45px;
   margin-bottom: 60px;
   width: 60%
+}
+@media screen and (max-width:1024.9px) {
+  .main-section--list {
+    -webkit-padding-start: 30px;
+    padding-inline-start: 30px;
+    width: 100%
+  }
+}
+@media screen and (max-width:425.9px) {
+  .main-section--list {
+    -webkit-padding-start: 15px;
+    padding-inline-start: 15px;
+    width: 100%
+  }
 }
 .main-section--list-item {
   font-size: 1.2em;
@@ -4907,6 +4951,16 @@ h6 {
   line-height: 1.4;
   padding-left: 5px;
   letter-spacing: .04em
+}
+@media screen and (max-width:1024.9px) {
+  .main-section--list-item {
+    font-size: 1em
+  }
+}
+@media screen and (max-width:425.9px) {
+  .main-section--list-item {
+    font-size: .8em
+  }
 }
 .main-section--list-item::marker {
   color: #fc5185;
@@ -4923,6 +4977,21 @@ h6 {
 }
 .main-section--buttons .button:first-child {
   margin-right: 30px
+}
+@media screen and (max-width:425.9px) {
+  .main-section--buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+  }
+  .main-section--buttons .button:first-child {
+    margin-right: 0;
+    margin-bottom: 10px
+  }
 }
 .main-section--social {
   position: fixed;
@@ -5206,10 +5275,14 @@ h6 {
   box-shadow: 0 0 0 4px #fb1057;
   outline-style: solid
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024.9px) {
   .button {
     padding: .75rem 1.5rem;
     font-size: .65em
+  }
+  .button--lg {
+    font-size: .8em;
+    padding: 1rem 1.5rem
   }
 }
 .modal {
@@ -5258,10 +5331,15 @@ h6 {
   font-size: 2.5em;
   font-weight: 800
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:768.9px) {
   .section-header {
     font-size: 1.85em;
     margin-bottom: 30px
+  }
+}
+@media screen and (max-width:425.9px) {
+  .section-header {
+    font-size: 1.5em
   }
 }
 .section-header--light {
