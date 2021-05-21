@@ -17,12 +17,6 @@
         height: $gutter * 5
         z-index: 60
         background: linear-gradient(0deg, rgba(#fff,1) 0%, rgba($light, 0) 100%)
-
-// .contacts-container
-//     background-color: rgba($dark, 0.05)
-//     box-shadow: inset 0 0 5px 3px rgba($dark, 0.3)
-//     padding: $gutter
-//     border: 5px solid rgba($dark, 0.15)
     
 .contacts-description
     text-align: left
@@ -31,14 +25,10 @@
     letter-spacing: -0.04em
     margin: 0 auto
     margin-bottom: $gutter / 3
-
-// .contacts-text-wrapper
-//     background-color: rgba($dark, 0.1)
-//     box-shadow: inset 0 0 10px 5px rgba($dark, 0.2)
-//     padding: 2rem
-//     transition: all 0.25s ease
-//     &:hover
-//         box-shadow: inset 0 0 0px 0px rgba($dark, 0.2)
+    @media screen and (max-width: 768.9px)
+        font-size: 1.35em
+    @media screen and (max-width: 425.9px)
+        font-size: 1.1em
     
 .contacts-mail
     display: block
@@ -48,6 +38,10 @@
     margin-bottom: $gutter
     color: $dark
     letter-spacing: -0.04em
+    @media screen and (max-width: 768.9px)
+        font-size: 2.7em
+    @media screen and (max-width: 425.9px)
+        font-size: 2em
     &:hover, &:focus
         transform: scale(1.02)
         color: $dark
@@ -56,6 +50,8 @@
 .contacts-time
     font-size: 1.4em
     font-weight: 400
+    @media screen and (max-width: 768.9px)
+        font-size: 1.15em
 
 .contacts-wrapper
     margin-top: $gutter * 2
@@ -65,6 +61,11 @@
     width: 40%
     margin-left: auto
     flex-direction: row
+    @media screen and (max-width: 768.9px)
+        width: 70%
+    @media screen and (max-width: 425.9px)
+        width: 100%
+        
     a
         display: flex
         justify-content: center
@@ -76,6 +77,10 @@
             height: 60px
             aspect-ratio: 1
             transition: transform 0.3s ease
+            @media screen and (max-width: 768.9px)
+                width: 45px
+                height: 45px
+                
 
 .contacts-item
     width: 100px
@@ -90,6 +95,10 @@
     aspect-ratio: 1
     filter: saturate(0.7)
     border: 2px solid rgba($dark, 0.2)
+    @media screen and (max-width: 768.9px)
+        width: 80px
+        height: 80px
+        
     &:hover, &:focus
         filter: saturate(1)
         transform: scale(1.05)

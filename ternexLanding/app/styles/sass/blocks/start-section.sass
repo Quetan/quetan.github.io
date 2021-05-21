@@ -5,15 +5,21 @@
     background-position: center
     background-size: cover
     background-attachment: fixed
+    -webkit-backdrop-filter: blur(2px)
 
 .steps-wrapper
-    display: inline-flex
+    display: flex
     flex-direction: row
     align-items: flex-start
     justify-content: space-around
     flex-wrap: wrap
+    flex-direction: row
     padding-top: $gutter * 2
     padding-bottom: $gutter * 5
+    @media screen and (max-width: 768.9px)
+        flex-direction: row
+        padding-bottom: $gutter * 2
+        
 
 .steps-item
     width: 20%
@@ -26,6 +32,12 @@
     position: relative
     box-shadow: 6px -6px 1px 0px rgba($dark, 0.95)
     transition: box-shadow 0.25s ease
+    @media screen and (max-width: 768.9px)
+        width: 45%
+        margin-bottom: $gutter
+    @media screen and (max-width: 425.9px)
+        width: 100%
+        margin-bottom: $gutter
     &:hover, &:focus
         box-shadow: 3px -3px 1px 0px rgba($dark, 0.95)
         color: inherit
@@ -45,6 +57,9 @@
         width: max-content
         transform: translateY(-50%)
         transition: all 0.25s ease
+        @media screen and (max-width: 768.9px)
+            display: none
+            
     &--header
         font-weight: 600
         font-size: 1.4em

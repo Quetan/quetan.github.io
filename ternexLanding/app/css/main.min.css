@@ -4454,6 +4454,16 @@ h6 {
   margin: 0 auto;
   margin-bottom: 10px
 }
+@media screen and (max-width:768.9px) {
+  .contacts-description {
+    font-size: 1.35em
+  }
+}
+@media screen and (max-width:425.9px) {
+  .contacts-description {
+    font-size: 1.1em
+  }
+}
 .contacts-mail {
   display: block;
   width: -webkit-max-content;
@@ -4464,6 +4474,16 @@ h6 {
   margin-bottom: 30px;
   color: #364f6b;
   letter-spacing: -.04em
+}
+@media screen and (max-width:768.9px) {
+  .contacts-mail {
+    font-size: 2.7em
+  }
+}
+@media screen and (max-width:425.9px) {
+  .contacts-mail {
+    font-size: 2em
+  }
 }
 .contacts-mail:focus,
 .contacts-mail:hover {
@@ -4476,6 +4496,11 @@ h6 {
 .contacts-time {
   font-size: 1.4em;
   font-weight: 400
+}
+@media screen and (max-width:768.9px) {
+  .contacts-time {
+    font-size: 1.15em
+  }
 }
 .contacts-wrapper {
   margin-top: 60px;
@@ -4493,6 +4518,16 @@ h6 {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row
+}
+@media screen and (max-width:768.9px) {
+  .contacts-wrapper {
+    width: 70%
+  }
+}
+@media screen and (max-width:425.9px) {
+  .contacts-wrapper {
+    width: 100%
+  }
 }
 .contacts-wrapper a {
   display: -webkit-box;
@@ -4517,6 +4552,12 @@ h6 {
   transition: transform .3s ease;
   transition: transform .3s ease,-webkit-transform .3s ease
 }
+@media screen and (max-width:768.9px) {
+  .contacts-wrapper a img {
+    width: 45px;
+    height: 45px
+  }
+}
 .contacts-item {
   width: 100px;
   height: 100px;
@@ -4539,6 +4580,12 @@ h6 {
   -webkit-filter: saturate(.7);
   filter: saturate(.7);
   border: 2px solid rgba(54,79,107,.2)
+}
+@media screen and (max-width:768.9px) {
+  .contacts-item {
+    width: 80px;
+    height: 80px
+  }
 }
 .contacts-item:focus,
 .contacts-item:hover {
@@ -5115,12 +5162,13 @@ h6 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed
+  background-attachment: fixed;
+  -webkit-backdrop-filter: blur(2px)
 }
 .steps-wrapper {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -5132,8 +5180,18 @@ h6 {
   justify-content: space-around;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  flex-direction: row;
   padding-top: 60px;
   padding-bottom: 150px
+}
+@media screen and (max-width:768.9px) {
+  .steps-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-bottom: 60px
+  }
 }
 .steps-item {
   width: 20%;
@@ -5151,6 +5209,18 @@ h6 {
   -o-transition: box-shadow .25s ease;
   transition: box-shadow .25s ease;
   transition: box-shadow .25s ease,-webkit-box-shadow .25s ease
+}
+@media screen and (max-width:768.9px) {
+  .steps-item {
+    width: 45%;
+    margin-bottom: 30px
+  }
+}
+@media screen and (max-width:425.9px) {
+  .steps-item {
+    width: 100%;
+    margin-bottom: 30px
+  }
 }
 .steps-item:focus,
 .steps-item:hover {
@@ -5188,6 +5258,11 @@ h6 {
   -webkit-transition: all .25s ease;
   -o-transition: all .25s ease;
   transition: all .25s ease
+}
+@media screen and (max-width:768.9px) {
+  .steps-item:not(:last-child)::after {
+    display: none
+  }
 }
 .steps-item--header {
   font-weight: 600;
