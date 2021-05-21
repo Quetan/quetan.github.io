@@ -5152,6 +5152,11 @@ h6 {
   height: 120%;
   z-index: -1
 }
+@media screen and (max-width:425.9px) {
+  .why-background {
+    display: none
+  }
+}
 .why-wrapper {
   background-color: rgba(242,245,247,.05);
   border-radius: 3px;
@@ -5159,6 +5164,11 @@ h6 {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   position: relative
+}
+@media screen and (max-width:768.9px) {
+  .why-wrapper {
+    padding: 15px
+  }
 }
 .why-defenition {
   line-height: 1.35;
@@ -5171,12 +5181,44 @@ h6 {
   letter-spacing: -.05em;
   margin-bottom: 20px
 }
+@media screen and (max-width:1024.9px) {
+  .why-subheader {
+    font-size: 1.5em
+  }
+}
+@media screen and (max-width:425.9px) {
+  .why-subheader {
+    font-size: 1.3em
+  }
+}
 .why-list {
   margin-bottom: 30px
+}
+@media screen and (max-width:1024.9px) {
+  .why-list {
+    -webkit-padding-start: 30px;
+    padding-inline-start: 30px
+  }
+}
+@media screen and (max-width:425.9px) {
+  .why-list {
+    -webkit-padding-start: 15px;
+    padding-inline-start: 15px
+  }
 }
 .why-list--item {
   padding-left: 5px;
   letter-spacing: -.03em
+}
+@media screen and (max-width:1024.9px) {
+  .why-list--item {
+    font-size: .9em
+  }
+}
+@media screen and (max-width:425.9px) {
+  .why-list--item {
+    font-size: .8em
+  }
 }
 .why-list--item::marker {
   color: #fc5185;
@@ -5186,6 +5228,11 @@ h6 {
 }
 .why-button-wrapper {
   text-align: right
+}
+@media screen and (max-width:768.9px) {
+  .why-button-wrapper {
+    text-align: center
+  }
 }
 .button {
   padding: 1rem 2rem;
@@ -5333,7 +5380,7 @@ h6 {
 }
 @media screen and (max-width:768.9px) {
   .section-header {
-    font-size: 1.85em;
+    font-size: 1.75em;
     margin-bottom: 30px
   }
 }

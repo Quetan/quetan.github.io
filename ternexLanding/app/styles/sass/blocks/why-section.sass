@@ -12,6 +12,8 @@
     width: 100%
     height: 120%
     z-index: -1
+    @media screen and (max-width: 425.9px)
+        display: none
 
 .why-wrapper
     background-color: rgba($light, 0.05)
@@ -19,6 +21,8 @@
     padding: $gutter
     backdrop-filter: blur(3px)
     position: relative
+    @media screen and (max-width: 768.9px)
+        padding: $gutter / 2
     
 .why-defenition
     line-height: 1.35
@@ -30,16 +34,33 @@
     font-size: 1.75em
     letter-spacing: -0.05em
     margin-bottom: $gutter / 1.5
+    @media screen and (max-width: 1024.9px)
+        font-size: 1.5em
+    @media screen and (max-width: 425.9px)
+        font-size: 1.3em
+        
 
 .why-list
     margin-bottom: $gutter
+    @media screen and (max-width: 1024.9px)
+        padding-inline-start: $gutter
+    @media screen and (max-width: 425.9px)
+        padding-inline-start: $gutter / 2
     &--item
         padding-left: 5px
         letter-spacing: -0.03em
+        @media screen and (max-width: 1024.9px)
+            font-size: 0.9em
+        @media screen and (max-width: 425.9px)
+            font-size: 0.8em
         &::marker
             color: $accent
             content: '▸'
             line-height: 0
             font-size: 1.15em
+
 .why-button-wrapper
     text-align: right
+    @media screen and (max-width: 768.9px)
+        text-align: center
+        
