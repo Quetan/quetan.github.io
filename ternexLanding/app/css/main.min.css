@@ -4555,6 +4555,16 @@ h6 {
   width: 100%;
   padding: 60px
 }
+@media screen and (max-width:768.9px) {
+  .franchise-section {
+    padding: 30px
+  }
+}
+@media screen and (max-width:425.9px) {
+  .franchise-section {
+    padding: 30px 15px
+  }
+}
 .franchise-wrapper {
   width: 100%;
   display: -webkit-box;
@@ -4566,7 +4576,19 @@ h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   z-index: 20
+}
+@media screen and (max-width:425.9px) {
+  .franchise-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
 }
 .franchise-wrapper .franchise-button {
   width: 25%;
@@ -4575,6 +4597,16 @@ h6 {
   opacity: 1;
   -webkit-box-shadow: 2px 4px 1px rgba(54,79,107,.6);
   box-shadow: 2px 4px 1px rgba(54,79,107,.6)
+}
+@media screen and (max-width:768.9px) {
+  .franchise-wrapper .franchise-button {
+    font-size: .7em
+  }
+}
+@media screen and (max-width:425.9px) {
+  .franchise-wrapper .franchise-button {
+    width: auto
+  }
 }
 .franchise-wrapper .franchise-button:hover {
   -webkit-box-shadow: 0 0 1px rgba(54,79,107,.6);
@@ -4585,6 +4617,17 @@ h6 {
   width: 70%;
   font-size: 1.2em;
   letter-spacing: -.04em
+}
+@media screen and (max-width:768.9px) {
+  .franchise-text {
+    font-size: 1em
+  }
+}
+@media screen and (max-width:425.9px) {
+  .franchise-text {
+    width: 100%;
+    margin-bottom: 15px
+  }
 }
 .header {
   padding: 24px 45px;
