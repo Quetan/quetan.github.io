@@ -10,13 +10,7 @@
   width: 100%
   height: 100%
   overflow: auto
-
-// .modal-content
-//   background-color: #fefefe
-//   margin: 15% auto
-//   padding: 20px
-//   border: 1px solid #888
-//   width: 80%
+  overflow-x: hidden
 
 .close
   color: #aaa
@@ -26,6 +20,10 @@
   font-size: 64px
   font-weight: 800
   transition: color 0.15s ease
+  @media screen and (max-width: 768.9px)
+    font-size: 48px
+    right: $gutter
+    
   &:hover, &:focus
     color: $dark
     text-decoration: none

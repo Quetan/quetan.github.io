@@ -1,6 +1,13 @@
 .instructions-section
     overflow-y: visible !important
     padding: 80px $gutter 120px $gutter
+    @media screen and (max-width: 768.9px)
+        padding: 30px $gutter / 2 45px $gutter / 2
+        font-size: 0.9em
+
+.instruction-navigation
+    @media screen and ( max-width: 768.9px)
+        display: none
 
 .grid
     display: grid
@@ -8,7 +15,10 @@
     grid-gap: 1em
     grid-template-columns: 30% 70%
     width: 100%
-
+    @media screen and (max-width: 768.9px)
+        grid-template: 1fr
+        grid-template-columns: 100%
+        
     h3
         margin-bottom: $gutter
 
@@ -57,8 +67,14 @@
     min-height: 40vh
     margin: 0
     padding: $gutter 4em 80px 2em
+    @media screen and (max-width: 768.9px)
+        padding: $gutter / 3
+        
     ul, ol
         margin-bottom: 2rem
+        @media screen and (max-width: 768.9px)
+            padding-inline-start: $gutter / 2
+            
         ul, ol
             list-style-type: disc
         li
@@ -71,6 +87,9 @@
         font-size: 2em
         padding-top: 40px
         letter-spacing: -0.04em
+        @media screen and (max-width: 768.9px)
+            font-size: 1.3em
+            
     h4
         padding-top: 20px
         letter-spacing: -0.05em
