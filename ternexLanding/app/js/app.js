@@ -23,13 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let html = document.getElementsByTagName("html")[0],
       modal = document.getElementById("instruction"),
       btn = document.querySelectorAll(".openInstruction"),
+      connect = document.getElementById("closenconnect"),
       span = document.getElementsByClassName("close")[0];
+
     btn.forEach((b) => {
       b.addEventListener("click", () => {
         html.style.overflow = "hidden";
         modal.style.display = "grid";
       });
     });
+    connect.onclick = function () {
+      html.style.overflow = "visible";
+      modal.style.display = "none";
+    };
     span.onclick = function () {
       html.style.overflow = "visible";
       modal.style.display = "none";

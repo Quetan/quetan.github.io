@@ -4420,6 +4420,7 @@ h6 {
 .contacts-section {
   background-color: #3fc1c9;
   color: #f2f5f7;
+  min-height: 100vh;
   z-index: 50;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4466,6 +4467,9 @@ h6 {
 }
 .contacts-mail:focus,
 .contacts-mail:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
   color: #364f6b;
   text-decoration: underline
 }
@@ -4734,6 +4738,11 @@ h6 {
 .grid h3 {
   margin-bottom: 30px
 }
+#instruction-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0
+}
 #instruction-navigation {
   position: -webkit-sticky;
   position: sticky;
@@ -4916,7 +4925,7 @@ h6 {
   margin-right: 30px
 }
 .main-section--social {
-  position: absolute;
+  position: fixed;
   z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4949,7 +4958,12 @@ h6 {
   filter: grayscale(0)
 }
 .start-section {
-  background-color: #fff
+  height: auto;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed
 }
 .steps-wrapper {
   display: -webkit-inline-box;
@@ -4973,7 +4987,7 @@ h6 {
   width: 20%;
   min-height: 280px;
   font-size: .75em;
-  background-color: rgba(143,219,223,.2);
+  background-color: #fff;
   border: 2px solid #364f6b;
   border-radius: 10px;
   padding: 2rem 1rem;
@@ -5044,8 +5058,7 @@ h6 {
 }
 .steps-button-wrapper {
   width: 100%;
-  text-align: center;
-  padding-bottom: 150px
+  text-align: center
 }
 .why-section {
   min-height: 100vh;
