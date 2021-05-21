@@ -5177,6 +5177,11 @@ h6 {
   bottom: 60px;
   right: 30px
 }
+@media screen and (max-width:767.9px) {
+  .main-section--social {
+    display: none
+  }
+}
 .main-section--social .social-item {
   -webkit-filter: grayscale(.35) drop-shadow(2px 4px 1px rgba(54, 79, 107, .5));
   filter: grayscale(.35) drop-shadow(2px 4px 1px rgba(54, 79, 107, .5));

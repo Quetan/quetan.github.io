@@ -102,6 +102,9 @@
         align-items: center
         bottom: $gutter * 2
         right: $gutter
+        @media screen and (max-width: 767.9px)
+            display: none
+            
         .social-item
             filter: grayscale(0.35) drop-shadow(2px 4px 1px rgba($dark, 0.5))
             transition: filter 0.25s ease
