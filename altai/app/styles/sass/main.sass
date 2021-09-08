@@ -204,6 +204,24 @@
 
 .main-logos
     margin-bottom: 20px
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+.main__buttons_info
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    max-width: 80%
+    @media screen and ( max-width: 768.98px)
+        flex-wrap: nowrap
+        flex-direction: column
+    a
+        margin-right: 1.5rem
+        @media screen and ( max-width: 768.98px)
+            margin-right: 0
 
 .main-logos img
     width: auto
@@ -213,6 +231,13 @@
 @media screen and ( max-width: 768.98px)
     .main-logos img
         height: 45px
+
+.inf_logos
+    height: 80%
+    max-height: 50px
+    width: 2px
+    border-radius: 100%
+    background-color: rgba(0,0,0,0.15)
 
 .main__date
     font-size: 1.4em
