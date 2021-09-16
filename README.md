@@ -18,7 +18,7 @@
 * ## [Сайт института математики и IT](http://www.math.asu.ru/) (2020, CMS WordPress)
 ![Сайт института математики и IT](./thumbs/math.jpg "Сайт института математики и IT")​
 
-* ## [Сайт для Finiko](https://quetan.github.io/finiko) (2020)
+* ## [Сайт для Finiko](https://quetan.github.io/finiko_removed) (2020)
 ![Сайт для Finiko](./thumbs/finiko.jpg "Сайт для Finiko")​
 
 * ## [Ternex для гостиниц](https://ternex.ru/hotels/) (2020)
