@@ -365,6 +365,7 @@
 
 .about-section
     position: relative
+    padding-bottom: 80px
 
 .about-background-pattern-center
     position: absolute
@@ -931,3 +932,23 @@
 
 .text-secondary
     color: #dadada
+
+.attraction
+    display: block
+    position: relative
+    text-align: center
+    padding: 0 23% 0 23%
+    @media screen and (max-width: 500px)
+        padding: 0 15% 0 15%
+    a
+        font-size: 1.4em
+        background-color: $dark
+        padding: 0.3rem 0.6rem
+        letter-spacing: -0.04em
+        color: #fff
+        line-height: 1.8
+        transition: all 0.25s ease
+        @media screen and (max-width: 500px)
+            font-size: 1.1em
+        &:hover
+            background-color: darken($dark, 15)
