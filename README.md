@@ -1,4 +1,4 @@
-# Projects
+# Мои работы
 
 * ## [КПК Сибирский Капитал](http://sk.sibiris.ru) (2021, CMS WordPress, React)
 ![КПК Сибирский Капитал](./thumbs/sibkap.jpg "КПК Сибирский Капитал")​
