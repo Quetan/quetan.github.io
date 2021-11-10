@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <title>Абитуриенту АлтГУ</title>
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- OwlCarousel -->
+    <link rel="stylesheet" href="./css/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./css/calendar.css">
+    <!-- Главный CSS файл -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header d-flex align-items-center flex-column">
+      <div class="header-container_bg">
+        <div class="container header-container py-4">
+          <div class="row d-flex justify-content-center">
+            <!-- Navigation -->
+            <div
+              class="col-sm-9 col-lg-9 mb-2 mb-sm-0 justify-content-center justify-content-sm-start"
+            >
+              <nav class="header-navigation">
+                <ul
+                  class="list-unstyled d-flex flex-wrap m-0 align-items-center justify-content-center justify-content-sm-start"
+                >
+                  <li>
+                    <a class="header-navigation_link" href="#">Университет</a>
+                  </li>
+                  <li>
+                    <a class="header-navigation_link" href="#"
+                      >Школьник АлтГУ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      style="
+                        color: #ffffff;
+                        padding: 10px 30px;
+                        text-decoration: none;
+                        font-weight: 700;
+                      "
+                      class="my-2 my-lg-0 text-center main-button_b header-navigation_link d-flex justify-content-center align-items-center"
+                      href="https://pay.asu.ru/"
+                    >
+                      <img
+                        src="./img/main/banner/wallet.svg"
+                        style="width: 20px; height: auto;"
+                        alt="Оплатить"
+                      />
+                      <span class="pay-text">Онлайн оплата услуг</span></a
+                    >
+                  </li>
+                  <li>
+                  <div
+                    class="links-phone d-flex d-lg-none flex-row justify-content-center align-items-center"
+                  >
+                    <div class="phone-wrapper mr-2">
+                      <img
+                        class="mr-1"
+                        src="./img/main/main-section/call.svg"
+                        alt="Номер для звонков"
+                      />
+                      <a style="font-size: 0.85em;" href="tel:+73852291222">+7 (3852) 291-222</a>
+                    </div>
+                    <button style="font-size: 0.8em;" class="call-link" id="showCallModalFromMenu">
+                      Заказать звонок
+                    </button>
+                  </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            
+            <!-- Social links -->
+            <div
+              class="links-container_links col-sm-3 d-flex d-lg-none align-items-center justify-content-center justify-content-md-end"
+            >
+              <div class="links-socials d-flex">
+                <a href="#"
+                  ><img
+                    style="width: 25px; height: 25px"
+                    class="mr-2"
+                    src="./img/main/main-section/instagram.svg"
+                    alt="Instagram"
+                /></a>
+                <a href="#"
+                  ><img
+                    style="width: 25px; height: 25px"
+                    class="mr-2"
+                    src="./img/main/main-section/youtube.svg"
+                    alt="YouTube"
+                /></a>
+                <a href="#"
+                  ><img
+                    style="width: 25px; height: 25px"
+                    src="./img/main/main-section/vk.svg"
+                    alt="Вконтакте"
+                /></a>
+              </div>
+            </div>
+
+            <!-- Search -->
+            <div
+              class="d-none col-lg-3 d-lg-flex align-items-center justify-content-end"
+            >
+              <div class="search">
+                <img
+                  src="./img/main/preheader/searching-magnifying-glass.svg"
+                  alt=""
+                />
+                <input
+                  type="text"
+                  name="search"
+                  id="header-search"
+                  placeholder="Поиск по сайту"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container links-container">
+        <div class="row">
+          <a
+            href="./"
+            class="links-container_logo col-sm-8 col-lg-5 mb-3 mb-sm-0 d-flex align-items-center justify-content-center justify-content-sm-start"
+          >
+            <img
+              class="mr-2 mr-md-3"
+              src="./img/main/main-section/Logo.svg"
+              alt="Логотип АлтГУ"
+            />
+            <div class="asu-text d-flex flex-column text-center">
+              <span class="asu-text_small"
+                >Алтайский государственный университет</span
+              >
+              <h1 class="asu-text_large">Абитуриент</h1>
+            </div>
+          </a>
+
+          <div
+            class="links-container_links col-lg-4 d-none d-lg-flex align-items-center"
+          >
+            <div
+              class="links-phone d-flex flex-column justify-content-center align-items-center mr-3"
+            >
+              <div class="phone-wrapper">
+                <img
+                  class="mr-1"
+                  src="./img/main/main-section/call.svg"
+                  alt="Номер для звонков"
+                />
+                <a href="tel:+73852291222">+7 (3852) 291-222</a>
+              </div>
+              <button class="call-link" id="showCallModal">
+                Заказать звонок
+              </button>
+              <!-- Call modal content -->
+              <div class="callModalContent" id="callModalContent">
+                <div class="callModalHeader">
+                  <img
+                    src="/img/main/main-section/Logo.svg"
+                    width="90"
+                    height="90"
+                    alt=""
+                  />
+                  <div class="callModalHeaderText">
+                    <h2>Остались вопросы?</h2>
+                    <p>
+                      Оставь заявку на сайте и мы перезвоним <br />
+                      в ближайшее время!
+                    </p>
+                  </div>
+                </div>
+                <div class="callModalFormWrapper">
+                  <form action="#" method="POST">
+                    <div class="callModalFormRow">
+                      <div class="callModalFormColumn">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required />
+                      </div>
+                      <div class="callModalFormColumn">
+                        <label for="secondName">Фамилия</label>
+                        <input
+                          type="text"
+                          id="secondName"
+                          name="secondName"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="callModalFormColumn">
+                      <label for="tel">Номер телефона</label>
+                      <input
+                        type="tel"
+                        value="+7"
+                        pattern="^[7|8]{0,1}\d{10}$|(^\+7{1}\d{10}$)"
+                        maxlength="12"
+                        id="tel"
+                        name="phoneNumber"
+                        required
+                      />
+                      <small>Пример: +71235641122</small>
+                    </div>
+                    <div class="callModalFormColumn">
+                      <label for="question">Опишите ваш вопрос</label>
+                      <textarea
+                        rows="10"
+                        cols="25"
+                        id="question"
+                        name="question"
+                        placeholder="Напишите интересующий Вас вопрос..."
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="callModalFormColumn">
+                      <input type="submit" value="отправить" />
+                      <small class="text-center"
+                        >Нажимая на кнопку, вы принимаете
+                        <a href="#">Положение и Согласия</a> на обработку
+                        персональных данных.</small
+                      >
+                    </div>
+                  </form>
+                </div>
+                <div class="callModalSuccessAlert">
+                  <h3>Успешно!</h3>
+                  <p>Форма успешно отправлена! Ожидайте ответ в ближайшее время!</p>
+                </div>
+                <div class="callModalErrorAlert">
+                  <h3>Ошибка!</h3>
+                  <p>Одно или несколько полей заполнено неправильно!</p>
+                </div>
+              </div>
+              <!-- Call modal content end -->
+            </div>
+            <div class="links-socials d-flex">
+              <a href="#"
+                ><img
+                  class="mr-2"
+                  src="./img/main/main-section/instagram.svg"
+                  alt="Instagram"
+              /></a>
+              <a href="#"
+                ><img
+                  class="mr-2"
+                  src="./img/main/main-section/youtube.svg"
+                  alt="YouTube"
+              /></a>
+              <a href="#"
+                ><img src="./img/main/main-section/vk.svg" alt="Вконтакте"
+              /></a>
+            </div>
+          </div>
+          <div
+            class="links-container_login col-sm-4 col-lg-3 d-flex align-items-center justify-content-center justify-content-md-end"
+          >
+            <a class="d-flex align-items-center" href="#">
+              Кабинет абитуриента
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Main section -->
+      <section class="section main-section">
+        <div class="container-fluid slider-container h-md-100">
+          <div class="owl-carousel slider-container_slide">
+            <div class="item">
+              <a href="#">
+                <lottie-player
+                  src="./img/main/banner/bannerWithText.json"
+                  background="transparent"
+                  style="width: 100%; height: auto"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <lottie-player
+                  src="./img/main/banner/slideForeign.json"
+                  style="width: 100%; height: auto"
+                  background="transparent"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <lottie-player
+                  src="https://assets9.lottiefiles.com/packages/lf20_gcrhfztr.json"
+                  style="width: 100%; height: auto"
+                  background="transparent"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Advantages section -->
+      <section class="section advantages-section">
+        <div class="container main-buttons-container">
+          <div class="row">
+            <div class="col-12 justify-content-center align-items-center mb-5">
+              <div
+                class="container countdown d-flex flex-column justify-content-center text-center"
+              >
+                <h3 class="text-center">До старта приемной кампании 2021</h3>
+                <div
+                  class="countdown-items d-flex flex-row justify-content-center align-items-center"
+                >
+                  <span
+                    class="countdown-days mr-0 mr-md-2 w-md-auto mb-2 mb-md-0"
+                    id="countdown-days"
+                  ></span>
+                  <span
+                    class="countdown-hours mr-0 mr-md-2 w-md-auto mb-2 mb-md-0"
+                    id="countdown-hours"
+                  ></span>
+                  <span
+                    class="countdown-minutes mr-0 mr-md-2 w-md-auto mb-2 mb-md-0"
+                    id="countdown-minutes"
+                  ></span>
+                  <span
+                    class="countdown-secs w-md-auto mb-2 mb-md-0"
+                    id="countdown-secs"
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="main-button_r dropdown closed main-button col-lg-3 col-md-6 p-0"
+            >
+              <h2 class="icon d-flex justify-content-center align-items-center">
+                <a href="/fullwidth-template-page.html">
+                  Бакалавриат и специалитет</a
+                >
+              </h2>
+              <ul class="menu list-unstyled">
+                <li><a href="#">Пункт 1</a></li>
+                <li><a href="#">Пункт 22</a></li>
+                <li><a href="#">Пункт 3</a></li>
+                <li><a href="#">Пункт 4</a></li>
+                <li><a href="#">Пункт 5</a></li>
+                <li><a href="#">Пункт 6</a></li>
+              </ul>
+            </div>
+            <div
+              class="main-button_o dropdown closed main-button col-lg-3 col-md-6 p-0"
+            >
+              <h2 class="icon d-flex justify-content-center align-items-center">
+                <a href="/fullwidth-template-page.html">
+                  Магистратура и аспирантура</a
+                >
+              </h2>
+              <ul class="menu list-unstyled">
+                <li><a href="#">Пункт 1</a></li>
+                <li><a href="#">Пункт 2</a></li>
+                <li><a href="#">Пункт 3</a></li>
+                <li><a href="#">Пункт 4</a></li>
+                <li><a href="#">Пункт 5</a></li>
+                <li><a href="#">Пункт 6</a></li>
+              </ul>
+            </div>
+            <div
+              class="main-button_g dropdown closed main-button col-lg-3 col-md-6 p-0"
+            >
+              <h2 class="icon d-flex justify-content-center align-items-center">
+                <a href="/fullwidth-template-page.html"> Колледж АГУ</a>
+              </h2>
+              <ul class="menu list-unstyled">
+                <li><a href="#">Пункт 1</a></li>
+                <li><a href="#">Пункт 2</a></li>
+                <li><a href="#">Пункт 3</a></li>
+                <li><a href="#">Пункт 4</a></li>
+                <li><a href="#">Пункт 5</a></li>
+                <li><a href="#">Пункт 6</a></li>
+              </ul>
+            </div>
+            <div
+              class="main-button_b dropdown closed main-button col-lg-3 col-md-6 p-0"
+            >
+              <h2 class="icon d-flex justify-content-center align-items-center">
+                <a href="/fullwidth-template-page.html"> Рейтинги </a>
+              </h2>
+              <ul class="menu list-unstyled">
+                <li><a href="#">Пункт 1</a></li>
+                <li><a href="#">Пункт 2</a></li>
+                <li><a href="#">Пункт 3</a></li>
+                <li><a href="#">Пункт 4</a></li>
+                <li><a href="#">Пункт 5</a></li>
+                <li><a href="#">Пункт 6</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="section-header">Почему АГУ?</h2>
+        <div
+          class="container advantages-container"
+          style="background-image: url(./img/main/advantages/bg.svg)"
+        >
+          <div class="row d-flex justify-content-center">
+            <div
+              class="advantages-item d-flex align-items-center justify-content-center flex-column col-md-6 col-lg-4"
+              style="transform: translateY(8.5px)"
+            >
+              <a href="#">
+                <lottie-player
+                  loading="lazy"
+                  class="advantages-item_anim"
+                  src="./img/main/advantages/block1/anim1.json"
+                  background="#EFF4FA"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+                <h4 class="advantages-item_text">
+                  Образование международного <br />
+                  уровня
+                </h4>
+              </a>
+            </div>
+
+            <div
+              class="advantages-item d-flex align-items-center justify-content-center flex-column col-md-6 col-lg-4"
+            >
+              <a href="#">
+                <lottie-player
+                  loading="lazy"
+                  class="advantages-item_anim"
+                  src="./img/main/advantages/block2/anim2.json"
+                  background="#EFF4FA"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </a>
+              <h4 class="advantages-item_text">Стажировки в Европе и Азии</h4>
+            </div>
+
+            <div
+              class="advantages-item d-flex align-items-center justify-content-center flex-column col-md-6 col-lg-4"
+            >
+              <a href="#">
+                <lottie-player
+                  loading="lazy"
+                  class="advantages-item_anim"
+                  src="./img/main/advantages/block3/anim3.json"
+                  background="#EFF4FA"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </a>
+              <h4 class="advantages-item_text">Престижная работа</h4>
+            </div>
+
+            <div
+              class="advantages-item d-flex align-items-center justify-content-center flex-column col-md-6 col-lg-6"
+            >
+              <a href="#">
+                <lottie-player
+                  loading="lazy"
+                  class="advantages-item_anim"
+                  src="./img/main/advantages/block4/anim4.json"
+                  background="#EFF4FA"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </a>
+              <h4 class="advantages-item_text">5 комфортабельных общежитий</h4>
+            </div>
+
+            <div
+              class="advantages-item d-flex align-items-center justify-content-center flex-column col-md-6 col-lg-6"
+            >
+              <a href="#">
+                <lottie-player
+                  loading="lazy"
+                  class="advantages-item_anim"
+                  src="./img/main/advantages/block5/anim5.json"
+                  background="#EFF4FA"
+                  speed="1"
+                  loop
+                  autoplay
+                ></lottie-player>
+              </a>
+              <h4 class="advantages-item_text">Яркая студенческая жизнь</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Announces section -->
+      <!-- <section class="announces-section">
+        <div
+          class="announces-section_header d-flex justify-content-center align-items-center"
+        >
+          <h2 class="section-header">Анонсы и объявления</h2>
+        </div>
+
+        <div class="announces-triangles d-none d-md-block">
+          <img
+            class="triangle1"
+            src="./img/main/advantages/triangle1.svg"
+            alt=""
+          />
+          <img
+            class="triangle2"
+            src="./img/main/advantages/triangle2.svg"
+            alt=""
+          />
+          <img
+            class="triangle3"
+            src="./img/main/advantages/triangle3.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="announces-section_content">
+          <div
+            class="container announces-container d-flex justify-content-center h-100"
+          >
+            <div class="row owl-carousel announces-carousel">
+              <a class="item announces-item_link" href="#">
+                <div class="announces-item d-flex flex-row">
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="announces-item_date d-flex flex-column align-items-start justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 31 </span>
+                    <span class="announces-date_month"> дек </span>
+                    <span class="announces-date_year"> 2020 </span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="item announces-item_link" href="#">
+                <div class="announces-item d-flex flex-row">
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="announces-item_date d-flex flex-column align-items-start justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 4 </span>
+                    <span class="announces-date_month"> янв </span>
+                    <span class="announces-date_year"> 2021 </span>
+                  </div>
+                </div>
+              </a>
+              <a class="item announces-item_link" href="#">
+                <div class="announces-item d-flex flex-row">
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="announces-item_date d-flex flex-column align-items-start justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 18 </span>
+                    <span class="announces-date_month"> фев </span>
+                    <span class="announces-date_year"> 2021 </span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="item announces-item_link" href="#">
+                <div class="announces-item d-flex flex-row">
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="announces-item_date d-flex flex-column align-items-start justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 24 </span>
+                    <span class="announces-date_month"> фев </span>
+                    <span class="announces-date_year"> 2021 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Announces section -->
+      <section class="announces-section">
+        <div
+          class="announces-section_header d-flex justify-content-center align-items-center"
+        >
+          <h2 class="section-header">Календарь событий</h2>
+        </div>
+
+        <div class="announces-section_content">
+          <div
+            class="container announces-container d-flex px-5 h-100"
+          >
+            <div class="row calendars">
+
+              <div class="flex-contatiner">
+                <div class="calendar-container">                  
+                    <table id="calendar2">
+                      <thead>
+                        <tr><td>‹<td colspan="5"><td>›
+                        <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                      <tbody>
+                    </table>
+                    
+                    <script>
+                      function Calendar2(id, year, month) {
+                      var Dlast = new Date(year,month+1,0).getDate(),
+                          D = new Date(year,month,Dlast),
+                          DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+                          DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+                          calendar = '<tr>',
+                          month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+                      if (DNfirst != 0) {
+                        for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+                      }else{
+                        for(var  i = 0; i < 6; i++) calendar += '<td>';
+                      }
+                      for(var  i = 1; i <= Dlast; i++) {
+                        if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+                          calendar += '<td class="today js_date" id="' + 
+                          String(D.getFullYear()) + 
+                          (String(D.getMonth() + 1) < 10 ? String("0" + (D.getMonth() + 1)) : String(D.getMonth() + 1)) +  
+                          (i < 10 ? String("0" + i) : String(i))
+                          + '">' + i;
+                        }else{
+                          calendar += '<td class="js_date" id="' + 
+                          String(D.getFullYear()) + 
+                          (String(D.getMonth() + 1) < 10 ? String("0" + (D.getMonth() + 1)) : String(D.getMonth() + 1)) + 
+                          (i < 10 ? String("0" + i) : String(i))
+                          + '">' + i;
+                        }
+                        if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+                          calendar += '<tr>';
+                        }
+                      }
+                      for(var  i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+                      document.querySelector('#'+id+' tbody').innerHTML = calendar;
+                      document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+                      document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+                      document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+                      if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {
+                          document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+                      }
+                      }
+                      Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+                      // переключатель минус месяц
+                      document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+                        Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
+                        handleDateClick();
+                      }
+                      // переключатель плюс месяц
+                      document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+                        Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
+                        handleDateClick();
+                      }
+
+                      function handleDateClick(){
+                        let dates_arr = document.querySelectorAll('.js_date');
+                        dates_arr.forEach(date => {
+                         date.addEventListener('click', e => {
+                          window.location.href = "/?date=" + String(date.id); //Здесь нужно будет отправить на событие..
+                         });
+                        });
+                      };
+                      handleDateClick();
+                    </script>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- States section -->
+      <section class="section states-section">
+        <h2 class="section-header">Сделай свой выбор</h2>
+
+        <div class="container states-container">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-sm-6 col-lg-4 states-item states-item_green">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/bio-icon.svg"
+                  alt="Институт биологии"
+                />
+                <h5 class="states-item_text">
+                  Институт биологии и биотехнологий
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_blue">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/geography-icon.svg"
+                  alt="Институт географии"
+                />
+                <h5 class="states-item_text">Институт географии</h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_orange">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/history-icon.svg"
+                  alt="Институт истории и международных отношений"
+                />
+                <h5 class="states-item_text">
+                  Институт истории и международных отношений
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_orange">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/maths.svg"
+                  alt="Институт математики и информационных технологий"
+                />
+                <h5 class="states-item_text">
+                  Институт математики и информационных технологий
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_red">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/gum-icon.svg"
+                  alt="Институт гуманитарных наук"
+                />
+                <h5 class="states-item_text">Институт гуманитарных наук</h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_blue">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/coding.svg"
+                  alt="Институт цифровых технологий, электроники и физики"
+                />
+                <h5 class="states-item_text">
+                  Институт цифровых технологий, электроники и физики
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_red">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/eco-icon.svg"
+                  alt="Международный институт экономики, менеджмента и информационных систем"
+                />
+                <h5 class="states-item_text">
+                  Международный институт экономики, менеджмента и информационных
+                  систем
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_orange">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/law-icon.svg"
+                  alt="Юридический институт"
+                />
+                <h5 class="states-item_text">Юридический институт</h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_green">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/chemistry-icon.svg"
+                  alt="Институт химии и химико-фармацевтических технологий"
+                />
+                <h5 class="states-item_text">
+                  Институт химии и химико-фармацевтических технологий
+                </h5>
+              </a>
+            </div>
+
+            <!-- Филиалы -->
+            <div class="col-sm-6 col-lg-4 states-item states-item_blue">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/university.svg"
+                  alt="Институт химии и химико-фармацевтических технологий"
+                />
+                <h5 class="states-item_text" style="text-transform: none">
+                  Рубцовский институт (филиал) АлтГУ
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_green">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/university.svg"
+                  alt="Институт химии и химико-фармацевтических технологий"
+                />
+                <h5 class="states-item_text" style="text-transform: none">
+                  Филиал АлтГУ в г.Белокурихе
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_red">
+              <a
+                href="#"
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+              >
+                <img
+                  class="states-item_icon"
+                  src="./img/main/states/university.svg"
+                  alt="Институт химии и химико-фармацевтических технологий"
+                />
+                <h5 class="states-item_text" style="text-transform: none">
+                  Филиал АлтГУ в г.Бийске
+                </h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Steps section -->
+      <section class="section steps-section">
+        <lottie-player
+          loading="lazy"
+          class="steps-anim d-none d-lg-block"
+          src="./img/main/steps/steps.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
+        <lottie-player
+          loading="lazy"
+          class="steps-anim d-block d-lg-none"
+          src="./img/main/steps/Steps_mobile_standart.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
+      </section>
+      <!-- Tools section -->
+      <section class="section tools-section">
+        <div class="container tools-container">
+          <div class="row">
+            <div
+              id="lk"
+              style="display: flex"
+              class="tabcontent mb-5 mb-lg-0 flex-column justify-content-center align-items-center align-items-lg-start col-lg-6 tools-description_wrapper"
+            >
+              <img
+                class="calc"
+                src="./img/main/tools/user.svg"
+                alt="Пользователь"
+              />
+              <h3 class="tools-description_header text-center text-lg-left">
+                Личный кабинет абитуриента
+              </h3>
+              <p class="tools-description_content text-justify">
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст.
+              </p>
+              <a href="#" class="tools-description_link">Перейти</a>
+            </div>
+
+            <div
+              id="olimp"
+              style="display: none"
+              class="tabcontent mb-5 mb-lg-0 flex-column justify-content-center align-items-center align-items-lg-start col-lg-6 tools-description_wrapper"
+            >
+              <img class="calc" src="./img/main/tools/medal.svg" alt="Медаль" />
+              <h3 class="tools-description_header text-center text-lg-left">
+                Олимпиадное движение
+              </h3>
+              <p class="tools-description_content text-justify">
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст.
+              </p>
+              <a href="#" class="tools-description_link">Перейти</a>
+            </div>
+
+            <div
+              id="money"
+              style="display: none"
+              class="tabcontent mb-5 mb-lg-0 flex-column justify-content-center align-items-center align-items-lg-start col-lg-6 tools-description_wrapper"
+            >
+              <img class="calc" src="./img/main/tools/money.svg" alt="Монета" />
+              <h3 class="tools-description_header text-center text-lg-left">
+                Стипендии и материальная поддержка
+              </h3>
+              <p class="tools-description_content text-justify">
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст.
+              </p>
+              <a href="#" class="tools-description_link">Перейти</a>
+            </div>
+
+            <div
+              id="calc"
+              style="display: none"
+              class="tabcontent mb-5 mb-lg-0 flex-column justify-content-center align-items-center align-items-lg-start col-lg-6 tools-description_wrapper"
+            >
+              <img
+                class="calc"
+                src="./img/main/tools/calc.svg"
+                alt="Калькулятор"
+              />
+              <h3 class="tools-description_header text-center text-lg-left">
+                Калькулятор абитуриента
+              </h3>
+              <p class="tools-description_content text-justify">
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст.
+              </p>
+              <a href="#" class="tools-description_link">Перейти</a>
+            </div>
+
+            <div
+              id="cel"
+              style="display: none"
+              class="tabcontent mb-5 mb-lg-0 flex-column justify-content-center align-items-center align-items-lg-start col-lg-6 tools-description_wrapper"
+            >
+              <img
+                class="calc"
+                src="./img/main/tools/paper.svg"
+                alt="Договор"
+              />
+              <h3 class="tools-description_header text-center text-lg-left">
+                Целевое обучение
+              </h3>
+              <p class="tools-description_content text-justify">
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст.
+              </p>
+              <a href="#" class="tools-description_link">Перейти</a>
+            </div>
+
+            <div
+              id="plat"
+              style="display: none"
+              class="tabcontent mb-5 mb-lg-0 flex-column justify-content-center align-items-center align-items-lg-start col-lg-6 tools-description_wrapper"
+            >
+              <img
+                class="calc"
+                src="./img/main/tools/wallet.svg"
+                alt="Кошелек"
+              />
+              <h3 class="tools-description_header text-center text-lg-left">
+                Платное образование
+              </h3>
+              <p class="tools-description_content text-justify">
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст. Здесь будет находиться текст.
+                Здесь будет находиться текст.
+              </p>
+              <a href="#" class="tools-description_link">Перейти</a>
+            </div>
+
+            <div class="col-lg-6 tools-items">
+              <h4 class="tools-items_header">Выберите пункт</h4>
+
+              <div class="row tab">
+                <div class="col-6 tools-item tablinks active" data-tool="lk">
+                  <button class="tools-item_link">
+                    <img
+                      src="./img/main/tools/user.svg"
+                      alt="Icon"
+                      class="tools-item_img"
+                    />
+                    <span class="tools-item_header"
+                      >Личный кабинет абитуриента</span
+                    >
+                  </button>
+                </div>
+                <div class="col-6 tools-item tablinks" data-tool="olimp">
+                  <button class="tools-item_link">
+                    <img
+                      src="./img/main/tools/medal.svg"
+                      alt="Icon"
+                      class="tools-item_img"
+                    />
+                    <span class="tools-item_header">Олимпиадное движение</span>
+                  </button>
+                </div>
+                <div class="col-6 tools-item tablinks" data-tool="money">
+                  <button class="tools-item_link">
+                    <img
+                      src="./img/main/tools/money.svg"
+                      alt="Icon"
+                      class="tools-item_img"
+                    />
+                    <span class="tools-item_header"
+                      >Стипендии и материальная поддержка</span
+                    >
+                  </button>
+                </div>
+                <div class="col-6 tools-item tablinks" data-tool="calc">
+                  <button class="tools-item_link">
+                    <img
+                      src="./img/main/tools/calc.svg"
+                      alt="Icon"
+                      class="tools-item_img"
+                    />
+                    <span class="tools-item_header"
+                      >Калькулятор абитуриента</span
+                    >
+                  </button>
+                </div>
+                <div class="col-6 tools-item tablinks" data-tool="cel">
+                  <button class="tools-item_link">
+                    <img
+                      src="./img/main/tools/paper.svg"
+                      alt="Icon"
+                      class="tools-item_img"
+                    />
+                    <span class="tools-item_header">Целевое обучение</span>
+                  </button>
+                </div>
+                <div class="col-6 tools-item tablinks" data-tool="plat">
+                  <button class="tools-item_link">
+                    <img
+                      src="./img/main/tools/wallet.svg"
+                      alt="Icon"
+                      class="tools-item_img"
+                    />
+                    <span class="tools-item_header">Платное образование</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Video section -->
+      <section class="section video-section parallax-wrapper">
+        <img
+          src="./img/main/footer/triangle1.svg"
+          alt=""
+          class="d-none d-md-block video-triangle1 parallax-object"
+          data-speed="0.07"
+        />
+        <img
+          src="./img/main/footer/triangle2.svg"
+          alt=""
+          class="d-none d-md-block video-triangle2 parallax-object"
+          data-speed="0.13"
+        />
+
+        <img
+          src="./img/main/footer/footer-triangle.svg"
+          alt=""
+          class="d-none d-md-block video-triangle3 parallax-object"
+          data-speed="0.06"
+        />
+        <div
+          class="container video-container d-flex justify-content-center align-items-center flex-column"
+        >
+          <h2 class="section-header">
+            Твой выбор - Алтайский государственный университет!
+          </h2>
+
+          <!-- Вариант с Placeholder-ом от YouTube -->
+          <!----------------------------------------->
+
+          <div class="video-player_wrapper">
+            <div
+              class="youtube-player"
+              width="100%"
+              height="auto"
+              style="aspect-ratio: 16 / 9"
+              data-id="alG8CCYoly0"
+            ></div>
+
+            <!-- Вариант с Placeholder-ом со своей картинкой -->
+            <!------------------------------------------------->
+
+            <!-- <div 
+            class="youtube-player" 
+            data-id="id-of-youtube-video" 
+            data-thumbnail="url-to-img">
+            </div> -->
+
+            <!-- Вариант просто с плеером -->
+            <!------------------------------>
+
+            <!-- <iframe
+              class="video-player"
+              width="100%"
+              height="auto"
+              style="aspect-ratio: 16 / 9"
+              src="https://www.youtube.com/embed/alG8CCYoly0/"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+              allowfullscreen
+            ></iframe> -->
+
+            <!-- Вариант со своим видео и своей обложкой -->
+            <!-- poster="./img/main/banner/Превью.png" -->
+            <!-- <div class="video-player_wrapper">
+            <video
+              loading="lazy"
+              class="video-section_video"
+              style="width: 100%; height: auto; transform: translateX(-6.5px); box-shadow: 4px 4px 5px 1px rgb(0,0,0,0.33);"
+              preload="none"
+              controls
+              muted
+              playsinline
+              autoplay
+            >
+              <source src="./img/main/video.mp4" type="video/mp4" />
+            </video>
+          </div> -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer d-flex align-items-center">
+      <div class="container footer-container">
+        <!-- <img
+          src="./img/main/footer/footer-triangle.svg"
+          alt=""
+          class="d-none d-md-block footer-triangle"
+        /> -->
+        <div class="row">
+          <div
+            class="col-md-6 col-xl-2 mb-4 mb-lg-0 footer-logo d-flex flex-column align-items-center align-items-xl-start"
+          >
+            <img
+              loading="lazy"
+              src="./img/main/footer/Logo_LightWhite.svg"
+              alt=""
+              class="footer-logo_img"
+            />
+          </div>
+          <div
+            class="col-md-6 col-xl-4 footer-resources d-flex align-items-center align-items-xl-start justify-content-center justify-content-xl-start mb-3 mb-xl-0"
+          >
+            <nav class="footer-nav text-center text-xl-left">
+              <ul class="list-unstyled d-flex flex-column mb-0">
+                <li>
+                  <a href="#" class="footer-resources_link"
+                    >Министерство образования и науки РФ</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="footer-resources_link"
+                    >Федеральный портал "Российское образование"</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="footer-resources_link"
+                    >Министерство образования и науки Алтайского края</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div
+            class="col-md-6 col-xl-3 footer-contacts d-flex flex-column justify-content-center justify-content-xl-start align-items-center align-items-xl-start mb-3 mb-xl-0"
+          >
+            <span class="footer-contacts_address"
+              >г. Барнаул, пр. Ленина, 61</span
+            >
+            <a href="mailto:prcom@asu.ru" class="footer-contacts_email"
+              >e-mail: prcom@asu.ru</a
+            >
+            <a href="tel:+73852291222" class="footer-contacts_phone"
+              >+7 (3852) 291-222</a
+            >
+            <a href="https://www.asu.ru" class="footer-contacts_website"
+              >Перейти на сайт АлтГУ</a
+            >
+          </div>
+          <div
+            class="col-md-6 col-xl-3 footer-social-links d-flex flex-column align-items-center align-items-xl-start"
+          >
+            <span class="footer-social-links_text">Социальные сети:</span>
+            <div class="footer-social-links_icons d-flex">
+              <a href="#">
+                <img
+                  src="./img/main/footer/instagram.svg"
+                  alt="Instagram"
+                  class="footer-social-links_icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./img/main/footer/youtube.svg"
+                  alt="YouTube"
+                  class="footer-social-links_icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./img/main/footer/vk.svg"
+                  alt="Вконтакте"
+                  class="footer-social-links_icon"
+                />
+              </a>
+            </div>
+            <div class="footer-social-links_hashtag d-flex">
+              <img src="./img/main/footer/hashtag.svg" alt="Хэштег" />
+              <div class="footer-social-links_hashtag_text d-flex flex-column">
+                <span>Амбициозность</span>
+                <span>Глобальность</span>
+                <span>Успех</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 d-flex justify-content-center justify-content-xl-start mt-4 mt-xl-0"
+          >
+            <span class="footer-asu text-center text-md-left mt-0">
+              © Алтайский государственный университет. 2021
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- Animations player script -->
+    <script src="./js/lottie-player.js"></script>
+    <!-- OwlCarousel -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <!-- countdown -->
+    <script src="./js/countdown.js"></script>
+    <!-- Главный JS файл -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
