@@ -14,9 +14,10 @@
 		<link rel="stylesheet" href="./css/assets/owl.theme.default.min.css" />
 		<!-- Bootstrap 4 -->
 		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<!-- Calendar -->
+		<link rel="stylesheet" href="./css/calendar.css" />
 		<!-- Главный CSS файл -->
 		<link rel="stylesheet" href="./css/main.css" />
-		<!-- <script src="//code-ya.jivosite.com/widget/yOvcLqjAG9" async></script> -->
 		<!-- Chatra {literal} -->
 		<script>
 			(function (d, w, c) {
@@ -170,7 +171,7 @@
 										alt="Вконтакте"
 								/></a>
 							</div>
-							<div class="whatsapp-button">
+							<div style="bottom: 70px" class="whatsapp-button">
 								<a
 									href="https://wa.me/79339333799?text=Здравствуйте!%20Напишите%20нам,%20если%20есть%20вопросы."
 								>
@@ -370,7 +371,8 @@
 									alt="Вконтакте"
 							/></a>
 						</div>
-						<div class="whatsapp-button">
+						<!-- НОВВОВЕДЕНИЯ -->
+						<div style="bottom: 75px" class="whatsapp-button">
 							<a
 								href="https://wa.me/79339333799?text=Здравствуйте!%20Напишите%20нам,%20если%20есть%20вопросы."
 							>
@@ -1096,7 +1098,10 @@
 				</div>
 			</section>
 			<!-- Announces section -->
-			<section class="announces-section">
+			<section
+				class="announces-section"
+				style="background: none; background-color: #004b74"
+			>
 				<div
 					class="
 						announces-section_header
@@ -1108,174 +1113,206 @@
 					<h2 class="section-header">Календарь событий</h2>
 				</div>
 
-				<div class="announces-section_content">
-					<div class="container announces-container d-flex px-5 h-100">
+				<div class="announces-section_content" style="background-image: none">
+					<div class="container announces-container">
 						<div class="row calendars">
-							<div class="flex-contatiner">
+							<div class="col-4">
 								<div class="calendar-container">
-									<table id="calendar2">
+									<table class="calendar-table" id="calendar2">
 										<thead>
 											<tr>
-												<td>‹</td>
-												<td colspan="5"></td>
-												<td>›</td>
+												<td></td>
+												<td class="calendar-month" colspan="5"></td>
+												<td></td>
+											</tr>
+											<tr class="calendar-days-row">
+												<td>Пн</td>
+												<td>Вт</td>
+												<td>Ср</td>
+												<td>Чт</td>
+												<td>Пт</td>
+												<td>Сб</td>
+												<td>Вс</td>
 											</tr>
 										</thead>
-										<tr>
-											<td>Пн</td>
-											<td>Вт</td>
-											<td>Ср</td>
-											<td>Чт</td>
-											<td>Пт</td>
-											<td>Сб</td>
-											<td>Вс</td>
-										</tr>
+
 										<tbody></tbody>
 									</table>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="calendar-container">
+									<table class="calendar-table" id="calendar3">
+										<thead>
+											<tr>
+												<td></td>
+												<td class="calendar-month" colspan="5"></td>
+												<td></td>
+											</tr>
+											<tr class="calendar-days-row">
+												<td>Пн</td>
+												<td>Вт</td>
+												<td>Ср</td>
+												<td>Чт</td>
+												<td>Пт</td>
+												<td>Сб</td>
+												<td>Вс</td>
+											</tr>
+										</thead>
 
-									<script>
-										function Calendar2(id, year, month) {
-											var Dlast = new Date(year, month + 1, 0).getDate(),
-												D = new Date(year, month, Dlast),
-												DNlast = new Date(
-													D.getFullYear(),
-													D.getMonth(),
-													Dlast
-												).getDay(),
-												DNfirst = new Date(
-													D.getFullYear(),
-													D.getMonth(),
-													1
-												).getDay(),
-												calendar = '<tr>',
-												month = [
-													'Январь',
-													'Февраль',
-													'Март',
-													'Апрель',
-													'Май',
-													'Июнь',
-													'Июль',
-													'Август',
-													'Сентябрь',
-													'Октябрь',
-													'Ноябрь',
-													'Декабрь',
-												];
-											if (DNfirst != 0) {
-												for (var i = 1; i < DNfirst; i++) calendar += '<td>';
-											} else {
-												for (var i = 0; i < 6; i++) calendar += '<td>';
-											}
-											for (var i = 1; i <= Dlast; i++) {
-												if (
-													i == new Date().getDate() &&
-													D.getFullYear() == new Date().getFullYear() &&
-													D.getMonth() == new Date().getMonth()
-												) {
-													calendar +=
-														'<td class="today js_date" id="' +
-														String(D.getFullYear()) +
-														(String(D.getMonth() + 1) < 10
-															? String('0' + (D.getMonth() + 1))
-															: String(D.getMonth() + 1)) +
-														(i < 10 ? String('0' + i) : String(i)) +
-														'">' +
-														i;
-												} else {
-													calendar +=
-														'<td class="js_date" id="' +
-														String(D.getFullYear()) +
-														(String(D.getMonth() + 1) < 10
-															? String('0' + (D.getMonth() + 1))
-															: String(D.getMonth() + 1)) +
-														(i < 10 ? String('0' + i) : String(i)) +
-														'">' +
-														i;
-												}
-												if (
-													new Date(D.getFullYear(), D.getMonth(), i).getDay() ==
-													0
-												) {
-													calendar += '<tr>';
-												}
-											}
-											for (var i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
-											document.querySelector('#' + id + ' tbody').innerHTML =
-												calendar;
-											document.querySelector(
-												'#' + id + ' thead td:nth-child(2)'
-											).innerHTML = month[D.getMonth()] + ' ' + D.getFullYear();
-											document.querySelector(
-												'#' + id + ' thead td:nth-child(2)'
-											).dataset.month = D.getMonth();
-											document.querySelector(
-												'#' + id + ' thead td:nth-child(2)'
-											).dataset.year = D.getFullYear();
-											if (
-												document.querySelectorAll('#' + id + ' tbody tr')
-													.length < 6
-											) {
-												document.querySelector('#' + id + ' tbody').innerHTML +=
-													'<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
-											}
-										}
-										Calendar2(
-											'calendar2',
-											new Date().getFullYear(),
-											new Date().getMonth()
-										);
-										// переключатель минус месяц
-										document.querySelector(
-											'#calendar2 thead tr:nth-child(1) td:nth-child(1)'
-										).onclick = function () {
-											Calendar2(
-												'calendar2',
-												document.querySelector(
-													'#calendar2 thead td:nth-child(2)'
-												).dataset.year,
-												parseFloat(
-													document.querySelector(
-														'#calendar2 thead td:nth-child(2)'
-													).dataset.month
-												) - 1
-											);
-											handleDateClick();
-										};
-										// переключатель плюс месяц
-										document.querySelector(
-											'#calendar2 thead tr:nth-child(1) td:nth-child(3)'
-										).onclick = function () {
-											Calendar2(
-												'calendar2',
-												document.querySelector(
-													'#calendar2 thead td:nth-child(2)'
-												).dataset.year,
-												parseFloat(
-													document.querySelector(
-														'#calendar2 thead td:nth-child(2)'
-													).dataset.month
-												) + 1
-											);
-											handleDateClick();
-										};
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="calendar-container">
+									<table class="calendar-table" id="calendar4">
+										<thead>
+											<tr>
+												<td></td>
+												<td class="calendar-month" colspan="5"></td>
+												<td></td>
+											</tr>
+											<tr class="calendar-days-row">
+												<td>Пн</td>
+												<td>Вт</td>
+												<td>Ср</td>
+												<td>Чт</td>
+												<td>Пт</td>
+												<td>Сб</td>
+												<td>Вс</td>
+											</tr>
+										</thead>
 
-										function handleDateClick() {
-											let dates_arr = document.querySelectorAll('.js_date');
-											dates_arr.forEach((date) => {
-												date.addEventListener('click', (e) => {
-													window.location.href = '/?date=' + String(date.id); //Здесь нужно будет отправить на событие..
-												});
-											});
-										}
-										handleDateClick();
-									</script>
+										<tbody></tbody>
+									</table>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+
+			<script>
+				function Calendar2(id, year, month) {
+					var Dlast = new Date(year, month + 1, 0).getDate(),
+						D = new Date(year, month, Dlast),
+						DNlast = new Date(D.getFullYear(), D.getMonth(), Dlast).getDay(),
+						DNfirst = new Date(D.getFullYear(), D.getMonth(), 1).getDay(),
+						calendar = '<tr>',
+						month = [
+							'Январь',
+							'Февраль',
+							'Март',
+							'Апрель',
+							'Май',
+							'Июнь',
+							'Июль',
+							'Август',
+							'Сентябрь',
+							'Октябрь',
+							'Ноябрь',
+							'Декабрь',
+						];
+					if (DNfirst != 0) {
+						for (var i = 1; i < DNfirst; i++) calendar += '<td>';
+					} else {
+						for (var i = 0; i < 6; i++) calendar += '<td>';
+					}
+					for (var i = 1; i <= Dlast; i++) {
+						if (
+							i == new Date().getDate() &&
+							D.getFullYear() == new Date().getFullYear() &&
+							D.getMonth() == new Date().getMonth()
+						) {
+							calendar +=
+								'<td class="today js_date" id="' +
+								String(D.getFullYear()) +
+								(String(D.getMonth() + 1) < 10
+									? String('0' + (D.getMonth() + 1))
+									: String(D.getMonth() + 1)) +
+								(i < 10 ? String('0' + i) : String(i)) +
+								'">' +
+								i;
+						} else {
+							calendar +=
+								'<td class="js_date" id="' +
+								String(D.getFullYear()) +
+								(String(D.getMonth() + 1) < 10
+									? String('0' + (D.getMonth() + 1))
+									: String(D.getMonth() + 1)) +
+								(i < 10 ? String('0' + i) : String(i)) +
+								'">' +
+								i;
+						}
+						if (new Date(D.getFullYear(), D.getMonth(), i).getDay() == 0) {
+							calendar += '<tr>';
+						}
+					}
+					for (var i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+					document.querySelector('#' + id + ' tbody').innerHTML = calendar;
+					document.querySelector(
+						'#' + id + ' thead td:nth-child(2)'
+					).innerHTML = month[D.getMonth()] + ' ' + D.getFullYear();
+					document.querySelector(
+						'#' + id + ' thead td:nth-child(2)'
+					).dataset.month = D.getMonth();
+					document.querySelector(
+						'#' + id + ' thead td:nth-child(2)'
+					).dataset.year = D.getFullYear();
+					if (document.querySelectorAll('#' + id + ' tbody tr').length < 6) {
+						document.querySelector('#' + id + ' tbody').innerHTML +=
+							'<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+					}
+				}
+				Calendar2('calendar2', new Date().getFullYear(), new Date().getMonth() - 1);
+				Calendar2('calendar3', new Date().getFullYear(), new Date().getMonth());
+				Calendar2('calendar4', new Date().getFullYear(), new Date().getMonth() + 1);
+				// // переключатель минус месяц
+				// document.querySelector(
+				// 	'#calendar2 thead tr:nth-child(1) td:nth-child(1)'
+				// ).onclick = function () {
+				// 	Calendar2(
+				// 		'calendar2',
+				// 		document.querySelector(
+				// 			'#calendar2 thead td:nth-child(2)'
+				// 		).dataset.year,
+				// 		parseFloat(
+				// 			document.querySelector(
+				// 				'#calendar2 thead td:nth-child(2)'
+				// 			).dataset.month
+				// 		) - 1
+				// 	);
+				// 	handleDateClick();
+				// };
+				// // переключатель плюс месяц
+				// document.querySelector(
+				// 	'#calendar2 thead tr:nth-child(1) td:nth-child(3)'
+				// ).onclick = function () {
+				// 	Calendar2(
+				// 		'calendar2',
+				// 		document.querySelector(
+				// 			'#calendar2 thead td:nth-child(2)'
+				// 		).dataset.year,
+				// 		parseFloat(
+				// 			document.querySelector(
+				// 				'#calendar2 thead td:nth-child(2)'
+				// 			).dataset.month
+				// 		) + 1
+				// 	);
+				// 	handleDateClick();
+				// };
+
+				function handleDateClick() {
+					let dates_arr = document.querySelectorAll('.js_date');
+					dates_arr.forEach((date) => {
+						date.addEventListener('click', (e) => {
+							window.location.href = '/?date=' + String(date.id); //Здесь нужно будет отправить на событие..
+						});
+					});
+				}
+				handleDateClick();
+			</script>
 
 			<!-- States section -->
 

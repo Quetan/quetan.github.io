@@ -1,32 +1,79 @@
-#calendar2 {
-    width: 100%;
-    line-height: 1.2em;
-    font-size: 15px;
-    text-align: center;
-  }
-  #calendar2 thead tr:last-child {
-    font-size: small;
-    color: rgb(85, 85, 85);
-  }
-  #calendar2 thead tr:nth-child(1) td:nth-child(2) {
-    color: rgb(50, 50, 50);
-  }
-  #calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
-    cursor: pointer;
-  }
-  #calendar2 tbody td {
-    color: rgb(44, 86, 122);
-  }
-  #calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
-    color: rgb(231, 140, 92);
-  }
-  #calendar2 tbody td.today {
-    background: rgb(220, 0, 0);
-    color: #fff;
-  }
-  .js_date{
-      cursor: pointer;
-  }
-  .js_date:hover{
-      background-color: rgba(255, 255, 255, 0.8);
-  }
+.calendar-table {
+	width: 100%;
+	line-height: 1.2em;
+	font-size: 15px;
+	text-align: center;
+  border-collapse:separate;
+  border-spacing:1.1rem 0.3rem;
+}
+
+.calendar-table tbody{
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.calendar-table tbody::before{
+  content: '';
+  width: 2px;
+  height: 90%;
+  position: absolute;
+  display: block;
+  left: -30px;
+  top: -10%;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.4);
+}
+
+.calendar-table tbody::after{
+  content: '';
+  width: 2px;
+  height: 90%;
+  position: absolute;
+  display: block;
+  right: -30px;
+  top: -10%;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.4);
+}
+
+.calendar-table .calendar-days-row td {
+	font-weight: 500;
+	font-size: 0.8em;
+}
+
+.calendar-table .calendar-month {
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	background-color: #ff1552;
+	color: #fff;
+}
+
+.calendar-table td {
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+}
+
+.calendar-table td.today{
+  background-color: #fff;
+  color: rgba(255,21,83);
+}
+
+.calendar-table td.event{
+  color: #fff;
+  background-color: rgba(255,21,83);
+}
+
+.calendar-table thead tr:nth-child(1) td:nth-child(1):hover,
+.calendar-table thead tr:nth-child(1) td:nth-child(3):hover {
+	cursor: pointer;
+}
+
+.js_date {
+	cursor: pointer;
+}
+.js_date:hover {
+	background-color: rgba(255, 21, 83, 0.8);
+}
