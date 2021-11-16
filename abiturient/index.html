@@ -1115,10 +1115,28 @@
 					<h2 class="section-header">Календарь событий</h2>
 				</div>
 
+				<div class="announces-triangles d-none d-md-block">
+					<img
+					  class="triangle1"
+					  src="./img/main/advantages/triangle1.svg"
+					  alt=""
+					/>
+					<img
+					  class="triangle2"
+					  src="./img/main/advantages/triangle2.svg"
+					  alt=""
+					/>
+					<img
+					  class="triangle3"
+					  src="./img/main/advantages/triangle3.svg"
+					  alt=""
+					/>
+				  </div>
+
 				<div class="announces-section_content" style="background-image: none">
 					<div class="container announces-container">
 						<div class="row calendars">
-							<div class="col-4">
+							<div class="d-none d-lg-block col-lg-4 calendar-item">
 								<div class="calendar-container">
 									<table class="calendar-table" id="calendar2">
 										<thead>
@@ -1142,7 +1160,7 @@
 									</table>
 								</div>
 							</div>
-							<div class="col-4">
+							<div class="col-12 col-md-6 col-lg-4 calendar-item">
 								<div class="calendar-container">
 									<table class="calendar-table" id="calendar3">
 										<thead>
@@ -1166,7 +1184,7 @@
 									</table>
 								</div>
 							</div>
-							<div class="col-4">
+							<div class="d-none d-md-block col-md-6 col-lg-4 calendar-item">
 								<div class="calendar-container">
 									<table class="calendar-table" id="calendar4">
 										<thead>
@@ -1228,7 +1246,7 @@
 							D.getMonth() == new Date().getMonth()
 						) {
 							calendar +=
-								'<td class="today js_date" id="' +
+								'<td class="today js_date" id="date' +
 								String(D.getFullYear()) +
 								(String(D.getMonth() + 1) < 10
 									? String('0' + (D.getMonth() + 1))
@@ -1238,7 +1256,7 @@
 								i;
 						} else {
 							calendar +=
-								'<td class="js_date" id="' +
+								'<td class="js_date" id="date' +
 								String(D.getFullYear()) +
 								(String(D.getMonth() + 1) < 10
 									? String('0' + (D.getMonth() + 1))
@@ -1270,40 +1288,16 @@
 				Calendar2('calendar2', new Date().getFullYear(), new Date().getMonth() - 1);
 				Calendar2('calendar3', new Date().getFullYear(), new Date().getMonth());
 				Calendar2('calendar4', new Date().getFullYear(), new Date().getMonth() + 1);
-				// // переключатель минус месяц
-				// document.querySelector(
-				// 	'#calendar2 thead tr:nth-child(1) td:nth-child(1)'
-				// ).onclick = function () {
-				// 	Calendar2(
-				// 		'calendar2',
-				// 		document.querySelector(
-				// 			'#calendar2 thead td:nth-child(2)'
-				// 		).dataset.year,
-				// 		parseFloat(
-				// 			document.querySelector(
-				// 				'#calendar2 thead td:nth-child(2)'
-				// 			).dataset.month
-				// 		) - 1
-				// 	);
-				// 	handleDateClick();
-				// };
-				// // переключатель плюс месяц
-				// document.querySelector(
-				// 	'#calendar2 thead tr:nth-child(1) td:nth-child(3)'
-				// ).onclick = function () {
-				// 	Calendar2(
-				// 		'calendar2',
-				// 		document.querySelector(
-				// 			'#calendar2 thead td:nth-child(2)'
-				// 		).dataset.year,
-				// 		parseFloat(
-				// 			document.querySelector(
-				// 				'#calendar2 thead td:nth-child(2)'
-				// 			).dataset.month
-				// 		) + 1
-				// 	);
-				// 	handleDateClick();
-				// };
+
+				let events = ['20211001','20211012', '20211027', '20211128','20211118','20211122','20211204', '20211207', '20211224'];
+				if (events) {
+					events.forEach(e => {
+						let item = document.querySelector(String("#date" + e));
+						if (item) {
+							item.classList.add('event');
+						}
+					});
+				}
 
 				function handleDateClick() {
 					let dates_arr = document.querySelectorAll('.js_date');
@@ -1922,6 +1916,121 @@
 					</div>
 				</div>
 			</section>
+
+      <!-- Announces section -->
+      <section class="announces-section">
+        <div
+          class="announces-section_header d-flex justify-content-center align-items-center"
+        >
+          <h2 class="section-header">Анонсы и объявления</h2>
+        </div>
+
+        <div class="announces-triangles d-none d-md-block">
+          <img
+            class="triangle1"
+            src="./img/main/advantages/triangle1.svg"
+            alt=""
+          />
+          <img
+            class="triangle2"
+            src="./img/main/advantages/triangle2.svg"
+            alt=""
+          />
+          <img
+            class="triangle3"
+            src="./img/main/advantages/triangle3.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="announces-section_content">
+          <div
+            class="container announces-container d-flex justify-content-center h-100"
+          >
+            <div class="row owl-carousel announces-carousel">
+              <a class="item announces-item_link" href="#">
+                <div class="announces-item d-flex flex-row">
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="announces-item_date d-flex flex-column align-items-start justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 31 </span>
+                    <span class="announces-date_month"> дек </span>
+                    <span class="announces-date_year"> 2020 </span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="item announces-item_link" href="#">
+                <div class="announces-item d-flex flex-row">
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="announces-item_date d-flex flex-column align-items-start justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 4 </span>
+                    <span class="announces-date_month"> янв </span>
+                    <span class="announces-date_year"> 2021 </span>
+                  </div>
+                </div>
+              </a>
+              <a class="item announces-item_link" href="#">
+                <div class="announces-item d-flex flex-row">
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="announces-item_date d-flex flex-column align-items-start justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 18 </span>
+                    <span class="announces-date_month"> фев </span>
+                    <span class="announces-date_year"> 2021 </span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="item announces-item_link" href="#">
+                <div class="announces-item d-flex flex-row">
+                  <div class="announces-item_wrapper py-0 mb-3 mb-md-0">
+                    <div class="announces-item_header text-left">
+                      <h3>
+                        Приемная комиссия поздравляет всех абитуриентов и
+                        студентов с новым годом!
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="announces-item_date d-flex flex-column align-items-start justify-content-center ml-auto"
+                  >
+                    <span class="announces-date_day"> 24 </span>
+                    <span class="announces-date_month"> фев </span>
+                    <span class="announces-date_year"> 2021 </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
 			<!-- Video section -->
 
 			<section class="section video-section parallax-wrapper">
