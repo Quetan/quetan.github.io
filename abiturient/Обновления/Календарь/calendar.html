@@ -1,0 +1,241 @@
+<!--
+    ****************************
+         1. HTML-разметка календаря
+    ****************************
+-->
+
+<section
+class="announces-section"
+style="background: none; background-color: #004b74"
+>
+<div
+    class="
+        announces-section_header
+        d-flex
+        justify-content-center
+        align-items-center
+    "
+>
+    <h2 class="section-header">Календарь событий</h2>
+</div>
+
+<div class="announces-triangles d-none d-md-block">
+    <img
+      class="triangle1"
+      src="./img/main/advantages/triangle1.svg"
+      alt=""
+    />
+    <img
+      class="triangle2"
+      src="./img/main/advantages/triangle2.svg"
+      alt=""
+    />
+    <img
+      class="triangle3"
+      src="./img/main/advantages/triangle3.svg"
+      alt=""
+    />
+  </div>
+
+<div class="announces-section_content" style="background-image: none">
+    <div class="container announces-container">
+        <div class="row calendars">
+            <div class="d-none d-lg-block col-lg-4 calendar-item">
+                <div class="calendar-container">
+                    <table class="calendar-table" id="calendar2">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td class="calendar-month" colspan="5"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="calendar-days-row">
+                                <td>Пн</td>
+                                <td>Вт</td>
+                                <td>Ср</td>
+                                <td>Чт</td>
+                                <td>Пт</td>
+                                <td>Сб</td>
+                                <td>Вс</td>
+                            </tr>
+                        </thead>
+
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 calendar-item">
+                <div class="calendar-container">
+                    <table class="calendar-table" id="calendar3">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td class="calendar-month" colspan="5"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="calendar-days-row">
+                                <td>Пн</td>
+                                <td>Вт</td>
+                                <td>Ср</td>
+                                <td>Чт</td>
+                                <td>Пт</td>
+                                <td>Сб</td>
+                                <td>Вс</td>
+                            </tr>
+                        </thead>
+
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="d-none d-md-block col-md-6 col-lg-4 calendar-item">
+                <div class="calendar-container">
+                    <table class="calendar-table" id="calendar4">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td class="calendar-month" colspan="5"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="calendar-days-row">
+                                <td>Пн</td>
+                                <td>Вт</td>
+                                <td>Ср</td>
+                                <td>Чт</td>
+                                <td>Пт</td>
+                                <td>Сб</td>
+                                <td>Вс</td>
+                            </tr>
+                        </thead>
+
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!--
+    ****************************
+         2. СКРИПТЫ для функционирования
+         и заполнения календаря
+
+         
+         ** У каждой даты есть id вида YYYYMMDD, 
+         ** где YYYY - год, MM - месяц, DD - день.
+         ** CSS Классы:
+         ** 1.today - сегодняшная дата
+         ** 2.event - дата, когда есть событие
+         ** 3.today - сегодняшная дата
+
+    ****************************
+-->
+
+<script>
+    //Функция заполнения календаря
+    function Calendar2(id, year, month) {
+        var Dlast = new Date(year, month + 1, 0).getDate(),
+            D = new Date(year, month, Dlast),
+            DNlast = new Date(D.getFullYear(), D.getMonth(), Dlast).getDay(),
+            DNfirst = new Date(D.getFullYear(), D.getMonth(), 1).getDay(),
+            calendar = '<tr>',
+            month = [
+                'Январь',
+                'Февраль',
+                'Март',
+                'Апрель',
+                'Май',
+                'Июнь',
+                'Июль',
+                'Август',
+                'Сентябрь',
+                'Октябрь',
+                'Ноябрь',
+                'Декабрь',
+            ];
+
+        // Заполняем календарь
+
+        if (DNfirst != 0) {
+            for (var i = 1; i < DNfirst; i++) calendar += '<td>';
+        } else {
+            for (var i = 0; i < 6; i++) calendar += '<td>';
+        }
+        for (var i = 1; i <= Dlast; i++) {
+            if (
+                i == new Date().getDate() &&
+                D.getFullYear() == new Date().getFullYear() &&
+                D.getMonth() == new Date().getMonth()
+            ) {
+                calendar +=
+                    '<td class="today js_date" id="date' +
+                    String(D.getFullYear()) +
+                    (String(D.getMonth() + 1) < 10
+                        ? String('0' + (D.getMonth() + 1))
+                        : String(D.getMonth() + 1)) +
+                    (i < 10 ? String('0' + i) : String(i)) +
+                    '">' +
+                    i;
+            } else {
+                calendar +=
+                    '<td class="js_date" id="date' +
+                    String(D.getFullYear()) +
+                    (String(D.getMonth() + 1) < 10
+                        ? String('0' + (D.getMonth() + 1))
+                        : String(D.getMonth() + 1)) +
+                    (i < 10 ? String('0' + i) : String(i)) +
+                    '">' +
+                    i;
+            }
+            if (new Date(D.getFullYear(), D.getMonth(), i).getDay() == 0) {
+                calendar += '<tr>';
+            }
+        }
+        for (var i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+        document.querySelector('#' + id + ' tbody').innerHTML = calendar;
+        document.querySelector(
+            '#' + id + ' thead td:nth-child(2)'
+        ).innerHTML = month[D.getMonth()] + ' ' + D.getFullYear();
+        document.querySelector(
+            '#' + id + ' thead td:nth-child(2)'
+        ).dataset.month = D.getMonth();
+        document.querySelector(
+            '#' + id + ' thead td:nth-child(2)'
+        ).dataset.year = D.getFullYear();
+        if (document.querySelectorAll('#' + id + ' tbody tr').length < 6) {
+            document.querySelector('#' + id + ' tbody').innerHTML +=
+                '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+        }
+    }
+
+    // Заполняем 3 календаря: на прошлый месяц, на текущий и на следующий.
+
+    Calendar2('calendar2', new Date().getFullYear(), new Date().getMonth() - 1);
+    Calendar2('calendar3', new Date().getFullYear(), new Date().getMonth());
+    Calendar2('calendar4', new Date().getFullYear(), new Date().getMonth() + 1);
+
+    // Предполагаемый пример массива с числами, когда будут события 
+    let events = ['20211001','20211012', '20211027', '20211128','20211118','20211122','20211204', '20211207', '20211224'];
+    // Добавляет всем датам из списка класс event
+    if (events) {
+        events.forEach(e => {
+            let item = document.querySelector(String("#date" + e));
+            if (item) {
+                item.classList.add('event');
+            }
+        });
+    }
+
+    // Предполагаемый обработчик события клик на дату. Отправляет на адрес вида URL/?date=YYYYMMDD 
+    function handleDateClick() {
+        let dates_arr = document.querySelectorAll('.js_date');
+        dates_arr.forEach((date) => {
+            date.addEventListener('click', (e) => {
+                window.location.href = '/?date=' + String(date.id.split('date')[1]);
+            });
+        });
+    }
+    handleDateClick();
+</script>

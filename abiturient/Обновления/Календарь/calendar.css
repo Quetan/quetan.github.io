@@ -1,3 +1,9 @@
+/*
+**
+**  Стили для календаря
+**
+*/
+
 .calendar-table {
 	width: 100%;
 	line-height: 1.2em;
@@ -85,7 +91,6 @@
 .calendar-table td.event{
   color: #fff;
   background-color: rgba(255,21,83,0.9);
-  position: relative;
 }
 
 .calendar-table td.event:hover{
@@ -102,53 +107,4 @@
 }
 .js_date:hover {
 	background-color: rgba(255, 21, 83, 0.8);
-}
-
-.events-popup {
-  position: absolute;
-  background-color: #fff;
-  bottom: 100%;
-  padding: 0.8rem 1rem 2rem 1rem;
-  width: 250px;
-  z-index: 100;
-  box-shadow: 2px 3px 4px 1px rgba(0,0,0,0.15);
-  border-radius: 5px;
-  display: none;
-}
-
-.popup-list{
-                  -webkit-padding-start: 20px;
-                          padding-inline-start: 20px;
-          display: flex;
-          flex-direction: column;
-          list-style-type: disc;
-          margin: 0;
-          margin-top: 1rem;
-}
-
-.popup-header{
-  padding: 0.2rem 0.5rem;
-  background-color: rgb(255, 21, 83);
-  line-height: 1.3;
-  letter-spacing: -0.04rem;
-}
-
-.popup-event{
-  margin-bottom: 0.6rem;
-  text-align: left;
-  font-size: 90%;
-  letter-spacing: -0.01rem;
-}
-
-.popup-event:hover{
-  text-decoration: underline;
-}
-
-.popup-event:last-child{
-  margin-bottom: 0;
-}
-
-.popup-event::marker{
-  color:rgb(255, 21, 83);
-  line-height: 0;
 }
