@@ -1101,7 +1101,7 @@
 			</section>
 			<!-- Announces section -->
 			<section
-				class="announces-section"
+				class="announces-section calendar-section"
 				style="background: none; background-color: #004b74"
 			>
 				<div
@@ -1234,12 +1234,29 @@
 							'Ноябрь',
 							'Декабрь',
 						];
+					let offset = 0;
 					if (DNfirst != 0) {
-						for (var i = 1; i < DNfirst; i++) calendar += '<td>';
+						for (var i = 1; i < DNfirst; i++) {
+							calendar += '<td>';
+							offset += 1;
+						}
 					} else {
-						for (var i = 0; i < 6; i++) calendar += '<td>';
+						for (var i = 0; i < 6; i++) calendar += 'td';
 					}
+					let rightsided = [];
 					for (var i = 1; i <= Dlast; i++) {
+						//Создаем массив с числами, которые находятся справа,
+						//чтобы избежать заплыва всплывающего окна за экран
+						for (var j = 1; j < 6; j++) {
+							if (
+								i === 7 * j - offset ||
+								i === 7 * j - offset - 1 ||
+								i === 7 * j - offset - 2
+							) {
+								rightsided.push(i);
+							}
+						}
+						//Если дата совпадает с сегодняшней, то даем класс today
 						if (
 							i == new Date().getDate() &&
 							D.getFullYear() == new Date().getFullYear() &&
@@ -1255,15 +1272,28 @@
 								'">' +
 								i;
 						} else {
-							calendar +=
-								'<td class="js_date" id="date' +
-								String(D.getFullYear()) +
-								(String(D.getMonth() + 1) < 10
-									? String('0' + (D.getMonth() + 1))
-									: String(D.getMonth() + 1)) +
-								(i < 10 ? String('0' + i) : String(i)) +
-								'">' +
-								i;
+							//Проверяем, попадает ли дата в правосторонние
+							if (rightsided.includes(i)) {
+								calendar +=
+									'<td class="js_date rightsided" id="date' +
+									String(D.getFullYear()) +
+									(String(D.getMonth() + 1) < 10
+										? String('0' + (D.getMonth() + 1))
+										: String(D.getMonth() + 1)) +
+									(i < 10 ? String('0' + i) : String(i)) +
+									'">' +
+									i;
+							} else {
+								calendar +=
+									'<td class="js_date" id="date' +
+									String(D.getFullYear()) +
+									(String(D.getMonth() + 1) < 10
+										? String('0' + (D.getMonth() + 1))
+										: String(D.getMonth() + 1)) +
+									(i < 10 ? String('0' + i) : String(i)) +
+									'">' +
+									i;
+							}
 						}
 						if (new Date(D.getFullYear(), D.getMonth(), i).getDay() == 0) {
 							calendar += '<tr>';
@@ -1286,54 +1316,68 @@
 					}
 				}
 
-				Calendar2('calendar2',new Date().getFullYear(),new Date().getMonth() - 1);
+				Calendar2(
+					'calendar2',
+					new Date().getFullYear(),
+					new Date().getMonth() - 1
+				);
 				Calendar2('calendar3', new Date().getFullYear(), new Date().getMonth());
-				Calendar2('calendar4',new Date().getFullYear(),new Date().getMonth() + 1);
-
+				Calendar2(
+					'calendar4',
+					new Date().getFullYear(),
+					new Date().getMonth() + 1
+				);
 
 				//Пример массива с событиями
 				let events = [
-					{ 
-						id: 0, 
-						date: '20211001', 
+					{
+						id: 0,
+						date: '20211001',
 						events: [
-							{title: 'Title of event1', url: '/news/42680'},
-							{title: 'Title of event2', url: '/news/42660'},
+							{ title: 'Title of event1', url: '/news/42680' },
+							{ title: 'Title of event2', url: '/news/42660' },
 						],
 					},
-					{ 
-						id: 1, 
-						date: '20211027', 
+					{
+						id: 1,
+						date: '20211027',
 						events: [
-							{title: 'Title of event3', url: '/news/42680'},
-							{title: 'Title of event4', url: '/news/42660'},
+							{ title: 'Title of event3', url: '/news/42680' },
+							{ title: 'Title of event4', url: '/news/42660' },
 						],
 					},
-					{ 
-						id: 2, 
-						date: '20211118', 
+					{
+						id: 2,
+						date: '20211118',
 						events: [
-							{title: 'Title of event5', url: '/news/42680'},
-							{title: 'Title of event61', url: '/news/42660'},
-							{title: 'Title of event62', url: '/news/42660'},
-							{title: 'Title, of event63 Title, of event63Title, of event63Title, of event63', url: '/news/42660'},
-							{title: 'Title of event64', url: '/news/42660'},
+							{ title: 'Title of event5', url: '/news/42680' },
+							{ title: 'Title of event61', url: '/news/42660' },
+							{ title: 'Title of event62', url: '/news/42660' },
+							{
+								title:
+									'Title, of event63 Title, of event63Title, of event63Title, of event63',
+								url: '/news/42660',
+							},
+							{ title: 'Title of event64', url: '/news/42660' },
 						],
 					},
-					{ 
-						id: 3, 
-						date: '20211207', 
+					{
+						id: 3,
+						date: '20211207',
 						events: [
-							{title: 'Title of event7', url: '/news/42680'},
-							{title: 'Title of event8', url: '/news/42660'},
+							{ title: 'Title of event7', url: '/news/42680' },
+							{ title: 'Title of event8', url: '/news/42660' },
 						],
 					},
-					{ 
-						id: 4, 
-						date: '20211226', 
+					{
+						id: 4,
+						date: '20211226',
 						events: [
-							{title: 'Title of event7Title of event7Title of event7Title of event7Title of event7Title of event7', url: '/news/42680'},
-							{title: 'Title of event8', url: '/news/42660'},
+							{
+								title: 'Title of event7',
+								url: '/news/42680',
+							},
+							{ title: 'Title of event8', url: '/news/42660' },
 						],
 					},
 				];
@@ -1358,7 +1402,7 @@
 							list.classList.add('popup-list');
 							popup.appendChild(list);
 							//List items
-							e.events.forEach(i => {
+							e.events.forEach((i) => {
 								let event = document.createElement('li');
 								event.classList.add('popup-event');
 								//Link
@@ -1386,22 +1430,19 @@
 				(function () {
 					let dates_arr = document.querySelectorAll('.js_date');
 					dates_arr.forEach((date) => {
-						date.addEventListener('mouseenter', (e) => {
-							let popup = document.querySelector('#popup' + String(date.id.split('date')[1]));
-							if (popup){
+						let popup = document.querySelector(
+							'#popup' + String(date.id.split('date')[1])
+						);
+						if (popup) {
+							date.addEventListener('mouseenter', (e) => {
 								popup.style.display = 'block';
-							}
-						});
-						date.addEventListener('mouseleave', (e) => {
-							let popup = document.querySelector('#popup' + String(date.id.split('date')[1]));
-							if (popup){
+							});
+							date.addEventListener('mouseleave', (e) => {
 								popup.style.display = 'none';
-							}
-						});
+							});
+						}
 					});
 				})();
-
-				
 			</script>
 
 			<!-- States section -->
