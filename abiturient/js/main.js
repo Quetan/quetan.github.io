@@ -491,26 +491,6 @@
     });
   });
 
-  $(".calendars-carousel").each(function () {
-    $(this).owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      dots: false,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        992: {
-          items: this.dataset.owlItems || 2,
-        },
-      },
-    });
-  });
-
   // YOUTUBE VIDEO PLACEHOLDER
   (function () {
     var v = document.getElementsByClassName("youtube-player");
