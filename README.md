@@ -1,6 +1,6 @@
 # Мои работы
 
-* ## [КПК Сибирский Капитал](http://sk.sibiris.ru) (2021, CMS WordPress, React)
+* ## [КПК Сибирский Капитал](https://sibkap.ru/) (2021, CMS WordPress, React)
 ![КПК Сибирский Капитал](./thumbs/sibkap.jpg "КПК Сибирский Капитал")​
 
 * ## [Ternex для клиентов](https://ternex.ru/consumers/) (2021, Gulp)
