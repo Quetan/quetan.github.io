@@ -19,7 +19,8 @@
 	font-weight: 500;
 	font-size: 1.1rem;
 	margin-bottom: 1rem;
-	margin-right: 1.5rem;
+	margin-right: 0.75rem;
+	margin-left: 0.75rem;
 	min-height: 100px;
     opacity: 0.5;
     transition: opacity 0.3s ease-in;
@@ -29,13 +30,8 @@
     opacity: 1;
 }
 
-.dropdown--button:last-child {
-	margin-right: 0;
-}
-
 @media screen and (max-width: 650px) {
 	.dropdown--button {
-		margin-right: 0;
 		font-size: 1rem;
 		padding: 1rem 0.6rem;
 	}
