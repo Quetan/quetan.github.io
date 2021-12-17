@@ -25,8 +25,8 @@ let Dropdown = function (root = '#dropdown') {
 		_animate(
 			dropdownContainers[_currentIndex],
 			[
-				{ opacity: 1, transform: 'scale3d(1,1,1)' },
-				{ opacity: 0, transform: 'scale3d(0.3,0.3,0.3)' },
+				{ opacity: 1, transform: 'translateY(0)' },
+				{ opacity: 0, transform: 'translateY(-200%)' },
 			],
 			200,
 			(e) => {
@@ -38,8 +38,8 @@ let Dropdown = function (root = '#dropdown') {
 				_animate(
 					dropdownContainers[_currentIndex],
 					[
-						{ opacity: 0, transform: 'scale3d(0.3,0.3,0.3)' },
-						{ opacity: 1, transform: 'scale3d(1,1,1)' },
+						{ opacity: 0, transform: 'translateY(-200%)' },
+						{ opacity: 1, transform: 'translateY(0)' }
 					],
 					200,
 					{}
@@ -68,4 +68,14 @@ let Dropdown = function (root = '#dropdown') {
 	});
 };
 
-Dropdown();
+//Программы обучения
+Dropdown("#dropdown");
+//Стоимость обучения и вступительные экзамены
+Dropdown("#dropdown2");
+// О программе
+// Dropdown("#dropdown3");
+// Чему научат
+Dropdown("#dropdown4");
+// Карьерная траектория
+Dropdown("#dropdown5");
+
