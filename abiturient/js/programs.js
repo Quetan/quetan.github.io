@@ -71,11 +71,11 @@ let Dropdown = function (root = '#dropdown') {
 //Программы обучения
 Dropdown("#dropdown");
 //Стоимость обучения и вступительные экзамены
-Dropdown("#dropdown2");
+// Dropdown("#dropdown2");
 // О программе
 // Dropdown("#dropdown3");
 // Чему научат
-Dropdown("#dropdown4");
+// Dropdown("#dropdown4");
 // Карьерная траектория
-Dropdown("#dropdown5");
+// Dropdown("#dropdown5");
 
