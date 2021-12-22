@@ -1,15 +1,17 @@
 :root {
 	--asu-dark: #07527a;
-	--asu-accent: #337267;
+	--asu-accent: #e51a4b;
 }
 
 .programs--banner {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 	width: 100%;
 	margin-bottom: 200px;
+	padding: 0 45px;
+	position: relative;
 }
 
 .programs--napr {
@@ -22,19 +24,29 @@
 .programs--banner__heading {
 	display: flex;
 	flex-direction: column;
+	width: 45%;
+	margin: 1rem;
 }
 
 .programs--banner__header {
 	font-size: 2.6rem;
 	font-weight: 800;
 	text-transform: uppercase;
-	color: var(--asu-accent);
+	color: var(--asu-dark);
+	margin-bottom: 1.5rem;
+	z-index: 5;
 }
 
 .programs--banner__emblem{
-	width: 60px;
+	width: 75px;
 	height: auto;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.programs--banner__lottie {
+	width: 50%;
+	height: auto;
+	max-width: 500px;
 }
 
 .programs--image{
@@ -49,7 +61,7 @@
 	position: absolute;
 	height: 150px;
 	bottom: -75px;
-	left: 20%;
+	left: 10%;
 	width: auto;
 	padding: 1rem 2.5rem;
 	background-color: #fff;
@@ -183,8 +195,6 @@
 	margin-bottom: 0.1rem;
 	font-size: 0.8rem;
 	color: #fff;
-	/* background-color: #fff; */
-	/* color: var(--asu-accent); */
 }
 
 .programs--numbers__item li:last-child {
@@ -209,12 +219,68 @@
 .programs--bg-accent {
 	background-color: var(--asu-accent);
 	color: #fff;
+	box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 .programs--content {
 	padding: 1.8rem 1rem;
 	margin-bottom: 2rem;
 	font-size: 1.2rem;
+}
+
+.programs-students__section{
+	background-color: var(--asu-dark);
+	margin-bottom: 4rem;
+	margin-top: 1rem;
+}
+
+.programs--students {
+	width: 100%;
+	padding: 2rem 80px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--asu-dark);
+}
+
+.programs--students__logo img{
+	height: 350px;
+	width: auto;
+	-webkit-filter: drop-shadow(3px -2px 1px rgba(255,255,255,1));
+	        filter: drop-shadow(3px -2px 1px rgba(255,255,255,1));
+}
+.programs--students__content {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	text-align: right;
+	margin-left: 3rem;
+}
+
+.programs--students__content h2{
+	color: #fff;
+	font-size: 3.3rem;
+	font-weight: 700;
+	margin-bottom: 2.5rem;
+	letter-spacing: 0.05rem;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.programs--students__content a{
+	color: var(--asu-dark);
+	background-color: #fff;
+	padding: 0.8rem 2.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	letter-spacing: 0.04em;
+	transition: 0.4s ease all;
+}
+
+.programs--students__content a:hover{
+	color: var(--asu-dark);
+	box-shadow: 2px 3px 15px 1px #ffffff9d;
 }
 
 .dropdown {
@@ -237,7 +303,7 @@
 	display: block;
 	width: 100%;
 	height: 2px;
-	background-color: var(--asu-green);
+	background-color: var(--asu-accent);
 	position: absolute;
 	bottom: -0.8rem;
 }
@@ -257,7 +323,7 @@
 	content: '';
 	width: 0%;
 	height: 2px;
-	background-color: red;
+	/* background-color: red; */
 	position: absolute;
 	display: block;
 	bottom: 0;
@@ -291,37 +357,6 @@
 .dropdown--button.active{
     opacity: 1;
 }
-
-@media screen and (max-width: 650px) {
-	/* .dropdown--button {
-		font-size: 1rem;
-		padding: 1rem 0.6rem;
-	} */
-}
-
-/* .dropdown--button:nth-child(4n + 1) {
-	border-color: var(--asu-green);
-	color: var(--asu-green);
-	box-shadow: 0 0 5px 1px var(--asu-green__low_opacity);
-}
-
-.dropdown--button:nth-child(4n + 2) {
-	border-color: var(--asu-orange);
-	color: var(--asu-orange);
-	box-shadow: 0 0 5px 1px var(--asu-orange__low_opacity);
-}
-
-.dropdown--button:nth-child(4n + 3) {
-	border-color: var(--asu-green);
-	color: var(--asu-green);
-	box-shadow: 0 0 5px 1px var(--asu-green__low_opacity);
-}
-
-.dropdown--button:nth-child(4n + 4) {
-	border-color: var(--asu-blue);
-	color: var(--asu-blue);
-	box-shadow: 0 0 5px 1px var(--asu-blue__low_opacity);
-} */
 
 .dropdown--content {
     overflow: hidden;
