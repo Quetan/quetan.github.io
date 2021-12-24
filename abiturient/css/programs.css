@@ -7,7 +7,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	width: 100%;
 	margin-bottom: 100px;
 	padding: 0 7.5%;
@@ -33,7 +33,7 @@
 	font-weight: 800;
 	text-transform: uppercase;
 	color: var(--asu-dark);
-	margin-bottom: 3.5rem;
+	margin-bottom: 60px;
 	z-index: 5;
 	max-width: 600px;
 }
@@ -124,13 +124,14 @@
 
 .programs--profile-header.after::after {
 	content: '';
-	height: 100px;
-	width: 400px;
-	right: 0;
-	top: -20px;
+	height: 170px;
+	width: 520px;
+	right: 20px;
+	top: -70px;
 	display: block;
 	position: absolute;
 	background-image: url(../pattern-01.svg);
+	background-size: cover;
 	
 }
 
@@ -253,39 +254,62 @@
 	background-color: var(--asu-dark);
 	overflow: hidden;
 	position: relative;
+	box-shadow: inset 0px 0px 15px 10px rgba(0, 0, 0, 0.2);
 }
 
-.programs--students__section::after,
+/* .programs--students__section::after,
 .programs--students__section::before{
 	content: '';
 	background-image: url(../pattern-01.svg);
 	display: block;
 	position: absolute;
 	background-repeat: repeat-x;
-	width: 200px;
-	height: 100px;
+	width: 400px;
+	height: 200px;
 	background-size: cover;
 }
 
 .programs--students__section::before{
-	left: -50px;
-	top: 10px;
+	left: -170px;
+	top: 5px;
 	background-position: center right;
 }
 
 .programs--students__section::after{
-	right: -25px;
+	right: -170px;
 	bottom: 10px;
 	background-position: center left;
+} */
+
+/* .programs--students__section::after,
+.programs--students__section::before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	left: 0;
 }
+
+.programs--students__section::before{
+	top: 0;
+	background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 70%);
+	
+}
+
+.programs--students__section::after{
+	bottom: 0;
+	background: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 70%);
+	
+} */
 
 
 .programs--students {
 	width: 100%;
 	/* padding: 2rem 80px;
 	padding-right: 150px; */
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -485,9 +509,8 @@
 
 .programs--form h3{
 	color: var(--asu-dark);
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 	margin-top: 2rem;
 	font-size: 1.8rem;
 	font-weight: 600;
-	text-align: center;
 }
