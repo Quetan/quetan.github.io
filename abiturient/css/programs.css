@@ -10,7 +10,7 @@
 	justify-content: space-around;
 	width: 100%;
 	margin-bottom: 100px;
-	padding: 0 45px;
+	padding: 0 7.5%;
 	position: relative;
 }
 
@@ -35,10 +35,11 @@
 	color: var(--asu-dark);
 	margin-bottom: 3.5rem;
 	z-index: 5;
+	max-width: 600px;
 }
 
 .programs--banner__emblem{
-	width: 85px;
+	width: 110px;
 	height: auto;
 	margin-bottom: 1rem;
 }
@@ -60,11 +61,6 @@
 .programs--image__content {
 	position: relative;
 	height: 150px;
-	/* bottom: -75px;
-	left: 10%; */
-	/* width: -webkit-max-content;
-	width: -moz-max-content; */
-	/* width: max-content; */
 	width: 100%;
 	padding: 1rem 2.5rem;
 	background-color: #fff;
@@ -74,6 +70,7 @@
 	align-items: center;
 	justify-content: space-around;
 	border-radius: 20px;
+	max-width: 600px;
 }
 
 .programs--image__content_item {
@@ -120,9 +117,8 @@
 	font-size: 2.6rem;
 	font-weight: 600;
 	color: var(--asu-dark);
-	margin-bottom: 2rem;
+	margin-bottom: 1.8rem;
 	letter-spacing: 0.02rem;
-	padding-left: 60px;
 	position: relative;
 }
 
@@ -147,7 +143,7 @@
 	width: 50px;
 	height: 50px;
 	position: absolute;
-	left: 0px;
+	left: -60px;
 	background-image: url('../img/main/footer/hashtag.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -244,36 +240,56 @@
 	border-radius: 5px;
 }
 
-.programs--bg-accent {
-	background-color: var(--asu-accent);
-	        -webkit-filter:hue-rotate(350deg) contrast(0.9);
-	                filter:hue-rotate(350deg) contrast(0.9);
-	color: #fff;
-	box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.15);
-	border: 8px solid rgba(0,0,0,0.1);
-	border-radius: 5px;
-}
-
 .programs--content {
-	padding: 1.8rem 1rem;
+	padding-bottom: 1.8rem;
+	padding-top: 0rem;
 	margin-bottom: 2rem;
 	font-size: 1.2rem;
 }
 
-.programs-students__section{
-	margin-bottom: 4rem;
-	margin-top: 1rem;
+.programs--students__section{
+	margin-bottom: 5rem;
+	margin-top: 5rem;
+	background-color: var(--asu-dark);
+	overflow: hidden;
+	position: relative;
 }
+
+.programs--students__section::after,
+.programs--students__section::before{
+	content: '';
+	background-image: url(../pattern-01.svg);
+	display: block;
+	position: absolute;
+	background-repeat: repeat-x;
+	width: 200px;
+	height: 100px;
+	background-size: cover;
+}
+
+.programs--students__section::before{
+	left: -50px;
+	top: 10px;
+	background-position: center right;
+}
+
+.programs--students__section::after{
+	right: -25px;
+	bottom: 10px;
+	background-position: center left;
+}
+
 
 .programs--students {
 	width: 100%;
-	padding: 2rem 80px;
-	padding-right: 150px;
+	/* padding: 2rem 80px;
+	padding-right: 150px; */
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	background: var(--asu-dark);
 }
 
 .programs--students__logo img{
@@ -465,4 +481,13 @@
 	display: block;
 	width: 80%;
 	margin: 0 auto;
+}
+
+.programs--form h3{
+	color: var(--asu-dark);
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+	font-size: 1.8rem;
+	font-weight: 600;
+	text-align: center;
 }
