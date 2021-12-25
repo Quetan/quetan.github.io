@@ -210,8 +210,6 @@
 			</div>
 		</header>
 
-		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
 		<main class="main">
 			<section class="section">
 				<!-- <span class="programs--napr">Бакалавриат</span> -->
@@ -227,12 +225,12 @@
 						</h1>
 						<div class="programs--image__content">
 							<div class="programs--image__content_item">
-								<span class="numbers" style="font-size: 3rem; padding: 0.6rem 1.5rem;">125</span>
+								<span class="numbers" id="jsNumber" style="font-size: 3rem; padding: 0.6rem 1.5rem;" data-value="125">125</span>
 								<span class="description">Бюджетные места</span>
 							</div>
 							<div class="programs--image__content_divider"></div>
 							<div class="programs--image__content_item">
-								<span>рублей в 2021 - 2022 году</span>
+								<span>в 2021 - 2022 году</span>
 								<span class="numbers">100 000 - 120 000</span>
 								<span class="description">Стоимость</span>
 							</div>
@@ -453,7 +451,7 @@
 							</div>
 							<div class="programs--numbers__divider"></div>
 							<div class="programs--numbers__item">
-								<span class="negative">92500</span>
+								<span class="negative">92500₽</span>
 								<small>Рублей в семестр в 2021-2022 г.</small>
 							</div>
 							<div class="programs--numbers__divider"></div>
@@ -731,57 +729,7 @@
 				</div>
 			</div>
 		</footer>
-		<script>// YOUTUBE VIDEO PLACEHOLDER
-			(function () {
-			  var v = document.getElementsByClassName("youtube-player");
-			  for (var n = 0; n < v.length; n++) {
-				var p = document.createElement("div");
-				var id = v[n].getAttribute("data-id");
-		  
-				var placeholder = v[n].hasAttribute("data-thumbnail")
-				  ? v[n].getAttribute("data-thumbnail")
-				  : "";
-		  
-				if (placeholder.length) p.innerHTML = createCustomThumbail(placeholder);
-				else p.innerHTML = createThumbail(id);
-		  
-				v[n].appendChild(p);
-				p.addEventListener("click", function () {
-				  var parent = this.parentNode;
-				  createIframe(parent, parent.getAttribute("data-id"));
-				});
-			  }
-		  
-			  function createCustomThumbail(url) {
-				return (
-				  '<img class="youtube-thumbnail" src="' +
-				  url +
-				  '" alt="Youtube Preview" /><div class="youtube-play-btn"></div>'
-				);
-			  }
-		  
-			  function createThumbail(id) {
-				return (
-				  '<img class="youtube-thumbnail" src="//i.ytimg.com/vi_webp/' +
-				  id +
-				  '/maxresdefault.webp" alt="Youtube Preview"><div class="youtube-play-btn"></div>'
-				);
-			  }
-		  
-			  function createIframe(v, id) {
-				var iframe = document.createElement("iframe");
-				iframe.setAttribute(
-				  "src",
-				  "//www.youtube.com/embed/" +
-					id +
-					"?autoplay=1&color=white&autohide=2&modestbranding=1&border=0&wmode=opaque&enablejsapi=1&showinfo=0&rel=0"
-				);
-				iframe.setAttribute("frameborder", "0");
-				iframe.setAttribute("class", "youtube-iframe");
-				iframe.setAttribute("loading", "lazy");
-				v.firstChild.replaceWith(iframe);
-			  }
-			})();</script>
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
 		<script src="./js/programs.js"></script>
 		<!-- Главный JS файл -->
 		<!-- <script src="./js/jquery-3.6.0.min.js"></script>
