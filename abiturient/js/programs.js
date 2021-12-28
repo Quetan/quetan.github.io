@@ -52,6 +52,7 @@ let Dropdown = function (root = "#dropdown") {
     if (!buttons || !containers) return 0;
     const blocksCount = buttons.length;
     for (let i = 0; i < blocksCount; i++) {
+      if (!buttons[i] || !containers[i]) break;
       buttons[i].setAttribute("index", i);
       buttons[i].id = `dropdown-button-${i}`;
       buttons[i].tabIndex = i + 1;
@@ -141,4 +142,4 @@ function animateValue(obj, duration) {
 }
 
 const obj = document.getElementById("jsNumber");
-animateValue(obj, 800);
+animateValue(obj, 1200);
