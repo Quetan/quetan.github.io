@@ -88,6 +88,19 @@
 			.programs--profile-header.after::after {
 				background-image: url('https://www.asu.ru/files/images.215/programs/pattern-01.svg') !important;
 			}
+			#showMore {
+				letter-spacing: 0.05rem;
+				line-height: 1.6;
+				font-size: 0.7rem;
+				background-color: var(--asu-accent);
+				color: #fff;
+				border-radius: 15px;
+				padding: 0.6rem 1rem;
+				transition: 0.4s ease all;
+			}
+			#showMore:hover {
+				filter: sepia(25%);
+			}
 		</style>
 
 		<section class="section">
@@ -135,129 +148,186 @@
 					</h2>
 					<div id="dropdown">
 						<div class="dropdown--header">
-							    <button class="dropdown--button active">Прикладная информатика</button>
-                                <button class="dropdown--button">Психология</button>
-                                <button class="dropdown--button">Конфликтология</button>
-                                <button class="dropdown--button">Клиническая психология</button>
-                                <button class="dropdown--button">Психология служебной деятельности</button>
-                                <button class="dropdown--button">Социология</button>
-                                <button class="dropdown--button">Социальная работа</button>
-                            <button id="showMore">Показать все</button>
-                            <script>
-                                const showMore = document.getElementById('showMore');
+							<button class="dropdown--button active">
+								Прикладная информатика
+							</button>
+							<button class="dropdown--button">Психология</button>
+							<button class="dropdown--button">Конфликтология</button>
+							<button class="dropdown--button">Клиническая психология</button>
+							<button class="dropdown--button">
+								Психология служебной деятельности
+							</button>
+							<button class="dropdown--button">Социология</button>
+							<button class="dropdown--button">Социальная работа</button>
+							<button id="showMore">Показать все...</button>
+							<script>
+								const showMore = document.getElementById('showMore');
 
-                                let arr = ['Организация работы с молодежью', 'Регионоведение России', 'Политология', 'Реклама и связи с общественностью', 'Журналистика', 'Медиакоммуникации', 'Психолого-педагогическое образование', 'Дизайн', 'Имиджевый дизайн', 'Педагогическое образование (с двумя профилями подготовки)', 'История', 'Обществознание', 'Русский язык и литература', 'Детская журналистика', 'Английский язык', 'Китайский язык', 'Право', 'Экономика',' Педагогика и психология девиантного поведения', 'Филология', 'Перевод и переводоведение', 'Русский язык как иностранный', 'Философия', 'Изящные искусства', 'История искусств', 'Культурология', 'Музыкально-инструментальное искусство', 'Декоративно-прикладное искусство и народные промыслы', 'Искусство костюма и текстиля'];
+								let arr = [
+									'Прикладная информатика',
+									'Психология',
+									'Конфликтология',
+									'Клиническая психология',
+									'Психология служебной деятельности',
+									'Социология',
+									'Социальная работа',
+									'Организация работы с молодежью',
+									'Регионоведение России',
+									'Политология',
+									'Реклама и связи с общественностью',
+									'Журналистика',
+									'Медиакоммуникации',
+									'Психолого-педагогическое образование',
+									'Дизайн',
+									'Имиджевый дизайн',
+									'История',
+									'Обществознание',
+									'Русский язык и литература',
+									'Детская журналистика',
+									'Английский язык',
+									'Китайский язык',
+									'Право',
+									'Экономика',
+									' Педагогика и психология девиантного поведения',
+									'Филология',
+									'Перевод и переводоведение',
+									'Русский язык как иностранный',
+									'Философия',
+									'Изящные искусства',
+									'История искусств',
+									'Культурология',
+									'Музыкально-инструментальное искусство',
+									'Декоративно-прикладное искусство и народные промыслы',
+									'Искусство костюма и текстиля',
+								];
 
-                                let ShowMore = () => {
-                                    let h = document.querySelector('.dropdown--header');
-                                    for (let i = 0; i < arr.length; i++) {
-                                        let button = document.createElement('button');
-                                        button.classList.add('dropdown--button');
-                                        button.innerHTML = arr[i];
-                                        h.appendChild(button);
-                                    }
-                                    Dropdown('#dropdown');
-                                    showMore.style.display = "none";
-                                }
-                                showMore.addEventListener('click', ShowMore);
-                            </script>
+								let ShowMore = () => {
+									let h = document.querySelector('.dropdown--header');
+									h.innerHTML = '';
+									for (let i = 0; i < arr.length; i++) {
+										let button = document.createElement('button');
+										button.classList.add('dropdown--button');
+										button.innerHTML = arr[i];
+										button.setAttribute('index', i);
+										h.appendChild(button);
+									}
+									let c = document.querySelectorAll('.dropdown--container');
+									c.forEach((i) => {
+										i.classList.remove('active');
+									});
+									Dropdown('#dropdown');
+									showMore.style.display = 'none';
+								};
+								showMore.addEventListener('click', ShowMore);
+							</script>
 						</div>
 						<div class="dropdown--content container">
 							<div class="dropdown--container active">
-                                <p>1</p>
+								<p>1 Прикладная информатика</p>
 							</div>
 							<div class="dropdown--container">
-								<p>2</p>
+								<p>2 Психология</p>
 							</div>
 							<div class="dropdown--container">
-								<p>3</p>
+								<p>3 Конфликтология</p>
 							</div>
 							<div class="dropdown--container">
-								<p>4</p>
+								<p>4 Клиническая психология</p>
 							</div>
 							<div class="dropdown--container">
-								<p>5</p>
+								<p>5 Психология служебной деятельности</p>
 							</div>
 							<div class="dropdown--container">
-								<p>6</p>
+								<p>6 Социология</p>
 							</div>
 							<div class="dropdown--container">
-								<p>7</p>
+								<p>7 Социальная работа</p>
 							</div>
 							<div class="dropdown--container">
-								<p>8</p>
+								<p>8 Организация работы с молодежью</p>
 							</div>
 							<div class="dropdown--container">
-								<p>9</p>
+								<p>9 ', 'Регионоведение России'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>11</p>
+								<p>11 , 'Политология'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>12</p>
+								<p>12 , 'Реклама и связи с общественностью',</p>
 							</div>
 							<div class="dropdown--container">
-								<p>13</p>
+								<p>13 'Журналистика',</p>
 							</div>
 							<div class="dropdown--container">
-								<p>14</p>
+								<p>14 'Медиакоммуникации',</p>
 							</div>
 							<div class="dropdown--container">
-								<p>15</p>
+								<p>15 'Психолого-педагогическое образование'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>16</p>
+								<p>16 , 'Дизайн',</p>
 							</div>
 							<div class="dropdown--container">
-								<p>17</p>
+								<p>17 'Имиджевый дизайн',</p>
 							</div>
 							<div class="dropdown--container">
-								<p>18</p>
+								<p>18 'История'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>19</p>
+								<p>19 , 'Обществознание'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>20</p>
+								<p>20 , 'Русский язык и литература'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>21</p>
+								<p>21 , 'Детская журналистика'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>22</p>
+								<p>22 , 'Английский язык'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>23</p>
+								<p>23 , 'Китайский язык'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>24</p>
+								<p>24 , 'Право',</p>
 							</div>
 							<div class="dropdown--container">
-								<p>25</p>
+								<p>25 'Экономика'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>26</p>
+								<p>26 ,' Педагогика и психология девиантного поведения'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>27</p>
+								<p>27 , 'Филология',</p>
 							</div>
 							<div class="dropdown--container">
-								<p>28</p>
+								<p>28 'Перевод и переводоведение',</p>
 							</div>
 							<div class="dropdown--container">
-								<p>29</p>
+								<p>29 'Русский язык как иностранный'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>30</p>
+								<p>30 , 'Философия'</p>
 							</div>
 							<div class="dropdown--container">
-								<p>31</p>
+								<p>31 , 'Изящные искусства',</p>
 							</div>
 							<div class="dropdown--container">
-								<p>32</p>
+								<p>32 'История искусств',</p>
 							</div>
 							<div class="dropdown--container">
-								<p>33</p>
+								<p>33 'Культурология',</p>
+							</div>
+							<div class="dropdown--container">
+								<p>34 'Музыкально-инструментальное искусство'</p>
+							</div>
+							<div class="dropdown--container">
+								<p>
+									35 , 'Декоративно-прикладное искусство и народные промыслы',
+								</p>
+							</div>
+							<div class="dropdown--container">
+								<p>36 'Искусство костюма и текстиля</p>
 							</div>
 						</div>
 					</div>
