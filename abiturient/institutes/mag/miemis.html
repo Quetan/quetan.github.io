@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- Styles -->
+		<!-- <link rel="stylesheet" href="https://abiturient.asu.ru/files/assets/abiturient/programs.css" /> -->
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/main.css" />
+		<link rel="stylesheet" href="../../css/programs.css" />
+		<!-- <script src="https://abiturient.asu.ru/files/assets/abiturient/programs.js" defer></script> -->
+		<script src="../js/programs.js" defer></script>
+		<style type="text/css">
+			.content {
+				overflow: hidden !important;
+			}
+			.content ul,
+			.content ol {
+				text-align: unset !important;
+			}
+
+			.content img {
+				margin-bottom: 0;
+				max-width: 100% !important;
+				max-height: 100% !important;
+				height: auto !important;
+			}
+			.programs--banner__heading {
+				margin-right: 1.5rem;
+				margin-top: 0;
+				margin-bottom: 0;
+				margin-left: 0;
+			}
+			.programs--banner__emblem {
+				margin: 0 0 0.8rem 0 !important;
+			}
+
+			.programs--banner__lottie {
+				width: 100% !important;
+			}
+			.template__main-container {
+				padding: 0 15px !important;
+				margin: 0 !important;
+				width: 100% !important;
+				max-width: unset !important;
+			}
+
+			.main-buttons-container {
+				display: none !important;
+			}
+
+			.sidebar {
+				display: none !important;
+			}
+
+			.breadcrumbs {
+				display: none !important;
+			}
+
+			.template__main-content .template__content-header {
+				display: none !important;
+			}
+			.programs--numbers__item span.negative {
+				margin: 0;
+				margin-bottom: 0.45rem;
+			}
+			.col {
+				padding: 0 !important;
+			}
+			.programs--profile-header {
+				padding-left: 45px;
+			}
+			.programs--profile-header::before {
+				background-image: url('https://abiturient.asu.ru/.themes/.abitur2021/img/main/footer/hashtag.svg') !important;
+				left: 0;
+				width: 40px;
+			}
+			.programs--profile-header.after::after {
+				background-image: url('https://www.asu.ru/files/images.215/programs/pattern-01.svg') !important;
+			}
+			.programs--numbers__banner {
+				margin-top: 2rem;
+				align-items: baseline;
+			}
+			.dropdown--header {
+				justify-content: flex-start;
+			}
+			.dropdown--button {
+				color: #000000;
+				margin-right: 0.5rem;
+			}
+			.dropdown--button:last-child {
+				margin-right: 0;
+			}
+			.programs--content {
+				padding-bottom: 0;
+			}
+
+			.programs--content p {
+				text-indent: 2rem;
+			}
+			@media screen and (max-width: 425.98px) {
+				.programs--banner__heading {
+					margin-right: 0;
+					margin-top: 0;
+					margin-bottom: 1.5rem;
+					margin-left: 0;
+				}
+				.dropdown--button {
+					margin-right: 0;
+				}
+				.programs--students__logo img {
+					height: 200px !important;
+					margin-bottom: 2rem !important;
+				}
+				.programs--banner__emblem {
+					margin: 0 auto !important;
+					margin-bottom: 1rem !important;
+				}
+				.programs--numbers__item span.negative {
+					margin-bottom: 0 !important;
+					margin-right: 0.5rem !important;
+				}
+				.dropdown--header {
+					justify-content: space-evenly;
+				}
+			}
+			.programs--banner__header {
+				margin-bottom: 1rem;
+				text-align: start;
+			}
+			.program--description {
+				font-size: 0.6rem;
+				margin: 0 !important;
+				margin-bottom: 25px !important;
+				line-height: 1.5;
+				letter-spacing: 0.04rem;
+				font-weight: 500;
+			}
+			.dropdown--content .dropdown--container .program--title {
+				font-size: 1.6rem;
+				text-align: center;
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 1.8rem;
+			}
+			.dropdown--content .dropdown--container h2,
+			.dropdown--content .dropdown--container h3,
+			.dropdown--content .dropdown--container h4,
+			.dropdown--content .dropdown--container h5,
+			.dropdown--content .dropdown--container h6 {
+				font-weight: 700;
+				color: var(--asu-dark);
+			}
+			.programs--uch-plan {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				flex-wrap: wrap;
+				margin-top: 1.5rem;
+				margin-bottom: 3rem;
+			}
+			.programs--uch-plan a {
+				padding: 0.45rem 1.5rem;
+				margin-bottom: 1rem;
+				text-align: center;
+				background-color: var(--asu-accent);
+				color: #fff;
+				font-weight: 500;
+				box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+			}
+			ul li {
+				margin-bottom: 0.55rem;
+			}
+			.programs--banner__header {
+				color: var(--asu-accent);
+			}
+			:root {
+				--asu-accent: #00499c;
+			}
+		</style>
+		<section class="section" style="padding-top: 0">
+			<div class="programs--banner">
+				<div class="programs--banner__heading">
+					<img
+						class="programs--banner__emblem"
+						style="width: 160px"
+						alt=""
+						src="https://www.asu.ru/files/images.215/programs/logos/miemis.png?_t=1641650361"
+					/>
+					<h1 class="programs--banner__header">
+						Международный институт экономики, менеджмента и информационных
+						систем
+					</h1>
+					<p class="program--description">
+						МИЭМИС – это крупнейший экономический институт в регионе,
+						осуществляющий фундаментальную подготовку ярких и грамотных
+						специалистов в области экономики, управления и информационных
+						систем. Наши выпускники - социально ответственные лидеры в бизнесе,
+						органах государственной власти, местных и международных сообществах,
+						способные решать сложные задачи и приводить к успеху компании любого
+						масштаба, обеспечивая достижение целей устойчивого развития
+						Алтайского края и регионов Большого Алтая.
+					</p>
+					<div class="programs--image__content">
+						<div class="programs--image__content_item">
+							<span
+								class="numbers"
+								id="jsNumber"
+								style="font-size: 3rem; padding: 0.6rem 1.5rem"
+								data-value="128"
+								>128</span
+							>
+							<span class="description">Бюджетные места</span>
+						</div>
+						<div class="programs--image__content_divider"></div>
+						<div class="programs--image__content_item">
+							<span>в 2021 - 2022 году</span>
+							<span class="numbers">50 000 – 118 380 ₽</span>
+							<span class="description">Стоимость</span>
+						</div>
+					</div>
+				</div>
+				<lottie-player
+					class="programs--banner__lottie"
+					src="https://assets4.lottiefiles.com/packages/lf20_bj9bcume.json"
+					background="transparent"
+					speed="1"
+					loop=""
+					autoplay=""
+				></lottie-player>
+			</div>
+			<section>
+				<div class="container">
+					<h2 class="programs--profile-header mb-10 after">
+						Программы обучения
+					</h2>
+					<div id="dropdown">
+						<div class="dropdown--header">
+							<button class="dropdown--button active">Экономика</button>
+							<button class="dropdown--button">Менеджмент</button>
+							<button class="dropdown--button">
+								Системный анализ и управление
+							</button>
+							<button class="dropdown--button">
+								Экономическая безопасность
+							</button>
+							<button class="dropdown--button">
+								Государственное и муниципальное управление
+							</button>
+							<button class="dropdown--button">Прикладная информатика</button>
+						</div>
+						<div class="dropdown--content container">
+							<!-- start -->
+							<div class="dropdown--container active">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 38.03.01 ЭКОНОМИКА, ПРОФИЛИ «ФИНАНСЫ И
+									БУХГАЛТЕРСКИЙ УЧЕТ», «ЭКОНОМИЧЕСКИЙ АНАЛИЗ И УПРАВЛЕНИЕ
+									РИСКАМИ», «ЭКОНОМИКА И ФИНАНСЫ»
+								</h3>
+								<p>
+									Направление подготовки «Экономика» - это синтез теоретических,
+									аналитических и практико-ориентированных дисциплин и подходов,
+									позволяющий студентам успешно работать в государственных,
+									научных и бизнес-структурах. Студенты-экономисты получают
+									качественную подготовку в области экономики, финансов,
+									математики, эконометрики, информационных технологий и
+									иностранных языков в сочетании с прикладными модулями по
+									проектированию, предпринимательству, онлайн-курсами от лучших
+									преподавателей на современных открытых образовательных
+									платформах. Диплом экономиста Алтайского государственного
+									университета дает конкурентное преимущество перед другими
+									выпускниками, свидетельство тому – востребованность
+									выпускников МИЭМИС на рынке труда и их карьерные успехи, что
+									подтверждается 90% трудоустройством выпускников по
+									специальности в течение первого года после выпуска и первым
+									местом в Алтайском крае по уровню зарплат выпускников в сфере
+									«Экономика и управление».
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_38_03_01_ekonomika_profili-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_v38_03_01_ekonomika_eif-1-2021_2021_27.04.2021.pdf"
+										>Заочная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно, 5 лет - заочно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>12</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>83</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">25 000 – 55 695 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Обществознание / История / Информатика и ИКТ</li>
+											<li>Математика</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">256</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Программа готовит студентов ставить, формулировать и
+											решать нестандартные задачи из реальной практики,
+											разработанные совместно с индустриальными партнерами и
+											экспертами рынка. Выпускник-экономист сможет проводить
+											сложную аналитику и строить финансовые прогнозы на основе
+											больших данных, определять условия эффективности
+											деятельности, вырабатывать управленческие решения по
+											привлечению и размещению финансовых ресурсов. А тесное
+											взаимодействие с индустриальными партнерами через
+											прохождение стажировок и практик позволяет студентам на
+											основе приобретенного опыта принимать экономические
+											решения на уровне отдельных субъектов и органов
+											муниципальной и государственной власти.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Программа направлена на подготовку профессиональных
+											руководителей и аналитиков для бизнеса, государственных
+											органов управления, исследовательских центров и
+											университетов. Как правило, выпускники занимают следующие
+											должности: финансист, аналитик, инвестиционный
+											консультант, финансовый аудитор, риск-менеджер, специалист
+											в системе управления современными предприятиями,
+											специалист органов управления экономикой муниципальных
+											образований, регионов и государства.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат экономических наук, доцент
+										кафедры финансов и кредита
+										<a href="https://www.asu.ru/search/persons/1038/"
+											>Деркач Наталья Олеговна</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852296539">+7 (3852) 296-539</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:n.o.derkach@gmail.com"
+												>n.o.derkach@gmail.com</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 38.03.02 МЕНЕДЖМЕНТ, ПРОФИЛИ «УПРАВЛЕНИЕ
+									БИЗНЕСОМ», «МАРКЕТИНГ И ЦИФРОВЫЕ КОММУНИКАЦИИ, HR-МЕНЕДЖМЕНТ»
+								</h3>
+								<p>
+									Программа ориентирована на подготовку высококвалифицированных
+									менеджеров, способных эффективно применять аналитические,
+									исследовательские и лидерские качества, инновационные методы и
+									уникальные знания при разработке и реализации управленческих
+									стратегий в контексте высокой конкуренции и быстро меняющейся
+									экономической среды. Три направления профилизации позволяют
+									студентам выбрать свою будущую карьерную траекторию:
+									развиваться в управлении и бизнес-планировании, разрабатывать
+									маркетинговые стратегии и использовать современные инструменты
+									цифрового маркетинга, заниматься корпоративным обучением,
+									подбором и управлением персоналом компании.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="http://miemis.asu.ru/wp-content/uploads/2021/07/38_03_02_Menedzhment_Profil-Upravlenie-biznesom.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>18</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>72</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">55 695 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Обществознание / История / Иностранный язык</li>
+											<li>Математика</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">250</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Независимо от выбранного профиля подготовки,
+											выпускники-менеджеры способны использовать цифровые
+											технологии для трансформации бизнес-процессов и
+											бизнес-моделей, управлять ресурсами организации, умеют
+											проводить исследования рынка и разрабатывать уникальные
+											торговые предложения, а также - выстраивать стратегии
+											управления компаниями. Профилизация позволяет углубить
+											теоретические и практические знания в специализированных
+											областях: разработка и управление контентом, работа с
+											медиа-инструментами и маркетинговая аналитика на основе
+											Big Data, подбор и обучение персонала,
+											бизнес-планирование, оценка результативности и оптимизация
+											ключевых показателей компании.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускник-менеджер – это гибкий и многопрофильный
+											специалист, главная задача которого – развитие компании,
+											которое он осуществляет через набор своих профильных
+											навыков. Выпускники успешно работают менеджерами по
+											развитию, бизнес-аналитиками, маркетологами и
+											интернет-маркетологами, SMM-менеджерами и
+											бизнес-тренерами, HR-менеджерами и специалистами кадровых
+											агентств.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководители программ:  управление бизнесом - <a href="https://www.asu.ru/search/persons/906/">Рудакова Оксана Юрьевна</a>,
+										 маркетинг и цифровые коммуникации - <a href="https://www.asu.ru/search/persons/1014/">Пяткова Оксана Николаевна</a>, 
+										 HR-менеджмент - <a href="https://www.asu.ru/search/persons/1017/">Ануфриева Ирина Юрьевна</a>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852296533">+7 (3852) 29-65-33</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:pyatkova@mc.asu.ru">pyatkova@mc.asu.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 27.03.03 СИСТЕМНЫЙ АНАЛИЗ И УПРАВЛЕНИЕ, ПРОФИЛЬ
+									«СИСТЕМНЫЙ АНАЛИЗ И УПРАВЛЕНИЕ ЭКОНОМИЧЕСКИМИ СИСТЕМАМИ»
+								</h3>
+								<p>
+									Образовательная программа «Системный анализ и управление
+									экономическими системами» направлена на подготовку
+									специалистов, занимающихся разработкой и внедрением методов
+									теории управления к задачам управления
+									социально-экономическими системами.
+								</p>
+								<p>
+									Объектами изучения программы являются экономические процессы и
+									системы: вопросы анализа, моделирования, оптимизации,
+									совершенствования механизмов принятия решений с целью
+									повышения эффективности их функционирования.
+								</p>
+								<p>
+									Выпускники программы разрабатывают алгоритмы,
+									программное обеспечение систем управления и механизмов
+									принятия решений в социальных и экономических системах,
+									используют новые информационные технологии в решении
+									профессиональных задач.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="http://miemis.asu.ru/wp-content/uploads/2021/07/27_03_03_Sistemnyj-analiz-i-upravlenie.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>13</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>1</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>7</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Физика / Информатика и ИКТ</li>
+											<li>Математика</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">208</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Системный аналитик – это специалист, способный
+											анализировать, моделировать, оптимизировать и
+											автоматизировать механизмы принятия решений в
+											экономических системах. Он призван «переводить» с языка
+											IT-разработки на язык заказчика, определять потребности
+											бизнеса и предлагать технологические решения. Выпускники
+											направления знают, как находить правильные решения с
+											учетом потребностей бизнеса и возможностей команды
+											разработки, понимают процессы и этапы жизненного цикла ПО
+											в разных методологиях, умеют читать и использовать языки
+											программирования как методы формализации различных
+											алгоритмов.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники направления подготовки «Системный анализ» могут
+											успешно работать системными аналитиками в организациях и
+											учреждениях различных форм собственности, федеральных и
+											региональных органах государственной власти, органах
+											местного самоуправления, руководителями разработки
+											программного обеспечения, специалистами по информационным
+											системам, программистами, backend и
+											frontend-разработчиками.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат экономических наук, доцент
+										кафедры цифровых технологий и бизнес-аналитики <a href="https://www.asu.ru/search/persons/1986/">Вдовкина
+										Елена Геннадьевна</a>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852296546">+7 (3852) 29-65-46</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:vdovkinaeg@mc.asu.ru"
+												>vdovkinaeg@mc.asu.ru</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 38.05.01 ЭКОНОМИЧЕСКАЯ БЕЗОПАСНОСТЬ, СПЕЦИАЛИЗАЦИЯ
+									«ЭКОНОМИКО-ПРАВОВОЕ ОБЕСПЕЧЕНИЕ ЭКОНОМИЧЕСКОЙ БЕЗОПАСНОСТИ»
+								</h3>
+								<p>
+									Программа «Экономическая безопасность» нацелена на подготовку
+									высококвалифицированных экономистов-аналитиков, обладающих
+									знаниями и компетенциями в области обеспечения экономической
+									безопасности, в соответствии с потребностями государства и
+									бизнеса для работы в управлениях экономической безопасности и
+									противодействия коррупции МВД России, управлениях
+									Росфинмониторинга (финансовая разведка), управлениях
+									Федерального казначейства, Счетной палаты, Федеральной
+									налоговой службы, финансовых, кредитных учреждениях,
+									коммерческих организациях.
+								</p>
+								<p>
+									Специалисты в области экономической безопасности обладают
+									комплексными знаниями в области экономики, права, раскрытия и
+									расследования экономических преступлений, оценки и управления
+									рисками, купирования угроз экономической безопасности на всех
+									уровнях.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_09_03_03_pivd-2-2021_2020_30.06.2020.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 5 лет очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>8</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>1</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>42</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">55 695 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Обществознание / История</li>
+											<li>Математика</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">222</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Подготовка специалистов по экономической безопасности
+											базируется на компетенциях аналитика высокого уровня в
+											экономике и юриспруденции. Выпускники владеют основами
+											экономического анализа, внутреннего контроля и аудита в
+											целях обеспечения экономической безопасности, знают
+											основные методики идентификации, анализа и оценки
+											экономических рисков, способны предотвращать и раскрывать
+											экономические преступления. В ходе теоретической и
+											практической подготовки совместно с индустриальными
+											партнерами студенты учатся анализировать массивы
+											экономической информации, разрабатывать стратегическую
+											интегрированную систему управления рисками, осуществлять
+											обеспечение и руководство аудиторской деятельностью.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Будущая профессия выпускников направления — специалист по
+											экономической безопасности: оперативный работник
+											управления экономической безопасности и противодействия
+											коррупции; ревизор, аудитор, судебно-экономический
+											эксперт, налоговый инспектор, специалист и руководитель
+											отделов и служб экономической безопасности, специалист и
+											руководитель службы внутреннего контроля, специалист и
+											руководитель экономических и аналитических служб и отделов
+											любых организаций и учреждений.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат экономических наук, доцент
+										кафедры экономической безопасности, учета, анализа и аудита
+										<a href="https://www.asu.ru/search/persons/920/"
+											>Семиколенова Марина Николаевна</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852296534">+7 (3852) 29-65-34</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:semikolenova@mc.asu.ru"
+												>semikolenova@mc.asu.ru</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 38.03.04 ГОСУДАРСТВЕННОЕ И МУНИЦИПАЛЬНОЕ
+									УПРАВЛЕНИЕ, ПРОФИЛЬ «СОВРЕМЕННАЯ СИСТЕМА ГОСУДАРСТВЕННОГО И
+									МУНИЦИПАЛЬНОГО УПРАВЛЕНИЯ»
+								</h3>
+								<p>
+									Бакалавры направления ГМУ получают подготовку в области
+									управления, государственных финансов, бюджетной системы,
+									проектного менеджмента и информационных технологий. Отдельный
+									юридический модуль в рамках образовательной программы
+									предполагает продвинутые знания в основных отраслях права.
+								</p>
+								<p>
+									Для обучающихся доступны стажировки и практики в органах
+									государственной власти с возможностью включения в кадровый
+									резерв. Также, помимо государственного сектора, студенты могут
+									построить траекторию развития в коммерческих организациях.
+								</p>
+								<p>
+									Выпускники уверенно занимают различные должности, в том числе
+									и руководящие, в государственных и муниципальных предприятиях
+									и учреждениях, некоммерческих и коммерческих организациях.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="http://miemis.asu.ru/wp-content/uploads/2021/07/38_03_04_Gosudarstvennoe-i-munitsipalnoe-upravlenie.pdf"
+										>Очная форма обучения</a
+									>
+									<a
+										href="http://miemis.asu.ru/wp-content/uploads/2021/07/38_03_04_Gosudarstvennoe-i-munitsipalnoe-upravlenie.pdf"
+										>Очно-заочная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно, 5 лет - очно-заочно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>12</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>63</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">55 695 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Русский язык</li>
+											<li>Обществознание</li>
+											<li>Математика / История</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">250</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники направления подготовки ГМУ получают комплексные
+											знания о системе менеджмента в государственных и
+											бизнес-структурах, и могут одинаково успешно применять
+											свои знания как в государственных, так и в коммерческих
+											структурах. В этом им помогает углубленная юридическая
+											подготовка, понимание государственного механизма и системы
+											государственного управления, глубокие знания в системе
+											гос. бюджетирования и финансов.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники бакалавриата «ГМУ», как правило, продолжают
+											свое обучение в магистратуре, совмещая с основным местом
+											работы. Они занимаются организационно-управленческой
+											деятельность в государственных и коммерческих структурах,
+											бюджетной и бизнес-аналитикой, организацией
+											государственных закупок, ведением городского хозяйства,
+											проектной деятельностью, организацией собственного
+											бизнеса. Местами трудоустройства выступают:
+										</p>
+										<ul>
+											<li>
+												органы государственной власти Российской Федерации,
+											</li>
+											<li>
+												органы государственной власти субъектов Российской
+												Федерации,
+											</li>
+											<li>органы местного самоуправления,</li>
+											<li>
+												государственные и муниципальные предприятия и
+												учреждения,
+											</li>
+											<li>институты гражданского общества,</li>
+											<li>общественные организации,</li>
+											<li>некоммерческие и коммерческие организации,</li>
+											<li>международные организации,</li>
+											<li>научные и образовательные организации.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – доктор экономических наук,
+										заведующий кафедрой региональной экономики и управления
+										<a href="https://www.asu.ru/search/persons/7/"
+											>Мищенко Виталий Викторович</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852296535">+7 (3852) 29-65-35</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:m.vitaly53@mail.ru">m.vitaly53@mail.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 09.03.03 ПРИКЛАДНАЯ ИНФОРМАТИКА, ПРОФИЛЬ
+									«УПРАВЛЕНИЕ IT-ПРОЕКТАМИ, ERP-СИСТЕМЫ И ПРИКЛАДНОЕ
+									ПРОГРАММИРОВАНИЕ»
+								</h3>
+								<p>
+									Программа «Прикладная информатика» нацелена на подготовку
+									специалистов в области бизнес-ориентированного IT: они смогут
+									автоматизировать бизнес-процессы и сократить издержки,
+									проектировать архитектуры баз данных и ERP-системы,
+									пользоваться языками программирования 1С, R, SQL, Python, C#
+									для решения прикладных бизнес-задач, разрабатывать авторские
+									конфигурации 1С, управлять командой разработчиков и продвигать
+									цифровые продукты. Профилизация позволяет выбрать, какой трек
+									более интересен: технический - разработка и кодинг, внедрение
+									и автоматизация ERP-систем управления компанией или
+									организационно-управленческий - управление командой разработки,
+									продвижение продуктов, основы разработки и языков
+									программирования, развитие бизнес-компетенций.
+								</p>
+								<span>
+									<b
+										>Программа рассчитана на развитие у бакалавров пяти ключевых
+										компетенций</b
+									>
+								</span>
+								<ul>
+									<li>Математические и инструментальные компетенции</li>
+									<li>Компетенции разработки алгоритмов и программирования</li>
+									<li>Проектные компетенции</li>
+									<li>Трек 1С: реализация профильных задач ERP</li>
+									<li>Экономические и бизнес - компетенции</li>
+								</ul>
+								<!-- <div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_09_03_03_pivd-2-2021_2020_30.06.2020.pdf"
+										>Очная форма обучения</a
+									>
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_z09_03_03_pivd-2-2021_2020_30.06.2020.pdf"
+										>Заочная форма обучения</a
+									>
+								</div> -->
+								<p><b>Срок обучения</b> — 4 года очно, 5 лет - заочно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>65</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>7</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>20</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Математика</li>
+											<li>Русский язык</li>
+											<li>Информатика и ИКТ / физика</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">180</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Обучение на направлении «Прикладная информатика» построено
+											на развитии ключевых навыков, востребованных в
+											IT-индустрии. Программа разрабатывалась совместно с
+											профильными 1С-специалистами и прошла федеральную
+											экспертизу. Выпускники-бакалавры смогут внедрять и
+											сопровождать ERP-системы, настраивать и поддерживать
+											продукты экосистемы 1С разных версий, создавать мобильные
+											приложения и маркетплейсы, управлять командами
+											разработчиков, заниматься WEB-дизайном, реализовывать
+											маркетинг цифровых продуктов.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Карьерная траектория выпускников довольно обширна: она
+											включает в себя как технический карьерный трек, так и
+											управленческий, предпринимательский. Развитие сферы IT
+											гарантирует высокую степень обеспеченности
+											высокооплачиваемыми рабочими местами, а профилизация на
+											основе самой востребованной на территории РФ ERP-системы
+											1С гарантирует выпускникам комфортное трудоустройство в
+											отрасли. Выпускники-бакалавры смогут работать:
+											1С-программистами, специалистами по информационным
+											системам, backend-разработчиками, frontend-разработчиками,
+											бизнес-аналитиками, специалистами по тестированию ПО,
+											аналитиками данных, техническими писателями,
+											WEB-дизайнерами.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат технических наук, доцент
+										кафедры цифровых технологий и бизнес-аналитики
+										<a href="https://www.asu.ru/search/persons/1000/"
+											>Стерлягов Сергей Петрович</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852296546">+7 (3852) 29-65-46</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:sterlyagov@mc.asu.ru"
+												>sterlyagov@mc.asu.ruru</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- video section -->
+			<section class="section video-section parallax-wrapper">
+				<div
+					class="container video-container d-flex justify-content-center align-items-center flex-column"
+				>
+					<div class="video-player_wrapper">
+						<div
+							class="youtube-player"
+							width="100%"
+							height="auto"
+							style="aspect-ratio: 16 / 9"
+							data-id="YhUqECZ_ZZM"
+						></div>
+					</div>
+				</div>
+			</section>
+			<!-- end video section -->
+			<section class="programs--students__section">
+				<div class="programs--students container">
+					<div class="programs--students__logo">
+						<img alt="" src="../../files/images.215/programs/3d.png" />
+					</div>
+					<div class="programs--students__content">
+						<h2>Меры поддержки для первокурсников</h2>
+						<a href="https://abiturient.asu.ru/bachelor/grants2021/"
+							>Подробнее</a
+						>
+					</div>
+				</div>
+			</section>
+			<section class="programs--contacts">
+				<div class="programs--form">
+					<h3>Оставить заявку</h3>
+					<form>
+						<div class="callModalFormRow">
+							<div class="callModalFormColumn">
+								<label for="name">Имя</label>
+								<input type="text" id="name" required="" name="name" />
+							</div>
+							<div class="callModalFormColumn">
+								<label for="secondName">Фамилия</label>
+								<input
+									type="text"
+									id="secondName"
+									required=""
+									name="secondName"
+								/>
+							</div>
+						</div>
+						<div class="callModalFormColumn">
+							<label for="tel">Номер телефона</label>
+							<input
+								type="tel"
+								value="+7"
+								pattern="^[7|8]{0,1}\d{10}$|(^\+7{1}\d{10}$)"
+								maxlength="12"
+								id="tel"
+								required=""
+								name="phoneNumber"
+							/>
+							<small>Пример: +71235641122</small>
+						</div>
+						<div class="callModalFormColumn">
+							<label for="question">Опишите ваш вопрос</label
+							><textarea
+								rows="10"
+								cols="25"
+								id="question"
+								name="question"
+								placeholder="Напишите интересующий Вас вопрос..."
+								required=""
+							></textarea>
+						</div>
+					</form>
+				</div>
+			</section>
+		</section>
+	</body>
+</html>

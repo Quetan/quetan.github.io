@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- Styles -->
+		<!-- <link rel="stylesheet" href="https://abiturient.asu.ru/files/assets/abiturient/programs.css" /> -->
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/main.css" />
+		<link rel="stylesheet" href="../../css/programs.css" />
+		<!-- <script src="https://abiturient.asu.ru/files/assets/abiturient/programs.js" defer></script> -->
+		<script src="../js/programs.js" defer></script>
+		<style type="text/css">
+			.content {
+				overflow: hidden !important;
+			}
+			.content ul,
+			.content ol {
+				text-align: unset !important;
+			}
+
+			.content img {
+				margin-bottom: 0;
+				max-width: 100% !important;
+				max-height: 100% !important;
+				height: auto !important;
+			}
+			.programs--banner__heading {
+				margin-right: 1.5rem;
+				margin-top: 0;
+				margin-bottom: 0;
+				margin-left: 0;
+			}
+			.programs--banner__emblem {
+				margin: 0 0 0.8rem 0 !important;
+			}
+
+			.programs--banner__lottie {
+				width: 100% !important;
+			}
+			.template__main-container {
+				padding: 0 15px !important;
+				margin: 0 !important;
+				width: 100% !important;
+				max-width: unset !important;
+			}
+
+			.main-buttons-container {
+				display: none !important;
+			}
+
+			.sidebar {
+				display: none !important;
+			}
+
+			.breadcrumbs {
+				display: none !important;
+			}
+
+			.template__main-content .template__content-header {
+				display: none !important;
+			}
+			.programs--numbers__item span.negative {
+				margin: 0;
+				margin-bottom: 0.45rem;
+			}
+			.col {
+				padding: 0 !important;
+			}
+			.programs--profile-header {
+				padding-left: 45px;
+			}
+			.programs--profile-header::before {
+				background-image: url('https://abiturient.asu.ru/.themes/.abitur2021/img/main/footer/hashtag.svg') !important;
+				left: 0;
+				width: 40px;
+			}
+			.programs--profile-header.after::after {
+				background-image: url('https://www.asu.ru/files/images.215/programs/pattern-01.svg') !important;
+			}
+			.programs--numbers__banner {
+				margin-top: 2rem;
+			}
+			.dropdown--header {
+				justify-content: flex-start;
+			}
+			.dropdown--button {
+				color: #000000;
+				margin-right: 0.5rem;
+			}
+			.dropdown--button:last-child {
+				margin-right: 0;
+			}
+			.programs--content {
+				padding-bottom: 0;
+			}
+
+			.programs--content p {
+				text-indent: 2rem;
+			}
+			@media screen and (max-width: 425.98px) {
+				.programs--banner__heading {
+					margin-right: 0;
+					margin-top: 0;
+					margin-bottom: 1.5rem;
+					margin-left: 0;
+				}
+				.dropdown--button {
+					margin-right: 0;
+				}
+				.programs--students__logo img {
+					height: 200px !important;
+					margin-bottom: 2rem !important;
+				}
+				.programs--banner__emblem {
+					margin: 0 auto !important;
+					margin-bottom: 1rem !important;
+				}
+				.programs--numbers__item span.negative {
+					margin-bottom: 0 !important;
+					margin-right: 0.5rem !important;
+				}
+				.dropdown--header {
+					justify-content: space-evenly;
+				}
+			}
+			.programs--banner__header {
+				margin-bottom: 1rem;
+			}
+			.program--description {
+				font-size: 0.6rem;
+				margin: 0 !important;
+				margin-bottom: 25px !important;
+				line-height: 1.5;
+				letter-spacing: 0.04rem;
+				font-weight: 500;
+			}
+			.dropdown--content .dropdown--container .program--title {
+				font-size: 1.6rem;
+				text-align: center;
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 1.8rem;
+			}
+			.dropdown--content .dropdown--container h2,
+			.dropdown--content .dropdown--container h3,
+			.dropdown--content .dropdown--container h4,
+			.dropdown--content .dropdown--container h5,
+			.dropdown--content .dropdown--container h6 {
+				font-weight: 700;
+				color: var(--asu-dark);
+			}
+			.programs--uch-plan {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				flex-wrap: wrap;
+				margin-top: 1.5rem;
+				margin-bottom: 3rem;
+			}
+			.programs--uch-plan a {
+				padding: 0.45rem 1.5rem;
+				margin-bottom: 1rem;
+				text-align: center;
+				background-color: var(--asu-accent);
+				color: #fff;
+				font-weight: 500;
+				box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+			}
+			ul li {
+				margin-bottom: 0.55rem;
+			}
+			.programs--banner__header {
+				color: var(--asu-accent);
+			}
+			:root {
+				--asu-accent: #9b100d;
+			}
+		</style>
+		<section class="section" style="padding-top: 0">
+			<div class="programs--banner">
+				<div class="programs--banner__heading">
+					<img
+						class="programs--banner__emblem"
+						alt=""
+						src="https://www.asu.ru/files/images.215/programs/logos/yi.png?_t=1641650362"
+					/>
+					<h1 class="programs--banner__header">Юридический институт</h1>
+					<p class="program--description">ЮИ - один из лидеров юридического образования Сибирского федерального округа, флагман образовательной, правовой и научной жизни региона. Более 50 лет готовит специалистов в области права, которые успешно осуществляют свою деятельность по всей России и далеко за ее пределами. Имеет собственную правовую клинику “Фемида” и “Центр правовой помощи”, уникальный преподавательский состав (более 8 докторов наук и 50 кандидатов наук), более 10 тысяч выпускников, успешно реализующих себя в профессии.</p>
+					<div class="programs--image__content">
+						<div class="programs--image__content_item">
+							<span
+								class="numbers"
+								id="jsNumber"
+								style="font-size: 3rem; padding: 0.6rem 1.5rem"
+								data-value="26"
+								>26</span
+							>
+							<span class="description">Бюджетные места</span>
+						</div>
+						<div class="programs--image__content_divider"></div>
+						<div class="programs--image__content_item">
+							<span>в 2021 - 2022 году</span>
+							<span class="numbers">118 380 ₽</span>
+							<span class="description">Стоимость</span>
+						</div>
+					</div>
+				</div>
+				<lottie-player
+					class="programs--banner__lottie"
+					src="https://assets3.lottiefiles.com/packages/lf20_pgjy0wn9.json"
+					background="transparent"
+					speed="1"
+					loop=""
+					autoplay=""
+				></lottie-player>
+			</div>
+			<section>
+				<div class="container">
+					<h2 class="programs--profile-header mb-10 after">
+						Программы обучения
+					</h2>
+					<div id="dropdown">
+						<div class="dropdown--header">
+							<button class="dropdown--button active">Юриспруденция</button>
+							<button class="dropdown--button">
+								Правовое обеспечение национальной безопасности</button
+							><button class="dropdown--button">
+								Судебная и прокурорская деятельность
+							</button>
+						</div>
+						<div class="dropdown--content container">
+							<!-- start -->
+							<div class="dropdown--container active">
+								<h3 class="program--title" style="text-transform: uppercase;">
+									НАПРАВЛЕНИЕ 40.03.01. ЮРИСПРУДЕНЦИЯ, профиль «Уголовно-правовой», «Гражданско-правовой», «Государственно-правовой» (бакалавриат)
+								</h3>
+								<p>Программа направлена на подготовку востребованных юристов, ориентированных на изучение основных дисциплин в сфере российского права. Обучение ориентировано на практику в области нормотворческой, правоохранительной, правоприменительной, экспертно-консультативной и педагогической деятельности, востребованной государством и обществом. Студенты с первых дней обучения получают знания и формируют навыки составления юридических документов, анализа правовой информации и действующего законодательства. Образовательная программа обеспечивает качественную подготовку конкурентоспособных профессионалов, способных понимать сущность и социальную значимость своей профессии, обладающих глубоким уважением к закону, ценностям правового государства, профессиональной этикой. </p>
+								<p>Студенты бакалавриата по направлению «Юриспруденция» могут влиять на формирование своей учебной программы, благодаря возможностям индивидуальных образовательных траекторий.</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_40_03_01_yurisprudentsiya-2-2021_2020_30.06.2020.pdf"
+										>Очная форма обучения</a
+									>
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_z40_03_01_yurisprudentsiya-2345-2021_sait_2020_30.06.2020.pdf"
+										>Заочная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно, 3 года заочно (только на базе высшего образования).</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>16</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>110</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Обществознание</li>
+											<li>История/ Иностранный язык</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">287</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>Сфера применения знаний, которые студент получит обширна и затрагивает практически все сферы общественной жизни. По завершению обучения способен принимать решения и совершать юридические действия в точном соответствии с законом. Способен применять нормативные правовые акты, реализовывать нормы материального и процессуального права в профессиональной деятельности. Готов к выполнению должностных обязанностей по обеспечению законности и правопорядка, безопасности личности, общества, государства. Научат владеть способностью давать квалифицированные юридические заключения и консультации в конкретных видах юридической деятельности. Студент сможет участвовать в разработке нормативно-правовых актов в соответствии с профилем своей профессиональной деятельности.</p>
+										<p>Избранный профиль подготовки не ограничит в трудоустройстве, но поможет лучше ориентироваться в любимой правовой сфере деятельности. </p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>Правовое сопровождение деятельности необходимо абсолютно любой организации. Нарушения прав человека, встречающиеся повсеместно, всегда обеспечат работой юриста. К организациям и учреждениям, в которых может осуществлять профессиональную деятельность выпускник по данному направлению относятся органы государственной власти и управления, судебные органы, правоохранительные органы, государственные органы надзора и контроля, а также коммерческие и некоммерческие организации, общественные организации. Выпускники имеют возможность продолжить обучение в магистратуре.</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат юридических наук, доцент кафедры уголовного процесса и криминалистики, заместитель директора ЮИ по заочному обучению 
+										<a href="https://www.asu.ru/search/persons/1125/"
+											>Петухов Евгений Николаевич</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852296532">+7 (3852)296-532</a>
+										</li>
+										<li class="mail-adress">
+											E-mail: <a href="mailto:petuhov@mail.ru">petuhov@mail.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									40.05.01 ПРАВОВОЕ ОБЕСПЕЧЕНИЕ НАЦИОНАЛЬНОЙ БЕЗОПАСНОСТИ, СПЕЦИАЛИЗАУИЯ «УГОЛОВНО-ПРАВОВАЯ»
+								</h3>
+								<p>Современная новая программа специалитет направлена на подготовку специалистов, подготовленных к разработке и реализации правовых норм, правовому обеспечению национальной безопасности и обеспечению законности и правопорядка. Данное перспективное направление сочетает в себе обучение юридическим дисциплинам и основам государственной безопасности. По завершению программы становятся полноценными специалистами в области применения уголовного закона и обеспечения государственной безопасности. Присеваемая квалификация, которая будет указана в дипломе - «юрист». </p>
+								<p>Специалисты, обучающиеся по данной программе могут осуществлять правоохранительную деятельность, защищать интересы личности, общества и государства, участвовать в обеспечении законности и правопорядка, проводить научные исследования, правовое обучение и воспитание, составлять юридические документы, представлять интересы в суде, юридически сопровождать бизнес.</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_40_05_01_pravovoe%20obespechenie%20natsbezopasnosti-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 5 лет очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>3</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>1</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>57</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Обществознание</li>
+											<li>История/ Иностранный язык</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">245</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>В преподавании используются лучшие современные образовательные методики, среди которых разные форматы обучения: судебные процессы, сократический метод, деловые игры, тренинги, квизы, а также сочетание индивидуальной и командной работы.</p>
+										<p>Специальный блок дисциплин - применение бланкетных норм уголовного права, квалификация должностных преступлений, квалификация преступлений в сфере компьютерной информации, сравнительное уголовное право, средства защиты личности в уголовном судопроизводстве, применение международного права в уголовном процессе, расследование преступлений совершенных несовершеннолетними, формы уголовного судопроизводства и иные позволяет выпускникам быть эффективными в борьбе с преступностью.</p>
+										<p>Практики студентов могут проходить в ведомствах, контролирующих безопасность работ в промышленности, энергетике, на транспорте, в сельском хозяйстве; органах, обеспечивающих безопасность средств связи и информации; в правоохранительных и судебных органах; ведомствах, оказывающих помощь судам (службе судебных приставов, органах и учреждениях юстиции и внутренних дел, прокуратуре).</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Практики студентов могут проходить в ведомствах, контролирующих безопасность работ в промышленности, энергетике, на транспорте, в сельском хозяйстве; органах, обеспечивающих безопасность средств связи и информации; в правоохранительных и судебных органах; ведомствах, оказывающих помощь судам (службе судебных приставов, органах и учреждениях юстиции и внутренних дел, прокуратуре), где в дальнейшем уже и остаются работать выпускники по завершению обучения в должности юрисконсульта, следователя, криминалиста, дознавателя, сотрудника полиции и т.д.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – – кандидат юридических наук, доцент кафедры теории и истории государства и права
+										<a href="https://www.asu.ru/search/persons/1092/"
+											>Васев Игорь Николаевич</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон:
+											<a href="tel:+ 73852296532">+ 7 (3852) 296-532</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:vasev1986@mail.ru">vasev1986@mail.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									40.05.04  СУДЕБНАЯ И ПРОКУРОРСКАЯ ДЕЯТЕЛЬНОСТЬ, СПЕЦИАЛИЗАЦИЯ «СУДЕБНАЯ ДЕЯТЕЛЬНОСТЬ»
+								</h3>
+								<p>Программа направлена на подготовку специалистов, подготовленных к разработке и реализации правовых норм, работе в суде и прокуратуре и обеспечению законности и правопорядка. Специальность предусматривает глубокую подготовку в области организации судебной деятельности и дает возможность успешного трудоустройства в судебной системе. Программа обеспечивает глубокую фундаментальную теоретическую подготовку во всех отраслях процессуального права. Умение обеспечить безопасность граждан, знание методов борьбы с правонарушениями — это лежит в основе обучения по программе судебная и прокурорская деятельность.</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_40_05_04_sudebnaya%20i%20prokurorskaya%20dyeyatelnost-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 5 лет очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>7</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>6</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>123</span> <small>Платных места</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Обществознание</li>
+											<li>История/ Иностранный язык</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">242</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>Специальность судебная и прокурорская деятельность разработана для обучения специалистов, умеющих разрабатывать и применять на практике нормативно-правовые акты. Здесь обучат, как правильно составить юридический документ, участвовать на суде, вести юридическую практику. Как защищать и представлять интересы своих клиентов в различных правоотношениях. </p>
+										<p>Обладая знаниями во всех основных сферах юриспруденции выпускники могут выбрать для себя и иные спектры деятельности и будут востребованы также в коммерческих структурах, государственных и правоохранительных органах, адвокатуре.</p>
+										<p>Преподаватели программы - научные сотрудники, судьи, прокурорские работники, адвокаты, нотариусы, юристы, работающие в государственном и частном секторах экономики, что является немаловажным при обучении.</p>
+										<p>Выпускники программы могут представлять интересы своих доверителей в судах всех уровней, в том числе в Европейском суде по правам человека.</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											По завершению обучения выпускники находят себя в правоохранительных и судебных органах, в ведомствах, контролирующих безопасность страны, в органах, обеспечивающих безопасность средств связи и информации, в ведомствах, оказывающих помощь судам (службе судебных приставов, органах и учреждениях юстиции и внутренних дел, прокуратуре).
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель
+										программы – кандидат юридических наук, доцент кафедры конституционного и международного права,
+										<a href="https://www.asu.ru/search/persons/1096/"
+											>Маньковский Иван Юрьевич</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон:
+											<a href="tel:+73852296532">+7 (3852) 296-532</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:man263@narod.ru">man263@narod.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="programs--students__section">
+				<div class="programs--students container">
+					<div class="programs--students__logo">
+						<img alt="" src="../../files/images.215/programs/3d.png" />
+					</div>
+					<div class="programs--students__content">
+						<h2>Меры поддержки для первокурсников</h2>
+						<a href="https://abiturient.asu.ru/bachelor/grants2021/">Подробнее</a>
+					</div>
+				</div>
+			</section>
+			<section class="programs--contacts">
+				<div class="programs--form">
+					<h3>Оставить заявку</h3>
+					<form>
+						<div class="callModalFormRow">
+							<div class="callModalFormColumn">
+								<label for="name">Имя</label>
+								<input type="text" id="name" required="" name="name" />
+							</div>
+							<div class="callModalFormColumn">
+								<label for="secondName">Фамилия</label>
+								<input
+									type="text"
+									id="secondName"
+									required=""
+									name="secondName"
+								/>
+							</div>
+						</div>
+						<div class="callModalFormColumn">
+							<label for="tel">Номер телефона</label>
+							<input
+								type="tel"
+								value="+7"
+								pattern="^[7|8]{0,1}\d{10}$|(^\+7{1}\d{10}$)"
+								maxlength="12"
+								id="tel"
+								required=""
+								name="phoneNumber"
+							/>
+							<small>Пример: +71235641122</small>
+						</div>
+						<div class="callModalFormColumn">
+							<label for="question">Опишите ваш вопрос</label
+							><textarea
+								rows="10"
+								cols="25"
+								id="question"
+								name="question"
+								placeholder="Напишите интересующий Вас вопрос..."
+								required=""
+							></textarea>
+						</div>
+					</form>
+				</div>
+			</section>
+		</section>
+	</body>
+</html>

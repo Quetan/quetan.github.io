@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- Styles -->
+		<!-- <link rel="stylesheet" href="https://abiturient.asu.ru/files/assets/abiturient/programs.css" /> -->
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/main.css" />
+		<link rel="stylesheet" href="../../css/programs.css" />
+		<!-- <script src="https://abiturient.asu.ru/files/assets/abiturient/programs.js" defer></script> -->
+		<script src="../js/programs.js" defer></script>
+		<style type="text/css">
+			.content {
+				overflow: hidden !important;
+			}
+			.content ul,
+			.content ol {
+				text-align: unset !important;
+			}
+
+			.content img {
+				margin-bottom: 0;
+				max-width: 100% !important;
+				max-height: 100% !important;
+				height: auto !important;
+			}
+			.programs--banner__heading {
+				margin-right: 1.5rem;
+				margin-top: 0;
+				margin-bottom: 0;
+				margin-left: 0;
+			}
+			.programs--banner__emblem {
+				margin: 0 0 0.8rem 0 !important;
+			}
+
+			.programs--banner__lottie {
+				width: 100% !important;
+			}
+			.template__main-container {
+				padding: 0 15px !important;
+				margin: 0 !important;
+				width: 100% !important;
+				max-width: unset !important;
+			}
+
+			.main-buttons-container {
+				display: none !important;
+			}
+
+			.sidebar {
+				display: none !important;
+			}
+
+			.breadcrumbs {
+				display: none !important;
+			}
+
+			.template__main-content .template__content-header {
+				display: none !important;
+			}
+			.programs--numbers__item span.negative {
+				margin: 0;
+				margin-bottom: 0.45rem;
+			}
+			.col {
+				padding: 0 !important;
+			}
+			.programs--profile-header {
+				padding-left: 45px;
+			}
+			.programs--profile-header::before {
+				background-image: url('https://abiturient.asu.ru/.themes/.abitur2021/img/main/footer/hashtag.svg') !important;
+				left: 0;
+				width: 40px;
+			}
+			.programs--profile-header.after::after {
+				background-image: url('https://www.asu.ru/files/images.215/programs/pattern-01.svg') !important;
+			}
+			.programs--numbers__banner {
+				margin-top: 2rem;
+			}
+			.dropdown--header {
+				justify-content: flex-start;
+			}
+			.dropdown--button {
+				color: #000000;
+				margin-right: 0.5rem;
+			}
+			.dropdown--button:last-child {
+				margin-right: 0;
+			}
+			.programs--content {
+				padding-bottom: 0;
+			}
+
+			.programs--content p {
+				text-indent: 2rem;
+			}
+			.programs--banner__header {
+				color: #255270;
+			}
+			.programs--banner__header {
+				margin-bottom: 1rem;
+				text-align: start;
+				font-size: 2.45rem;
+			}
+			.program--description {
+				font-size: 0.6rem;
+				margin: 0 !important;
+				margin-bottom: 25px !important;
+				line-height: 1.5;
+				letter-spacing: 0.04rem;
+				font-weight: 500;
+			}
+			@media screen and (max-width: 425.98px) {
+				.programs--banner__heading {
+					margin-right: 0;
+					margin-top: 0;
+					margin-bottom: 1.5rem;
+					margin-left: 0;
+				}
+				.dropdown--button {
+					margin-right: 0;
+				}
+				.programs--students__logo img {
+					height: 200px !important;
+					margin-bottom: 2rem !important;
+				}
+				.programs--banner__emblem {
+					margin: 0 auto !important;
+					margin-bottom: 1rem !important;
+				}
+				.programs--numbers__item span.negative {
+					margin-bottom: 0 !important;
+					margin-right: 0.5rem !important;
+				}
+				.dropdown--header {
+					justify-content: space-evenly;
+				}
+				.programs--banner__header {
+					text-align: center !important;
+					font-size: 1.6rem !important;
+				}
+			}
+			.dropdown--content .dropdown--container .program--title {
+				font-size: 1.6rem;
+				text-align: center;
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 1.8rem;
+			}
+			.dropdown--content .dropdown--container h2,
+			.dropdown--content .dropdown--container h3,
+			.dropdown--content .dropdown--container h4,
+			.dropdown--content .dropdown--container h5,
+			.dropdown--content .dropdown--container h6 {
+				font-weight: 700;
+				color: var(--asu-dark);
+			}
+			.programs--uch-plan {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				flex-wrap: wrap;
+				margin-top: 1.5rem;
+				margin-bottom: 3rem;
+			}
+			.programs--uch-plan a {
+				padding: 0.45rem 1.5rem;
+				margin-bottom: 1rem;
+				text-align: center;
+				background-color: var(--asu-accent);
+				color: #fff;
+				font-weight: 500;
+				box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+			}
+			ul li {
+				margin-bottom: 0.55rem;
+			}
+			:root {
+				--asu-accent: #f8b100;
+			}
+		</style>
+		<section class="section" style="padding-top: 0">
+			<div class="programs--banner">
+				<div class="programs--banner__heading">
+					<img
+						class="programs--banner__emblem"
+						alt=""
+						src="https://www.asu.ru/files/images.215/programs/logos/chemistry.png?_t=1641650362"
+					/>
+					<h1 class="programs--banner__header">
+						Институт химии и химико-фармацевтических технологий
+					</h1>
+					<p class="program--description">
+						ИХиХФТ – это более 500 студентов, опытный
+						профессорско-преподавательский состав, лаборатории, оснащённые
+						специализированным учебным и научным оборудованием, участие
+						студентов в грантах и фундаментальных научных исследованиях, более
+						10 образовательных программ, уникальные научные школы, позволяющие
+						студентам раскрыть свой научный и творческий потенциал, приобретая
+						уверенность в профессиональном и карьерном росте. Миссия института
+						заключается в подготовке специалистов в области химии, фармации,
+						биотехнологии, химической технологии и техносферной безопасности.
+						Выпускники института – профессионалы, способные решать задачи
+						научно-исследовательского и производственного характера, а также
+						занимать управленческие должности в организациях и на предприятиях в
+						реальном секторе экономики Алтайского края и регионов России.
+					</p>
+					<div class="programs--image__content">
+						<div class="programs--image__content_item">
+							<span
+								class="numbers"
+								id="jsNumber"
+								style="font-size: 3rem; padding: 0.6rem 1.5rem"
+								data-value="218"
+								>218</span
+							>
+							<span class="description">Бюджетные места</span>
+						</div>
+						<div class="programs--image__content_divider"></div>
+						<div class="programs--image__content_item">
+							<span>в 2021 - 2022 году</span>
+							<span class="numbers">47 970 - 118 380 ₽</span>
+							<span class="description">Стоимость</span>
+						</div>
+					</div>
+				</div>
+				<lottie-player
+					class="programs--banner__lottie"
+					src="https://assets2.lottiefiles.com/packages/lf20_fetzntkf.json"
+					background="transparent"
+					speed="1"
+					loop=""
+					autoplay=""
+				></lottie-player>
+			</div>
+			<section>
+				<div class="container">
+					<h2 class="programs--profile-header mb-10 after">
+						Программы обучения
+					</h2>
+					<div id="dropdown">
+						<div class="dropdown--header">
+							<button class="dropdown--button active">Химия</button>
+							<button class="dropdown--button">Химическая технология</button>
+							<button class="dropdown--button">Биотехнология</button>
+							<button class="dropdown--button">
+								Техносферная безопасность
+							</button>
+							<button class="dropdown--button">
+								Фундаментальная и прикладная химия
+							</button>
+							<button class="dropdown--button">Фармация</button>
+						</div>
+						<div class="dropdown--content container">
+							<!-- start -->
+							<div class="dropdown--container active">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 04.03.01 ХИМИЯ, «ТЕОРЕТИЧЕСКАЯ И ЭКСПЕРИМЕНТАЛЬНАЯ
+									ХИМИЯ»
+								</h3>
+								<p>
+									Программа направлена на подготовку профессионалов способных
+									работать и применять полученные знания в реальном секторе
+									экономики, в производстве различных видов продукции, а также
+									лабораториях химической (и смежных наук) направленности.
+								</p>
+								<p>
+									В период обучения студенты приобретают навыки планирования и
+									проведения эксперимента для решения как
+									научно-исследовательских, так и производственных задач, умения
+									получать новые вещества и материалы, знания и умения в области
+									контроля качества сырья и производимой продукции.
+								</p>
+								<p>
+									В ходе обучения по программе вы научитесь проводить безопасно
+									химический эксперимент, анализировать и интерпретировать
+									полученные данные.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_04_03_01_khimiya_tiekh-1-2021_2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>50</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>5</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Русский язык</li>
+											<li>Химия</li>
+											<li>Математика/ Биология/ Физика</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">144</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Проводить лабораторно-аналитическое сопровождение
+											производственного процесса и контроль качества продукции.
+										</p>
+										<p>
+											Планировать и проводить эксперимент при решении
+											исследовательских задач в области химии, а также смежных с
+											химией наук (например, биохимия, нанохимия, химическая
+											физика, биотехнология и т.п.), оформлять результаты
+											исследования.
+										</p>
+										<p>
+											Использовать цифровые технологии и методы исследования для
+											решения задач химической направленности.
+										</p>
+										<p>
+											Проводить сбор, обработку, анализ информации при решении
+											задач в сфере новых разработок, внедрения химической
+											продукции, контроля качества продукции.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники программы смогут реализовать себя в профессиях:
+											химик-исследователь, химик-эксперт, инженер-химик,
+											химик-аналитик, химик-технолог, специалист по нанохимии,
+											нанохимик и т.д. Бакалавры химики способны находит новые
+											применения различным веществам, получать новые виды
+											материалов, что позволяет им работать и быть
+											востребованными на химических, нефтеперерабатывающих,
+											фармацевтических предприятиях. Умение проводить
+											эксперимент в химической лаборатории и определять качество
+											продукта определяет успешное трудоустройство по профессиям
+											химик-аналитик или химик-эксперт в лаборатории на
+											различных предприятиях, в том числе биотехнологического
+											производства. Специалист этого направления также нужен в
+											сфере криминалистики.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат физико-математических
+										наук, доцент кафедры физической и неорганической химии
+										<a href="https://www.asu.ru/search/persons/1539/"
+											>Терентьева Юлия Владимировна</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+79132714662">+7-913-271-46-62</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:terentyeva@chem.asu.ru"
+												>terentyeva@chem.asu.ru</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 18.03.01 ХИМИЧЕСКАЯ ТЕХНОЛОГИЯ, ПРОФИЛЬ:
+									«ХИМИЧЕСКОЕ, ФАРМАЦЕВТИЧЕСКОЕ И КОСМЕТИЧЕСКОЕ ПРОИЗВОДСТВО»
+								</h3>
+								<p>
+									Программа направлена на подготовку выпускников для
+									фармацевтической, косметической и смежных отраслей
+									промышленности. Полученные знания в области наукоемких и
+									инновационных технологиях позволяют выпускнику иметь
+									уникальный набор компетенции и быть востребованным
+									специалистом на рынке труда.
+								</p>
+								<p>
+									Особое внимание уделяется подготовке выпускников в области
+									химической технологии биологически активных веществ,
+									фармацевтических препаратов, косметических средств и других
+									органических веществ. Программа подготовки учитывает все
+									последние изменения, происходящие в науке, культуре,
+									экономике, техники, технологиях и социальной сфере, что
+									способствует формированию специалиста высокого класса,
+									согласно современным требованиям к выпускнику, получившему
+									высшее образование в этой области наук.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_18_03_01_khimicheskaya%20tekhnologiya_sbav-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>25</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>3</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Русский язык</li>
+											<li>Математика</li>
+											<li>Химия/ Биология/ Физика</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">141</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Проводить научные исследования при разработке и
+											сопровождении контроля качества при производстве
+											фармацевтических препаратов, косметических средств и
+											биологически активных веществ.
+										</p>
+										<p>
+											Обеспечивать проведение технологического процесса
+											производства фармацевтических препаратов и косметических
+											средств, контролировать параметры технологического
+											процесса, свойств сырья и готовой продукции.
+										</p>
+										<p>
+											Оформлять результаты исследований и разработок в области
+											улучшений технологий производства биологически активных
+											веществ, фармацевтических препаратов и косметических
+											средств.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускник, освоивший программу, может работать в компаниях
+											по производству фармацевтических препаратов и
+											косметических средств в качестве инженера-технолога по
+											качеству, технолога производства, инженера. Работать в
+											лаборатории контроля качества и безопасности продукции на
+											предприятия по производству фармпрепаратов и косметических
+											средств. Быть научным сотрудником и принимать активное
+											участие при разработке новых косметических средств и
+											биологически активных веществ, участвуя на этапах
+											разработки состава, технологии производства и контроля
+											качества.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат химических наук, доцент
+										кафедры органической химии
+										<a href="https://www.asu.ru/search/persons/783/"
+											>Функ Татьяна Валерьевна</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852291189">+7 (3852) 291-189</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:tanafunk777@gmail.com"
+												>tanafunk777@gmail.com</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 19.03.01 БИОТЕХНОЛОГИЯ, ПРОФИЛЬ: «БИОТЕХНОЛОГИЯ
+									ПРОДУКТОВ НА ОСНОВЕ РАСТИТЕЛЬНОГО СЫРЬЯ»
+								</h3>
+								<p>
+									Программа направлена на подготовку специалиста в области
+									биотехнологии, одним из приоритетных научных направлений в
+									современности. Объектами профессиональной деятельности
+									выпускника, освоивших программу являются микроорганизмы,
+									клеточные культуры животных и растений, вирусы, ферменты,
+									биологически активные химические вещества, что определяет
+									уникальность программы и востребованность профессионалов в
+									этой области.
+								</p>
+								<p>
+									Студенты в процессе обучения приобретают знания и навыки
+									работы с оборудованием для исследования свойств
+									микроорганизмов, клеточных культур и получаемых с их помощью
+									веществ и установками для проведения биотехнологических
+									процессов.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/oop/OOP_19_03_01_biotekhnologiya_pbav-1-2021_2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>35</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>4</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Русский язык</li>
+											<li>Математика</li>
+											<li>Химия/ Биология/ Физика</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">179</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Обучаясь на данной программе вы сможете осуществлять
+											биотехнологический процесс в соответствии с регламентом,
+											использовать технические средства для измерения основных
+											параметров биотехнологических процессов, свойств сырья и
+											продукции, управлять биотехнологическими процессами,
+											планировать эксперимент, обработку и представления
+											полученных результатов, проектировать технологические
+											процессы с использованием автоматизированных систем
+											технологической подготовки производства.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Профессии, которые может выбрать выпускник: биотехнолог,
+											биоинженер, инженер-биотехнолог, инженер-технолог по
+											качеству, инженер-технолог пищевого производства.
+											Бакалавр-биотехнолог имеет возможность трудоустроиться на
+											биотехнологические предприятия, компании по производству
+											продуктов питания, фармацевтические компании и парфюмерные
+											производства, а также в научно-исследовательские институты
+											и лаборатории.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат биологических наук, доцент
+										кафедры органической химии
+										<a href="https://www.asu.ru/search/persons/2200/"
+											>Минаков Денис Викторович</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852291189">+7 (3852) 291-189</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:minakov@mc.asu.ru">minakov@mc.asu.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 20.03.01 ТЕХНОСФЕРНАЯ БЕЗОПАСНОСТЬ, ПРОФИЛЬ:
+									«БЕЗОПАСНОСТЬ ЖИЗНЕДЕЯТЕЛЬНОСТИ В ТЕХНОСФЕРЕ»
+								</h3>
+								<p>
+									Программа подготовки бакалавров направлена на подготовку
+									выпускников, профессиональная работа которых будет направлена
+									на решение задач по обеспечению безопасности человека в
+									современном мире, минимизации техногенного воздействия на
+									окружающую среду.
+								</p>
+								<p>
+									Деятельность специалистов в этой области будет связана с
+									вопросами формирования комфортной для жизни и деятельности
+									человека техносферы, сохранении жизни и здоровья человека за
+									счет использования современных технических средств, методов
+									контроля и прогнозирования.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_20_03_01_tekhnosfernaya%20bezopasnost_bzhvt-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_z20_03_01_tekhnosfernaya%20bezopasnost_bzhvt-1-2021_2021_27.04.2021.pdf"
+										>Заочная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно, 5 лет - заочно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>58</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>6</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>9</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">23 970 - 59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Русский язык</li>
+											<li>Математика</li>
+											<li>Химия/ Физика/ Информатика и ИКТ</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">153</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											В ходе обучения по данной программе вы научитесь
+											осуществлять надзор и контроль за состоянием условий труда
+											на рабочих местах, проводить консультационную работу на
+											соответствие требованиям экологической безопасности и
+											санитарно-эпидемиологического благополучия населения,
+											разрабатывать и проводить противопожарные мероприятия и
+											осуществлять контроль за состоянием систем и средств
+											противопожарной защиты, инструктировать персонал и
+											организовывать обучение по вопросам пожарной безопасности,
+											выбирать и использовать технические средства и методы
+											исследования для решения исследовательских задач,
+											направленных на повышение экологической безопасности,
+											созданию новых методов мониторинга;
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники, завершившие обучение по программе, смогут
+											осуществлять научно-исследовательскую, экспертную,
+											надзорную и инспекционно-аудиторскую и
+											организационно-управленческую деятельность в сферах охраны
+											труда. А также в рамках профессиональной деятельности
+											решать вопросы противопожарной профилактики, экологической
+											безопасности, обращения с отходами, защиты в чрезвычайных
+											ситуациях. Все эти задачи входят в круг должностных
+											обязанностей сотрудников по профессиям:
+										</p>
+										<ul>
+											<li>Инженер по охране труда;</li>
+											<li>Инженер по защите в чрезвычайных ситуациях;</li>
+											<li>Инженер по промышленной безопасности;</li>
+											<li>Инспектор по технике безопасности;</li>
+											<li>Спасатель.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат химических наук, доцент
+										кафедры техносферногй безопасности и аналитической химии
+										<a href="https://www.asu.ru/search/persons/560/"
+											>Щербакова Людмила Владимировна</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+79069407365">+7 (906) 940-73-65</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:scherbakova@chem.asu.ru"
+												>scherbakova@chem.asu.ru</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									СПЕЦИАЛЬНОСТЬ 04.05.01 ФУНДАМЕНТАЛЬНАЯ И ПРИКЛАДНАЯ ХИМИЯ,
+									СПЕЦИАЛИЗАЦИЯ «АНАЛИТИЧЕСКАЯ ХИМИЯ», «ОРГАНИЧЕСКАЯ ХИМИЯ»,
+									«ФИЗИЧЕСКАЯ ХИМИЯ И ТЕХНОЛОГИЯ МАТЕРИАЛОВ»
+								</h3>
+								<p>
+									Программа направлена на подготовку специалистов, способных
+									применять знания и умения в сфере опытно-конструкторских
+									разработок, внедрения химической продукции различного
+									назначения, в сфере сертификации, а также контроля качества и
+									безопасности сырья.
+								</p>
+								<p>
+									Освоение дает выпускнику навыки работы в любой лаборатории как
+									научно-исследовательской, так и лаборатории контроля качества
+									выпускаемой продукции, знания и умения безопасно проводить и
+									планировать химический эксперимент.
+								</p>
+								<p>
+									Программа включает в себя ряд ключевых дисциплин,
+									способствующих формированию специалиста с необходимым набором
+									профессиональных навыков, которые позволят решать проблемы,
+									требующие применения фундаментальных знаний в области химии
+									(химической теории, химического синтеза, экологии,
+									фармацевтической и медицинской химии, экспертизы).
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_04_05_01_fundamentalnaya%20i%20prikladnaya%20khimiya_profili-1-2021_2021_27.04.2021.pdf "
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 5 лет очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>47</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>5</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>3</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Русский язык</li>
+											<li>Химия</li>
+											<li>Математика/ Биология/ Физика</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">133</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Проводить химический эксперимент с использованием
+											современного оборудования в лабораториях научных центров,
+											институтов, предприятий химической, нефтехимической
+											фармацевтической, биотехнологической направленности,
+											проводить лабораторно-аналитическое сопровождение контроля
+											качества сырья, полуфабрикатов и готовой продукции,
+											осуществлять эксперимент и наблюдения при решении
+											исследовательских задач и оформлять результаты
+											исследования, планировать и осуществлять педагогическую
+											деятельность.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники программы смогут реализовать себя в профессиях:
+											химик, лаборант химического анализа, химик-технолог,
+											химик-органик, инженер-химик, химик-эколог, биотехнолог,
+											биохимик, химик-криминалист, преподаватель химии,
+											химик-косметолог, инженер и эксперт по качеству, учитель
+											химии и т.д.
+										</p>
+										<p>
+											Навыки и умения специалиста-химика востребованы в
+											химическом и косметическом производстве, нефтехимии,
+											пищевом производстве, текстильной промышленности на этапах
+											контроля качества и разработке новой продукции.
+											Химик-органик обладает навыками планирования и
+											осуществления многостадийных процессов синтеза веществ,
+											что позволят разрабатывать новые вещества и новые
+											технологии, повышая качество, безопасность и
+											востребованность продукции конкретного производителя.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат химический наук, доцент
+										кафедры органической химии
+										<a href="https://www.asu.ru/search/persons/788/"
+											>Ольга Александровна Шелюгина</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+79132259495">+7-913-225-94-95</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:marinacheprasova@yandex.ru"
+												>marinacheprasova@yandex.ru</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									СПЕЦИАЛЬНОСТЬ 33.05.01 ФАРМАЦИЯ, СПЕЦИАЛЬНОСТЬ «РАЗРАБОТКА
+									БИОФАРМПРЕПАРАТОВ»
+								</h3>
+								<p>
+									Программа ориентирована на обеспечение качественного,
+									доступного фармацевтического образования соответствующего
+									уровню ведущих отечественных и зарубежных вузов через развитие
+									инновационных практико-ориентированных образовательных
+									технологий, фундаментальных и прикладных научных исследований
+									в области фармацевтических наук, интегрированных в системы
+									образования и здравоохранения, практической фармации и
+									фармацевтической промышленности, направленного на улучшение
+									здоровья и повышение качества жизни населения.
+								</p>
+								<p>
+									Уникальная программа “Фармация”, позволяющая работать в
+									сферах, связанных с производством, отпуском или исследованием
+									качества лекарственных препаратов, лабораториях научных
+									центров, ведущих исследования в области фармации, биохимии,
+									химии лекарственных веществ, фармацевтических производствах
+									лекарственных средств синтетического и природного
+									происхождения. Данная программа позволяет готовить
+									высококвалифицированные, востребованные кадры, которые
+									являются перспективными и высокооплачиваемыми.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_33_05_01_farmatsiya_fb-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 5 лет очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>3</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>1</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>17</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Русский язык</li>
+											<li>Химия</li>
+											<li>Биология/ Математика</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">133</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											В ходе обучения по программе вы научитесь осуществлять
+											деятельность по хранению, отпуску и реализации
+											лекарственных препаратов и других товаров аптечного
+											ассортимента через фармацевтические и медицинские
+											организации, осуществлять фармацевтическое информирование
+											и консультирование юридических и физических лиц при
+											отпуске и реализации лекарственных препаратов для
+											медицинского применения и других товаров аптечного
+											ассортимента, изготавливать лекарственные средства и
+											биофармпрепараты для медицинского применения, осуществлять
+											контроль качества, эффективности и безопасности
+											лекарственных средств и биофармпрепаратов, организовывать
+											ресурсное обеспечение фармацевтических организаций
+											лекарственными средствами, осуществлять
+											научно-исследовательскую деятельность в сфере
+											фармацевтической разработки и доклинических исследований
+											новых биофармпрепаратов.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники, завершившие обучение по программе, смогут
+											осуществлять фармацевтическую, экспертно-аналитическую,
+											организационно управленческую и научно-исследовательскую
+											деятельность в сфере обращения лекарственных средств и
+											других товаров аптечного ассортимента.
+										</p>
+										<p>
+											Специалисты работают при фармацевтических предприятиях,
+											занимаясь оптовыми поставками препаратов и выполнением
+											маркетинговых исследований. Они востребованы в
+											исследовательских центрах, а также в аптеках, где
+											реализовывают товар и оказывают консультационную помощь.
+											Выпускники занимают должности провизоров, лаборантов,
+											химиков, фармацевтов.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – доцент, кандидат химических наук,
+										доцент кафедры органической химии
+										<a href="https://www.asu.ru/search/persons/791/"
+											>Микушина Ирина Владимировна</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852298150">+7 (3852) 298-150</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:mikuschinai@mail.ru"
+												>mikuschinai@mail.ru</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- video section -->
+			<section class="section video-section parallax-wrapper">
+				<div
+					class="container video-container d-flex justify-content-center align-items-center flex-column"
+				>
+					<div class="video-player_wrapper">
+						<div
+							class="youtube-player"
+							width="100%"
+							height="auto"
+							style="aspect-ratio: 16 / 9"
+							data-id="XlHjc55L-Sg"
+						></div>
+					</div>
+				</div>
+			</section>
+			<!-- end video section -->
+
+			<section class="programs--students__section">
+				<div class="programs--students container">
+					<div class="programs--students__logo">
+						<img alt="" src="../../files/images.215/programs/3d.png" />
+					</div>
+					<div class="programs--students__content">
+						<h2>Меры поддержки для первокурсников</h2>
+						<a href="https://abiturient.asu.ru/bachelor/grants2021/"
+							>Подробнее</a
+						>
+					</div>
+				</div>
+			</section>
+			<section class="programs--contacts">
+				<div class="programs--form">
+					<h3>Оставить заявку</h3>
+					<form>
+						<div class="callModalFormRow">
+							<div class="callModalFormColumn">
+								<label for="name">Имя</label>
+								<input type="text" id="name" required="" name="name" />
+							</div>
+							<div class="callModalFormColumn">
+								<label for="secondName">Фамилия</label>
+								<input
+									type="text"
+									id="secondName"
+									required=""
+									name="secondName"
+								/>
+							</div>
+						</div>
+						<div class="callModalFormColumn">
+							<label for="tel">Номер телефона</label>
+							<input
+								type="tel"
+								value="+7"
+								pattern="^[7|8]{0,1}\d{10}$|(^\+7{1}\d{10}$)"
+								maxlength="12"
+								id="tel"
+								required=""
+								name="phoneNumber"
+							/>
+							<small>Пример: +71235641122</small>
+						</div>
+						<div class="callModalFormColumn">
+							<label for="question">Опишите ваш вопрос</label
+							><textarea
+								rows="10"
+								cols="25"
+								id="question"
+								name="question"
+								placeholder="Напишите интересующий Вас вопрос..."
+								required=""
+							></textarea>
+						</div>
+					</form>
+				</div>
+			</section>
+		</section>
+	</body>
+</html>

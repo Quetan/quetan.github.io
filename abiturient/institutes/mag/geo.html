@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- Styles -->
+		<!-- <link rel="stylesheet" href="https://abiturient.asu.ru/files/assets/abiturient/programs.css" /> -->
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/main.css" />
+		<link rel="stylesheet" href="../../css/programs.css" />
+		<!-- <script src="https://abiturient.asu.ru/files/assets/abiturient/programs.js" defer></script> -->
+		<script src="../js/programs.js" defer></script>
+		<style type="text/css">
+			.content {
+				overflow: hidden !important;
+			}
+			.content ul,
+			.content ol {
+				text-align: unset !important;
+			}
+
+			.content img {
+				margin-bottom: 0;
+				max-width: 100% !important;
+				max-height: 100% !important;
+				height: auto !important;
+			}
+			.programs--banner__heading {
+				margin-right: 1.5rem;
+				margin-top: 0;
+				margin-bottom: 0;
+				margin-left: 0;
+			}
+			.programs--banner__emblem {
+				margin: 0 0 0.8rem 0 !important;
+			}
+
+			.programs--banner__lottie {
+				width: 100% !important;
+			}
+			.template__main-container {
+				padding: 0 15px !important;
+				margin: 0 !important;
+				width: 100% !important;
+				max-width: unset !important;
+			}
+
+			.main-buttons-container {
+				display: none !important;
+			}
+
+			.sidebar {
+				display: none !important;
+			}
+
+			.breadcrumbs {
+				display: none !important;
+			}
+
+			.template__main-content .template__content-header {
+				display: none !important;
+			}
+			.programs--numbers__item span.negative {
+				margin: 0;
+				margin-bottom: 0.45rem;
+			}
+			.col {
+				padding: 0 !important;
+			}
+			.programs--profile-header {
+				padding-left: 45px;
+			}
+			.programs--profile-header::before {
+				background-image: url('https://abiturient.asu.ru/.themes/.abitur2021/img/main/footer/hashtag.svg') !important;
+				left: 0;
+				width: 40px;
+			}
+			.programs--profile-header.after::after {
+				background-image: url('https://www.asu.ru/files/images.215/programs/pattern-01.svg') !important;
+			}
+			.programs--numbers__banner {
+				margin-top: 2rem;
+			}
+			.dropdown--header {
+				justify-content: flex-start;
+			}
+			.dropdown--button {
+				color: #000000;
+				margin-right: 0.5rem;
+			}
+			.dropdown--button:last-child {
+				margin-right: 0;
+			}
+			.programs--content {
+				padding-bottom: 0;
+			}
+
+			.programs--content p {
+				text-indent: 2rem;
+			}
+			@media screen and (max-width: 425.98px) {
+				.programs--banner__heading {
+					margin-right: 0;
+					margin-top: 0;
+					margin-bottom: 1.5rem;
+					margin-left: 0;
+				}
+				.dropdown--button {
+					margin-right: 0;
+				}
+				.programs--students__logo img {
+					height: 200px !important;
+					margin-bottom: 2rem !important;
+				}
+				.programs--banner__emblem {
+					margin: 0 auto !important;
+					margin-bottom: 1rem !important;
+				}
+				.programs--numbers__item span.negative {
+					margin-bottom: 0 !important;
+					margin-right: 0.5rem !important;
+				}
+				.dropdown--header {
+					justify-content: space-evenly;
+				}
+			}
+			.programs--banner__header {
+				margin-bottom: 1rem;
+			}
+			.program--description {
+				font-size: 0.6rem;
+				margin: 0 !important;
+				margin-bottom: 25px !important;
+				line-height: 1.5;
+				letter-spacing: 0.04rem;
+				font-weight: 500;
+			}
+			.dropdown--content .dropdown--container .program--title {
+				font-size: 1.6rem;
+				text-align: center;
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 1.8rem;
+			}
+			.dropdown--content .dropdown--container h2,
+			.dropdown--content .dropdown--container h3,
+			.dropdown--content .dropdown--container h4,
+			.dropdown--content .dropdown--container h5,
+			.dropdown--content .dropdown--container h6 {
+				font-weight: 700;
+				color: var(--asu-dark);
+			}
+			.programs--uch-plan {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				flex-wrap: wrap;
+				margin-top: 1.5rem;
+				margin-bottom: 3rem;
+			}
+			.programs--uch-plan a {
+				padding: 0.45rem 1.5rem;
+				margin-bottom: 1rem;
+				text-align: center;
+				background-color: var(--asu-accent);
+				color: #fff;
+				font-weight: 500;
+				box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+			}
+			ul li {
+				margin-bottom: 0.55rem;
+			}
+			.programs--banner__header {
+				color: var(--asu-accent);
+			}
+			:root {
+				--asu-accent: #02b7b0;
+			}
+		</style>
+		<section class="section" style="padding-top: 0">
+			<div class="programs--banner">
+				<div class="programs--banner__heading">
+					<img
+						class="programs--banner__emblem"
+						alt=""
+						src="https://www.asu.ru/files/images.215/programs/logos/geo.png?_t=1641650359"
+					/>
+					<h1 class="programs--banner__header">Институт географии</h1>
+					<p class="program--description">
+						ИНГЕО – это более 1300 студентов, 60 преподавателей, в том числе
+						преподаватели-практики из ведущих организаций Алтайского края, 4
+						кафедры, лаборатория минералогии, центр-ГИС, 13 направлений
+						подготовки, 30 инновационных образовательных программ, новые и
+						перспективные направления научных исследований, проектная работа и
+						международное сотрудничество. Миссия института – подготовка
+						специалистов в сфере наук о Земле, сервиса, туризма, гостеприимства,
+						ландшафтного проектирования, а также землеустройства и кадастра,
+						способных отвечать на глобальные вызовы современности,
+						способствовать устойчивому развитию природы и общества. Выпускники
+						института работают в системе охраны природы и природопользования,
+						высших учебных заведениях и научно-исследовательских институтах,
+						проектных организациях, в сфере рекреационных услуг и туристического
+						бизнеса, а также в школах города и края.
+					</p>
+					<div class="programs--image__content">
+						<div class="programs--image__content_item">
+							<span
+								class="numbers"
+								id="jsNumber"
+								style="font-size: 3rem; padding: 0.6rem 1.5rem"
+								data-value="284"
+								>284</span
+							>
+							<span class="description">Бюджетные места</span>
+						</div>
+						<div class="programs--image__content_divider"></div>
+						<div class="programs--image__content_item">
+							<span>в 2021 - 2022 году</span>
+							<span class="numbers"> 50 000 - 143 140 ₽</span>
+							<span class="description">Стоимость</span>
+						</div>
+					</div>
+				</div>
+				<lottie-player
+					class="programs--banner__lottie"
+					src="https://assets4.lottiefiles.com/packages/lf20_rso6ymgb.json"
+					background="transparent"
+					speed="1"
+					loop=""
+					autoplay=""
+				></lottie-player>
+			</div>
+			<section>
+				<div class="container">
+					<h2 class="programs--profile-header mb-10 after">
+						Программы обучения
+					</h2>
+					<div id="dropdown">
+						<div class="dropdown--header">
+							<button class="dropdown--button active">
+								Физическая география, геоинформатика и география туризма
+							</button>
+							<button class="dropdown--button">
+								Аналитика и цифровые технологии в общественной географии
+							</button>
+							<button class="dropdown--button">
+								Экология и природопользование
+							</button>
+							<button class="dropdown--button">
+								Землеустройство и кадастры
+							</button>
+							<button class="dropdown--button">Ландшафтная архитектура</button>
+							<button class="dropdown--button">Сервис</button>
+							<button class="dropdown--button">Туризм</button>
+							<button class="dropdown--button">Гостиничное дело</button>
+						</div>
+						<div class="dropdown--content container">
+							<!-- start -->
+							<div class="dropdown--container active">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 05.03.02 ГЕОГРАФИЯ, ПРОФИЛЬ «ФИЗИЧЕСКАЯ ГЕОГРАФИЯ,
+									ГЕОИНФОРМАТИКА И ГЕОГРАФИЯ ТУРИЗМА»
+								</h3>
+								<p><u>Актуальность</u> профиля обусловлена сочетанием фундаментальной подготовки в области изучения закономерностей функционирования природной среды с  использованием современных цифровых методов изучения, а также прикладного использования знаний в сфере развития туризма и рекреации – наиболее динамичных межотраслевых комплексов, оказывающих огромное влияние на ключевые секторы экономики.</p>
+								<p><u>Уникальность</u> программы состоит в подготовке специалистов, владеющих: знаниями в области цифровых и геоинформационных технологий, методами фундаментальных и практико-ориентированных географических исследований, современными технологиями и инструментами для территориального развития, а также навыками проектирования туристско-рекреационных систем, разработки туристских и экскурсионных маршрутов; получению приоритетных квалификаций, необходимых рынку и обществу.</p>
+								<p><u>Востребованность</u> специалистов в сферах: научно-исследовательской деятельности, информационно-коммуникационного обеспечения, природоохранных,  геодезических,  геологических, туристско-рекреационных и курортно-оздоровительных организациях, учреждениях индустрии туризма, гостеприимства, досуга и рекреации.</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_05_03_02_gyeografiya_fg-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>24</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>4</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Математика/Биология</li>
+											<li>География</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">160</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники смогут применить в практической деятельности знания по географии, геоморфологии, геологии, климатологии, метеорологии, гидрологии, биогеографии, географии почв, ландшафтоведению, геоинформационным технологиям, обработке данных дистанционного зондирования, включая беспилотные летательные аппараты. При получении знаний по рекреационной географии и туризму: научатся анализировать туристско-рекреационные потребности отдыхающих, оценивать рекреационную и туристскую активность населения в зависимости от региональной специфики, проводить оценку рекреационных и туристских ресурсов, выявлять потребности и предлагать перспективные виды рекреационной и туристской деятельности. Значительную часть обучения занимают современные цифровые методы и ГИС-технологии проектирования баз геоданных и выполнения на их основе анализа, моделирования и прогнозирования развития геосистем.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники программы успешно реализуют себя в административно-управленческих органах субъектов России; природных, экологических, производственных, социальных, рекреационных и общественных организациях; в особо охраняемых природных территориях; в средних общеобразовательных учебных заведениях (лицеях, гимназиях, общеобразовательных школах, колледжах и т.д.); выступают в качестве экспертов и консультантов по различным областям географии, сферы туризма и санаторно-курортного деятельности, геоинформационных систем и дистанционного зондирования Земли.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат географических наук,
+										доцент кафедры физической географии и геоинформационных
+										систем, заместитель директора по учебной работе
+										<a href="https://www.asu.ru/search/persons/660/"
+											>Юлия Вячеславовна Козырева</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852291275">+7 (3852) 29-12-75</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:kozyreva@mc.asu.ru">kozyreva@mc.asu.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 05.03.02 ГЕОГРАФИЯ, ПРОФИЛЬ «АНАЛИТИКА,
+									ПРОСТРАНСТВЕННОЕ РАЗВИТИЕ И ЦИФРОВЫЕ ТЕХНОЛОГИИ В ОБЩЕСТВЕННОЙ
+									ГЕОГРАФИИ»
+								</h3>
+								<p>
+									Основной целью программы является получение образования,
+									позволяющего выпускнику успешно работать в сфере
+									административно-управленческой, консалтингово-аудиторской
+									деятельности, касающихся сферы пространственных аспектов
+									развития производственных, финансовых и общественных
+									процессов, образования всех уровней, научно-исследовательских
+									организаций, предприятий транспортно-логистической
+									специализации, отечественных и международных многоотраслевых
+									холдингов и концернов, предприятий различных секторов, имеющих
+									широкую пространственную сеть филиалов и партнеров, а также в
+									сфере экспертизы планов, концепций и стратегий
+									социально-экономического развития территорий различного
+									уровня, способствующих его востребованности на рынке труда.
+								</p>
+								<p>
+									Уникальность программы заключается в преемственности подходов
+									и традиций в экономической географии, в возможности получения
+									знаний, умений и навыков работы в научных учреждения, органах
+									власти, проектно-изыскательных организациях, в фирмах и
+									компаниях, занимающихся цифровизацией экономики и
+									информационным обеспечением решаемых задач.
+								</p>
+								<p>
+									Преимуществом образовательной программы является то, что она
+									реализуется на основе взаимодействия с представителями сферы
+									профессиональной деятельности, что закреплено договорами о
+									сотрудничестве с организациями, заинтересованными в подготовке
+									специалистов по соответствующему профилю.
+								</p>
+								<p>
+									Профиль нацелен на подготовку кадров для реализации
+									национальной программы «Цифровая экономика Российской
+									Федерации».
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_05_03_02_gyeografiya_analitika-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>24</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>4</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Математика/Биология</li>
+											<li>География</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">149</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											По рамках изучения программы осуществляется командное
+											выполнение проектов полного жизненного цикла. Особенностью
+											и преимуществом образовательной программы является то, что
+											она реализуется с привлечением к образовательному процессу
+											географов с разной специализацией в том числе
+											физикогеографической. Таким образом, наряду с дисциплинами
+											и модулями профессионального цикла (модуль «Общественная
+											география и пространственные решения», модуль
+											«Геоинформационные технологии и пространственная
+											аналитика», модуль «Пространственный анализ и
+											моделирование для поддержки принятия решений» обучающиеся
+											получают комплексное представление о природной среде.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Основная профессиональная образовательная программа
+											призвана обеспечить подготовку кадров для обеспечения
+											потребностей экономики регионов РФ в устойчивом и
+											эффективном развитии на основе оценки геодемографической
+											ситуации и уровня и качества жизни населения, анализе
+											природно-ресурсного потенциала, а также на основе
+											геоинформационно-картографического обеспечения с
+											использованием цифровых технологий, аналитических методов
+											и составления и использования баз данных. Благодаря
+											усилению информационного и экономико-аналитического блоков
+											дисциплин и соответственно компетенций выпускники
+											программы смогут получить все преимущества, которые дает
+											возможность новая экономическая география и расширить круг
+											организаций и работ, где все больше востребованы новые
+											навыки и умения.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат географических наук,
+										доцент кафедры экономической географии и картографии,
+										<a href="https://www.asu.ru/search/persons/314/"
+											>Александр Викторович Кротов</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852291280">+7 (3852) 29-12-80</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:krotov_av@mail.ru">krotov_av@mail.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 05.03.06 ЭКОЛОГИЯ И ПРИРОДОПОЛЬЗОВАНИЕ, ПРОФИЛЬ
+									«ПРИРОДОПОЛЬЗОВАНИЕ», «КОМПЛЕКСНОЕ ИСПОЛЬЗОВАНИЕ И ОХРАНА
+									ВОДНЫХ РЕСУРСОВ»
+								</h3>
+								<p>
+									Особенностью программы является подготовка специалистов
+									экологов, осуществляющих деятельность, связанную с
+									природопользованием и охраной окружающей среды.
+								</p>
+								<p>
+									Практические занятия знакомят студентов с методами
+									экологических оценок, подходами к контролю окружающей среды,
+									работой по организации охраняемых природных территорий и др.
+									Важный момент – общение студентов с ведущими специалистами,
+									мастер-классы, участие во всероссийских и международных
+									профессиональных конкурсах, общение с потенциальными
+									работодателями формируют у будущих специалистов
+									профессиональные компетенции. Производственные практики
+									знакомят студентов с деятельностью экологов в
+									исследовательских организациях, на предприятиях, в проектных и
+									консалтинговых фирмах, а также в органах государственной
+									власти.
+								</p>
+								<p>
+									Преимуществом программы является возможность построения
+									индивидуальной траектории обучения.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_05_03_06_ekologiya%20i%20prirodopolzovanie_profili-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>46</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>5</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Математика/Биология</li>
+											<li>География</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">151</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Образовательная программа составлена таким образом, что
+											включает управленческие, экономические, технические и
+											экологические дисциплины, что делает выпускников
+											уникальными на рынке труда. Программа научит осуществлять
+											работы по обработке и анализу научно-технической
+											информации и результатов исследования. Осуществлять
+											экспертно-аналитическую деятельность в области
+											водопользования, водного хозяйства, проектирования и
+											управления водохозяйственными системами. Проводить научные
+											исследования и опытно-конструкторские разработки в области
+											экологии, рационального природопользования и охраны
+											окружающей среды.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Актуальная образовательная программа позволяет готовить не
+											просто специалистов в сфере экологии и природопользования.
+											Мы готовим специалистов будущего, ориентируясь, в том
+											числе, на Атлас профессий будущего «Сколково»: экоаудитор,
+											экоурбанист, экоаналитик - вот те профессии, которые будут
+											востребованы уже завтра.
+										</p>
+										<p>
+											Наши выпускники работают на различных предприятиях,
+											связанных природопользованием или влияющих на состояние
+											окружающей среды, разных форм собственности: в
+											специализированных государственных и коммерческих
+											лабораториях, в структурах органов исполнительной власти.
+											Есть потребность в наших выпускниках и в некоммерческих
+											природоохранных организациях.
+										</p>
+										<p>
+											Уникальная управленческо-экономическая направленность
+											образовательной программы позволяет нашим выпускникам
+											уверенно смотреть в будущее, устраиваться на работу и
+											подниматься по карьерной лестнице.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат географических наук,
+										доцент кафедры природопользование и геоэкология,
+										<a href="https://www.asu.ru/search/persons/683/"
+											>Ларина Валерьевна Швецова</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852291279">+7 (3852) 29-12-79</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:shvetsova@mc.asu.ru"
+												>shvetsova@mc.asu.ru</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 21.03.02 ЗЕМЛЕУСТРОЙСТВО И КАДАСТРЫ, ПРОФИЛЬ
+									«ОЦЕНКА ЗЕМЛИ И УПРАВЛЕНИЕ ОБЪЕКТАМИ НЕДВИЖИМОСТИ»
+								</h3>
+								<p>
+									Уникальное, востребованное направление подготовки бакалавров
+									аккумулировало в себе комплекс знаний по картографии,
+									геоинформационным технологиям, геодезии, топографии,
+									земельному и городскому кадастрам и т.д. Широкое привлечение
+									преподавателей-практиков позволяет обеспечить актуальность
+									получаемых знаний. В рамках программы готовят кадастровых
+									инженеров, обеспечивающих эффективное и рациональное
+									управление недвижимостью и земельными ресурсами. К
+									преподаванию привлекаются ученые в области географии и
+									специалисты-практики из сфер геоинформационных технологий,
+									инженерной географии, консалтинга, кадастровой службы и
+									земельных ресурсов.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_21_03_02_zemlyeustroistvo%20i%20kadastry_oziuon-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_21_03_02_zemlyeustroistvo%20i%20kadastry_oziuon-1-2021_2021_27.04.2021.pdf"
+										>Заочная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>40</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>5</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>11</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">71 570 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>География/Физика</li>
+											<li>Математика</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">190</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											При обучении вы научитесь осуществлять государственный
+											кадастровый учет недвижимого имущества, управлять
+											инженерно-геодезическими работами, вести техническое
+											сопровождение разработки градостроительной документации и
+											сопутствующих исследований. Использовать современные
+											технологии в профессиональной деятельности, в том числе
+											современные географические и земельно-информационные
+											системы. Проводить экономическую и кадастровую оценку
+											объектов недвижимости, осуществлять техническую
+											инвентаризации объектов недвижимости.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники программы смогут успешно реализовать себя в
+											областях архитектуры, геодезии, топографии и дизайне. В
+											Федеральной службе государственной регистрации, кадастра и
+											картографии по Алтайскому краю, Управлении имущественных
+											отношений, комитетах по земельным ресурсам и
+											благоустройству, крупнейших проектных организациях,
+											органах государственной и муниципальной власти.
+										</p>
+										<p>
+											Трудоустройство в организациях государственного
+											кадастрового учета недвижимого имущества и информационного
+											обеспечения; подготовки и планирования выполнения полевых
+											работ по инженерно-геодезическим изысканиям и их
+											камеральной обработки для землеустройства и кадастров;
+											проведения работ по обследованию и мониторингу объектов
+											градостроительной деятельности, камеральной обработке
+											результатов исследований, составлению отчетов, проектной
+											продукции и технических паспортов для кадастровой
+											деятельности; сбора и систематизации информации для
+											разработки и формирования комплекта градостроительной
+											документации.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат сельскохозяйственных наук,
+										доцент кафедры экономической географии и картографии
+										<a href="https://www.asu.ru/search/persons/589/"
+											>Ольга Анатольевна Латышева</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852291276">+7 (3852) 29-12-76</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:whitemails@mail.ru">whitemails@mail.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 35.03.10 ЛАНДШАФТНАЯ АРХИТЕКТУРА, ПРОФИЛЬ
+									«ЛАНДШАФТНОЕ ПРОЕКТИРОВАНИЕ И ДИЗАЙН ОКРУЖАЮЩЕЙ СРЕДЫ»
+								</h3>
+								<p>
+									Уникальная программа, позволяющая готовить специалистов в
+									сфере деятельности, связанной с ландшафтным проектированием.
+									Программа нацелена на подготовку кадров для реализации
+									приоритетного проекта Правительством РФ «Формирование
+									комфортной городской среды». Подготовка таких специалистов
+									предусматривает изучение современных объектов ландшафтного
+									обустройства городской среды с использованием новых
+									технологий. Обучающиеся осваивают основные стилевые
+									направления ландшафтной архитектуры, основы инженерной
+									географии, методы ландшафтного проектирования, знакомятся с
+									ассортиментом многолетних декоративных растений, методами
+									ухода за ними. Программа позволяет обучающимся познакомиться с
+									современными тенденциями развития ландшафтной архитектуры.
+								</p>
+								<p>
+									Преимуществом образовательной программы является то, что она
+									реализуется на основе взаимодействия с представителями сферы
+									профессиональной деятельности ландшафтных архитекторов, что
+									закреплено договорами о сотрудничестве с организациями,
+									заинтересованными в подготовке специалистов по профилю
+									«Ландшафтная архитектура». Преимуществом является, что
+									программа реализуется в институте географии, с привлечением к
+									образовательному процессу специалистов-географов.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_35_03_10_landshaftnaya%20arkhitektura_lpidos-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_35_03_10_landshaftnaya%20arkhitektura_lpidos-1-2021_2021_27.04.2021.pdf"
+										>Заочная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно, 5 лет - заочно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>40</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>5</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>11</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">59 190 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>География/Биология</li>
+											<li>Математика</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">160</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Проведению предпроектных исследований и подготовке данных
+											для разработки проектной документации на объекты
+											ландшафтной архитектуры. Проектированию и дизайну объектов
+											ландшафтной архитектуры с учетом современных тенденций.
+											Разработке проектной и рабочей технической документации в
+											соответствии с действующими нормативными документами,
+											художественными приемами и принципами садово-паркового и
+											ландшафтного искусства для создания, реконструкции и
+											реставрации объектов ландшафтной архитектуры.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники программы смогут реализовывать собственные
+											ландшафтные проекты по созданию комфортной городской среды
+											в бюро ландшафтной архитектуры, в проектных, инженерных и
+											архитектурных бюро, садово-парковых департаментах, местных
+											самоуправлениях, государственных учреждениях и учреждениях
+											систем образования.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат географических наук,
+										доцент кафедры физической географии и геоинформационных
+										систем,
+										<a href="https://www.asu.ru/search/persons/282/"
+											>Ольга Николаевна Барышникова</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852291277">+7 (3852) 29-12-77</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:onb-olga@yandex.ru">onb-olga@yandex.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 43.03.01 СЕРВИС, ПРОФИЛЬ «РЕКРЕАЦИОННЫЙ И
+									САНАТОРНО-КУРОРТНЫЙ СЕРВИС»
+								</h3>
+								<p>
+									Программа позволит студентам получить представление о
+									принципах, методах и новых подходах организации курортного
+									оздоровления и отдыха, о состоянии и перспективах развития
+									рекреационной и санаторно-курортной отрасли,
+									wellness–индустрии, об основных природных лечебных факторах и
+									принципах их лечебно-профилактического использования.
+								</p>
+								<p>
+									Уникальность программы определяется потребностями Алтайского
+									региона в подготовке специалистов в сфере организации и
+									технологий деятельности санаторно-курортных и рекреационных
+									комплексов, обладающих умениями и навыками организации работы
+									санаториев, курортов, предприятий wellness–индустрии,
+									применения соответствующих нормативно-правовых, лицензионных,
+									стандартизирующих и сертификационных условий деятельности в
+									сфере рекреационных и санаторно-курортных услуг; управления
+									ресурсным обеспечением функционирования предприятий
+									рекреационной и санаторно-курортной отрасли Алтайского края и
+									России в период учебы и прохождения практик.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_43_03_01_servis_sksit-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_z43_03_01_s-5-2021_2017_30.06.2020.pdf"
+										>Заочная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно, 5 лет - заочно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>35</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>4</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>15</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">50 620 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Обществознание/История</li>
+											<li>Математика</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">201</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Обучаясь сервису, студенты изучат структуру обслуживания в
+											санаторно-курортных комплексах, принимая во внимание
+											особенности рекреационных факторов, знакомятся с видами
+											сервисной деятельности в санаторно-курортных комплексах и
+											узнают о классификации услуг, учатся методам изучения
+											спроса со стороны потребителей, изучают маркетинг и
+											менеджмент, приемы продвижения услуг, уделяя внимание
+											этической и эстетической составляющей профессиональной
+											деятельности.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускник направления подготовки может работать в качестве
+											специалистов сервисных служб санаторно-курортных и
+											рекреации комплексов, социально-культурных подсистем,
+											включая wellness -индустрию, специалистами сервиса по
+											созданию необходимой среды комфортного отдыха и занятия
+											спортом в санаториях.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат педагогических наук,
+										доцент кафедры рекреационной географии, сервиса, туризма и
+										гостеприимства
+										<a href="https://www.asu.ru/search/persons/2236/"
+											>Наталья Викторовна Биттер</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852291278">+7 (3852) 29-12-78</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:bitternv@mc.asu.ru">bitternv@mc.asu.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 43.03.02 ТУРИЗМ, ПРОФИЛЬ «ВНУТРЕННИЙ И
+									МЕЖДУНАРОДНЫЙ ТУРИЗМ»
+								</h3>
+								<p>
+									Программа направлена на подготовку к профессиональной деятельности в сферах культуры и искусства (в сфере экскурсионной деятельности); сервиса и оказания услуг населению (в сферах: оказание туристских, экскурсионных услуг населению и иных услуг необходимых для организации и реализации путешествий; формирование, продвижение и реализация туристского продукта; деятельность объектов туристской инфраструктуры и туристских сервисов; проектирование в туризме).
+								</p>
+								<p>
+									Преимущества и особенности программы заключаются в том, что профессиональное обучение включает соединение основных теоретических знаний с практической подготовкой на туристских предприятиях и определяется потребностями Алтайского края и Республики Алтай, а также других регионов России в повышении качества туристских услуг, формировании высокого статуса и имиджа туристских предприятий и организаций. Уникальность программы связана с активными и интерактивными формами проведения занятий и организацией практик по заказу организаций-партнёров, а также с тем, что программа является сетевой с участием ВУЗов-партнеров.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_43_03_02_turizm_vimt-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_z43_03_02_turizm_vimt-1-2021_2021_27.04.2021.pdf"
+										>Заочная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно, 5 лет - заочно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>35</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>4</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>15</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">25 000 - 50 620 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>История</li>
+											<li>Русский язык</li>
+											<li>Обществознание / География</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">217</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Организационному обеспечению экскурсионных услуг и проведению экскурсий. Управлению внутрифирменными процессами в туристской организации, в том числе по формированию и использованию материально-технических и трудовых ресурсов. Проектированию туристского продукта при заданных критериях и нормативных требованиях с использованием инновационных и информационных технологий, построение эффективной системы продвижения турпродуктов, а также организации процесса обслуживания потребителей на основе нормативных правовых актов, с учетом запросов потребителей и применением клиенториентированных технологий. Составлению программ экскурсий для экскурсионных групп и индивидуальных туристов.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники могут выполнять профессиональную деятельность в
+											академических и научно-исследовательских организациях,
+											связанных с туризмом и туристской проблематикой; в органах
+											власти и управления, связанных с туристской сферой;
+											осуществляющих проектную (консалтинговую, консультативную,
+											исследовательскую и аналитическую), а также информационную
+											деятельность в сфере туризма.
+										</p>
+										<p>
+											При этом поиск рабочего места не ограничивается
+											туристическими фирмами. Работу можно искать в любых
+											организациях, связанных с рынком туристических услуг.
+											Например, это компании, занимающиеся перевозками
+											пассажиров, паспортно-визовые службы, таможенные органы,
+											гостиницы и санатории и др.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат философских наук, доцент
+										кафедры рекреационной географии, сервиса, туризма и
+										гостеприимства
+										<a href="https://www.asu.ru/search/persons/638/"
+											>Алексей Витальевич Метелев</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852291278">+7 (3852) 29-12-78</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:metalex10@mail.ru">metalex10@mail.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 43.03.03 ГОСТИНИЧНОЕ ДЕЛО, ПРОФИЛЬ
+									«ГОСТИНИЧНО-РЕСТОРАННАЯ ДЕЯТЕЛЬНОСТЬ»
+								</h3>
+								<p>
+									В настоящее время сервис является активно развивающейся
+									отраслью экономики. Это способствует развитию малого и
+									среднего бизнеса и созданию новых рабочих мест. В этой отрасли
+									экономики постоянно требуются высококлассные специалисты,
+									умеющие организовать уникальные услуги, позволяющие
+									обеспечивать высокий сервис. Именно поэтому бакалавры
+									востребованы на рынке труда, и необходимость в таких
+									специалистах в будущем будет только возрастать.
+								</p>
+								<p>
+									Программа является практико-ориентированной, что обеспечивает
+									соотношение в учебном процессе теоретической и практической
+									подготовки. Образовательный процесс обеспечивает
+									высококвалифицированный профессорско-преподавательский состав
+									и участие специалистов, работающих в сфере гостиничного
+									бизнеса. Создана уникальная среда делового и интеллектуального
+									общения. Прохождение производственной и преддипломной практики
+									предусмотрено на базе гостиничных предприятий г. Барнаула,
+									Алтайского края, туристических комплексов Алтайского края, а
+									также на всей территории России и за ее пределами.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_43_03_03_gostinichnoe%20delo_grd-1-2021_2021_27.04.2021.pdf"
+										>Очная форма обучения</a
+									>
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_z43_03_03_gostinichnoe%20delo_grd-1-2021_2021_27.04.2021.pdf"
+										>Заочная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 4 года очно, 5 лет - заочно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>40</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>5</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>15</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">25 000 - 50 620 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>История/Иностранный язык</li>
+											<li>Обществознание</li>
+											<li>Русский язык</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">216</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Осуществлению планирования и управления деятельностью
+											департаментов (служб, отделов) гостиничного комплекса и
+											предприятия питания. Обеспечение контроля и оценки
+											эффективности деятельности департаментов (служб, отделов)
+											организаций сферы гостеприимства и общественного питания.
+											Проектированию и разработке услуг (продуктов) организаций
+											сферы гостеприимства и общественного питания, разработке и
+											реализации проектов, направленных на развитие организаций
+											сферы гостеприимства и общественного питания;. Применению
+											научных принципов и методов исследования рынка услуг сферы
+											гостеприимства и общественного питания в профессиональной
+											сфере.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники бакалавры находят себя в различные организации
+											и компании гостинично-туристической индустрии и занимают
+											должности директора, менеджера отдела, специалиста в
+											отделах продаж, планирования, развития, маркетинга и
+											рекламы. Также специальность подразумевает успешное
+											занятие предпринимательской деятельностью в гостиничном
+											деле и объектах общественного питания.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – кандидат географических наук,
+										доцент кафедры рекреационной географии, сервиса, туризма и
+										гостеприимства
+										<a href="https://www.asu.ru/search/persons/290/"
+											>Вера Александровна Быкова</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852291278">+7 (3852) 29-12-78</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:bva.geo78@mail.ru">bva.geo78@mail.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="programs--students__section">
+				<div class="programs--students container">
+					<div class="programs--students__logo">
+						<img alt="" src="../../files/images.215/programs/3d.png" />
+					</div>
+					<div class="programs--students__content">
+						<h2>Меры поддержки для первокурсников</h2>
+						<a href="https://abiturient.asu.ru/bachelor/grants2021/"
+							>Подробнее</a
+						>
+					</div>
+				</div>
+			</section>
+			<section class="programs--contacts">
+				<div class="programs--form">
+					<h3>Оставить заявку</h3>
+					<form>
+						<div class="callModalFormRow">
+							<div class="callModalFormColumn">
+								<label for="name">Имя</label>
+								<input type="text" id="name" required="" name="name" />
+							</div>
+							<div class="callModalFormColumn">
+								<label for="secondName">Фамилия</label>
+								<input
+									type="text"
+									id="secondName"
+									required=""
+									name="secondName"
+								/>
+							</div>
+						</div>
+						<div class="callModalFormColumn">
+							<label for="tel">Номер телефона</label>
+							<input
+								type="tel"
+								value="+7"
+								pattern="^[7|8]{0,1}\d{10}$|(^\+7{1}\d{10}$)"
+								maxlength="12"
+								id="tel"
+								required=""
+								name="phoneNumber"
+							/>
+							<small>Пример: +71235641122</small>
+						</div>
+						<div class="callModalFormColumn">
+							<label for="question">Опишите ваш вопрос</label
+							><textarea
+								rows="10"
+								cols="25"
+								id="question"
+								name="question"
+								placeholder="Напишите интересующий Вас вопрос..."
+								required=""
+							></textarea>
+						</div>
+					</form>
+				</div>
+			</section>
+		</section>
+	</body>
+</html>
