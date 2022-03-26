@@ -714,6 +714,13 @@
       });
     }
 
+    const showButtonFromPrograms = document.querySelector("#showCallModalFromPrograms");
+    if (showButtonFromPrograms) {
+      showButtonFromPrograms.addEventListener("click", function (e) {
+        modal.show();
+      });
+    }
+
     (function(modal){
         let $form = $(".callModalFormWrapper form");
         if ($form.length) {

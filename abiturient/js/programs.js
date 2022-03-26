@@ -25,8 +25,8 @@ let Dropdown = function (root = "#dropdown") {
     _animate(
       dropdownContainers[_currentIndex],
       [
-        { opacity: 1, transform: "translateY(0)" },
-        { opacity: 0, transform: "translateY(-200%)" },
+        { opacity: 1},
+        { opacity: 0},
       ],
       200,
       (e) => {
@@ -38,8 +38,8 @@ let Dropdown = function (root = "#dropdown") {
         _animate(
           dropdownContainers[_currentIndex],
           [
-            { opacity: 0, transform: "translateY(-200%)" },
-            { opacity: 1, transform: "translateY(0)" },
+            { opacity: 0},
+            { opacity: 1},
           ],
           200,
           {}

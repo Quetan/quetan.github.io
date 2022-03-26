@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <title>Страница абитуриенту АлтГУ</title>
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- Главный CSS файл -->
+    <link rel="stylesheet" href="./css/migrate.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/programs.css" />
+    <link rel="stylesheet" href="./css/programs-hub.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header d-flex align-items-center flex-column">
+      <div class="header-container_bg">
+        <div class="container header-container py-4">
+          <div class="row d-flex justify-content-center">
+            <!-- Navigation -->
+            <div
+              class="col-sm-8 col-lg-9 mb-2 mb-sm-0 justify-content-center justify-content-sm-start"
+            >
+              <nav class="header-navigation">
+                <ul
+                  class="list-unstyled d-flex flex-wrap m-0 align-items-center justify-content-center justify-content-sm-start"
+                >
+                  <li>
+                    <a class="header-navigation_link" href="#">Университет</a>
+                  </li>
+                  <li>
+                    <a class="header-navigation_link" href="#"
+                      >Школьник АлтГУ</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="whatsapp-button">
+              <a href="https://wa.me/73852291222?text=Здравствуйте!">
+                <img src="./img/whatsapp.svg" alt="WhatsApp" />
+              </a>
+            </div>
+
+            <!-- Social links -->
+            <div
+              class="links-container_links col-sm-4 d-flex d-lg-none align-items-center justify-content-center justify-content-md-end"
+            >
+              <div class="links-socials d-flex">
+                <a href="https://wa.me/73852291222?text=Здравствуйте!"
+                  ><img
+                    class="mr-2"
+                    style="width: 25px; height: 25px"
+                    src="./img/whatsapp.svg"
+                    alt="WhatsApp"
+                /></a>
+                <a href="#"
+                  ><img
+                    style="width: 25px; height: 25px"
+                    class="mr-2"
+                    src="./img/main/main-section/instagram.svg"
+                    alt="Instagram"
+                /></a>
+                <a href="#"
+                  ><img
+                    style="width: 25px; height: 25px"
+                    class="mr-2"
+                    src="./img/main/main-section/youtube.svg"
+                    alt="YouTube"
+                /></a>
+                <a href="#"
+                  ><img
+                    style="width: 25px; height: 25px"
+                    src="./img/main/main-section/vk.svg"
+                    alt="Вконтакте"
+                /></a>
+              </div>
+            </div>
+
+            <!-- Search -->
+            <div
+              class="d-none col-lg-3 d-lg-flex align-items-center justify-content-end"
+            >
+              <div class="search">
+                <img
+                  src="./img/main/preheader/searching-magnifying-glass.svg"
+                  alt=""
+                />
+                <input
+                  type="text"
+                  name="search"
+                  id="header-search"
+                  placeholder="Поиск по сайту"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container links-container">
+        <div class="row">
+          <a
+            href="./"
+            class="links-container_logo col-sm-8 col-lg-5 mb-3 mb-sm-0 d-flex align-items-center justify-content-center justify-content-sm-start"
+          >
+            <img
+              class="mr-2 mr-md-3"
+              src="./img/main/main-section/Logo.svg"
+              alt="Логотип АлтГУ"
+            />
+            <div class="asu-text d-flex flex-column text-center">
+              <span class="asu-text_small"
+                >Алтайский государственный университет</span
+              >
+              <h1 class="asu-text_large">Абитуриент</h1>
+            </div>
+          </a>
+
+          <div
+            class="links-container_links col-lg-4 d-none d-lg-flex align-items-center"
+          >
+            <div class="links-phone d-flex mr-5">
+              <img
+                class="mr-2"
+                src="./img/main/main-section/call.svg"
+                alt="Номер для звонков"
+              />
+              <a href="tel:+73852291222">+7 (3852) 291-222</a>
+            </div>
+            <div class="links-socials d-flex">
+              <a href="https://wa.me/73852291222?text=Здравствуйте!"
+                ><img
+                  class="mr-2"
+                  style="width: 25px; height: 25px"
+                  src="./img/whatsapp.svg"
+                  alt="WhatsApp"
+              /></a>
+              <a href="#"
+                ><img
+                  class="mr-2"
+                  src="./img/main/main-section/instagram.svg"
+                  alt="Instagram"
+              /></a>
+              <a href="#"
+                ><img
+                  class="mr-2"
+                  src="./img/main/main-section/youtube.svg"
+                  alt="YouTube"
+              /></a>
+              <a href="#"
+                ><img src="./img/main/main-section/vk.svg" alt="Вконтакте"
+              /></a>
+            </div>
+          </div>
+          <div
+            class="links-container_login col-sm-4 col-lg-3 d-flex align-items-center justify-content-center justify-content-md-end"
+          >
+            <a class="d-flex align-items-center" href="#">
+              Кабинет абитуриента
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <style type="text/css">
+        .content {
+          overflow: hidden !important;
+        }
+        .content ul,
+        .content ol {
+          text-align: unset !important;
+        }
+
+        .content img {
+          margin-bottom: 0;
+          max-width: 100% !important;
+          max-height: 100% !important;
+          height: auto !important;
+        }
+        .programs--banner__heading {
+          margin-right: 1.5rem;
+          margin-top: 0;
+          margin-bottom: 0;
+          margin-left: 0;
+        }
+        .programs--banner__emblem {
+          margin: 0 0 0.8rem 0 !important;
+        }
+
+        .programs--banner__lottie {
+          width: 100% !important;
+        }
+        .template__main-container {
+          padding: 0 15px !important;
+          margin: 0 !important;
+          width: 100% !important;
+          max-width: unset !important;
+        }
+
+        .main-buttons-container {
+          display: none !important;
+        }
+
+        .sidebar {
+          display: none !important;
+        }
+
+        .breadcrumbs {
+          display: none !important;
+        }
+
+        .template__main-content .template__content-header {
+          display: none !important;
+        }
+        .programs--numbers__item span.negative {
+          margin: 0;
+          margin-bottom: 0.45rem;
+        }
+        .col {
+          padding: 0 !important;
+        }
+        .programs--profile-header {
+          padding-left: 45px;
+        }
+        .programs--profile-header::before {
+          background-image: url("https://abiturient.asu.ru/.themes/.abitur2021/img/main/footer/hashtag.svg") !important;
+          left: 0;
+          width: 40px;
+        }
+        .programs--profile-header.after::after {
+          background-image: url("https://www.asu.ru/files/images.215/programs/pattern-01.svg") !important;
+        }
+        .programs--numbers__banner {
+          margin-top: 2rem;
+        }
+        .dropdown--header {
+          justify-content: flex-start;
+        }
+        .dropdown--button {
+          color: #000000;
+          margin-right: 0.5rem;
+        }
+        .dropdown--button:last-child {
+          margin-right: 0;
+        }
+        .programs--content {
+          padding-bottom: 0;
+        }
+
+        .programs--content p {
+          text-indent: 2rem;
+        }
+        @media screen and (max-width: 425.98px) {
+          .programs--banner__heading {
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            margin-left: 0;
+          }
+          .dropdown--button {
+            margin-right: 0;
+          }
+          .programs--students__logo img {
+            height: 200px !important;
+            margin-bottom: 2rem !important;
+          }
+          .programs--banner__emblem {
+            margin: 0 auto !important;
+            margin-bottom: 1rem !important;
+          }
+          .programs--numbers__item span.negative {
+            margin-bottom: 0 !important;
+            margin-right: 0.5rem !important;
+          }
+          .dropdown--header {
+            justify-content: space-evenly;
+          }
+        }
+        .programs--banner__header {
+          margin-bottom: 1rem;
+        }
+        .program--description {
+          font-size: 0.6rem;
+          margin: 0 !important;
+          margin-bottom: 25px !important;
+          line-height: 1.5;
+          letter-spacing: 0.04rem;
+          font-weight: 500;
+        }
+        .dropdown--content .dropdown--container .program--title {
+          font-size: 1.6rem;
+          text-align: center;
+          width: 80%;
+          margin: 0 auto;
+          margin-bottom: 1.8rem;
+        }
+        .dropdown--content .dropdown--container h2,
+        .dropdown--content .dropdown--container h3,
+        .dropdown--content .dropdown--container h4,
+        .dropdown--content .dropdown--container h5,
+        .dropdown--content .dropdown--container h6 {
+          font-weight: 700;
+          color: var(--asu-dark);
+        }
+        .programs--uch-plan {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          margin-top: 1.5rem;
+          margin-bottom: 3rem;
+        }
+        .programs--uch-plan a {
+          padding: 0.45rem 1.5rem;
+          margin-bottom: 1rem;
+          text-align: center;
+          background-color: var(--asu-accent);
+          color: #fff;
+          font-weight: 500;
+          box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.25);
+          border-radius: 15px;
+        }
+        ul li {
+          margin-bottom: 0.55rem;
+        }
+        .programs--banner__header {
+          color: var(--asu-accent);
+        }
+      </style>
+      <section class="section states-section">
+        <h2 class="section-header">Выбирай свой институт</h2>
+        <div class="container states-container">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-sm-6 col-lg-4 states-item states-item_green">
+              <a
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+                href="https://abiturient.asu.ru/obrprog/ibb/"
+                ><img
+                  alt="Институт биологии и биотехнологий"
+                  class="states-item_icon"
+                  src="/.themes/.abitur2021/img/main/states/bio-icon.svg"
+                />
+                <h5 class="states-item_text">
+                  Институт биологии и биотехнологий
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_blue">
+              <a
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+                href="https://abiturient.asu.ru/obrprog/ingeo"
+                ><img
+                  alt="Институт географии"
+                  class="states-item_icon"
+                  src="/.themes/.abitur2021/img/main/states/geography-icon.svg"
+                />
+                <h5 class="states-item_text">Институт географии</h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_orange">
+              <a
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+                href="https://abiturient.asu.ru/obrprog/iimo/"
+                ><img
+                  alt="Институт истории и международных отношений"
+                  class="states-item_icon"
+                  src="/.themes/.abitur2021/img/main/states/history-icon.svg"
+                />
+                <h5 class="states-item_text">
+                  Институт истории и международных отношений
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_orange">
+              <a
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+                href="https://abiturient.asu.ru/obrprog/imit/"
+                ><img
+                  alt="Институт математики и информационных технологий"
+                  class="states-item_icon"
+                  src="/.themes/.abitur2021/img/main/states/maths.svg"
+                />
+                <h5 class="states-item_text">
+                  Институт математики и информационных технологий
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_red">
+              <a
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+                href="https://abiturient.asu.ru/obrprog/ign/"
+                ><img
+                  alt="Институт гуманитарных наук"
+                  class="states-item_icon"
+                  src="/.themes/.abitur2021/img/main/states/gum-icon.svg"
+                />
+                <h5 class="states-item_text">Институт гуманитарных наук</h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_blue">
+              <a
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+                href="https://abiturient.asu.ru/obrprog/ictef/"
+                ><img
+                  alt="Институт цифровых технологий, электроники и физики"
+                  class="states-item_icon"
+                  src="/.themes/.abitur2021/img/main/states/coding.svg"
+                />
+                <h5 class="states-item_text">
+                  Институт цифровых технологий, электроники и физики
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_red">
+              <a
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+                href="https://abiturient.asu.ru/obrprog/miemis/"
+                ><img
+                  alt="Международный институт экономики, менеджмента и информационных систем"
+                  class="states-item_icon"
+                  src="/.themes/.abitur2021/img/main/states/eco-icon.svg"
+                />
+                <h5 class="states-item_text">
+                  Международный институт экономики, менеджмента и информационных
+                  систем
+                </h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_orange">
+              <a
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+                href="https://abiturient.asu.ru/obrprog/yi/"
+                ><img
+                  alt="Юридический институт"
+                  class="states-item_icon"
+                  src="/.themes/.abitur2021/img/main/states/law-icon.svg"
+                />
+                <h5 class="states-item_text">Юридический институт</h5>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 states-item states-item_green">
+              <a
+                class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+                href="https://abiturient.asu.ru/obrprog/chem/"
+                ><img
+                  alt="Институт химии и химико-фармацевтических технологий"
+                  class="states-item_icon"
+                  src="/.themes/.abitur2021/img/main/states/chemistry-icon.svg"
+                />
+                <h5 class="states-item_text">
+                  Институт химии и химико-фармацевтических технологий
+                </h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer d-flex align-items-center">
+      <div class="container footer-container">
+        <!-- <img
+            src="./img/main/footer/footer-triangle.svg"
+            alt=""
+            class="d-none d-md-block footer-triangle"
+          /> -->
+        <div class="row">
+          <div
+            class="col-md-6 col-xl-2 mb-4 mb-lg-0 footer-logo d-flex flex-column align-items-center align-items-xl-start"
+          >
+            <img
+              src="./img/main/footer/Logo_LightWhite.svg"
+              alt=""
+              class="footer-logo_img"
+            />
+          </div>
+          <div
+            class="col-md-6 col-xl-4 footer-resources d-flex align-items-center align-items-xl-start justify-content-center justify-content-xl-start mb-3 mb-xl-0"
+          >
+            <nav class="footer-nav text-center text-xl-left">
+              <ul class="list-unstyled d-flex flex-column mb-0">
+                <li>
+                  <a href="#" class="footer-resources_link"
+                    >Министерство образования и науки РФ</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="footer-resources_link"
+                    >Федеральный портал "Российское образование"</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="footer-resources_link"
+                    >Министерство образования и науки Алтайского края</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div
+            class="col-md-6 col-xl-3 footer-contacts d-flex flex-column justify-content-center justify-content-xl-start align-items-center align-items-xl-start mb-3 mb-xl-0"
+          >
+            <span class="footer-contacts_address"
+              >г. Барнаул, пр. Ленина, 61</span
+            >
+            <a href="mailto:prcom@asu.ru" class="footer-contacts_email"
+              >e-mail: prcom@asu.ru</a
+            >
+            <a href="tel:+73852291222" class="footer-contacts_phone"
+              >+7 (3852) 291-222</a
+            >
+            <a href="https://www.asu.ru" class="footer-contacts_website"
+              >Перейти на сайт АлтГУ</a
+            >
+          </div>
+          <div
+            class="col-md-6 col-xl-3 footer-social-links d-flex flex-column align-items-center align-items-xl-start"
+          >
+            <span class="footer-social-links_text">Социальные сети:</span>
+            <div class="footer-social-links_icons d-flex">
+              <a href="#">
+                <img
+                  src="./img/main/footer/instagram.svg"
+                  alt="Instagram"
+                  class="footer-social-links_icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./img/main/footer/youtube.svg"
+                  alt="YouTube"
+                  class="footer-social-links_icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./img/main/footer/vk.svg"
+                  alt="Вконтакте"
+                  class="footer-social-links_icon"
+                />
+              </a>
+            </div>
+            <div class="footer-social-links_hashtag d-flex">
+              <img src="./img/main/footer/hashtag.svg" alt="Хэштег" />
+              <div class="footer-social-links_hashtag_text d-flex flex-column">
+                <span>Амбициозность</span>
+                <span>Глобальность</span>
+                <span>Успех</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 d-flex justify-content-center justify-content-xl-start mt-4 mt-xl-0"
+          >
+            <span class="footer-asu text-center text-md-left mt-0">
+              © Алтайский государственный университет. 2021
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+      defer
+    ></script>
+  </body>
+</html>
