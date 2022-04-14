@@ -1,0 +1,585 @@
+/* USER VARIABLES SECTION */
+
+:root {
+	--accent: #23376c;
+	--text: #111;
+	--regular-text: 16px;
+	--lineheight: 1.65;
+	--userfont: 'Roboto', sans-serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+/* BOOTSTRAP SETTINGS SECTION */
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+	--bs-gutter-x: 0.625rem;
+}
+.row,
+.row > * {
+	--bs-gutter-x: 1.25rem;
+}
+
+/* FONTS LOAD SECTION */
+
+/* @font-face {
+	src: url('../fonts/roboto-regular-webfont.woff2') format('woff2');
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	src: url('../fonts/roboto-italic-webfont.woff2') format('woff2');
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	src: url('../fonts/roboto-bold-webfont.woff2') format('woff2');
+	font-family: 'Roboto';
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	src: url('../fonts/roboto-bolditalic-webfont.woff2') format('woff2');
+	font-family: 'Roboto';
+	font-weight: 700;
+	font-style: italic;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* GENERAL CSS SETTINGS */
+
+html {
+	scroll-behavior: smooth;
+}
+
+::-webkit-input-placeholder {
+	color: #666;
+}
+
+::-moz-placeholder {
+	color: #666;
+}
+
+:-ms-input-placeholder {
+	color: #666;
+}
+
+::-ms-input-placeholder {
+	color: #666;
+}
+
+::placeholder {
+	color: #666;
+}
+::-moz-selection {
+	background-color: var(--accent);
+	color: #fff;
+}
+::selection {
+	background-color: var(--accent);
+	color: #fff;
+}
+input,
+textarea {
+	outline: none;
+}
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+	border-color: red;
+}
+input:required:valid,
+textarea:required:valid {
+	border-color: green;
+}
+
+body {
+	font-family: var(--userfont);
+	font-size: var(--regular-text);
+	line-height: var(--lineheight);
+	color: var(--text);
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}
+
+/* DEFAULT STYLES */
+
+.image {
+	max-width: 100%;
+	margin-bottom: var(--bs-gutter-x);
+	border-radius: 4px;
+}
+
+.accent {
+	color: var(--accent);
+	font-weight: bold;
+}
+
+.section {
+	z-index: 0;
+}
+
+.section .container{
+	z-index: 10;
+	position: relative;
+}
+
+.button-accent {
+	padding: 1rem 1.9rem;
+	color: #fff;
+	background-color: var(--accent);
+	border-radius: 15px;
+	text-decoration: none;
+	position: relative;
+	display: block;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+}
+.button-accent:hover {
+	color: #fff;
+}
+
+/* HEADER STYLES */
+
+.header {
+	padding: 10px 30px;
+	max-height: 100px;
+}
+
+.header-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+}
+
+.header-menu--list {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	margin: 0;
+	-webkit-padding-start: 0;
+	padding-inline-start: 0;
+}
+
+.header-menu--item a {
+	padding: 0.2rem 0.4rem;
+	margin-right: 25px;
+	color: var(--text);
+	text-decoration: none;
+	font-weight: 400;
+	transition: 0.4s ease-in color;
+	position: relative;
+}
+.header-menu--item:last-child a{
+	margin-right: 0;
+}
+
+.header-menu--item a:after {
+	display: block;
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 0;
+	background-color: var(--accent);
+	bottom: -5px;
+	transition: 0.4s ease-in width;
+}
+
+.header-menu--item a:hover,
+.header-menu--item a:focus {
+	color: var(--accent);
+}
+.header-menu--item a:hover::after,
+.header-menu--item a:focus::after {
+	width: 100%;
+}
+
+.header-phone {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-phone--link {
+	color: var(--text);
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.header-phone--link:hover{
+	color: var(--accent);
+}
+
+.header-phone--link .accent {
+	color: var(--accent);
+	font-size: 20px;
+}
+
+/* BANNER SECTION */
+
+.banner-section {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-top: 40px;
+}
+
+.banner-content{}
+
+.banner-content .h1 {
+	color: var(--accent);
+	font-size: 2rem;
+	line-height: 1.25;
+	margin-bottom: 2rem;
+	font-weight: 500;
+}
+
+.banner-content--paragraph {
+	line-height: 1.6;
+	margin-bottom: 1.2rem;
+	font-size: 1.1rem;
+}
+
+.banner-content--link {
+	margin-top: 50px;
+}
+
+.banner-background {
+	position: relative;
+	height: auto;
+}
+
+.banner-background img {
+	width: 100%;
+	height: auto;
+	transform: translateY(60px);
+}
+
+/* SECTIONS */
+
+.kids-section,
+.junior-section,
+.open-section {
+	min-height: 600px;
+	padding-top: 100px;
+	padding-bottom: 150px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+
+}
+
+.kids-section {
+	background: rgb(14,144,176);
+	background: linear-gradient(125deg, rgba(14,144,176,1) 0%, rgba(213,199,80,1) 100%);
+}
+
+.junior-section {
+	background: rgb(236,251,250);
+	background: radial-gradient(circle, rgba(236,251,250,1) 0%, rgba(205,253,253,1) 100%);
+}
+
+.open-section {
+	background: rgb(0,87,175);
+	background: linear-gradient(60deg, rgba(0,87,175,1) 0%, rgba(0,159,201,1) 100%);
+}
+
+.section-heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-heading--header {
+	color: #fff;
+	font-size: 1.8rem;
+	line-height: 1.1;
+	margin-bottom: 15px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.section-heading--subheader {
+	color: #fff;
+	line-height: 1.1;
+	font-size: 1.1rem;
+	margin: 0;
+	text-align: center;
+}
+
+.section-heading--header__dark {
+	color: var(--accent);
+}
+
+.section-heading--subheader__dark {
+	color: var(--text);
+}
+
+/* PROGRAMS GRID */
+
+
+.grid-programs {
+	width: 85%;
+	margin: 0 auto;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
+	margin-top: 2rem;
+}
+
+.grid-programs--item {
+	aspect-ratio: 1;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+	border: 1px #c4c4c4 solid;
+	border-radius: 15px;
+	padding: 30px 20px;
+	box-shadow: 4px 6px 5px 0px #6d8dad5a;
+	position: relative;
+	transition: 0.4s ease-out all;
+}
+
+.grid-programs--item:hover {
+	box-shadow: 4px 6px 15px 4px #6d8dad89;
+	transform: translateY(2px) scale(1.04);
+}
+
+.grid-programs--heading {
+	font-size: 1.15rem;
+	color: var(--accent);
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.grid-programs--link {
+	text-decoration: none;
+	color: var(--accent);
+	transition: 0.1s ease-in color;
+	position: relative;
+	font-weight: 300;
+}
+
+.grid-programs--link:hover {
+	color: var(--accent);
+}
+
+.grid-programs--link::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 1px;
+	background-color: var(--accent);
+	bottom: -1px;
+	transition: 0.1s ease-in width;
+}
+
+.grid-programs--link:hover::after {
+	width: 90%;
+}
+
+.grid-programs--duration,
+.grid-programs--price {
+	position: absolute;
+	color: var(--accent);
+	font-weight: 400;
+	left: 45px;
+}
+
+.grid-programs--duration {
+	bottom: 50px;
+}
+.grid-programs--duration::before,
+.grid-programs--price::before{
+	content: '';
+	position: absolute;
+	left: -25px;
+	bottom: 4px;
+	width: 20px;
+	height: 20px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.grid-programs--duration::before {
+	background-image: url(../images/alarm.svg);
+}
+
+.grid-programs--price {
+	bottom: 20px;
+}
+.grid-programs--price::before{
+	background-image: url(../images/wallet.svg);
+}
+
+/* FIGURES */
+.figures * {
+	position: absolute;
+	z-index: 1;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 130px;
+}
+
+/* kids */
+
+
+.kids-figures--item1 {
+	left: 30px;
+	top: 0;
+	width: 150px;
+	background-image: url(../images/figures/kids_figure_8.png);
+}
+.kids-figures--item2 {
+	left: 1vw;
+	bottom: 40%;
+	width: 100px;
+	height: 130px;
+	background-image: url(../images/figures/kids_figure_7.png);
+}
+.kids-figures--item3 {
+	left: 8vw;
+	top: 30%;
+	width: 150px;
+	height: 130px;
+	background-image: url(../images/figures/kids_figure_6.png);
+}
+.kids-figures--item4 {
+	left: 4vw;
+	bottom: 10%;
+	width: 150px;
+	height: 130px;
+	background-image: url(../images/figures/kids_figure_5.png);
+}
+.kids-figures--item5 {
+	right: 5vw;
+	bottom: 5%;
+	width: 150px;
+	height: 130px;
+	background-image: url(../images/figures/kids_figure_4.png);
+}
+.kids-figures--item6 {
+	right: 2vw;
+	bottom: 25%;
+	width: 180px;
+	height: 150px;
+	background-image: url(../images/figures/kids_figure_3.png);
+}
+.kids-figures--item7 {
+	right: 4vw;
+	top: 25%;
+	width: 200px;
+	height: 200px;
+	background-image: url(../images/figures/kids_figure_2.png);
+}
+.kids-figures--item8 {
+	right: 6vw;
+	top: -10%;
+	width: 250px;
+	height: 250px;
+	background-image: url(../images/figures/kids_figure_1.png);
+}
+
+/* junior */
+
+
+.junior-figures--item1 {
+	left: 30px;
+	top: -8%;
+	width: 150px;
+	background-image: url(../images/figures/junior_figure_8.png);
+}
+.junior-figures--item2 {
+	left: -40px;
+	bottom: 22%;
+	width: 180px;
+	height: 160px;
+	background-image: url(../images/figures/junior_figure_6.png);
+}
+.junior-figures--item3 {
+	left: 3vw;
+	top: 20%;
+	width: 320px;
+	height: 320px;
+	background-image: url(../images/figures/junior_figure_7.png);
+}
+.junior-figures--item4 {
+	left: 6vw;
+	bottom: 5%;
+	width: 200px;
+	height: 200px;
+	background-image: url(../images/figures/junior_figure_5.png);
+}
+.junior-figures--item5 {
+	right: 5vw;
+	bottom: 5%;
+	width: 200px;
+	height:  200px;
+	background-image: url(../images/figures/junior_figure_1.png);
+}
+.junior-figures--item6 {
+	right: 3vw;
+	bottom: 35%;
+	width: 180px;
+	height: 180px;
+	background-image: url(../images/figures/junior_figure_2.png);
+}
+.junior-figures--item7 {
+	right: 2vw;
+	top: 25%;
+	width: 100px;
+	height: 100px;
+	background-image: url(../images/figures/junior_figure_3.png);
+}
+.junior-figures--item8 {
+	right: 3vw;
+	top: -12%;
+	width: 300px;
+	height: 300px;
+	background-image: url(../images/figures/junior_figure_4.png);
+}
+
+/* open */
+
+.open-figures--item1 {
+	left: -10%;
+	bottom: 0;
+	width: auto;
+	height: 70%;
+}
+.open-figures--item2 {
+	left: 50%;
+	bottom: 0;
+	width: auto;
+	height: 20%;
+}
+.open-figures--item3 {
+	right: 0;
+	top: 0;
+	width: auto;
+	height: 50%;
+}
+
+/* TESTIMONIALS */
