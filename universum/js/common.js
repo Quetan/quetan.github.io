@@ -1,1 +1,3 @@
 // $('body').hide()
+
+AOS.init();

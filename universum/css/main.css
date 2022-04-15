@@ -583,3 +583,184 @@ body {
 }
 
 /* TESTIMONIALS */
+
+.testimonials-section {
+	min-height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	padding: 70px 0;
+}
+
+.testimonials-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.testimonials-quote {
+	margin-bottom: 20px;
+	font-size: 2.3rem;
+}
+
+.testimonials-quote p {
+	margin: 0;
+}
+
+.testimonials-photo {
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	background-color: #bbbbbb;
+	margin-bottom: 25px;
+}
+
+.testimonials-author {
+	font-size: 1.2rem;
+}
+
+/* FOOTER */
+
+.footer {
+	display: flex;
+	align-items: center;
+	min-height: 300px;
+	padding: 50px 0;
+}
+
+.footer-logo {
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+	flex-direction: column;
+}
+
+.footer-logo--image {
+	width: 170px;
+	height: auto;
+	margin-bottom: 2rem;
+}
+
+.footer-contacts--item {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.footer-contacts--name {
+	color: var(--accent);
+	font-weight: 700;
+	font-size: 1.05rem;
+}
+
+.footer-contacts--description {
+	font-size: 0.95rem;
+	margin-bottom: 20px;
+}
+
+.footer-contacts--link {
+	padding-left: 30px;
+	position: relative;
+	color: var(--text);
+	text-decoration: none;
+	transition: 0.2s ease-in color;
+	margin-bottom: 15px;
+}
+
+.footer-contacts--link::after {
+	content: '';
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	background-image: url(../images/phone.svg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.footer-contacts--link:hover {
+	color: var(--accent);
+}
+
+.footer-contacts--mail::after {
+	background-image: url(../images/mail.svg);
+}
+
+.footer-schedule {
+	margin-bottom: 20px;
+}
+
+.footer-schedule--heading {
+	font-size: 1rem;
+	color: var(--accent);
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+.footer-schedule--time {
+	margin-bottom: 15px;
+}
+
+.footer-schedule--time .clock {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	padding-right: 12px;
+}
+
+.footer-schedule--time .days {
+	font-weight: 700;
+	width: 55px;
+	text-align: left;
+	font-size: 0.95rem;
+}
+
+.footer-schedule--time .hours {
+	font-size: 0.9rem;
+	line-height: 1;
+}
+
+.footer-location {
+	position: relative;
+	padding-left: 32px;
+	font-size: 0.95rem;
+}
+
+.footer-location::after {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	background-image: url(../images/location.svg);
+	position: absolute;
+	left: 0;
+}
+
+.footer-menu--list {
+	list-style-type: none;
+	padding-inline-start: 0;
+	margin: 0;
+}
+
+.footer-menu--item {
+	margin-bottom: 10px;
+}
+
+.footer-menu--item a {
+	color: var(--accent);
+	font-size: 0.9rem;
+	text-decoration: none;
+}
+
+.footer-menu--item:last-child {
+	margin-bottom: 0;
+}
+
