@@ -294,16 +294,33 @@
         }
 
         .groupList--wrapper {
+          position: relative;
           display: flex;
           flex-direction: column;
           margin-bottom: 1rem;
           border-radius: 15px;
           padding: 1.3rem 1rem;
           padding-top: 1.45rem;
+          padding-right: 3.5rem;
           position: relative;
           background-color: #0e304205;
           border: 1px solid rgba(0, 0, 0, 0.03);
           width: 95%;
+        }
+
+        .groupList--wrapper::after {
+          content: '〱';
+          transform: rotate(-90deg);
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          display: grid;
+          place-items: center;
+          font-size:  1.8rem;
+          right: 1.5rem;
+          top: 2.5rem;
+          color: #00000099;
+          font-weight: 900;
         }
 
         .groupList--name {
