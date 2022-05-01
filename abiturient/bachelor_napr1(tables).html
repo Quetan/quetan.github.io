@@ -214,6 +214,15 @@
           height: 0 !important;
         }
 
+        details > summary {
+          list-style: none;
+        }
+        
+        details > summary::marker, /* Latest Chrome, Edge, Firefox */
+        details > summary::-webkit-details-marker /* Safari */ {
+          display: none;
+        }
+
 				li.groupList--item details summary.groupList--heading-summary {
 					padding: 1rem 1.5rem;
 					border: 3px solid var(--asu-red__opacity);
