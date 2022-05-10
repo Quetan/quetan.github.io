@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- Styles -->
+		<!-- <link rel="stylesheet" href="https://abiturient.asu.ru/files/assets/abiturient/programs.css" /> -->
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/main.css" />
+		<link rel="stylesheet" href="../../css/programs.css" />
+		<!-- <script src="https://abiturient.asu.ru/files/assets/abiturient/programs.js" defer></script> -->
+		<script src="../js/programs.js" defer></script>
+		<style type="text/css">
+			.content {
+				overflow: hidden !important;
+			}
+			.content ul,
+			.content ol {
+				text-align: unset !important;
+			}
+
+			.content img {
+				margin-bottom: 0;
+				max-width: 100% !important;
+				max-height: 100% !important;
+				height: auto !important;
+			}
+			.programs--banner__heading {
+				margin-right: 1.5rem;
+				margin-top: 0;
+				margin-bottom: 0;
+				margin-left: 0;
+			}
+			.programs--banner__emblem {
+				margin: 0 0 0.8rem 0 !important;
+			}
+
+			.programs--banner__lottie {
+				width: 100% !important;
+			}
+			.template__main-container {
+				padding: 0 15px !important;
+				margin: 0 !important;
+				width: 100% !important;
+				max-width: unset !important;
+			}
+
+			.main-buttons-container {
+				display: none !important;
+			}
+
+			.sidebar {
+				display: none !important;
+			}
+
+			.breadcrumbs {
+				display: none !important;
+			}
+
+			.template__main-content .template__content-header {
+				display: none !important;
+			}
+			.programs--numbers__item span.negative {
+				margin: 0;
+				margin-bottom: 0.45rem;
+			}
+			.col {
+				padding: 0 !important;
+			}
+			.programs--profile-header {
+				padding-left: 45px;
+			}
+			.programs--profile-header::before {
+				background-image: url('https://abiturient.asu.ru/.themes/.abitur2021/img/main/footer/hashtag.svg') !important;
+				left: 0;
+				width: 40px;
+			}
+			.programs--profile-header.after::after {
+				background-image: url('https://www.asu.ru/files/images.215/programs/pattern-01.svg') !important;
+			}
+			.programs--numbers__banner {
+				margin-top: 2rem;
+				align-items: baseline;
+			}
+			.dropdown--header {
+				justify-content: flex-start;
+			}
+			.dropdown--button {
+				color: #000000;
+				margin-right: 0.5rem;
+			}
+			.dropdown--button:last-child {
+				margin-right: 0;
+			}
+			.programs--content {
+				padding-bottom: 0;
+			}
+
+			.programs--content p {
+				text-indent: 2rem;
+			}
+			@media screen and (max-width: 425.98px) {
+				.programs--banner__heading {
+					margin-right: 0;
+					margin-top: 0;
+					margin-bottom: 1.5rem;
+					margin-left: 0;
+				}
+				.dropdown--button {
+					margin-right: 0;
+				}
+				.programs--students__logo img {
+					height: 200px !important;
+					margin-bottom: 2rem !important;
+				}
+				.programs--banner__emblem {
+					margin: 0 auto !important;
+					margin-bottom: 1rem !important;
+				}
+				.programs--numbers__item span.negative {
+					margin-bottom: 0 !important;
+					margin-right: 0.5rem !important;
+				}
+				.dropdown--header {
+					justify-content: space-evenly;
+				}
+			}
+			.programs--banner__header {
+				margin-bottom: 1rem;
+				text-align: start;
+			}
+			.program--description {
+				font-size: 0.6rem;
+				margin: 0 !important;
+				margin-bottom: 25px !important;
+				line-height: 1.5;
+				letter-spacing: 0.04rem;
+				font-weight: 500;
+			}
+			.dropdown--content .dropdown--container .program--title {
+				font-size: 1.6rem;
+				text-align: center;
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 1.8rem;
+			}
+			.dropdown--content .dropdown--container h2,
+			.dropdown--content .dropdown--container h3,
+			.dropdown--content .dropdown--container h4,
+			.dropdown--content .dropdown--container h5,
+			.dropdown--content .dropdown--container h6 {
+				font-weight: 700;
+				color: var(--asu-dark);
+			}
+			.programs--uch-plan {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				flex-wrap: wrap;
+				margin-top: 1.5rem;
+				margin-bottom: 3rem;
+			}
+			.programs--uch-plan a {
+				padding: 0.45rem 1.5rem;
+				margin-bottom: 1rem;
+				text-align: center;
+				background-color: var(--asu-accent);
+				color: #fff;
+				font-weight: 500;
+				box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+			}
+			ul li {
+				margin-bottom: 0.55rem;
+			}
+			.programs--banner__header {
+				color: var(--asu-accent);
+			}
+			:root {
+				--asu-accent: #801218;
+			}
+		</style>
+		<section class="section" style="padding-top: 0">
+			<div class="programs--banner">
+				<div class="programs--banner__heading">
+					<img
+						class="programs--banner__emblem"
+						alt=""
+						src="https://www.asu.ru/files/images.215/programs/logos/iimo.png?_t=1641650359"
+					/>
+					<h1 class="programs--banner__header">
+						Институт истории и международных отношений
+					</h1>
+					<p class="program--description">
+						ИИМО – является одним из лидеров в сфере высшего классического
+						исторического образования в России. Это более 700 студентов, 2
+						базовых кафедры, 8 учебных и научных центров и лабораторий,
+						программы международной мобильности и стажировок в Европе и Азии.
+						Институт дает гуманитарное образование, соответствующее современным
+						требованиям. Реализацию образовательных программ обеспечивает
+						высокопрофессиональный состав преподавателей, где 11 докторов и 41
+						кандидат наук. Имеются очная и заочная формы обучения. Эффективно
+						работают магистратура, аспирантура и докторантура.
+					</p>
+					<div class="programs--image__content">
+						<div class="programs--image__content_item">
+							<span
+								class="numbers"
+								id="jsNumber"
+								style="font-size: 3rem; padding: 0.6rem 1.5rem"
+								data-value="49"
+								>49</span
+							>
+							<span class="description">Бюджетные места</span>
+						</div>
+						<div class="programs--image__content_divider"></div>
+						<div class="programs--image__content_item">
+							<span>в 2021 - 2022 году</span>
+							<span class="numbers">109 230 ₽</span>
+							<span class="description">Стоимость</span>
+						</div>
+					</div>
+				</div>
+				<lottie-player
+					class="programs--banner__lottie"
+					src="https://assets7.lottiefiles.com/packages/lf20_katdffp5.json"
+					background="transparent"
+					speed="1"
+					loop=""
+					autoplay=""
+				></lottie-player>
+			</div>
+			<section>
+				<div class="container">
+					<h2 class="programs--profile-header mb-10 after">
+						Программы обучения
+					</h2>
+					<div id="dropdown">
+						<div class="dropdown--header">
+							<button class="dropdown--button active">
+								Исторические знания в современном обществе
+							</button>
+							<button class="dropdown--button">
+								Международное сотрудничество
+							</button>
+							<button class="dropdown--button">
+								Документационные системы и архивы в региональной системе
+								управления
+							</button>
+							<button class="dropdown--button">
+								Анализ данных и разработка цифровых медиа
+							</button>
+							<button class="dropdown--button">
+								Историко-культурное наследие: изучение, сохранение и
+								использование
+							</button>
+							<button class="dropdown--button">
+								Политика и экономика регионов Азии
+							</button>
+							<button class="dropdown--button">
+								Тюркология
+							</button>
+						</div>
+						<div class="dropdown--content container">
+							<!-- start -->
+							<div class="dropdown--container active">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 46.04.01 ИСТОРИЯ, ПРОФИЛЬ «ИСТОРИЧЕСКИЕ ЗНАНИЯ В
+									СОВРЕМЕННОМ ОБЩЕСТВЕ»
+								</h3>
+								<p>
+									Магистерская программа по истории имеет
+									научно-исследовательский профиль. Она нацелена на подготовку
+									высококлассных специалистов, способных осуществлять научные
+									исследования по актуальным историческим темам в области
+									российской и зарубежной истории. Исследование исторических
+									процессов и явлений в их социокультурных, политических,
+									экономических измерениях осуществляется на основе конкретных
+									исторических источников. Обучение в магистратуре по истории
+									предполагает глубокое погружение в исторический контекст
+									изучаемой эпохи, а также знакомство с ключевыми концепциями
+									современной исторической науки.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_46_04_01_istoriya_izvso-1-2021_2021.pdf"
+										>Учебный план</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 2 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>8</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>22</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative"> 54 615 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Экзамен по направлению «История»</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">50</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Практической и научно-исследовательской деятельности в
+											области российской и зарубежной истории, археологии,
+											этнологии, источниковедения, хронологии; методам и приемам
+											научно-исследовательской и источниковедческой работы;
+											углубленному владению иностранным языком; приемам
+											педагогической деятельности и передовым методикам
+											преподавании курса истории в общеобразовательных
+											учреждениях; навыкам работы в архивных, музейных и
+											библиотечных учреждениях; культуре научной работы; поиску
+											источников финансирования научных проектов; основам
+											коммуникации в научном сообществе.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники магистерской программы по истории смогут
+											реализовать себя в учреждениях образования всех уровней
+											(школы, СПО, вузы); в музейных и архивных учреждениях;
+											научных сотрудников в профильных научно-исследовательских
+											институтах; смогут трудиться в качестве специалистов в
+											туристическо-экскурсионных организациях; смогут быть
+											экспертами общественных и государственных организациях;
+											занимать должности сотрудников органов государственного и
+											местного самоуправления; работать корреспондентами и
+											редакторами различных СМИ; могут повысить свою
+											исследовательскую квалификацию, поступив на обучение в
+											аспирантуру.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – доктор исторических наук, профессор
+										кафедры отечественной истории
+										<a href="https://www.asu.ru/search/persons/385/"
+											>Гончаров Юрий Михайлович</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+73852291270">+7 (3852) 291-270</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:yuriig@yandex.ru">yuriig@yandex.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 41.04.05 МЕЖДУНАРОДНЫЕ ОТНОШЕНИЯ, ПРОФИЛЬ
+									«МЕЖДУНАРОДНОЕ СОТРУДНИЧЕСТВО»
+								</h3>
+								<p>
+									Программа магистерской подготовки «Международные отношения»
+									нацелена на подготовку высококвалифицированных специалистов в
+									области международных отношений. Уникальность магистерской
+									подготовки по международным отношениям состоит углубленном
+									изучении исторического контекста международного сотрудничества
+									в различных регионах планеты, а также в интенсивной языковой
+									подготовке. Программа реализуется при участии дипломатической
+									службы и внешнеэкономических организаций Алтайского края. Это
+									обеспечивает возможность прохождения на их базе практической
+									подготовки и формирования навыков, позволяющих выпускникам
+									магистратуры дальнейшего трудоустройства в российских и
+									международных организациях.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_41_04_05_mezhdunarodnye%20otnosheniya_ms-1-2021_2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 2 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>7</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>18</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">54 615 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Экзамен по направлению «Международные отношения»</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">67</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Истории дипломатии и основам международного
+											сотрудничества; навыкам ведения деловой переписки по
+											вопросам организации международных мероприятий; ведение
+											референтской работы; основам ведения переговоров, в том
+											числе на иностранных языках; осуществлению
+											учебно-вспомогательной работы в вузах международного
+											профиля; выполнению обязанностей младшего и среднего звена
+											исполнителей в учреждениях системы МИД России;
+											осуществлению организационной и административной работы в
+											иных госучреждениях, федеральных и региональных органах
+											власти и управления; выполнению обязанностей референта и
+											переводчика материалов с иностранного языка на русский и с
+											русского на иностранный язык.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники магистерской программы по международным
+											отношениям смогут успешно реализовать себя в коммерческих
+											и государственных организациях в качестве
+											переводчика-референта, специалист по ведению
+											внешнеэкономической деятельности, а также в сфере туризма
+											региона специализации; смогут трудиться дипломатами,
+											торговыми представителями, редакторами или журналистами, а
+											также специалистами по работе со СМИ; смогут осуществлять
+											преподавательскую деятельность в образовательных
+											организаициях; осуществлять работу в качестве научного
+											сотрудника в научно-исследовательских организациях; могут
+											повысить свою исследовательскую квалификацию, поступив на
+											обучение в аспирантуру.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – доктор исторических наук,
+										заведующий кафедрой всеобщей истории и международных
+										отношений
+										<a href="https://www.asu.ru/search/persons/382/"
+											>Чернышов Юрий Георгиевич</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+79039905397">+7 (903) 990-53-97</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:7ashpi7@gmail.com ">7ashpi7@gmail.com </a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 46.04.02 ДОКУМЕНТОВЕДЕНИЕ И АРХИВОВЕДЕНИЕ, ПРОФИЛЬ
+									«ДОКУМЕНТАЦИОННЫЕ СИСТЕМЫ И АРХИВЫ В РЕГИОНАЛЬНОЙ СИСТЕМЕ
+									УПРАВЛЕНИЯ»
+								</h3>
+								<p>
+									Магистерская программа по документоведению и архивоведению
+									относится к числу практикоориентированных и реализуется с
+									привлечением ведущих специалистов отрасли региона:
+									Правительства Алтайского края; Министерства культуры
+									Алтайского края, Государственного архива Алтайского края. С
+									точки зрения формирования профессиональных навыков в области
+									архивововедения и документоведения эта магистерская программа
+									не имеет аналогов в России.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_46_04_02_dokumentovedenie%20i%20arkhivovedenie_dsia-1-2021_2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 2 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>8</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>2</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>5</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">54 615 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>
+												Экзамен по направлению «Документоведение и
+												архивоведение» (тест)
+											</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">60</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Технологиям документационное обеспечение управления и
+											управлению архивным делом; основам организации хранения,
+											учета, комплектования, экспертизе ценности,
+											справочно-поисковым средствам и использованию архивных
+											документов; нормативной базе документационного обеспечения
+											управления и архивного дела; основам научных исследований
+											в области документоведения и архивоведения.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Благодаря углубленной практической подготовке, в том числе
+											в ключевых организациях и ведомствах отрасли, выпускники
+											магистратуры по документоведению и архивоведению успешно
+											трудоустраиваются в качестве служащих органов
+											государственной власти и управления; в архивы
+											(государственные, муниципальные, ведомственные,
+											негосударственные); трудятся специалистами по
+											документообороту в информационных, аналитических и
+											многофункциональных центрах; работают специалистами
+											кадровых отделов учреждений и предприятий; устраиваются в
+											качестве преподавателей в учреждения высшего и
+											средне-специального образования.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – доктор исторических наук, профессор
+										кафедры отечественной истории
+										<a href="https://www.asu.ru/search/persons/384/"
+											>Владимиров Владимир Николаевич</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+79132104406">+7 (913) 210-44-06</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:vvladimirov@icloud.com"
+												>vvladimirov@icloud.com</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 09.04.03 ПРИКЛАДНАЯ ИНФОРМАТИКА, ПРОФИЛЬ «АНАЛИЗ
+									ДАННЫХ И РАЗРАБОТКА ЦИФРОВЫХ МЕДИА»
+								</h3>
+								<p>
+									Уникальная междисциплинарная магистерская программа
+									реализуется при участии ведущих специалистов в области
+									истории, исторической информатики и информационных технологий
+									Алтайского государственного университета и Сибирского
+									федерального университета.
+								</p>
+								<div class="programs--uch-plan">
+									<a href="#">Очная форма обучения</a>
+								</div>
+								<p><b>Срок обучения</b> — 2 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>7</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>1</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>8</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">-</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>Экзамен по направлению «Прикладная информатика»</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">-</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Применению системного подхода к информатизации и
+											автоматизации; решению прикладных задач; моделированию
+											прикладных и информационных процессов, описанию и
+											реализации информационного обеспечения прикладных задач;
+											построению информационных систем в области цифровых медиа
+											на основе современных информационно-коммуникационных
+											технологий и математических методов; подготовке обзоров,
+											аннотаций, рефератов, научных докладов, публикаций;
+											научно-исследовательской работе в области прикладной
+											информатики; организации и управлению информационными
+											ресурсами и сервисами; организации
+											информационно-телекоммуникационной инфраструктуры и
+											управлении информационной безопасностью информационных
+											систем.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники магистерской программы по прикладной
+											информатике смогут найти себя в качестве руководителя
+											и/или менеджера компании по разработке и продвижению
+											интерактивных медиапродуктов: фильмов, игр, сайтов, миров
+											дополненной и смешанной реальности, 3D-объектов,
+											дизайнерских решений, мобильных приложений под iOS и
+											Android и т.п.; в качестве руководителя и исполнителя
+											проектов в области цифровых технологий в гуманитарной
+											сфере, в области сохранения и репрезентации
+											историко-культурного наследия; в качестве специалиста по
+											виртуальным историческим реконструкциям; смогут
+											осуществлять научно-исследовательскую работу в области
+											исследования закономерностей̆ становления и развития
+											информационного общества; смогут работать аналитиками
+											данных, специалистами по обработке и визуализации данных,
+											консультантами в области аналитики и визуализации данных с
+											применением основных методов и подходов науки о данных
+											(Data Science), IT-консультантами.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – доктор исторических наук, профессор
+										кафедры отечественной истории
+										<a href="https://www.asu.ru/search/persons/384/"
+											>Владимиров Владимир Николаевич</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+79132104406">+7 (913) 210-44-06</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:vvladimirov@icloud.com"
+												>vvladimirov@icloud.com</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 51.04.04 МУЗЕОЛОГИЯ И ОХРАНА ОБЪЕКТОВ КУЛЬТУРНОГО
+									И ПРИРОДНОГО НАСЛЕДИЯ, ПРОФИЛЬ «ИСТОРИКО-КУЛЬТУРНОЕ НАСЛЕДИЕ:
+									ИЗУЧЕНИЕ, СОХРАНЕНИЕ И ИСПОЛЬЗОВАНИЕ»
+								</h3>
+								<p>
+									Магистерская программа имеет практикоориентированную
+									направленность и отвечает потребностям отрасли культуры в
+									квалифицированных кадрах, прежде всего в музейных хранителях и
+									специалистах в области музейного учета. Программа нацелена на
+									профессиональную подготовку магистров в области музеологии,
+									способных развивать музейную теорию и музейную практику в XXI
+									веке и работать со всеми видами культурного и природного
+									наследия. Магистерская программа реализуется при участии
+									ведущих специалистов – представителей музейной отрасли
+									региона.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_51_04_04_muzyeologiya_ikn-1-2021_2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 2 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>5</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>3</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>10</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">54 615 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>
+												Экзамен по направлению «Музеология и охрана объектов
+												культурного и природного наследия»
+											</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">85</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Навыкам научно-исследовательской работы в музейной сфере;
+											выявлять объекты музейного значения, давать им оценку
+											ставить их на учет, определять их статус; разрабатывать и
+											проводить экскурсии для различных целевых аудиторий;
+											разрабатывать и реализовать программы в сфере сохранения и
+											использования культурного и природного наследия;
+											осуществлять грантовую деятельность в сфере культуры;
+											производить атрибуцию, научное описание музейных предметов
+											и культурно-исторических памятников; применять цифровые и
+											мультимедийные технологии в сфере визуализации,
+											презентации и продвижения культурного и природного
+											наследия, создавать базы данных; проектировать выставки и
+											экспозиции разной тематики и направленности, в том числе
+											виртуальные.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники магистратуры по музеологии найдут себе
+											применение в различных учреждениях культуры, в том числе в
+											ведущих музея страны; они смогут работать кураторами
+											выставок; специалистами в сфере туристического и
+											экскурсионного бизнеса, специалистами по государственной
+											охране памятников, смогут трудиться в региональных органах
+											управления в сфере культуры и природопользования; смогут
+											работать преподавателями в учебных заведениях всех
+											уровней, а также смогут повысить свою исследовательскую
+											квалификацию, поступив на обучение в аспирантуру.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – доктор исторических наук,
+										заведующий кафедрой археологии, этнографии и музеологии
+										<a href="https://www.asu.ru/search/persons/380/"
+											>Тишкин Алексей Алексеевич</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+79635300954">+7 (963) 530-09-54</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:tishkin210@mail.ru">tishkin210@mail.ru</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 41.04.01 ЗАРУБЕЖНОЕ РЕГИОНОВЕДЕНИЕ, ПРОФИЛЬ
+									«ПОЛИТИКА И ЭКОНОМИКА РЕГИОНОВ АЗИИ»
+								</h3>
+								<p>
+									Уникальность магистерской программы по зарубежному
+									регионоведению состоит в углубленном изучении исторического,
+									экономического и политического контекста в различных регионах
+									Восточной и Центральной Азии. Конкурентным преимуществом
+									данной магистерской программы является изучение восточных
+									языков: китайский, корейский японский, а также предоставляемые
+									возможности стажировок в ведущих азиатских вузах-партнерах.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_41_04_01_zarubezhnoe%20regionovedenie%20_azreg-1-2021_2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 2 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>7</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>1</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>8</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">54 615 ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>
+												Экзамен по направлению «Зарубежное регионоведение»
+											</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">66</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Иностранным языкам (английскому, китайскому, корейскому,
+											японскому); особенностям истории, культуры, экономики и
+											политики в регионах Восточной и Центральной Азии; основам
+											ведения деловой переписки по вопросам организации
+											международных мероприятий; участию в переговорах на
+											иностранных языках; ведению референтской работы на
+											иностранных языках; ведению учебно-вспомогательной работы
+											в вузах международного профиля; выполнению обязанностей
+											младшего и среднего организационной и административной
+											работы в иных госучреждениях, федеральных и региональных
+											органах власти и управления; выполнению обязанностей
+											референта и переводчика материалов с иностранного языка на
+											русский и с русского на иностранный язык.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники магистерской программы по зарубежному
+											регионоведению смогут успешно реализовать себя в
+											коммерческих и государственных организациях в качестве
+											переводчика-референта, специалист по ведению
+											внешнеэкономической деятельности, а также в сфере туризма
+											региона специализации; смогут трудиться дипломатами,
+											торговыми представителями, редакторами или журналистами, а
+											также специалистами по работе со СМИ; смогут осуществлять
+											преподавательскую деятельность в образовательных
+											организациях; осуществлять работу в качестве научного
+											сотрудника в научно-исследовательских организациях; могут
+											повысить свою исследовательскую квалификацию, поступив на
+											обучение в аспирантуру.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – доктор исторических наук,
+										заведующий кафедрой востоковедения
+										<a href="https://www.asu.ru/search/persons/662/"
+											>Лысенко Юлия Александровна</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+79609661574">+7 (960) 966-15-74</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:ulia_199674@mail.ru"
+												>ulia_199674@mail.ru</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+							<!-- start -->
+							<div class="dropdown--container">
+								<h3 class="program--title">
+									НАПРАВЛЕНИЕ 41.04.01 ЗАРУБЕЖНОЕ РЕГИОНОВЕДЕНИЕ, ПРОФИЛЬ
+									«ТЮРКОЛОГИЯ»
+								</h3>
+								<p>
+									Уникальная междисциплинарная магистерская программа по
+									тюркологии реализуется при участии ведущих специалистов по
+									истории, этнографии, археологии и языкознанию тюркских народов
+									из ведущих научно-образовательных центров России и стран
+									Центральной Азии. Программы нацелена на изучение тюркских
+									языков и способствует формированию навыков
+									научно-исследовательской работы, позволяющих успешно
+									продолжить академическую карьеру в аспирантуре.
+								</p>
+								<div class="programs--uch-plan">
+									<a
+										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_41_04_01_zarubezhnoe%20regionovedenie%20_azreg-1-2021_2021.pdf"
+										>Очная форма обучения</a
+									>
+								</div>
+								<p><b>Срок обучения</b> — 2 года очно.</p>
+
+								<div class="programs--numbers__banner">
+									<div class="programs--numbers__item">
+										<span>7</span> <small>Бюджетных мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>1</span> <small>Целевых мест</small>
+									</div>
+									<div class="programs--numbers__item">
+										<span>8</span> <small>Платных мест</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="negative">- ₽</span>
+										<small>в семестр в 2021-2022 г.</small>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<ul>
+											<li>
+												Экзамен по направлению «Зарубежное регионоведение»
+											</li>
+										</ul>
+									</div>
+									<div class="programs--numbers__divider"></div>
+									<div class="programs--numbers__item">
+										<span class="big">66</span>
+										<small>Проходной балл в 2021 г.</small>
+									</div>
+								</div>
+								<div class="container">
+									<p></p>
+									<h2 class="programs--profile-header">Чему научат</h2>
+									<div class="programs--content">
+										<p>
+											Иностранным языкам (английскому и одному из тюркских
+											языков); особенностям истории и культуры тюркских народов;
+											основам ведения деловой переписки по вопросам организации
+											международных мероприятий; участию в переговорах на
+											иностранных языках; ведению референтской работы на
+											иностранных языках; ведению учебно-вспомогательной работы
+											в вузах международного профиля; выполнению обязанностей
+											младшего и среднего организационной и административной
+											работы в иных госучреждениях, федеральных и региональных
+											органах власти и управления; выполнению обязанностей
+											референта и переводчика материалов с иностранного языка на
+											русский и с русского на иностранный язык.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header">Карьерная траектория</h2>
+									<div class="programs--content">
+										<p>
+											Выпускники магистерской программы по тюркологии смогут
+											успешно реализовать себя в качестве научного сотрудника в
+											научно-исследовательских организациях, смогут трудиться в
+											коммерческих и государственных организациях в качестве
+											переводчика-референта, специалиста по ведению
+											внешнеэкономической деятельности, а также в сфере туризма
+											региона специализации; смогут трудиться дипломатами,
+											торговыми представителями, редакторами или журналистами, а
+											также специалистами по работе со СМИ; смогут осуществлять
+											преподавательскую деятельность в образовательных
+											организациях; могут повысить свою исследовательскую
+											квалификацию, поступив на обучение в аспирантуру.
+										</p>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="programs--profile-header mb-4">Контакты</h2>
+									<p>
+										Руководитель программы – доктор исторических наук,
+										заведующий кафедрой востоковедения
+										<a href="https://www.asu.ru/search/persons/662/"
+											>Лысенко Юлия Александровна</a
+										>.
+									</p>
+									<h3>Дополнительная информация:</h3>
+									<ul>
+										<li class="phone-number mb-2">
+											Телефон: <a href="tel:+79609661574">+7 (960) 966-15-74</a>
+										</li>
+										<li class="mail-adress">
+											E-mail:
+											<a href="mailto:ulia_199674@mail.ru"
+												>ulia_199674@mail.ru</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- End  -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="programs--students__section">
+				<div class="programs--students container">
+					<div class="programs--students__logo">
+						<img alt="" src="../../files/images.215/programs/3d.png" />
+					</div>
+					<div class="programs--students__content">
+						<h2>Меры поддержки для первокурсников</h2>
+						<a href="https://abiturient.asu.ru/bachelor/grants2021/"
+							>Подробнее</a
+						>
+					</div>
+				</div>
+			</section>
+			<section class="programs--contacts">
+				<div class="programs--form">
+					<h3>Оставить заявку</h3>
+					<form>
+						<div class="callModalFormRow">
+							<div class="callModalFormColumn">
+								<label for="name">Имя</label>
+								<input type="text" id="name" required="" name="name" />
+							</div>
+							<div class="callModalFormColumn">
+								<label for="secondName">Фамилия</label>
+								<input
+									type="text"
+									id="secondName"
+									required=""
+									name="secondName"
+								/>
+							</div>
+						</div>
+						<div class="callModalFormColumn">
+							<label for="tel">Номер телефона</label>
+							<input
+								type="tel"
+								value="+7"
+								pattern="^[7|8]{0,1}\d{10}$|(^\+7{1}\d{10}$)"
+								maxlength="12"
+								id="tel"
+								required=""
+								name="phoneNumber"
+							/>
+							<small>Пример: +71235641122</small>
+						</div>
+						<div class="callModalFormColumn">
+							<label for="question">Опишите ваш вопрос</label
+							><textarea
+								rows="10"
+								cols="25"
+								id="question"
+								name="question"
+								placeholder="Напишите интересующий Вас вопрос..."
+								required=""
+							></textarea>
+						</div>
+					</form>
+				</div>
+			</section>
+		</section>
+	</body>
+</html>
