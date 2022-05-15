@@ -33,7 +33,7 @@
     max-width: unset !important;
   }
 
-  .main-buttons-container {
+  .main-buttons-container--d {
     display: none !important;
   }
 
@@ -42,6 +42,10 @@
   }
 
   .breadcrumbs {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .breadcrumbs--d {
     display: none !important;
   }
 
@@ -54,17 +58,6 @@
   }
   .col {
     padding: 0 !important;
-  }
-  .programs--profile-header {
-    padding-left: 45px;
-  }
-  .programs--profile-header::before {
-    background-image: url("https://abiturient.asu.ru/.themes/.abiturient.2021/img/main/footer/hashtag.svg") !important;
-    left: 0;
-    width: 40px;
-  }
-  .programs--profile-header.after::after {
-    background-image: url("https://www.asu.ru/files/images.215/programs/pattern-01.svg") !important;
   }
   .programs--numbers__banner {
     margin-top: 2rem;
@@ -170,49 +163,53 @@
       <div class="col-sm-6 col-lg-4 states-item states-item_green">
         <a
           class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-          href="https://abiturient.asu.ru/programmag/ibb/"
+          href="/programaspir/ibb/"
           ><img
             alt="Институт биологии и биотехнологий"
-            class="states-item_icon"
-            src="/.themes/.abitur2021/img/main/states/bio-icon.svg"
+            class="states-item_icon x-img x-state-icon-bio"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           />
-          <h5 class="states-item_text">Институт биологии и биотехнологий</h5>
+          <h5 class="states-item_text">
+              Институт биологии и биотехнологий
+          </h5>
         </a>
       </div>
       <div class="col-sm-6 col-lg-4 states-item states-item_blue">
         <a
           class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-          href="https://abiturient.asu.ru/programmag/ingeo"
+          href="/programaspir/ingeo/"
           ><img
             alt="Институт географии"
-            class="states-item_icon"
-            src="/.themes/.abitur2021/img/main/states/geography-icon.svg"
-          />
-          <h5 class="states-item_text">Институт географии</h5>
-        </a>
-      </div>
-      <div class="col-sm-6 col-lg-4 states-item states-item_orange">
-        <a
-          class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-          href="https://abiturient.asu.ru/programmag/iimo/"
-          ><img
-            alt="Институт истории и международных отношений"
-            class="states-item_icon"
-            src="/.themes/.abitur2021/img/main/states/history-icon.svg"
+            class="states-item_icon x-img x-state-icon-geography"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           />
           <h5 class="states-item_text">
-            Институт истории и международных отношений
+            Институт географии
           </h5>
         </a>
       </div>
       <div class="col-sm-6 col-lg-4 states-item states-item_orange">
         <a
           class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-          href="https://abiturient.asu.ru/programmag/imit/"
+          href="/programaspir/iimo/"
+          ><img
+            alt="Институт истории и международных отношений"
+            class="states-item_icon x-img x-state-icon-history"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          />
+          <h5 class="states-item_text">
+           Институт истории и международных отношений
+          </h5>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-4 states-item states-item_orange">
+        <a
+          class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
+          href="/programaspir/imit/"
           ><img
             alt="Институт математики и информационных технологий"
-            class="states-item_icon"
-            src="/.themes/.abitur2021/img/main/states/maths.svg"
+            class="states-item_icon x-img x-state-icon-maths"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           />
           <h5 class="states-item_text">
             Институт математики и информационных технологий
@@ -222,23 +219,25 @@
       <div class="col-sm-6 col-lg-4 states-item states-item_red">
         <a
           class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-          href="https://abiturient.asu.ru/programmag/ign/"
+          href="/programaspir/ign/"
           ><img
             alt="Институт гуманитарных наук"
-            class="states-item_icon"
-            src="/.themes/.abitur2021/img/main/states/gum-icon.svg"
+            class="states-item_icon x-img x-state-icon-gum"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           />
-          <h5 class="states-item_text">Институт гуманитарных наук</h5>
+          <h5 class="states-item_text">
+            Институт гуманитарных наук
+          </h5>
         </a>
       </div>
       <div class="col-sm-6 col-lg-4 states-item states-item_blue">
         <a
           class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-          href="https://abiturient.asu.ru/programmag/ictef/"
+          href="/programaspir/ictef/"
           ><img
             alt="Институт цифровых технологий, электроники и физики"
-            class="states-item_icon"
-            src="/.themes/.abitur2021/img/main/states/coding.svg"
+            class="states-item_icon x-img x-state-icon-coding"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           />
           <h5 class="states-item_text">
             Институт цифровых технологий, электроники и физики
@@ -248,38 +247,39 @@
       <div class="col-sm-6 col-lg-4 states-item states-item_red">
         <a
           class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-          href="https://abiturient.asu.ru/programmag/miemis/"
+          href="/programaspir/miemis/"
           ><img
             alt="Международный институт экономики, менеджмента и информационных систем"
-            class="states-item_icon"
-            src="/.themes/.abitur2021/img/main/states/eco-icon.svg"
+            class="states-item_icon x-img x-state-icon-eco"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           />
           <h5 class="states-item_text">
-            Международный институт экономики, менеджмента и информационных
-            систем
+            Международный институт экономики, менеджмента и информационных систем
           </h5>
         </a>
       </div>
       <div class="col-sm-6 col-lg-4 states-item states-item_orange">
         <a
           class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-          href="https://abiturient.asu.ru/programmag/yi/"
+          href="/programaspir/yi/"
           ><img
             alt="Юридический институт"
-            class="states-item_icon"
-            src="/.themes/.abitur2021/img/main/states/law-icon.svg"
+            class="states-item_icon x-img x-state-icon-law"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           />
-          <h5 class="states-item_text">Юридический институт</h5>
+          <h5 class="states-item_text">
+            Юридический институт
+          </h5>
         </a>
       </div>
       <div class="col-sm-6 col-lg-4 states-item states-item_green">
         <a
           class="states-item_wrapper d-flex justify-content-center align-items-center text-center flex-column"
-          href="https://abiturient.asu.ru/programmag/chem/"
+          href="/programaspir/chem/"
           ><img
             alt="Институт химии и химико-фармацевтических технологий"
-            class="states-item_icon"
-            src="/.themes/.abitur2021/img/main/states/chemistry-icon.svg"
+            class="states-item_icon x-img x-state-icon-chemistry"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           />
           <h5 class="states-item_text">
             Институт химии и химико-фармацевтических технологий

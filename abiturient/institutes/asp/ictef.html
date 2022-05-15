@@ -1,907 +1,552 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<!-- Styles -->
-		<!-- <link rel="stylesheet" href="https://abiturient.asu.ru/files/assets/abiturient/programs.css" /> -->
-		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../../css/main.css" />
-		<link rel="stylesheet" href="../../css/programs.css" />
-		<!-- <script src="https://abiturient.asu.ru/files/assets/abiturient/programs.js" defer></script> -->
-		<script src="../js/programs.js" defer></script>
-		<style type="text/css">
-			.content {
-				overflow: hidden !important;
-			}
-			.content ul,
-			.content ol {
-				text-align: unset !important;
-			}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Styles -->
+    <!-- <link rel="stylesheet" href="https://abiturient.asu.ru/files/assets/abiturient/programs.css" /> -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/programs.css" />
+    <!-- <script src="https://abiturient.asu.ru/files/assets/abiturient/programs.js" defer></script> -->
+    <script src="../../js/programs.js" defer></script>
+    <style type="text/css">
+      .content {
+        overflow: hidden !important;
+      }
+      .content ul,
+      .content ol {
+        text-align: unset !important;
+      }
 
-			.content img {
-				margin-bottom: 0;
-				max-width: 100% !important;
-				max-height: 100% !important;
-				height: auto !important;
-			}
-			.programs--banner__heading {
-				margin-right: 1.5rem;
-				margin-top: 0;
-				margin-bottom: 0;
-				margin-left: 0;
-			}
-			.programs--banner__emblem {
-				margin: 0 0 0.8rem 0 !important;
-			}
+      .content img {
+        margin-bottom: 0;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        height: auto !important;
+      }
+      .programs--banner__heading {
+        margin-right: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+      }
+      .programs--banner__emblem {
+        margin: 0 0 0.8rem 0 !important;
+      }
 
-			.programs--banner__lottie {
-				width: 100% !important;
-			}
-			.template__main-container {
-				padding: 0 15px !important;
-				margin: 0 !important;
-				width: 100% !important;
-				max-width: unset !important;
-			}
+      .programs--banner__lottie {
+        width: 100% !important;
+      }
+      .template__main-container {
+        padding: 0 15px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: unset !important;
+      }
 
-			.main-buttons-container {
-				display: none !important;
-			}
+      .main-buttons-container {
+        display: none !important;
+      }
 
-			.sidebar {
-				display: none !important;
-			}
+      .sidebar {
+        display: none !important;
+      }
 
-			.breadcrumbs {
-				display: none !important;
-			}
+      .breadcrumbs {
+        display: none !important;
+      }
 
-			.template__main-content .template__content-header {
-				display: none !important;
-			}
-			.programs--numbers__item span.negative {
-				margin: 0;
-				margin-bottom: 0.45rem;
-			}
-			.col {
-				padding: 0 !important;
-			}
-			.programs--profile-header {
-				padding-left: 45px;
-			}
-			.programs--profile-header::before {
-				background-image: url('https://abiturient.asu.ru/.themes/.abitur2021/img/main/footer/hashtag.svg') !important;
-				left: 0;
-				width: 40px;
-			}
-			.programs--profile-header.after::after {
-				background-image: url('https://www.asu.ru/files/images.215/programs/pattern-01.svg') !important;
-			}
-			.programs--numbers__banner {
-				margin-top: 2rem;
-			}
-			.dropdown--header {
-				justify-content: flex-start;
-			}
-			.dropdown--button {
-				color: #000000;
-				margin-right: 0.5rem;
-			}
-			.dropdown--button:last-child {
-				margin-right: 0;
-			}
-			.programs--content {
-				padding-bottom: 0;
-			}
+      .template__main-content .template__content-header {
+        display: none !important;
+      }
+      .programs--numbers__item span.negative {
+        margin: 0;
+        margin-bottom: 0.45rem;
+      }
+      .col {
+        padding: 0 !important;
+      }
+      .programs--profile-header {
+        padding-left: 45px;
+      }
+      .programs--profile-header::before {
+        background-image: url("https://abiturient.asu.ru/.themes/.abiturient.2021/img/main/footer/hashtag.svg") !important;
+        left: 0;
+        width: 40px;
+      }
+      .programs--profile-header.after::after {
+        background-image: url("https://www.asu.ru/files/images.215/programs/pattern-01.svg") !important;
+      }
+      .programs--numbers__banner {
+        margin-top: 2rem;
+      }
+      .dropdown--header {
+        justify-content: flex-start;
+      }
+      .dropdown--button {
+        color: #000000;
+        margin-right: 0.5rem;
+      }
+      .dropdown--button:last-child {
+        margin-right: 0;
+      }
+      .programs--content {
+        padding-bottom: 0;
+      }
 
-			.programs--content p {
-				text-indent: 2rem;
-			}
-			@media screen and (max-width: 425.98px) {
-				.programs--banner__heading {
-					margin-right: 0;
-					margin-top: 0;
-					margin-bottom: 1.5rem;
-					margin-left: 0;
-				}
-				.dropdown--button {
-					margin-right: 0;
-				}
-				.programs--students__logo img {
-					height: 200px !important;
-					margin-bottom: 2rem !important;
-				}
-				.programs--banner__emblem {
-					margin: 0 auto !important;
-					margin-bottom: 1rem !important;
-				}
-				.programs--numbers__item span.negative {
-					margin-bottom: 0 !important;
-					margin-right: 0.5rem !important;
-				}
-				.dropdown--header {
-					justify-content: space-evenly;
-				}
-			}
-			.programs--banner__header {
-				margin-bottom: 1rem;
-				text-align: start;
-			}
-			.program--description {
-				font-size: 0.6rem;
-				margin: 0 !important;
-				margin-bottom: 25px !important;
-				line-height: 1.5;
-				letter-spacing: 0.04rem;
-				font-weight: 500;
-			}
-			.dropdown--content .dropdown--container .program--title {
-				font-size: 1.6rem;
-				text-align: center;
-				width: 80%;
-				margin: 0 auto;
-				margin-bottom: 1.8rem;
-			}
-			.dropdown--content .dropdown--container h2,
-			.dropdown--content .dropdown--container h3,
-			.dropdown--content .dropdown--container h4,
-			.dropdown--content .dropdown--container h5,
-			.dropdown--content .dropdown--container h6 {
-				font-weight: 700;
-				color: var(--asu-dark);
-			}
-			.programs--uch-plan {
-				display: flex;
-				align-items: center;
-				justify-content: space-evenly;
-				flex-wrap: wrap;
-				margin-top: 1.5rem;
-				margin-bottom: 3rem;
-			}
-			.programs--uch-plan a {
-				padding: 0.45rem 1.5rem;
-				margin-bottom: 1rem;
-				text-align: center;
-				background-color: var(--asu-accent);
-				color: #fff;
-				font-weight: 500;
-				box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.25);
-				border-radius: 15px;
-			}
-			ul li {
-				margin-bottom: 0.55rem;
-			}
-			.programs--banner__header {
-				color: var(--asu-accent);
-			}
-			:root {
-				--asu-accent: #2f68af;
-			}
-		</style>
-		<section class="section" style="padding-top: 0">
-			<div class="programs--banner">
-				<div class="programs--banner__heading">
-					<img
-						class="programs--banner__emblem"
-						alt=""
-						src="https://www.asu.ru/files/images.215/programs/logos/ftf.png?_t=1641650357"
-					/>
-					<h1 class="programs--banner__header">
-						Институт цифровых технологий, электроники и физики
-					</h1>
-					<p class="program--description">
-						Институт цифровых технологий, электроники и физики – это современный
-						научно-образовательный центр, реализующий подготовку
-						квалифицированных специалистов по высокотехнологичным направлениям
-						естественнонаучного профиля и информационно-коммуникационным
-						технологиям. По всем направлениям подготовки – информационная
-						безопасность, информатика и вычислительная техника, радиофизика,
-						физика - реализуется модель непрерывного практико-ориентированного
-						образования «бакалавриат-магистратура-аспирантура».
-					</p>
-					<div class="programs--image__content">
-						<div class="programs--image__content_item">
-							<span
-								class="numbers"
-								id="jsNumber"
-								style="font-size: 3rem; padding: 0.6rem 1.5rem"
-								data-value="168"
-								>168</span
-							>
-							<span class="description">Бюджетные места</span>
-						</div>
-						<div class="programs--image__content_divider"></div>
-						<div class="programs--image__content_item">
-							<span>в 2021 - 2022 году</span>
-							<span class="numbers">118 380 ₽</span>
-							<span class="description">Стоимость</span>
-						</div>
-					</div>
-				</div>
-				<lottie-player
-					class="programs--banner__lottie"
-					src="https://assets8.lottiefiles.com/packages/lf20_oq2thwu8.json"
-					background="transparent"
-					speed="1"
-					loop=""
-					autoplay=""
-				></lottie-player>
-			</div>
-			<section>
-				<div class="container">
-					<h2 class="programs--profile-header mb-10 after">
-						Программы обучения
-					</h2>
-					<div id="dropdown">
-						<div class="dropdown--header">
-							<button class="dropdown--button active">
-								Физические методы и информационные технологии в медицине
-							</button>
-							<button class="dropdown--button">
-								Электромагнитные волны в средах
-							</button>
-							<button class="dropdown--button">
-								Нейроинформационные технологии и робототехнические системы
-							</button>
-							<button class="dropdown--button">
-								Цифровые инфокоммуникационные системы
-							</button>
-							<button class="dropdown--button">
-								Информационная безопасность интеллектуальных автоматизированных
-								систем
-							</button>
-						</div>
-						<div class="dropdown--content container">
-							<!-- start -->
-							<div class="dropdown--container active">
-								<h3 class="program--title">
-									03.04.02 ФИЗИКА, ПРОФИЛЬ «ФИЗИЧЕСКИЕ МЕТОДЫ И ИНФОРМАЦИОННЫЕ
-									ТЕХНОЛОГИИ В МЕДИЦИНЕ»
-								</h3>
-								<p>
-									Программа готовит наноинженеров нового поколения, которые
-									создают технологии будущего и меняют мир вокруг нас.
-									Инновационная комбинация теоретических и практических знаний в
-									области нанотехнологий позволяет выпускникам программы
-									разрабатывать новейшие наноматериалы, функционал которых
-									востребован в энергосберегающих, экологических и медицинских
-									областях.
-								</p>
-								<p>
-									Программа обучения содержит курсы физического, химического и
-									биологического содержания. Систему специальных курсов можно
-									условно разделить на три блока:
-								</p>
-								<ul>
-									<li>
-										фундаментальные вопросы физики, химии и биологии наносистем,
-									</li>
-									<li>методы диагностики наносистем</li>
-									<li>современные технологии формирования нанообъектов.</li>
-								</ul>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_03_04_02_fizika_fn-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
+      .programs--content p {
+        text-indent: 2rem;
+      }
+      @media screen and (max-width: 425.98px) {
+        .programs--banner__heading {
+          margin-right: 0;
+          margin-top: 0;
+          margin-bottom: 1.5rem;
+          margin-left: 0;
+        }
+        .dropdown--button {
+          margin-right: 0;
+        }
+        .programs--students__logo img {
+          height: 200px !important;
+          margin-bottom: 2rem !important;
+        }
+        .programs--banner__emblem {
+          margin: 0 auto !important;
+          margin-bottom: 1rem !important;
+        }
+        .programs--numbers__item span.negative {
+          margin-bottom: 0 !important;
+          margin-right: 0.5rem !important;
+        }
+        .dropdown--header {
+          justify-content: space-evenly;
+        }
+      }
+      .programs--banner__header {
+        margin-bottom: 1rem;
+        text-align: start;
+      }
+      .program--description {
+        font-size: 0.6rem;
+        margin: 0 !important;
+        margin-bottom: 25px !important;
+        line-height: 1.5;
+        letter-spacing: 0.04rem;
+        font-weight: 500;
+      }
+      .dropdown--content .dropdown--container .program--title {
+        font-size: 1.6rem;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 1.8rem;
+      }
+      .dropdown--content .dropdown--container h2,
+      .dropdown--content .dropdown--container h3,
+      .dropdown--content .dropdown--container h4,
+      .dropdown--content .dropdown--container h5,
+      .dropdown--content .dropdown--container h6 {
+        font-weight: 700;
+        color: var(--asu-dark);
+      }
+      .programs--uch-plan {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+      }
+      .programs--uch-plan a {
+        padding: 0.45rem 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        background-color: var(--asu-accent);
+        color: #fff;
+        font-weight: 500;
+        box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+      }
+      ul li {
+        margin-bottom: 0.55rem;
+      }
+      .programs--banner__header {
+        color: var(--asu-accent);
+      }
+      :root {
+        --asu-accent: #2f68af;
+      }
+    </style>
+    <section class="section" style="padding-top: 0">
+      <div class="programs--banner">
+        <div class="programs--banner__heading">
+          <img
+            class="programs--banner__emblem"
+            alt=""
+            src="https://www.asu.ru/files/images.215/programs/logos/ftf.png?_t=1641650357"
+          />
+          <h1 class="programs--banner__header">
+            Институт цифровых технологий, электроники и физики
+          </h1>
+          <p class="program--description">
+            Институт цифровых технологий, электроники и физики – это современный
+            научно-образовательный центр, реализующий подготовку
+            квалифицированных специалистов по высокотехнологичным направлениям
+            естественнонаучного профиля и информационно-коммуникационным
+            технологиям. По всем направлениям подготовки – информационная
+            безопасность, информатика и вычислительная техника, радиофизика,
+            физика - реализуется модель непрерывного практико-ориентированного
+            образования «бакалавриат-магистратура-аспирантура».
+          </p>
+          <div class="programs--image__content">
+            <div class="programs--image__content_item">
+              <span
+                class="numbers"
+                id="jsNumber"
+                style="font-size: 3rem; padding: 0.6rem 1.5rem"
+                data-value="12"
+                >12</span
+              >
+              <span class="description">Бюджетные места</span>
+            </div>
+            <div class="programs--image__content_divider"></div>
+            <div class="programs--image__content_item">
+              <span>в 2021 - 2022 году</span>
+              <span class="numbers">- ₽</span>
+              <span class="description">Стоимость</span>
+            </div>
+          </div>
+        </div>
+        <lottie-player
+          class="programs--banner__lottie"
+          src="https://assets8.lottiefiles.com/packages/lf20_oq2thwu8.json"
+          background="transparent"
+          speed="1"
+          loop=""
+          autoplay=""
+        ></lottie-player>
+      </div>
+      <section>
+        <div class="container">
+          <h2 class="programs--profile-header mb-10 after">
+            Программы обучения
+          </h2>
+          <div id="dropdown">
+            <div class="dropdown--header">
+              <button class="dropdown--button active">
+                Приборы и методы экспериментальной физики
+              </button>
+              <button class="dropdown--button">
+                Физика конденсированного состояния
+              </button>
+              <button class="dropdown--button">
+                Системный анлиз, управление и обработка информации
+              </button>
+            </div>
+            <div class="dropdown--content container">
+              <!-- start -->
+              <div class="dropdown--container active">
+                <h3 class="program--title">
+                  1.3.2 – ПРИБОРЫ И МЕТОДЫ ЭКСПЕРИМЕНТАЛЬНОЙ ФИЗИКИ
+                </h3>
+                <p>
+                  Приборы и методы экспериментальной физики – область науки и
+                  техники, включающая экспериментальные и теоретические
+                  исследования, направленные на разработку новых принципов и
+                  методов физических измерений, а также на создание новых
+                  приборов и устройств для изучения физических явлений и
+                  процессов.
+                </p>
+                <!-- <div class="programs--uch-plan">
+								  <a
+									href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_01_04_02_prikladnaya%20matematika%20i%20informatika_bbipi-1-2021_2021_27.04.2021.pdf"
+									>Очная форма обучения</a
+								  >
+								</div> -->
+                <p><b>Срок обучения</b> — 4 года очно.</p>
 
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>10</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>2</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>5</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">62 600 ₽</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>Экзамен по направлению «Физика»</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">65</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<div class="container">
-									<p></p>
-									<h2 class="programs--profile-header">Чему научат</h2>
-									<div class="programs--content">
-										<p>
-											Здесь учат планировать и организовывать научные
-											исследования, разрабатывать и внедрять
-											физико-математические модели для описания явлений и
-											процессов. Знания выпускников магистерской программы будут
-											востребованы в следующих областях науки:
-										</p>
-										<ul>
-											<li>Нано-, био-, информационные и когнитивные науки;</li>
-											<li>Физика конденсированного состояния вещества;</li>
-											<li>Физика систем пониженной размерности;</li>
-											<li>Молекулярная электроника;</li>
-											<li>Физическая химия;</li>
-											<li>Биофизика.</li>
-										</ul>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header">Карьерная траектория</h2>
-									<div class="programs--content">
-										<p>
-											Выпускники программы могут построить научную карьеру в
-											промышленном секторе экономики, стать незаменимыми
-											специалистами в разных кластерах наноиндустрии, таких как
-											наноэлектроника или нанофармацевтика.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель программы – директор ИЦТЭФ, доктор
-										физико-математических наук, доцент
-										<a href="https://www.asu.ru/search/persons/1152/"
-											>Сергей Викторович Макаров</a
-										>.
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852291224">+7 (3852) 29-12-24</a>
-										</li>
-										<li class="mail-adress">
-											E-mail:
-											<a href="mailto:makarov@phys.asu.ru"
-												>makarov@phys.asu.ru</a
-											>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-							<!-- start -->
-							<div class="dropdown--container">
-								<h3 class="program--title">
-									03.04.03 РАДИОФИЗИКА, ПРОФИЛЬ «ЭЛЕКТРОМАГНИТНЫЕ ВОЛНЫ В
-									СРЕДАХ»
-								</h3>
-								<p>
-									Программа готовит креативных разработчиков и исследователей
-									современных радиосистем передачи данных, таких как LTE и 5G,
-									автономных сенсоров умного дома и роботизированной техники.
-								</p>
-								<p>
-									Программа обучения позволяет овладеть навыками по следующим
-									категориям:
-								</p>
-								<ul>
-									<li>
-										цифровые платформы работы с данными, информационные и
-										телекоммуникационные системы и технологии;
-									</li>
-									<li>
-										радиоэлектронные комплексы и устройства, инновационные
-										методы и средства их моделирования, создание опытных
-										образцов и экспериментальная верификация их характеристик;
-									</li>
-									<li>
-										цифровые системы управления, технологии их проектирования,
-										производства и технического обслуживания;
-									</li>
-									<li>
-										спутниковые данные и технологии в условиях перехода к
-										цифровой экономике.
-									</li>
-								</ul>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_03_04_03_radiofizika_emvs-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
+                <div class="programs--numbers__banner">
+                  <div class="programs--numbers__item">
+                    <span>4</span> <small>Бюджетных мест</small>
+                  </div>
+                  <div class="programs--numbers__item">
+                    <span>-</span> <small>Целевых мест</small>
+                  </div>
+                  <div class="programs--numbers__item">
+                    <span>1</span> <small>Платных мест</small>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <span class="negative">- ₽</span>
+                    <small>в семестр в 2021-2022 г.</small>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <ul>
+                      <li>
+                        Экзамен по специальности: Приборы и методы
+                        экспериментальной физики
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <span class="big">80</span>
+                    <small>Проходной балл в 2021 г.</small>
+                  </div>
+                </div>
+                <div class="container">
+                  <h2 class="programs--profile-header">Карьерная траектория</h2>
+                  <div class="programs--content">
+                    <p>
+                      Выпускники выстаивают успешную карьеру в сфере
+                      экспериментальных и теоретических научных исследований, в
+                      области создания новых приборов и устройств для изучения
+                      физических явлений и процессов.
+                    </p>
+                  </div>
+                </div>
+                <div class="container">
+                  <h2 class="programs--profile-header mb-4">Контакты</h2>
+                  <b>Научные руководители программы:</b>
+                  <ul>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/750/"
+                        >Лагутин Анатолий Алексеевич</a
+                      >
+                      - профессор, д.ф.-м.н., заведующий кафедрой радиофизики и
+                      теоретической физики
+                    </li>
+                  </ul>
+                  <h3>Дополнительная информация:</h3>
+                  <p>
+                    к.псих.н., доцент, зав. сектором аспирантуры и докторантуры
+                    <a href="https://www.asu.ru/search/persons/2172/"
+                      >Тихонова Оксана Николаевна</a
+                    >
+                  </p>
+                  <ul>
+                    <li class="phone-number mb-2">
+                      Телефон: <a href="tel:+73852298160">+7 (3852) 298-160</a>
+                    </li>
+                    <li class="mail-adress">
+                      E-mail:
+                      <a href="mailto:tihonova@mc.asu.ru">tihonova@mc.asu.ru</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End  -->
+              <!-- start -->
+              <div class="dropdown--container">
+                <h3 class="program--title">
+                  1.3.8 – ФИЗИКА КОНДЕНСИРОВАННОГО СОСТОЯНИЯ
+                </h3>
+                <p>
+                  Основой программы по научной специальности «Физика
+                  конденсированного состояния» является теоретическое и
+                  экспериментальное исследование природы кристаллических и
+                  аморфных, неорганических и органических веществ в твердом и
+                  жидком состояниях и изменение их физических свойств при
+                  различных внешних воздействиях.
+                </p>
+                <!-- <div class="programs--uch-plan">
+								  <a
+									href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_01_04_02_prikladnaya%20matematika%20i%20informatika_bbipi-1-2021_2021_27.04.2021.pdf"
+									>Очная форма обучения</a
+								  >
+								</div> -->
+                <p><b>Срок обучения</b> — 4 года очно.</p>
 
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>10</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>2</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>5</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">62 600 ₽</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>Экзамен по направлению «Радиофизика» (письменно)</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">44</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<div class="container">
-									<p></p>
-									<h2 class="programs--profile-header">Чему научат</h2>
-									<div class="programs--content">
-										<p>
-											Выпускники программы владеют экспериментальным и
-											теоретическим методам в радиофизике, основами
-											программирования, новейшими методами компьютерного
-											моделирования и прототипирования цифровых и аналоговых
-											высокочастотных устройств.
-										</p>
-										<p>Уникальные дисциплины образовательного трека:</p>
-										<ul>
-											<li>Взаимодействие излучения с веществом</li>
-											<li>Нелинейная оптика</li>
-											<li>Физика и технология приборов оптоэлектроники;</li>
-											<li>Квантовая информатика</li>
-											<li>Терагерцовая фотоника</li>
-											<li>Магнитооптика</li>
-										</ul>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header">Карьерная траектория</h2>
-									<div class="programs--content">
-										<p>
-											Радиофизики выстаивают успешную карьеру в сфере военной
-											промышленности, автомобилестроения, атомной энергетики,
-											IT-компаниях и предприятиях нефтегазовой отрасли.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель программы – кандидат физико-математических
-										наук,
-										<a href="https://www.asu.ru/search/persons/871/">
-											Николай Викторович Волков</a
-										>, доцент кафедры радиофизики и теоретической физики.
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852291224">+7(3852) 29-12-24</a>
-										</li>
-										<li class="mail-adress">
-											E-mail:
-											<a href="mailto:volkov@theory.asu.ru"
-												>volkov@theory.asu.ru</a
-											>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-							<!-- start -->
-							<div class="dropdown--container">
-								<h3 class="program--title">
-									09.04.01 ИНФОРМАТИКА И ВЫЧИСЛИТЕЛЬНАЯ ТЕХНИКА, ПРОФИЛЬ
-									«НЕЙРОИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ И РОБОТОТЕХНИЧЕСКИЕ СИСТЕМЫ»
-								</h3>
-								<p>
-									Программа создает разработчиков с уникальным набором
-									компетенций на стыке нейроинформационных технологий и
-									робототехники. Студенты программы изучают современные
-									интеллектуальные алгоритмические, программные и аппаратные
-									средства, учатся проектировать интеллектуальные сенсоры,
-									позволяющие на новом технологическом уровне подойти к созданию
-									современных информационно-измерительных систем, таких как
-									«умный» дом или «умный» транспорт.
-								</p>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_09_04_01_informatika%20i%20vychislitelnaya%20tekhnika_ntirs-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
+                <div class="programs--numbers__banner">
+                  <div class="programs--numbers__item">
+                    <span>4</span> <small>Бюджетных мест</small>
+                  </div>
+                  <div class="programs--numbers__item">
+                    <span>-</span> <small>Целевых мест</small>
+                  </div>
+                  <div class="programs--numbers__item">
+                    <span>1</span> <small>Платных мест</small>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <span class="negative">- ₽</span>
+                    <small>в семестр в 2021-2022 г.</small>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <ul>
+                      <li>
+                        Экзамен по специальности: Физика конденсированного
+                        состояния
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <span class="big">85</span>
+                    <small>Проходной балл в 2021 г.</small>
+                  </div>
+                </div>
+                <div class="container">
+                  <h2 class="programs--profile-header">Карьерная траектория</h2>
+                  <div class="programs--content">
+                    <p>
+                      Выпускники выстаивают успешную научную карьеру в сфере
+                      изучения экспериментального состояния конденсированных
+                      веществ (сильное сжатие, ударные воздействия, изменение
+                      гравитационных полей, низкие температуры), фазовых
+                      переходов в них и их фазовые диаграммы состояния, а также
+                      в области разработка экспериментальных методов изучения
+                      физических свойств и создание физических основ
+                      промышленной технологии получения материалов с
+                      определенными свойствами.
+                    </p>
+                  </div>
+                </div>
+                <div class="container">
+                  <h2 class="programs--profile-header mb-4">Контакты</h2>
+                  <b>Научные руководители программы:</b>
+                  <ul>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/153/"
+                        >Плотников Владимир Александрович</a
+                      >
+                      - профессор, д.ф.-м.н., заведующий кафедрой общей и
+                      экспериментальной физики
+                    </li>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/1152/"
+                        >Макаров Сергей Викторович</a
+                      >
+                      - д.ф.-м.н., директор ИЦТЭФ
+                    </li>
+                  </ul>
+                  <h3>Дополнительная информация:</h3>
+                  <p>
+                    к.псих.н., доцент, зав. сектором аспирантуры и докторантуры
+                    <a href="https://www.asu.ru/search/persons/2172/"
+                      >Тихонова Оксана Николаевна</a
+                    >
+                  </p>
+                  <ul>
+                    <li class="phone-number mb-2">
+                      Телефон: <a href="tel:+73852298160">+7 (3852) 298-160</a>
+                    </li>
+                    <li class="mail-adress">
+                      E-mail:
+                      <a href="mailto:tihonova@mc.asu.ru">tihonova@mc.asu.ru</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End  -->
+              <!-- start -->
+              <div class="dropdown--container">
+                <h3 class="program--title">
+                  2.3.1 – СИСТЕМНЫЙ АНАЛИЗ, УПРАВЛЕНИЕ И ОБРАБОТКА ИНФОРМАЦИИ
+                </h3>
+                <p>
+                  Системный анализ, управление и обработка информации – научная
+                  специальность, занимающаяся проблемами разработки и применения
+                  методов системного анализа сложных прикладных объектов
+                  исследования, обработки информации, целенаправленного
+                  воздействия человека на объекты исследования, включая вопросы
+                  анализа, моделирования, оптимизации, совершенствования
+                  управления и принятия решений, с целью повышения эффективности
+                  функционирования объектов исследования.
+                </p>
+                <!-- <div class="programs--uch-plan">
+								  <a
+									href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_01_04_02_prikladnaya%20matematika%20i%20informatika_bbipi-1-2021_2021_27.04.2021.pdf"
+									>Очная форма обучения</a
+								  >
+								</div> -->
+                <p><b>Срок обучения</b> — 4 года очно.</p>
 
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>10</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>2</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>5</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">62 600 ₽</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>
-												Экзамен по направлению «Информатика и вычислительная
-												техника» (письменно)
-											</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">66</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<div class="container">
-									<p></p>
-									<h2 class="programs--profile-header">Чему научат</h2>
-									<div class="programs--content">
-										<p>
-											Особенностью данной программы является обучение студентов
-											актуальным направлениям в области методов искусственного
-											интеллекта и робототехнике. В частности, молодые физики
-											будут изучать такие дисциплины, как:
-										</p>
-										<ul>
-											<li>Автоматические системы управления в робототехнике</li>
-											<li>Сенсорные системы в робототехнике</li>
-											<li>
-												Современные концепции построения автономных роботов
-											</li>
-											<li>Нейроинформационные технологии</li>
-											<li>Машинное обучение и т.д.</li>
-										</ul>
-										<p>
-											Обучение по магистерской программе осуществляют кандидаты
-											и доктора наук, а также ведущие специалисты барнаульского
-											СКБ «Восток» и других наукоемких предприятий города и
-											края. Занятия будут проходить как в аудиториях Алтайского
-											госуниверситета, так и на базе лабораторий, где студентам
-											будет предложено разобраться с современными аспектами
-											проектирования робототехнических систем, разработать и
-											обучить определенному набору действий искусственный
-											интеллект, и даже создать робота, обладающего
-											искусственным интеллектом
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header">Карьерная траектория</h2>
-									<div class="programs--content">
-										<p>
-											Широкий профиль подготовки позволяет выпускникам успешно
-											работать на российских и зарубежных предприятиях ведущих
-											отраслей промышленности и экономики, в
-											научно-исследовательских, медицинских учреждениях и
-											крупных IT-компаниях.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель образовательной программы – кандидат
-										физико-математических наук, доцент кафедры вычислительной
-										техники и электроники,
-										<a href="https://www.asu.ru/search/persons/200/"
-											>Александр Алексеевич Шайдуров</a
-										>.
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852291224">+7 (3852) 29-12-24</a>
-										</li>
-										<li class="mail-adress">
-											E-mail:
-											<a href="mailto:shaidurov@phys.asu.ru"
-												>shaidurov@phys.asu.ru</a
-											>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-							<!-- start -->
-							<div class="dropdown--container">
-								<h3 class="program--title">
-									11.04.02 ИНФОКОММУНИКАЦИОННЫЕ ТЕХНОЛОГИИ И СИСТЕМЫ СВЯЗИ,
-									ПРОФИЛЬ «ЦИФРОВЫЕ ИНФОКОММУНИКАЦИОННЫЕ СИСТЕМЫ»
-								</h3>
-								<p>
-									Программа готовит магистров, владеющих навыками построения
-									архитектуры информационных моделей, описания структуры данных
-									физических и сложных инженерных объектов, знающих современные
-									методики и стандарты управления проектами, способных
-									разрабатывать и реализовывать проекты на основе современных
-									информационных технологий (BIM, PLM, технологии больших
-									данных, машинное и глубокое обучение, нейронные сети, облачные
-									вычисления, технологии промышленного интернета вещей,
-									виртуальной и дополненной реальности и др.)
-								</p>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_11_04_02_infokommunikatsionnye%20tekhnologii%20i%20sistemy%20svyazit_tsis-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
-
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>-</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>-</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>13</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">62 600 ₽</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>
-												Экзамен по направлению «Инфокоммуникационные технологии
-												и системы связи»
-											</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">57</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<div class="container">
-									<p></p>
-									<h2 class="programs--profile-header">Чему научат</h2>
-									<div class="programs--content">
-										<p>Программа включает изучение следующих дисциплин:</p>
-										<ul>
-											<li>Языки программирования</li>
-											<li>Методы работы с большими данными</li>
-											<li>Методы и системы принятия решений</li>
-											<li>Управление проектами для сложных систем</li>
-											<li>Интеллектуальный анализ данных (Data Mining)</li>
-											<li>Когнитивные вычисления</li>
-											<li>Искусственный интеллект и нейронные сети</li>
-											<li>Машинное глубокое обучение</li>
-											<li>Технологии промышленного интернета вещей</li>
-										</ul>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header">Карьерная траектория</h2>
-									<div class="programs--content">
-										<p>
-											Выпускники магистратуры стоят карьеру в
-											бизнес-корпорациях, научно-исследовательских и проектных
-											организациях, занимающих лидирующие позиции в
-											инфокоммуникационной, электронной, космической, атомной и
-											оборонной индустрии.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель образовательной программы – кандидат
-										физико-математических наук, доцент кафедры вычислительной
-										техники и электроники
-										<a href="https://www.asu.ru/search/persons/162/"
-											>Владимир Валентинович Пашнев</a
-										>
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852291224">+7 (3852) 29-12-24</a>
-										</li>
-										<li class="mail-adress">
-											E-mail:
-											<a href="mailto:pashnev@phys.asu.ru"
-												>pashnev@phys.asu.ru</a
-											>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-							<!-- start -->
-							<div class="dropdown--container">
-								<h3 class="program--title">
-									10.04.01 ИНФОРМАЦИОННАЯ БЕЗОПАСНОСТЬ, ПРОФИЛЬ «ИНФОРМАЦИОННАЯ
-									БЕЗОПАСНОСТЬ ИНТЕЛЛЕКТУАЛЬНЫХ АВТОМАТИЗИРОВАННЫХ СИСТЕМ»
-								</h3>
-								<p>
-									Программа готовит суперспециалистов кибербезопасности,
-									способных выявлять и оценивать угрозы экономической
-									безопасности, противодействовать выявленным угрозам и
-									проектировать сверхсовременные системы защиты виртуальных
-									данных, опираясь на самые передовые достижения в области
-									математики и информационных технологий.
-								</p>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_10_04_01_informatsionnaya%20bezopasnost_ibbifs-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
-
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>14</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>3</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>6</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">62 600 ₽</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>
-												Экзамен по направлению «Информационная безопасность»
-											</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">55</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<div class="container">
-									<p></p>
-									<h2 class="programs--profile-header">Чему научат</h2>
-									<div class="programs--content">
-										<p>
-											За время обучения студенты могут овладеть математическими
-											методами криптографии, организационно-правовыми и
-											техническими методами обеспечения безопасности. Выпускники
-											программы – это универсальные специалисты в области
-											программирования, знающие правовые и этические аспекты
-											информационной безопасности.
-										</p>
-										<span class="mt-1 mb-2"><b>Уникальные дисциплины:</b></span>
-										<ul>
-											<li>Экономическая безопасность;</li>
-											<li>Специальные технологии баз данных;</li>
-											<li>Информационные ресурсы в финансовом мониторинге.</li>
-										</ul>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header">Карьерная траектория</h2>
-									<div class="programs--content">
-										<p>
-											Успешная карьерная траектория выпускников программы может
-											стоится как в коммерческом, так и государственном секторе.
-											Специалисты по кибербезопасности работают в коммерческих
-											компаниях по разработке и выпуску средств защиты
-											информации, крупных кредитно-финансовых организациях,
-											научно-исследовательских центрах, государственных
-											учреждениях и правоохранительной системе.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель образовательной программы – кандидат
-										физико-математических наук, доцент кафедры информационной
-										безопасности
-										<a href="https://www.asu.ru/search/persons/1159/"
-											>Александр Валерьевич Егоров</a
-										>
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852291224">+7 (3852) 29-12-24</a>
-										</li>
-										<li class="mail-adress">
-											E-mail: <a href="mailto:egav@bk.ru">egav@bk.ru</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- <section class="programs--students__section">
-				<div class="programs--students container">
-					<div class="programs--students__logo">
-						<img alt="" src="../../files/images.215/programs/3d.png" />
-					</div>
-					<div class="programs--students__content">
-						<h2>Меры поддержки для первокурсников</h2>
-						<a href="https://abiturient.asu.ru/bachelor/grants2021/">Подробнее</a>
-					</div>
-				</div>
-			</section> -->
-			<section class="programs--contacts">
-				<div class="programs--form">
-					<h3>Оставить заявку</h3>
-					<form>
-						<div class="callModalFormRow">
-							<div class="callModalFormColumn">
-								<label for="name">Имя</label>
-								<input type="text" id="name" required="" name="name" />
-							</div>
-							<div class="callModalFormColumn">
-								<label for="secondName">Фамилия</label>
-								<input
-									type="text"
-									id="secondName"
-									required=""
-									name="secondName"
-								/>
-							</div>
-						</div>
-						<div class="callModalFormColumn">
-							<label for="tel">Номер телефона</label>
-							<input
-								type="tel"
-								value="+7"
-								pattern="^[7|8]{0,1}\d{10}$|(^\+7{1}\d{10}$)"
-								maxlength="12"
-								id="tel"
-								required=""
-								name="phoneNumber"
-							/>
-							<small>Пример: +71235641122</small>
-						</div>
-						<div class="callModalFormColumn">
-							<label for="question">Опишите ваш вопрос</label
-							><textarea
-								rows="10"
-								cols="25"
-								id="question"
-								name="question"
-								placeholder="Напишите интересующий Вас вопрос..."
-								required=""
-							></textarea>
-						</div>
-					</form>
-				</div>
-			</section>
-		</section>
-	</body>
+                <div class="programs--numbers__banner">
+                  <div class="programs--numbers__item">
+                    <span>4</span> <small>Бюджетных мест</small>
+                  </div>
+                  <div class="programs--numbers__item">
+                    <span>-</span> <small>Целевых мест</small>
+                  </div>
+                  <div class="programs--numbers__item">
+                    <span>1</span> <small>Платных мест</small>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <span class="negative">- ₽</span>
+                    <small>в семестр в 2021-2022 г.</small>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <ul>
+                      <li>
+                        Экзамен по специальности: Системный анализ, управление и
+                        обработка информации
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <span class="big">95</span>
+                    <small>Проходной балл в 2021 г.</small>
+                  </div>
+                </div>
+                <div class="container">
+                  <h2 class="programs--profile-header">Карьерная траектория</h2>
+                  <div class="programs--content">
+                    <p>
+                      Выпускники выстаивают успешную научную карьеру в сфере
+                      теоретических и прикладных исследований системных связей и
+                      закономерностей функционирования и развития объектов и
+                      процессов, ориентированных на повышение эффективности
+                      управления ими с использованием современных методов
+                      обработки информации.
+                    </p>
+                  </div>
+                </div>
+                <div class="container">
+                  <h2 class="programs--profile-header mb-4">Контакты</h2>
+                  <b>Научные руководители программы:</b>
+                  <ul>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/1590/"
+                        >Седалищев Виктор Николаевич</a
+                      >
+                      - профессор, д.т.н.
+                    </li>
+                  </ul>
+                  <h3>Дополнительная информация:</h3>
+                  <p>
+                    к.псих.н., доцент, зав. сектором аспирантуры и докторантуры
+                    <a href="https://www.asu.ru/search/persons/2172/"
+                      >Тихонова Оксана Николаевна</a
+                    >
+                  </p>
+                  <ul>
+                    <li class="phone-number mb-2">
+                      Телефон: <a href="tel:+73852298160">+7 (3852) 298-160</a>
+                    </li>
+                    <li class="mail-adress">
+                      E-mail:
+                      <a href="mailto:tihonova@mc.asu.ru">tihonova@mc.asu.ru</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End  -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
 </html>

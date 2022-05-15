@@ -1,1312 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<!-- Styles -->
-		<!-- <link rel="stylesheet" href="https://abiturient.asu.ru/files/assets/abiturient/programs.css" /> -->
-		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../../css/main.css" />
-		<link rel="stylesheet" href="../../css/programs.css" />
-		<!-- <script src="https://abiturient.asu.ru/files/assets/abiturient/programs.js" defer></script> -->
-		<script src="../../js/programs.js" defer></script>
-		<style type="text/css">
-			.content {
-				overflow: hidden !important;
-			}
-			.content ul,
-			.content ol {
-				text-align: unset !important;
-			}
-			.content img {
-				margin-bottom: 0;
-				max-width: 100% !important;
-				max-height: 100% !important;
-				height: auto !important;
-			}
-			.programs--banner__heading {
-				margin-right: 1.5rem;
-				margin-top: 0;
-				margin-bottom: 0;
-				margin-left: 0;
-			}
-			.programs--banner__emblem {
-				margin: 0 0 0.8rem 0 !important;
-			}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Styles -->
+    <!-- <link rel="stylesheet" href="https://abiturient.asu.ru/files/assets/abiturient/programs.css" /> -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/programs.css" />
+    <!-- <script src="https://abiturient.asu.ru/files/assets/abiturient/programs.js" defer></script> -->
+    <script src="../../js/programs.js" defer></script>
+    <style type="text/css">
+      .content {
+        overflow: hidden !important;
+      }
+      .content ul,
+      .content ol {
+        text-align: unset !important;
+      }
+      .content img {
+        margin-bottom: 0;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        height: auto !important;
+      }
+      .programs--banner__heading {
+        margin-right: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+      }
+      .programs--banner__emblem {
+        margin: 0 0 0.8rem 0 !important;
+      }
 
-			.programs--banner__lottie {
-				width: 100% !important;
-			}
-			.template__main-container {
-				padding: 0 15px !important;
-				margin: 0 !important;
-				width: 100% !important;
-				max-width: unset !important;
-			}
+      .programs--banner__lottie {
+        width: 100% !important;
+      }
+      .template__main-container {
+        padding: 0 15px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: unset !important;
+      }
 
-			.main-buttons-container {
-				display: none !important;
-			}
+      .main-buttons-container {
+        display: none !important;
+      }
 
-			.sidebar {
-				display: none !important;
-			}
+      .sidebar {
+        display: none !important;
+      }
 
-			.breadcrumbs {
-				display: none !important;
-			}
+      .breadcrumbs {
+        display: none !important;
+      }
 
-			.template__main-content .template__content-header {
-				display: none !important;
-			}
-			.programs--numbers__item span.negative {
-				margin: 0;
-				margin-bottom: 0.45rem;
-			}
-			.col {
-				padding: 0 !important;
-			}
-			.programs--profile-header {
-				padding-left: 45px;
-			}
-			.programs--profile-header::before {
-				background-image: url('https://abiturient.asu.ru/.themes/.abitur2021/img/main/footer/hashtag.svg') !important;
-				left: 0;
-				width: 40px;
-			}
-			.programs--profile-header.after::after {
-				background-image: url('https://www.asu.ru/files/images.215/programs/pattern-01.svg') !important;
-			}
-			.programs--numbers__banner {
-				margin-top: 2rem;
-			}
-			.dropdown--header {
-				justify-content: flex-start;
-			}
-			.dropdown--button {
-				color: #000000;
-				margin-right: 0.5rem;
-			}
-			.dropdown--button:last-child {
-				margin-right: 0;
-			}
-			.programs--content {
-				padding-bottom: 0;
-			}
+      .template__main-content .template__content-header {
+        display: none !important;
+      }
+      .programs--numbers__item span.negative {
+        margin: 0;
+        margin-bottom: 0.45rem;
+      }
+      .col {
+        padding: 0 !important;
+      }
+      .programs--profile-header {
+        padding-left: 45px;
+      }
+      .programs--profile-header::before {
+        background-image: url("https://abiturient.asu.ru/.themes/.abiturient.2021/img/main/footer/hashtag.svg") !important;
+        left: 0;
+        width: 40px;
+      }
+      .programs--profile-header.after::after {
+        background-image: url("https://www.asu.ru/files/images.215/programs/pattern-01.svg") !important;
+      }
+      .programs--numbers__banner {
+        margin-top: 2rem;
+      }
+      .dropdown--header {
+        justify-content: flex-start;
+      }
+      .dropdown--button {
+        color: #000000;
+        margin-right: 0.5rem;
+      }
+      .dropdown--button:last-child {
+        margin-right: 0;
+      }
+      .programs--content {
+        padding-bottom: 0;
+      }
 
-			.programs--content p {
-				text-indent: 2rem;
-			}
-			@media screen and (max-width: 425.98px) {
-				.programs--banner__heading {
-					margin-right: 0;
-					margin-top: 0;
-					margin-bottom: 1.5rem;
-					margin-left: 0;
-				}
-				.dropdown--button {
-					margin-right: 0;
-				}
-				.programs--students__logo img {
-					height: 200px !important;
-					margin-bottom: 2rem !important;
-				}
-				.programs--banner__emblem {
-					margin: 0 auto !important;
-					margin-bottom: 1rem !important;
-				}
-				.programs--numbers__item span.negative {
-					margin-bottom: 0 !important;
-					margin-right: 0.5rem !important;
-				}
-				.dropdown--header {
-					justify-content: space-evenly;
-				}
-			}
-			.programs--banner__header {
-				margin-bottom: 1rem;
-				text-align: start;
-			}
-			.program--description {
-				font-size: 0.6rem;
-				margin: 0 !important;
-				margin-bottom: 25px !important;
-				line-height: 1.5;
-				letter-spacing: 0.04rem;
-				font-weight: 500;
-			}
-			.dropdown--content .dropdown--container .program--title {
-				font-size: 1.6rem;
-				text-align: center;
-				width: 80%;
-				margin: 0 auto;
-				margin-bottom: 1.8rem;
-			}
-			.dropdown--content .dropdown--container h2,
-			.dropdown--content .dropdown--container h3,
-			.dropdown--content .dropdown--container h4,
-			.dropdown--content .dropdown--container h5,
-			.dropdown--content .dropdown--container h6 {
-				font-weight: 700;
-				color: var(--asu-dark);
-			}
-			.programs--uch-plan {
-				display: flex;
-				align-items: center;
-				justify-content: space-evenly;
-				flex-wrap: wrap;
-				margin-top: 1.5rem;
-				margin-bottom: 3rem;
-			}
-			.programs--uch-plan a {
-				padding: 0.45rem 1.5rem;
-				margin-bottom: 1rem;
-				text-align: center;
-				background-color: var(--asu-accent);
-				color: #fff;
-				font-weight: 500;
-				box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.25);
-				border-radius: 15px;
-			}
-			ul li {
-				margin-bottom: 0.55rem;
-			}
-			.programs--banner__header {
-				color: var(--asu-accent);
-			}
-			:root {
-				--asu-accent: #337267;
-			}
-		</style>
-		<section class="section" style="padding-top: 0">
-			<div class="programs--banner">
-				<div class="programs--banner__heading">
-					<img
-						class="programs--banner__emblem"
-						alt=""
-						src="https://www.asu.ru/files/images.215/programs/logos/imit.png?_t=1641650359"
-					/>
-					<h1 class="programs--banner__header">
-						Институт математики и информационных технологий
-					</h1>
-					<p class="program--description">
-						ИМИТ – это более 650 студентов, 60 преподавателей, 6 кафедр, 8
-						научных центров и учебных лабораторий, 8 направлений подготовки и 14
-						суперактуальных образовательных программ. Миссия института –
-						подготовка для региона и страны элитных кадров в области
-						информационных технологий, программирования и математических
-						методов, способных заниматься разработкой новых методов и
-						алгоритмов, инновационных программных продуктов, обладающих
-						способностью выполнять исследовательские проекты, самообучаться и
-						адаптироваться в стремительно меняющемся мире больших данных и
-						«умных» технологий.
-					</p>
-					<div class="programs--image__content">
-						<div class="programs--image__content_item">
-							<span
-								class="numbers"
-								id="jsNumber"
-								style="font-size: 3rem; padding: 0.6rem 1.5rem"
-								data-value="99"
-								>99</span
-							>
-							<span class="description">Бюджетные места</span>
-						</div>
-						<div class="programs--image__content_divider"></div>
-						<div class="programs--image__content_item">
-							<span>в 2021 - 2022 году</span>
-							<span class="numbers">107 780 - 125 200 ₽</span>
-							<span class="description">Стоимость</span>
-						</div>
-					</div>
-				</div>
-				<lottie-player
-					class="programs--banner__lottie"
-					src="https://assets8.lottiefiles.com/packages/lf20_ge7bwe6v.json"
-					background="transparent"
-					speed="1"
-					loop=""
-					autoplay=""
-				></lottie-player>
-			</div>
-			<section>
-				<div class="container">
-					<h2 class="programs--profile-header mb-10 after">
-						Программы обучения
-					</h2>
-					<div id="dropdown">
-						<div class="dropdown--header">
-							<button class="dropdown--button active">
-								Наука о данных и компьютерные технологии в биологии и медицине
-							</button>
-							<button class="dropdown--button">
-								Прикладная математика и информатика в социально-экономической
-								сфере и образовании
-							</button>
-							<button class="dropdown--button">
-								Алгебра и дискретная математика
-							</button>
-							<button class="dropdown--button">
-								Вычислительные методы в анализе и геометрии
-							</button>
-							<button class="dropdown--button">
-								Математическое моделирование и комплексы программ в наукоемких
-								технологиях
-							</button>
-							<button class="dropdown--button">
-								Инженерия искусственного интеллекта
-							</button>
-							<button class="dropdown--button">
-								Цифровые технологии анализа данных для устойчивого развития
-								Регионов северной и центральной Азии
-							</button>
-						</div>
-						<div class="dropdown--content container">
-							<!-- start -->
-							<div class="dropdown--container active">
-								<h3 class="program--title">
-									01.04.02 ПРИКЛАДНАЯ МАТЕМАТИКА И ИНФОРМАТИКА, ПРОФИЛЬ «НАУКА О
-									ДАННЫХ И КОМПЬЮТЕРНЫЕ ТЕХНОЛОГИИ В БИОЛОГИИ И МЕДИЦИНЕ»
-								</h3>
-								<p>
-									Программа готовит биоинформатиков, способных разрабатывать и
-									применять на практике вычислительные методы для решения задач,
-									«закодированных» самой природой. Здесь готовят передовых
-									исследователей, владеющих навыками в сфере математического
-									моделирования процессов в живых системах, методов машинного
-									обучения и анализа больших данных, с учетом требований рынка
-									труда, перспектив и трендов в развитии IT-технологий.
-									Выпускники программы становятся инновационными специалистами,
-									применяющими цифровой математический аппарат для решения
-									биологических проблем.
-								</p>
-								<span> <b>Программа включает:</b> </span>
-								<ul>
-									<li>
-										базовые дисциплины, направленные на развитие цифровой
-										культуры, формирование умения работать в команде, проектной
-										компетентности, коммуникативных навыков, в том числе навыков
-										делового общения на иностранном языке;
-									</li>
-									<li>
-										дисциплины, формирующие компетентность в области
-										фундаментальных и практических основ профессиональной
-										деятельности, развивающие способности решать задачи
-										прикладной математики и информатики, а также комбинировать и
-										адаптировать существующие IT-технологии для решения
-										профессиональных задач.
-									</li>
-									<li>
-										профессиональные дисциплины, направленные на освоение
-										навыков разработки методов и алгоритмов в области анализа
-										данных, в том числе в биологии и медицине, формирование
-										научно-исследовательских навыков и компетенций в сфере
-										разработки и управления IT-проектами.
-									</li>
-								</ul>
-								<p>
-									Программа магистратуры разработана по проекту
-									научно-образовательного центра алтаистики и тюркологии
-									«Большой Алтай».
-								</p>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_01_04_02_prikladnaya%20matematika%20i%20informatika_bbipi-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
+      .programs--content p {
+        text-indent: 2rem;
+      }
+      @media screen and (max-width: 425.98px) {
+        .programs--banner__heading {
+          margin-right: 0;
+          margin-top: 0;
+          margin-bottom: 1.5rem;
+          margin-left: 0;
+        }
+        .dropdown--button {
+          margin-right: 0;
+        }
+        .programs--students__logo img {
+          height: 200px !important;
+          margin-bottom: 2rem !important;
+        }
+        .programs--banner__emblem {
+          margin: 0 auto !important;
+          margin-bottom: 1rem !important;
+        }
+        .programs--numbers__item span.negative {
+          margin-bottom: 0 !important;
+          margin-right: 0.5rem !important;
+        }
+        .dropdown--header {
+          justify-content: space-evenly;
+        }
+      }
+      .programs--banner__header {
+        margin-bottom: 1rem;
+        text-align: start;
+      }
+      .program--description {
+        font-size: 0.6rem;
+        margin: 0 !important;
+        margin-bottom: 25px !important;
+        line-height: 1.5;
+        letter-spacing: 0.04rem;
+        font-weight: 500;
+      }
+      .dropdown--content .dropdown--container .program--title {
+        font-size: 1.6rem;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 1.8rem;
+      }
+      .dropdown--content .dropdown--container h2,
+      .dropdown--content .dropdown--container h3,
+      .dropdown--content .dropdown--container h4,
+      .dropdown--content .dropdown--container h5,
+      .dropdown--content .dropdown--container h6 {
+        font-weight: 700;
+        color: var(--asu-dark);
+      }
+      .programs--uch-plan {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+      }
+      .programs--uch-plan a {
+        padding: 0.45rem 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        background-color: var(--asu-accent);
+        color: #fff;
+        font-weight: 500;
+        box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+      }
+      ul li {
+        margin-bottom: 0.55rem;
+      }
+      .programs--banner__header {
+        color: var(--asu-accent);
+      }
+      :root {
+        --asu-accent: #337267;
+      }
+    </style>
+    <section class="section" style="padding-top: 0">
+      <div class="programs--banner">
+        <div class="programs--banner__heading">
+          <img
+            class="programs--banner__emblem"
+            alt=""
+            src="https://www.asu.ru/files/images.215/programs/logos/imit.png?_t=1641650359"
+          />
+          <h1 class="programs--banner__header">
+            Институт математики и информационных технологий
+          </h1>
+          <p class="program--description">
+            ИМИТ – это более 650 студентов, 60 преподавателей, 6 кафедр, 8
+            научных центров и учебных лабораторий, 8 направлений подготовки и 14
+            суперактуальных образовательных программ. Миссия института –
+            подготовка для региона и страны элитных кадров в области
+            информационных технологий, программирования и математических
+            методов, способных заниматься разработкой новых методов и
+            алгоритмов, инновационных программных продуктов, обладающих
+            способностью выполнять исследовательские проекты, самообучаться и
+            адаптироваться в стремительно меняющемся мире больших данных и
+            «умных» технологий.
+          </p>
+          <div class="programs--image__content">
+            <div class="programs--image__content_item">
+              <span
+                class="numbers"
+                id="jsNumber"
+                style="font-size: 3rem; padding: 0.6rem 1.5rem"
+                data-value="7"
+                >7</span
+              >
+              <span class="description">Бюджетные места</span>
+            </div>
+            <div class="programs--image__content_divider"></div>
+            <div class="programs--image__content_item">
+              <span>в 2021 - 2022 году</span>
+              <span class="numbers">- ₽</span>
+              <span class="description">Стоимость</span>
+            </div>
+          </div>
+        </div>
+        <lottie-player
+          class="programs--banner__lottie"
+          src="https://assets8.lottiefiles.com/packages/lf20_ge7bwe6v.json"
+          background="transparent"
+          speed="1"
+          loop=""
+          autoplay=""
+        ></lottie-player>
+      </div>
+      <section>
+        <div class="container">
+          <h2 class="programs--profile-header mb-10 after">
+            Программы обучения
+          </h2>
+          <div id="dropdown">
+            <div class="dropdown--header">
+              <button class="dropdown--button active">
+                Математика и механика
+              </button>
+              <button class="dropdown--button">
+                Математическое моделирование, численные методы и комплексы
+                программ
+              </button>
+            </div>
+            <div class="dropdown--content container">
+              <!-- start -->
+              <div class="dropdown--container active">
+                <h3 class="program--title">1.1 – МАТЕМАТИКА И МЕХАНИКА</h3>
+                <b>1.1.2 Дифференциальные уравнения и математическая физика</b>
+                <p>
+                  Специальность «Дифференциальные уравнения и математическая
+                  физика» – область математики, посвященная изучению
+                  дифференциальных уравнений. Основными составными частями
+                  специальности являются обыкновенные дифференциальные уравнения
+                  и уравнения с частными производными. Главные научные цели
+                  специальности: исследование разрешимости дифференциальных
+                  уравнений, описание качественных и количественных
+                  характеристик решений, приложения.
+                </p>
 
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>11</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>2</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>4</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">53 890 ₽</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>
-												Экзамен по направлению «Прикладная математика и
-												информатика»
-											</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">-</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<div class="container">
-									<p></p>
-									<h2 class="programs--profile-header">Чему научат</h2>
-									<div class="programs--content">
-										<p>
-											Образовательная программа направлена на овладение навыками
-											применения методов математического моделирования и
-											современных компьютерных технологий. Основными являются
-											курсы «Python для научных исследований и моделирования
-											сложных систем», «Модели популяционно-генетических
-											процессов» и «Наука о данных в биологии и медицине». В
-											итоге обучающиеся овладеют технологиями статистического и
-											интеллектуального анализа данных, алгоритмами машинного
-											обучения и их приложениями в биологии и медицине.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header">Карьерная траектория</h2>
-									<div class="programs--content">
-										<p>
-											Выпускники программы смогут реализовывать собственные
-											проекты в области автоматизированных интеллектуальных
-											систем обработки и анализа больших данных, в том числе
-											предназначенных для решения задач биологии, экологии и
-											медицины.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель программы – кандидат технических наук, доцент
-										кафедры теоретической кибернетики и прикладной математики
-										<a href="https://www.asu.ru/search/persons/334/"
-											>Хворова Любовь Анатольевна</a
-										>.
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852298151">+7 (3852) 298-151</a>
-										</li>
-										<li class="mail-adress">
-											E-mail:
-											<a href="mailto:mailto:khvorovala@gmail.com"
-												>mailto:khvorovala@gmail.com</a
-											>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-							<!-- start -->
-							<div class="dropdown--container">
-								<h3 class="program--title">
-									01.04.02 ПРИКЛАДНАЯ МАТЕМАТИКА И ИНФОРМАТИКА, ПРОФИЛЬ
-									«ПРИКЛАДНАЯ МАТЕМАТИКА И ИНФОРМАТИКА В СОЦИАЛЬНО-ЭКОНОМИЧЕСКОЙ
-									СФЕРЕ И ОБРАЗОВАНИИ»
-								</h3>
-								<p>
-									Программа готовит суперспециалистов, способных изобретать,
-									создавать и внедрять новые компьютерные технологии в
-									деятельность ведущих компаний социально-экономической сферы и
-									образовательной среды. Здесь занимаются подготовкой кадров,
-									способных к проектной и педагогической деятельности, владеющих
-									навыками в сфере современных IT-технологий, методов
-									математического моделирования социально-экономических систем и
-									методов интеллектуального анализа данных, с учетом перспектив
-									и трендов в развитии цифровых технологий.
-								</p>
-								<span> <b> Программа включает: </b> </span>
-								<ul>
-									<li>
-										базовые дисциплины, направленные на развитие цифровой
-										культуры, формирование умения работать в команде, проектной
-										компетентности, коммуникативных навыков, в том числе навыков
-										делового общения на иностранном языке;
-									</li>
-									<li>
-										дисциплины, формирующие компетентность в области
-										фундаментальных и практических основ профессиональной
-										деятельности, развивающие способности решать задачи
-										прикладной математики и информатики, а также комбинировать и
-										адаптировать существующие IT-технологии для решения
-										профессиональных задач;
-									</li>
-									<li>
-										профессиональные дисциплины, направленные на формирование
-										навыков разработки прикладных методов и алгоритмов анализа
-										данных и автоматизации процессов в области профессиональной
-										деятельности и формирование компетенций в сфере управления
-										IT-проектами.
-									</li>
-								</ul>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_01_04_02_prikladnaya%20matematika%20i%20informatika_tiiiad-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
+                <b>1.1.3 Геометрия и топология</b>
+                <p>
+                  Специальность «Геометрия и топология» – область математики,
+                  посвященная изучению геометрических структур, топологических
+                  пространств и их отображений. Основные составные части
+                  специальности: геометрия (в том числе дискретная), общая,
+                  алгебраическая и дифференциальная топология. Главные научные
+                  цели специальности: изучение геометрических и топологических
+                  структур, возникающих в математике и ее приложениях.
+                </p>
+                <b
+                  >1.1.5 Математическая логика, алгебра, теория чисел и
+                  дискретная математика</b
+                >
+                <p>
+                  Специальность «Математическая логика, алгебра и теория чисел»
+                  – область науки, исследующая свойства целых чисел, изучающая
+                  множества с заданными на них алгебраическими операциями и
+                  отношениями; исследующая свойства множеств решений систем
+                  алгебраических уравнений; изучающая общее строение
+                  математических теорий, их моделей и алгоритмических процессов.
+                  Целью алгебры является изучение алгебраических структур,
+                  возникающих в математике и ее приложениях. Целью
+                  математической логики являются: изучение синтаксических и
+                  семантических свойств формализованных математических теорий и
+                  структурных свойств их семантических моделей; исследование
+                  алгоритмических процессов с заданными свойствами, нахождение
+                  взаимосвязей между доказуемостью, истинностью и вычислимостью.
+                  Целью теории чисел является исследование арифметических
+                  свойств математических объектов.
+                </p>
+                <b>1.1.6 Вычислительная математика</b>
+                <p>
+                  Вычислительная математика – область науки, к которой относятся
+                  разработка и теория методов численного решения математических
+                  задач, возникающих при моделировании естественнонаучных и
+                  прикладных проблем, а также реализация методов в практическом
+                  решении задач с применением современных ЭВМ.
+                </p>
+                <b>1.1.9 Механика жидкости, газа и плазмы</b>
+                <p>
+                  Механика жидкости, газа и плазмы – область естественных наук,
+                  изучающая на основе идей и подходов кинетической теории и
+                  механики сплошной среды процессы и явления, сопровождающие
+                  течения однородных и многофазных сред при механических,
+                  тепловых, электромагнитных и прочих воздействиях, а также
+                  происходящие при взаимодействии текучих сред с движущимися или
+                  неподвижными телами. Задачей механики жидкости, газа и плазмы
+                  является построение и исследование математических моделей для
+                  описания параметров потоков движущихся сред в широком
+                  диапазоне условий, проведение экспериментальных исследований
+                  течений и их взаимодействия с телами и интерпретация
+                  экспериментальных данных с целью прогнозирования и контроля
+                  природных явлений и технологических процессов, включающих
+                  движения текучих сред, а также разработки перспективных
+                  космических, летательных и плавательных аппаратов.
+                </p>
+                <!-- <div class="programs--uch-plan">
+                  <a
+                    href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_01_04_02_prikladnaya%20matematika%20i%20informatika_bbipi-1-2021_2021_27.04.2021.pdf"
+                    >Очная форма обучения</a
+                  >
+                </div> -->
+                <p><b>Срок обучения</b> — 4 года очно.</p>
 
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>11</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>2</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>4</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">53 890 ₽</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>
-												Экзамен по направлению «Прикладная математика и
-												информатика»
-											</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">-</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<div class="container">
-									<p></p>
-									<h2 class="programs--profile-header">Чему научат</h2>
-									<div class="programs--content">
-										<p>
-											Образовательная программа направлена на овладение методами
-											прикладной математики и информатики.
-										</p>
-										<span> <b> Базовые дисциплины: </b> </span>
-										<ul>
-											<li>
-												Методы математического моделирования
-												социально-экономических систем,
-											</li>
-											<li>
-												Модели системного компромисса, Информационные технологии
-												и программные комплексы,
-											</li>
-											<li>
-												Проектирование и управление проектами в профессиональной
-												деятельности,
-											</li>
-											<li>ГИС-технологии,</li>
-											<li>Методы пространственного анализа,</li>
-											<li>Методы интеллектуального анализа данных,</li>
-											<li>Технологии интерпретации и визуализации данных,</li>
-											<li>Облачные технологии,</li>
-											<li>Программирование на Python.</li>
-										</ul>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header">Карьерная траектория</h2>
-									<div class="programs--content">
-										<p>
-											Выпускники программы смогут реализовывать собственные
-											IT-проекты как в области преподавания IT-дисциплин в
-											общеобразовательных и профессиональных организациях, так и
-											в IT-отделах организаций, в том числе в областях,
-											связанных с анализом больших данных.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель программы – кандидат физико-математических
-										наук, доцент кафедры теоретической кибернетики и прикладной
-										математики
-										<a href="https://www.asu.ru/search/persons/1282/"
-											>Журавлева Вера Владимировна</a
-										>.
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852298151">+7 (3852) 29-81-51</a>
-										</li>
-										<li class="mail-adress">
-											E-mail:
-											<a href="mailto:vvzhuravleva@mail.ru"
-												>vvzhuravleva@mail.ru</a
-											>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-							<!-- start -->
-							<div class="dropdown--container">
-								<h3 class="program--title">
-									02.04.01 МАТЕМАТИКА И КОМПЬЮТЕРНЫЕ НАУКИ, ПРОФИЛЬ «АЛГЕБРА И
-									ДИСКРЕТНАЯ МАТЕМАТИКА»
-								</h3>
-								<p>
-									Программа ориентирована на подготовку специалистов, способных
-									к научно-исследовательской и педагогической деятельности в
-									области алгебры и дискретной математики, владеющих навыками в
-									сфере современных цифровых технологий, в том числе основы
-									Blockchain и методы машинного обучения, с учетом требований
-									рынка труда, перспектив и трендов в развитии IT-технологий.
-								</p>
-								<span> <b>Программа включает:</b> </span>
-								<ul>
-									<li>
-										базовые дисциплины, направленные на развитие цифровой
-										культуры, формирование умения работать в команде, проектной
-										компетентности, коммуникативных навыков, в том числе навыков
-										делового общения на иностранном языке;
-									</li>
-									<li>
-										дисциплины, формирующие компетентность в области основ
-										алгебры и дискретной математики и их приложений;
-									</li>
-									<li>
-										профессиональные дисциплины, направленные на приобретение
-										научно-исследовательских навыков и компетенций в области
-										приложений алгебры и дискретной математики.
-									</li>
-								</ul>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_02_04_01_matematika%20i%20kompyuternye%20nauki_mkipa-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
-
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>13</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>-</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>2</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">53 890 ₽</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>
-												Экзамен по направлению «Математика и компьютерные науки»
-											</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">-</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<div class="container">
-									<p></p>
-									<h2 class="programs--profile-header">Чему научат</h2>
-									<div class="programs--content">
-										<p>
-											Образовательная программа направлена на изучение
-											математических и прикладных дисциплин, среди которых:
-										</p>
-										<ul>
-											<li>Теория чисел,</li>
-											<li>Алгебраические системы,</li>
-											<li>Математическая логика,</li>
-											<li>Аналитическая теория чисел,</li>
-											<li>Комбинаторная теория групп,</li>
-											<li>Криптография,</li>
-											<li>Математические основы Blockchain.</li>
-										</ul>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header">Карьерная траектория</h2>
-									<div class="programs--content">
-										<p>
-											Выпускники программы смогут реализовывать собственные
-											научно-исследовательские проекты как в области
-											преподавания математических дисциплин в
-											общеобразовательных и профессиональных организациях, так и
-											в научно-исследовательских организациях. Основные знания и
-											навыки, полученные при обучении, позволят трудоустроиться
-											аналитиками и программистами в IT-отделы организаций
-											различного профиля.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель программы – кандидат физико-математических
-										наук, директор ИМИТ
-										<a href="https://www.asu.ru/search/persons/1238/"
-											>Журавлев Евгений Владимирович</a
-										>.
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852298137">+7 (3852) 29-81-37</a>
-										</li>
-										<li class="mail-adress">
-											E-mail:
-											<a href="mailto:evzhuravlev@mail.ru"
-												>evzhuravlev@mail.ru</a
-											>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-							<!-- start -->
-							<div class="dropdown--container">
-								<h3 class="program--title">
-									02.04.01 МАТЕМАТИКА И КОМПЬЮТЕРНЫЕ НАУКИ, ПРОФИЛЬ
-									«ВЫЧИСЛИТЕЛЬНЫЕ МЕТОДЫ В АНАЛИЗЕ И ГЕОМЕТРИИ»
-								</h3>
-								<p>
-									Программа ориентирована на подготовку специалистов, способных
-									к научно-исследовательской, педагогической и
-									производственно-технологической деятельности в области
-									вычислительных методов анализа и геометрии, владеющих навыками
-									использования IT-технологий и программирования, с учетом
-									требований рынка труда, перспектив и трендов в развитии
-									IT-технологий.
-								</p>
-								<span> <b> Программа включает:</b></span>
-								<ul>
-									<li>
-										базовые дисциплины, направленные на развитие цифровой
-										культуры, формирование умения работать в команде, проектной
-										компетентности, коммуникативных навыков, в том числе навыков
-										делового общения на иностранном языке;
-									</li>
-									<li>
-										дисциплины, формирующие компетентность в области
-										фундаментальных основ анализа, геометрии и их приложений;
-									</li>
-									<li>
-										профессиональные дисциплины, направленные на фундаментальную
-										и практическую подготовку в области новых вычислительных
-										технологий, а также приобретение практических навыков
-										современных компьютерных технологий в
-										научно-исследовательском и образовательном процессах.
-									</li>
-								</ul>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_02_04_01_matematika%20i%20kompyuternye%20nauki_mkipa-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
-
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>13</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>-</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>2</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">53 890 Р</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>
-												Экзамен по направлению «Математика и компьютерные науки»
-											</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">-</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<div class="container">
-									<p></p>
-									<h2 class="programs--profile-header">Чему научат</h2>
-									<div class="programs--content">
-										<p>
-											Образовательная программа направлена на овладение знаниями
-											и практическими навыками в «мягких» вычислениях,
-											символьных вычислениях, компьютерной геометрии и
-											геометрическом моделировании, вычислительной и
-											комбинаторной геометрии, обработке и анализе изображений,
-											анализе временных рядов и больших данных, стохастической
-											финансовой математике и теории случайных процессов.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header">Карьерная траектория</h2>
-									<div class="programs--content">
-										<p>
-											Выпускники программы смогут реализовывать собственные
-											научно-исследовательские проекты как в области
-											преподавания математических дисциплин в
-											общеобразовательных и профессиональных организациях, так и
-											в научно-исследовательских организациях. Основные знания и
-											навыки, полученные при обучении, позволят трудоустроиться
-											аналитиками и программистами в IT-отделы организаций
-											различного профиля.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель программы – доктор физико-математических наук,
-										профессор кафедры математического анализа
-										<a href="https://www.asu.ru/search/persons/1276/"
-											>Родионов Евгений Дмитриевич</a
-										>.
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852298155">+7 (3852) 298-155</a>
-										</li>
-										<li class="mail-adress">
-											E-mail:
-											<a href="mailto:edr2002@mail.ru">edr2002@mail.ru</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-							<!-- start -->
-							<div class="dropdown--container">
-								<h3 class="program--title">
-									02.04.01 МАТЕМАТИКА И КОМПЬЮТЕРНЫЕ НАУКИ, ПРОФИЛЬ
-									«МАТЕМАТИЧЕСКОЕ МОДЕЛИРОВАНИЕ И КОМПЛЕКСЫ ПРОГРАММ В
-									НАУКОЕМКИХ ТЕХНОЛОГИЯХ»
-								</h3>
-								<p>
-									Программа готовит современных исследователей высокого класса,
-									способных вести исследования на стыке математики и ее
-									приложений в перспективных областях математического
-									моделирования природных и индустриальных систем, владеющих
-									навыками использования IT-технологий и программирования, с
-									учетом требований современной цифровой среды.
-								</p>
-								<span><b>Программа включает:</b></span>
-								<ul>
-									<li>
-										базовые дисциплины, направленные на развитие цифровой
-										культуры, формирование умения работать в команде, проектной
-										компетентности, коммуникативных навыков, в том числе навыков
-										делового общения на иностранном языке;
-									</li>
-									<li>
-										дисциплины, формирующие компетентность в области
-										математического моделирования природных и индустриальных
-										систем.
-									</li>
-								</ul>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_02_04_01_matematika%20i%20kompyuternye%20nauki_mmikpnt-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
-
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>14</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>-</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>1</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">53 890 ₽</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>
-												Экзамен по направлению «Математика и компьютерные науки»
-											</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">50</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<!-- <div class="container">
+                <div class="programs--numbers__banner">
+                  <div class="programs--numbers__item">
+                    <span>6</span> <small>Бюджетных мест</small>
+                  </div>
+                  <div class="programs--numbers__item">
+                    <span>-</span> <small>Целевых мест</small>
+                  </div>
+                  <div class="programs--numbers__item">
+                    <span>1</span> <small>Платных мест</small>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <span class="negative">- ₽</span>
+                    <small>в семестр в 2021-2022 г.</small>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <ul>
+                      <li>
+                        Вступительный экзамен в аспирантуру по научной
+                        специальности
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <span class="big">65</span>
+                    <small>Проходной балл в 2021 г.</small>
+                  </div>
+                </div>
+                <div class="container">
                   <p></p>
                   <h2 class="programs--profile-header">Чему научат</h2>
                   <div class="programs--content">
                     <p>
-                      Образовательная программа дает возможность знать несколько
-                      языков и технологий программирования, знакомит с
-                      методологией программной инженерии и системного анализа
-                      для построения сложных программных и информационных
-                      систем, учит проектировать, создавать, тестировать сложные
-                      виды программного обеспечения, знакомит с различными
-                      телекоммуникационными технологиями, что позволяет им быть
-                      востребованными на рынке труда ИТ-специалистов.
+                      Освоение программы аспирантуры осуществляется аспирантами
+                      по индивидуальному плану работы, включающему в себя:
                     </p>
-                    <p>
-                      Большое внимание в процессе обучения уделяется
-                      теоретической подготовке в области фундаментальной
-                      информатики, поскольку сложные информационные технологии
-                      связаны с разработкой новых эффективных алгоритмов и
-                      способов хранения, поиска и обработки информации, с
-                      обеспечением защиты информации в информационных системах,
-                      с цифровой обработкой изображений и звука, компьютерной
-                      графикой, с применением математических методов поддержки
-                      принятия решений, методов машинного обучения и
-                      интеллектуального анализа данных. Это предполагает
-                      глубокое знание и понимание базового математического
-                      аппарата: математического анализа, линейной алгебры,
-                      теории вероятностей и математической статистики,
-                      дискретной математики и математической логики.
-                    </p>
-                    <p>
-                      Студенты учатся работать с компьютерными сетями, сетевыми
-                      приложениями, разрабатывать программное и информационное
-                      обеспечение баз данных, вычислительных комплексов и
-                      автоматизированных систем для различных областей экономики
-                      и производства, решать задачи в области защиты информации.
-                    </p>
+                    <ul>
+                      <li>индивидуальный план научной деятельности,</li>
+                      <li>индивидуальный учебный план.</li>
+                    </ul>
+                    <p>Программа аспирантуры включает в себя:</p>
+                    <ul>
+                      <li>
+                        научный компонент: выполнение индивидуального плана
+                        научной деятельности (подготовка диссертации к защите),
+                        подготовка и публикация статей в научных изданиях, в том
+                        числе в рекомендованных ВАК; заявок на патенты (при
+                        наличии), промежуточная аттестация (отчет о выполнении
+                        индивидуального плана научной деятельности, отчет о
+                        подготовке и публикациях статей в научных изданиях;
+                        заявок на патенты (при наличии);
+                      </li>
+                      <li>
+                        образовательный компонент: дисциплины (История и
+                        философия науки, Иностранный язык, Специальная
+                        дисциплина), практика по подготовке диссертации на
+                        соискание ученой степени кандидата наук к защите,
+                        промежуточная аттестация по дисциплинам и практике;
+                      </li>
+                      <li>
+                        итоговую аттестацию (оценка диссертации на предмет ее
+                        соответствия критериям, установленным в соответствии с
+                        ФЗ № 127 от 23.08.1996 г.).
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div class="container">
                   <h2 class="programs--profile-header">Карьерная траектория</h2>
                   <div class="programs--content">
                     <p>
-                      Выпускники программы получают комплексную сбалансированную
-                      подготовку и поэтому могут выбрать направление своей
-                      деятельности из широкого спектра – от разработки
-                      программных продуктов до научных исследований в области
-                      фундаментальной информатики и информационных технологий. С
-                      легкостью могут трудоустроиться на предприятия в отделы,
-                      связанные с автоматизацией и роботизацией управления и
-                      документооборота, сбором, обработкой и анализом данных,
-                      планированием и оптимизацией работы, проектированием и
-                      разработкой интеллектуальных информационных систем.
-                      Некоторые должности, которые могут занимать выпускники:
-                      IT-директор, менеджер IT-проектов, разработчик ПО,
-                      web-разработчик, разработчик мобильных приложений,
-                      архитектор баз данных, администратор баз данных,
-                      специалист по интеллектуальному анализу данных, по
-                      интеллектуальным системам, по машинному обучению,
-                      разработчик интерфейсов, специалист по информационной
-                      безопасности.
+                      Область профессиональной деятельности выпускников,
+                      освоивших программу аспирантуры, включает всю совокупность
+                      объектов, явлений и процессов реального мира: в
+                      научно-производственной сфере – наукоемкие
+                      высокотехнологичные производства оборонной промышленности,
+                      аэрокосмического комплекса, авиастроения, машиностроения,
+                      проектирования и создания новых материалов, строительства,
+                      научно-исследовательские и аналитические центры разного
+                      профиля, в социально-экономической сфере – фонды,
+                      страховые и управляющие компании, финансовые организации и
+                      бизнес-структуры, а также образовательные организации
+                      высшего образования.
+                    </p>
+                    <p>
+                      Объектами профессиональной деятельности выпускников,
+                      освоивших программу аспирантуры, являются понятия,
+                      гипотезы, теоремы, физико-математические модели, численные
+                      алгоритмы и программы, методы экспериментального
+                      исследования свойств материалов и природных явлений,
+                      физико-химических процессов, составляющие содержание
+                      фундаментальной и прикладной математики, механики и других
+                      естественных наук.
+                    </p>
+                    <p>
+                      Виды профессиональной деятельности, к которым готовятся
+                      выпускники, освоившие программу аспирантуры:
+                      научно-исследовательская деятельность в области
+                      фундаментальной и прикладной математики, механики,
+                      естественных наук; преподавательская деятельность в
+                      области математики, механики, информатики.
+                    </p>
+                    <p>
+                      Программа аспирантуры направлена на освоение всех видов
+                      профессиональной деятельности, к которым готовится
+                      выпускник.
                     </p>
                   </div>
+                </div>
+                <div class="container">
+                  <h2 class="programs--profile-header mb-4">Контакты</h2>
+                  <b>Научные руководители программы:</b>
+                  <ul>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/1248/"
+                        >Папин Александр Алексеевич</a
+                      >
+                      - д.ф.-м.н., профессор, зав. кафедрой дифференциальных
+                      уравнений
+                    </li>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/1247/"
+                        >Гончарова Ольга Николаевна</a
+                      >
+                      - д.ф.-м.н., профессор кафедры дифференциальных уравнений
+                    </li>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/1243/"
+                        >Петрова Анна Георгиевна</a
+                      >
+                      - д.ф.-м.н., профессор кафедры дифференциальных уравнений
+                    </li>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/1276/"
+                        >Родионов Евгений Дмитриевич</a
+                      >
+                      - д.ф.-м.н., профессор кафедры математического анализа
+                    </li>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/1249/"
+                        >Токарева Маргарита Андреевна</a
+                      >
+                      - к.ф.-м.н., доцент кафедры дифференциальных уравнений
+                    </li>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/1474/"
+                        >Пономарев Игорь Викторович</a
+                      >
+                      - к.ф.-м.н., доцент кафедры математического анализа
+                    </li>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/1244/"
+                        >Ахмерова Ирина Геннадьевна</a
+                      >
+                      - к.ф.-м.н., доцент кафедры дифференциальных уравнений
+                    </li>
+                    <li>
+                      Шишмарев Константин Александрович - к.ф.-м.н., доцент
+                      кафедры дифференциальных уравнений
+                    </li>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/1238/"
+                        >Журавлев Евгений Владимирович</a
+                      >
+                      - к.ф.-м.н., доцент кафедры алгебры и математической
+                      логики
+                    </li>
+                  </ul>
+                  <h3>Дополнительная информация:</h3>
+                  <p>
+                    к.псих.н., доцент, зав. сектором аспирантуры и докторантуры
+                    <a href="https://www.asu.ru/search/persons/2172/"
+                      >Тихонова Оксана Николаевна</a
+                    >
+                  </p>
+                  <ul>
+                    <li class="phone-number mb-2">
+                      Телефон: <a href="tel:+73852298160">+7 (3852) 298-160</a>
+                    </li>
+                    <li class="mail-adress">
+                      E-mail:
+                      <a href="mailto:tihonova@mc.asu.ru">tihonova@mc.asu.ru</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End  -->
+              <!-- start -->
+              <div class="dropdown--container">
+                <h3 class="program--title">
+                  1.2.2 – МАТЕМАТИЧЕСКОЕ МОДЕЛИРОВАНИЕ, ЧИСЛЕННЫЕ МЕТОДЫ И
+                  КОМПЛЕКСЫ ПРОГРАММ
+                </h3>
+                <p>
+                  Область профессиональной деятельности выпускников, освоивших
+                  программу аспирантуры, включает: сферы науки, техники,
+                  технологии и педагогики, охватывающие совокупность задач
+                  направления Информатика и вычислительная техника, включая
+                  развитие теории, создание, внедрение и эксплуатация
+                  перспективных компьютерных систем, сетей и комплексов,
+                  математического и программного обеспечения.
+                </p>
+                <p>
+                  Объектами профессиональной деятельности выпускников, освоивших
+                  программу аспирантуры, являются избранная область научного
+                  знания, а также научные задачи междисциплинарного характера,
+                  содержащие:
+                </p>
+                <ul>
+                  <li>вычислительные машины, комплексы, системы и сети;</li>
+                  <li>
+                    современные методы анализа больших данных, машинное обучение
+                    и нейросетевые технологии;
+                  </li>
+                  <li>
+                    программное обеспечение средств вычислительной техники и
+                    автоматизированных систем (программы, программные комплексы
+                    и системы);
+                  </li>
+                  <li>
+                    математическое, информационное, техническое,
+                    лингвистическое, программное, эргономическое,
+                    организационное и правовое обеспечение автоматизированных
+                    информационных, вычислительных, проектирующих и управляющих
+                    систем;
+                  </li>
+                  <li>
+                    высокопроизводительные вычисления и суперкомпьютерная
+                    техника;
+                  </li>
+                  <li>
+                    технологии разработки технических средств вычислительной
+                    техники и программных продуктов.
+                  </li>
+                </ul>
+                <!-- <div class="programs--uch-plan">
+                  <a
+                    href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_01_04_02_prikladnaya%20matematika%20i%20informatika_bbipi-1-2021_2021_27.04.2021.pdf"
+                    >Очная форма обучения</a
+                  >
                 </div> -->
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель программы – кандидат физико-математических
-										наук, доцент кафедры дифференциальных уравнений
-										<a href="https://www.asu.ru/search/persons/1244/"
-											>Ахмерова Ирина Геннадьевна</a
-										>.
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852298156">+7 (3852) 298-156</a>
-										</li>
-										<li class="mail-adress">
-											E-mail:
-											<a href="mailto:iakhmerova@mail.ru">iakhmerova@mail.ru</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-							<!-- start -->
-							<div class="dropdown--container">
-								<h3 class="program--title">
-									09.04.03 ПРИКЛАДНАЯ ИНФОРМАТИКА, ПРОФИЛЬ «ИНЖЕНЕРИЯ
-									ИСКУССТВЕННОГО ИНТЕЛЛЕКТА»
-								</h3>
-								<p>
-									Уникальная образовательная программа готовит технологических
-									лидеров, способных выстраивать технологические процессы в
-									области инженерии искусственного интеллекта, владеющих
-									навыками в сфере разработки и управления IT-проектами, с
-									учетом требований цифровой экономики.
-								</p>
-								<span><b>Программа включает:</b></span>
-								<ul>
-									<li>
-										базовые дисциплины, направленные на развитие цифровой
-										культуры, формирование умения работать в команде, проектной
-										компетентности, коммуникативных навыков, в том числе навыков
-										делового общения на иностранном языке;
-									</li>
-									<li>
-										дисциплины, формирующие компетентность в области
-										фундаментальных и практических основ профессиональной
-										деятельности, развивающие способности решать задачи
-										прикладной информатики, в том числе инжиниринга больших
-										данных, а также комбинировать и адаптировать существующие
-										IT-технологии для решения профессиональных задач;
-									</li>
-									<li>
-										профессиональные дисциплины, направленные на формирование
-										научно-исследовательских навыков, в том числе способность
-										применять прикладные методы и инновационные технологии,
-										разрабатывать и анализировать новые алгоритмы и технологии
-										искусственного интеллекта.
-									</li>
-								</ul>
-								<p>
-									Программа является победителем конкурса Министерства науки и
-									высшего образования РФ по разработке образовательных программ
-									профиля «Искусственный интеллект» в 2021 году и реализуется
-									совместно с Уральским федеральным университетом им. Б.Н.
-									Ельцина.
-								</p>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_09_04_03_prikladnaya%20informatika_tstvusiep-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
+                <p><b>Срок обучения</b> — 4 года очно.</p>
 
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>30</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>6</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>1</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">62 600 ₽</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>
-												Экзамен по направлению «Прикладная информатика (ИМИТ)»
-											</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">-</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<div class="container">
-									<p></p>
-									<h2 class="programs--profile-header">Чему научат</h2>
-									<div class="programs--content">
-										<p>
-											Образовательная программа направлена на изучение методов
-											прикладной информатики, среди которых:
-										</p>
-										<ul>
-											<li>Программирование на Python,</li>
-											<li>Математические основы искусственного интеллекта,</li>
-											<li>Глубокие нейронные сети на Python,</li>
-											<li>Компьютерное зрение,</li>
-											<li>Программная инженерия,</li>
-											<li>Основы SQL,</li>
-											<li>Управление проектами искусственного интеллекта,</li>
-											<li>
-												Искусственный интеллект для информационной безопасности.
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header">Карьерная траектория</h2>
-									<div class="programs--content">
-										<p>
-											Выпускники программы смогут реализовывать собственные
-											проекты в различных областях, связанных с анализом больших
-											данных и технологиями искусственного интеллекта. Места
-											трудоустройства –IT-организации или IT-подразделения,
-											занимающиеся сбором, анализом и хранением данных. Среди
-											партнеров-работодателей программы – ведущие IT-компании
-											региона и страны, в том числе «Яндекс»,
-											PostgressProfessional, Integra Sources, CSort, 1С-Галэкс и
-											другие.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель программы – кандидат физико-математических
-										наук, заведующий кафедрой информатики
-										<a href="https://www.asu.ru/search/persons/1586/"
-											>Козлов Денис Юрьевич</a
-										>.
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852298152">+7 (3852) 298-152</a>
-										</li>
-										<li class="mail-adress">
-											E-mail:
-											<a href="mailto:dyk.barnaul@gmail.com"
-												>dyk.barnaul@gmail.com</a
-											>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-							<!-- start -->
-							<div class="dropdown--container">
-								<h3 class="program--title">
-									09.04.03 ПРИКЛАДНАЯ ИНФОРМАТИКА, ПРОФИЛЬ «ЦИФРОВЫЕ ТЕХНОЛОГИИ
-									АНАЛИЗА ДАННЫХ ДЛЯ УСТОЙЧИВОГО РАЗВИТИЯ РЕГИОНОВ СЕВЕРНОЙ И
-									ЦЕНТРАЛЬНОЙ АЗИИ»
-								</h3>
-								<p>
-									Программа ориентирована на подготовку специалистов, способных
-									к проектной деятельности в области цифровых технологий и
-									анализа больших данных, владеющих компетенциями в сфере
-									научно-исследовательской и междисциплинарной деятельности с
-									учетом требований рынка труда, перспектив и трендов в развитии
-									IT-технологий.
-								</p>
-								<span><b>Программа включает:</b></span>
-								<ul>
-									<li>
-										базовые дисциплины, направленные на развитие цифровой
-										культуры, формирование умения работать в команде, проектной
-										компетентности, коммуникативных навыков, в том числе навыков
-										делового общения на иностранном языке;
-									</li>
-									<li>
-										дисциплины, формирующие компетентность в области
-										фундаментальных и практических основ профессиональной
-										деятельности, развивающие способности решать задачи
-										прикладной информатики, в том числе инжиниринга больших
-										данных, а также комбинировать и адаптировать существующие
-										IT-технологии для решения профессиональных задач;
-									</li>
-									<li>
-										профессиональные дисциплины, направленные на формирование
-										научно-исследовательских навыков и компетенций в сфере
-										разработки и управления IT-проектами
-									</li>
-								</ul>
-								<p>
-									Программа магистратуры разработана в рамках реализации
-									научно-образовательной деятельности центра алтаистики и
-									тюркологии «Большой Алтай». Реализация программы
-									осуществляется в сотрудничестве с Восточно-Казахстанским
-									университетом им. С. Аманжолова и Северо-Казахстанским
-									университетом имени М. Козыбаева.
-								</p>
-								<div class="programs--uch-plan">
-									<a
-										href="https://www.asu.ru/files/sveden/education/plan/Ucheb_plan_09_04_03_prikladnaya%20informatika_tstad_tsa-1-2021_2021_27.04.2021.pdf"
-										>Очная форма обучения</a
-									>
-								</div>
-								<p><b>Срок обучения</b> — 2 года очно.</p>
-
-								<div class="programs--numbers__banner">
-									<div class="programs--numbers__item">
-										<span>7</span> <small>Бюджетных мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>1</span> <small>Целевых мест</small>
-									</div>
-									<div class="programs--numbers__item">
-										<span>8</span> <small>Платных мест</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="negative">62 600 ₽</span>
-										<small>в семестр в 2021-2022 г.</small>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<ul>
-											<li>
-												Экзамен по направлению «Прикладная информатика (ИМИТ)»
-											</li>
-										</ul>
-									</div>
-									<div class="programs--numbers__divider"></div>
-									<div class="programs--numbers__item">
-										<span class="big">80</span>
-										<small>Проходной балл в 2021 г.</small>
-									</div>
-								</div>
-								<div class="container">
-									<p></p>
-									<h2 class="programs--profile-header">Чему научат</h2>
-									<div class="programs--content">
-										<p>
-											Образовательная программа направлена на подготовку
-											специалистов с углубленным изучением методов
-											пространственного анализа, математического моделирования и
-											прогнозирования динамики природных и
-											социально-экономических процессов, а также ГИС-технологий.
-											Спектр прикладных задач выпускника включает анализ
-											климатических изменений, экстремальных климатических
-											явлений и рисков их наступления (засуха, подтопления,
-											пожары), различных, в том числе экстремальных, социальных
-											явлений на основе обработки данных дистанционного
-											зондирования земли (ДЗЗ), больших данных и разнородных
-											данных, собранных из различных источников (статистика,
-											социологические опросы, данные социальных сетей и т.д.).
-											Кроме того, подготовка включает обучение методам обработки
-											данных наземного мониторинга (метеостанции,
-											лизиметрические станции) и данных, полученных с
-											беспилотных летательных аппаратов.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header">Карьерная траектория</h2>
-									<div class="programs--content">
-										<p>
-											Выпускники программы смогут реализовывать собственные
-											проекты в области анализа больших данных. Возможно
-											трудоустройство по профилю в органы государственной
-											власти, органы местного самоуправления; в организации по
-											предоставлению и разработке цифровых сервисов анализа
-											данных для предприятий регионов Северной и Центральной
-											Азии, включая предприятия, оказывающие ИТ услуги.
-										</p>
-									</div>
-								</div>
-								<div class="container">
-									<h2 class="programs--profile-header mb-4">Контакты</h2>
-									<p>
-										Руководитель программы – кандидат технических наук,
-										заведующий кафедрой теоретической кибернетики и прикладной
-										математики
-										<a href="https://www.asu.ru/search/persons/333/"
-											>Понькина Елена Владимировна</a
-										>.
-									</p>
-									<h3>Дополнительная информация:</h3>
-									<ul>
-										<li class="phone-number mb-2">
-											Телефон: <a href="tel:+73852298151">+7 (3852) 298-151</a>
-										</li>
-										<li class="mail-adress">
-											E-mail:
-											<a href="mailto:ponkinaelena77@mail.ru"
-												>ponkinaelena77@mail.ru</a
-											>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- End  -->
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="programs--students__section">
-				<div class="programs--students container">
-					<div class="programs--students__logo">
-						<img alt="" src="../../files/images.215/programs/3d.png" />
-					</div>
-					<div class="programs--students__content">
-						<h2>Меры поддержки для первокурсников</h2>
-						<a href="https://abiturient.asu.ru/bachelor/grants2021/"
-							>Подробнее</a
-						>
-					</div>
-				</div>
-			</section>
-			<section class="programs--contacts">
-				<div class="programs--form">
-					<h3>Оставить заявку</h3>
-					<form>
-						<div class="callModalFormRow">
-							<div class="callModalFormColumn">
-								<label for="name">Имя</label>
-								<input type="text" id="name" required="" name="name" />
-							</div>
-							<div class="callModalFormColumn">
-								<label for="secondName">Фамилия</label>
-								<input
-									type="text"
-									id="secondName"
-									required=""
-									name="secondName"
-								/>
-							</div>
-						</div>
-						<div class="callModalFormColumn">
-							<label for="tel">Номер телефона</label>
-							<input
-								type="tel"
-								value="+7"
-								pattern="^[7|8]{0,1}\d{10}$|(^\+7{1}\d{10}$)"
-								maxlength="12"
-								id="tel"
-								required=""
-								name="phoneNumber"
-							/>
-							<small>Пример: +71235641122</small>
-						</div>
-						<div class="callModalFormColumn">
-							<label for="question">Опишите ваш вопрос</label
-							><textarea
-								rows="10"
-								cols="25"
-								id="question"
-								name="question"
-								placeholder="Напишите интересующий Вас вопрос..."
-								required=""
-							></textarea>
-						</div>
-					</form>
-				</div>
-			</section>
-		</section>
-	</body>
+                <div class="programs--numbers__banner">
+                  <div class="programs--numbers__item">
+                    <span>1</span> <small>Бюджетных мест</small>
+                  </div>
+                  <div class="programs--numbers__item">
+                    <span>-</span> <small>Целевых мест</small>
+                  </div>
+                  <div class="programs--numbers__item">
+                    <span>1</span> <small>Платных мест</small>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <span class="negative">- ₽</span>
+                    <small>в семестр в 2021-2022 г.</small>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <ul>
+                      <li>
+                        Вступительный экзамен в аспирантуру по научной
+                        специальности
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="programs--numbers__divider"></div>
+                  <div class="programs--numbers__item">
+                    <span class="big">85</span>
+                    <small>Проходной балл в 2021 г.</small>
+                  </div>
+                </div>
+                <div class="container">
+                  <p></p>
+                  <h2 class="programs--profile-header">Чему научат</h2>
+                  <div class="programs--content">
+                    <p>Учебный план программы состоит из следующих блоков:</p>
+                    <ul>
+                      <li>
+                        Блок 1. Дисциплины базовой части программы, включая
+                        математические основы, численные методы, информационные
+                        технологии, компьютерные технологии, методы
+                        математического моделирования.
+                      </li>
+                      <li>
+                        Блок 2. Педагогическая, производственная и
+                        научно-исследовательская практики. В программе
+                        аспирантуры предусматривается организация и проведение
+                        практик: практика по получению профессиональных умений и
+                        опыта профессиональной деятельности
+                        (научно-исследовательская практика) и практика по
+                        получению профессиональных умений и опыта
+                        профессиональной деятельности (педагогическая практика).
+                        По способам проведения предусмотрены практики в учебных
+                        и научных лабораториях университета и выездные практики
+                        в ВУЗах партнерах и на площадках базовых кафедр
+                        институтов РАН.
+                      </li>
+                      <li>
+                        Блок 3. Научные исследования. В данном блоке программы
+                        предусмотрены научно-исследовательская деятельность и
+                        подготовка научно-квалификационной работы (диссертации)
+                        на соискание ученой степени кандидата наук.
+                      </li>
+                      <li>
+                        Блок 4. Государственная итоговая аттестация. По
+                        программе практик проводится подготовка к сдаче и сдача
+                        государственного экзамена, а также представление
+                        научного доклада об основных результатах подготовленной
+                        научно-квалификационной работы (диссертации).
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="container">
+                  <h2 class="programs--profile-header">Карьерная траектория</h2>
+                  <div class="programs--content">
+                    <p>
+                      Выпускники программы аспирантуры защищают диссертации на
+                      соискание ученой степени кандидата физико-математических
+                      наук или кандидата технических наук. Они получают
+                      значительные карьерные перспективы в сфере
+                      профессиональной научной деятельности в институтах РАН или
+                      педагогической деятельности в организациях среднего и
+                      высшего профессионального образования. Окончание
+                      аспирантуры способствует трудоустройству в сфере
+                      государственного и муниципального управления и для
+                      выполнения наукоемких проектов в IT-отделах коммерческих
+                      компаний и фирм различного профиля.
+                    </p>
+                  </div>
+                </div>
+                <div class="container">
+                  <h2 class="programs--profile-header mb-4">Контакты</h2>
+                  <b>Научные руководители программы:</b>
+                  <ul>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/264/"
+                        >Оскорбин Николай Михайлович</a
+                      >
+                      - д.т.н., профессор кафедры теоретической кибернетики и
+                      прикладной математики
+                    </li>
+                    <li>
+                      Пышнограй Г.В. - д.ф.-м.н., профессор кафедры информатики
+                    </li>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/333/"
+                        >Понькина Елена Владимировна</a
+                      >
+                      - к.т.н., доцент кафедры теоретической кибернетики и
+                      прикладной математики
+                    </li>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/334/"
+                        >Хворова Любовь Анатольевна</a
+                      >
+                      - к.т.н., доцент кафедры теоретической кибернетики и
+                      прикладной математики
+                    </li>
+                    <li>
+                      <a href="https://www.asu.ru/search/persons/508/"
+                        >Половикова Ольга Николаевна</a
+                      >
+                      - к.ф.-м.н., доцент кафедры информатики
+                    </li>
+                  </ul>
+                  <h3>Дополнительная информация:</h3>
+                  <p>
+                    к.псих.н., доцент, зав. сектором аспирантуры и докторантуры
+                    <a href="https://www.asu.ru/search/persons/2172/"
+                      >Тихонова Оксана Николаевна</a
+                    >
+                  </p>
+                  <ul>
+                    <li class="phone-number mb-2">
+                      Телефон: <a href="tel:+73852298160">+7 (3852) 298-160</a>
+                    </li>
+                    <li class="mail-adress">
+                      E-mail:
+                      <a href="mailto:tihonova@mc.asu.ru">tihonova@mc.asu.ru</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End  -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
 </html>
