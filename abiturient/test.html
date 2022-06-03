@@ -1,1102 +1,1355 @@
-<style>
-	summary {
-		display: flex;
-		margin-bottom: 1.2rem;
-		margin-top: 0.5rem;
-	}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- dev only -->
+    <style>
+      :root {
+        --asu-blue: #008ad5;
+      }
+    </style>
+    <!-- dev only -->
 
-	.inf li {
-		list-style-type: disclosure-closed;
-	}
-</style>
-<h2 class="text-center mb-4">Подробнее о направлениях</h2>
-<ul class="inf">
-	<li>
-		<details>
-			<summary>
-				<h3>Бакалавриат</h3>
-			</summary>
-			<div class="col-12 d-flex justify-content-center mb-3">
-				<a
-					class="link-corona btn btn-md header-btn mb-3 w-auto"
-					href="https://docs.google.com/forms/d/1c1BGhwMFuVb2y94KEaSM5FGLldpkN4DjpUUym4nKwkU"
-				>
-					Анкета для поступающих в бакалавриат
-				</a>
-			</div>
-			<div class="row">
-				<div
-					itemscope=""
-					itemtype="http://schema.org/Product"
-					class="col-md-6 col-lg-4 mb-3"
-				>
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							itemprop="image"
-							src="http://newmath.asu.ru/wp-content/uploads/2020/05/1-min-1024x768.jpg"
-							alt=""
-							class="wp-image-991"
-							style="width: 100%; height: auto; border-radius: 0px"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>01.03.02</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-								itemprop="name"
-							>
-								Прикладная математика и информатика
-							</h3>
-							<span
-								itemprop="description"
-								class="mb-2"
-								style="font-size: 14px; line-height: 1.2"
-							>
-								Профиль: "Математическое и компьютерное моделирование в
-								природных и индустриальных системах", "Прикладной анализ данных
-								и компьютерное моделирование"
-							</span>
+    <style>
+      ul li {
+        line-height: 1.9;
+      }
 
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									50
-								</span>
-								<p class="mb-0" .text-cel="">Бюджетных мест</p>
-							</div>
-							<ul
-								class="my-2 list-unstyled"
-								style="
-									font-size: 0.9em;
-									font-weight: 600;
-									font-style: italic;
-									color: #70b79e;
-									text-shadow: 1px 1px #00000094;
-								"
-							>
-								<li>5 целевых мест</li>
-								<li>5 льготных мест</li>
-							</ul>
+	  ul li strong {
+		color: var(--asu-adv-blue);
+	  }
 
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									3
-								</span>
-								<p class="mb-0">Платных мест</p>
-							</div>
-						</div>
-						<a
-							class="link-corona btn btn-md header-btn mb-4"
-							style="width: 175px; position: relative; margin: 20px 0"
-							href="http://newmath.asu.ru/%d0%bf%d1%80%d0%b8%d0%ba%d0%bb%d0%b0%d0%b4%d0%bd%d0%b0%d1%8f-%d0%bc%d0%b0%d1%82%d0%b5%d0%bc%d0%b0%d1%82%d0%b8%d0%ba%d0%b0-%d0%b8-%d0%b8%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%82%d0%b8%d0%ba%d0%b0/"
-						>
-							Подробнее
-						</a>
-					</div>
-				</div>
-				<div
-					class="col-md-6 col-lg-4 mb-3"
-					itemscope=""
-					itemtype="http://schema.org/Product"
-				>
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://newmath.asu.ru/wp-content/uploads/2020/05/6-min-1024x768.jpg"
-							alt=""
-							class="wp-image-993"
-							style="width: 100%; height: auto; border-radius: 0px"
-							itemprop="image"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>02.03.01</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-								itemprop="name"
-							>
-								Математика и компьютерные науки
-							</h3>
-							<span
-								class="mb-2"
-								style="font-size: 14px; line-height: 1.2"
-								itemprop="description"
-							>
-								Профиль: "Математические основы компьютерных наук"
-							</span>
+      .table {
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 1px solid rgb(22, 22, 22);
+        margin: 2rem auto;
+		overflow-x: scroll;
+      }
 
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									40
-								</span>
-								<p class="mb-0">Бюджетных мест</p>
-							</div>
+      .table thead {
+        position: sticky;
+        top: 0;
+        background: var(--asu-blue);
+        color: #fff;
+      }
+      .table thead th {
+        padding: 2.5rem 1rem;
+        border: 1px solid rgb(230, 230, 230);
+		vertical-align: middle;
+		text-align: center;
+		font-size: 0.8rem;
+		letter-spacing: 0.05rem;
+		max-width: 250px;
+		line-height: 1.25 !important;
+      }
+      .table td {
+        text-align: center;
+        border: 1px solid rgba(22, 22, 22, 0.75);
+        padding: 0.5rem 1rem;
+		vertical-align: middle;
+		max-width: 250px;
+      }
 
-							<ul
-								class="my-2 list-unstyled"
-								style="
-									font-size: 0.9em;
-									font-weight: 600;
-									font-style: italic;
-									color: #70b79e;
-									text-shadow: 1px 1px #00000094;
-								"
-							>
-								<li>4 целевых места</li>
-								<li>4 льготных места</li>
-							</ul>
+      .table td[colspan="8"] {
+        padding: 2rem;
+        background-color: rgb(214, 241, 255);
+      }
+    </style>
 
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									2
-								</span>
-								<p class="mb-0">Платных мест</p>
-							</div>
-						</div>
-						<a
-							class="link-corona btn btn-md header-btn mb-4"
-							style="width: 175px; position: relative; margin: 20px 0"
-							href="http://newmath.asu.ru/%d0%bc%d0%b0%d1%82%d0%b5%d0%bc%d0%b0%d1%82%d0%b8%d0%ba%d0%b0-%d0%b8-%d0%ba%d0%be%d0%bc%d0%bf%d1%8c%d1%8e%d1%82%d0%b5%d1%80%d0%bd%d1%8b%d0%b5-%d0%bd%d0%b0%d1%83%d0%ba%d0%b8/"
-						>
-							Подробнее
-						</a>
-					</div>
-				</div>
-				<div
-					class="col-md-6 col-lg-4 mb-3"
-					itemscope=""
-					itemtype="http://schema.org/Product"
-				>
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://newmath.asu.ru/wp-content/uploads/2020/05/IMG_8739-min-1024x768.jpg"
-							alt=""
-							class="wp-image-994"
-							style="width: 100%; height: auto; border-radius: 0px"
-							itemprop="image"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>02.03.02</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-								itemprop="name"
-							>
-								Фундаментальная информатика и информационные технологии
-							</h3>
-							<span
-								class="mb-2"
-								style="font-size: 14px; line-height: 1.2"
-								itemprop="description"
-							>
-								Профиль: "Программирование и информационные технологии"
-							</span>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Код</th>
+          <th>Направления подготовки / специальности</th>
+          <th>Общее число бюджетных мест</th>
+          <th>Особая квота (из общего числа бюджетных мест)</th>
+          <th>Целевая квота (из общего числа бюджетных мест)</th>
+          <th>Специальная квота (из общего числа бюджетных мест)</th>
+          <th>Платные места</th>
+          <th>Стоимость в 2021 году (рублей в год)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="8">
+            <strong>Институт истории и международных отношений</strong>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">41.03.01</td>
+          <td>Зарубежное регионоведение, профиль «Китай и китайский язык»</td>
+          <td>5</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>15</td>
+          <td>109 230</td>
+        </tr>
+        <tr>
+          <td>Зарубежное регионоведение, профиль «Корея и корейский язык»</td>
+          <td>5</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>15</td>
+          <td>109 230</td>
+        </tr>
+        <tr>
+          <td>Зарубежное регионоведение, профиль «Россия и русский язык»</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>30</td>
+          <td>109 230</td>
+        </tr>
+        <tr>
+          <td>41.03.05</td>
+          <td>
+            Международные отношения, профиль «Международные отношения и внешняя
+            политика»
+          </td>
+          <td>10</td>
+          <td>1</td>
+          <td>4</td>
+          <td>1</td>
+          <td>25</td>
+          <td>109 230</td>
+        </tr>
+        <tr>
+          <td>46.03.01</td>
+          <td>История, профиль «История России и всеобщая история»</td>
+          <td>8</td>
+          <td>1</td>
+          <td>2</td>
+          <td>1</td>
+          <td>22</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>46.03.02</td>
+          <td>
+            Документоведение и архивоведение, профиль «Документационное
+            обеспечение управления и архивы в условиях цифровой трансформации»
+          </td>
+          <td>8</td>
+          <td>1</td>
+          <td>2</td>
+          <td>1</td>
+          <td>17</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>46.03.04</td>
+          <td>Археология, профиль «Инновационная археология»</td>
+          <td>7</td>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>8</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>51.03.04</td>
+          <td>
+            Музеология и охрана объектов культурного и природного наследия,
+            профиль «Современные технологии хранения и презентации музейных
+            ценностей»
+          </td>
+          <td>25</td>
+          <td>3</td>
+          <td>10*</td>
+          <td>2</td>
+          <td>5</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td colspan="8">
+            <strong
+              >Международный институт экономики, менеджмента и информационных
+              систем</strong
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>09.03.03</td>
+          <td>
+            Прикладная информатика, профиль «Управление IT-проектами,
+            ERP-системы и прикладное программирование»
+          </td>
+          <td>58</td>
+          <td>6</td>
+          <td>6</td>
+          <td>6</td>
+          <td>12</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>27.03.03</td>
+          <td>
+            Системный анализ и управление, профиль «Системный анализ и
+            управление экономическими системами»
+          </td>
+          <td>13</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>7</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>38.03.01</td>
+          <td>
+            Экономика, профили «Финансы и бухгалтерский учет, Экономический
+            анализ и управление рисками»
+          </td>
+          <td>12</td>
+          <td>2</td>
+          <td>2</td>
+          <td>1</td>
+          <td>48</td>
+          <td>111 390</td>
+        </tr>
+        <tr>
+          <td rowspan="2">38.03.02</td>
+          <td>
+            Менеджмент, профиль «Маркетинг и цифровые коммуникации,
+            HR-менеджмент»
+          </td>
+          <td>12</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>48</td>
+          <td>111 390</td>
+        </tr>
+        <tr>
+          <td>Менеджмент, профиль «Управление бизнесом»</td>
+          <td>6</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>24</td>
+          <td>111 390</td>
+        </tr>
+        <tr>
+          <td>38.03.04</td>
+          <td>
+            Государственное и муниципальное управление, профиль «Современная
+            система государственного и муниципального управления»
+          </td>
+          <td>12</td>
+          <td>2</td>
+          <td>2</td>
+          <td>1</td>
+          <td>28</td>
+          <td>111 390</td>
+        </tr>
+        <tr>
+          <td>38.05.01</td>
+          <td>
+            Экономическая безопасность, профиль «Экономико-правовое обеспечение
+            экономической безопасности»
+          </td>
+          <td>8</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>42</td>
+          <td>111 390</td>
+        </tr>
+        <tr>
+          <td colspan="8">
+            <strong>Юридический институт</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>40.03.01</td>
+          <td>
+            Юриспруденция, профиль «Уголовно-правовой, Гражданско-правовой,
+            Государственно-правовой»
+          </td>
+          <td>16</td>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+          <td>110</td>
+          <td>122 210</td>
+        </tr>
+        <tr>
+          <td>40.05.01</td>
+          <td>
+            Правовое обеспечение национальной безопасности, специализация
+            «Уголовно-правовая»
+          </td>
+          <td>3</td>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>57</td>
+          <td>123 290</td>
+        </tr>
+        <tr>
+          <td>40.05.04</td>
+          <td>
+            Судебная и прокурорская деятельность, специализация «Судебная
+            деятельность»
+          </td>
+          <td>7</td>
+          <td>1</td>
+          <td>6</td>
+          <td>0</td>
+          <td>123</td>
+          <td>123 290</td>
+        </tr>
+        <tr>
+          <td colspan="8">
+            <strong>Институт математики и информационных технологий</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>01.03.02</td>
+          <td>
+            Прикладная математика и информатика, профиль «Математическое и
+            компьютерное моделирование в природных и индустриальных системах,
+            Прикладной анализ данных и компьютерное моделирование»
+          </td>
+          <td>50</td>
+          <td>5</td>
+          <td>5</td>
+          <td>5</td>
+          <td>3</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>02.03.01</td>
+          <td>
+            Математика и компьютерные науки, профиль «Математические основы
+            компьютерных наук»
+          </td>
+          <td>40</td>
+          <td>4</td>
+          <td>4</td>
+          <td>4</td>
+          <td>2</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>02.03.02</td>
+          <td>
+            Фундаментальная информатика и информационные технологии, профиль
+            «Программирование и информационные технологии»
+          </td>
+          <td>50</td>
+          <td>5</td>
+          <td>5*</td>
+          <td>5</td>
+          <td>10</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>09.03.03</td>
+          <td>
+            Прикладная информатика, профиль «Интеллектуальный анализ данных»
+          </td>
+          <td>20</td>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+          <td>5</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>09.03.04</td>
+          <td>
+            Программная инженерия,профиль «Разработка программно-информационных
+            систем»
+          </td>
+          <td>23</td>
+          <td>3</td>
+          <td>2</td>
+          <td>2</td>
+          <td>7</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td colspan="8">
+            <strong>Институт цифровых технологий, электроники и физики</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>03.03.02</td>
+          <td>
+            Физика, профиль «Медицинская физика, Современные функциональные
+            материалы»
+          </td>
+          <td>25</td>
+          <td>3</td>
+          <td>3*</td>
+          <td>2</td>
+          <td>5</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>03.03.03</td>
+          <td>
+            Радиофизика, профиль «Компьютерная электроника и телекоммуникации»
+          </td>
+          <td>25</td>
+          <td>3</td>
+          <td>3</td>
+          <td>2</td>
+          <td>5</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>09.03.01</td>
+          <td>
+            Информатика и вычислительная техника, профиль «Программирование
+            средств вычислительной техники и автоматизированных систем,
+            Программно-техническое обеспечение инфокоммуникационных технологий»
+          </td>
+          <td>43</td>
+          <td>5</td>
+          <td>4</td>
+          <td>4</td>
+          <td>7</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>10.03.01</td>
+          <td>
+            Информационная безопасность, профиль «Безопасность
+            автоматизированных систем (в сфере профессиональной деятельности)»
+          </td>
+          <td>75</td>
+          <td>8</td>
+          <td>15</td>
+          <td>7</td>
+          <td>5</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td colspan="8">
+            <strong>Институт химии и химико-фармацевтических технологий</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>04.03.01</td>
+          <td>Химия, профиль «Теоретическая и экспериментальная химия»</td>
+          <td>50</td>
+          <td>5</td>
+          <td>5*</td>
+          <td>5</td>
+          <td>2</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>18.03.01</td>
+          <td>
+            Химическая технология, профиль «Химическое, фармацевтическое и
+            косметическое производство»
+          </td>
+          <td>25</td>
+          <td>3</td>
+          <td>3*</td>
+          <td>2</td>
+          <td>2</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>19.03.01</td>
+          <td>
+            Биотехнология, профиль «Биотехнология продуктов на основе
+            растительного сырья»
+          </td>
+          <td>35</td>
+          <td>4</td>
+          <td>4</td>
+          <td>3</td>
+          <td>2</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>20.03.01</td>
+          <td>
+            Техносферная безопасность, профиль «Безопасность жизнедеятельности в
+            техносфере»
+          </td>
+          <td>40</td>
+          <td>4</td>
+          <td>4*</td>
+          <td>4</td>
+          <td>2</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>04.05.01</td>
+          <td>
+            Фундаментальная и прикладная химия, профиль «Аналитическая химия,
+            Органическая химия, Физическая химия и технологии материалов»
+          </td>
+          <td>47</td>
+          <td>5</td>
+          <td>5</td>
+          <td>5</td>
+          <td>3</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>33.05.01</td>
+          <td>Фармация, профиль «Разработка биофармпрепаратов»</td>
+          <td>3</td>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>17</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td colspan="8">
+            <strong>Институт биологии и биотехнологии</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>06.03.01</td>
+          <td>
+            Биология, профиль «Ботаника и молекулярная генетика, Зоология и
+            молекулярная генетика, Биоэкология, Физиология, Биохимия и
+            биотехнология»
+          </td>
+          <td>120</td>
+          <td>12</td>
+          <td>12*</td>
+          <td>12</td>
+          <td>10</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td colspan="8">
+            <strong>Институт географии</strong>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2">05.03.02</td>
+          <td>
+            География, профиль «Физическая география, геоинформатика и география
+            туризма»
+          </td>
+          <td>24</td>
+          <td>3</td>
+          <td>2*</td>
+          <td>2</td>
+          <td>4</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>
+            География, профиль «Аналитика, пространственное развитие и цифровые
+            технологии в общественной географии»
+          </td>
+          <td>24</td>
+          <td>3</td>
+          <td>2*</td>
+          <td>2</td>
+          <td>4</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>05.03.06</td>
+          <td>
+            Экология и природопользование, профиль «Природопользование,
+            Комплексное использование и охрана водных ресурсов»
+          </td>
+          <td>46</td>
+          <td>5</td>
+          <td>5*</td>
+          <td>4</td>
+          <td>2</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>21.03.02</td>
+          <td>
+            Землеустройство и кадастры, профиль «Оценка земли и управление
+            объектами недвижимости»
+          </td>
+          <td>25</td>
+          <td>3</td>
+          <td>3*</td>
+          <td>2</td>
+          <td>1</td>
+          <td>143 140</td>
+        </tr>
+        <tr>
+          <td>35.03.10</td>
+          <td>
+            Ландшафтная архитектура, профиль «Ландшафтное проектирование и
+            дизайн окружающей среды»
+          </td>
+          <td>25</td>
+          <td>3</td>
+          <td>3*</td>
+          <td>2</td>
+          <td>1</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>43.03.01</td>
+          <td>Сервис, профиль «Рекреационный и санаторно-курортный сервис»</td>
+          <td>20</td>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+          <td>5</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>43.03.02</td>
+          <td>Туризм, профиль «Внутренний и международный туризм»</td>
+          <td>20</td>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+          <td>5</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>43.03.03</td>
+          <td>
+            Гостиничное дело, профиль «Гостинично-ресторанная деятельность»
+          </td>
+          <td>25</td>
+          <td>3</td>
+          <td>3</td>
+          <td>2</td>
+          <td>5</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td colspan="8">
+            <strong>Институт гуманитарных наук</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>09.03.03</td>
+          <td>
+            Прикладная информатика, профиль «Прикладная информатика в дизайне»
+          </td>
+          <td>61</td>
+          <td>7</td>
+          <td>6</td>
+          <td>6</td>
+          <td>24</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>37.03.01</td>
+          <td>
+            Психология, профиль «Психологическая диагностика и психологическое
+            консультирование»
+          </td>
+          <td>17</td>
+          <td>2</td>
+          <td>3</td>
+          <td>2</td>
+          <td>8</td>
+          <td>107 600</td>
+        </tr>
+        <tr>
+          <td>37.03.02</td>
+          <td>Конфликтология, профиль «Конфликт-менеджмент»</td>
+          <td>23</td>
+          <td>3</td>
+          <td>0</td>
+          <td>2</td>
+          <td>3</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>37.05.01</td>
+          <td>
+            Клиническая психология, специализация «Патопсихологическая
+            диагностика и когнитивно-поведенческая психотерапия»
+          </td>
+          <td>13</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>17</td>
+          <td>107 600</td>
+        </tr>
+        <tr>
+          <td>37.05.02</td>
+          <td>
+            Психология служебной деятельности, специализация «Психология
+            менеджмента и организационное консультирование»
+          </td>
+          <td>13</td>
+          <td>2</td>
+          <td>0</td>
+          <td>1</td>
+          <td>20</td>
+          <td>107600</td>
+        </tr>
+        <tr>
+          <td>39.03.01</td>
+          <td>Социология, профиль «Социология маркетинга и рекламы»</td>
+          <td>25</td>
+          <td>3</td>
+          <td>3</td>
+          <td>2</td>
+          <td>15</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>39.03.02</td>
+          <td>
+            Социальная работа, профиль «Социальная политика и социальная защита
+            населения»
+          </td>
+          <td>20</td>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+          <td>5</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>39.03.03</td>
+          <td>
+            Организация работы с молодежью, профиль «Управление в молодежной
+            политике»
+          </td>
+          <td>19</td>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+          <td>6</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>41.03.02</td>
+          <td>
+            Регионоведение России, профиль «Национальная политика и
+            международное сотрудничество»
+          </td>
+          <td>10</td>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>15</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>41.03.04</td>
+          <td>
+            Политология, профиль «Политический менеджмент и
+            digital-коммуникации»
+          </td>
+          <td>10</td>
+          <td>1</td>
+          <td>2</td>
+          <td>1</td>
+          <td>15</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>42.03.01</td>
+          <td>
+            Реклама и связи с общественностью, профиль «Реклама и связи с
+            общественностью в государственных и бизнес-структурах»
+          </td>
+          <td>14</td>
+          <td>2</td>
+          <td>2</td>
+          <td>1</td>
+          <td>46</td>
+          <td>111 390</td>
+        </tr>
+        <tr>
+          <td>42.03.02</td>
+          <td>Журналистика, профиль «Универсальная журналистика»</td>
+          <td>10</td>
+          <td>1</td>
+          <td>2</td>
+          <td>1</td>
+          <td>50</td>
+          <td>111 390</td>
+        </tr>
+        <tr>
+          <td>42.03.05</td>
+          <td>
+            Медиакоммуникации, профиль «Цифровая культура и медийное
+            производство»
+          </td>
+          <td>10</td>
+          <td>1</td>
+          <td>2</td>
+          <td>1</td>
+          <td>35</td>
+          <td>107 600</td>
+        </tr>
+        <tr>
+          <td>44.03.02</td>
+          <td>
+            Психолого-педагогическое образование, профиль»Коррекционная и
+            консультативная деятельность психолога»
+          </td>
+          <td>15</td>
+          <td>2</td>
+          <td>3*</td>
+          <td>2</td>
+          <td>1</td>
+          <td>107 600</td>
+        </tr>
+        <tr>
+          <td>44.03.04</td>
+          <td>Профессиональное обучение (по отраслям), профиль «Дизайн»</td>
+          <td>22</td>
+          <td>3</td>
+          <td>4*</td>
+          <td>2</td>
+          <td>33</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>44.03.05</td>
+          <td>
+            Педагогическое образование<br />
+            (с двумя профилями подготовки), профиль «Русский язык и литература.
+            Детская журналистика»
+          </td>
+          <td>15</td>
+          <td>2</td>
+          <td>3*</td>
+          <td>2</td>
+          <td>5</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>44.03.05</td>
+          <td>
+            Педагогическое образование<br />
+            (с двумя профилями подготовки), профиль «Английский язык. Китайский
+            язык»
+          </td>
+          <td>17</td>
+          <td>2</td>
+          <td>3*</td>
+          <td>2</td>
+          <td>18</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>44.05.01</td>
+          <td>
+            Педагогика и психология девиантного поведения, профиль
+            «Психолого-педагогическая коррекция и реабилитация лиц с девиантным
+            поведением»
+          </td>
+          <td>47</td>
+          <td>5</td>
+          <td>5</td>
+          <td>5</td>
+          <td>3</td>
+          <td>107 600</td>
+        </tr>
+        <tr>
+          <td>45.03.01</td>
+          <td>Филология, профиль «Русская филология»</td>
+          <td>10</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>15</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>45.03.02</td>
+          <td>Лингвистика, профиль «Перевод и переводоведение»</td>
+          <td>9</td>
+          <td>1</td>
+          <td>3</td>
+          <td>1</td>
+          <td>41</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>45.03.02</td>
+          <td>Лингвистика, профиль «Русский язык как иностранный»</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>110</td>
+          <td>113 560</td>
+        </tr>
+        <tr>
+          <td>47.03.01</td>
+          <td>Философия, профиль «Философия Востока»</td>
+          <td>13</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>12</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>50.03.02</td>
+          <td>
+            Изящные искусства, профиль «Живопись. Вокальное искусство. Режиссура
+            и актерское искусство»
+          </td>
+          <td>1</td>
+          <td>1</td>
+          <td>1*</td>
+          <td>0</td>
+          <td>19</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>50.03.03</td>
+          <td>История искусств, профиль «Дизайн и современное искусство»</td>
+          <td>3</td>
+          <td>1</td>
+          <td>1*</td>
+          <td>0</td>
+          <td>12</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>51.03.01</td>
+          <td>Культурология, профиль «Управление в сфере культуры»</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1*</td>
+          <td>0</td>
+          <td>12</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>53.03.02</td>
+          <td>
+            Музыкально-инструментальное искусство, профиль
+            «Музыкально-инструментальное искусство в сфере музыкального
+            исполнительства»
+          </td>
+          <td>5</td>
+          <td>1</td>
+          <td>3*</td>
+          <td>1</td>
+          <td>8</td>
+          <td>190 200</td>
+        </tr>
+        <tr>
+          <td>54.03.02</td>
+          <td>
+            Декоративно-прикладное искусство и народные промыслы, профиль
+            «Арт-дизайн»
+          </td>
+          <td>9</td>
+          <td>1</td>
+          <td>1*</td>
+          <td>1</td>
+          <td>4</td>
+          <td>190 200</td>
+        </tr>
+        <tr>
+          <td>54.03.03</td>
+          <td>
+            Искусство костюма и текстиля, профиль «Дизайн костюма в индустрии
+            моды»
+          </td>
+          <td>21</td>
+          <td>3</td>
+          <td>2*</td>
+          <td>2</td>
+          <td>4</td>
+          <td>190 200</td>
+        </tr>
+        <tr>
+          <td colspan="8">
+            <strong>Рубцовский институт (филиал) АлтГУ</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>09.03.03</td>
+          <td>
+            Прикладная информатика, профиль «Цифровые технологии и управление
+            данными»
+          </td>
+          <td>30</td>
+          <td>3</td>
+          <td>3</td>
+          <td>3</td>
+          <td>5</td>
+          <td>118 380</td>
+        </tr>
+        <tr>
+          <td>37.03.01</td>
+          <td>Психология, профиль «Общая психология и психология личности»</td>
+          <td>10</td>
+          <td>1</td>
+          <td>2</td>
+          <td>1</td>
+          <td>10</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>38.03.01</td>
+          <td>Экономика, профиль «Цифровая экономика и финансы»</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>20</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>38.03.04</td>
+          <td>
+            Государственное и муниципальное управление, профиль «Цифровое
+            государство»
+          </td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>20</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>40.03.01</td>
+          <td>Юриспруденция, профиль «Общеправовой»</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>20</td>
+          <td>101 240</td>
+        </tr>
+        <tr>
+          <td>42.03.01</td>
+          <td>
+            Реклама и связи с общественностью, профиль «Современные
+            коммуникативные технологии и рекламная деятельность»
+          </td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>20</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>44.03.01</td>
+          <td>Педагогическое образование, профиль «Обществознание»</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>20</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
 
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									50
-								</span>
-								<p class="mb-0">Бюджетных мест</p>
-							</div>
-
-							<ul
-								class="my-2 list-unstyled"
-								style="
-									font-size: 0.9em;
-									font-weight: 600;
-									font-style: italic;
-									color: #70b79e;
-									text-shadow: 1px 1px #00000094;
-								"
-							>
-								<li>5 целевых мест</li>
-								<li>5 льготных мест</li>
-							</ul>
-
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									10
-								</span>
-								<p class="mb-0">Платных мест</p>
-							</div>
-						</div>
-						<a
-							class="link-corona btn btn-md header-btn mb-4"
-							style="width: 175px; position: relative; margin: 20px 0"
-							href="http://newmath.asu.ru/%d1%84%d1%83%d0%bd%d0%b4%d0%b0%d0%bc%d0%b5%d0%bd%d1%82%d0%b0%d0%bb%d1%8c%d0%bd%d0%b0%d1%8f-%d0%b8%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%82%d0%b8%d0%ba%d0%b0-%d0%b8-%d0%b8%d0%bd%d1%84%d0%be%d1%80/"
-						>
-							Подробнее
-						</a>
-					</div>
-				</div>
-				<div
-					class="col-md-6 col-lg-4 mb-3"
-					itemscope=""
-					itemtype="http://schema.org/Product"
-				>
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://newmath.asu.ru/wp-content/uploads/2020/05/2-min-1024x768.jpg"
-							alt=""
-							class="wp-image-992"
-							style="width: 100%; height: auto; border-radius: 0px"
-							itemprop="image"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>09.03.03</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-								itemprop="name"
-							>
-								Прикладная информатика
-							</h3>
-							<span
-								class="mb-2"
-								style="font-size: 14px; line-height: 1.2"
-								itemprop="description"
-							>
-								Профиль: "Интеллектуальный анализ данных"
-							</span>
-
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									20
-								</span>
-								<p class="mb-0">Бюджетных мест</p>
-							</div>
-
-							<ul
-								class="my-2 list-unstyled"
-								style="
-									font-size: 0.9em;
-									font-weight: 600;
-									font-style: italic;
-									color: #70b79e;
-									text-shadow: 1px 1px #00000094;
-								"
-							>
-								<li>2 целевых места</li>
-								<li>2 льготных места</li>
-							</ul>
-
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									5
-								</span>
-								<p class="mb-0">Платных мест</p>
-							</div>
-						</div>
-						<a
-							class="link-corona btn btn-md header-btn mb-4"
-							style="width: 175px; position: relative; margin: 20px 0"
-							href="http://newmath.asu.ru/%d0%bf%d1%80%d0%b8%d0%ba%d0%bb%d0%b0%d0%b4%d0%bd%d0%b0%d1%8f-%d0%b8%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%82%d0%b8%d0%ba%d0%b0/"
-						>
-							Подробнее
-						</a>
-					</div>
-				</div>
-				<div
-					class="col-md-6 col-lg-4 mb-3"
-					itemscope=""
-					itemtype="http://schema.org/Product"
-				>
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://www.math.asu.ru/wp-content/uploads/2020/05/big3-1024x683.jpg"
-							alt=""
-							class="wp-image-992"
-							style="width: 100%; height: auto; border-radius: 0px"
-							itemprop="image"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>09.03.03</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-								itemprop="name"
-							>
-								Программная инженерия
-							</h3>
-							<span
-								class="mb-2"
-								style="font-size: 14px; line-height: 1.2"
-								itemprop="description"
-							>
-								Профиль: "Разработка программно-информационных систем"
-							</span>
-
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									23
-								</span>
-								<p class="mb-0">Бюджетных места</p>
-							</div>
-
-							<ul
-								class="my-2 list-unstyled"
-								style="
-									font-size: 0.9em;
-									font-weight: 600;
-									font-style: italic;
-									color: #70b79e;
-									text-shadow: 1px 1px #00000094;
-								"
-							>
-								<li>3 целевых места</li>
-								<li>3 льготных места</li>
-							</ul>
-
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									7
-								</span>
-								<p class="mb-0">Платных мест</p>
-							</div>
-						</div>
-						<!-- <a class="link-corona btn btn-md header-btn mb-4" style="width: 175px; position: relative; margin: 20px 0"
-                      href="http://newmath.asu.ru/%d0%bf%d1%80%d0%b8%d0%ba%d0%bb%d0%b0%d0%b4%d0%bd%d0%b0%d1%8f-%d0%b8%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%82%d0%b8%d0%ba%d0%b0/">
-                      Подробнее
-                  </a> -->
-					</div>
-				</div>
-			</div>
-		</details>
-	</li>
-	<li>
-		<details>
-			<summary>
-				<h3>Магистратура</h3>
-			</summary>
-			<div class="col-12 d-flex justify-content-center mb-3">
-				<a
-					class="link-corona btn btn-md header-btn mb-3 w-auto"
-					href="https://docs.google.com/forms/d/1mE4xeehT2rE0gSJ-IhV0IxakYEg6KhUbR_hHH7OhB-8"
-				>
-					Анкета для поступающих в магистратуру
-				</a>
-			</div>
-			<div class="row d-flex justify-content-center">
-				<div class="col-md-6 col-lg-4 mb-3">
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://newmath.asu.ru/wp-content/uploads/2020/05/1-1024x682.jpg"
-							alt=""
-							class="wp-image-1119"
-							style="width: 100%; height: auto; border-radius: 0px"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>01.04.02</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-							>
-								Прикладная математика и информатика
-							</h3>
-							<span class="mb-2" style="font-size: 14px; line-height: 1.2">
-								Профиль: "Прикладная математика и информатика в
-								социально-экономической сфере и образовании"
-							</span>
-
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									11
-								</span>
-								<p class="mb-0" .text-cel="">Бюджетных мест</p>
-							</div>
-
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									3
-								</span>
-								<p class="mb-0">Платных места</p>
-							</div>
-						</div>
-						<a
-							class="link-corona btn btn-md header-btn mb-4"
-							style="width: 175px; position: relative; margin: 20px 0"
-							href="http://www.math.asu.ru/%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d0%b8-%d0%b8%d1%81%d0%ba%d1%83%d1%81%d1%81%d1%82%d0%b2%d0%b5%d0%bd%d0%bd%d0%be%d0%b3%d0%be-%d0%b8%d0%bd%d1%82%d0%b5%d0%bb%d0%bb%d0%b5%d0%ba%d1%82/"
-						>
-							Подробнее
-						</a>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-4 mb-3">
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://newmath.asu.ru/wp-content/uploads/2020/05/2-1024x683.jpg"
-							alt=""
-							class="wp-image-1120"
-							style="width: 100%; height: auto; border-radius: 0px"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>01.04.02</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-							>
-								Прикладная математика и информатика
-							</h3>
-							<span class="mb-2" style="font-size: 14px; line-height: 1.2">
-								Профиль: "Наука о данных и компьютерные технологии в биологии и
-								медицине"
-							</span>
-
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									11
-								</span>
-								<p class="mb-0" .text-cel="">Бюджетных мест</p>
-							</div>
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									4
-								</span>
-								<p class="mb-0">Платных места</p>
-							</div>
-						</div>
-						<a
-							class="link-corona btn btn-md header-btn mb-4"
-							style="width: 175px; position: relative; margin: 20px 0"
-							href="http://www.math.asu.ru/%d0%b1%d0%b8%d0%be%d0%ba%d0%b8%d0%b1%d0%b5%d1%80%d0%bd%d0%b5%d1%82%d0%b8%d0%ba%d0%b0-%d0%b1%d0%b8%d0%be%d0%b8%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%82%d0%b8%d0%ba%d0%b0-%d0%b8-%d0%bf%d1%80%d0%be/"
-						>
-							Подробнее
-						</a>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-4 mb-3">
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://newmath.asu.ru/wp-content/uploads/2020/05/3-1024x683.jpg"
-							alt=""
-							class="wp-image-1121"
-							style="width: 100%; height: auto; border-radius: 0px"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>02.04.01</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-							>
-								Математика и компьютерные науки
-							</h3>
-							<span class="mb-2" style="font-size: 14px; line-height: 1.2">
-								Профиль: "Математическое моделирование и комплексы программ в
-								наукоемких технологиях"
-							</span>
-
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									14
-								</span>
-								<p class="mb-0" .text-cel="">Бюджетных мест</p>
-							</div>
-
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									1
-								</span>
-								<p class="mb-0">Платное место</p>
-							</div>
-						</div>
-						<a
-							class="link-corona btn btn-md header-btn mb-4"
-							style="width: 175px; position: relative; margin: 20px 0"
-							href="http://www.math.asu.ru/%d0%bc%d0%b0%d1%82%d0%b5%d0%bc%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%be%d0%b5-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d0%b8-%d0%ba%d0%be%d0%bc%d0%bf/"
-						>
-							Подробнее
-						</a>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-4 mb-3">
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://www.math.asu.ru/wp-content/uploads/2020/05/1-min-1024x768.jpg"
-							alt=""
-							class="wp-image-1122"
-							style="width: 100%; height: auto; border-radius: 0px"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>02.04.01</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-							>
-								Математика и компьютерные науки
-							</h3>
-							<span class="mb-2" style="font-size: 14px; line-height: 1.2">
-								Профиль: "Вычислительные методы в анализе и геометрии"
-							</span>
-
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									13
-								</span>
-								<p class="mb-0" .text-cel="">Бюджетных мест</p>
-							</div>
-
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									2
-								</span>
-								<p class="mb-0">Платных места</p>
-							</div>
-						</div>
-						<a
-							class="link-corona btn btn-md header-btn mb-4"
-							style="width: 175px; position: relative; margin: 20px 0"
-							href="http://www.math.asu.ru/wp-content/uploads/2020/12/Magistratura_MatKibPriklAnaliz.pdf"
-						>
-							Подробнее
-						</a>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-4 mb-3">
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://newmath.asu.ru/wp-content/uploads/2020/05/4-1024x683.jpg"
-							alt=""
-							class="wp-image-1122"
-							style="width: 100%; height: auto; border-radius: 0px"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>02.04.01</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-							>
-								Математика и компьютерные науки
-							</h3>
-							<span class="mb-2" style="font-size: 14px; line-height: 1.2">
-								Профиль: "Алгебра и дискретная математика"
-							</span>
-
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									13
-								</span>
-								<p class="mb-0" .text-cel="">Бюджетных мест</p>
-							</div>
-
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									2
-								</span>
-								<p class="mb-0">Платных места</p>
-							</div>
-						</div>
-						<a
-							class="link-corona btn btn-md header-btn mb-4"
-							style="width: 175px; position: relative; margin: 20px 0"
-							href="http://www.math.asu.ru/wp-content/uploads/2020/12/Magistratura_MatKibPriklAnaliz.pdf"
-						>
-							Подробнее
-						</a>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-4 mb-3">
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://newmath.asu.ru/wp-content/uploads/2020/05/5-1024x683.jpg"
-							alt=""
-							class="wp-image-1123"
-							style="width: 100%; height: auto; border-radius: 0px"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>09.04.03</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-							>
-								Прикладная информатика
-							</h3>
-							<span class="mb-2" style="font-size: 14px; line-height: 1.2">
-								Профиль: "Инженерия искусственного интеллекта"
-							</span>
-
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									30
-								</span>
-								<p class="mb-0" .text-cel="">Бюджетных мест</p>
-							</div>
-
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									1
-								</span>
-								<p class="mb-0">Платное место</p>
-							</div>
-						</div>
-						<!-- <a
-							class="link-corona btn btn-md header-btn mb-4"
-							style="width: 175px; position: relative; margin: 20px 0"
-							href="http://www.math.asu.ru/%d1%86%d0%b8%d1%84%d1%80%d0%be%d0%b2%d1%8b%d0%b5-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d0%b8-%d0%b2-%d1%83%d0%bf%d1%80%d0%b0%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b8-%d1%81%d0%be%d1%86/"
-						>
-							Подробнее
-						</a> -->
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 mb-3">
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://www.math.asu.ru/wp-content/uploads/2020/05/битва-умов2-768x1024.jpg"
-							alt=""
-							class="wp-image-1009"
-							style="
-								width: 100%;
-								height: auto;
-								border-radius: 0px;
-								max-height: 230px;
-								object-fit: cover;
-							"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>09.04.03</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-							>
-								Прикладная информатика
-							</h3>
-							<span class="mb-2" style="font-size: 14px; line-height: 1.2">
-								Профиль: "Цифровые технологии анализа данных для устойчивого
-								развития регионов Северной и Центральной Азии"
-							</span>
-
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									7
-								</span>
-								<p class="mb-0" .text-cel="">Бюджетных мест</p>
-							</div>
-
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									8
-								</span>
-								<p class="mb-0">Платных мест</p>
-							</div>
-						</div>
-						<a
-							class="link-corona btn btn-md header-btn mb-4"
-							style="width: 175px; position: relative; margin: 20px 0"
-							href="https://bolshoy-altay.asu.ru/education/programmy-magistratury/obrazovatelnaya-programma-09-04-03-prikladnaya-inf.html"
-						>
-							Подробнее
-						</a>
-					</div>
-				</div>
-			</div>
-		</details>
-	</li>
-	<li>
-		<details>
-			<summary>
-				<h3>Аспирантура</h3>
-			</summary>
-
-			<style>
-				.link-corona {
-					width: 100%;
-					border: 1px solid #1c865c;
-					color: #1c865c;
-					font-weight: 600;
-					text-decoration: none;
-					background-color: #fff;
-					white-space: normal;
-					transition: all 0.4s ease !important;
-				}
-
-				.link-corona:hover,
-				.link-corona:focus {
-					color: #fafafa !important;
-					text-decoration: none !important;
-					background-color: #1c865c;
-				}
-
-				.napr-block {
-					transition: transform 0.4s ease;
-				}
-
-				.napr-block:hover {
-					transform: translateY(-5px);
-				}
-			</style>
-			<div class="row d-flex justify-content-center">
-				<div class="col-md-6 mb-3">
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://newmath.asu.ru/wp-content/uploads/2020/05/big4-1024x682.jpg"
-							alt=""
-							class="wp-image-1115"
-							style="width: 100%; height: auto; border-radius: 0px"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>01.06.01</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-							>
-								Математика и механика
-							</h3>
-							<span class="mb-2" style="font-size: 14px; line-height: 1.2">
-								«дифференциальные уравнения, динамические системы и оптимальное
-								управление», «геометрия и топология», «математическая логика,
-								алгебра и теория чисел», «вычислительная математика», «механика
-								жидкости, газа и плазмы», «математическое моделирование,
-								численные методы и комплексы программ»
-							</span>
-
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									6
-								</span>
-								<p class="mb-0" .text-cel="">Бюджетных мест</p>
-							</div>
-
-							<ul
-								class="my-2 list-unstyled"
-								style="
-									font-size: 0.9em;
-									font-weight: 600;
-									font-style: italic;
-									color: #70b79e;
-									text-shadow: 1px 1px #00000094;
-								"
-							>
-								<li>1 целевое место</li>
-							</ul>
-
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									6
-								</span>
-								<p class="mb-0">Платных мест</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6 mb-3">
-					<div
-						class="napr-block shadow text-center h-100"
-						style="padding-bottom: 40px"
-					>
-						<img
-							src="http://newmath.asu.ru/wp-content/uploads/2020/05/big3-1024x683.jpg"
-							alt=""
-							class="wp-image-1114"
-							style="width: 100%; height: auto; border-radius: 0px"
-						/>
-						<div
-							class="
-								text-cell
-								px-3
-								d-flex
-								justify-content-center
-								align-items-center
-								mt-4
-								flex-column
-							"
-						>
-							<small>09.06.01</small>
-							<h3
-								class="mb-3"
-								style="font-size: 22px; line-height: 1.2; font-weight: 700"
-							>
-								Информатика и вычислительная техника
-							</h3>
-							<span class="mb-2" style="font-size: 14px; line-height: 1.2">
-								«математическое моделирование, численные методы и комплексы
-								программ»
-							</span>
-
-							<div class="mest">
-								<span
-									style="font-size: 45px; font-weight: 900; color: #1c865ccc"
-									class="mest-number"
-								>
-									3
-								</span>
-								<p class="mb-0" .text-cel="">Бюджетных места</p>
-							</div>
-							<ul
-								class="my-2 list-unstyled"
-								style="
-									font-size: 0.9em;
-									font-weight: 600;
-									font-style: italic;
-									color: #70b79e;
-									text-shadow: 1px 1px #00000094;
-								"
-							>
-								<li>1 целевое место</li>
-							</ul>
-
-							<div class="mest">
-								<span
-									style="font-size: 34px; font-weight: 900; color: #2d2d2dcc"
-									class="mest-number"
-								>
-									3
-								</span>
-								<p class="mb-0">Платных места</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</details>
-	</li>
-</ul>
+    <ul>
+      <li>
+        направление подготовки <strong>51.03.04 </strong
+        ><strong
+          >Музеология и охрана объектов культурного и природного
+          наследия</strong
+        >
+        – Республика Бурятия, Республика Ингушетия, Республика Саха (Якутия),
+        Республика Северная Осетия - Алания, Республика Тыва, Чеченская
+        Республика, Алтайский край, Краснодарский край, Красноярский край,
+        Хабаровский край, Астраханская область, Владимирская область,
+        Волгоградская область, Иркутская область, Калининградская область,
+        Кемеровская область - Кузбасс, Кировская область, Костромская область,
+        Курганская область, Магаданская область, Московская область,
+        Нижегородская область, Орловская область, Ростовская область,
+        Сахалинская область, Смоленская область, Томская область, Тюменская
+        область, Ульяновская область, Еврейская автономная область, Чукотский
+        автономный округ;
+      </li>
+      <li>
+        направление подготовки
+        <strong
+          >02.03.02 Фундаментальная информатика и информационные
+          технологии</strong
+        >
+        – Республика Дагестан, Карачаево-Черкесская Республика, Республика
+        Мордовия, Республика Саха (Якутия), Республика Северная Осетия - Алания,
+        Республика Татарстан, Удмуртская Республика, Алтайский край, Хабаровский
+        край, Брянская область, Калужская область, Кемеровская область -
+        Кузбасс, Ленинградская область, Омская область, Самарская область,
+        Тверская область, Тульская область, г. Санкт-Петербург
+      </li>
+      <li>
+        направление подготовки <strong>03.03.02 Физика</strong> – Республика
+        Бурятия, Республика Дагестан, Республика Ингушетия, Республика Крым,
+        Республика Северная Осетия - Алания, Удмуртская Республика, Чувашская
+        Республика, Алтайский край, Хабаровский край, Астраханская область,
+        Брянская область, Калининградская область, Калужская область,
+        Кемеровская область - Кузбасс, Ленинградская область, Магаданская
+        область, Новосибирская область, Орловская область, Пензенская область,
+        Саратовская область, Свердловская область, Тверская область, Тюменская
+        область, г. Севастополь
+      </li>
+      <li>
+        направление подготовки <strong>04.03.01 Химия</strong> – Республика
+        Адыгея, Республика Башкортостан, Республика Бурятия, Республика
+        Дагестан, Республика Коми, Республика Крым, Республика Северная Осетия -
+        Алания, Республика Татарстан, Удмуртская Республика, Чувашская
+        Республика, Алтайский край, Краснодарский край, Красноярский край,
+        Приморский край, Хабаровский край, Амурская область, Астраханская
+        область, Брянская область, Владимирская область, Калининградская
+        область, Калужская область, Кемеровская область - Кузбасс, Курская
+        область, Ленинградская область, Магаданская область, Мурманская область,
+        Новгородская область, Орловская область, Пензенская область, Ростовская
+        область, Саратовская область, Тверская область, Тульская область
+      </li>
+      <li>
+        направление подготовки <strong>18.03.01 Химическая технология</strong> –
+        Республика Башкортостан, Республика Бурятия, Республика Дагестан,
+        Республика Марий Эл, Республика Коми, Республика Крым, Республика Саха
+        (Якутия), Республика Татарстан, Удмуртская Республика, Чувашская
+        Республика, Алтайский край, Краснодарский край, Красноярский край,
+        Пермский край, Приморский край, Ставропольский край, Хабаровский край,
+        Астраханская область, Брянская область, Владимирская область,
+        Вологодская область, Воронежская область, Ивановская область, Иркутская
+        область, Кемеровская область - Кузбасс, Костромская область, Курганская
+        область, Курская область, Ленинградская область, Московская область,
+        Нижегородская область, Новгородская область, Новосибирская область,
+        Омская область, Оренбургская область, Пензенская область, Ростовская
+        область, Рязанская область, Самарская область, Саратовская область,
+        Свердловская область, Тверская область, Томская область, Тюменская
+        область, Ульяновская область, Челябинская область, гг. Москва,
+        Санкт-Петербург, Севастополь, Ханты-Мансийский автономный округ - Югра,
+        Ямало-Ненецкий автономный округ
+      </li>
+      <li>
+        направление подготовки
+        <strong>20.03.01 Техносферная безопасность </strong>- Республика Адыгея,
+        Республика Алтай, Республика Башкортостан, Республика Бурятия,
+        Республика Дагестан, Республика Коми, Республика Марий Эл, Республика
+        Мордовия, Республика Северная Осетия - Алания, Республика Татарстан,
+        Республика Тыва, Удмуртская Республика, Республика Хакасия, Алтайский
+        край, Камчатский край, Красноярский край, Хабаровский край, Астраханская
+        область, Брянская область, Владимирская область, Волгоградская область,
+        Воронежская область, Ивановская область, Калининградская область,
+        Калужская область, Кемеровская область - Кузбасс, Курганская область,
+        Курская область, Ленинградская область, Московская область, Мурманская
+        область, Новосибирская область, Омская область, Оренбургская область,
+        Орловская область, Пензенская область, Ростовская область, Самарская
+        область, Саратовская область, Свердловская область, Смоленская область,
+        Тамбовская область, Тверская область, Томская область, Тульская область,
+        Тюменская область, Челябинская область, гг. Москва, Севастополь,
+        Ханты-Мансийский автономный округ - Югра
+      </li>
+      <li>
+        направление подготовки <strong>06.03.01 Биология</strong> – Республика
+        Адыгея, Республика Башкортостан, Республика Бурятия, Республика
+        Дагестан, Карачаево-Черкесская Республика, Республика Карелия,
+        Республика Коми, Республика Крым, Республика Саха (Якутия), Республика
+        Северная Осетия - Алания, Республика Татарстан, Удмуртская Республика,
+        Пермский край, Амурская область, Астраханская область, Брянская область,
+        Владимирская область, Вологодская область, Калининградская область,
+        Кемеровская область - Кузбасс, Курская область, Ленинградская область,
+        Магаданская область, Московская область, Мурманская область,
+        Новосибирская область, Орловская область, Пензенская область,
+        Саратовская область, Тверская область, Тульская область, Тюменская
+        область, Ульяновская область, Ярославская область, г. Москва
+      </li>
+      <li>
+        направление подготовки <strong>05.03.02 География </strong>- Республика
+        Бурятия, Республика Дагестан, Республика Крым, Республика Северная
+        Осетия - Алания, Республика Татарстан, Удмуртская Республика, Чувашская
+        Республика, Алтайский край, Астраханская область, Брянская область,
+        Калининградская область, Кемеровская область - Кузбасс, Курская область,
+        Орловская область, Саратовская область, Тверская область, Тюменская
+        область, Ярославская область
+      </li>
+      <li>
+        направление подготовки
+        <strong>05.03.06 Экология и природопользование</strong> – Республика
+        Алтай, Республика Башкортостан, Республика Бурятия, Республика Дагестан,
+        Карачаево-Черкесская Республика, Республика Карелия, Республика Коми,
+        Республика Крым, Республика Марий Эл, Республика Саха (Якутия),
+        Республика Северная Осетия - Алания, Республика Татарстан, Удмуртская
+        Республика, Чувашская Республика, Алтайский край, Камчатский край,
+        Краснодарский край, Красноярский край, Приморский край, Амурская
+        область, Астраханская область, Брянская область, Владимирская область,
+        Воронежская область, Калининградская область, Кемеровская область -
+        Кузбасс, Курская область, Ленинградская область, Мурманская область,
+        Новосибирская область, Ростовская область, Самарская область,
+        Саратовская область, Тверская область, Тюменская область, гг. Москва,
+        Санкт-Петербург, Севастополь
+      </li>
+      <li>
+        направление подготовки
+        <strong>21.03.02 Землеустройство и кадастры</strong> - Республика
+        Адыгея, Республика Башкортостан, Республика Бурятия, Республика
+        Дагестан, Кабардино-Балкарская Республика, Республика Коми, Республика
+        Марий Эл, Республика Саха (Якутия), Республика Северная Осетия - Алания,
+        Республика Тыва, Удмуртская Республика, Чувашская Республика, Алтайский
+        край, Краснодарский край, Красноярский край, Пермский край, Приморский
+        край, Ставропольский край, Амурская область, Брянская область,
+        Владимирская область, Волгоградская область, Воронежская область,
+        Иркутская область, Калининградская область, Кемеровская область -
+        Кузбасс, Кировская область, Курганская область, Курская область,
+        Ленинградская область, Липецкая область, Магаданская область, Московская
+        область, Нижегородская область, Новгородская область, Омская область,
+        Пензенская область, Ростовская область, Самарская область, Саратовская
+        область, Сахалинская область, Свердловская область, Смоленская область,
+        Тамбовская область, Тверская область, Тюменская область, Ульяновская
+        область, г. Севастополь
+      </li>
+      <li>
+        направление подготовки
+        <strong>35.03.10 Ландшафтная архитектура</strong> - Республика Адыгея,
+        Республика Башкортостан, Республика Бурятия, Республика Дагестан,
+        Республика Карелия, Республика Коми, Республика Марий Эл, Республика
+        Саха (Якутия), Республика Северная Осетия - Алания, Республика
+        Татарстан, Алтайский край, Красноярский край, Пермский край, Приморский
+        край, Ставропольский край, Белгородская область, Брянская область,
+        Владимирская область, Волгоградская область, Воронежская область,
+        Иркутская область, Кемеровская область - Кузбасс, Липецкая область,
+        Московская область, Новосибирская область, Орловская область, Пензенская
+        область, Ростовская область, Рязанская область, Саратовская область,
+        Свердловская область, Тамбовская область, Тверская область, Томская
+        область, Ярославская область, г. Москва
+      </li>
+      <li>
+        направление подготовки
+        <strong>44.03.02 Психолого-педагогическое образование</strong> -
+        Республика Адыгея, Республика Алтай, Республика Башкортостан, Республика
+        Бурятия, Республика Дагестан, Республика Ингушетия, Кабардино-Балкарская
+        Республика, Республика Карелия, Республика Коми, Республика Крым,
+        Республика Марий Эл, Республика Мордовия, Республика Саха (Якутия),
+        Республика Северная Осетия - Алания, Республика Татарстан, Удмуртская
+        Республика, Республика Хакасия, Чеченская Республика, Чувашская
+        Республика, Алтайский край, Забайкальский край, Камчатский край,
+        Краснодарский край, Красноярский край, Пермский край, Ставропольский
+        край, Хабаровский край, Амурская область, Архангельская область,
+        Астраханская область, Белгородская область, Брянская область,
+        Владимирская область, Волгоградская область, Воронежская область,
+        Иркутская область, Калининградская область, Калужская область,
+        Кемеровская область - Кузбасс, Кировская область, Костромская область,
+        Курская область, Ленинградская область, Липецкая область, Магаданская
+        область, Мурманская область, Нижегородская область, Новгородская
+        область, Новосибирская область, Омская область, Орловская область,
+        Пензенская область, Псковская область, Ростовская область, Рязанская
+        область, Самарская область, Саратовская область, Сахалинская область,
+        Свердловская область, Смоленская область, Тамбовская область, Тверская
+        область, Томская область, Тульская область, Тюменская область,
+        Ульяновская область, Ярославская область, г. Санкт-Петербург,
+        Ямало-Ненецкий автономный округ
+      </li>
+      <li>
+        направление подготовки
+        <strong>44.03.04 Профессиональное обучение (по отраслям) </strong>–
+        Республика Башкортостан, Республика Дагестан, Кабардино-Балкарская
+        Республика, Республика Коми, Республика Марий Эл, Республика Саха
+        (Якутия), Республика Татарстан, Чувашская Республика, Алтайский край,
+        Камчатский край, Краснодарский край, Красноярский край, Пермский край,
+        Ставропольский край, Хабаровский край, Амурская область, Брянская
+        область, Воронежская область, Иркутская область, Кемеровская область -
+        Кузбасс, Курская область, Ленинградская область, Липецкая область,
+        Нижегородская область, Новосибирская область, Омская область, Орловская
+        область, Пензенская область, Ростовская область, Свердловская область,
+        Томская область, Тульская область, Ульяновская область, Ярославская
+        область, гг. Санкт-Петербург, Севастополь
+      </li>
+      <li>
+        направление подготовки<strong>
+          44.03.05 Педагогическое образование (с двумя профилями подготовки) </strong
+        >– Республика Адыгея, Республика Алтай, Республика Башкортостан,
+        Республика Бурятия, Республика Дагестан, Республика Ингушетия,
+        Кабардино-Балкарская Республика, Карачаево-Черкесская Республика,
+        Республика Карелия, Республика Коми, Республика Крым, Республика Марий
+        Эл, Республика Мордовия, Республика Саха (Якутия), Республика Северная
+        Осетия - Алания, Республика Татарстан, Чувашская Республика, Алтайский
+        край, Забайкальский край, Камчатский край, Краснодарский край,
+        Красноярский край, Пермский край, Приморский край, Ставропольский край,
+        Хабаровский край, Амурская область, Архангельская область, Астраханская
+        область, Белгородская область, Брянская область, Владимирская область,
+        Волгоградская область, Вологодская область, Воронежская область,
+        Иркутская область, Калининградская область, Калужская область,
+        Кемеровская область - Кузбасс, Кировская область, Костромская область,
+        Курская область, Ленинградская область, Липецкая область, Магаданская
+        область, Мурманская область, Нижегородская область, Новгородская
+        область, Новосибирская область, Омская область, Оренбургская область,
+        Орловская область, Пензенская область, Псковская область, Ростовская
+        область, Рязанская область, Самарская область, Саратовская область,
+        Сахалинская область, Свердловская область, Смоленская область,
+        Тамбовская область, Тверская область, Томская область, Тульская область,
+        Тюменская область, Ульяновская область, Ярославская область, гг.
+        Санкт-Петербург, Севастополь, Ненецкий автономный округ, Чукотский
+        автономный округ, Ямало-Ненецкий автономный округ
+      </li>
+      <li>
+        направление подготовки <strong>50.03.02 Изящные искусства </strong>–
+        Республика Бурятия, Еврейская автономная область
+      </li>
+      <li>
+        направление подготовки <strong>50.03.03 История искусств</strong> –
+        Краснодарский край, Ивановская область, Иркутская область, Еврейская
+        автономная область
+      </li>
+      <li>
+        направление подготовки <strong>51.03.01 Культурология </strong>-
+        Республика Бурятия, Республика Северная Осетия - Алания, Владимирская
+        область, Калининградская область, Липецкая область, Орловская область,
+        Псковская область, Ростовская область, Самарская область, Саратовская
+        область, Ярославская область, Еврейская автономная область
+      </li>
+      <li>
+        направление подготовки
+        <strong>53.03.02 Музыкально-инструментальное искусство</strong> -
+        Республика Адыгея, Республика Бурятия, Республика Дагестан, Республика
+        Ингушетия, Кабардино-Балкарская Республика, Республика Калмыкия,
+        Республика Карелия, Республика Марий Эл, Республика Мордовия, Республика
+        Северная Осетия - Алания, Республика Татарстан, Алтайский край,
+        Забайкальский край, Краснодарский край, Красноярский край, Приморский
+        край, Амурская область, Астраханская область, Белгородская область,
+        Вологодская область, Воронежская область, Ивановская область, Иркутская
+        область, Калининградская область, Калужская область, Кировская область,
+        Костромская область, Курганская область, Курская область, Липецкая
+        область, Московская область, Нижегородская область, Новгородская
+        область, Новосибирская область, Оренбургская область, Псковская область,
+        Ростовская область, Саратовская область, Свердловская область,
+        Тамбовская область, Томская область, Тульская область, Тюменская
+        область, Ульяновская область, Челябинская область, Ярославская область,
+        г. Севастополь, Еврейская автономная область, Ханты-Мансийский
+        автономный округ - Югра, Чукотский автономный округ
+      </li>
+      <li>
+        направление подготовки
+        <strong
+          >54.03.02 Декоративно-прикладное искусство и народные промыслы</strong
+        >
+        – Республика Бурятия, Республика Коми, Республика Северная Осетия -
+        Алания, Алтайский край, Краснодарский край, Белгородская область,
+        Владимирская область, Иркутская область, Кемеровская область - Кузбасс,
+        Липецкая область, Новгородская область, Новосибирская область, Орловская
+        область, Ростовская область, Еврейская автономная область
+      </li>
+      <li>
+        направление подготовки<strong>
+          54.03.03 Искусство костюма и текстиля</strong
+        >
+        – Республика Тыва, Ивановская область, Курская область, Орловская
+        область, Ростовская область, Еврейская автономная область
+      </li>
+    </ul>
+  </body>
+</html>
