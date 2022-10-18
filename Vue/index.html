@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+  <div id="blog-posts">
+    <blog-post
+      v-for="post in posts"
+      v-bind:key="post.id"
+      v-bind:title="post.title"
+      v-bind:link="post.link"
+    >
+    </blog-post>
+  </div>
+
+  <script>
+    const App = {
+      data() {
+        return {
+          a: 1,
+          posts: [
+            { id: 1, title: 'Введение в фреймворки JavaScript', link: 'https://developer.mozilla.org/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks' },
+            { id: 2, title: 'Vue JS и его преимущества', link: 'https://ru.vuejs.org/v2/guide/comparison.html' },
+            { id: 3, title: '', link: null },
+          ]
+        }
+      },
+      created: function () {
+        console.log('Значение a: ' + this.a)
+      }
+    }
+
+    const app = Vue.createApp(App)
+    app.component('blog-post', {
+      props: ['title', 'link'],
+      template: `
+        <h4>{{ formatTitle }}</h4> 
+        <button v-show="link" v-on:click="openPage()">Перейти</button>
+      `,
+      computed: {
+        formatTitle() {
+          if (this.title.length > 0) {
+            return 'Запись - «' + this.title + '»'
+          } else {
+            return 'Заголовок отсутствует...'
+          }
+        }
+      },
+      methods: {
+        openPage() {
+          window.open(this.link,"_blank")
+        }
+      }
+    })
+
+    app.mount('#blog-posts')
+  </script>
+</body>
+
+</html>
