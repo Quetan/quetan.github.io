@@ -66,6 +66,7 @@
 /* MAIN COLORS */
 :root {
     --media-white: #fcfcfc;
+    --media-black: #212529;
     --media-title: #F9FBF4;
     --media-section-light: #FAFBF5;
     --media-red: #F40638;
@@ -83,6 +84,11 @@ body {
     font-size: 22px;
     background-color: #302D62;
     overflow-x: hidden;
+}
+
+.section {
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* ELEMENTS */
@@ -129,7 +135,35 @@ body {
     background-repeat: no-repeat;
     user-select: none;
     pointer-events: none;
-    z-index: 2;
+    z-index: 1;
+}
+
+.mh-image {
+    user-select: none;
+    z-index: 3;
+    position: relative;
+}
+
+.mh-bg-letters {
+    position: absolute;
+    font-size: 300px;
+    letter-spacing: -0.55rem;
+    font-weight: 600;
+    opacity: 0.15;
+    line-height: 1;
+}
+
+.mh-outline-letters {
+    color: var(--media-section-light);
+    text-shadow: 
+                -1px -1px 0 var(--media-red),
+                1px -1px 0 var(--media-red),
+                -1px 1px 0 var(--media-red),
+                1px 1px 0 var(--media-red);
+}
+
+.mh-accent-letters {
+    color: var(--media-red);
 }
 
 /* HEADER */
@@ -180,7 +214,7 @@ body {
 
 .header-title {
     color: var(--media-title);
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .header-subtitle {
@@ -210,7 +244,7 @@ body {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    padding-top: 200px;
+    padding-top: 350px;
 }
 .about-image {
     width: 45%;
@@ -229,4 +263,232 @@ body {
     line-height: 1.7;
     font-weight: 300;
     margin: 0;
+}
+
+/* CREATION SECTION */
+
+.creation-section {
+    background-color: var(--media-section-light);
+    overflow: visible;
+    padding-top: 150px;
+    padding-bottom: 120px;
+}
+.creation-section::after {
+    content: '';
+    width: 100%;
+    min-height: 120px;
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    right: 0;
+    background-image: url(./assets/images/header-top-wave.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.creation-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.creation-image {
+    width: 40%;
+}
+.creation-image img {
+    width: 100%;
+    height: auto;
+}
+.creation-content {
+    width: 50%;
+}
+.creation-title {
+    margin-bottom: 60px;
+    font-size: 55px;
+}
+.creation-list {
+    padding-left: 120px;
+    position: relative;
+}
+.creation-list::before {
+    content: '';
+    height: calc(50% + 10px);
+    width: 1px;
+    background-color: var(--media-black);
+    position: absolute;
+    display: block;
+    left: 60px;
+    top: 55px;
+    bottom: 0;
+}
+.creation-list--item {
+    margin-bottom: 80px;
+    counter-increment: creation;
+}
+.creation-list--title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+    font-weight: 500;
+    position: relative;
+}
+.creation-list--title::before {
+    content: counter(creation);
+    position: absolute;
+    left: -85px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: var(--media-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    font-size: 20px;
+    color: var(--media-white);
+}
+.creation-list--title::after {
+    content: '';
+    position: absolute;
+    left: -90px;
+    top: -5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 1px solid var(--media-black);
+}
+.creation-list--text {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.76;
+    font-weight: 300;
+}
+
+/* WORKPLACES */
+
+.workplaces-section {
+    padding-top: 250px;
+    padding-bottom: 200px;
+}
+.workplaces-title {
+    text-align: center;
+    color: var(--media-title);
+    margin-bottom: 65px;
+}
+.workplaces-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+    height: 100%;
+}
+.workplaces-item {
+    background-color: var(--media-section-light);
+    width: 100%;
+    height: 100%;
+    min-height: 540px;
+    padding: 60px 25px;
+    text-align: center;
+    border-radius: 30px;
+}
+.workplaces-item--image {
+    width: auto;
+    height: 200px;
+    margin-bottom: 45px;
+}
+.workplaces-item--title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.workplaces-item--description {
+    line-height: 1.76;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+}
+
+/* WORKS */
+.works-section {
+    overflow: visible;
+    padding-bottom: 320px;
+}
+.works-section::after {
+    content: '';
+    width: 100%;
+    min-height: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(./assets/images/header-bottom-wave.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.swiper {
+    width: 100%;
+    height: 600px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--media-red);
+}
+.swiper-button-prev,
+.swiper-button-next
+ {
+    border-radius: 10px;
+    text-align: center;
+    padding: 0;
+    min-width: 80px;
+    width: 90px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+
+/* PRODUCTION */
+
+.production-section {
+    background-color: var(--media-section-light);
+    padding-top: 200px;
+    padding-bottom: 350px;
+}
+.production-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.production-content {
+    width: 45%;
+}
+.production-image {
+    width: 50%;
+}
+.production-image img {
+    width: 100%;
+    height: auto;
+}
+.production-title {
+    margin-bottom: 45px;
+}
+.production-description {
+    margin: 0;
+    font-weight: 300;
+    line-height: 1.76;
+    margin-bottom: 50px;
 }
