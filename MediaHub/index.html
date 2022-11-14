@@ -1,265 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Hub</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Hub</title>
 
-    <link rel="stylesheet" href="./assets/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="./assets/css/bootstrap-reboot.min.css" />
+  <link rel="stylesheet" href="./assets/css/bootstrap-grid.min.css" />
 
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
-    <!-- End swiper -->
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+  <!-- End swiper -->
 
-    <link rel="stylesheet" href="./style.css">
-    <script src="./scripts.js" defer></script>
+  <!-- AOS -->
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+  <!-- End AOS-->
+
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./scripts.js" defer></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="cloud header-cloud-right" style="
-        top: 0; right:0;
-        height: 200px;
-        width: 238px;
-        background-image: url(./assets/images/header-cloud-right-min.svg);
+  <script>
+    AOS.init();
+  </script>
+  <header class="header">
+    <div class="cloud header-cloud-right" style="
+          top: 0;
+          right: 0;
+          height: 200px;
+          width: 238px;
+          background-image: url(./assets/images/header-cloud-right-min.svg);
         "></div>
-        <div class="container header-container">
-            <a href="/"><img class="header-logo" src="./assets/images/logo-min.svg" alt="Логотип MediaHub"></a>
-            <div class="header-content">
-                <h1 class="title header-title">
-                    Media<span class="text-accent">.Hub</span> ждет тебя!
-                </h1>
-                <h2 class="header-subtitle">Это уверенный шаг в светлое будущее</h2>
-                <p class="header-description">У нас ты найдёшь современное оборудование, для создания
-                    высококачественного контента, а также развития профессиональных навыков</p>
-                <a href="#" class="media-btn">Оставить заявку</a>
-            </div>
-            <div class="header-image">
-                <img class="mh-image" src="./assets/images/header-min.svg" alt="Изображение в шапке сайта">
-            </div>
+    <div class="container header-container">
+      <a href="/"><img class="header-logo" src="./assets/images/logo-min.svg" alt="Логотип MediaHub" /></a>
+      <div class="header-content">
+        <h1 class="title header-title">
+          Media<span class="text-accent">.Hub</span> ждет тебя!
+        </h1>
+        <h2 class="header-subtitle">Это уверенный шаг в светлое будущее</h2>
+        <p class="header-description">
+          У нас ты найдёшь современное оборудование, для создания
+          высококачественного контента, а также развития профессиональных
+          навыков
+        </p>
+        <a href="/contacts.html" class="media-btn">Оставить заявку</a>
+      </div>
+      <div class="header-image">
+        <img class="mh-image" src="./assets/images/header-min.svg" alt="Изображение в шапке сайта" />
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="cloud header-cloud-left" data-aos="zoom-out-right" style="
+          top: -320px;
+          left: 0;
+          height: 420px;
+          width: 238px;
+          margin-left: -70px;
+          background-image: url(./assets/images/header-cloud-left-min.svg);
+        "></div>
+    <section class="section about-section">
+      <div class="mh-bg-letters" style="right: -180px; top: 60px">
+        <span class="mh-outline-letters">Media</span><span class="mh-accent-letters">.Hub</span>
+      </div>
+      <div class="container about-container">
+        <div class="about-image">
+          <img class="mh-image" src="./assets/images/about-min.svg" alt="О нас" />
         </div>
-    </header>
-    <main class="main">
-        <div class="cloud header-cloud-left" style="
-        bottom: -500px;
-        left:0;
-        height: 420px;
-        width: 238px;
-        margin-left: -70px;
-        background-image: url(./assets/images/header-cloud-left-min.svg);
-        "></div>
-        <section class="section about-section">
-            <div class="mh-bg-letters" style="right: -180px; top:60px;">
-                <span class="mh-outline-letters">Media</span><span class="mh-accent-letters">.Hub</span>
-            </div>
-            <div class="container about-container">
-                <div class="about-image">
-                    <img class="mh-image" src="./assets/images/about-min.svg" alt="О нас">
-                </div>
-                <div class="about-content">
-                    <h1 class="title about-title">О <span class="text-accent">нас</span></h1>
-                    <p class="about-text" style="margin-bottom: 15px;">MediaHub станет творческо-производственной
-                        лабараторией, участники которой будут создавать, реализовывать различные проекты медийной,
-                        образовательной, научной направленности.</p>
-                    <p class="about-text">Это площадка для внедрения новых цифровых компетенций, это современный
-                        инструмент повышения привлекательности Алтайского Края в медиапространстве, как для местных
-                        жителей, так и для иностранных студентов и учёных</p>
-                </div>
-            </div>
-            <div class="mh-bg-letters" style="position: relative; margin-left: -275px; top: 0px; margin-bottom: 50px;">
-                <span class="mh-outline-letters">Media</span><span class="mh-accent-letters">.Hub</span>
-            </div>
-        </section>
-        <section class="section creation-section">
-            <div class="cloud about-cloud-right" style="
-            top: -100px; right:0;
+        <div class="about-content">
+          <h1 class="title about-title">
+            О <span class="text-accent">нас</span>
+          </h1>
+          <p class="about-text" style="margin-bottom: 15px">
+            MediaHub станет творческо-производственной лабараторией, участники
+            которой будут создавать, реализовывать различные проекты медийной,
+            образовательной, научной направленности.
+          </p>
+          <p class="about-text">
+            Это площадка для внедрения новых цифровых компетенций, это
+            современный инструмент повышения привлекательности Алтайского Края
+            в медиапространстве, как для местных жителей, так и для
+            иностранных студентов и учёных
+          </p>
+        </div>
+      </div>
+      <div class="mh-bg-letters" style="
+            position: relative;
+            margin-left: -275px;
+            top: 0px;
+            margin-bottom: 50px;
+          ">
+        <span class="mh-outline-letters">Media</span><span class="mh-accent-letters">.Hub</span>
+      </div>
+    </section>
+    <section class="section creation-section">
+      <div class="cloud about-cloud-right" style="
+            top: -100px;
+            right: 0;
             height: 505px;
             width: 390px;
             background-image: url(./assets/images/about-cloud-right-min.svg);
-            "></div>
-            <div class="container creation-container">
-                <div class="creation-content">
-                    <h1 class="title creation-title">
-                        Что позволит создавать Media<span class="text-accent">.Hub?</span>
-                    </h1>
-                    <div class="creation-list">
-                        <div class="creation-list--item">
-                            <h2 class="creation-list--title">Медиапродукты аудио, видео, анимационные</h2>
-                            <p class="creation-list--text">
-                                От классической новости до тематических программ.
-                                Подкасты, рекламные ролики, интервью. От уличных опросов до бесед с экспертом в студии.
-                                Вирусные видеообзоры, презентации и т.д
-                            </p>
-                        </div>
-                        <div class="creation-list--item">
-                            <h2 class="creation-list--title">Продукты образовательные</h2>
-                            <p class="creation-list--text">
-                                Интерактивные лекции, мастер-классы, экспертные обзоры, гайды.
-                                А главное - интерактивный образовательный контент, направленный на освоение новых
-                                цифровых компетенций
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="creation-image">
-                    <img class="mh-image" src="./assets/images/creation-min.svg"
-                        alt="Что позволит создавать Media.Hub?">
-                </div>
+          "></div>
+      <div class="container creation-container">
+        <div class="creation-content">
+          <h1 class="title creation-title">
+            Что позволит создавать Media<span class="text-accent">.Hub?</span>
+          </h1>
+          <div class="creation-list">
+            <div class="creation-list--item">
+              <h2 class="creation-list--title">
+                Медиапродукты аудио, видео, анимационные
+              </h2>
+              <p class="creation-list--text">
+                От классической новости до тематических программ. Подкасты,
+                рекламные ролики, интервью. От уличных опросов до бесед с
+                экспертом в студии. Вирусные видеообзоры, презентации и т.д
+              </p>
             </div>
-            <div class="cloud creation-cloud-left" style="
-            bottom: -450px; left:0;
+            <div class="creation-list--item">
+              <h2 class="creation-list--title">Продукты образовательные</h2>
+              <p class="creation-list--text">
+                Интерактивные лекции, мастер-классы, экспертные обзоры, гайды.
+                А главное - интерактивный образовательный контент,
+                направленный на освоение новых цифровых компетенций
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="creation-image">
+          <img class="mh-image" src="./assets/images/creation-min.svg" alt="Что позволит создавать Media.Hub?" />
+        </div>
+      </div>
+      <div class="cloud creation-cloud-left" data-aos="zoom-out-right" style="
+            bottom: -450px;
+            left: 0;
             height: 666px;
             width: 270px;
             background-image: url(./assets/images/creation-cloud-left-min.svg);
-            "></div>
-        </section>
-        <section class="section workplaces-section">
-            <div class="container workplaces-container">
-                <h1 class="title workplaces-title">
-                    Рабочие места Media<span class="text-accent">.Hub</span>
-                </h1>
-                <div class="workplaces-wrapper">
-                    <div class="workplaces-item">
-                        <img src="./assets/images/wrokplaces-item-first-min.svg" alt="Продакшн студия"
-                            class="mh-image workplaces-item--image">
-                        <h2 class="title workplaces-item--title">Продакшн <span class="text-accent">студия</span></h2>
-                        <p class="workplaces-item--description">
-                            Здесь можно создавать собственный
-                            и обрабатывать стороний медиаконтент
-                        </p>
-                    </div>
-                    <div class="workplaces-item">
-                        <img src="./assets/images/wrokplaces-item-second-min.svg" alt="Рабочее пространство"
-                            class="mh-image workplaces-item--image">
-                        <h2 class="title workplaces-item--title">Рабочее <span class="text-accent">пространство</span>
-                        </h2>
-                        <p class="workplaces-item--description">
-                            Здесь формируется soft & hard
-                            компетенции, создаются продукты
-                            для тестирования
-                        </p>
-                    </div>
-                    <div class="workplaces-item">
-                        <img src="./assets/images/wrokplaces-item-third-min.svg" alt="Конференц-зал"
-                            class="mh-image workplaces-item--image">
-                        <h2 class="title workplaces-item--title">Конференц-<span class="text-accent">зал</span></h2>
-                        <p class="workplaces-item--description">
-                            Предназначен для встреч,
-                            мастер - классов, экспертных сессий и семинаров
-                        </p>
-                    </div>
-                </div>
+          "></div>
+    </section>
+    <section class="section workplaces-section">
+      <div class="container workplaces-container">
+        <h1 class="title workplaces-title">
+          Рабочие места Media<span class="text-accent">.Hub</span>
+        </h1>
+        <div class="workplaces-wrapper">
+          <div class="workplaces-item">
+            <img src="./assets/images/wrokplaces-item-first-min.svg" alt="Продакшн студия"
+              class="mh-image workplaces-item--image" />
+            <h2 class="title workplaces-item--title">
+              Продакшн <span class="text-accent">студия</span>
+            </h2>
+            <p class="workplaces-item--description">
+              Здесь можно создавать собственный и обрабатывать стороний
+              медиаконтент
+            </p>
+          </div>
+          <div class="workplaces-item">
+            <img src="./assets/images/wrokplaces-item-second-min.svg" alt="Рабочее пространство"
+              class="mh-image workplaces-item--image" />
+            <h2 class="title workplaces-item--title">
+              Рабочее <span class="text-accent">пространство</span>
+            </h2>
+            <p class="workplaces-item--description">
+              Здесь формируется soft & hard компетенции, создаются продукты
+              для тестирования
+            </p>
+          </div>
+          <div class="workplaces-item">
+            <img src="./assets/images/wrokplaces-item-third-min.svg" alt="Конференц-зал"
+              class="mh-image workplaces-item--image" />
+            <h2 class="title workplaces-item--title">
+              Конференц-<span class="text-accent">зал</span>
+            </h2>
+            <p class="workplaces-item--description">
+              Предназначен для встреч, мастер - классов, экспертных сессий и
+              семинаров
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section works-section">
+      <div class="cloud works-cloud-right" style="
+          top: -400px;
+          right: 0;
+          height: 874px;
+          width: 319px;
+          background-image: url(./assets/images/workplaces-cloud-right.svg);
+        "></div>
+      <div class="container works-container">
+        <h1 class="title workplaces-title">
+          Наши <span class="text-accent">работы</span>
+        </h1>
+        <div class="works-slider">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <iframe width="920" height="500" src="https://rutube.ru/play/embed/33a3f57b1c25c800a32d8353d57448fc"
+                  frameborder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen
+                  allowfullscreen></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe width="920" height="500" src="https://rutube.ru/play/embed/6ac8be0e04edaf34b553dc405d7de36d"
+                  frameborder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen
+                  allowfullscreen></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe width="920" height="500" src="https://rutube.ru/play/embed/e6cf49086b26dbf0eb3efed463432b6c"
+                  frameborder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen
+                  allowfullscreen></iframe>
+              </div>
             </div>
-        </section>
-        <section class="section works-section" style="min-height: 100vh;">
-            <div class="cloud works-cloud-right" style="
-            top: -400px; right:0;
-            height: 874px;
-            width: 319px;
-            background-image: url(./assets/images/workplaces-cloud-right.svg);
-            "></div>
-            <div class="container works-container">
-                <h1 class="title workplaces-title">
-                    Наши <span class="text-accent">работы</span>
-                </h1>
-                <div class="works-slider">
-                    <!-- Slider main container -->
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <iframe width="920" height="500"
-                                    src="https://rutube.ru/play/embed/33a3f57b1c25c800a32d8353d57448fc" frameBorder="0"
-                                    allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen
-                                    allowFullScreen></iframe>
-                            </div>
-                            <div class="swiper-slide">
-                                <iframe width="920" height="500"
-                                    src="https://rutube.ru/play/embed/6ac8be0e04edaf34b553dc405d7de36d" frameBorder="0"
-                                    allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen
-                                    allowFullScreen></iframe>
-                            </div>
-                            <div class="swiper-slide">
-                                <iframe width="920" height="500"
-                                    src="https://rutube.ru/play/embed/e6cf49086b26dbf0eb3efed463432b6c" frameBorder="0"
-                                    allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen
-                                    allowFullScreen></iframe>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div>
 
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev media-btn"></div>
-                        <div class="swiper-button-next media-btn"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="cloud works-cloud-left" style="
-            bottom: -210px; left:0;
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev media-btn"></div>
+            <div class="swiper-button-next media-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cloud works-cloud-left" data-aos="zoom-out-right" style="
+            bottom: -210px;
+            left: 0;
             margin-left: -80px;
             height: 420px;
             width: 238px;
             background-image: url(./assets/images/header-cloud-left-min.svg);
-            "></div>
-        </section>
-        <section class="section production-section">
-            <div class="container production-container">
-                <div class="production-content">
-                    <h1 class="title production-title">Хотите такой же <span class="text-accent">продакшн?</span></h1>
-                    <p class="production-description">
-                        Наша команда - это специалисты, которые смогут реализовать вашу идею от начала до конца. А также
-                        обладают всеми необходимыми компетенциями специалистов в сфере видеосъёмки и наличие
-                        высококачественного оборудования
-                    </p>
-                    <a href="#" class="media-btn">Оставить заявку</a>
-                </div>
-                <div class="production-image">
-                    <img src="./assets/images/production-min.svg" alt="Хотите такой же продакшн?" class="mh-image">
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-col">
-                <img src="./assets/images/logo-min.svg" alt="Логотип MediaHub" class="footer-logo">
-            </div>
-            <div class="footer-col">
-                <h2 class="footer-title">Контакты</h2>
-                <p class="footer-text">Валюлина Екатерина Владимировна</p>
-                <a href="tel:+79293246664" class="footer-text">+7 929 324-66-64</a>
-                <a href="mailto:serev@ya.ru" class="footer-text">serev@ya.ru</a>
-            </div>
-            <div class="footer-col">
-                <h2 class="footer-title">Местоположение</h2>
-                <p class="footer-text">ул. Димитрова 66, оф. 103</p>
-            </div>
-            <div class="footer-col">
-                <h2 class="footer-title">Соц.сети</h2>
-                <div class="footer-socials">
-                    <a href="#" class="footer-social">
-                        <img src="./assets/images/VK-min.svg" alt="Вконтакте">
-                    </a>
-                    <a href="#" class="footer-social">
-                        <img src="./assets/images/ok-min.svg" alt="Одноклассники">
-                    </a>
-                </div>
-            </div>
+          "></div>
+    </section>
+    <section class="section production-section">
+      <div class="container production-container">
+        <div class="production-content">
+          <h1 class="title production-title">
+            Хотите такой же <span class="text-accent">продакшн?</span>
+          </h1>
+          <p class="production-description">
+            Наша команда - это специалисты, которые смогут реализовать вашу
+            идею от начала до конца. А также обладают всеми необходимыми
+            компетенциями специалистов в сфере видеосъёмки и наличие
+            высококачественного оборудования
+          </p>
+          <a href="/contacts.html" class="media-btn">Оставить заявку</a>
         </div>
-        <div class="container footer-asu">
-            <div class="footer-asu--logo">
-                <img width="44" height="30" src="./assets/images/asu-logo.png" alt="Логотип АлтГУ">
-            </div>
-            <a href="https://asu.ru" class="footer-asu--text">
-                © Алтайский государственный университет
-            </a>
+        <div class="production-image">
+          <img src="./assets/images/production-min.svg" alt="Хотите такой же продакшн?" class="mh-image" />
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <img src="./assets/images/logo-min.svg" alt="Логотип MediaHub" class="footer-logo" />
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">Контакты</h2>
+        <p class="footer-text">Валюлина Екатерина Владимировна</p>
+        <a href="tel:+79293246664" class="footer-text">+7 929 324-66-64</a>
+        <a href="mailto:serev@ya.ru" class="footer-text">serev@ya.ru</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">Местоположение</h2>
+        <p class="footer-text">ул. Димитрова 66, оф. 103</p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-title">Соц.сети</h2>
+        <div class="footer-socials">
+          <a href="#" class="footer-social">
+            <img src="./assets/images/VK-min.svg" alt="Вконтакте" />
+          </a>
+          <a href="https://t.me/mediahubasu22" class="footer-social">
+            <img src="./assets/images/telegram-min.svg" alt="Telegram" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-asu">
+      <div class="footer-asu--logo">
+        <img width="44" height="30" src="./assets/images/asu-logo.png" alt="Логотип АлтГУ" />
+      </div>
+      <a href="https://asu.ru" class="footer-asu--text">
+        © Алтайский государственный университет
+      </a>
+    </div>
+  </footer>
 </body>
 
 </html>
