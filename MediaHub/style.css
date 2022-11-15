@@ -121,7 +121,10 @@ body {
   background-color: var(--media-btn--accent);
   border: 7px solid var(--media-btn--accent);
 }
-
+.media-btn.media-btn--secondary {
+  background-color: transparent;
+  color: var(--media-red);
+}
 .title {
   font-weight: 600;
   letter-spacing: -0.04em;
@@ -777,6 +780,10 @@ a.footer-text:hover {
   .creation-list--text {
     font-size: 14px;
   }
+  .media-btn {
+    padding: 0.65rem 1.3rem;
+    font-size: 18px;
+  }
 }
 
 /* CONTACTS PAGE */
@@ -786,4 +793,63 @@ a.footer-text:hover {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+/* DPO */
+.dpo-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 25px;
+}
+.dpo-item {
+  width: 45%;
+  padding: 50px 70px;
+  border: 3px solid var(--media-red);
+  border-radius: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dpo-title {
+  font-size: 36px;
+  margin-bottom: 2.2rem;
+}
+.dpo-duration {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 2.2rem;
+  font-size: 22px;
+}
+.dpo-duration::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: var(--media-red);
+  align-self: center;
+}
+.dpo-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1024.99px) {
+    .dpo-wrapper {
+      flex-direction: column;
+    }
+    .dpo-item {
+      width: 100%;
+    }
+    .dpo-buttons {
+      flex-direction: column;
+      gap: 15px;
+      justify-content: start;
+      align-items: start;
+    }
 }
