@@ -1,4 +1,5 @@
-const swiper = new Swiper(".swiper", {
+const swiperClass = '.swiper';
+const swiperAttr = {
   // Optional parameters
   direction: "horizontal",
   loop: true,
@@ -11,4 +12,8 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-});
+};
+
+if (typeof Swiper !== 'undefined') {
+  const swiper = new Swiper(swiperClass, swiperAttr);
+}
