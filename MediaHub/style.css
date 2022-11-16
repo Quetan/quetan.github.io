@@ -923,5 +923,17 @@ a.footer-text:hover {
   .products-item {
     flex-direction: column;
   }
+}
 
+@media screen and (max-width: 426px) {
+  .products-title {
+    font-size: 26px;
+  }
+  .dpo-item {
+    padding: 50px 25px;
+  }
+  .dpo-title {
+    font-size: 26px;
+    text-align: center;
+  }
 }
