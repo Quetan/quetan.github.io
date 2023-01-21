@@ -1,137 +1,150 @@
 body {
-    padding: 30px;
+  padding: 30px;
 }
 .appDescription {
-    width: 700px;
-    padding: 15px 0;
+  width: 700px;
+  padding: 15px 0;
 }
 .mapWrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-bottom: 30px;
-    height: 700px;
-    flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  height: 700px;
+  flex-wrap: wrap;
 }
 .buttonsWrapper {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 #map {
-    border: 1px solid rgba(0,0,0,0.2);
-    width: 700px;
-    height: 700px;
-    margin-bottom: 15px;
-    border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 700px;
+  height: 700px;
+  margin-bottom: 15px;
+  border-radius: 15px;
 }
 .routersList {
-    margin-left: 30px;
-    height: auto;
-    width: calc(100% - 40px - 700px);
-    padding-top: 20px;
+  margin-left: 30px;
+  height: auto;
+  width: calc(100% - 40px - 700px);
+  padding-top: 20px;
 }
 .routersWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    gap: 15px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 .routersHeading {
-    margin-bottom: 30px;
-    font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
 }
 .router {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer;
-    padding: 15px;
-    border-bottom: 2px solid #01a0e9;
-    width: 100%;
-    max-width: 300px;
-    transition: all 0.2s ease;
-    user-select: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+  border-bottom: 2px solid #01a0e9;
+  width: 100%;
+  max-width: 300px;
+  transition: all 0.2s ease;
+  user-select: none;
 }
 .router:hover,
 .router:active,
 .router:target,
 .router.selected {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .router-popup {
-    font-weight: 700;
-    font-size: 1.2em;
-    max-width: 250px;
+  font-weight: 700;
+  font-size: 1.2em;
+  max-width: 250px;
 }
 
 .leaflet-marker-icon {
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.45));
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.45));
 }
 .leaflet-popup-content-wrapper {
-    padding: 5px;
+  padding: 5px;
 }
 .router-info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.router-info small b{
-    margin-right: 5px;
+.router-info small b {
+  margin-right: 5px;
 }
 .router-name {
-    line-height: 1.2;
-    margin-bottom: 0.6rem;
-    max-width: 200px;
-    font-size: 1.15rem;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+  max-width: 200px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.router-name::before {
+  content: '☑';
+  margin-right: 3px;
+  font-size: 1.1rem;
+  color: #60be92;
+}
+.router.unset .router-name {
+    color: gray;
+}
+.router.unset .router-name::before {
+  content: '';
+  margin-right: 0;
 }
 .router img {
-    width: 64px;
-    height: 64px;
-    margin-right: 20px;
+  width: 64px;
+  height: 64px;
+  margin-right: 20px;
 }
 .router-speed {
-    margin: 0;
-    position: relative;
+  margin: 0;
+  position: relative;
 }
 .router-speed::after {
-    content: 'ᯤ';
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-left: 3px;
+  content: "ᯤ";
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-left: 3px;
 }
 .router-speed.high::after {
-    color: #60be92;
+  color: #60be92;
 }
 .router-speed.medium::after {
-    color: #f6c23e;
+  color: #f6c23e;
 }
 .router-speed.low::after {
-    color: #e74a3b;
+  color: #e74a3b;
 }
-.router-status span{
-    padding-left: 12px;
-    position: relative;
-    align-self: center;
+.router-status span {
+  padding-left: 12px;
+  position: relative;
+  align-self: center;
 }
 .router-status span.on::before,
 .router-status span.off::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0px;
-    top: 6px;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
 }
 .router-status span.on::before {
-    background-color: #60be92;
+  background-color: #60be92;
 }
 .router-status span.off::before {
-    background-color: #e74a3b;
+  background-color: #e74a3b;
 }
-

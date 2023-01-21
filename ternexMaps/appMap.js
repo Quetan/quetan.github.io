@@ -95,7 +95,7 @@ const selectRouter = (id, status, name) => {
     status: isStatusTrue(status),
     name: String(name),
   };
-}
+};
 
 //CHECK IF SELECTED ROUTER IN GLOBAL ROUTERS
 const isSelectedRouterInROUTERS = (id) => {
@@ -156,9 +156,15 @@ const routerOfflineIcon = L.icon({
  * 1. Check if routers are placed
  * 2. Defines markers icon
  * 3. Deselect all routers
- * 4. Add router to global ROUTERS
+ * 4. Add router to global ROUTERS and @return ROUTERS array
  */
 const addRouterMarker = (id, lat, lon, name, status) => {
+  // defines if router set
+  routerList.forEach((r) => {
+    if (r.dataset.id == id) {
+      r.classList.remove("unset");
+    }
+  });
   // 1
   if (ROUTERS.length >= routersCount) {
     alert("Вы уже установили все роутеры!");
@@ -175,7 +181,7 @@ const addRouterMarker = (id, lat, lon, name, status) => {
       selectRouter(id, status, name);
     })
     .addTo(map);
-  routerMarker.getPopup().on('remove', () => {
+  routerMarker.getPopup().on("remove", () => {
     deselectRouters();
   });
   // 3
@@ -232,6 +238,10 @@ const rmRouterMarker = () => {
     let deletedRouter = ROUTERS.find(
       (router) => Number(router.id) == Number(selectedRouter.id)
     );
+    // defines if router unset
+    routerList.forEach((r) => {
+      if (r.dataset.id == selectedRouter.id) r.classList.add("unset");
+    });
     ROUTERS = ROUTERS.filter((router) => {
       return Number(router.id) != Number(selectedRouter.id);
     });
