@@ -36,7 +36,7 @@ navigator.geolocation.getCurrentPosition(success, error, locationOptions);
  ********************/
 const map = L.map("map", {
   center: [53.36, 83.73], // Barnaul lat and long
-  zoom: 12,
+  zoom: 11,
 });
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {}).addTo(
@@ -44,10 +44,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {}).addTo(
 );
 
 //Remove leaflet link
-const leafletLink = document.querySelector(
-  ".leaflet-control-attribution.leaflet-control"
-);
-leafletLink.remove();
+document.querySelector(".leaflet-control-attribution.leaflet-control").remove();
 
 /********************
  *
@@ -79,7 +76,7 @@ let selectedRouter = null;
 let ROUTERS = [];
 const rmRouterBtn = document.getElementById("removeRouterMarker");
 
-// DESELECT ALL ROUTERS V
+// DESELECT ALL ROUTERS
 const deselectRouters = () => {
   selectedRouter = null;
   routerList.forEach((router) => {
@@ -87,8 +84,20 @@ const deselectRouters = () => {
   });
   isRouterSelected = false;
 };
+// SELECT ROUTER
+const selectRouter = (id, status, name) => {
+  deselectRouters();
+  const routerNode = document.querySelector(`[data-id*="${id}"]`);
+  routerNode.classList.add("selected");
+  isRouterSelected = true;
+  selectedRouter = {
+    id: Number(id),
+    status: isStatusTrue(status),
+    name: String(name),
+  };
+}
 
-//CHECK IF SELECTED ROUTER IN GLOBAL ROUTERS V
+//CHECK IF SELECTED ROUTER IN GLOBAL ROUTERS
 const isSelectedRouterInROUTERS = (id) => {
   return ROUTERS.find((router) => router.id == id) ? true : false;
 };
@@ -98,23 +107,22 @@ const isStatusTrue = (status) => {
   return status == "true" || status == true ? true : false;
 };
 
-// ROUTER CLICK HANDLER V
+//SHOW ROUTER MARKER POPUP
+const showRouterPopup = (id) => {
+  ROUTERS.find((r) => r.id == id).marker.openPopup();
+};
+
+// ROUTER CLICK HANDLER
 routerList.forEach((router) => {
   router.addEventListener("click", (e) => {
     deselectRouters();
-    router.classList.add("selected");
-    isRouterSelected = true;
-    selectedRouter = {
-      id: Number(router.dataset.id),
-      status: isStatusTrue(router.dataset.status),
-      name: String(router.dataset.name),
-    };
-    // DISABLE OR ENABLE DELETE BUTTON
+    selectRouter(router.dataset.id, router.dataset.status, router.dataset.name);
+    // DISABLE OR ENABLE DELETE BUTTON AND SHOW POPUP
     if (!isSelectedRouterInROUTERS(selectedRouter.id)) {
       rmRouterBtn.disabled = true;
     } else {
       rmRouterBtn.disabled = false;
-      ROUTERS.find((r) => r.id == selectedRouter.id).marker.openPopup();
+      showRouterPopup(selectedRouter.id);
     }
   });
 });
@@ -139,17 +147,16 @@ const routerOfflineIcon = L.icon({
 /*****
  *
  * ADD ROUTER AND MARKER
- * 1. Check if routers are placed
- * 2. Defines markers icon
- * 3. Deselect all routers
- * 4. Add router to global ROUTERS
- *
  * @param {Number} id - id
  * @param {Number} lat - latitude
  * @param {Number} lon - longitude
  * @param {String} name - name of the router
  * @param {Boolean} status - is router active
- * @return {Array<Object>} ROUTERS
+ * -------------
+ * 1. Check if routers are placed
+ * 2. Defines markers icon
+ * 3. Deselect all routers
+ * 4. Add router to global ROUTERS
  */
 const addRouterMarker = (id, lat, lon, name, status) => {
   // 1
@@ -164,7 +171,13 @@ const addRouterMarker = (id, lat, lon, name, status) => {
     .bindPopup(`${name} — ${status ? "В сети" : "Не в сети"}`, {
       className: "router-popup",
     })
+    .on("click", (e) => {
+      selectRouter(id, status, name);
+    })
     .addTo(map);
+  routerMarker.getPopup().on('remove', () => {
+    deselectRouters();
+  });
   // 3
   deselectRouters();
   // 4
@@ -193,10 +206,7 @@ routerParsed.routers.forEach((router) => {
 
 // MAP CLICK HANDLER
 map.on("click", function (e) {
-  if (!isRouterSelected) {
-    alert("Сначала выберите роутер, который хотите установить!");
-    return;
-  }
+  if (!isRouterSelected) return;
   if (isSelectedRouterInROUTERS(selectedRouter.id)) {
     alert("Данный роутер уже установлен на карте!");
     deselectRouters();
