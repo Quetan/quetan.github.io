@@ -1,3 +1,10 @@
+body {
+    padding: 30px;
+}
+.appDescription {
+    width: 700px;
+    padding: 15px 0;
+}
 .mapWrapper {
     width: 100%;
     display: flex;
@@ -15,6 +22,7 @@
     width: 700px;
     height: 700px;
     margin-bottom: 15px;
+    border-radius: 15px;
 }
 .routersList {
     margin-left: 30px;
@@ -34,6 +42,7 @@
 }
 .routersHeading {
     margin-bottom: 30px;
+    font-size: 1.3rem;
 }
 .router {
     display: flex;
@@ -48,6 +57,8 @@
     user-select: none;
 }
 .router:hover,
+.router:active,
+.router:target,
 .router.selected {
     background-color: #f1f1f1;
 }
@@ -75,6 +86,7 @@
     line-height: 1.2;
     margin-bottom: 0.6rem;
     max-width: 200px;
+    font-size: 1.15rem;
 }
 .router img {
     width: 64px;
@@ -83,6 +95,22 @@
 }
 .router-speed {
     margin: 0;
+    position: relative;
+}
+.router-speed::after {
+    content: 'ᯤ';
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-left: 3px;
+}
+.router-speed.high::after {
+    color: #60be92;
+}
+.router-speed.medium::after {
+    color: #f6c23e;
+}
+.router-speed.low::after {
+    color: #e74a3b;
 }
 .router-status span{
     padding-left: 12px;
