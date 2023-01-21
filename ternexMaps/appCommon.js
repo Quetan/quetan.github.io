@@ -52,7 +52,7 @@ const data = {
       },
       router_stat: {
         is_active: true,
-        speed: 80,
+        speed: 60,
         last_seen: "22/11/2022",
       },
     },
@@ -93,13 +93,15 @@ const routersWrapper = document.querySelector(".routersWrapper");
 const addRouterLayout = (id, name, ipv6, speed, status) => {
   if (!name) return;
   return `
-          <div class="router" role="button" data-id="${id}" data-status="${status}" data-name="${name}">
+          <div class="router" tabindex="0" role="button" data-id="${id}" data-status="${status}" data-name="${name}">
             <img src="${status ? routerIconUrl : routerOfflineIconUrl}">
             <div class="router-info">
-              <h2 class="router-name">${name}</h2>
-              <small class="router-status"><b>Статус:</b> <span class="${status ? "on": "off"}">${status ? "Online": "Offline"}</span></small>
+              <h3 class="router-name">${name}</h3>
+              <small class="router-status"><b>Статус:</b> <span class="${
+                status ? "on" : "off"
+              }">${status ? "Online" : "Offline"}</span></small>
               <small class="router-ip"><b>IPv6:</b> ${ipv6}</small>
-              <small class="router-speed"><b>Сигнал:</b> ${speed}</small>
+              <small class="router-speed ${(speed > 75 ? 'high' : (speed > 55 ? 'medium' : "low"))}"><b>Сигнал:</b> ${speed}</small>
             </div>
           </div>
           `;
