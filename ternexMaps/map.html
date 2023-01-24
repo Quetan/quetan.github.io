@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="./styles.css" />
     <script src="./leaflet.js"></script>
 
-    <script src="./appCommon.js" defer></script>
-    <script src="appMap.js" defer></script>
+    <script src="./map.js" defer></script>
   </head>
   <body>
     <div class="appDescription">
@@ -35,9 +34,10 @@
         <h2 class="routersHeading">Список роутеров</h2>
         <div class="routersWrapper"></div>
         <div class="buttonsWrapper">
-          <button id="removeRouterMarker" onclick="rmRouterMarker()">
+          <button id="removeRouterMarker">
             Удалить роутер
           </button>
+          <button id="getState">Получить STATE</button>
         </div>
       </div>
     </div>
