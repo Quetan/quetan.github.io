@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Схема роутеров</title>
 
     <link
       rel="stylesheet"
@@ -14,11 +14,15 @@
 
     <script src="https://unpkg.com/fabric@5.3.0/dist/fabric.min.js"></script>
 
-    <script src="./appCommon.js" defer></script>
-    <script src="./appScheme.js" defer></script>
+    <script src="./scheme.js" defer></script>
   </head>
   <body>
     <!-- HTML -->
+    <div class="appDescription">
+      <h1>Схема роутеров</h1>
+      <p>Нажмите на роутер в списке справа, чтобы он появился на схеме и перенесите его в необходимое место.</p>
+      <p>Для удаления роутера со схемы, выберите роутер и нажмите кнопку "Удалить элемент", либо дважды нажмите на роутер на схеме. Также вы можете удалить несколько роутеров, выделив их и нажав кнопку "Удалить элемент".</p>
+    </div>
     <div class="mapWrapper">
       <div class="app">
         <canvas id="map"> Здесь мог бы быть Canvas :( </canvas>
@@ -27,14 +31,14 @@
         <h1 class="routersHeading">Список роутеров</h1>
         <div class="routersWrapper"></div>
         <div class="buttonsWrapper">
-          <button id="removeRouter" onclick="rmRouter()">
+          <button id="removeRouter" onclick="removeRouter()">
             Удалить элемент
           </button>
         </div>
       </div>
     </div>
-    <!-- <button id="getJSON" onclick="getMapJSON()">Получить JSON</button>
-    <button id="setJSON" onclick="setMapJSON()">Загрузить из JSON</button> -->
+    <button id="getJSON" onclick="getMapJSON()">Получить JSON</button>
+    <button id="setJSON" onclick="setMapJSON()">Загрузить из JSON</button>
     <label for="schemeBackgroundImageFile"
       >Выберите изображение схемы помещения:
     </label>

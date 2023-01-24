@@ -5,11 +5,11 @@ const routerIconUrl = "./icons/router.png";
 const routerOfflineIconUrl = "./icons/router_offline.png";
 
 /********************
- *
- *  GET CURRENT LOCATION
- *
- *
- ********************/
+ * 
+ * GET CURRENT LOCATION
+ * 
+*********************/
+
 let isLocationDetected = false;
 let currentLat = 53.36;
 let currentLong = 83.73;
@@ -33,7 +33,6 @@ navigator.geolocation.getCurrentPosition(success, error, locationOptions);
  *
  *  MAP INITIALIZATION
  *
- *
  ********************/
 const map = L.map("map", {
   center: [currentLat, currentLong], // Barnaul lat and long
@@ -52,17 +51,20 @@ const routerOfflineIcon = L.icon({
 });
 document.querySelector(".leaflet-control-attribution.leaflet-control").remove();
 
-/*
+/********************
+ * 
  * NODES
- */
+ * 
+*********************/
+
 const routersWrapper = document.querySelector(".routersWrapper");
 const rmRouterBtn = document.getElementById("removeRouterMarker");
 
-/***
- *
+/********************
+ * 
  * HANDLERS
- *
- ***/
+ * 
+*********************/
 
 const mapClickHandler = (STATE, e) => {
   if (!STATE.isRouterSelected) return STATE;
@@ -89,7 +91,6 @@ const removeMarkerHandler = (STATE) => {
     let deletedRouter = STATE.ROUTERS.find(
       (router) => Number(router.id) == Number(STATE.selectedRouter.id)
     );
-    // defines if router unset
     STATE.routerList.forEach((r) => {
       if (r.dataset.id == STATE.selectedRouter.id) r.classList.add("unset");
     });
@@ -111,12 +112,12 @@ const routerClickHandler = (STATE, router) => {
   return STATE;
 };
 
-/***
- *
- * FUNCTIONS
- *
- ***/
-// ROUTER TEMPLATE HTML
+/********************
+ * 
+ * METHODS
+ * 
+*********************/
+
 const addRouterLayout = (id, name, ipv6, status) => {
   if (!name) return;
   return `
@@ -206,14 +207,15 @@ const addRouterMarker = (STATE, router, lat, long) => {
   routerMarker = L.marker([lat, lon], {
     icon: router.status ? routerIcon : routerOfflineIcon,
   })
-    .bindPopup(`${router.name} — ${router.status ? "В сети" : "Не в сети"}`, {
+    .bindPopup(`${router.name} — ${router.status ? "В сети" : "Не в сети"}
+    <button data-id="${router.id}" style="margin: 15px auto;display: block;">
+      Удалить
+    </button>
+    `, {
       className: "router-popup",
     })
     .on("click", (e) => {
-      console.log(STATE);
       STATE = selectRouter(STATE, router.id, router.status, router.name);
-      console.log(STATE);
-
     })
     .addTo(map);
   routerMarker.getPopup().on("remove", () => {
@@ -247,11 +249,11 @@ const showRouterPopup = (STATE) => {
   STATE.ROUTERS.find((r) => r.id == STATE.selectedRouter.id).marker.openPopup();
 };
 
-/****
- *
- * GET ROUTER DATA
- *
- */
+/********************
+ * 
+ * GET ROUTER DATA AND INIT
+ * 
+*********************/
 
 fetch(urlToRoutersData)
   .then((res) => res.json())
@@ -269,21 +271,22 @@ const init = (routersData) => {
    *
    **/
   let STATE = {
-    isRouterSelected: false,
+    ROUTERS: [],
     selectedRouter: null,
+    isRouterSelected: false,
     routersCount: routersData.routers.length,
     routerList: [],
-    ROUTERS: [],
   };
 
   STATE = addRoutersToLayout(STATE, routersData);
   STATE = addRouterMarkers(STATE, routersData);
-  /* EVENT LISTENERS */
+
   STATE.routerList.forEach((router) => {
     router.addEventListener("click", (e) => {
       STATE = routerClickHandler(STATE, router);
     });
   });
+  // const popupRemoveButton = document.querySelector(".popupRemoveButton");
   rmRouterBtn.addEventListener("click", (e) => {
     STATE = removeMarkerHandler(STATE);
   });
