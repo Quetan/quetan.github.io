@@ -1,4 +1,4 @@
-function animateValue(obj) {
+const animateValue = (obj) => {
   if (!obj) return;
   const start = 0,
     end = Number(obj.dataset.value),
@@ -14,23 +14,28 @@ function animateValue(obj) {
     }
   };
   window.requestAnimationFrame(step);
-}
-function execAnim() {
+};
+const execAnim = () => {
   const objects = document.querySelectorAll(".av");
   if (objects) {
     objects.forEach((e) => {
       animateValue(e);
     });
   }
-}
-var observer = new IntersectionObserver(execAnim, {
+};
+let observer = new IntersectionObserver(execAnim, {
   rootMargin: "0px",
   threshold: 1.0,
 });
-var target = document.querySelector("#numbers");
+const target = document.querySelector("#numbers");
 observer.observe(target);
 
 // Team swiper
+const getSlidesCount = () => {
+  const windowWidth = window.innerWidth;
+  const count = window.innerWidth <= 760 ? 1 : 3;
+  return count;
+};
 const swiper = new Swiper(".team-swiper", {
   autoplay: {
     delay: 2000,
@@ -49,8 +54,3 @@ const swiper = new Swiper(".team-swiper", {
     type: "progressbar",
   },
 });
-function getSlidesCount() {
-  const windowWidth = window.innerWidth;
-  const count = window.innerWidth <= 760 ? 1 : 3;
-  return count;
-}
