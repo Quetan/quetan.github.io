@@ -628,6 +628,14 @@ h6 {
   .header {
     padding: 30px;
   }
+  .main-logos {
+    margin-bottom: 40px;
+    justify-content: space-evenly;
+  }
+  .main-logos img {
+    height: 30px;
+    width: auto;
+  }
   .main-container {
     flex-direction: column;
     justify-content: center;
@@ -677,5 +685,59 @@ h6 {
 @media screen and (max-width: 425.99px) {
   .header {
     display: none;
+  }
+  .section {
+    padding-top: 80px;
+    padding-bottom: 75px;
+  }
+  .title {
+    font-size: 1.9rem;
+    margin-bottom: 40px;
+  }
+  .numbers-wrapper {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .number-item {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .about-wrapper {
+    width: 100%;
+  }
+  .about-item {
+    flex-direction: column;
+  }
+  .about-item:nth-child(2n) {
+    flex-direction: column;
+  }
+  .about-text {
+    width: 100%;
+  }
+  .faq-summary {
+    font-size: 1rem;
+    padding-right: 40px;
+  }
+  .faq-answer {
+    font-size: 0.8rem;
+    margin-left: 0;
+  }
+  .team-name {
+    font-size: 1.05rem;
+  }
+  .team-description {
+    font-size: 0.85rem;
+  }
+  .partners-item {
+    width: 150px;
+  }
+  #partnersInfoWrapper.visible {
+    width: 95%;
+    padding: 5rem 2.5rem;
+  }
+  #partnersCloseBtn {
+    right: 30px;
+    top: 30px;
   }
 }

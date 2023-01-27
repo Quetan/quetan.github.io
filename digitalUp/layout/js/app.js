@@ -73,11 +73,11 @@ partners.forEach((p) => {
   });
 });
 
-const header = document.getElementById('header');
-window.addEventListener('scroll', (e) => {
+const header = document.getElementById("header");
+window.addEventListener("scroll", (e) => {
   if (window.scrollY > 600) {
-    header.classList.add('active')
+    header.classList.add("active");
   } else {
-    header.classList.remove('active');
+    header.classList.remove("active");
   }
 });
