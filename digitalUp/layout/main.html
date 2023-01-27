@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
 
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Swiper -->
     <link
       rel="stylesheet"
@@ -47,6 +49,29 @@
       <section class="section main-section" id="main">
         <div class="container main-container">
           <div class="main-content">
+            <div class="main-logos">
+              <img
+                src="./images/logos/mincif.svg"
+                width="auto"
+                height="40px"
+                alt="Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации"
+                title="Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации"
+              />
+              <img
+                src="./images/logos/prior2030.svg"
+                width="auto"
+                height="40px"
+                alt="Приоритет 2030"
+                title="Приоритет 2030"
+              />
+              <img
+                src="./images/logos/asu.svg"
+                width="40px"
+                height="40px"
+                alt="Алтайский государственный университет"
+                title="Алтайский государственный университет"
+              />
+            </div>
             <h1 class="main-title">
               Школа развития цифровых компетенций «Digital Up»
               <small>(Цифровая кафедра АлтГУ)</small>
@@ -58,15 +83,53 @@
             <a href="#" class="button main-button">Хочу обучаться</a>
           </div>
           <div class="main-image">
-            <img
+            <lottie-player
               class="image"
-              src="./images/main-section.svg"
-              alt="Digital Up"
-            />
+              src="https://assets5.lottiefiles.com/packages/lf20_K7aZUG.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </section>
-      <section class="section news-section" id="news">
+      <section class="section numbers-section" id="numbers">
+        <div class="container numbers-container">
+          <h2 class="title numbers-title">Цифровая кафедра сегодня</h2>
+          <div class="numbers-wrapper">
+            <div class="number-item">
+              <span class="number av" data-value="8" data-duration="400"
+                >8</span
+              >
+              <p class="numbers-description">
+                Программ профессиональной переподготовки
+              </p>
+            </div>
+            <div class="number-item">
+              <span class="number av" data-value="18" data-duration="600"
+                >18</span
+              >
+              <p class="numbers-description">
+                Квалифицированных преподавателей
+              </p>
+            </div>
+            <div class="number-item">
+              <span class="number av" data-value="10" data-duration="800"
+                >10</span
+              >
+              <p class="numbers-description">Крупных ИТ-компаний</p>
+            </div>
+            <div class="number-item">
+              <span class="number av" data-value="1125" data-duration="1000"
+                >1125</span
+              >
+              <p class="numbers-description">Обучающихся</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--light news-section" id="news">
         <div class="container news-container">
           <h2 class="title news-title">Новости и объявления</h2>
           <div class="news-wrapper">
@@ -113,80 +176,88 @@
           </div>
         </div>
       </section>
-      <section class="section section--light about-section" id="about">
+      <section class="section about-section" id="about">
         <div class="container about-container">
           <h2 class="title about-title">О школе</h2>
-          <div class="about-wrapper">
+          <ul class="about-wrapper">
             <div class="about-item">
-              <img
-                src="./images/about-first.svg"
-                alt=""
+              <lottie-player
                 class="about-icon image"
-              />
+                src="https://assets9.lottiefiles.com/packages/lf20_Yf4ThO8if1.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+              ></lottie-player>
               <p class="about-text">
-                Школа развития цифровых компетенций «Digital Up» (Цифровая
-                кафедра) создана в АлтГУ, как в вузе-участнике программы
-                стратегического академического лидерства «Приоритет-2030», с
-                целью обеспечить студентам возможность обучения по
-                дополнительным профессиональным программам профессиональной
-                переподготовки ИТ-профиля и получения дополнительной
-                востребованной квалификации. Студенты АлтГУ, обучающиеся по
-                очной и очно-заочной форме обучения 3-го и 4-го курсов
-                бакалавриата, 5-го курса специалитета любых направлений
-                подготовки и магистранты 2-го курса, обучающиеся на
-                образовательных программах, не связанных с ИТ, могут пройти
-                обучение по программе профессиональной переподготовки в Школе
-                развития цифровых компетенций «Digital Up» и получить
-                востребованную ИТ-квалификацию.
+                Цифровая кафедра создана в АлтГУ с целью предоставления всем
+                студентам очной и очно-заочной форм обучения возможности
+                получения на бесплатной основе дополнительной ИТ-квалификации,
+                востребованной на рынке труда
               </p>
+              <span class="about-number">
+                01
+              </span>
             </div>
             <div class="about-item">
-              <img
-                src="./images/main-section.svg"
-                alt=""
+              <lottie-player
                 class="about-icon image"
-              />
+                src="https://assets9.lottiefiles.com/packages/lf20_lxqurkjc.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+              ></lottie-player>
               <p class="about-text">
-                В Школе предусмотрены программы переподготовки для студентов,
-                обучающихся по профильным ИТ-направлениям и для студентов, чья
-                будущая специальность не относится к ИТ-сфере. Студент
-                самостоятельно выбирает программу исходя из своих интересов и
-                уровня подготовки. После успешного прохождения всех контрольных
-                точек по программе и итоговой аттестации по окончании обучения
-                вместе с дипломом о высшем образовании студенты получат диплом о
-                профессиональной переподготовке.
+                В Школе предусмотрены программы профессиональной переподготовки
+                для студентов, обучающихся по профильным ИТ-направлениям и для
+                студентов, чья будущая специальность не относится к ИТ-сфере. Вы
+                сами выбираете программу, исходя из собственных интересов и
+                уровня подготовки.
               </p>
+              <span class="about-number">
+                02
+              </span>
             </div>
             <div class="about-item">
-              <img
-                src="./images/main-section.svg"
-                alt=""
+              <lottie-player
                 class="about-icon image"
-              />
+                src="https://assets9.lottiefiles.com/packages/lf20_qwATcU.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+              ></lottie-player>
               <p class="about-text">
-                Студенты АлтГУ, обучающиеся по очной и очно-заочной форме
-                обучения 3-го и 4-го курсов бакалавриата, 5-го курса
-                специалитета любых направлений подготовки и магистранты 2-го
-                курса, обучающиеся на образовательных программах, не связанных с
-                ИТ, могут пройти обучение по программе профессиональной
-                переподготовки в Школе развития цифровых компетенций «Digital
-                Up» и получить востребованную ИТ-квалификацию.
+                В рамках обучения Вам будет предоставлена возможность пройти
+                стажировку в крупной компании реального сектора экономки и
+                создать собственный ИТ-проект для решения актуальных задач
+                будущей профессиональной деятельности.
               </p>
+              <span class="about-number">
+                03
+              </span>
             </div>
             <div class="about-item">
-              <img
-                src="./images/main-section.svg"
-                alt=""
+              <lottie-player
                 class="about-icon image"
-              />
+                src="https://assets10.lottiefiles.com/packages/lf20_3FIGvm.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+              ></lottie-player>
               <p class="about-text">
                 После успешного прохождения всех контрольных точек по программе
-                и итоговой аттестации по окончании обучения вместе с дипломом о
-                высшем образовании студенты получат диплом о профессиональной
+                и защиты проекта по окончании обучения вместе с дипломом о
+                высшем образовании Вы получите диплом о профессиональной
                 переподготовке.
               </p>
+              <span class="about-number">
+                04
+              </span>
             </div>
-          </div>
+          </ul>
 
           <div class="about-video">
             <iframe
@@ -197,46 +268,6 @@
               frameborder="0"
               allowfullscreen
             ></iframe>
-          </div>
-        </div>
-      </section>
-      <section class="section numbers-section" id="numbers">
-        <div class="container numbers-container">
-          <h2 class="title numbers-title">Digital Up сегодня</h2>
-          <div class="numbers-wrapper">
-            <div class="number-item">
-              <span class="number av" data-value="8" data-duration="400"
-                >8</span
-              >
-              <p class="numbers-description">
-                Программ профессиональной переподготовки
-              </p>
-            </div>
-            <div class="number-item">
-              <span class="number av" data-value="18" data-duration="800"
-                >18</span
-              >
-              <p class="numbers-description">
-                Квалифицированных преподавателей привлечены к реализации
-                программ
-              </p>
-            </div>
-            <div class="number-item">
-              <span class="number av" data-value="10" data-duration="1200"
-                >10</span
-              >
-              <p class="numbers-description">
-                Крупных ИТ-компаний участвуют в реализации программ
-              </p>
-            </div>
-            <div class="number-item">
-              <span class="number av" data-value="1125" data-duration="1600"
-                >1125</span
-              >
-              <p class="numbers-description">
-                Студентов зачислены на программы
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -447,9 +478,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container footer-container">
-        Подвал с контактами
-      </div>
+      <div class="container footer-container">Подвал с контактами</div>
     </footer>
   </body>
 </html>
