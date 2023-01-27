@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>«Digital Up» — Школа развития цифровых компетенций</title>
 
+    <link rel="shortcut icon" href="./images/logos/dulogo-ico.png" type="image/png">
+
     <!-- Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,7 +34,7 @@
     <script src="./js/app.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container header-container">
         <a href="/"
           ><img
@@ -186,7 +188,7 @@
       <section class="section about-section" id="about">
         <div class="container about-container">
           <h2 class="title about-title">О школе</h2>
-          <ul class="about-wrapper">
+          <div class="about-wrapper">
             <div class="about-item">
               <lottie-player
                 class="about-icon image"
@@ -256,7 +258,7 @@
               </p>
               <span class="about-number"> 04 </span>
             </div>
-          </ul>
+          </div>
 
           <div class="about-video">
             <iframe
@@ -266,6 +268,9 @@
               allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
               frameborder="0"
               allowfullscreen
+              style="border-radius: 15px; box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.4);"
+              loading="lazy"
+              title="Digital Up - школа развития цифровых компетенций"
             ></iframe>
           </div>
         </div>
