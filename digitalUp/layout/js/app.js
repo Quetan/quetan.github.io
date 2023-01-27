@@ -54,3 +54,21 @@ const swiper = new Swiper(".team-swiper", {
     type: "progressbar",
   },
 });
+
+// Partners
+const partners = document.querySelectorAll(".partners-item");
+const partnersInfo = document.getElementById("partnersInfo");
+const partnersCloseBtn = document.getElementById("partnersCloseBtn");
+const partnersInfoWrapper = document.getElementById("partnersInfoWrapper");
+
+partners.forEach((p) => {
+  if (!p.dataset.description) return;
+  p.addEventListener("click", () => {
+    partnersInfoWrapper.classList.add("visible");
+    partnersInfo.innerHTML = p.dataset.description;
+  });
+  partnersCloseBtn.addEventListener("click", () => {
+    partnersInfoWrapper.classList.remove("visible");
+    partnersInfo.innerHTML = "";
+  });
+});

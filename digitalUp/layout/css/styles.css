@@ -4,7 +4,8 @@
 :root {
   --blue: #1068ed;
   --purple: #6f42c1;
-  --dark-blue: rgba(13, 29, 76, 1);
+  --dark-blue: #0d1d4c;
+  --light-purple: #e470f8;
 
   --accent: #82c3ec;
   --accent: #20d4e7;
@@ -39,8 +40,6 @@ h6 {
 }
 .button {
   padding: 1rem 1.9rem;
-  background-color: var(--accent);
-  color: var(--black);
   text-decoration: none;
   border-radius: 1rem;
   font-weight: 400;
@@ -51,12 +50,28 @@ h6 {
   position: relative;
   transition: all 0.2s ease-in;
   will-change: contents;
+  background: linear-gradient(
+    130deg,
+    var(--light-purple) 0%,
+    var(--purple) 70%
+  );
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.3),
+    -2px -2px 3px 1px rgba(255, 255, 255, 0.3),
+    5px 5px 6px 2px rgba(0, 0, 0, 0.2),
+    -5px -5px 6px 2px rgba(255, 255, 255, 0.2),
+    10px 10px 6px 4px rgba(0, 0, 0, 0.1),
+    -10px -10px 6px 4px rgba(255, 255, 255, 0.1);
+  color: var(--white);
 }
 .button:hover {
   color: var(--black);
   background-color: var(--dark);
   color: var(--white);
   transform: translateY(-4px);
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.3),
+  -2px -2px 3px 1px rgba(255, 255, 255, 0.3),
+  5px 5px 6px 2px rgba(0, 0, 0, 0.2),
+  -5px -5px 6px 2px rgba(255, 255, 255, 0.2);
 }
 .section {
   position: relative;
@@ -68,7 +83,29 @@ h6 {
 .section--light {
   background-color: var(--white);
   color: var(--black);
+  position: relative;
 }
+.section--light::before,
+.section--light::after {
+  content: '';
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  opacity: .25;
+  z-index: 0;
+}
+.section--light::before {
+  background: linear-gradient(180deg, var(--black) 0%, transparent 100%);
+  top: 0;
+}
+.section--light::after {
+  background: linear-gradient(0deg, var(--black) 0%, transparent 100%);
+  bottom: 0;
+}
+
 .image {
   width: 100%;
   height: auto;
@@ -153,7 +190,7 @@ h6 {
 }
 .main-subtitle {
   font-size: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   width: 70%;
   line-height: 1.4;
 }
@@ -271,6 +308,8 @@ h6 {
   width: 50%;
   height: 3px;
   background-color: rgba(255, 255, 255, 0.35);
+  background-color: var(--light-purple);
+  opacity: 0.15;
   position: absolute;
   bottom: -31px;
   left: 0;
@@ -353,7 +392,7 @@ h6 {
   font-size: 1.2rem;
   font-weight: 400;
   font-family: var(--heading-font);
-  box-shadow: 2px 3px 5px 1px var(--accent);
+  box-shadow: 2px 3px 5px 1px rgba(32, 212, 231, 0.4);
 }
 .faq-summary::before {
   content: "✔";
@@ -420,6 +459,7 @@ h6 {
 .team-swiper {
   width: 100%;
   height: 800px;
+  padding-top: 15px;
 }
 .swiper-slide {
   height: calc((100% - 30px) / 2) !important;
@@ -436,6 +476,9 @@ h6 {
   -webkit-align-items: center;
   align-items: center;
 }
+.swiper-pagination-progressbar {
+  opacity: 0.5;
+}
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background-color: var(--accent);
 }
@@ -449,13 +492,173 @@ h6 {
 .team-photo {
   max-width: 100%;
   height: 250px;
-  width: auto;
+  width: 250px;
   margin-bottom: 1rem;
   object-fit: cover;
+  border-radius: 100%;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.15);
 }
 .team-name {
   font-size: 1.2rem;
 }
 .team-description {
   font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* PROGRAMS */
+.programs-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 45px;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+}
+.programs-item {
+  margin: 0 30px;
+}
+.programs-item:hover .programs-logo {
+  transform: scale(1.05);
+}
+.programs-logo {
+  width: auto;
+  max-height: 300px;
+  margin-bottom: 1.3rem;
+  transition: transform 0.3s ease-in-out;
+}
+.program-title {
+  font-size: 1.35rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* PARTNERS */
+.partners-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+}
+.partners-item {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  align-self: center;
+  text-align: center;
+  min-height: 150px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.2));
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+.partners-item:hover,
+.partners-item.active {
+  transform: scale(1.02);
+}
+#partnersInfoWrapper {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+#partnersInfoWrapper.visible {
+  visibility: visible;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 50%;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 4rem 4rem;
+  box-shadow: 3px 4px 7px 4px rgb(0, 0, 0, 0.2);
+  margin: 0;
+}
+.partners-info--title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+#partnersInfo {
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+#partnersCloseBtn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+  color: var(--black);
+}
+/* FOOTER */
+.footer {
+  min-height: 300px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background-color: var(--dark);
+}
+
+@media screen and (max-width: 925px) {
+  body {
+    font-size: 14px;
+  }
+  .header {
+    padding: 30px;
+  }
+  .main-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .main-content {
+    width: 100%;
+  }
+  .main-title,
+  .main-subtitle {
+    width: 100%;
+  }
+  .main-button {
+    margin: auto;
+  }
+  .main-content {
+    margin-bottom: 3rem;
+  }
+  .main-image {
+    width: 90%;
+    margin: auto;
+  }
+
+  .news-wrapper {
+    grid-template-areas: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .news-item {
+    filter: none;
+  }
+  .news-item:first-child {
+    grid-area: auto;
+  }
+  .about-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 3rem;
+  }
+  .about-text {
+    padding: 0 15px;
+  }
+  .numbers-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 425.99px) {
+  .header {
+    display: none;
+  }
 }
