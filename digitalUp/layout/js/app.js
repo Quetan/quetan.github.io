@@ -74,10 +74,13 @@ partners.forEach((p) => {
 });
 
 const header = document.getElementById("header");
+const headerLogo = document.getElementById("dulogo");
 window.addEventListener("scroll", (e) => {
   if (window.scrollY > 600) {
     header.classList.add("active");
+    headerLogo.src = "./images/logos/dulogo_w.png";
   } else {
     header.classList.remove("active");
+    headerLogo.src = "./images/logos/dulogo.png";
   }
 });
