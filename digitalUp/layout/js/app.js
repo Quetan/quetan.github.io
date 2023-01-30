@@ -32,16 +32,7 @@ observer.observe(target);
 
 // Team swiper
 const getSlidesCount = () => {
-  // if (window.innerWidth >= 1200) {
-  //   return 4;
-  // } else if (window.innerWidth >= 960) {
-  //   return 3
-  // } else if (window.innerWidth >= 426) {
-  //   return 2
-  // } else {
-  //   return 1;
-  // }
-  return Math.floor(window.innerWidth / 320);
+  return Math.floor(window.innerWidth / 350);
 };
 const swiper = new Swiper(".team-swiper", {
   autoplay: {
