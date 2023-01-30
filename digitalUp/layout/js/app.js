@@ -1,3 +1,9 @@
+const header = document.getElementById("header");
+const partners = document.querySelectorAll(".partners-item");
+const partnersInfo = document.getElementById("partnersInfo");
+const partnersCloseBtn = document.getElementById("partnersCloseBtn");
+const partnersInfoWrapper = document.getElementById("partnersInfoWrapper");
+
 const animateValue = (obj) => {
   if (!obj) return;
   const start = 0,
@@ -29,7 +35,6 @@ let observer = new IntersectionObserver(execAnim, {
 });
 const target = document.querySelector("#numbers");
 observer.observe(target);
-
 // Team swiper
 const getSlidesCount = () => {
   return Math.floor(window.innerWidth / 350);
@@ -52,13 +57,7 @@ const swiper = new Swiper(".team-swiper", {
     type: "progressbar",
   },
 });
-
 // Partners
-const partners = document.querySelectorAll(".partners-item");
-const partnersInfo = document.getElementById("partnersInfo");
-const partnersCloseBtn = document.getElementById("partnersCloseBtn");
-const partnersInfoWrapper = document.getElementById("partnersInfoWrapper");
-
 partners.forEach((p) => {
   if (!p.dataset.description) return;
   p.addEventListener("click", () => {
@@ -70,15 +69,10 @@ partners.forEach((p) => {
     partnersInfo.innerHTML = "";
   });
 });
-
-const header = document.getElementById("header");
-// const headerLogo = document.getElementById("dulogo");
 window.addEventListener("scroll", (e) => {
-  if (window.scrollY > 600) {
+  if (window.scrollY > 100) {
     header.classList.add("active");
-    // headerLogo.src = "./images/logos/dulogo.png";
   } else {
     header.classList.remove("active");
-    // headerLogo.src = "./images/logos/dulogo_w.png";
   }
 });
