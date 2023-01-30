@@ -8,8 +8,8 @@
   --purple-rgb: 111, 66, 193;
   --light-purple: #e470f8;
   --light-purple-rgb: 228, 112, 248;
-  --dark-blue: #0d1d4c;
-  --dark-blue-rgb: 13, 29, 76;
+  --dark-blue: #301b67;
+  --dark-blue-rgb: 48, 27, 103;
   --accent: #82c3ec;
   --accent: #20d4e7;
   --accent-rgb: 32, 212, 231;
@@ -17,8 +17,11 @@
   --white-rgb: 248, 249, 250;
   --black: #18191b;
   --black-rgb: 24, 25, 27;
-
   --highlight: #fff3cd;
+  --gray: #e0e0e0;
+
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
 
   --text-font: "Montserrat", "Roboto", sans-serif;
   --heading-font: "Unbounded", cursive;
@@ -41,9 +44,41 @@ body {
   background: linear-gradient(
     100deg,
     var(--blue) 0%,
-    var(--purple) 70%,
+    var(--purple) 66%,
     var(--dark-blue) 100%
   );
+}
+.container {
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
 }
 h1,
 h2,
@@ -52,6 +87,9 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
+}
+ul li::marker {
+  color: var(--purple);
 }
 .button {
   padding: 1rem 1.9rem;
@@ -65,30 +103,30 @@ h6 {
   position: relative;
   transition: all 0.25s ease-in;
   will-change: contents;
-  background: linear-gradient(
+  /* background: linear-gradient(
     130deg,
     var(--light-purple) 0%,
     var(--purple) 70%
-  );
-  box-shadow: 
-    1px 1px 3px 2px rgba(var(--black-rgb), 0.2),
+  ); */
+  background-color: var(--white);
+  box-shadow: 1px 1px 3px 2px rgba(var(--black-rgb), 0.2),
     -1px -1px 3px 2px rgba(var(--white-rgb), 0.2),
-    8px 8px 6px 2px rgba(var(--black-rgb),0.15),
+    8px 8px 6px 2px rgba(var(--black-rgb), 0.15),
     -8px -8px 6px 2px rgba(var(--white-rgb), 0.15),
     10px 10px 10px 8px rgba(var(--black-rgb), 0.1),
     -10px -10px 10px 8px rgba(var(--white-rgb), 0.1);
-  color: var(--white);
+  color: var(--dark-blue);
   filter: contrast(1.2);
 }
-.button:hover {
+.button:hover,
+.button:focus {
   color: var(--black);
-  background-color: var(--dark);
-  color: var(--white);
+  background-color: var(--white);
   transform: translateY(-2px);
   box-shadow: 2px 2px 3px 1px rgba(var(--black-rgb), 0.3),
-  -2px -2px 3px 1px rgba(var(--white-rgb), 0.3),
-  5px 5px 6px 2px rgba(var(--black-rgb), 0.2),
-  -5px -5px 6px 2px rgba(var(--white-rgb), 0.2);
+    -2px -2px 3px 1px rgba(var(--white-rgb), 0.3),
+    5px 5px 6px 2px rgba(var(--black-rgb), 0.2),
+    -5px -5px 6px 2px rgba(var(--white-rgb), 0.2);
 }
 .section {
   position: relative;
@@ -104,14 +142,14 @@ h6 {
 }
 .section--light::before,
 .section--light::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 30px;
   position: absolute;
   display: block;
   left: 0;
   right: 0;
-  opacity: .25;
+  opacity: 0.25;
   z-index: 0;
 }
 .section--light::before {
@@ -157,7 +195,7 @@ h6 {
   padding: 0;
 }
 .header-container a img {
-  filter:drop-shadow(1px 1px 3px rgba(var(--white-rgb),0.4));
+  filter: drop-shadow(1px 1px 3px rgba(var(--white-rgb), 0.4));
 }
 .header-menu {
   display: flex;
@@ -198,9 +236,9 @@ h6 {
 }
 .main-logos img {
   align-self: center;
-  height: 40px;
+  height: 45px;
   width: auto;
-  filter: drop-shadow(2px 2px 1px rgba(var(--black-rgb), 0.1));
+  filter: drop-shadow(2px 2px 1px rgba(var(--black-rgb), 0.25));
 }
 .main-content {
   width: 60%;
@@ -250,11 +288,11 @@ h6 {
   transition: all 0.3s ease-in-out;
   will-change: contents;
   box-shadow: 2px 2px 3px 1px rgba(var(--black-rgb), 0.3),
-  -2px -2px 3px 1px rgba(var(--white-rgb), 0.3),
-  5px 5px 6px 2px rgba(var(--black-rgb), 0.2),
-  -5px -5px 6px 2px rgba(var(--white-rgb), 0.2),
-  10px 10px 6px 4px rgba(var(--black-rgb), 0.1),
-  -10px -10px 6px 4px rgba(var(--white-rgb), 0.1);
+    -2px -2px 3px 1px rgba(var(--white-rgb), 0.3),
+    5px 5px 6px 2px rgba(var(--black-rgb), 0.2),
+    -5px -5px 6px 2px rgba(var(--white-rgb), 0.2),
+    10px 10px 6px 4px rgba(var(--black-rgb), 0.1),
+    -10px -10px 6px 4px rgba(var(--white-rgb), 0.1);
 }
 .news-item::after {
   position: absolute;
@@ -277,9 +315,9 @@ h6 {
   filter: contrast(1.2);
   transform: translateY(2px);
   box-shadow: 2px 2px 3px 1px rgba(var(--black-rgb), 0.3),
-  -2px -2px 3px 1px rgba(var(--white-rgb), 0.3),
-  5px 5px 6px 2px rgba(var(--black-rgb), 0.2),
-  -5px -5px 6px 2px rgba(var(--white-rgb), 0.2);
+    -2px -2px 3px 1px rgba(var(--white-rgb), 0.3),
+    5px 5px 6px 2px rgba(var(--black-rgb), 0.2),
+    -5px -5px 6px 2px rgba(var(--white-rgb), 0.2);
 }
 .news-item:first-child {
   grid-area: d;
@@ -383,6 +421,7 @@ h6 {
 /* NUMBERS */
 .numbers-section {
   padding-bottom: 100px;
+  padding-top: 0;
 }
 .numbers-wrapper {
   display: flex;
@@ -415,13 +454,12 @@ h6 {
   margin-bottom: 30px;
 }
 .faq-summary {
-  padding: 1rem;
   list-style-type: none;
   list-style: none;
   background-color: #fff;
   border: 3px solid var(--purple);
   border-radius: 30px;
-  padding-left: 50px;
+  padding: 1rem 50px;
   position: relative;
   transition: all 0.2s ease;
   font-size: 1.2rem;
@@ -479,12 +517,11 @@ h6 {
   margin-top: 1rem;
   margin-left: 2rem;
   padding: 2rem;
-  background-color: #fff;
   line-height: 1.8;
   font-size: 1.2rem;
   border-radius: 30px;
   box-shadow: 2px 3px 4px 2px rgba(var(--black-rgb), 0.2);
-  background-color: var(--highlight);
+  background-color: var(--gray);
 }
 .faq-answer ul,
 .faq-answer p {
@@ -517,6 +554,14 @@ h6 {
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background-color: var(--accent);
 }
+.swiper-navigation {
+  bottom: 0;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--dark-blue);
+  top: 54%;
+}
 .team-item {
   display: flex;
   flex-direction: column;
@@ -526,16 +571,15 @@ h6 {
   user-select: none;
 }
 .team-photo {
-  max-width: 100%;
+  /* max-width: 100%; */
   height: 250px;
   width: 250px;
   aspect-ratio: 1 / 1;
   margin-bottom: 1rem;
   object-fit: cover;
   border-radius: 100%;
-  box-shadow: 
-  4px 4px 7px 0px rgba(var(--black-rgb), 0.1),
-  -4px -4px 7px 0px rgba(var(--white-rgb), 0.1);
+  box-shadow: 4px 4px 7px 0px rgba(var(--black-rgb), 0.1),
+    -4px -4px 7px 0px rgba(var(--white-rgb), 0.1);
   border: 5px solid var(--white);
 }
 .team-name {
@@ -667,8 +711,9 @@ h6 {
   flex-direction: column;
   gap: 2px;
   margin: 0;
+  padding-inline-start: 20px;
 }
-.footer-menu--item a{
+.footer-menu--item a {
   font-size: 0.9rem;
   color: var(--white);
 }
@@ -719,7 +764,7 @@ h6 {
 }
 .footer-contacts--phone::before,
 .footer-contacts--email::before {
-  content: '';
+  content: "";
   width: 1.5rem;
   height: 1.5rem;
   position: absolute;
@@ -732,10 +777,10 @@ h6 {
   bottom: 0;
 }
 .footer-contacts--phone::before {
-  background-image: url('../images/icons/call.svg');
+  background-image: url("../images/icons/call.svg");
 }
 .footer-contacts--email::before {
-  background-image: url('../images/icons/mail.svg');
+  background-image: url("../images/icons/mail.svg");
 }
 
 @media screen and (max-width: 925px) {
@@ -809,13 +854,30 @@ h6 {
   .team-name {
     font-size: 1rem;
   }
-  .team-description { 
+  .team-description {
     font-size: 0.8rem;
   }
   .footer-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .footer-logo {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  .footer-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+  .footer-heading {
+    text-align: center;
   }
   .footer-nav--wrapper {
     text-align: left;
@@ -841,6 +903,12 @@ h6 {
     font-size: 1.9rem;
     margin-bottom: 40px;
   }
+  .main-section {
+    padding-top: 50px;
+  }
+  .main-subtitle {
+    font-size: 1.2rem;
+  }
   .numbers-wrapper {
     align-items: center;
     justify-content: center;
@@ -849,6 +917,9 @@ h6 {
   .number-item {
     width: 100%;
     margin-bottom: 1rem;
+  }
+  .number {
+    font-size: 2.8rem;
   }
   .faq-summary {
     font-size: 0.9rem;
@@ -878,7 +949,7 @@ h6 {
     right: 30px;
     top: 30px;
   }
-    .about-item {
+  .about-item {
     flex-direction: column;
   }
   .about-item:nth-child(2n) {
@@ -888,7 +959,7 @@ h6 {
     width: 100%;
     text-align: center;
   }
-  .footer-container {
-    flex-direction: column;
+  .footer-logo span {
+    max-width: 60%;
   }
 }

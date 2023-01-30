@@ -32,17 +32,24 @@ observer.observe(target);
 
 // Team swiper
 const getSlidesCount = () => {
-  const windowWidth = window.innerWidth;
-  const count = window.innerWidth <= 760 ? 1 : 3;
-  return count;
+  // if (window.innerWidth >= 1200) {
+  //   return 4;
+  // } else if (window.innerWidth >= 960) {
+  //   return 3
+  // } else if (window.innerWidth >= 426) {
+  //   return 2
+  // } else {
+  //   return 1;
+  // }
+  return Math.floor(window.innerWidth / 320);
 };
 const swiper = new Swiper(".team-swiper", {
   autoplay: {
-    delay: 2000,
+    delay: 4000,
   },
   slidesPerView: getSlidesCount(),
   grid: {
-    rows: 2,
+    rows: 2
   },
   spaceBetween: 30,
   navigation: {
@@ -74,13 +81,13 @@ partners.forEach((p) => {
 });
 
 const header = document.getElementById("header");
-const headerLogo = document.getElementById("dulogo");
+// const headerLogo = document.getElementById("dulogo");
 window.addEventListener("scroll", (e) => {
   if (window.scrollY > 600) {
     header.classList.add("active");
-    headerLogo.src = "./images/logos/dulogo_w.png";
+    // headerLogo.src = "./images/logos/dulogo.png";
   } else {
     header.classList.remove("active");
-    headerLogo.src = "./images/logos/dulogo.png";
+    // headerLogo.src = "./images/logos/dulogo_w.png";
   }
 });
