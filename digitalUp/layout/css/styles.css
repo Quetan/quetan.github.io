@@ -58,19 +58,11 @@ body {
   background-color: var(--blue);
   color: var(--white);
   background: rgb(65, 77, 199);
-  background: -o-linear-gradient(
-    350deg,
-    var(--blue) 0%,
-    var(--purple) 66%,
-    var(--dark-blue) 100%
-  );
-  background: linear-gradient(
-    100deg,
-    var(--blue) 0%,
-    var(--purple) 66%,
-    var(--dark-blue) 100%
-  );
-}
+  background-image: linear-gradient(85deg,
+   #22286a, #355ab4,
+   #376cce, #3c6fd7, #6651cc, #6f42c1);
+   background-image: linear-gradient(110deg, #22286a, #2e2e7b, #3b338b, #49389c, #593dac, #5d45b8, #604dc4, #6355d0, #5962da, #4e6ee3, #427aea, #3685f1);
+  }
 .container {
   width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
@@ -150,12 +142,12 @@ ul li::marker {
 }
 .section {
   position: relative;
-  min-height: 40vh;
   padding-top: 100px;
   padding-bottom: 150px;
   overflow: hidden;
 }
 .section--light {
+  background: unset;
   background-color: var(--white);
   color: var(--black);
   position: relative;
@@ -274,7 +266,8 @@ ul li::marker {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 40px;
+  flex-direction: column;
+  padding-bottom: 140px;
   padding-top: 50px;
 }
 .main-container {
@@ -293,13 +286,14 @@ ul li::marker {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 80px;
 }
 .main-logos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 .main-logos img {
   -ms-flex-item-align: center;
