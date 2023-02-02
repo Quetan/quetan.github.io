@@ -1,14 +1,14 @@
 const urlToRoutersData =
   "https://mocki.io/v1/08134514-b169-4768-ab90-a12bace1d844";
-  // "https://ternex.ru/api/1/map";
+// "https://ternex.ru/api/1/map";
 const routerIconUrl = "./icons/router.png";
 const routerOfflineIconUrl = "./icons/router_offline.png";
 
 /********************
- * 
+ *
  * GET CURRENT LOCATION
- * 
-*********************/
+ *
+ *********************/
 
 let isLocationDetected = false;
 let currentLat = 53.36;
@@ -52,83 +52,101 @@ const routerOfflineIcon = L.icon({
 document.querySelector(".leaflet-control-attribution.leaflet-control").remove();
 
 /********************
- * 
+ *
  * NODES
- * 
-*********************/
+ *
+ *********************/
 
 const routersWrapper = document.querySelector(".routersWrapper");
-const rmRouterBtn = document.getElementById("removeRouterMarker");
+const saveMapBtn = document.getElementById("saveMap");
+let removeButtons;
 
 /********************
- * 
+ *
  * HANDLERS
- * 
-*********************/
+ *
+ *********************/
 
 const mapClickHandler = (STATE, e) => {
-  if (!STATE.isRouterSelected) return STATE;
+  if (!STATE.isRouterSelected) return;
   if (isSelectedRouterInROUTERS(STATE)) {
     alert("Данный роутер уже установлен на карте!");
-    return deselectRouters(STATE);
+    return;
   }
   lat = e.latlng.lat;
   lon = e.latlng.lng;
-  STATE = addRouterMarker(
-    STATE,
-    STATE.selectedRouter,
-    Number(lat),
-    Number(lon)
-  );
-  return STATE;
+  addRouterMarker(STATE, STATE.selectedRouter, Number(lat), Number(lon));
 };
-const removeMarkerHandler = (STATE) => {
-  if (!STATE.selectedRouter) {
-    alert("Сначала выберите роутер, который хотите удалить!");
-    return STATE;
-  }
+const removeMarkerHandler = (STATE, id) => {
   if (confirm("Вы уверены, что хотите удалить роутер с карты?")) {
     let deletedRouter = STATE.ROUTERS.find(
-      (router) => Number(router.id) == Number(STATE.selectedRouter.id)
+      (router) => Number(router.router_id) == Number(id)
     );
     STATE.routerList.forEach((r) => {
-      if (r.dataset.id == STATE.selectedRouter.id) r.classList.add("unset");
+      if (r.dataset.id == id) r.classList.add("unset");
     });
     STATE.ROUTERS = STATE.ROUTERS.filter((router) => {
-      return Number(router.id) != Number(STATE.selectedRouter.id);
+      return Number(router.router_id) != Number(id);
     });
     map.removeLayer(deletedRouter.marker);
-    return deselectRouters(STATE);
   }
 };
 const routerClickHandler = (STATE, router) => {
-  STATE = deselectRouters(STATE);
-  STATE = selectRouter(
+  deselectRouters(STATE);
+  selectRouter(
     STATE,
     router.dataset.id,
     router.dataset.status,
     router.dataset.name
   );
-  return STATE;
+};
+const saveClickHandler = (ROUTERS) => {
+  // FIX MUTATION AND SELECT ROUTER (RM BTN)
+  ROUTERS.forEach((r) => {
+    delete r.marker;
+    delete r.name;
+    delete r.is_active;
+  });
+  ROUTERS = Object.assign({}, {"gps": ROUTERS});
+  fetch('/api/1/map', {
+    method: 'POST',
+    body: JSON.stringify(ROUTERS)
+  })
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    alert("Данные успешно сохранены!");
+    location.reload();
+  })
+  .catch((error) => {
+    alert("Произошла ошибка! ", error);
+    location.reload();
+  });
+
 };
 
 /********************
- * 
+ *
  * METHODS
- * 
-*********************/
+ *
+ *********************/
 
 const addRouterLayout = (id, name, ipv6, status) => {
   if (!name) return;
   return `
           <div class="router unset" tabindex="0" role="button" data-id="${id}" data-status="${status}" data-name="${name}">
+            <button class="router-remove" disabled="true" data-remove="${id}">
+            <svg fill="none" stroke="#e74a3b" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"></path>
+            </svg>
+            </button>
             <img src="${status ? routerIconUrl : routerOfflineIconUrl}">
             <div class="router-info">
               <h3 class="router-name">${name}</h3>
               <small class="router-status"><b>Статус:</b> <span class="${
                 status ? "on" : "off"
               }">${status ? "Online" : "Offline"}</span></small>
-              <small class="router-ip"><b>IPv6:</b> ${ipv6}</small>
+              <small class="router-ip"><b>IPv6:</b> <span>${ipv6}</span></small>
             </div>
           </div>
           `;
@@ -144,12 +162,11 @@ const addRoutersToLayout = (STATE, routersData) => {
     );
   });
   STATE.routerList = document.querySelectorAll(".router");
-  return STATE;
 };
 const addRouterMarkers = (STATE, routersData) => {
   routersData.routers.forEach((router) => {
-    if (router.gps.lat == null || router.gps.long == null) return STATE;
-    STATE = addRouterMarker(
+    if (router.gps.lat == null || router.gps.long == null) return;
+    addRouterMarker(
       STATE,
       (router = {
         id: Number(router.router_id),
@@ -160,7 +177,6 @@ const addRouterMarkers = (STATE, routersData) => {
       Number(router.gps.long)
     );
   });
-  return STATE;
 };
 
 // DESELECT ALL ROUTERS
@@ -170,12 +186,10 @@ const deselectRouters = (STATE) => {
     router.classList.remove("selected");
   });
   STATE.isRouterSelected = false;
-  rmRouterBtn.disabled = true;
-  return STATE;
 };
 // SELECT ROUTER
 const selectRouter = (STATE, id, status, name) => {
-  STATE = deselectRouters(STATE);
+  deselectRouters(STATE);
   const routerNode = document.querySelector(`[data-id*="${id}"]`);
   routerNode.classList.add("selected");
   STATE.isRouterSelected = true;
@@ -184,48 +198,40 @@ const selectRouter = (STATE, id, status, name) => {
     status: isStatusTrue(status),
     name: String(name),
   };
-  if (!isSelectedRouterInROUTERS(STATE)) {
-    rmRouterBtn.disabled = true;
-  } else {
-    rmRouterBtn.disabled = false;
-    showRouterPopup(STATE);
-  }
-  return STATE;
 };
 const addRouterMarker = (STATE, router, lat, long) => {
-  if (!lat && !long) return STATE;
+  if (!lat && !long) return;
+  if (STATE.ROUTERS.length >= STATE.routersCount) {
+    alert("Вы уже установили все роутеры!");
+    return;
+  }
   // defines if router set
   STATE.routerList.forEach((r) => {
     if (r.dataset.id == router.id) {
       r.classList.remove("unset");
     }
   });
-  if (STATE.ROUTERS.length >= STATE.routersCount) {
-    alert("Вы уже установили все роутеры!");
-    return deselectRouters(STATE);
-  }
   routerMarker = L.marker([lat, lon], {
     icon: router.status ? routerIcon : routerOfflineIcon,
   })
-    .bindPopup(`${router.name} — ${router.status ? "В сети" : "Не в сети"}
-    <button data-id="${router.id}" style="margin: 15px auto;display: block;">
-      Удалить
-    </button>
-    `, {
-      className: "router-popup",
-    })
+    .bindPopup(
+      `${router.name} — ${router.status ? "В сети" : "Не в сети"}`,
+      {
+        className: "router-popup",
+      }
+    )
     .on("click", (e) => {
-      STATE = selectRouter(STATE, router.id, router.status, router.name);
+      selectRouter(STATE, router.id, router.status, router.name);
     })
     .addTo(map);
   routerMarker.getPopup().on("remove", () => {
-    STATE = deselectRouters(STATE);
+    deselectRouters(STATE);
   });
-  STATE = deselectRouters(STATE);
+  deselectRouters(STATE);
   STATE.ROUTERS = [
     ...STATE.ROUTERS,
     {
-      id: Number(router.id),
+      router_id: Number(router.id),
       lat: Number(lat),
       long: Number(lon),
       name: String(router.name),
@@ -233,11 +239,12 @@ const addRouterMarker = (STATE, router, lat, long) => {
       marker: routerMarker,
     },
   ];
-  return STATE;
+  const rmBtn = document.querySelector(`[data-remove="${router.id}"`);
+  rmBtn.disabled = false;
 };
 const isSelectedRouterInROUTERS = (STATE) => {
-  if (!STATE.ROUTERS) return STATE;
-  return STATE.ROUTERS.find((router) => router.id == STATE.selectedRouter.id)
+  if (!STATE.ROUTERS) return;
+  return STATE.ROUTERS.find((router) => router.router_id == STATE.selectedRouter.id)
     ? true
     : false;
 };
@@ -245,15 +252,15 @@ const isStatusTrue = (status) => {
   return status == "true" || status == true ? true : false;
 };
 const showRouterPopup = (STATE) => {
-  if (!STATE.ROUTERS) return STATE;
-  STATE.ROUTERS.find((r) => r.id == STATE.selectedRouter.id).marker.openPopup();
+  if (!STATE.ROUTERS) return;
+  STATE.ROUTERS.find((r) => r.router_id == STATE.selectedRouter.id).marker.openPopup();
 };
 
 /********************
- * 
+ *
  * GET ROUTER DATA AND INIT
- * 
-*********************/
+ *
+ *********************/
 
 fetch(urlToRoutersData)
   .then((res) => res.json())
@@ -278,20 +285,28 @@ const init = (routersData) => {
     routerList: [],
   };
 
-  STATE = addRoutersToLayout(STATE, routersData);
-  STATE = addRouterMarkers(STATE, routersData);
+  addRoutersToLayout(STATE, routersData);
+  addRouterMarkers(STATE, routersData);
 
   STATE.routerList.forEach((router) => {
     router.addEventListener("click", (e) => {
-      STATE = routerClickHandler(STATE, router);
+      routerClickHandler(STATE, router);
     });
   });
-  // const popupRemoveButton = document.querySelector(".popupRemoveButton");
-  rmRouterBtn.addEventListener("click", (e) => {
-    STATE = removeMarkerHandler(STATE);
+
+  saveMapBtn.addEventListener("click", (e) => {
+    saveClickHandler(STATE.ROUTERS);
   });
+
+  removeButtons = document.querySelectorAll("[data-remove]");
+  removeButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      btn.disabled = "true";
+      removeMarkerHandler(STATE, btn.dataset.remove);
+    });
+  })
   map.on("click", (e) => {
-    STATE = mapClickHandler(STATE, e);
+    mapClickHandler(STATE, e);
   });
 
   // STATE DEBUG

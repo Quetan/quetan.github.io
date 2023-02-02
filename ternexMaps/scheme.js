@@ -146,7 +146,7 @@ const addRouter = (x, y, name, status) => {
 };
 let getMapJSON = () => {
   const canvasJSON = canvas.toJSON();
-  console.log(canvasJSON);
+  console.log(JSON.stringify(canvasJSON));
 };
 
 let setMapJSON = (json) => {
