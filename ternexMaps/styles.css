@@ -21,6 +21,9 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
   border-radius: 15px;
+  width: 700px;
+  height: 700px;
+  width: 100%;
 }
 .routersList {
   height: auto;

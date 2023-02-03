@@ -1,5 +1,5 @@
 const urlToRoutersData =
-  "https://mocki.io/v1/08134514-b169-4768-ab90-a12bace1d844";
+  "https://mocki.io/v1/e7c43185-e886-4c44-a9a1-91af41dfd8f0";
 // "https://ternex.ru/api/1/map";
 const routerIconUrl = "./icons/router.png";
 const routerOfflineIconUrl = "./icons/router_offline.png";
@@ -107,22 +107,21 @@ const saveClickHandler = (ROUTERS) => {
     delete r.name;
     delete r.is_active;
   });
-  ROUTERS = Object.assign({}, {"gps": ROUTERS});
-  fetch('/api/1/map', {
-    method: 'POST',
-    body: JSON.stringify(ROUTERS)
+  ROUTERS = Object.assign({}, { gps: ROUTERS });
+  fetch("/api/1/map", {
+    method: "POST",
+    body: JSON.stringify(ROUTERS),
   })
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-    alert("Данные успешно сохранены!");
-    location.reload();
-  })
-  .catch((error) => {
-    alert("Произошла ошибка! ", error);
-    location.reload();
-  });
-
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      alert("Данные успешно сохранены!");
+      location.reload();
+    })
+    .catch((error) => {
+      alert("Произошла ошибка! ", error);
+      location.reload();
+    });
 };
 
 /********************
@@ -166,15 +165,16 @@ const addRoutersToLayout = (STATE, routersData) => {
 const addRouterMarkers = (STATE, routersData) => {
   routersData.routers.forEach((router) => {
     if (router.gps.lat == null || router.gps.long == null) return;
+    (lat = router.gps.lat), (lon = router.gps.long);
     addRouterMarker(
       STATE,
-      (router = {
+      {
         id: Number(router.router_id),
         name: String(router.name),
         status: isStatusTrue(router.is_active),
-      }),
-      Number(router.gps.lat),
-      Number(router.gps.long)
+      },
+      lat,
+      lon
     );
   });
 };
@@ -211,15 +211,12 @@ const addRouterMarker = (STATE, router, lat, long) => {
       r.classList.remove("unset");
     }
   });
-  routerMarker = L.marker([lat, lon], {
+  routerMarker = L.marker([lat, long], {
     icon: router.status ? routerIcon : routerOfflineIcon,
   })
-    .bindPopup(
-      `${router.name} — ${router.status ? "В сети" : "Не в сети"}`,
-      {
-        className: "router-popup",
-      }
-    )
+    .bindPopup(`${router.name} — ${router.status ? "В сети" : "Не в сети"}`, {
+      className: "router-popup",
+    })
     .on("click", (e) => {
       selectRouter(STATE, router.id, router.status, router.name);
     })
@@ -244,7 +241,9 @@ const addRouterMarker = (STATE, router, lat, long) => {
 };
 const isSelectedRouterInROUTERS = (STATE) => {
   if (!STATE.ROUTERS) return;
-  return STATE.ROUTERS.find((router) => router.router_id == STATE.selectedRouter.id)
+  return STATE.ROUTERS.find(
+    (router) => router.router_id == STATE.selectedRouter.id
+  )
     ? true
     : false;
 };
@@ -253,7 +252,9 @@ const isStatusTrue = (status) => {
 };
 const showRouterPopup = (STATE) => {
   if (!STATE.ROUTERS) return;
-  STATE.ROUTERS.find((r) => r.router_id == STATE.selectedRouter.id).marker.openPopup();
+  STATE.ROUTERS.find(
+    (r) => r.router_id == STATE.selectedRouter.id
+  ).marker.openPopup();
 };
 
 /********************
@@ -299,12 +300,12 @@ const init = (routersData) => {
   });
 
   removeButtons = document.querySelectorAll("[data-remove]");
-  removeButtons.forEach(btn => {
+  removeButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       btn.disabled = "true";
       removeMarkerHandler(STATE, btn.dataset.remove);
     });
-  })
+  });
   map.on("click", (e) => {
     mapClickHandler(STATE, e);
   });

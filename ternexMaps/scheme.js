@@ -1,9 +1,197 @@
 const urlToRoutersData =
-  "https://mocki.io/v1/08134514-b169-4768-ab90-a12bace1d844";
+  "https://mocki.io/v1/4bd09d92-ed2e-4057-9fc6-214fa03b4e81";
 // "https://ternex.ru/api/1/map";
 const routerIconUrl = "./icons/router.png";
 const routerOfflineIconUrl = "./icons/router_offline.png";
 const backgroundImageUrl = "./schemeDefault.png";
+
+const setText = (name) => {
+  return {
+    type: "text",
+    version: "5.3.0",
+    originX: "center",
+    originY: "center",
+    left: 0,
+    top: -30,
+    width: 101.25, // ??
+    height: 22.6,  // ??
+    fill: "#01a0e9",
+    stroke: "#fff",
+    strokeWidth: 10,
+    strokeDashArray: null,
+    strokeLineCap: "butt",
+    strokeDashOffset: 0,
+    strokeLineJoin: "miter",
+    strokeUniform: false,
+    strokeMiterLimit: 4,
+    scaleX: 1,
+    scaleY: 1,
+    angle: 0,
+    flipX: false,
+    flipY: false,
+    opacity: 1,
+    shadow: null,
+    visible: true,
+    backgroundColor: "",
+    fillRule: "nonzero",
+    paintFirst: "stroke",
+    globalCompositeOperation: "source-over",
+    skewX: 0,
+    skewY: 0,
+    fontFamily: "Times New Roman",
+    fontWeight: "bold",
+    fontSize: 20,
+    text: name,  //  NAME
+    underline: false,
+    overline: false,
+    linethrough: false,
+    textAlign: "left",
+    fontStyle: "normal",
+    lineHeight: 1.1,
+    textBackgroundColor: "",
+    charSpacing: 0,
+    styles: [],
+    direction: "ltr",
+    path: null,
+    pathStartOffset: 0,
+    pathSide: "left",
+    pathAlign: "baseline"
+  };
+}
+const setImage = (src) => {
+  return {
+    type: "image",
+    version: "5.3.0",
+    originX: "center",
+    originY: "center",
+    left: 0,
+    top: 15,
+    width: 64,
+    height: 64,
+    fill: "rgb(0,0,0)",
+    stroke: null,
+    strokeWidth: 0,
+    strokeDashArray: null,
+    strokeLineCap: "butt",
+    strokeDashOffset: 0,
+    strokeLineJoin: "miter",
+    strokeUniform: false,
+    strokeMiterLimit: 4,
+    scaleX: 1,
+    scaleY: 1,
+    angle: 0,
+    flipX: false,
+    flipY: false,
+    opacity: 1,
+    shadow: null,
+    visible: true,
+    backgroundColor: "",
+    fillRule: "nonzero",
+    paintFirst: "fill",
+    globalCompositeOperation: "source-over",
+    skewX: 0,
+    skewY: 0,
+    cropX: 0,
+    cropY: 0,
+    src: src, // router.png or router_offline.png
+    crossOrigin: null,
+    filters: []
+  };
+}
+const setGroup = (imageObj, textObj, x, y, id) => {
+  return {
+    type: "group",
+    router_id: id,
+    version: "5.3.0",
+    originX: "center",
+    originY: "center",
+    left: x, //  X
+    top: y,  //  Y
+    width: 111.25, // ??
+    height: 98.3,  // ??
+    fill: "rgb(0,0,0)",
+    stroke: null,
+    strokeWidth: 0,
+    strokeDashArray: null,
+    strokeLineCap: "butt",
+    strokeDashOffset: 0,
+    strokeLineJoin: "miter",
+    strokeUniform: false,
+    strokeMiterLimit: 4,
+    scaleX: 1,
+    scaleY: 1,
+    angle: 0,
+    flipX: false,
+    flipY: false,
+    opacity: 1,
+    shadow: null,
+    visible: true,
+    backgroundColor: "",
+    fillRule: "nonzero",
+    paintFirst: "fill",
+    globalCompositeOperation: "source-over",
+    skewX: 0,
+    skewY: 0,
+    objects: [imageObj, textObj]
+  }
+}
+
+const compileJSON = (data) => {
+  let objects = []
+  data.routers.forEach(router => {
+    objects = [...objects, 
+      setGroup(
+        setImage(router.is_active ? routerIconUrl : routerOfflineIconUrl),
+        setText(router.name),
+        router.x ? router.x : 350 + Math.random() * 400 - 200,
+        router.y ? router.y : 350 + Math.random() * 400 - 200,
+        router.router_id
+      )
+    ]
+  })
+  return {
+    version: "5.3.0",
+    objects: objects,
+    backgroundImage: {
+      type: "image",
+      version: "5.3.0",
+      originX: "left",
+      originY: "top",
+      left: 0,
+      top: 0,
+      width: 850,
+      height: 756,
+      fill: "rgb(0,0,0)",
+      stroke: null,
+      strokeWidth: 0,
+      strokeDashArray: null,
+      strokeLineCap: "butt",
+      strokeDashOffset: 0,
+      strokeLineJoin: "miter",
+      strokeUniform: false,
+      strokeMiterLimit: 4,
+      scaleX: 0.82,
+      scaleY: 0.93,
+      angle: 0,
+      flipX: false,
+      flipY: false,
+      opacity: 1,
+      shadow: null,
+      visible: true,
+      backgroundColor: "",
+      fillRule: "nonzero",
+      paintFirst: "fill",
+      globalCompositeOperation: "source-over",
+      skewX: 0,
+      skewY: 0,
+      cropX: 0,
+      cropY: 0,
+      src: "http://127.0.0.1:5500/schemeDefault.png", //url to bg image
+      crossOrigin: null,
+      filters: []
+    }
+  }
+}
 
 /********************
  *
@@ -169,7 +357,9 @@ fetch(urlToRoutersData)
 
 const init = (routersData) => {
   // SET UP MAP FROM DB
-  setMapJSON(routersData.scheme);
+  let json = compileJSON(routersData);
+  console.log(json)
+  setMapJSON(json);
   // ADD ROUTER LIST FROM DB
   const routerList = addRoutersToLayout(routersData);
 
