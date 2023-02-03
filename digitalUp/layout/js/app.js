@@ -37,7 +37,7 @@ const target = document.querySelector("#numbers");
 observer.observe(target);
 // Team swiper
 const getSlidesCount = () => {
-  return Math.floor(window.innerWidth / 350);
+  return Math.floor(window.innerWidth / 420);
 };
 const swiper = new Swiper(".team-swiper", {
   autoplay: {
@@ -70,7 +70,7 @@ partners.forEach((p) => {
   });
 });
 window.addEventListener("scroll", (e) => {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 80) {
     header.classList.add("active");
   } else {
     header.classList.remove("active");
