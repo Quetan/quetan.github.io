@@ -10,10 +10,9 @@
   --light-purple-rgb: 228, 112, 248;
   --dark-blue: #22286a;
   --dark-blue-rgb: 34, 40, 106;
-  /* --accent: #82c3ec; */
   --accent: #9fc2fb;
   --accent-rgb: 159, 194, 251;
-  --white: #f8f9fa;
+  --white: #FFFBF5;
   --white-rgb: 248, 249, 250;
   --black: #18191b;
   --black-rgb: 24, 25, 27;
@@ -22,10 +21,10 @@
 
   --shadow: 1px 1px 3px 2px rgba(var(--black-rgb), 0.2),
     -1px -1px 3px 2px rgba(var(--white-rgb), 0.2),
-    8px 8px 6px 2px rgba(var(--black-rgb), 0.15),
-    -8px -8px 6px 2px rgba(var(--white-rgb), 0.15),
-    10px 10px 10px 8px rgba(var(--black-rgb), 0.1),
-    -10px -10px 10px 8px rgba(var(--white-rgb), 0.1);
+    8px 8px 8px 2px rgba(var(--black-rgb), 0.1),
+    -8px -8px 8px 2px rgba(var(--white-rgb), 0.1),
+    15px 10px 10px 8px rgba(var(--black-rgb), 0.05),
+    -15px -10px 10px 8px rgba(var(--white-rgb), 0.05);
   --shadow-transition: 2px 2px 3px 1px rgba(var(--black-rgb), 0.3),
     -2px -2px 3px 1px rgba(var(--white-rgb), 0.3),
     5px 5px 6px 2px rgba(var(--black-rgb), 0.2),
@@ -110,8 +109,8 @@ ul li::marker {
   padding: 1rem 1.9rem;
   text-decoration: none;
   border-radius: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   font-family: var(--heading-font);
   display: block;
   width: -webkit-max-content;
@@ -126,14 +125,13 @@ ul li::marker {
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
   color: var(--dark-blue);
-  text-shadow: 2px 2px 1px rgba(var(--black-rgb), 0.2);
-  -webkit-filter: contrast(1.2);
-          filter: contrast(1.2);
+  -webkit-filter: contrast(1.1);
+          filter: contrast(1.1);
 }
 .button:hover,
 .button:focus {
-  color: var(--black);
-  background-color: var(--white);
+  color: var(--dark-blue);
+  background-color: var(--gray);
   -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
           transform: translateY(-2px);
@@ -268,7 +266,7 @@ ul li::marker {
           align-items: center;
   flex-direction: column;
   padding-bottom: 140px;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 .main-container {
   display: -webkit-box;
@@ -330,6 +328,18 @@ ul li::marker {
 }
 .main-image {
   width: 45%;
+}
+.main-button {
+  animation: btn 5s infinite;
+}
+
+@keyframes btn {
+  0%, 50%, 100% {
+    transform: scale(1);
+  }
+  25%, 75% {
+    transform: scale(1.05);
+  }
 }
 
 /* NEWS SECTION */
@@ -651,17 +661,34 @@ ul li::marker {
 .faq-answer {
   margin-top: 1rem;
   margin-left: 2rem;
-  padding: 2rem;
-  line-height: 1.8;
-  font-size: 1.2rem;
+  padding: 1.5rem 2rem;
+  line-height: 1.85;
+  font-size: 1rem;
+  border: 5px solid var(--white);
   border-radius: 30px;
   -webkit-box-shadow: 2px 3px 4px 2px rgba(var(--black-rgb), 0.2);
           box-shadow: 2px 3px 4px 2px rgba(var(--black-rgb), 0.2);
-  background-color: var(--gray);
+  background-color: rgba(var(--purple-rgb), 0.9);
+  color: var(--white);
+}
+.faq-answer a {
+  color: inherit;
 }
 .faq-answer ul,
 .faq-answer p {
   margin: 0;
+}
+.faq-answer p {
+  margin-bottom: 0.8rem;
+}
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+.faq-answer p::first-letter {
+  padding-left: 2.5rem;
+}
+.faq-answer ul li::marker {
+  color: var(--white);
 }
 /* TEAM */
 .team-swiper {
