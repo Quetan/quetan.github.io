@@ -100,12 +100,22 @@ const routerClickHandler = (STATE, router) => {
     router.dataset.name
   );
 };
-const saveClickHandler = (ROUTERS) => {
-  // FIX MUTATION AND SELECT ROUTER (RM BTN)
+const saveClickHandler = (ROUTERS, routersData) => {
+  let dataIdList = routersData.map(r => {
+    return r.router_id
+  })
   ROUTERS.forEach((r) => {
+    dataIdList = dataIdList.filter(id => {return id != r.router_id})
     delete r.marker;
     delete r.name;
     delete r.is_active;
+  });
+  dataIdList.forEach(id => {
+    ROUTERS = [...ROUTERS, {
+      router_id: id,
+      lat: null,
+      long: null
+    }]
   });
   ROUTERS = Object.assign({}, { gps: ROUTERS });
   fetch("/api/1/map", {
@@ -115,12 +125,12 @@ const saveClickHandler = (ROUTERS) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      alert("Данные успешно сохранены!");
-      location.reload();
+      // alert("Данные успешно сохранены!");
+      // location.reload();
     })
     .catch((error) => {
-      alert("Произошла ошибка! ", error);
-      location.reload();
+      // alert("Произошла ошибка! ", error);
+      // location.reload();
     });
 };
 
@@ -272,7 +282,7 @@ const init = (routersData) => {
   /**
    * @constructor STATE
    * @param {Boolean} isRouterSelected
-   * @param {Object} selectedRouter
+   * @param {Node} selectedRouter
    * @param {Number} routersCount
    * @param {Array<NodeList>} routerList
    * @param {Array<Object>} ROUTERS
@@ -296,7 +306,7 @@ const init = (routersData) => {
   });
 
   saveMapBtn.addEventListener("click", (e) => {
-    saveClickHandler(STATE.ROUTERS);
+    saveClickHandler(STATE.ROUTERS, routersData.routers);
   });
 
   removeButtons = document.querySelectorAll("[data-remove]");

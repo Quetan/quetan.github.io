@@ -76,3 +76,7 @@ window.addEventListener("scroll", (e) => {
     header.classList.remove("active");
   }
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  particlesJS.load('particles-js', 'js/particles.json');
+})
