@@ -1,796 +1,927 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>«Digital Up» — Школа развития цифровых компетенций</title>
-    <link
-      rel="shortcut icon"
-      href="./images/logos/dulogo.png"
-      type="image/png"
-    />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>«Digital Up» — Школа развития цифровых компетенций</title>
+		<link
+			rel="shortcut icon"
+			href="./images/logos/dulogo.png"
+			type="image/png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@400;700&family=Unbounded:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
+		<link rel="stylesheet" href="./css/swiper.min.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<script src="./js/swiper.min.js" defer></script>
+		<script src="./js/lottie-player.js" defer></script>
+		<script src="./js/app.js" defer></script>
+	</head>
+	<body>
+		<header class="header" id="header">
+			<div class="container header-container">
+				<a href="/"
+					><img
+						id="dulogo"
+						src="./images/logos/dulogo_w.png"
+						width="60"
+						height="60"
+						alt="Digital Up"
+				/></a>
+				<nav class="header-nav">
+					<ul class="header-menu">
+						<li class="header-menu--item">
+							<a href="#news">Новости</a>
+						</li>
+						<li class="header-menu--item">
+							<a href="#about">О школе</a>
+						</li>
+						<li class="header-menu--item">
+							<a href="#team">Команда</a>
+						</li>
+						<li class="header-menu--item">
+							<a href="#programs">Программы</a>
+						</li>
+						<li class="header-menu--item">
+							<a href="#partners">Партнеры</a>
+						</li>
+						<li class="header-menu--item">
+							<a href="#footer">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="main">
+			<section class="section main-section" id="main">
+				<div class="container main-container">
+					<div class="main-content">
+						<div class="main-logos">
+							<img
+								src="./images/logos/mincif.svg"
+								height="40"
+								alt="Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации"
+								title="Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации"
+							/>
+							<img
+								src="./images/logos/prior2030.svg"
+								height="40"
+								alt="Приоритет 2030"
+								title="Приоритет 2030"
+							/>
+							<img
+								src="./images/logos/footer-asu.svg"
+								width="40"
+								height="40"
+								alt="Алтайский государственный университет"
+								title="Алтайский государственный университет"
+							/>
+						</div>
+						<h1 class="main-title">
+							Школа развития цифровых компетенций «Digital Up»
+							<small>(Цифровая кафедра АлтГУ)</small>
+						</h1>
+						<p class="main-subtitle">
+							Обучение в Digital Up — возможность получить
+							ИТ-квалификацию бесплатно!
+						</p>
+						<a href="#" class="button main-button"
+							>Хочу обучаться</a
+						>
+					</div>
+					<div class="main-image">
+						<lottie-player
+							class="image"
+							src="./anims/heading.json"
+							background="transparent"
+							speed="1"
+							loop
+							autoplay
+						></lottie-player>
+					</div>
+				</div>
+				<div class="container numbers-container" id="numbers">
+					<h2 class="title numbers-title">
+						Цифровая кафедра сегодня
+					</h2>
+					<div class="numbers-wrapper">
+						<div class="number-item">
+							<span
+								class="number av"
+								data-value="8"
+								data-duration="400"
+								>8</span
+							>
+							<p class="numbers-description">
+								Программ профессиональной переподготовки
+							</p>
+						</div>
+						<div class="number-item">
+							<span
+								class="number av"
+								data-value="18"
+								data-duration="600"
+								>18</span
+							>
+							<p class="numbers-description">
+								Квалифицированных преподавателей
+							</p>
+						</div>
+						<div class="number-item">
+							<span
+								class="number av"
+								data-value="10"
+								data-duration="800"
+								>10</span
+							>
+							<p class="numbers-description">
+								Крупных ИТ-компаний
+							</p>
+						</div>
+						<div class="number-item">
+							<span
+								class="number av"
+								data-value="1125"
+								data-duration="1000"
+								>1125</span
+							>
+							<p class="numbers-description">Обучающихся</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--light news-section" id="news">
+				<div class="container news-container">
+					<h2 class="title news-title">Новости и объявления</h2>
+					<div class="news-wrapper">
+						<a
+							href="#"
+							class="news-item"
+							style="
+								background-image: url('./images/main-section.svg');
+							"
+						>
+							<h3 class="news-item--title">Какой-то заголовок</h3>
+							<span class="news-item--date">14.12.2022</span>
+						</a>
+						<a
+							href="#"
+							class="news-item"
+							style="
+								background-image: url('./images/main-section.svg');
+							"
+						>
+							<h3 class="news-item--title">Какой-то заголовок</h3>
+							<span class="news-item--date">14.12.2022</span>
+						</a>
+						<a
+							href="#"
+							class="news-item"
+							style="
+								background-image: url('./images/main-section.svg');
+							"
+						>
+							<h3 class="news-item--title">Какой-то заголовок</h3>
+							<span class="news-item--date">14.12.2022</span>
+						</a>
+						<a
+							href="#"
+							class="news-item"
+							style="
+								background-image: url('./images/main-section.svg');
+							"
+						>
+							<h3 class="news-item--title">Какой-то заголовок</h3>
+							<span class="news-item--date">14.12.2022</span>
+						</a>
+						<a
+							href="#"
+							class="news-item"
+							style="
+								background-image: url('./images/main-section.svg');
+							"
+						>
+							<h3 class="news-item--title">Какой-то заголовок</h3>
+							<span class="news-item--date">14.12.2022</span>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="section about-section" id="about">
+				<div class="container about-container">
+					<h2 class="title about-title">О школе</h2>
+					<div class="about-wrapper">
+						<div class="about-item">
+							<lottie-player
+								class="about-icon image"
+								src="./anims/about1.json"
+								background="transparent"
+								speed="1"
+								loop
+								autoplay
+							></lottie-player>
+							<p class="about-text">
+								Цифровая кафедра создана в АлтГУ с целью
+								предоставления всем студентам очной и
+								очно-заочной форм обучения возможности получения
+								на бесплатной основе дополнительной
+								ИТ-квалификации, востребованной на рынке труда
+							</p>
+							<span class="about-number"> 01 </span>
+						</div>
+						<div class="about-item">
+							<lottie-player
+								class="about-icon image"
+								src="./anims/about2.json"
+								background="transparent"
+								speed="1"
+								loop
+								autoplay
+							></lottie-player>
+							<p class="about-text">
+								В Школе предусмотрены программы профессиональной
+								переподготовки для студентов, обучающихся по
+								профильным ИТ-направлениям и для студентов, чья
+								будущая специальность не относится к ИТ-сфере.
+								Вы сами выбираете программу, исходя из
+								собственных интересов и уровня подготовки.
+							</p>
+							<span class="about-number"> 02 </span>
+						</div>
+						<div class="about-item">
+							<lottie-player
+								class="about-icon image"
+								src="./anims/about3.json"
+								background="transparent"
+								speed="1"
+								loop
+								autoplay
+							></lottie-player>
+							<p class="about-text">
+								В рамках обучения Вам будет предоставлена
+								возможность пройти стажировку в крупной компании
+								реального сектора экономки и создать собственный
+								ИТ-проект для решения актуальных задач будущей
+								профессиональной деятельности.
+							</p>
+							<span class="about-number"> 03 </span>
+						</div>
+						<div class="about-item">
+							<lottie-player
+								class="about-icon image"
+								src="./anims/about4.json"
+								background="transparent"
+								speed="1"
+								loop
+								autoplay
+							></lottie-player>
+							<p class="about-text">
+								После успешного прохождения всех контрольных
+								точек по программе и защиты проекта по окончании
+								обучения вместе с дипломом о высшем образовании
+								Вы получите диплом о профессиональной
+								переподготовке.
+							</p>
+							<span class="about-number"> 04 </span>
+						</div>
+					</div>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@400;700&family=Unbounded:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+					<div class="about-video add-pseudo" id="vk-video">
+						<img
+							src="./images/videoThumb.jpg"
+							alt="Digital Up - Школа развития цифровых компетенций"
+						/>
+					</div>
+				</div>
+			</section>
+			<section class="section section--light faq-section" id="faq">
+				<div class="container faq-container">
+					<h2 class="title numbers-title">
+						Часто задаваемые вопросы
+					</h2>
+					<div class="faq-wrapper">
+						<details class="faq-item">
+							<summary class="faq-summary">
+								Кто может обучаться в Школе развития цифровых
+								компетенций «Digital Up»?
+							</summary>
+							<div class="faq-answer">
+								<ul>
+									<li>
+										Студенты 3-го и 4-го курсов
+										бакалавриата, 4-го и 5-го курса
+										специалитета любых направлений
+										подготовки, обучающиеся по очной и
+										очно-заочной форме
+									</li>
+									<li>
+										Магистранты 2-го курса, обучающиеся на
+										образовательных программах, не связанным
+										с ИТ, по очной и очно-заочной форме
+										обучения.
+									</li>
+								</ul>
+							</div>
+						</details>
+						<details class="faq-item">
+							<summary class="faq-summary">
+								Сколько длится обучение и какая трудоёмкость?
+							</summary>
+							<div class="faq-answer">
+								<p>
+									Обучение длится 9 месяцев, объем программ
+									252 ч.
+								</p>
+							</div>
+						</details>
+						<details class="faq-item">
+							<summary class="faq-summary">
+								Могу ли я обучаться сразу на двух программах?
+							</summary>
+							<div class="faq-answer">
+								<p>
+									Каждый студент может выбрать только одну
+									программу.
+								</p>
+							</div>
+						</details>
+						<details class="faq-item">
+							<summary class="faq-summary">
+								Когда стартует новый набор?
+							</summary>
+							<div class="faq-answer">
+								<p>
+									Набор на 2023 год стартует в июне 2023 года,
+									а обучение начнется в сентябре 2023 года.
+								</p>
+							</div>
+						</details>
 
-    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
-    <link rel="stylesheet" href="./css/swiper.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./js/swiper.min.js" defer></script>
-    <script src="./js/lottie-player.js" defer></script>
-    <script src="./js/particles.min.js" defer></script>
-    <script src="./js/app.js" defer></script>
-  </head>
-  <body>
-    <div id="particles-js"></div>
-    <header class="header" id="header">
-      <div class="container header-container">
-        <a href="/"
-          ><img
-            id="dulogo"
-            src="./images/logos/dulogo_w.png"
-            width="60"
-            height="60"
-            alt="Digital Up"
-        /></a>
-        <nav class="header-nav">
-          <ul class="header-menu">
-            <li class="header-menu--item"><a href="#news">Новости</a></li>
-            <li class="header-menu--item"><a href="#about">О школе</a></li>
-            <li class="header-menu--item"><a href="#team">Команда</a></li>
-            <li class="header-menu--item"><a href="#programs">Программы</a></li>
-            <li class="header-menu--item"><a href="#partners">Партнеры</a></li>
-            <li class="header-menu--item"><a href="#footer">Контакты</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main class="main">
-      <section class="section main-section" id="main">
-        <div class="container main-container">
-          <div class="main-content">
-            <div class="main-logos">
-              <img
-                src="./images/logos/mincif.svg"
-                height="40"
-                alt="Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации"
-                title="Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации"
-              />
-              <img
-                src="./images/logos/prior2030.svg"
-                height="40"
-                alt="Приоритет 2030"
-                title="Приоритет 2030"
-              />
-              <img
-                src="./images/logos/footer-asu.svg"
-                width="40"
-                height="40"
-                alt="Алтайский государственный университет"
-                title="Алтайский государственный университет"
-              />
-            </div>
-            <h1 class="main-title">
-              Школа развития цифровых компетенций «Digital Up»
-              <small>(Цифровая кафедра АлтГУ)</small>
-            </h1>
-            <p class="main-subtitle">
-              Обучение в Digital Up — возможность получить ИТ-квалификацию
-              бесплатно!
-            </p>
-            <a href="#" class="button main-button">Хочу обучаться</a>
-          </div>
-          <div class="main-image">
-            <lottie-player
-              class="image"
-              src="./anims/heading.json"
-              background="transparent"
-              speed="1"
-              loop
-              autoplay
-            ></lottie-player>
-          </div>
-        </div>
-        <div class="container numbers-container" id="numbers">
-          <h2 class="title numbers-title">Цифровая кафедра сегодня</h2>
-          <div class="numbers-wrapper">
-            <div class="number-item">
-              <span class="number av" data-value="8" data-duration="400"
-                >8</span
-              >
-              <p class="numbers-description">
-                Программ профессиональной переподготовки
-              </p>
-            </div>
-            <div class="number-item">
-              <span class="number av" data-value="18" data-duration="600"
-                >18</span
-              >
-              <p class="numbers-description">
-                Квалифицированных преподавателей
-              </p>
-            </div>
-            <div class="number-item">
-              <span class="number av" data-value="10" data-duration="800"
-                >10</span
-              >
-              <p class="numbers-description">Крупных ИТ-компаний</p>
-            </div>
-            <div class="number-item">
-              <span class="number av" data-value="1125" data-duration="1000"
-                >1125</span
-              >
-              <p class="numbers-description">Обучающихся</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section section--light news-section" id="news">
-        <div class="container news-container">
-          <h2 class="title news-title">Новости и объявления</h2>
-          <div class="news-wrapper">
-            <a href="#" class="news-item" style="background-image: url('./images/main-section.svg');">
-              <h3 class="news-item--title">Какой-то заголовок</h3>
-              <span class="news-item--date">14.12.2022</span>
-            </a>
-            <a href="#" class="news-item" style="background-image: url('./images/main-section.svg');">
-              <h3 class="news-item--title">Какой-то заголовок</h3>
-              <span class="news-item--date">14.12.2022</span>
-            </a>
-            <a href="#" class="news-item" style="background-image: url('./images/main-section.svg');">
-              <h3 class="news-item--title">Какой-то заголовок</h3>
-              <span class="news-item--date">14.12.2022</span>
-            </a>
-            <a href="#" class="news-item" style="background-image: url('./images/main-section.svg');">
-              <h3 class="news-item--title">Какой-то заголовок</h3>
-              <span class="news-item--date">14.12.2022</span>
-            </a>
-            <a href="#" class="news-item" style="background-image: url('./images/main-section.svg');">
-              <h3 class="news-item--title">Какой-то заголовок</h3>
-              <span class="news-item--date">14.12.2022</span>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="section about-section" id="about">
-        <div class="container about-container">
-          <h2 class="title about-title">О школе</h2>
-          <div class="about-wrapper">
-            <div class="about-item">
-              <lottie-player
-                class="about-icon image"
-                src="./anims/about1.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
-              <p class="about-text">
-                Цифровая кафедра создана в АлтГУ с целью предоставления всем
-                студентам очной и очно-заочной форм обучения возможности
-                получения на бесплатной основе дополнительной ИТ-квалификации,
-                востребованной на рынке труда
-              </p>
-              <span class="about-number"> 01 </span>
-            </div>
-            <div class="about-item">
-              <lottie-player
-                class="about-icon image"
-                src="./anims/about2.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
-              <p class="about-text">
-                В Школе предусмотрены программы профессиональной переподготовки
-                для студентов, обучающихся по профильным ИТ-направлениям и для
-                студентов, чья будущая специальность не относится к ИТ-сфере. Вы
-                сами выбираете программу, исходя из собственных интересов и
-                уровня подготовки.
-              </p>
-              <span class="about-number"> 02 </span>
-            </div>
-            <div class="about-item">
-              <lottie-player
-                class="about-icon image"
-                src="./anims/about3.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
-              <p class="about-text">
-                В рамках обучения Вам будет предоставлена возможность пройти
-                стажировку в крупной компании реального сектора экономки и
-                создать собственный ИТ-проект для решения актуальных задач
-                будущей профессиональной деятельности.
-              </p>
-              <span class="about-number"> 03 </span>
-            </div>
-            <div class="about-item">
-              <lottie-player
-                class="about-icon image"
-                src="./anims/about4.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></lottie-player>
-              <p class="about-text">
-                После успешного прохождения всех контрольных точек по программе
-                и защиты проекта по окончании обучения вместе с дипломом о
-                высшем образовании Вы получите диплом о профессиональной
-                переподготовке.
-              </p>
-              <span class="about-number"> 04 </span>
-            </div>
-          </div>
+						<details class="faq-item">
+							<summary class="faq-summary">
+								Какие направления подготовки являются
+								профильными ИТ-направлениями?
+							</summary>
+							<div class="faq-answer">
+								<p>
+									Полный список профильных ИТ-направлений
+									доступен по
+									<a href="#">ссылке</a>.
+								</p>
+							</div>
+						</details>
+						<details class="faq-item">
+							<summary class="faq-summary">
+								Что такое ассесмент?
+							</summary>
+							<div class="faq-answer">
+								<p>
+									В ходе обучения студентам предстоит пройти
+									комплексную независимую оценку
+									сформированности компетенций на платформе
+									Университета Иннополис с помощью тестовых и
+									кейс-заданий. Комплексная оценка проводится
+									в три этапа и включает в себя входной,
+									промежуточный и итоговый ассесмент.
+								</p>
+								<p>
+									Входной ассесмент позволит оценить знания
+									каждого студента «на старте». Промежуточный
+									представляет собой оценку цифровых
+									компетенций по итогам освоения половины
+									программы. Итоговый ассесмент покажет
+									уровень сформированности компетенций в
+									результате обучения по программе.
+								</p>
+							</div>
+						</details>
+					</div>
+				</div>
+			</section>
+			<section class="section team-section" id="team">
+				<div class="container team-container">
+					<h2 class="title team-title">Команда</h2>
+					<div class="swiper team-swiper">
+						<div class="swiper-wrapper team-wrapper">
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/zh.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Жданова Евгения Анатольевна
+								</h3>
+								<p class="team-description">
+									Первый проректор по УР
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/makar.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Макаров Сергей Викторович
+								</h3>
+								<p class="team-description">
+									Директор института цифровых технологий,
+									электроники и физики
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/kolb.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Колбунова Марина Валерьевна
+								</h3>
+								<p class="team-description">
+									Начальник управления мониторинга качества и
+									образовательных инициатив
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/mezh.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">Межов Степан Игоревич</h3>
+								<p class="team-description">
+									Директор международного института экономики,
+									менеджмента и информационных систем
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/krot.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Кротова Ольга Сергеевна
+								</h3>
+								<p class="team-description">
+									Руководитель Школы развития цифровых
+									компетенций «Digital Up»
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/nehv.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Нехвядович Лариса Ивановна
+								</h3>
+								<p class="team-description">
+									Директор института гуманитарных наук
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/zhur.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Журавлев Евгений Владимирович
+								</h3>
+								<p class="team-description">
+									Директор института математики и
+									информационных технологий
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/reva.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">Рева Дмитрий Павлович</h3>
+								<p class="team-description">
+									Директор Рубцовского института (филиала)
+									АлтГУ
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/kozl.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">Козлов Денис Юрьевич</h3>
+								<p class="team-description">
+									Заведующий кафедрой информатики
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/manic.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Маничева Анастасия Станиславовна
+								</h3>
+								<p class="team-description">
+									Доцент кафедры теоретической кибернетики и
+									прикладной математики
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/mikh.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Михеева Татьяна Викторовна
+								</h3>
+								<p class="team-description">
+									Доцент кафедры информатики
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/vdov.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Вдовкина Елена Геннадьевна
+								</h3>
+								<p class="team-description">
+									Доцент кафедры цифровых технологий и
+									бизнес-аналитики
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/kalach.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Калачев Александр Викторович
+								</h3>
+								<p class="team-description">
+									Доцент кафедры вычислительной техники и
+									электроники
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/komar.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Комарова Ольга Сергеевна
+								</h3>
+								<p class="team-description">
+									Доцент кафедры культурологии и дизайна
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/shelga.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Шелюгина Ольга Александровна
+								</h3>
+								<p class="team-description">
+									Доцент кафедры культурологии и дизайна
+								</p>
+							</div>
+							<div class="swiper-slide team-item" tabindex="0">
+								<img
+									width="250"
+									height="250"
+									loading="lazy"
+									src="./images/team/kirib.jpg"
+									alt=""
+									class="team-photo"
+								/>
+								<h3 class="team-name">
+									Кирибаев Естай Иержанович
+								</h3>
+								<p class="team-description">
+									Старший преподаватель кафедры математики и
+									прикладной информатики Рубцовского института
+									(филиала) АлтГУ
+								</p>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-navigation">
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section
+				class="section section section--light programs-section"
+				id="programs"
+			>
+				<div class="container programs-container">
+					<h2 class="title programs-title">Программы обучения</h2>
+					<div class="programs-heading">
+						<h3>Программы для обучающихся на ИТ-направлениях</h3>
+						<h3>Программы для обучающихся на не ИТ-направлениях</h3>
+					</div>
+					<div class="programs-wrapper">
+						<div class="programs-divider"></div>
+						<ul class="programs-bar">
+							<li class="programs-item r">
+								<a class="program" href="#">
+									Основы frontend-разработки и проектирования
+									web-приложений
+								</a>
+								<div class="programs-circle"></div>
+							</li>
+							<li class="programs-item l">
+								<a class="program" href="#">
+									Технологии Data Science и AI-разработка
+								</a>
+								<div class="programs-circle"></div>
+							</li>
+							<li class="programs-item r">
+								<a class="program" href="#">
+									Разработка бизнес-приложений на платформе
+									1С: Предприятие
+								</a>
+								<div class="programs-circle"></div>
+							</li>
+							<li class="programs-item l">
+								<a class="program" href="#">
+									Разработка системы управления предприятием
+									на базе 1С: ERP
+								</a>
+								<div class="programs-circle"></div>
+							</li>
+							<li class="programs-item r">
+								<a class="program" href="#">
+									Основы технологий хранения, обработки и
+									анализа данных
+								</a>
+								<div class="programs-circle"></div>
+							</li>
+							<li class="programs-item l">
+								<a class="program" href="#">
+									Программирование многоядерных процессоров
+								</a>
+								<div class="programs-circle"></div>
+							</li>
+							<li class="programs-item r">
+								<a class="program" href="#">
+									Прикладной анализ данных на Python
+								</a>
+								<div class="programs-circle"></div>
+							</li>
+							<li class="programs-item r">
+								<a class="program" href="#">
+									Основы созданий информационных систем и
+									Project Management
+								</a>
+								<div class="programs-circle"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 
-          <div class="about-video">
-            <iframe
-              src="https://vk.com/video_ext.php?oid=-127455995&id=456239357&hash=667ec1973c498a55&hd=2"
-              width="853"
-              height="480"
-              allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
-              frameborder="0"
-              allowfullscreen
-              loading="lazy"
-              title="Digital Up - школа развития цифровых компетенций"
-            ></iframe>
-          </div>
-        </div>
-      </section>
-      <section class="section section--light faq-section" id="faq">
-        <div class="container faq-container">
-          <h2 class="title numbers-title">Часто задаваемые вопросы</h2>
-          <div class="faq-wrapper">
-            <details class="faq-item">
-              <summary class="faq-summary">
-                Кто может обучаться в Школе развития цифровых компетенций
-                «Digital Up»?
-              </summary>
-              <div class="faq-answer">
-                <ul>
-                  <li>
-                    Студенты 3-го и 4-го курсов бакалавриата, 4-го и 5-го курса
-                    специалитета любых направлений подготовки, обучающиеся по
-                    очной и очно-заочной форме
-                  </li>
-                  <li>
-                    Магистранты 2-го курса, обучающиеся на образовательных
-                    программах, не связанным с ИТ, по очной и очно-заочной форме
-                    обучения.
-                  </li>
-                </ul>
-              </div>
-            </details>
-            <details class="faq-item">
-              <summary class="faq-summary">
-                Сколько длится обучение и какая трудоёмкость?
-              </summary>
-              <div class="faq-answer">
-                <p>Обучение длится 9 месяцев, объем программ 252 ч.</p>
-              </div>
-            </details>
-            <details class="faq-item">
-              <summary class="faq-summary">
-                Могу ли я обучаться сразу на двух программах?
-              </summary>
-              <div class="faq-answer">
-                <p>Каждый студент может выбрать только одну программу.</p>
-              </div>
-            </details>
-            <details class="faq-item">
-              <summary class="faq-summary">Когда стартует новый набор?</summary>
-              <div class="faq-answer">
-                <p>
-                  Набор на 2023 год стартует в июне 2023 года, а обучение
-                  начнется в сентябре 2023 года.
-                </p>
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-summary">
-                Какие направления подготовки являются профильными
-                ИТ-направлениями?
-              </summary>
-              <div class="faq-answer">
-                <p>
-                  Полный список профильных ИТ-направлений доступен по
-                  <a href="#">ссылке</a>.
-                </p>
-              </div>
-            </details>
-            <details class="faq-item">
-              <summary class="faq-summary">Что такое ассесмент?</summary>
-              <div class="faq-answer">
-                <p>
-                  В ходе обучения студентам предстоит пройти комплексную
-                  независимую оценку сформированности компетенций на платформе
-                  Университета Иннополис с помощью тестовых и кейс-заданий.
-                  Комплексная оценка проводится в три этапа и включает в себя
-                  входной, промежуточный и итоговый ассесмент.
-                </p>
-                <p>
-                  Входной ассесмент позволит оценить знания каждого студента «на
-                  старте». Промежуточный представляет собой оценку цифровых
-                  компетенций по итогам освоения половины программы. Итоговый
-                  ассесмент покажет уровень сформированности компетенций в
-                  результате обучения по программе.
-                </p>
-              </div>
-            </details>
-          </div>
-        </div>
-      </section>
-      <section class="section team-section" id="team">
-        <div class="container team-container">
-          <h2 class="title team-title">Команда</h2>
-          <div class="swiper team-swiper">
-            <div class="swiper-wrapper team-wrapper">
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/zh.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Жданова Евгения Анатольевна</h3>
-                <p class="team-description">Первый проректор по УР</p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/makar.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Макаров Сергей Викторович</h3>
-                <p class="team-description">
-                  Директор института цифровых технологий, электроники и физики
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/kolb.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Колбунова Марина Валерьевна</h3>
-                <p class="team-description">
-                  Начальник управления мониторинга качества и образовательных
-                  инициатив
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/mezh.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Межов Степан Игоревич</h3>
-                <p class="team-description">
-                  Директор международного института экономики, менеджмента и
-                  информационных систем
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/krot.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Кротова Ольга Сергеевна</h3>
-                <p class="team-description">
-                  Руководитель Школы развития цифровых компетенций «Digital Up»
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/nehv.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Нехвядович Лариса Ивановна</h3>
-                <p class="team-description">
-                  Директор института гуманитарных наук
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/zhur.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Журавлев Евгений Владимирович</h3>
-                <p class="team-description">
-                  Директор института математики и информационных технологий
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/reva.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Рева Дмитрий Павлович</h3>
-                <p class="team-description">
-                  Директор Рубцовского института (филиала) АлтГУ
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/kozl.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Козлов Денис Юрьевич</h3>
-                <p class="team-description">Заведующий кафедрой информатики</p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/manic.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Маничева Анастасия Станиславовна</h3>
-                <p class="team-description">
-                  Доцент кафедры теоретической кибернетики и прикладной
-                  математики
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/mikh.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Михеева Татьяна Викторовна</h3>
-                <p class="team-description">Доцент кафедры информатики</p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/vdov.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Вдовкина Елена Геннадьевна</h3>
-                <p class="team-description">
-                  Доцент кафедры цифровых технологий и бизнес-аналитики
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/kalach.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Калачев Александр Викторович</h3>
-                <p class="team-description">
-                  Доцент кафедры вычислительной техники и электроники
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/komar.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Комарова Ольга Сергеевна</h3>
-                <p class="team-description">
-                  Доцент кафедры культурологии и дизайна
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/shelga.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Шелюгина Ольга Александровна</h3>
-                <p class="team-description">
-                  Доцент кафедры культурологии и дизайна
-                </p>
-              </div>
-              <div class="swiper-slide team-item" tabindex="0">
-                <img
-                  width="250"
-                  height="250"
-                  loading="lazy"
-                  src="./images/team/kirib.jpg"
-                  alt=""
-                  class="team-photo"
-                />
-                <h3 class="team-name">Кирибаев Естай Иержанович</h3>
-                <p class="team-description">
-                  Старший преподаватель кафедры математики и прикладной
-                  информатики Рубцовского института (филиала) АлтГУ
-                </p>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-navigation">
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        class="section section section--light programs-section"
-        id="programs"
-      >
-        <div class="container programs-container">
-          <h2 class="title programs-title">Программы обучения</h2>
-          <div class="programs-heading">
-            <h3>Программы для обучающихся на ИТ-направлениях</h3>
-            <h3>Программы для обучающихся на не ИТ-направлениях</h3>
-          </div>
-          <div class="programs-wrapper">
-            <div class="programs-divider"></div>
-            <ul class="programs-bar">
-              <li class="programs-item r">
-                <a class="program" href="#">
-                  Основы frontend-разработки и проектирования web-приложений
-                </a>
-                <div class="programs-circle"></div>
-              </li>
-              <li class="programs-item l">
-                <a class="program" href="#">
-                  Технологии Data Science и AI-разработка
-                </a>
-                <div class="programs-circle"></div>
-              </li>
-              <li class="programs-item r">
-                <a class="program" href="#">
-                  Разработка бизнес-приложений на платформе 1С: Предприятие
-                </a>
-                <div class="programs-circle"></div>
-              </li>
-              <li class="programs-item l">
-                <a class="program" href="#">
-                  Разработка системы управления предприятием на базе 1С: ERP
-                </a>
-                <div class="programs-circle"></div>
-              </li>
-              <li class="programs-item r">
-                <a class="program" href="#">
-                  Основы технологий хранения, обработки и анализа данных
-                </a>
-                <div class="programs-circle"></div>
-              </li>
-              <li class="programs-item l">
-                <a class="program" href="#">
-                  Программирование многоядерных процессоров
-                </a>
-                <div class="programs-circle"></div>
-              </li>
-              <li class="programs-item r">
-                <a class="program" href="#">
-                  Прикладной анализ данных на Python
-                </a>
-                <div class="programs-circle"></div>
-              </li>
-              <li class="programs-item r">
-                <a class="program" href="#">
-                  Основы созданий информационных систем и Project Management
-                </a>
-                <div class="programs-circle"></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--light partners-section" id="partners">
-        <div id="partnersInfoWrapper">
-          <h2 class="partners-info--title">О компании</h2>
-          <p id="partnersInfo"></p>
-          <button id="partnersCloseBtn">✕</button>
-        </div>
-        <div class="container partners-container">
-          <h2 class="title partners-title">Партнеры</h2>
-          <div class="partners-wrapper">
-            <img
-              src="./images/partners/sitronics.svg"
-              loading="lazy"
-              width="200"
-              height="150"
-              alt="Sitronics Group"
-              class="partners-item"
-              data-description="Sitronics Group —  многопрофильная российская ИТ-компания с обширным опытом в цифровизации стратегических отраслей экономики и реализации крупномасштабных проектов для бизнеса и государства"
-            />
-            <img
-              src="./images/partners/estesis.png"
-              loading="lazy"
-              width="200"
-              height="150"
-              alt="Estesis.tech"
-              class="partners-item"
-              data-description="
+			<section
+				class="section section--light partners-section"
+				id="partners"
+			>
+				<div id="partnersInfoWrapper">
+					<h2 class="partners-info--title">О компании</h2>
+					<p id="partnersInfo"></p>
+					<button id="partnersCloseBtn">✕</button>
+				</div>
+				<div class="container partners-container">
+					<h2 class="title partners-title">Партнеры</h2>
+					<div class="partners-wrapper">
+						<img
+							src="./images/partners/sitronics.svg"
+							loading="lazy"
+							width="200"
+							height="150"
+							alt="Sitronics Group"
+							class="partners-item"
+							data-description="Sitronics Group —  многопрофильная российская ИТ-компания с обширным опытом в цифровизации стратегических отраслей экономики и реализации крупномасштабных проектов для бизнеса и государства"
+						/>
+						<img
+							src="./images/partners/estesis.png"
+							loading="lazy"
+							width="200"
+							height="150"
+							alt="Estesis.tech"
+							class="partners-item"
+							data-description="
               Estesis.tech — это стремительно развивающаяся ИТ-компания, специализирующаяся на анализе данных и разработке систем искусственного интеллекта для бизнеса. В 2018 году команда Эстесис одержала победу в конкурсе Инновационных проектов НТИ-2018 с решением по верификации пользователей с помощью голосовой биометрии. Решение по верификации дикторов по коротким фразам стало одним из лучших в международном профессиональном конкурсе в области анализа данных SdSV Challenge 2020, организованном ведущими университетами мира.
               "
-            />
-            <img
-              src="./images/partners/solarlab.svg"
-              loading="lazy"
-              width="200"
-              height="150"
-              alt="SolarLab"
-              class="partners-item"
-              data-description="Проекты SolarLab – это преимущественно решения в области организации процесса закупок и тендерных процедур, а также финансовых технологий.
+						/>
+						<img
+							src="./images/partners/solarlab.svg"
+							loading="lazy"
+							width="200"
+							height="150"
+							alt="SolarLab"
+							class="partners-item"
+							data-description="Проекты SolarLab – это преимущественно решения в области организации процесса закупок и тендерных процедур, а также финансовых технологий.
               В своей работе мы пользуемся как решениями компании Microsoft (многие наши разработчики являются сертифицированными Microsoft специалистами), так и открытыми решениями в области веб и мобильной разработки, и систем управления данными."
-            />
-            <img
-              src="./images/partners/loginom.svg"
-              loading="lazy"
-              width="200"
-              height="150"
-              alt="Loginom"
-              class="partners-item"
-              data-description="Low-code платформа Loginom делает продвинутую аналитику доступной бизнес-пользователям. Визуальный конструктор позволяет настроить все процессы анализа: интеграция, подготовка данных, моделирование, визуализация. Loginom сокращает время от тестирования гипотезы до создания работающего бизнес-процесса."
-            />
-            <img
-              src="./images/partners/csort.png"
-              loading="lazy"
-              width="200"
-              height="150"
-              alt="CSort"
-              class="partners-item"
-              data-description="СSORT — компания международного уровня, производящая сортировочное оборудование — фотосепараторы. Сортировка производится на основе анализа изображения продукта и свойств материала. Фотосепараторы используются в пищевой промышленности, переработке мусора и других областях."
-            />
-            <img
-              src="./images/partners/freematiq.svg"
-              loading="lazy"
-              width="200"
-              height="150"
-              alt="Freematiq"
-              class="partners-item"
-              data-description="Freematiq — команда профессиональных разработчиков из Сибири. Специализируется на разработке уникальных программ для бизнеса: Личные кабинеты для юридических и физических лиц; Сервисы для приема и обработки платежей; Системы электронных денег; Учетные системы для внешнего и внутреннего использования; Мобильные приложения."
-            />
-            <img
-              src="./images/partners/galex.png"
-              loading="lazy"
-              width="200"
-              height="150"
-              alt="1C Galex"
-              class="partners-item"
-              data-description="«Галэкс» - один из крупнейших системных интеграторов России. Входит в 25 лучших региональных ИТ-компаний России по версии издания CRN. «Галэкс» выполняет комплексные проекты под ключ: от обследования и проектирования до инсталляции и построения инженерной и ИТ-инфраструктуры. Компания занимает 13 место в рейтинге «Крупнейшие поставщики в области комплексных проектов построения инфраструктуры зданий и сооружений» по версии агентства CNews Analytics."
-            />
-            <img
-              src="./images/partners/postgres.svg"
-              loading="lazy"
-              width="200"
-              height="150"
-              alt="Postgres Pro"
-              class="partners-item"
-              data-description="Postgres Professional – российская компания, разработчик систем управления базами данных. Компания была создана в 2015 году ведущими российскими разработчиками и энтузиастами PostgreSQL. Система управления базами данных PostgreSQL с открытым кодом и свободной лицензией поддерживается международным сообществом разработчиков более 24 лет, и вклад российских разработчиков в её разработку существенен и признан международным сообществом."
-            />
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer id="footer" class="footer">
-      <div class="container footer-container">
-        <div class="footer-logo">
-          <img
-            src="./images/logos/dulogo_w.png"
-            width="120"
-            height="120"
-            loading="lazy"
-            alt="Digital Up логотип"
-          />
-          <span
-            >Школа развития цифровых компетенций «Digital Up» <br />
-            (Цифровая кафедра АлтГУ)</span
-          >
-        </div>
-        <div class="footer-sponsors">
-          <img
-            src="./images/logos/mincif.svg"
-            height="70"
-            alt="Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации"
-            title="Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации"
-          />
-          <img
-            src="./images/logos/footer-prior.png"
-            height="40"
-            alt="Иннополис"
-            title="Иннополис"
-          />
-          <img
-            src="./images/logos/footer-asu.svg"
-            width="150"
-            height="50"
-            alt="Алтайский государственный университет 1973"
-            title="Алтайский государственный университет 1973"
-          />
-        </div>
-        <div class="footer-contacts">
-          <h2 class="footer-heading">Контакты</h2>
-          <div class="footer-contacts--wrapper">
-            <ul class="footer-contacts--list">
-              <li class="footer-contacts--phone">
-                <a href="tel:+73852291240">+7 (3852) 291-240</a>
-              </li>
-              <li class="footer-contacts--email">
-                <a href="mailto:digitalup@mail.asu.ru">digitalup@mail.asu.ru</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-nav--wrapper">
-          <h2 class="footer-heading">Навигация</h2>
-          <nav class="footer-nav">
-            <ul class="footer-menu">
-              <li class="footer-menu--item"><a href="#news">Новости</a></li>
-              <li class="footer-menu--item"><a href="#about">О школе</a></li>
-              <li class="footer-menu--item"><a href="#team">Команда</a></li>
-              <li class="footer-menu--item">
-                <a href="#programs">Программы</a>
-              </li>
-              <li class="footer-menu--item">
-                <a href="#partners">Партнеры</a>
-              </li>
-              <li class="footer-menu--item"><a href="#footer">Контакты</a></li>
-            </ul>
-          </nav>
-        </div>
-        <small class="footer-asu"
-          >ФГБОУ ВО «Алтайский государственный университет» 656049, Барнаул, пр.
-          Ленина, 61</small
-        >
-      </div>
-    </footer>
-  </body>
+						/>
+						<img
+							src="./images/partners/loginom.svg"
+							loading="lazy"
+							width="200"
+							height="150"
+							alt="Loginom"
+							class="partners-item"
+							data-description="Low-code платформа Loginom делает продвинутую аналитику доступной бизнес-пользователям. Визуальный конструктор позволяет настроить все процессы анализа: интеграция, подготовка данных, моделирование, визуализация. Loginom сокращает время от тестирования гипотезы до создания работающего бизнес-процесса."
+						/>
+						<img
+							src="./images/partners/csort.png"
+							loading="lazy"
+							width="200"
+							height="150"
+							alt="CSort"
+							class="partners-item"
+							data-description="СSORT — компания международного уровня, производящая сортировочное оборудование — фотосепараторы. Сортировка производится на основе анализа изображения продукта и свойств материала. Фотосепараторы используются в пищевой промышленности, переработке мусора и других областях."
+						/>
+						<img
+							src="./images/partners/freematiq.svg"
+							loading="lazy"
+							width="200"
+							height="150"
+							alt="Freematiq"
+							class="partners-item"
+							data-description="Freematiq — команда профессиональных разработчиков из Сибири. Специализируется на разработке уникальных программ для бизнеса: Личные кабинеты для юридических и физических лиц; Сервисы для приема и обработки платежей; Системы электронных денег; Учетные системы для внешнего и внутреннего использования; Мобильные приложения."
+						/>
+						<img
+							src="./images/partners/galex.png"
+							loading="lazy"
+							width="200"
+							height="150"
+							alt="1C Galex"
+							class="partners-item"
+							data-description="«Галэкс» - один из крупнейших системных интеграторов России. Входит в 25 лучших региональных ИТ-компаний России по версии издания CRN. «Галэкс» выполняет комплексные проекты под ключ: от обследования и проектирования до инсталляции и построения инженерной и ИТ-инфраструктуры. Компания занимает 13 место в рейтинге «Крупнейшие поставщики в области комплексных проектов построения инфраструктуры зданий и сооружений» по версии агентства CNews Analytics."
+						/>
+						<img
+							src="./images/partners/postgres.svg"
+							loading="lazy"
+							width="200"
+							height="150"
+							alt="Postgres Pro"
+							class="partners-item"
+							data-description="Postgres Professional – российская компания, разработчик систем управления базами данных. Компания была создана в 2015 году ведущими российскими разработчиками и энтузиастами PostgreSQL. Система управления базами данных PostgreSQL с открытым кодом и свободной лицензией поддерживается международным сообществом разработчиков более 24 лет, и вклад российских разработчиков в её разработку существенен и признан международным сообществом."
+						/>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="footer" class="footer">
+			<div class="container footer-container">
+				<div class="footer-logo">
+					<img
+						src="./images/logos/dulogo_w.png"
+						width="120"
+						height="120"
+						loading="lazy"
+						alt="Digital Up логотип"
+					/>
+					<span
+						>Школа развития цифровых компетенций «Digital Up» <br />
+						(Цифровая кафедра АлтГУ)</span
+					>
+				</div>
+				<div class="footer-sponsors">
+					<img
+						src="./images/logos/mincif.svg"
+						height="70"
+						alt="Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации"
+						title="Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации"
+					/>
+					<img
+						src="./images/logos/footer-prior.png"
+						height="40"
+						alt="Иннополис"
+						title="Иннополис"
+					/>
+					<img
+						src="./images/logos/footer-asu.svg"
+						width="150"
+						height="50"
+						alt="Алтайский государственный университет 1973"
+						title="Алтайский государственный университет 1973"
+					/>
+				</div>
+				<div class="footer-contacts">
+					<h2 class="footer-heading">Контакты</h2>
+					<div class="footer-contacts--wrapper">
+						<ul class="footer-contacts--list">
+							<li class="footer-contacts--phone">
+								<a href="tel:+73852291240">+7 (3852) 291-240</a>
+							</li>
+							<li class="footer-contacts--email">
+								<a href="mailto:digitalup@mail.asu.ru"
+									>digitalup@mail.asu.ru</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-nav--wrapper">
+					<h2 class="footer-heading">Навигация</h2>
+					<nav class="footer-nav">
+						<ul class="footer-menu">
+							<li class="footer-menu--item">
+								<a href="#news">Новости</a>
+							</li>
+							<li class="footer-menu--item">
+								<a href="#about">О школе</a>
+							</li>
+							<li class="footer-menu--item">
+								<a href="#team">Команда</a>
+							</li>
+							<li class="footer-menu--item">
+								<a href="#programs">Программы</a>
+							</li>
+							<li class="footer-menu--item">
+								<a href="#partners">Партнеры</a>
+							</li>
+							<li class="footer-menu--item">
+								<a href="#footer">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<small class="footer-asu"
+					>ФГБОУ ВО «Алтайский государственный университет» 656049,
+					Барнаул, пр. Ленина, 61</small
+				>
+			</div>
+		</footer>
+	</body>
 </html>
