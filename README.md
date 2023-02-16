@@ -1,5 +1,14 @@
 # Мои работы
 
+* ## [«Digital Up» - Школа развития цифровых компетенций](https://digitalup.asu.ru/) (2023, CMS WordPress)
+![«Digital Up» - Школа развития цифровых компетенций](./thumbs/digitalUp.jpg "«Digital Up» - Школа развития цифровых компетенций")​
+
+* ## [Media.Hub](https://quetan.github.io/MediaHub/) (2022, CMS WordPress)
+![Media.Hub](./thumbs/MediaHub.jpg "Media.Hub")​
+
+* ## [Universum - Академия креативного образования](https://universum.asu.ru/) (2022, CMS WordPress)
+![Universum - Академия креативного образования](./thumbs/universum.jpg "Universum - Академия креативного образования")​
+
 * ## [КПК Сибирский Капитал](https://sibkap.ru/) (2021, CMS WordPress, React)
 ![КПК Сибирский Капитал](./thumbs/sibkap.jpg "КПК Сибирский Капитал")​
 
