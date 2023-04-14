@@ -26,6 +26,10 @@
 	--link-color: #3d7aa6;
 	--link-hover-color: #2c72a4;
 
+	/* Shadows */
+	--shadow: 1px 1px 3px 2px rgba(var(--black-rgb),.2),-1px -1px 3px 2px rgba(var(--white-rgb),.2),8px 8px 8px 2px rgba(var(--black-rgb),.1),-8px -8px 8px 2px rgba(var(--white-rgb),.1),15px 10px 10px 8px rgba(var(--black-rgb),.05),-15px -10px 10px 8px rgba(var(--white-rgb),.05);
+    --shadow-transition: 2px 2px 3px 1px rgba(var(--black-rgb),.3),-2px -2px 3px 1px rgba(var(--white-rgb),.3),5px 5px 6px 2px rgba(var(--black-rgb),.2),-5px -5px 6px 2px rgba(var(--white-rgb),.2);
+
 	scroll-behavior: smooth;
 }
 
@@ -192,11 +196,22 @@ iframe {
 	color: var(--black);
 }
 
-section {
+/* Section */
+.section {
 	min-height: 40vh;
 	width: 100%;
+	padding-top: calc(5 * var(--i));
+	padding-bottom: calc(7 * var(--i));
 }
-
+.section-title {
+	font-size: calc(var(--i) * 2);
+	text-align: center;
+	color: var(--black);
+	margin-bottom: calc(var(--i) * 2.5);
+	font-weight: 300;
+	letter-spacing: 0.02em;
+	line-height: 1.2;
+}
 /* Body */
 body {
 	margin: 0;
@@ -218,7 +233,7 @@ body {
 	gap: var(--gap);
 	z-index: 99;
 	background-color: rgba(255, 255, 255, 0.35);
-	padding: var(--gap);
+	padding: 10px var(--gap);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(3px) saturate(180%);
 	position: fixed;
@@ -251,7 +266,6 @@ body {
 }
 .header-navigation--item {
 	font-weight: 500;
-	/* font-family: var(--title-font); */
 	color: var(--black);
 	position: relative;
 	padding: 10px 0;
@@ -264,7 +278,6 @@ body {
 }
 
 /* Presentation section */
-
 .presentation-section {
 	background-color: #f5fff8;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%2359aea1' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2323a2aa' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%237cc0ad' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23239397' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2386b8bd' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23299387' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23afc9b1' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%232c938c' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23bdcfd3' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%232c7e65' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23f3e8c7' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23308684' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
@@ -336,5 +349,81 @@ body {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+}
+
+/* News */
+.news-grid {
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--gap);
+	grid-template-areas:             
+	"a a . ."            
+	"a a . .";
+}
+.news-article {
+	border-radius: 10px;
+	background-size: cover;
+	background-position: center;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	transition: all 0.15s ease-in;
+	box-shadow: var(--shadow);
+	position: relative;
+}
+.news-article::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 65%;
+	z-index: 1;
+	background: linear-gradient(180deg, transparent, var(--blue) 100%);
+}
+.news-article:hover {
+	transform: scale(1.01) translateY(-5px);
+	box-shadow: var(--shadow-transition);
+}
+.news-title {
+	z-index: 3;
+	position: absolute;
+	bottom: calc(var(--gap) / 1.5);
+	left: calc(var(--gap) / 2);
+	right: calc(var(--gap) / 2);
+	font-size: 16px;
+	color: var(--white);
+	margin: 0;
+	line-height: 1.3;
+}
+.news-article--main {
+	grid-area: a;
+}
+.news-article--main .news-title {
+	font-size: 1.5rem;
+	bottom: var(--gap);
+	left: var(--gap);
+	right: var(--gap);
+}
+.news-date {
+	position: absolute;
+	font-weight: 100;
+	letter-spacing: 0.04em;
+	line-height: 1;
+	font-size: 0.6em;
+	font-family: var(--title-font);
+	position: absolute;
+	top: calc(var(--gap) / 2);
+	right: calc(var(--gap) / 2);
+	background-color: var(--lblue);
+	padding: 5px 7px;
+	border-radius: 16px;
+	color: var(--white);
+	opacity: 0.85;
+	backdrop-filter: blur(3px);
+}
+.news-article--main .news-date {
+	font-size: 0.8em;
 }
 
