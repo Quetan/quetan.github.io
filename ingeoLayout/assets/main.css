@@ -313,6 +313,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 .presentation-container {
 	padding-bottom: 100px;
@@ -342,6 +343,15 @@ body {
 .presentation-subtitle,
 .presentation-description {
 	padding-left: 20px;
+}
+.presentation-logo {
+	position: absolute;
+	right: calc(8 * var(--i));
+	top: calc(35%);
+	transform: translateY(-50%);
+	width: auto;
+	height: 270px;
+	filter: hue-rotate(352deg);
 }
 .presentation-socials {
 	position: absolute;
