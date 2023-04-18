@@ -17,6 +17,7 @@
 	--black-rgb: 43, 46, 49;
 	--gray: #4d5357;
 	--highlight: #fff3cd;
+	--highlight-rgb: 255, 243, 205;
 	--accent: #5cb4a4;
 	--accentAlpha: rgba(92, 180, 164, .85);
 	--blue: #23a2aa;
@@ -318,7 +319,7 @@ body {
 	align-items: center;
 	position: relative;
 	overflow: hidden;
-	background: linear-gradient(-33deg, var(--white) 45%, var(--highlight) 100%);
+	background: linear-gradient(-33deg, var(--white) 45%, rgba(var(--highlight-rgb), 0.65) 100%);
 }
 .presentation-bg {
 	width: 100%;
@@ -335,8 +336,8 @@ body {
 	bottom: calc(15 * var(--i));
 }
 .presentation-logo img {
-	width: 260px;
-	height: 260px;
+	width: calc(10 * var(--i));
+	height: calc(10 * var(--i));
 	aspect-ratio: 1;
 }
 @keyframes mount1anim {
@@ -393,10 +394,10 @@ body {
 .moun4,
 .moun5,
 .moun6 {
-	animation-duration: 7s;
+	animation-duration: 8s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-	animation-timing-function: cubic-bezier(0.4, 0.41, 0.45, 0.94);
+	animation-timing-function: ease-in-out;
 }
 .moun1 {
 	animation-name: mount1anim;
