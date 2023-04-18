@@ -319,7 +319,6 @@ body {
 	position: relative;
 	overflow: hidden;
 	background: linear-gradient(-33deg, var(--white) 45%, var(--highlight) 100%);
-
 }
 .presentation-bg {
 	width: 100%;
@@ -333,7 +332,7 @@ body {
 	position: absolute;
 	z-index: 1;
 	right: calc(5.5 * var(--i));
-	bottom: calc(16.5 * var(--i));
+	bottom: calc(15 * var(--i));
 }
 .presentation-logo img {
 	width: 260px;
