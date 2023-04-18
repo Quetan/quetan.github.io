@@ -500,6 +500,7 @@ body {
 	transition: all 0.15s ease-in;
 	box-shadow: var(--shadow);
 	position: relative;
+	filter: grayscale(0.1) brightness(0.95) invert(0.05);
 }
 .news-article::after {
 	content: '';
@@ -516,6 +517,7 @@ body {
 .news-article:focus {
 	transform: scale(1.01) translateY(-5px);
 	box-shadow: var(--shadow-transition);
+	filter: contrast(1.2);
 }
 .news-title {
 	z-index: 3;
@@ -530,6 +532,7 @@ body {
 }
 .news-article--main {
 	grid-area: a;
+	filter: none;
 }
 .news-article--main .news-title {
 	font-size: 1.5rem;
