@@ -425,7 +425,7 @@ body {
 .presentation-title {
 	font-size: 4.2rem;
 	letter-spacing: -0.02em;
-	margin-bottom: 0.9rem;
+	margin-bottom: 1.4rem;
 	width: 60%;
 	background-color: var(--blue);
 	padding-top: 0.2em;
@@ -472,7 +472,7 @@ body {
 	position: relative;
 	width: 48px;
 	height: 48px;
-	transition: all 0.3s ease;
+	transition: all 0.1s ease;
 }
 .presentation-socials--item:hover {
 	border-width: 3px;
