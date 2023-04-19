@@ -295,6 +295,7 @@ body {
   background-color: var(--white);
   background-size: cover;
   background-position: center;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -477,17 +478,16 @@ body {
   z-index: 1;
 }
 .presentation-title {
-  font-size: 4.2rem;
+  font-size: 3.9rem;
   letter-spacing: -0.02em;
   margin-bottom: 1.4rem;
-  width: 60%;
+  width: max-content;
   background-color: var(--blue);
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  text-align: center;
+  padding: calc(0.2 * var(--i)) calc(0.45 * var(--i));
   color: var(--white);
   text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.15);
   line-height: 1.1;
+  font-size: calc(2.13 * var(--i));
 }
 .presentation-subtitle {
   font-size: 1.3rem;
@@ -501,10 +501,6 @@ body {
   line-height: 1.9;
   font-size: 0.7em;
   color: var(--lblue);
-}
-.presentation-subtitle,
-.presentation-description {
-  padding-left: 20px;
 }
 .presentation-socials {
   position: absolute;
