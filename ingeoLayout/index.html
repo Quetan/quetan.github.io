@@ -134,6 +134,7 @@
         <div class="presentation-socials">
           <a href="https://vk.com/geoasu" class="presentation-socials--item">
             <svg
+              aria-label="Вконтакте"
               width="24"
               height="24"
               style="enable-background: new 0 0 64 64"
@@ -156,6 +157,7 @@
             class="presentation-socials--item"
           >
             <svg
+              aria-label="Телеграм"
               width="24"
               height="24"
               id="telegram"
@@ -176,6 +178,7 @@
             class="presentation-socials--item"
           >
             <svg
+              aria-label="YouTube"
               width="24"
               height="24"
               enable-background="new 0 0 48 48"
@@ -200,18 +203,24 @@
           <h2 class="section-title">Объявления</h2>
           <div class="announces-carousel--wrapper">
             <div class="announces-carousel">
-              <a href="#" class="announces-article">
+              <!-- Announce item -->
+              <a href="#" class="announces-article" aria-label="Объявление">
                 <img
                   src="https://placehold.co/600x400"
                   class="announces-thumbnail"
-                  alt="Описание объявления"
+                  alt="Описание изображения объявления"
                 />
-                <span class="announces-date">14.04.2023</span>
+                <span
+                  class="announces-date"
+                  aria-label="Дата публикации объявления"
+                  >14.04.2023</span
+                >
                 <h1 class="announces-title">
                   Далеко-далеко за словесными горами в стране гласных и
                   согласных живут рыбные тексты.
                 </h1>
               </a>
+              <!--  -->
               <a href="#" class="announces-article">
                 <img
                   src="https://placehold.co/600x400"
@@ -377,6 +386,7 @@
         <div class="container news-container">
           <h2 class="section-title">Новости</h2>
           <div class="news-grid">
+            <!-- News item -->
             <article
               tabindex="0"
               class="news-article news-article--main"
@@ -392,6 +402,7 @@
                 >14.04.2023</span
               >
             </article>
+            <!--  -->
             <article
               tabindex="0"
               class="news-article"
@@ -449,9 +460,77 @@
           >
         </div>
       </section>
-      <section class="section about-section"> 
+      <section class="section about-section">
         <div class="container about-container">
           <h2 class="section-title">Об институте</h2>
+          <div class="about-wrapper">
+            <p class="about-description">
+              <strong>Институт географии</strong> – ведущий центр
+              географического образования и исследований в сфере наук о Земле. В
+              институте реализуются 7 направлений подготовки, а также совместные
+              образовательные программы с университетами стран Шанхайской
+              организации сотрудничества и университетами Германии. В составе
+              института – четыре кафедры, каждая из которых является ведущим
+              центром в своей направленности, который объединяет уникальных
+              специалистов, экспертов-практиков, научные организации, органы
+              государственной власти и представителей бизнеса, что открывает
+              безграничные возможности для построения карьеры в любом из
+              направлений.
+            </p>
+            <ul class="about-items">
+              <li class="about-item">
+                <span>
+                  Сегодня Институт географии объединяет более 1000 студентов. Мы
+                  являемся лидерами по бюджетному набору в университете.
+                </span>
+              </li>
+              <li class="about-item">
+                <span>
+                  Помимо классического обучения студенты института участвуют в
+                  грантах и стажировках, обучаются по программам двойных
+                  дипломов и сетевым образовательным программам.
+                </span>
+              </li>
+              <li class="about-item">
+                <span>
+                  Только наш институт проводит практики студентов, где у них
+                  есть возможность совершать увлекательные путешествия не только
+                  по территории нашего региона, но и разным уголкам России.
+                </span>
+              </li>
+              <li class="about-item">
+                <span>
+                  Преподаватели и студенты активно участвуют в научных и
+                  практических исследованиях, используя современное
+                  оборудование, приборы и программное обеспечение.
+                </span>
+              </li>
+            </ul>
+            <figure>
+              <blockquote class="about-quote">
+                <img
+                  class="about-quote--img"
+                  src="./assets/images/headt.jpg"
+                  alt="Татьяна Викторовна Байкалова"
+                />
+                <div class="about-quote--text">
+                  <p>
+                    Дорогой абитуриент! Приветствуем тебя в институте географии
+                    Алтайского государственного университета!
+                  </p>
+                  <p>
+                    География не имеет границ и помогает нам узнать окружающий
+                    нас мир во всём его многообразии. Выбирая Институт
+                    географии, ты обязательно покоришь все вершины!
+                  </p>
+                  <figcaption class="about-quote--caption">
+                    Татьяна Викторовна Байкалова - директор института географии,
+                    кандидат географических наук
+                  </figcaption>
+                </div>
+              </blockquote>
+            </figure>
+          </div>
         </div>
       </section>
     </main>
