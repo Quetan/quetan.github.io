@@ -492,9 +492,13 @@ body {
 .presentation-subtitle {
   font-size: 1.3rem;
   letter-spacing: 0.06em;
-  color: var(--lblue);
+  color: var(--white);
   display: block;
   margin-bottom: 1rem;
+  width: max-content;
+  padding: calc(0.2 * var(--i)) calc(0.45 * var(--i));
+  background-color: var(--accentAlpha);
+  font-size: calc(0.8 * var(--i));
 }
 .presentation-description {
   width: 40%;
