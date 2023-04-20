@@ -763,7 +763,11 @@ body {
 
 /* About section */
 .about-description {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+  line-height: 1.8;
+}
+.about-description::first-letter {
+  padding-left: 2rem;
 }
 .about-items {
   display: flex;
@@ -779,7 +783,7 @@ body {
   padding: 3rem;
   color: var(--white);
   background-color: var(--green);
-  background: linear-gradient(76deg, var(--accent) 0%, var(--green) 100%);
+  background: linear-gradient(76deg, var(--accent) 0%, var(--blue) 100%);
   width: 25%;
   border-radius: 27% 73% 22% 78% / 67% 18% 62% 33%;
   display: flex;
@@ -821,7 +825,7 @@ body {
   font-size: 0.85rem;
   position: relative;
   line-height: 1.5;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   margin: 0;
   text-align: center;
   font-family: var(--title-font);
@@ -839,6 +843,13 @@ body {
   padding-bottom: 60px;
   border: 5px solid var(--lgray);
   box-shadow: (var(--shadow));
+  transition: transform 0.15s ease-in;
+}
+.about-quote:hover {
+  transform: translateY(-3px);
+}
+.about-quote:hover .about-quote--img {
+  transform: scale(1.05);
 }
 .about-quote::after {
   content: "“";
@@ -863,6 +874,7 @@ body {
 }
 .about-quote--img {
   border-radius: 10px;
+  transition: transform 0.15s ease-in;
 }
 .about-quote p {
   margin-bottom: 0.4rem;
@@ -870,11 +882,12 @@ body {
   line-height: 1.95;
   letter-spacing: -0.04em;
 }
-.about-quote figcaption {
+.about-quote--caption {
   font-size: 0.8rem;
   font-style: normal;
   margin-top: 1.6rem;
   font-family: var(--title-font);
-  letter-spacing: 0.03em;
+  letter-spacing: -0.03em;
   line-height: 1.5;
+  color: var(--gray);
 }
