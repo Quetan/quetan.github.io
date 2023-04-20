@@ -523,7 +523,7 @@ body {
 }
 .presentation-socials {
   position: absolute;
-  top: 130px;
+  top: 110px;
   right: 1.5rem;
   display: flex;
   flex-direction: row;
@@ -761,13 +761,17 @@ body {
   margin: 0 auto;
 }
 
-/* About section */
+/* About */
 .about-description {
   margin-bottom: 5rem;
   line-height: 1.8;
 }
 .about-description::first-letter {
   padding-left: 2rem;
+}
+.about-description strong {
+  font-size: 1.3rem;
+  font-family: var(--title-font);
 }
 .about-items {
   display: flex;
@@ -890,4 +894,22 @@ body {
   letter-spacing: -0.03em;
   line-height: 1.5;
   color: var(--gray);
+}
+
+/* Footer */
+.footer {
+  min-height: 50vh;
+  min-height: 50dvh;
+  background-color: var(--black);
+  padding-top: calc(4 * var(--i));
+  padding-bottom: calc(1.5 * var(--i));
+  color: var(--lgray);
+  display: grid;
+  /* grid-template-areas:; */
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: -0.04em;
 }
