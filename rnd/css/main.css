@@ -409,6 +409,9 @@ img {
 	background-color: var(--color-blue--contrast);
 	padding: 0.4rem 2.5rem;
 	line-height: 1.05;
+	box-shadow: inset -14px -8px 20px 0px rgba(0, 0, 0, 0, 2),
+		15px 13px 3px rgb(0, 0, 0, 0.25);
+	transform: skewX(357deg);
 }
 .section .section-title::after {
 	content: "";
