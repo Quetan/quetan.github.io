@@ -25,11 +25,7 @@
 		<link rel="manifest" href="./favicon/site.webmanifest" />
 		<link rel="stylesheet" href="./css/main.css" />
 		<script src="./js/main.js" async defer></script>
-		<script
-			src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
-			async
-			defer
-		></script>
+		<script src="./js/lottie.js" async defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -41,7 +37,6 @@
 				<nav class="header-nav">
 					<ul>
 						<li><a href="#about">Об организации</a></li>
-						<li><a href="#tasks">Задачи</a></li>
 						<li><a href="#scientists">Ученые</a></li>
 						<li><a href="#technologies">Компетенции</a></li>
 						<li><a href="#dev">Разработки</a></li>
@@ -58,7 +53,6 @@
 				<nav class="header-nav">
 					<ul>
 						<li><a href="#about">Об организации</a></li>
-						<li><a href="#tasks">Задачи</a></li>
 						<li><a href="#scientists">Ученые</a></li>
 						<li><a href="#technologies">Компетенции</a></li>
 						<li><a href="#dev">Разработки</a></li>
@@ -141,10 +135,91 @@
 					</h2>
 				</div>
 			</section>
-			<section
-				class="section section--light scientists-section"
-				id="scientists"
-			>
+			<section class="section section-news section--light" id="news">
+				<div class="container news-container">
+					<h1 class="section-title">Новости центра</h1>
+					<div class="news-wrapper">
+						<article class="news-item">
+							<h1>Новость 1</h1>
+							<img
+								loading="lazy"
+								src="https://source.unsplash.com/random/600×700/?fruit"
+								alt=""
+							/>
+							<a href="#" aria-label="Читать новость" title="Читать новость">
+								<img src="./assets/arrow.svg" alt="Читать новость" />
+							</a>
+						</article>
+						<article class="news-item">
+							<h1>Новость 2</h1>
+							<img
+								loading="lazy"
+								src="https://source.unsplash.com/random/600×500/?fruit"
+								alt=""
+							/>
+							<a href="#" aria-label="Читать новость" title="Читать новость">
+								<img src="./assets/arrow.svg" alt="Читать новость" />
+							</a>
+						</article>
+						<article class="news-item">
+							<h1>Новость 3</h1>
+							<img
+								loading="lazy"
+								src="https://source.unsplash.com/random/610×700/?fruit"
+								alt=""
+							/><a href="#" aria-label="Читать новость" title="Читать новость">
+								<img src="./assets/arrow.svg" alt="Читать новость" />
+							</a>
+						</article>
+						<article class="news-item">
+							<h1>Новость 4</h1>
+							<img
+								loading="lazy"
+								src="https://source.unsplash.com/random/600×660/?fruit"
+								alt=""
+							/>
+							<a href="#" aria-label="Читать новость" title="Читать новость">
+								<img src="./assets/arrow.svg" alt="Читать новость" />
+							</a>
+						</article>
+						<article class="news-item">
+							<h1>Новость 5</h1>
+							<img
+								loading="lazy"
+								src="https://source.unsplash.com/random/620×700/?fruit"
+								alt=""
+							/>
+							<a href="#" aria-label="Читать новость" title="Читать новость">
+								<img src="./assets/arrow.svg" alt="Читать новость" />
+							</a>
+						</article>
+						<article class="news-item">
+							<h1>Новость 6</h1>
+							<img
+								loading="lazy"
+								src="https://source.unsplash.com/random/490×700/?fruit"
+								alt=""
+							/>
+							<a href="#" aria-label="Читать новость" title="Читать новость">
+								<img src="./assets/arrow.svg" alt="Читать новость" />
+							</a>
+						</article>
+						<article class="news-item">
+							<h1>Новость 7</h1>
+							<img
+								loading="lazy"
+								src="https://source.unsplash.com/random/600×660/?fruit"
+								alt=""
+							/>
+							<a href="#" aria-label="Читать новость" title="Читать новость">
+								<img src="./assets/arrow.svg" alt="Читать новость" />
+							</a>
+						</article>
+					</div>
+					<a href="#" class="button news-link">К новостям</a>
+				</div>
+			</section>
+			<section class="section scientists-section" id="scientists">
 				<div class="container scientists-container">
 					<h1 class="section-title">Наши ученые</h1>
 					<div class="scientists-wrapper">
@@ -237,7 +312,10 @@
 					</div>
 				</div>
 			</section>
-			<section class="section techologies-section" id="technologies">
+			<section
+				class="section section--light techologies-section"
+				id="technologies"
+			>
 				<div class="container technologies-container">
 					<h1 class="section-title">Исследования и технологии</h1>
 					<ul class="technologies-wrapper">
@@ -374,13 +452,19 @@
 					</ul>
 				</div>
 			</section>
-			<section class="section dev-section section--light" id="dev">
+			<section class="section dev-section" id="dev">
 				<div class="container dev-container">
 					<h1 class="section-title">Разработки</h1>
 					<div class="dev-wrapper">
 						<div class="dev-item">
 							<figure>
-								<img src="./assets/dev/fitopumilin.png" alt="Фитопумилин" />
+								<img
+									loading="lazy"
+									src="./assets/dev/fitopumilin.webp"
+									width="350"
+									height="350"
+									alt="Фитопумилин"
+								/>
 								<figcaption>
 									<h2>Фитопумилин</h2>
 									<p>
@@ -393,7 +477,13 @@
 						</div>
 						<div class="dev-item">
 							<figure>
-								<img src="./assets/dev/aquabacilin.png" alt="Аквабацилин" />
+								<img
+									loading="lazy"
+									src="./assets/dev/aquabacilin.webp"
+									width="350"
+									height="350"
+									alt="Аквабацилин"
+								/>
 								<figcaption>
 									<h2>Аквабацилин</h2>
 									<p>
@@ -516,13 +606,17 @@
 							мировой арене.
 						</p>
 					</div>
-					<div class="partners-numbers">
+					<div class="partners-numbers" id="numbers">
 						<div class="partners-number">
-							<span>100<sup>+</sup></span>
+							<span data-counter data-counter-from="0" data-counter-to="100"
+								>100<sup>+</sup></span
+							>
 							<p>индустриальных партнеров научных организаций АлтГУ.</p>
 						</div>
 						<div class="partners-number">
-							<span>20<sup>+</sup></span>
+							<span data-counter data-counter-from="0" data-counter-to="20"
+								>20<sup>+</sup></span
+							>
 							<p>
 								компаний, с которыми установлено долгосрочное стратегическое
 								взаимодействие.
@@ -890,7 +984,6 @@
 					<nav class="footer-nav">
 						<ul>
 							<li><a href="#about">Об организации</a></li>
-							<li><a href="#tasks">Задачи</a></li>
 							<li><a href="#scientists">Ученые</a></li>
 							<li><a href="#technologies">Компетенции</a></li>
 							<li><a href="#dev">Разработки</a></li>
