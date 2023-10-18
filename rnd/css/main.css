@@ -1114,7 +1114,7 @@ h2.main-subtitle {
 	line-height: 1.8rem;
 	text-align: left;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 	.partners-numbers {
 		display: flex;
 		flex-direction: column;
@@ -1165,9 +1165,11 @@ h2.main-subtitle {
 	padding-right: 3rem;
 	border-radius: 15px;
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1200px) {
 	.partners-item {
 		display: flex;
+		justify-content: center;
+		align-items: center;
 		flex-direction: column;
 		padding: 2rem;
 		text-align: center;
@@ -1207,6 +1209,7 @@ h2.main-subtitle {
 }
 .partners-item ul li {
 	font-size: 1rem;
+	text-align: left;
 }
 .partner-napr {
 	display: block;
