@@ -1,5 +1,16 @@
 # Мои работы
 
+## Все работы: [quetan.github.io](https://quetan.github.io/)
+
+* ## KC Sistema (2023, Vite, TypeScript, React JS, Redux Toolkit, React Query, React Router Dom, React Hook Form)
+![KC Sistema](./thumbs/sistema.png "KC Sistema")
+
+* ## [Дистанционная образовательная среда](https://quetan.github.io/prof/dist) (2023, CMS Moodle, Tailwind CSS)
+![Дистанционная образовательная среда](./thumbs/prof.png "Дистанционная образовательная среда")
+
+* ## [Центр равития R&D](https://quetan.github.io/rnd/) (2023, CMS WordPress, Tailwind CSS)
+![Центр равития R&D](./thumbs/rnd.png "Центр равития R&D")​
+
 * ## [«Digital Up» - Школа развития цифровых компетенций](https://digitalup.asu.ru/) (2023, CMS WordPress)
 ![«Digital Up» - Школа развития цифровых компетенций](./thumbs/digitalUp.jpg "«Digital Up» - Школа развития цифровых компетенций")​
 
