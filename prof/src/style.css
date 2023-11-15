@@ -18,8 +18,16 @@
 	scroll-padding-top: 100px;
 }
 
+html {
+	@apply overflow-x-hidden;
+}
+
 body {
-	@apply m-0 min-h-screen w-full min-w-[320px] bg-slate-50 leading-6 text-cyan-950;
+	@apply m-0 min-h-screen w-full min-w-[320px] overflow-x-hidden bg-slate-50 leading-6 text-cyan-950;
+}
+
+strong {
+	@apply font-medium;
 }
 
 /**
@@ -35,6 +43,15 @@ body {
 .header-logo img {
 	@apply h-16 w-16;
 }
+.header-nav {
+	@apply hidden items-center md:flex;
+}
+.header-nav ul {
+	@apply flex flex-row gap-3;
+}
+.header-nav ul li {
+	@apply text-sm hover:underline hover:underline-offset-1;
+}
 .header-contacts {
 	@apply hidden flex-col items-center justify-center gap-2 font-medium underline lg:flex;
 }
@@ -44,6 +61,7 @@ body {
 .header-contacts svg {
 	@apply w-3;
 }
+
 /**
  *  Main
  */
@@ -51,7 +69,7 @@ body {
 	@apply container relative my-4 min-h-[400px] py-16;
 }
 .section-title {
-	@apply relative mb-12 w-max bg-gradient-to-r from-cyan-950 to-sky-700 bg-clip-text text-4xl font-medium uppercase tracking-tight text-transparent;
+	@apply relative mb-12 w-max bg-gradient-to-r from-cyan-950 to-sky-700 bg-clip-text text-2xl font-medium uppercase tracking-tight text-transparent lg:text-4xl;
 }
 .section-title::before {
 	@apply absolute -left-full top-1/2 h-1 w-3/4 -translate-x-1/2 bg-gradient-to-r from-cyan-950 to-sky-700 content-[""];
@@ -77,19 +95,19 @@ body {
  */
 
 .banner-section {
-	@apply relative mt-0 flex min-h-screen flex-row flex-wrap items-center justify-center bg-white px-8 pb-24 pt-[140px] md:px-12 lg:px-24;
+	@apply relative mt-0 flex min-h-screen flex-row flex-wrap items-center justify-center bg-white bg-opacity-20 px-8 pb-24 pt-[140px] md:px-12 lg:px-24;
+}
+.banner-bg {
+	@apply absolute left-0 top-0 z-[-1] block h-full w-full bg-cover bg-center bg-no-repeat object-cover;
 }
 .banner-text {
-	@apply flex w-full flex-col gap-3 bg-gradient-to-tr from-cyan-950 to-sky-700 bg-clip-text pb-12 text-center text-transparent lg:w-1/2 lg:pr-12 lg:text-left;
+	@apply flex w-full flex-col gap-3 bg-gradient-to-tr from-slate-50 to-zinc-100 bg-clip-text pb-12 text-center text-transparent lg:w-1/2 lg:pr-12 lg:text-left;
 }
 .banner-text h1 {
-	@apply text-3xl tracking-wider;
+	@apply mb-4 mt-2 text-3xl font-bold tracking-wide lg:text-5xl;
 }
 .banner-text h2 {
-	@apply mb-4 mt-2 text-6xl font-bold tracking-wide;
-}
-.banner-text h3 {
-	@apply text-2xl font-light tracking-tighter;
+	@apply text-xl tracking-wider lg:text-2xl;
 }
 .banner-text .button {
 	@apply mx-auto lg:mx-0;
@@ -100,32 +118,61 @@ body {
 .banner-scroll a {
 	@apply underline;
 }
-.banner-img {
-	@apply flex w-full items-center justify-center px-8 lg:w-1/2;
+.banner-quote {
+	@apply relative hidden w-full max-w-[600px] flex-col items-center justify-center px-8 md:flex lg:w-1/2;
 }
-.banner-img img {
-	@apply h-auto w-4/6;
+.banner-quote img {
+	@apply aspect-square h-auto w-full rounded border-8 border-white object-cover object-center shadow;
 }
-.banner-anim {
-	@apply w-full lg:w-1/2;
+.banner-quote figcaption {
+	@apply absolute -bottom-10 left-0 right-0 block rounded border-8 border-white bg-white px-4 pb-2 pt-8 shadow;
 }
-
+.banner-quote figcaption::before {
+	@apply absolute -top-6 left-0
+		   grid h-12 w-12
+  		   items-center justify-center rounded-full bg-emerald-600
+  		   p-4 text-5xl font-bold leading-[0.8]
+		 text-white content-["❞"];
+}
+.banner-quote blockquote {
+	@apply relative flex flex-col bg-gradient-to-r from-cyan-950 to-sky-900 bg-clip-text leading-3 text-transparent;
+}
+.banner-quote blockquote p {
+	@apply text-sm italic tracking-tight;
+}
+.banner-quote blockquote span {
+	@apply not-italic tracking-tighter;
+}
 /**
  *  About
  */
 .about-section {
-	@apply flex flex-col items-center gap-16 bg-white px-6 py-16 shadow-lg lg:flex-row lg:px-12;
+	@apply mx-auto mt-12 flex w-full flex-col items-center gap-16 rounded-md bg-white px-6 py-16 shadow-lg lg:w-5/6 lg:gap-32 lg:px-12;
 }
 .about-description {
-	@apply flex w-full flex-col gap-4 text-xl leading-10 tracking-tight lg:w-3/5 lg:text-2xl;
+	@apply flex w-full flex-col gap-4 text-xl leading-10 tracking-tight lg:text-2xl;
 }
-.about-image {
-	@apply aspect-square h-auto w-full overflow-hidden rounded shadow-lg shadow-slate-500 lg:w-2/5;
+.about-advantages {
+	@apply mt-20 flex flex-col flex-nowrap items-start justify-around gap-6 lg:flex-row;
 }
-.about-image img {
-	@apply block h-full w-full object-cover object-center;
+.advantages-item {
+	@apply flex w-full flex-col items-center justify-center gap-8 text-center tracking-tight md:w-1/3;
 }
-
+.advantages-item svg {
+	@apply mx-auto aspect-square h-28 w-28 rounded-full border-4 px-1 py-5 shadow-md  transition-shadow hover:shadow-2xl;
+}
+.advantages-item:nth-child(2) svg {
+	@apply border-sky-400 bg-gradient-to-tr from-white to-sky-200 fill-sky-800 shadow-sky-300 hover:shadow-sky-800;
+}
+.advantages-item:nth-child(3) svg {
+	@apply border-emerald-400 bg-gradient-to-tr from-white to-emerald-200 fill-emerald-800 shadow-emerald-300 hover:shadow-emerald-800;
+}
+.advantages-item:nth-child(1) svg {
+	@apply border-rose-400 bg-gradient-to-tr from-white to-rose-200  fill-rose-950 shadow-rose-300 hover:shadow-rose-800;
+}
+.advantages-item figcaption {
+	@apply text-center text-xl font-medium leading-6;
+}
 /**
  *  Courses
  */
@@ -192,11 +239,11 @@ body {
 }
 .reviews-image::before {
 	@apply absolute right-4 top-4
-  grid h-12 w-12
-  items-center justify-center rounded-full bg-primary
-  p-4
-  text-5xl font-bold leading-[0.8]
-  text-white content-["❞"];
+			grid h-12 w-12
+			items-center justify-center rounded-full bg-rose-600
+			p-4
+			text-5xl font-bold leading-[0.8]
+		text-white content-["❞"];
 }
 .reviews-text p {
 	@apply text-xl font-light leading-8 tracking-wide;
@@ -219,6 +266,7 @@ body {
 .splide__arrow--prev {
 	@apply left-0 !important;
 }
+
 /**
  *  Partners
  */
@@ -273,4 +321,150 @@ body {
 }
 .footer-menu ul > li {
 	@apply list-item;
+}
+
+/* VERSION 2 */
+/* .header {
+	@apply shadow-none;
+}
+.main {
+	@apply container;
+}
+.layout {
+	@apply relative grid gap-16 overflow-x-hidden;
+	grid-template-columns: 1fr 1fr;
+}
+.layout-content {
+	@apply pt-[150px];
+}
+section {
+	@apply rounded-md border-4 border-sky-900 border-opacity-10 bg-white px-4 py-8 shadow-md;
+}
+.footer {
+	@apply z-10 flex min-h-[150px] w-full border-t-2 border-t-sky-900 pb-7 pt-5 before:hidden;
+}
+.advantages-item {
+	@apply gap-1;
+}
+.advantages-item svg {
+	@apply mb-3 h-20 w-20 p-2;
+}
+.advantages-item figcaption {
+	@apply text-base leading-5;
+}
+.courses-wrapper {
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.courses-item span.courses-title {
+	@apply text-sm leading-4 tracking-tight;
+}
+.courses-item span.courses-description {
+	@apply hidden;
+}
+.courses-item img {
+	@apply h-[150px];
+}
+.partners-wrapper {
+	@apply flex flex-row flex-wrap items-center justify-start;
+}
+.staff-item img {
+	@apply h-[250px];
+}
+.staff-item {
+	@apply border-none bg-white shadow-none;
+}
+.banner-quote {
+	@apply flex w-full max-w-full flex-row gap-8 p-0;
+}
+.banner-quote figcaption {
+	@apply relative bottom-0 border-none p-0 shadow-none;
+}
+.banner-quote img {
+	@apply w-1/2 border-none;
+}
+.banner-quote figcaption::before {
+	@apply -left-14 -top-4;
+} */
+
+/* VERSION 3 */
+.footer {
+	@apply z-10 flex min-h-[150px] w-full border-t-2 border-t-sky-900 pb-7 pt-5 before:hidden;
+}
+.for-wrapper {
+	@apply grid list-none grid-cols-4 gap-8 p-0 pt-10;
+}
+.for-wrapper > li {
+	@apply rounded-md border-4 border-sky-100 bg-gradient-to-br from-white to-sky-100 p-4 shadow-lg shadow-sky-50 transition-colors hover:shadow-sky-200;
+}
+.for-wrapper figure {
+	@apply flex flex-col items-center;
+}
+.for-wrapper figure img {
+	@apply relative mx-auto mb-8 block h-[150px] w-auto;
+}
+.for-wrapper figure figcaption h2 {
+	@apply mb-6 text-center text-2xl font-medium leading-6 tracking-tight;
+}
+.for-wrapper figure figcaption p {
+	@apply text-center text-lg leading-6 tracking-tight;
+}
+.for-wrapper figure figcaption ul {
+	@apply list-disc pl-6 text-sm leading-4;
+}
+.types-wrapper {
+	@apply grid grid-cols-2 gap-12 pt-10;
+}
+.types-wrapper figure {
+	@apply border bg-white bg-opacity-30 p-6;
+}
+.types-wrapper figure img {
+	@apply relative mx-auto mb-8 block h-[250px] w-auto;
+}
+.types-wrapper figure figcaption {
+	@apply mb-6 p-6;
+}
+.types-wrapper figure figcaption h2 {
+	@apply mb-6 text-center text-3xl font-medium leading-6 tracking-tight;
+}
+.types-wrapper figure figcaption p {
+	@apply text-center text-lg leading-7 tracking-tight;
+}
+.track-wrapper {
+	@apply grid grid-cols-2 gap-x-12 gap-y-12 pt-10;
+}
+.track-item {
+	@apply relative rounded-lg border-2 border-rose-100 bg-gradient-to-br 
+	from-white to-rose-100 px-4 pb-8 pt-12 shadow-lg shadow-rose-50 transition-all;
+}
+.track-item.active,
+.track-item:hover {
+	@apply scale-105 shadow-rose-200;
+}
+.track-item span {
+	@apply absolute -left-4 -top-4 text-[4rem] font-bold text-rose-600 text-opacity-40 transition-colors;
+}
+.track-item:hover span {
+	@apply text-opacity-100;
+}
+.track-item.active span {
+	@apply scale-125 text-opacity-80;
+}
+.track-item h2 {
+	@apply text-center text-lg font-medium leading-6 tracking-tight;
+}
+.track-item img {
+	@apply mx-auto mb-4 block h-[100px] w-auto;
+}
+.adv-wrapper {
+	@apply flex flex-row flex-wrap justify-center gap-6;
+}
+.adv-item {
+	@apply relative max-w-[400px] rounded-lg border-4 border-teal-100 bg-gradient-to-br from-white to-teal-100 
+	p-4 pt-12 text-center shadow-lg shadow-teal-50 transition-colors hover:shadow-teal-200;
+}
+.adv-item img {
+	@apply mx-auto mb-4 block h-[150px] w-auto;
+}
+.adv-item p {
+	@apply text-lg font-medium leading-6;
 }

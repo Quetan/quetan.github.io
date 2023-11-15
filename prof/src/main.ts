@@ -69,6 +69,8 @@ function generateCoursesLinks(courses: Course[]) {
 }
 
 async function initCourses() {
+	if (!LINKS_CONTAINER || !TABS_CONTAINER) return null;
+
 	const courses = await getCourses();
 
 	const COURSE_TABS_NODES = generateCoursesTabs(courses);
@@ -87,8 +89,9 @@ async function initCourses() {
 initCourses();
 
 // Slider
-
 document.addEventListener('DOMContentLoaded', () => {
-	let splide = new Splide('#reviews');
+	const node = document.getElementById('reviews');
+	if (!node) return null;
+	let splide = new Splide(node);
 	splide.mount();
 });
