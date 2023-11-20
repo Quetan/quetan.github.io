@@ -7,11 +7,47 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
 		<link rel="manifest" href="./favicon/site.webmanifest" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Учебный центр | Общероссийская Профсоюзная Организация</title>
-		<script type="module" crossorigin src="./assets/index-6d96164d.js"></script>
-		<link rel="stylesheet" href="./assets/index-1ceb8117.css">
+		<title>Дистанционная образовательная среда | Общероссийский Профсоюз образования</title>
+		<script type="module" crossorigin src="./assets/index-c502b577.js"></script>
+		<link rel="stylesheet" href="./assets/index-8e38f949.css">
 	</head>
 	<body>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			(function (m, e, t, r, i, k, a) {
+				m[i] =
+					m[i] ||
+					function () {
+						(m[i].a = m[i].a || []).push(arguments);
+					};
+				m[i].l = 1 * new Date();
+				for (var j = 0; j < document.scripts.length; j++) {
+					if (document.scripts[j].src === r) {
+						return;
+					}
+				}
+				(k = e.createElement(t)),
+					(a = e.getElementsByTagName(t)[0]),
+					(k.async = 1),
+					(k.src = r),
+					a.parentNode.insertBefore(k, a);
+			})(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+			ym(95584272, 'init', {
+				clickmap: true,
+				trackLinks: true,
+				accurateTrackBounce: true,
+				webvisor: true,
+			});
+		</script>
+		<noscript
+			><div>
+				<img
+					src="https://mc.yandex.ru/watch/95584272"
+					style="position: absolute; left: -9999px"
+					alt="" /></div
+		></noscript>
+		<!-- /Yandex.Metrika counter -->
 		<header class="header">
 			<a href="/" class="header-logo">
 				<img src="./logo.svg" alt="Логотип учебного центра" />
@@ -58,9 +94,7 @@
 		<main class="main">
 			<section class="banner-section" id="banner">
 				<video class="banner-bg" preload="none" autoplay="autoplay" loop muted>
-					<source
-						src="./tetka_zhestko_pizdit_na _fone_svet_migaet_policiya_roziskivat_ee_a_ey_poebat.mp4"
-						type="video/mp4" />
+					<source src="./bg_video.mp4" type="video/mp4" />
 				</video>
 				<div class="banner-text">
 					<h1>Дистанционная образовательная среда</h1>
@@ -93,61 +127,8 @@
 					</figcaption>
 				</figure>
 			</section>
-			<section class="section section-for" id="for">
-				<h1 class="section-title mx-auto">Для кого</h1>
-				<ol class="for-wrapper">
-					<li>
-						<figure>
-							<img src="./v3icons/prof_users.svg" alt="" />
-							<figcaption>
-								<h2>Члены Профсоюза Образования</h2>
-								<ul>
-									<li>Профсоюзный резерв - курсы для всех членов профсоюза.</li>
-									<li>
-										Профсоюзный актив - в помощь профсоюзным групповым организаторам и профсоюзным
-										активистам.
-									</li>
-									<li>Профсоюзные кадры - повышение квалификации кадровых работников профсоюза.</li>
-								</ul>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<img src="./v3icons/teacher.svg" alt="" />
-							<figcaption>
-								<h2>Работники системы образования</h2>
-								<p>Курсы для повышения общеделовых компетенций работников образования.</p>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<img src="./v3icons/student.svg" alt="" />
-							<figcaption>
-								<h2>Студенты</h2>
-								<p>Развитие компетений обучающихся.</p>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<img src="./v3icons/workers.svg" alt="" />
-							<figcaption>
-								<h2>Работники</h2>
-								<p>
-									Курсы для широкой категории пользователей независимо от места работы и членства в
-									профсоюзе.
-								</p>
-							</figcaption>
-						</figure>
-					</li>
-				</ol>
-			</section>
-			<section
-				class="advantages-section overflow-hidden border-y-2 border-slate-200 bg-white py-12 shadow-md"
-				id="advantages">
-				<h1 class="section-title mx-auto">Преимущества обучения</h1>
+			<section class="advantages-sectionoverflow-hidden bg-white py-12 shadow-md" id="advantages">
+				<h1 class="section-title mx-auto">Учебный центр это</h1>
 				<div class="about-advantages">
 					<figure class="advantages-item">
 						<svg
@@ -195,6 +176,57 @@
 					</figure>
 				</div>
 			</section>
+			<section class="section section-for" id="for">
+				<h1 class="section-title mx-auto">Для кого</h1>
+				<ol class="for-wrapper">
+					<li>
+						<figure>
+							<img src="./v3icons/prof_users.svg" alt="" />
+							<figcaption>
+								<h2>Для работников профсоюза образования</h2>
+								<ul>
+									<li>Профсоюзный резерв - курсы для всех членов профсоюза.</li>
+									<li>
+										Профсоюзный актив - в помощь профсоюзным групповым организаторам и профсоюзным
+										активистам.
+									</li>
+									<li>Профсоюзные кадры - повышение квалификации кадровых работников профсоюза.</li>
+								</ul>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="./v3icons/teacher.svg" alt="" />
+							<figcaption>
+								<h2>Работники системы образования</h2>
+								<p>Курсы для повышения общеделовых компетенций работников образования.</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="./v3icons/student.svg" alt="" />
+							<figcaption>
+								<h2>Студенты</h2>
+								<p>Развитие компетений обучающихся.</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="./v3icons/workers.svg" alt="" />
+							<figcaption>
+								<h2>Работники</h2>
+								<p>
+									Курсы для широкой категории пользователей независимо от места работы и членства в
+									профсоюзе.
+								</p>
+							</figcaption>
+						</figure>
+					</li>
+				</ol>
+			</section>
 			<section class="section section-types" id="types">
 				<h1 class="section-title mx-auto">Виды обучения</h1>
 				<div class="types-wrapper">
@@ -224,7 +256,7 @@
 					</div>
 					<div class="overflow-hidden">
 						<div
-							class="relative h-full w-full -translate-x-[50%] translate-y-[50%] rounded-lg border-8 border-rose-700">
+							class="relative h-full w-full -translate-x-[50%] translate-y-[50%] rounded-lg border-4 border-rose-700 lg:border-8">
 							<div
 								class="absolute right-0 top-1/2 h-6 w-6 -translate-y-1/2 translate-x-[1rem] rotate-45 rounded-full bg-rose-700"></div>
 							<div
@@ -233,7 +265,7 @@
 					</div>
 					<div class="overflow-hidden">
 						<div
-							class="relative h-full w-full translate-x-[50%] translate-y-[50%] rounded-lg border-8 border-rose-700">
+							class="relative h-full w-full translate-x-[50%] translate-y-[50%] rounded-lg border-4 border-rose-700 lg:border-8">
 							<div
 								class="absolute left-0 top-1/2 h-6 w-6 -translate-x-[1rem] -translate-y-1/2 rotate-45 rounded-full bg-rose-700"></div>
 							<div
@@ -252,7 +284,7 @@
 					</div>
 					<div class="overflow-hidden">
 						<div
-							class="relative h-full w-full -translate-x-[50%] translate-y-[50%] rounded-lg border-8 border-rose-700">
+							class="relative h-full w-full -translate-x-[50%] translate-y-[50%] rounded-lg border-4 border-rose-700 lg:border-8">
 							<div
 								class="absolute right-0 top-1/2 h-6 w-6 -translate-y-1/2 translate-x-[1rem] rotate-45 rounded-full bg-rose-700"></div>
 							<div
@@ -261,7 +293,7 @@
 					</div>
 					<div class="overflow-hidden">
 						<div
-							class="relative h-full w-full translate-x-[50%] translate-y-[50%] rounded-lg border-8 border-rose-700">
+							class="relative h-full w-full translate-x-[50%] translate-y-[50%] rounded-lg border-4 border-rose-700 lg:border-8">
 							<div
 								class="absolute left-0 top-1/2 h-6 w-6 -translate-x-[1rem] -translate-y-1/2 rotate-45 rounded-full bg-rose-700"></div>
 							<div
@@ -294,7 +326,7 @@
 					</div>
 					<div class="overflow-hidden">
 						<div
-							class="relative h-full w-full -translate-x-[50%] translate-y-[50%] rounded-lg border-8 border-rose-700">
+							class="relative h-full w-full -translate-x-[50%] translate-y-[50%] rounded-lg border-4 border-rose-700 lg:border-8">
 							<div
 								class="absolute right-0 top-1/2 h-6 w-6 -translate-y-1/2 translate-x-[1rem] rotate-45 rounded-full bg-rose-700"></div>
 							<div
