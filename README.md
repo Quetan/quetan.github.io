@@ -5,11 +5,11 @@
 * ## KC Sistema (2023, Vite, TypeScript, React JS, Redux Toolkit, React Query, React Router Dom, React Hook Form)
 ![KC Sistema](./thumbs/sistema.webp "KC Sistema")
 
-* ## [Дистанционная образовательная среда](https://quetan.github.io/prof/dist) (2023, CMS Moodle, Tailwind CSS)
-![Дистанционная образовательная среда](./thumbs/prof.webp "Дистанционная образовательная среда")
+* ## [Центр равития R&D](https://rnd.asu.ru/) (2023, CMS WordPress, Tailwind CSS)
+![Центр равития R&D](./thumbs/rnd.webp "Центр равития R&D")
 
-* ## [Центр равития R&D](https://quetan.github.io/rnd/) (2023, CMS WordPress, Tailwind CSS)
-![Центр равития R&D](./thumbs/rnd.webp "Центр равития R&D")​
+* ## [Дистанционная образовательная среда](https://quetan.github.io/prof/dist) (2023, CMS Moodle, Tailwind CSS)
+![Дистанционная образовательная среда](./thumbs/prof.webp "Дистанционная образовательная среда")​
 
 * ## [«Digital Up» - Школа развития цифровых компетенций](https://digitalup.asu.ru/) (2023, CMS WordPress)
 ![«Digital Up» - Школа развития цифровых компетенций](./thumbs/digitalUp.webp "«Digital Up» - Школа развития цифровых компетенций")​
