@@ -3,7 +3,7 @@
 ## Все работы: [quetan.github.io](https://quetan.github.io/)
 
 * ## Ternex Admin (2023, Vite, TypeScript, React JS, React Query, React Router Dom, React ChartJS 2, Shadcn UI)
-![Ternex Admin](./thumbs/ternexadmin.webp.webp "Ternex Admin")
+![Ternex Admin](./thumbs/ternexadmin.webp "Ternex Admin")
 
 * ## KC Sistema (2023, Vite, TypeScript, React JS, Redux Toolkit, React Query, React Router Dom, React Hook Form)
 ![KC Sistema](./thumbs/sistema.webp "KC Sistema")
