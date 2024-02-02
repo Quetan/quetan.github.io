@@ -53,16 +53,16 @@ strong {
 	@apply h-16 w-16;
 }
 .header-nav {
-	@apply hidden items-center pr-12 md:flex;
+	@apply mr-auto hidden items-center md:flex;
 }
 .header-nav ul {
 	@apply flex flex-row gap-3;
 }
 .header-nav ul li {
-	@apply text-sm hover:underline hover:underline-offset-1;
+	@apply text-lg font-medium hover:underline hover:underline-offset-1;
 }
 .header-nav ul li a {
-	@apply py-2;
+	@apply py-2 font-medium;
 }
 .header-contacts {
 	@apply hidden flex-row items-center justify-center gap-2 font-medium lg:flex;
@@ -615,4 +615,11 @@ section {
 	.cards-wrapper {
 		@apply flex flex-col;
 	}
+}
+
+.show {
+	@apply flex !important;
+}
+.hide {
+	@apply hidden !important;
 }

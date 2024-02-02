@@ -13,6 +13,36 @@ const _MOODLE_REST_FORMAT: string = 'json';
 const TABS_CONTAINER = document.querySelector('#_courses');
 const LINKS_CONTAINER = document.querySelector('#_courses_links');
 
+const PRIM_TABS: NodeListOf<HTMLDivElement> = document.querySelectorAll('[data-category]');
+const PRIM_ALL: HTMLButtonElement | null = document.querySelector('#PRIM_ALL');
+const PRIM_IND: HTMLButtonElement | null = document.querySelector('#PRIM_IND');
+const PRIM_GROUP: HTMLButtonElement | null = document.querySelector('#PRIM_GROUP');
+const PRIM_SEMINAR: HTMLButtonElement | null = document.querySelector('#PRIM_SEMINAR');
+const PRIM_MEDIA: HTMLButtonElement | null = document.querySelector('#PRIM_MEDIA');
+
+type Category = 'all' | 'ind' | 'group' | 'seminar' | 'media';
+
+function showAllTabs() {
+	PRIM_TABS.forEach((tab: HTMLDivElement) => {
+		tab.classList.remove('hide');
+		tab.classList.add('show');
+	});
+}
+
+function switchTabs(category: Category) {
+	console.log(category);
+	PRIM_TABS.forEach((tab: HTMLDivElement) => {
+		tab.classList.remove('show');
+		tab.classList.remove('hide');
+		tab.dataset.category === category ? tab.classList.add('show') : tab.classList.add('hide');
+	});
+}
+PRIM_ALL?.addEventListener('click', showAllTabs);
+PRIM_IND?.addEventListener('click', () => switchTabs('ind'));
+PRIM_GROUP?.addEventListener('click', () => switchTabs('group'));
+PRIM_SEMINAR?.addEventListener('click', () => switchTabs('seminar'));
+PRIM_MEDIA?.addEventListener('click', () => switchTabs('media'));
+
 function getCourses() {
 	return axios
 		.get(_MOODLE_API_URL, {
