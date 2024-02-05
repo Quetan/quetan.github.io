@@ -91,10 +91,10 @@ strong {
 	@apply container relative my-4 min-h-[400px] py-16;
 }
 .section-block {
-	@apply container mt-8 overflow-hidden bg-white px-8 pb-20 pt-12 shadow-md;
+	@apply container mt-8 overflow-hidden bg-white px-8 pb-24 pt-16 shadow-md;
 }
 .section-title {
-	@apply relative mb-12 w-max bg-gradient-to-r from-cyan-950 to-sky-700 bg-clip-text text-2xl font-medium uppercase tracking-tight text-transparent lg:text-4xl;
+	@apply relative mb-4 w-auto bg-gradient-to-r from-cyan-950 to-sky-700 bg-clip-text text-center text-2xl font-medium uppercase tracking-tight text-transparent md:mb-12 md:w-max lg:text-4xl;
 }
 .section-title::before {
 	@apply absolute left-0 top-1/2 h-1 w-3/4 -translate-x-[120%] bg-gradient-to-r from-cyan-950 to-sky-700 content-[""];
@@ -118,7 +118,7 @@ strong {
 	display: initial;
 }
 .button.button-sm {
-	@apply px-8 py-2 text-lg shadow-none;
+	@apply px-4 py-1 text-sm tracking-tighter shadow-none;
 }
 
 /**
@@ -147,7 +147,7 @@ strong {
 	@apply text-xl tracking-wider lg:text-2xl;
 }
 .banner-text .button {
-	@apply mx-auto text-base lg:mx-0 lg:text-xl;
+	@apply mx-auto text-xs tracking-tighter md:text-base lg:mx-0 lg:text-xl;
 }
 .banner-scroll {
 	@apply absolute bottom-4 left-0 hidden h-4 w-full flex-row items-center border-b-2 border-t-2 border-slate-200 bg-gradient-to-bl from-cyan-950 to-sky-700 py-6 font-medium tracking-wide text-white lg:flex;
@@ -172,13 +172,13 @@ strong {
 		 text-white content-["❞"];
 }
 .banner-quote blockquote {
-	@apply relative flex flex-col bg-gradient-to-r from-cyan-950 to-sky-900 bg-clip-text leading-3 text-transparent;
+	@apply relative flex flex-col bg-gradient-to-r from-cyan-950 to-sky-900 bg-clip-text text-xl leading-tight text-transparent;
 }
 .banner-quote blockquote p {
-	@apply text-base italic tracking-tight;
+	@apply mb-2 italic tracking-tight;
 }
 .banner-quote blockquote span {
-	@apply not-italic tracking-tighter;
+	@apply text-right text-base not-italic tracking-tighter;
 }
 /**
  *  About
@@ -486,7 +486,7 @@ section {
 	@apply mb-6 p-6;
 }
 .types-wrapper figure figcaption h2 {
-	@apply mb-6 text-center text-3xl font-medium leading-6 tracking-tight;
+	@apply mb-6 text-center text-xl font-medium leading-6 tracking-tight md:text-3xl;
 }
 .types-wrapper figure figcaption p {
 	@apply text-center text-lg leading-7 tracking-tight;
@@ -512,7 +512,7 @@ section {
 	@apply scale-125 text-opacity-80;
 }
 .track-item h2 {
-	@apply text-center text-sm font-medium leading-6 tracking-tight lg:text-lg;
+	@apply text-center text-sm font-medium leading-tight tracking-tight md:leading-normal lg:text-lg;
 }
 .track-item img {
 	@apply mx-auto mb-4 block h-[100px] w-auto;
@@ -533,10 +533,7 @@ section {
 
 /* Course card */
 .cards-wrapper {
-	@apply grid grid-cols-1 gap-3 lg:grid-cols-2;
-}
-.cards-wrapper.ochko {
-	@apply grid-cols-3;
+	@apply grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3;
 }
 .section-block .course-card {
 	@apply bg-sky-200/10;
@@ -548,23 +545,33 @@ section {
 	@apply h-full w-2/3;
 }
 
+.course-card.group-card {
+	@apply flex-col p-0;
+}
+.course-card.group-card .course-content {
+	@apply px-4 pb-8 pt-0;
+}
+.course-card.group-card .course-header {
+	@apply h-auto w-full;
+}
+
 .course-cover {
 	@apply h-full w-full rounded-l object-cover object-center;
 }
 .course-title {
-	@apply mb-3 text-2xl leading-none tracking-tighter;
+	@apply mb-3 text-center text-xl font-medium leading-none tracking-tighter md:text-left;
 }
 .course-content {
 	@apply flex h-full w-full flex-col pb-12 pt-8;
 }
 .course-topline {
-	@apply text-xs;
+	@apply mb-2 flex flex-row flex-wrap gap-x-2 gap-y-1 text-xs;
 }
 .course-topline a {
 	@apply underline;
 }
 .course-description {
-	@apply py-1 pr-4 text-sm leading-tight tracking-tighter;
+	@apply line-clamp-3 text-ellipsis py-1 pr-4 text-sm leading-tight tracking-tighter hover:text-clip;
 }
 .course-author {
 	@apply mb-5;
@@ -577,7 +584,7 @@ section {
 }
 .course-duration,
 .course-start {
-	@apply flex items-center gap-1 rounded-2xl py-1 text-sm font-medium tracking-tight;
+	@apply flex items-center gap-1 rounded-xl border bg-slate-100 px-2 py-1 text-xs font-medium leading-tight tracking-tight;
 }
 
 .course-authors-wrapper {

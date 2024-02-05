@@ -22,15 +22,21 @@ const PRIM_MEDIA: HTMLButtonElement | null = document.querySelector('#PRIM_MEDIA
 
 type Category = 'all' | 'ind' | 'group' | 'seminar' | 'media';
 
+const queryString = window.location.search;
+const params = new URLSearchParams(queryString);
+const paramsCategory: Category | null = params.get('category') as Category;
+if (paramsCategory) switchTabs(paramsCategory);
+
 function showAllTabs() {
 	PRIM_TABS.forEach((tab: HTMLDivElement) => {
+		params.set('category', 'all');
 		tab.classList.remove('hide');
 		tab.classList.add('show');
 	});
 }
 
 function switchTabs(category: Category) {
-	console.log(category);
+	params.set('category', category);
 	PRIM_TABS.forEach((tab: HTMLDivElement) => {
 		tab.classList.remove('show');
 		tab.classList.remove('hide');
