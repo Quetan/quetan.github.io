@@ -53,19 +53,19 @@ strong {
 	@apply h-16 w-16;
 }
 .header-nav {
-	@apply mr-auto hidden items-center md:flex;
+	@apply hidden items-center md:flex;
 }
 .header-nav ul {
-	@apply flex flex-row gap-3;
+	@apply flex flex-row gap-2;
 }
 .header-nav ul li {
-	@apply text-lg font-medium hover:underline hover:underline-offset-1;
+	@apply font-medium hover:underline hover:underline-offset-1;
 }
 .header-nav ul li a {
-	@apply py-2 font-medium;
+	@apply py-2 text-lg font-medium leading-tight tracking-tight;
 }
 .header-contacts {
-	@apply hidden flex-row items-center justify-center gap-2 font-medium lg:flex;
+	@apply hidden flex-row items-center justify-end gap-2 font-medium lg:flex;
 }
 .header-contacts a {
 	@apply flex flex-row gap-2 text-cyan-950 underline;
@@ -77,7 +77,7 @@ strong {
 	@apply text-white no-underline;
 }
 .socials {
-	@apply flex flex-row gap-2;
+	@apply flex flex-row;
 }
 .socials svg {
 	@apply aspect-square h-auto w-10 stroke-slate-900 p-1.5;
