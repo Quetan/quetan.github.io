@@ -38,7 +38,7 @@ strong {
 */
 
 .header {
-	@apply fixed top-0 z-[9999] w-full border-b border-b-gray-200 bg-white p-4 shadow-lg md:flex-row;
+	@apply fixed top-0 z-[9999] w-full border-b border-b-gray-200 bg-white p-4 pb-6 shadow-lg md:flex-row;
 }
 .header-logo {
 	@apply flex max-w-[300px] flex-row items-center justify-center gap-1 text-lg leading-6 tracking-tight;
@@ -56,7 +56,7 @@ strong {
 	@apply hidden items-center md:flex;
 }
 .header-nav ul {
-	@apply flex flex-row gap-2;
+	@apply flex flex-row gap-8;
 }
 .header-nav ul li {
 	@apply font-medium hover:underline hover:underline-offset-1;
@@ -178,7 +178,7 @@ strong {
 	@apply mb-2 italic tracking-tight;
 }
 .banner-quote blockquote span {
-	@apply text-right text-base not-italic tracking-tighter;
+	@apply text-right text-base not-italic leading-tight tracking-tighter;
 }
 /**
  *  About
@@ -477,7 +477,7 @@ section {
 	@apply grid grid-cols-1 gap-12 pt-10 md:grid-cols-2;
 }
 .types-wrapper figure {
-	@apply border bg-white bg-opacity-30 p-6;
+	@apply rounded-md border-2 border-sky-100 bg-white bg-opacity-30 p-6;
 }
 .types-wrapper figure img {
 	@apply relative mx-auto mb-8 block h-[250px] w-auto;
@@ -554,7 +554,9 @@ section {
 .course-card.group-card .course-header {
 	@apply h-auto w-full;
 }
-
+.course-card.group-card .course-cover {
+	@apply h-[280px];
+}
 .course-cover {
 	@apply h-full w-full rounded-l object-cover object-center;
 }
@@ -597,7 +599,7 @@ section {
 	@apply flex flex-row;
 }
 .course-authors img {
-	@apply -ml-4 h-14 w-14 rounded-full border-2 border-white object-cover object-center;
+	@apply -ml-4 h-14 w-14 rounded-full border-4 border-white object-cover object-center;
 }
 .course-authors img:nth-child(1) {
 	margin: 0;
