@@ -44,7 +44,7 @@ strong {
 	@apply flex max-w-[300px] flex-row items-center justify-center gap-1 text-lg leading-6 tracking-tight;
 }
 .header-logo.header-mobile {
-	@apply hidden lg:flex;
+	@apply hidden md:flex;
 }
 .header-logo .header-title {
 	@apply max-w-[200px] text-sm tracking-tighter;
@@ -56,14 +56,46 @@ strong {
 	@apply hidden items-center md:flex;
 }
 .header-nav ul {
-	@apply flex flex-row gap-8;
+	@apply flex flex-row md:gap-2 lg:gap-4 xl:gap-8;
 }
 .header-nav ul li {
-	@apply font-medium hover:underline hover:underline-offset-1;
+	@apply w-max text-center font-medium hover:underline hover:underline-offset-1;
 }
 .header-nav ul li a {
 	@apply py-2 text-lg font-medium leading-tight tracking-tight;
 }
+
+#nav-mobile-menu {
+	position: fixed;
+	transform: translateX(-200%);
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100vw;
+	padding: 6rem 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@apply transition-transform;
+	transition-duration: 0.4s;
+}
+
+#nav-mobile-menu.close {
+	transform: translateX(200%);
+}
+
+#nav-mobile-menu.open {
+	transform: translateX(0);
+}
+
+#nav-mobile-menu nav ul {
+	@apply flex flex-col gap-6;
+}
+
+#nav-mobile-menu nav ul li {
+	@apply text-center text-2xl text-white;
+}
+
 .header-contacts {
 	@apply hidden flex-row items-center justify-end gap-2 font-medium lg:flex;
 }
@@ -135,7 +167,7 @@ strong {
 	@apply flex w-full flex-col gap-3 bg-gradient-to-tr from-slate-50 to-zinc-100 bg-clip-text pb-12 text-center text-transparent lg:w-1/2 lg:pr-12 lg:text-left;
 }
 .banner-text span {
-	@apply mx-auto inline-block w-max bg-white px-8 text-3xl font-bold leading-tight tracking-tighter text-sky-900 md:mx-0 lg:text-6xl;
+	@apply mx-auto inline-block w-max bg-white px-8 text-3xl font-bold leading-tight tracking-tighter text-sky-900 lg:mx-0 lg:text-6xl;
 }
 .banner-text span.arrow {
 	@apply bg-transparent p-0 px-1 font-mono text-xl font-black leading-none text-red lg:text-6xl;
@@ -211,7 +243,7 @@ strong {
 	@apply text-center text-xl font-medium leading-6;
 }
 .about-content {
-	@apply mt-20 flex flex-col flex-nowrap items-center justify-around gap-6 md:flex-row;
+	@apply mt-20 flex flex-col flex-nowrap items-center justify-around gap-6 lg:flex-row;
 }
 .content-item {
 	@apply flex flex-row items-center gap-4 rounded-md border-2 p-6 pr-8;
@@ -605,7 +637,7 @@ section {
 	margin: 0;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024.99px) {
 	.course-card {
 		@apply flex-col px-0 pb-4 pt-0;
 	}

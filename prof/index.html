@@ -72,7 +72,7 @@
 								>Войти</a
 							>
 						</div>
-						<div class="hidden w-full flex-row justify-end gap-4 lg:flex">
+						<div class="hidden w-full flex-row justify-end lg:flex">
 							<nav class="header-nav">
 								<ul>
 									<li><a href="#ind">Индивидуальное обучение</a></li>
@@ -136,6 +136,51 @@
 								></a>
 							</div> -->
 						</div>
+						<button class="lg:hidden" id="nav-mobile-button">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="36"
+								height="36"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="3"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="lucide lucide-menu">
+								<line x1="4" x2="20" y1="12" y2="12" />
+								<line x1="4" x2="20" y1="6" y2="6" />
+								<line x1="4" x2="20" y1="18" y2="18" />
+							</svg>
+						</button>
+						<div
+							id="nav-mobile-menu"
+							class="close h-screen w-full bg-gradient-to-r from-sky-700 to-primary">
+							<nav>
+								<button class="absolute right-12 top-12" id="nav-mobile-button-close">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="48"
+										height="48"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="lucide lucide-x">
+										<path d="M18 6 6 18" />
+										<path d="m6 6 12 12" />
+									</svg>
+								</button>
+								<ul>
+									<li><a href="#ind">Индивидуальное обучение</a></li>
+									<li><a href="#group">Обучение в группе</a></li>
+									<li><a href="#seminar">Семинары</a></li>
+									<li><a href="#media">Медиатека</a></li>
+								</ul>
+							</nav>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -150,7 +195,8 @@
 					<h1>Дистанционная образовательная среда</h1>
 					<h2>Общероссийского Профсоюза образования</h2>
 					<p
-						class="mt-4 w-max bg-slate-50/50 px-4 py-1 text-3xl italic tracking-tighter text-sky-950">
+						class="text-balance mx-auto mt-4 w-max max-w-full bg-slate-50/50 px-4 py-1 text-center text-xl italic tracking-tighter text-sky-950 lg:mx-0 lg:text-3xl"
+						style="text-wrap: balance">
 						«Для тех, кто хочет завтра быть лучше, чем сегодня.»
 					</p>
 					<a href="https://edu2pro.ru/portal/" class="button mt-10">Узнавай. Изучай. Применяй.</a>
