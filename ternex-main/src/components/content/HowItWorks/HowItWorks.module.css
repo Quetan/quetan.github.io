@@ -1,0 +1,19 @@
+.steps {
+	@apply flex flex-col gap-6 relative pl-12;
+	counter-reset: step 0;
+}
+
+.steps::before {
+	@apply block h-5/6 top-1/2 -translate-y-1/2 w-1 absolute left-0 bg-muted rounded-full;
+	content: "";
+}
+
+.step {
+	@apply relative;
+	counter-increment: step 1;
+}
+
+.step::before {
+	@apply text-xl font-semibold absolute -left-[4.125rem] px-4 py-2 flex items-center justify-center leading-none aspect-square top-[50%] translate-y-[-50%] bg-muted text-muted-foreground rounded-full;
+	content: counter(step);
+}

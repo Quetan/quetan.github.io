@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1500">
+  <path fill="none" d="M0 0h2000v1500H0z"/>
+  <defs>
+    <path id="a" fill="none" stroke-opacity=".075" stroke-width="125.2" d="m.74-509.63 485.39 352.65-185.4 570.61h-599.97l-185.4-570.61L.74-509.63m0-1.24-486.56 353.51 185.85 571.99h601.42L487.3-157.36.74-510.87z"/>
+  </defs>
+  <g style="transform-origin:center" transform="rotate(-76.8 -22.757 -851.949) scale(.847)">
+    <use stroke="#211034" href="#a" transform="rotate(9.3) scale(1.093)"/>
+    <use stroke="#281344" href="#a" transform="rotate(18.6) scale(1.186)"/>
+    <use stroke="#2e1655" href="#a" transform="rotate(27.9) scale(1.279)"/>
+    <use stroke="#331867" href="#a" transform="rotate(37.2) scale(1.372)"/>
+    <use stroke="#361979" href="#a" transform="rotate(46.5) scale(1.465)"/>
+    <use stroke="#371a8c" href="#a" transform="rotate(55.8) scale(1.558)"/>
+    <use stroke="#361a9f" href="#a" transform="rotate(65.1) scale(1.651)"/>
+    <use stroke="#331ab3" href="#a" transform="rotate(74.4) scale(1.744)"/>
+    <use stroke="#2e19c8" href="#a" transform="rotate(83.7) scale(1.837)"/>
+    <use stroke="#2717dd" href="#a" transform="rotate(93) scale(1.93)"/>
+    <use stroke="#241cec" href="#a" transform="rotate(102.3) scale(2.023)"/>
+    <use stroke="#2b2cf1" href="#a" transform="rotate(111.6) scale(2.116)"/>
+    <use stroke="#3a44f5" href="#a" transform="rotate(120.9) scale(2.209)"/>
+    <use stroke="#4a5af9" href="#a" transform="rotate(130.2) scale(2.302)"/>
+    <use stroke="#5a71fc" href="#a" transform="rotate(139.5) scale(2.395)"/>
+    <use stroke="#6B86FF" href="#a" transform="rotate(148.8) scale(2.488)"/>
+  </g>
+</svg>
