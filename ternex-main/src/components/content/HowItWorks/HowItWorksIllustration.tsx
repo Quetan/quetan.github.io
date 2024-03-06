@@ -12,7 +12,7 @@ const HowItWorksIllustration: FC<IProps> = ({ size }) => {
 			width={size}
 			height={size}
 			viewBox="0 0 2400 2400"
-			className="drop-shadow-xl shadow-primary"
+			style={{ filter: "drop-shadow(0px 0px 250px hsl(var(--accent)))" }}
 		>
 			<path
 				fill="#70769E"

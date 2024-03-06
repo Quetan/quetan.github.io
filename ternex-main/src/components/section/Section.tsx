@@ -1,4 +1,6 @@
+import { cn } from "@/lib/utils";
 import type { FC, HTMLAttributes, PropsWithChildren } from "react";
+import SectionTitle from "./SectionTitle";
 
 interface ISection extends PropsWithChildren {
 	title: string;
@@ -7,10 +9,11 @@ interface ISection extends PropsWithChildren {
 
 const Section: FC<ISection> = ({ children, title, props }) => {
 	return (
-		<section className="min-h-dvh container pt-32 pb-16" {...props}>
-			<h1 className="bg-gradient-to-br text-transparent bg-clip-text text-5xl font-bold leading-none mb-12 to-accent from-accent-foreground from-10%">
-				{title}
-			</h1>
+		<section
+			{...props}
+			className={cn("min-h-dvh container pt-32 pb-16", props?.className)}
+		>
+			<SectionTitle title={title} />
 			{children}
 		</section>
 	);

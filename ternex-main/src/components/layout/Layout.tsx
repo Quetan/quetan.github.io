@@ -7,6 +7,8 @@ import Divider from "../divider/Divider";
 import HowItWorks from "../content/HowItWorks/HowItWorks";
 import WeOffer from "../content/WeOffer/WeOffer";
 import fond from "../../assets/fond.webp";
+import HowToStart from "../content/HowToStart/HowToStart";
+import Footer from "../footer/Footer";
 
 const Layout: FC = () => {
 	return (
@@ -46,8 +48,11 @@ const Layout: FC = () => {
 						</p>
 					</div>
 				</Divider>
-				<Section title="Как начать?"></Section>
+				<Section title="Как начать?">
+					<HowToStart />
+				</Section>
 			</main>
+			<Footer />
 		</div>
 	);
 };

@@ -17,8 +17,7 @@ const MainSection: FC = () => {
 					Создавай сеть где угодно!
 				</h1>
 				<span className="text-center text-balance w-10/12 text-3xl font-medium tracking-tighter leading-snug">
-					Беспроводные сети нового поколения для вашего бизнеса или дома с
-					компанией Ternex
+					Беспроводные сети нового поколения для вашего бизнеса или дома
 				</span>
 			</div>
 			<Button size="lg" variant="default">
