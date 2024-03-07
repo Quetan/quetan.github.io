@@ -37,7 +37,7 @@ const Layout: FC = () => {
 						<img
 							width="400"
 							height="268"
-							className="h-32 w-auto"
+							className="h-32 w-auto drop-shadow-md"
 							src={fond}
 							alt="Фонд содействия инновациям"
 						/>

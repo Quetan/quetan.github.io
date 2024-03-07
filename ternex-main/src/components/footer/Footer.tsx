@@ -37,17 +37,17 @@ const Footer: FC = () => {
 							href="https://www.youtube.com/@ternex_mesh"
 						/>
 					</li>
-					<li>
-						<FooterLink label='ООО "Тернекс"' text="ИНН: 2222877678" href="" />
-					</li>
-					<li className="text-sm">
-						<FooterLink
-							label="Пользовательское соглашение"
-							text="ознакомиться"
-							href="https://ternex.ru/static/landing/html/agreement.html"
-						/>
-					</li>
 				</ul>
+				<div className="text-sm text-muted-foreground flex flex-row flex-wrap gap-4 absolute bottom-8 left-1/2 -translate-x-1/2">
+					<span>ООО "Тернекс"</span>
+					<span>ИНН: 2222877678</span>
+					<a
+						className="hover:underline"
+						href="https://ternex.ru/static/landing/html/agreement.html"
+					>
+						Пользовательское соглашение
+					</a>
+				</div>
 			</div>
 			<div className="absolute -z-10 top-1/2 -translate-y-1/2 right-0">
 				<FooterIllustration size={750} />

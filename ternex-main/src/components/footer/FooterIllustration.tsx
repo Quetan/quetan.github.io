@@ -11,7 +11,9 @@ const FooterIllustration: FC<IProps> = ({ size }) => {
 			viewBox="0 0 2400 2400"
 			width={size}
 			height={size}
-			style={{ filter: "drop-shadow(0px 0px 250px hsl(var(--accent)))" }}
+			style={{
+				filter: "drop-shadow(0px 0px 250px hsl(var(--accent)))",
+			}}
 		>
 			<path
 				fill="#742B21"

@@ -1,6 +1,8 @@
 import type { FC } from "react";
 import offers from "./offers";
 import WeOfferBlock from "./WeOfferBlock";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import WeOfferModal from "./WeOfferModal";
 
 export interface IOffer {
 	title: string;
@@ -13,7 +15,12 @@ const WeOfferGrid: FC = () => {
 	return (
 		<div className="grid grid-cols-4 gap-4">
 			{offers.map((offer, index) => (
-				<WeOfferBlock key={index} offer={offer} />
+				<Dialog key={index}>
+					<DialogTrigger>
+						<WeOfferBlock offer={offer} />
+					</DialogTrigger>
+					<WeOfferModal offer={offer} />
+				</Dialog>
 			))}
 		</div>
 	);

@@ -9,18 +9,13 @@ interface IProps {
 const FooterLink: FC<IProps> = ({ href, text, label }) => {
 	return (
 		<>
-			<span className="text-4xl font-medium">{label}:</span>
-			{href ? (
-				<a
-					className="text-4xl text-muted-foreground hover:underline"
-					href={href}
-				>
-					{" "}
-					{text}
-				</a>
-			) : (
-				<span className="text-4xl text-muted-foreground"> {text}</span>
-			)}
+			<span className="text-4xl font-medium">{label}: </span>
+			<a
+				className="rounded-full bg-accent/50 px-4 text-4xl text-accent-foreground hover:underline"
+				href={href}
+			>
+				{text}
+			</a>
 		</>
 	);
 };
