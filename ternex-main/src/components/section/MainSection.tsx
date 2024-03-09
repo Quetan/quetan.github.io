@@ -55,8 +55,8 @@ const MainSection: FC = () => {
 				</div>
 			</motion.div>
 			<motion.div {...Motion.Button}>
-				<Button size="lg" variant="default">
-					Узнать больше
+				<Button size="lg" variant="default" asChild>
+					<a href="#about-technology">Узнать больше</a>
 				</Button>
 			</motion.div>
 		</section>

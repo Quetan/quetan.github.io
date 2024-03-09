@@ -9,13 +9,12 @@ interface IProps {
 }
 
 const Footer: FC<IProps> = ({ id }) => {
-	const { innerWidth } = window;
 	return (
 		<footer
 			id={id}
 			className="relative min-h-dvh pt-32 pb-16 bg-gradient-to-b from-accent/15 via-accent/20 via-60% to-background"
 		>
-			<div className="container">
+			<div className="container flex flex-col">
 				<SectionTitle title="Контакты" />
 				<ul className="flex flex-col gap-8">
 					<li>
@@ -59,15 +58,15 @@ const Footer: FC<IProps> = ({ id }) => {
 				</div>
 			</div>
 			<motion.div
-				initial={{ opacity: 0, right: innerWidth < 768 ? 300 : 1000 }}
+				initial={{ opacity: 0, right: 1000 }}
 				whileInView={{
 					opacity: 1,
-					right: innerWidth < 768 ? -50 : 0,
+					right: 0,
 					transition: { type: "spring", damping: 14, duration: 0.6 },
 				}}
 				className="absolute -z-10 top-1/2 -translate-y-1/2 right-0 will-change-transform"
 			>
-				<FooterIllustration size={innerWidth < 768 ? 300 : 750} />
+				<FooterIllustration className="hidden lg:block" size={750} />
 			</motion.div>
 		</footer>
 	);
