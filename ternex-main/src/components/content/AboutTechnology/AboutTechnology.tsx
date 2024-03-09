@@ -83,7 +83,7 @@ const AboutTechnology: FC = () => {
 						</li>
 					</ul>
 				</div>
-				<AboutAdvantagesIllustration size={450} />
+				<AboutAdvantagesIllustration size={innerWidth < 768 ? 200 : 450} />
 			</div>
 		</>
 	);

@@ -15,6 +15,7 @@ const AboutAdvantagesIllustration: FC<IProps> = ({ size }) => {
 				height={size}
 				viewBox="0 0 2400 2400"
 				style={{ filter: "drop-shadow(0px 0px 250px hsl(var(--accent)))" }}
+				className="hidden lg:block"
 			>
 				<path
 					fill="#5564A9"

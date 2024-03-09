@@ -14,6 +14,7 @@ const WeOfferIllustration: FC<IProps> = ({ size }) => {
 			style={{
 				filter: "drop-shadow(0px 0px 250px hsl(var(--accent))) blur(2px)",
 			}}
+			className="hidden lg:block"
 		>
 			<path
 				fill="#EFDAC1"

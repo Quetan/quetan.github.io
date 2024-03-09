@@ -40,7 +40,7 @@ const HowToStart: FC = () => {
 				</article>
 			</div>
 			<div className="absolute -z-10 top-1/2 -translate-y-1/2 left-0 -translate-x-3/4 opacity-25">
-				<HowToStartIllustration size={750} />
+				<HowToStartIllustration size={window.innerWidth < 768 ? 0 : 750} />
 			</div>
 		</div>
 	);
