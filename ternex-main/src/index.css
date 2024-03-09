@@ -99,9 +99,13 @@
 		@apply border-border  scroll-smooth;
 	}
 	body {
-		@apply bg-background text-foreground overflow-x-hidden;
+		@apply bg-background text-foreground;
 	}
 	b {
 		@apply font-medium;
 	}
+}
+
+#root {
+	overflow-x: hidden !important;
 }

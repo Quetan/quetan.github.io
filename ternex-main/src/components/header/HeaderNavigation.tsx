@@ -6,7 +6,7 @@ const HeaderNavigation: FC = () => {
 	return (
 		<nav className="flex flex-row items-center">
 			<Socials />
-			<ul className="flex flex-row items-center px-8">
+			<ul className="hidden lg:flex flex-row items-center px-8">
 				<li className="text-sm leading-none tracking-tighter underline-offset-2 hover:underline">
 					<a className="p-3" href="#about-technology">
 						О технологии

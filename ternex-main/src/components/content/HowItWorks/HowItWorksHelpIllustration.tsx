@@ -14,6 +14,7 @@ const HowItWorksHelpIllustration: FC<IProps> = ({ size }) => {
 				width={size}
 				height={size}
 				style={{ filter: "drop-shadow(0px 0px 250px hsl(var(--accent)))" }}
+				className="hidden lg:block"
 			>
 				<defs>
 					<linearGradient

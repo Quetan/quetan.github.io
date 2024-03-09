@@ -11,7 +11,10 @@ const Section: FC<ISection> = ({ children, title, props }) => {
 	return (
 		<section
 			{...props}
-			className={cn("min-h-dvh container pt-32 pb-16", props?.className)}
+			className={cn(
+				"min-h-dvh container pt-24 pb-12 lg:pt-32 lg:pb-16",
+				props?.className
+			)}
 		>
 			<SectionTitle title={title} />
 			{children}

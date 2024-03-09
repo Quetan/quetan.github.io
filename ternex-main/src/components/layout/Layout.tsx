@@ -49,15 +49,16 @@ const Layout: FC = () => {
 					<WeOffer />
 				</Section>
 				<Divider>
-					<div className="flex flex-row items-center gap-4">
+					<div className="flex flex-col md:flex-row items-center gap-4">
 						<img
+							loading="lazy"
 							width="400"
 							height="268"
 							className="h-32 w-auto drop-shadow-md"
 							src={fond}
 							alt="Фонд содействия инновациям"
 						/>
-						<p>
+						<p className="text-center md:text-left">
 							Компания ООО «Тернекс» — победитель конкурса «Старт SUV-2019»
 							организованного Сколково и Фондом содействия инновациям,
 							исполнитель гранта Фонда содействия инновациям.

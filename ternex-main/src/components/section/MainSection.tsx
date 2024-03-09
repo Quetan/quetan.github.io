@@ -35,7 +35,7 @@ const MainSection: FC = () => {
 		<section className="flex-col gap-8 min-h-screen bg-no-repeat bg-center bg-cover bg-main-section flex items-center justify-center">
 			<motion.div
 				{...Motion.Title}
-				className="text-transparent bg-clip-text bg-gradient-to-b from-primary via-primary to-accent via-60% flex flex-col items-center gap-8 "
+				className="text-transparent bg-clip-text bg-gradient-to-b from-primary via-primary to-accent via-60% flex flex-col items-center gap-8 container"
 			>
 				<span
 					className="text-[7rem] font-bold leading-none tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-primary to-accent from-60%"

@@ -6,7 +6,7 @@ import AboutTechnologyHelper from "./AboutTechnologyHelper";
 const AboutTechnology: FC = () => {
 	return (
 		<>
-			<div className="grid grid-cols-[450px_1fr] items-center gap-8">
+			<div className="flex flex-col-reverse lg:grid lg:grid-cols-[450px_1fr] items-center gap-8">
 				<AboutTechnoogyIllustration size={450} />
 				<div>
 					<h2 className="text-3xl mt-4 mb-6 font-medium">
@@ -35,7 +35,7 @@ const AboutTechnology: FC = () => {
 
 			<AboutTechnologyHelper />
 
-			<div className="grid grid-cols-[1fr_450px] items-center gap-8">
+			<div className="flex flex-col-reverse lg:grid lg:grid-cols-[1fr_450px] items-center gap-8">
 				<div>
 					<h2 className="text-3xl mt-4 mb-6 font-medium">
 						Преимущества технологии -{" "}
