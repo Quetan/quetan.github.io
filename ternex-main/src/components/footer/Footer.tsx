@@ -2,10 +2,18 @@ import type { FC } from "react";
 import SectionTitle from "../section/SectionTitle";
 import FooterLink from "./FooterLink";
 import FooterIllustration from "./FooterIllustration";
+import { motion } from "framer-motion";
 
-const Footer: FC = () => {
+interface IProps {
+	id: string;
+}
+
+const Footer: FC<IProps> = ({ id }) => {
 	return (
-		<footer className="relative min-h-dvh pt-32 pb-16 bg-gradient-to-b from-accent/15 via-accent/20 via-60% to-background">
+		<footer
+			id={id}
+			className="relative min-h-dvh pt-32 pb-16 bg-gradient-to-b from-accent/15 via-accent/20 via-60% to-background"
+		>
 			<div className="container">
 				<SectionTitle title="Контакты" />
 				<ul className="flex flex-col gap-8">
@@ -49,9 +57,17 @@ const Footer: FC = () => {
 					</a>
 				</div>
 			</div>
-			<div className="absolute -z-10 top-1/2 -translate-y-1/2 right-0">
+			<motion.div
+				initial={{ opacity: 0, right: 1000 }}
+				whileInView={{
+					opacity: 1,
+					right: 0,
+					transition: { type: "spring", damping: 14, duration: 0.6 },
+				}}
+				className="absolute -z-10 top-1/2 -translate-y-1/2 right-0 will-change-transform"
+			>
 				<FooterIllustration size={750} />
-			</div>
+			</motion.div>
 		</footer>
 	);
 };

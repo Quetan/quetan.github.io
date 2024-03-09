@@ -14,29 +14,28 @@ const HowToStart: FC = () => {
 					<h1 className="text-center text-2xl font-medium">Для частных лиц</h1>
 					<p>
 						Ищите роутеры с предустановленным программным обеспечением Ternex у
-						наших партнеров на маркетплейсах и Avito.
+						наших партнеров.
 					</p>
 					<p className="text-muted-foreground">
-						Не смогли ничего подобрать? Оставьте заявку. Менеджер подберет для
-						Ваc оптимальную модель и способ доставки.
+						Не смогли ничего подобрать? Менеджер подберет для Ваc оптимальную
+						модель и способ доставки.
 					</p>
 					<Button size="lg" className="w-max mx-auto mt-auto">
-						Написать
+						Оставить заявку
 					</Button>
 				</article>
 				<article className="flex flex-col gap-4 bg-muted/40 backdrop-blur p-6 rounded-lg border-primary/30 border-2">
 					<h1 className="text-center text-2xl font-medium">Для организаций</h1>
 					<p>
 						Нужна большая партия оборудования или компьютерная сеть
-						корпоративного уровня? Оставьте заявку!
+						корпоративного уровня?
 					</p>
 					<p className="text-muted-foreground">
 						Наши специалисты бесплатно подготовят первичный проект сетевой
-						инфраструктуры и подберут оптимальную аппаратную часть. Оборудование
-						можно будет взять на тест или в аренду.
+						инфраструктуры и подберут оптимальную аппаратную часть.
 					</p>
 					<Button size="lg" className="w-max mx-auto mt-auto">
-						Написать
+						Оставить заявку
 					</Button>
 				</article>
 			</div>

@@ -53,7 +53,16 @@
 		font-size: 18px;
 		font-family: "Tektur Variable", system-ui, serif !important;
 	}
-
+	@media screen and (max-width: 900.99px) {
+		:root {
+			font-size: 16px;
+		}
+	}
+	@media screen and (max-width: 425.99px) {
+		:root {
+			font-size: 14px;
+		}
+	}
 	.dark {
 		--background: 242 94% 7%;
 		--foreground: 229 100% 98%;
@@ -87,7 +96,7 @@
 
 @layer base {
 	* {
-		@apply border-border;
+		@apply border-border  scroll-smooth;
 	}
 	body {
 		@apply bg-background text-foreground overflow-x-hidden;

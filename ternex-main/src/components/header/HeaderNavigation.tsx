@@ -8,22 +8,27 @@ const HeaderNavigation: FC = () => {
 			<Socials />
 			<ul className="flex flex-row items-center px-8">
 				<li className="text-sm leading-none tracking-tighter underline-offset-2 hover:underline">
-					<a className="p-3" href="#">
+					<a className="p-3" href="#about-technology">
 						О технологии
 					</a>
 				</li>
 				<li className="text-sm leading-none tracking-tighter underline-offset-2 hover:underline">
-					<a className="p-3" href="#">
-						Что мы предлагаем
-					</a>
-				</li>
-				<li className="text-sm leading-none tracking-tighter underline-offset-2 hover:underline">
-					<a className="p-3" href="#">
+					<a className="p-3" href="#how-it-works">
 						Установка
 					</a>
 				</li>
 				<li className="text-sm leading-none tracking-tighter underline-offset-2 hover:underline">
-					<a className="p-3" href="#">
+					<a className="p-3" href="#what-we-offer">
+						Предложения
+					</a>
+				</li>
+				<li className="text-sm leading-none tracking-tighter underline-offset-2 hover:underline">
+					<a className="p-3" href="#how-to-start">
+						Преобрести
+					</a>
+				</li>
+				<li className="text-sm leading-none tracking-tighter underline-offset-2 hover:underline">
+					<a className="p-3" href="#contacts">
 						Контакты
 					</a>
 				</li>

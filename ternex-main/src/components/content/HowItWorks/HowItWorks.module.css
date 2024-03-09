@@ -9,11 +9,15 @@
 }
 
 .step {
-	@apply relative;
+	@apply relative transition-colors;
 	counter-increment: step 1;
 }
 
 .step::before {
 	@apply text-xl font-semibold absolute -left-[4.125rem] px-4 py-2 flex items-center justify-center leading-none aspect-square top-[50%] translate-y-[-50%] bg-muted text-muted-foreground rounded-full;
 	content: counter(step);
+}
+
+.step:hover::before {
+	@apply bg-accent text-accent-foreground;
 }

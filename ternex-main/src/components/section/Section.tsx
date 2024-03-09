@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import type { FC, HTMLAttributes, PropsWithChildren } from "react";
+import { type FC, type HTMLAttributes, type PropsWithChildren } from "react";
 import SectionTitle from "./SectionTitle";
 
 interface ISection extends PropsWithChildren {

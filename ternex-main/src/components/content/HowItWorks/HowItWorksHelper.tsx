@@ -6,7 +6,7 @@ const HowItWorksHelper: FC = () => {
 		<Helper title="Нужна помощь?">
 			<ul className="flex flex-col gap-2 list-disc pl-6">
 				<li>
-					Документация -{" "}
+					Документация —{" "}
 					<a
 						className="text-muted-foreground underline-offset-2 hover:underline"
 						target="_blank"
@@ -16,7 +16,7 @@ const HowItWorksHelper: FC = () => {
 					</a>
 				</li>
 				<li>
-					Запрос в систему поддержки в личном кабинете Email –{" "}
+					Запрос в систему поддержки в личном кабинете Email —{" "}
 					<a
 						className="text-muted-foreground underline-offset-2 hover:underline"
 						target="_blank"
@@ -26,7 +26,7 @@ const HowItWorksHelper: FC = () => {
 					</a>
 				</li>
 				<li>
-					Публичный чат поддержки -{" "}
+					Публичный чат поддержки —{" "}
 					<a
 						className="text-muted-foreground underline-offset-2 hover:underline"
 						target="_blank"
@@ -36,7 +36,7 @@ const HowItWorksHelper: FC = () => {
 					</a>
 				</li>
 				<li>
-					Видео-уроки -{" "}
+					Видео-уроки —{" "}
 					<a
 						className="text-muted-foreground underline-offset-2 hover:underline"
 						target="_blank"
