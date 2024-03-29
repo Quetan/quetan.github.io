@@ -2,22 +2,13 @@ import { useState, type FC } from "react";
 
 import offers from "./offers";
 import { IOffer } from "./WeOfferGrid";
+import WeOfferItem from "./WeOfferItem";
 
 const WeOfferTabs: FC = () => {
 	const [currentOffer, setCurrentOffer] = useState<IOffer>(offers[0]);
 	return (
 		<div className="flex flex-col gap-12">
-			<article className="h-[50vh] flex flex-col gap-6 justify-center items-center text-center w-3/4 mx-auto">
-				<span className="text-lg label px-4 py-2 bg-muted text-muted-foreground font-medium rounded-md">
-					{currentOffer.title}
-				</span>
-				<h1 className="title text-3xl font-semibold">
-					{currentOffer.subtitle}
-				</h1>
-				<p className="subtitle text-muted-foreground">
-					{currentOffer.description}
-				</p>
-			</article>
+			<WeOfferItem offer={currentOffer} />
 			<div className="gap-4 items-start grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				{offers.map((offer, index) => (
 					<button

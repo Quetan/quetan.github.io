@@ -65,7 +65,12 @@ const MainSection: FC = () => {
 				</div>
 			</motion.div>
 			<motion.div {...Motion.Button} className="z-10">
-				<Button size="lg" variant="default" asChild>
+				<Button
+					size="lg"
+					variant="default"
+					className="bg-accent hover:bg-accent/90 text-white hover:text-white"
+					asChild
+				>
 					<a href="#about-technology">Узнать больше</a>
 				</Button>
 			</motion.div>

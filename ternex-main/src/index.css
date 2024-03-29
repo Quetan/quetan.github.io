@@ -52,6 +52,7 @@
 
 		font-size: 18px;
 		font-family: "Tektur Variable", system-ui, serif !important;
+		scroll-behavior: smooth !important;
 	}
 	@media screen and (max-width: 900.99px) {
 		:root {
@@ -108,5 +109,4 @@
 
 #root {
 	overflow-x: hidden !important;
-	scroll-behavior: smooth !important;
 }
