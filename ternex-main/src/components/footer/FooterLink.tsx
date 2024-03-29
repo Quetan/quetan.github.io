@@ -8,12 +8,10 @@ interface IProps {
 
 const FooterLink: FC<IProps> = ({ href, text, label }) => {
 	return (
-		<div className="flex flex-col gap-2 md:inline md:gap-0">
-			<span className="text-xl md:text-3xl lg:text-4xl font-medium">
-				{label}:{" "}
-			</span>
+		<div className="flex flex-col gap-1 md:inline md:gap-0">
+			<span className="font-medium text-xs">{label}: </span>
 			<a
-				className="px-4 text-xl md:text-3xl lg:text-4xl text-muted-foreground hover:underline"
+				className="px-2 text-xs text-muted-foreground hover:underline"
 				href={href}
 			>
 				{text}

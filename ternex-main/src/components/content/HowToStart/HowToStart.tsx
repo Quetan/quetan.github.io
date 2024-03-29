@@ -20,8 +20,8 @@ const HowToStart: FC = () => {
 						Не смогли ничего подобрать? Менеджер подберет для Ваc оптимальную
 						модель и способ доставки.
 					</p>
-					<Button size="lg" className="w-max mx-auto mt-auto">
-						Оставить заявку
+					<Button size="lg" className="w-max mx-auto mt-auto" asChild>
+						<a href="#contacts">Оставить заявку</a>
 					</Button>
 				</article>
 				<article className="flex flex-col gap-4 bg-muted/40 backdrop-blur p-6 rounded-lg border-primary/30 border-2">
@@ -34,8 +34,8 @@ const HowToStart: FC = () => {
 						Наши специалисты бесплатно подготовят первичный проект сетевой
 						инфраструктуры и подберут оптимальную аппаратную часть.
 					</p>
-					<Button size="lg" className="w-max mx-auto mt-auto">
-						Оставить заявку
+					<Button size="lg" className="w-max mx-auto mt-auto" asChild>
+						<a href="#contacts">Оставить заявку</a>
 					</Button>
 				</article>
 			</div>

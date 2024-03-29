@@ -3,6 +3,7 @@ import SectionTitle from "../section/SectionTitle";
 import FooterLink from "./FooterLink";
 import FooterIllustration from "./FooterIllustration";
 import { motion } from "framer-motion";
+import FooterForm from "./FooterForm";
 
 interface IProps {
 	id: string;
@@ -12,11 +13,14 @@ const Footer: FC<IProps> = ({ id }) => {
 	return (
 		<footer
 			id={id}
-			className="relative min-h-dvh pt-32 pb-16 bg-gradient-to-b from-accent/15 via-accent/20 via-60% to-background"
+			className="relative min-h-dvh pt-32 pb-40 bg-gradient-to-b from-accent/15 via-accent/20 via-60% to-background"
 		>
 			<div className="container flex flex-col">
 				<SectionTitle title="Контакты" />
-				<ul className="flex flex-col gap-8">
+
+				<FooterForm />
+
+				<ul className="flex flex-col gap-2">
 					<li>
 						<FooterLink
 							label="Email"
@@ -46,6 +50,7 @@ const Footer: FC<IProps> = ({ id }) => {
 						/>
 					</li>
 				</ul>
+
 				<div className="text-sm text-muted-foreground flex flex-row flex-wrap gap-4 absolute bottom-8 left-1/2 -translate-x-1/2">
 					<span>ООО "Тернекс"</span>
 					<span>ИНН: 2222877678</span>

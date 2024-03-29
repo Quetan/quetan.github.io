@@ -8,7 +8,7 @@ const WeOfferTabs: FC = () => {
 	return (
 		<div className="flex flex-col gap-12">
 			<article className="h-[50vh] flex flex-col gap-6 justify-center items-center text-center w-3/4 mx-auto">
-				<span className="text-lg label p-2 bg-muted text-muted-foreground font-medium rounded-md">
+				<span className="text-lg label px-4 py-2 bg-muted text-muted-foreground font-medium rounded-md">
 					{currentOffer.title}
 				</span>
 				<h1 className="title text-3xl font-semibold">

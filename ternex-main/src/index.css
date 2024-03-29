@@ -96,7 +96,7 @@
 
 @layer base {
 	* {
-		@apply border-border  scroll-smooth;
+		@apply border-border;
 	}
 	body {
 		@apply bg-background text-foreground;
@@ -108,4 +108,5 @@
 
 #root {
 	overflow-x: hidden !important;
+	scroll-behavior: smooth !important;
 }
