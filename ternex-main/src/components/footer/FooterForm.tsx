@@ -60,7 +60,7 @@ const FooterForm: FC = () => {
 	};
 
 	return (
-		<div className="px-8 py-6 border-2 border-primary/20 rounded-xl bg-primary/10 backdrop-blur-xl w-full md:max-w-[420px] lg:max-w-[600px] xl:max-w-[720px] my-6">
+		<div className="px-8 py-6 border-2 border-primary/20 rounded-xl bg-primary/10 backdrop-blur-xl my-6">
 			<h1 className="text-center text-2xl font-medium mb-4">Форма связи</h1>
 			<Form {...form}>
 				<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
@@ -76,7 +76,7 @@ const FooterForm: FC = () => {
 									<Input placeholder="example@email.ru" {...field} />
 								</FormControl>
 								<FormDescription>
-									Введите ваш адрес электронной почты.
+									Введите адрес электронной почты.
 								</FormDescription>
 								<FormMessage />
 							</FormItem>
@@ -94,7 +94,7 @@ const FooterForm: FC = () => {
 									<Input placeholder="+7 (999) 999-99-99" {...field} />
 								</FormControl>
 								<FormDescription>
-									Введите ваш номер телефона для связи.
+									Введите номер телефона для связи.
 								</FormDescription>
 								<FormMessage />
 							</FormItem>

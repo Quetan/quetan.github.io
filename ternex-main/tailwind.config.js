@@ -21,7 +21,7 @@ export default {
 		},
 		extend: {
 			backgroundImage: {
-				"main-section": "url('/src/assets/map.svg')",
+				"main-section": "url('/src/assets/contourMap.svg')",
 			},
 			colors: {
 				black: "#020122",

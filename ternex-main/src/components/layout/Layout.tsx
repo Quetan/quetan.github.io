@@ -54,9 +54,12 @@ const Layout: FC = () => {
 							loading="lazy"
 							width="400"
 							height="268"
-							className="h-32 w-auto drop-shadow-md"
+							className="h-32 w-auto"
 							src={fond}
 							alt="Фонд содействия инновациям"
+							style={{
+								filter: "drop-shadow(0px 0px 25px hsl(var(--accent)))",
+							}}
 						/>
 						<p className="text-center md:text-left">
 							Компания ООО «Тернекс» — победитель конкурса «Старт SUV-2019»

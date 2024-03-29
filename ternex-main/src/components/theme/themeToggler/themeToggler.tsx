@@ -15,7 +15,7 @@ export function ThemeToggler() {
 	return (
 		<Button
 			onClick={toggleTheme}
-			className="fixed bottom-[5dvh] right-4"
+			className="fixed bottom-[5dvh] right-4 z-50"
 			variant="link"
 			size="icon"
 		>

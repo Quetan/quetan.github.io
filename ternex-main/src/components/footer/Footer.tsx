@@ -18,38 +18,40 @@ const Footer: FC<IProps> = ({ id }) => {
 			<div className="container flex flex-col">
 				<SectionTitle title="Контакты" />
 
-				<FooterForm />
+				<div className=" w-full md:max-w-[420px] lg:max-w-[600px] xl:max-w-[720px]">
+					<ul className="grid grid-cols-2 px-4 gap-2">
+						<li>
+							<FooterLink
+								label="Email"
+								text="info@ternex.ru"
+								href="mailto:support@ternex.ru"
+							/>
+						</li>
+						<li>
+							<FooterLink
+								label="Телефон для связи"
+								text="+7 (906) 196 52-00"
+								href="tel:+79061965200"
+							/>
+						</li>
+						<li>
+							<FooterLink
+								label="Telegram"
+								text="tg/@ternex_mesh"
+								href="https://t.me/ternex_setup"
+							/>
+						</li>
+						<li>
+							<FooterLink
+								label="YouTube"
+								text="youtube/@ternex_mesh"
+								href="https://www.youtube.com/@ternex_mesh"
+							/>
+						</li>
+					</ul>
 
-				<ul className="flex flex-col gap-2">
-					<li>
-						<FooterLink
-							label="Email"
-							text="info@ternex.ru"
-							href="mailto:support@ternex.ru"
-						/>
-					</li>
-					<li>
-						<FooterLink
-							label="Телефон для связи"
-							text="+7 (906) 196 52-00"
-							href="tel:+79061965200"
-						/>
-					</li>
-					<li>
-						<FooterLink
-							label="Telegram"
-							text="tg/@ternex_mesh"
-							href="https://t.me/ternex_setup"
-						/>
-					</li>
-					<li>
-						<FooterLink
-							label="YouTube"
-							text="youtube/@ternex_mesh"
-							href="https://www.youtube.com/@ternex_mesh"
-						/>
-					</li>
-				</ul>
+					<FooterForm />
+				</div>
 
 				<div className="text-sm text-muted-foreground flex flex-row flex-wrap gap-4 absolute bottom-8 left-1/2 -translate-x-1/2">
 					<span>ООО "Тернекс"</span>
