@@ -24,7 +24,7 @@ const HeaderNavigation: FC = () => {
 				</li>
 				<li className="text-sm leading-none tracking-tighter underline-offset-2 hover:underline">
 					<a className="p-3" href="#how-to-start">
-						Преобрести
+						Приобрести
 					</a>
 				</li>
 				<li className="text-sm leading-none tracking-tighter underline-offset-2 hover:underline">

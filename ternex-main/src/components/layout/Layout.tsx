@@ -66,7 +66,7 @@ const Layout: FC = () => {
 					</div>
 				</Divider>
 				<Section
-					title="Как преобрести?"
+					title="Как приобрести?"
 					props={{
 						id: "how-to-start",
 					}}

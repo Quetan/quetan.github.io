@@ -4,12 +4,14 @@ import WeOfferBlock from "./WeOfferBlock";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import WeOfferModal from "./WeOfferModal";
 import { motion } from "framer-motion";
+import { LucideIcon } from "lucide-react";
 
 export interface IOffer {
 	title: string;
 	subtitle: string;
 	description: string;
 	price: string;
+	icon: LucideIcon;
 }
 
 const WeOfferGrid: FC = () => {
