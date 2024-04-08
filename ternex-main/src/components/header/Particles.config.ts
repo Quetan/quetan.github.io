@@ -1,5 +1,6 @@
 import { ISourceOptions } from "@tsparticles/engine";
-import map from "../../assets/contourMap.svg";
+// import map from "../../assets/contourMap.svg";
+// import map2 from "../../assets/map2.svg";
 
 export const particlesConfig: ISourceOptions = {
 	autoPlay: true,
@@ -7,7 +8,7 @@ export const particlesConfig: ISourceOptions = {
 		color: {
 			value: "transparent",
 		},
-		image: `url('${map}')`,
+		// image: `url('${map2}')`,
 		position: "center",
 		repeat: "no-repeat",
 		size: "contain",

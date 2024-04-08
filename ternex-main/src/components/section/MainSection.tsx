@@ -1,7 +1,8 @@
 import { type FC } from "react";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
-import MapVector from "../Map/MapVector";
+// import MapVector from "../Map/MapVector";
+import MapVector2 from "../Map/MapVector2";
 
 const Motion = {
 	Title: {
@@ -33,8 +34,9 @@ const Motion = {
 
 const MainSection: FC = () => {
 	return (
-		<section className="flex-col gap-8 min-h-screen flex items-center justify-center relative">
-			<MapVector />
+		<section className="flex-col gap-8 min-h-screen flex items-center justify-center relative overflow-hidden">
+			{/* <MapVector /> */}
+			<MapVector2 />
 			<motion.div
 				{...Motion.Title}
 				className="text-white stroke-muted flex flex-col items-center gap-8 container z-10"

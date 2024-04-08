@@ -53,9 +53,12 @@ const Footer: FC<IProps> = ({ id }) => {
 					<FooterForm />
 				</div>
 
-				<div className="text-sm text-muted-foreground flex flex-row flex-wrap gap-4 absolute bottom-8 left-1/2 -translate-x-1/2">
+				<div className="text-sm text-muted-foreground text-center flex flex-row flex-wrap gap-4 absolute bottom-8 left-1/2 -translate-x-1/2">
 					<span>ООО "Тернекс"</span>
 					<span>ИНН: 2222877678</span>
+					<a className="hover:underline" href="https://ternex.ru/franchise/">
+						Франшиза Ternex
+					</a>
 					<a
 						className="hover:underline"
 						href="https://ternex.ru/static/landing/html/agreement.html"

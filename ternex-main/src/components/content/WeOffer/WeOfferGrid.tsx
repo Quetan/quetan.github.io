@@ -1,10 +1,10 @@
 import type { FC } from "react";
 import offers from "./offers";
-import WeOfferBlock from "./WeOfferBlock";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import WeOfferModal from "./WeOfferModal";
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
+import WeOfferItemWithIcon from "./WeOfferItemWithIcon";
 
 export interface IOffer {
 	title: string;
@@ -12,6 +12,7 @@ export interface IOffer {
 	description: string;
 	price: string;
 	icon: LucideIcon;
+	website?: string;
 }
 
 const WeOfferGrid: FC = () => {
@@ -35,7 +36,7 @@ const WeOfferGrid: FC = () => {
 				>
 					<Dialog>
 						<DialogTrigger className="w-full">
-							<WeOfferBlock offer={offer} />
+							<WeOfferItemWithIcon offer={offer} />
 						</DialogTrigger>
 						<WeOfferModal offer={offer} />
 					</Dialog>
