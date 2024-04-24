@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import { Toaster } from "@/components/ui/toaster";
 import Header from "../header/Header";
 import Section from "../section/Section";
 import MainSection from "../section/MainSection";
@@ -78,6 +79,7 @@ const Layout: FC = () => {
 				</Section>
 			</main>
 			<Footer id="contacts" />
+			<Toaster />
 		</>
 	);
 };

@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
+import { useToast } from "../ui/use-toast";
 
 const FooterForm: FC = () => {
 	const formSchema = z.object({
@@ -43,6 +44,8 @@ const FooterForm: FC = () => {
 		},
 	});
 
+	const { toast } = useToast();
+
 	const onSubmit = (values: z.infer<typeof formSchema>) => {
 		const formData = new FormData();
 		formData.append("email", values.email);
@@ -51,12 +54,34 @@ const FooterForm: FC = () => {
 		fetch("https://ternex.ru/landing-form/", {
 			method: "POST",
 			body: formData,
-		}).then((res) => {
-			if (res.status === 200) {
+		})
+			.then((res) => {
+				if (res.status === 200) {
+					form.reset();
+					toast({
+						title: "Успешно!",
+						description:
+							"Форма успешно отправлена! Мы свяжемся с вами в ближайшее время.",
+					});
+				} else {
+					form.reset();
+					toast({
+						title: "Ошибка!",
+						description:
+							"Произошла ошибка при отправке формы, попробуйте немного позже!",
+						variant: "destructive",
+					});
+				}
+			})
+			.catch(() => {
 				form.reset();
-				alert("Сообщение успешно отправлено!");
-			}
-		});
+				toast({
+					title: "Ошибка!",
+					description:
+						"Произошла ошибка при отправке формы, попробуйте немного позже!",
+					variant: "destructive",
+				});
+			});
 	};
 
 	return (
@@ -119,6 +144,19 @@ const FooterForm: FC = () => {
 							</FormItem>
 						)}
 					/>
+					<FormDescription className="text-xs py-2">
+						<span>
+							Отправляя данную форму вы принимаете{" "}
+							<a
+								className="underline"
+								href="https://ternex.ru/static/landing/html/agreement.html"
+								target="_blank"
+							>
+								пользовательское соглашение
+							</a>{" "}
+							и даете согласие на обработку персональных данных.
+						</span>
+					</FormDescription>
 					<Button className="ml-auto block" type="submit">
 						Отправить
 					</Button>
