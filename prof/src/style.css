@@ -587,7 +587,7 @@ section {
 	@apply h-auto w-full;
 }
 .course-card.group-card .course-cover {
-	@apply h-[280px];
+	@apply h-[220px];
 }
 .course-cover {
 	@apply h-full w-full rounded-l object-cover object-center;
