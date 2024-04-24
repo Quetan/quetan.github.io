@@ -10,6 +10,7 @@ import WeOffer from "../content/WeOffer/WeOffer";
 import fond from "../../assets/fond.webp";
 import HowToStart from "../content/HowToStart/HowToStart";
 import Footer from "../footer/Footer";
+import Projects from "../content/Projects/Projects";
 
 const Layout: FC = () => {
 	return (
@@ -40,6 +41,16 @@ const Layout: FC = () => {
 					}}
 				>
 					<HowItWorks />
+				</Section>
+				<Section
+					title="Реализованные проекты"
+					props={{
+						id: "projects",
+						className:
+							"h-max min-h-max container pt-24 pb-12 lg:pt-32 lg:pb-16",
+					}}
+				>
+					<Projects />
 				</Section>
 				<Section
 					title="Что мы предлагаем?"
