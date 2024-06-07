@@ -13,8 +13,8 @@
 	--dark-purple: #736b92;
 	--white: #ffffd5;
 	--black: #242327;
-	--font-text: "Unbounded", sans-serif;
-	--font-title: "Unbounded", sans-serif;
+	--font-text: "Unbounded", system-ui, sans-serif;
+	--font-title: "Unbounded", system-ui, sans-serif;
 	--gap: 45px;
 }
 body {
@@ -23,7 +23,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	font-family: var(--font-text);
-	font-size: 16px;
+	font-size: 14px;
 	color: var(--black);
 	overflow-x: hidden;
 	min-height: 100vh;
