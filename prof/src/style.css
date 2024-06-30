@@ -149,6 +149,9 @@ strong {
 .button > svg {
 	display: initial;
 }
+.button.button-md {
+	@apply px-12 py-2 text-xl tracking-tight shadow-none;
+}
 .button.button-sm {
 	@apply px-4 py-1 text-sm tracking-tighter shadow-none;
 }
@@ -571,7 +574,7 @@ section {
 	@apply bg-sky-200/10;
 }
 .course-card {
-	@apply relative flex max-w-3xl flex-row items-start gap-6 rounded-md bg-white pr-4 shadow;
+	@apply relative flex max-w-3xl flex-row items-start gap-0 rounded-md bg-white pr-4 shadow;
 }
 .course-header {
 	@apply h-full w-2/3;
@@ -581,7 +584,7 @@ section {
 	@apply flex-col p-0;
 }
 .course-card.group-card .course-content {
-	@apply px-4 pb-8 pt-0;
+	@apply px-4 pb-8 pt-6;
 }
 .course-card.group-card .course-header {
 	@apply h-auto w-full;
@@ -622,16 +625,16 @@ section {
 }
 
 .course-authors-wrapper {
-	@apply flex flex-col gap-1;
+	@apply my-2 flex flex-col gap-1;
 }
 .course-authors-wrapper p {
 	@apply text-xs font-medium leading-5 tracking-tight;
 }
 .course-authors {
-	@apply flex flex-row;
+	@apply flex flex-row flex-wrap;
 }
 .course-authors img {
-	@apply -ml-4 h-14 w-14 rounded-full border-4 border-white object-cover object-center;
+	@apply -ml-4 h-14 w-14 rounded-full border-4 border-slate-50 object-cover object-center;
 }
 .course-authors img:nth-child(1) {
 	margin: 0;
@@ -663,4 +666,121 @@ section {
 }
 .hide {
 	@apply hidden !important;
+}
+
+.modal-wrapper {
+	@apply relative max-w-screen-xl overflow-x-hidden;
+}
+
+.modal-header {
+	@apply grid grid-cols-1 gap-16 bg-primary px-4 py-8 text-white lg:grid-cols-[1fr_450px];
+}
+
+.modal-header h1 {
+	@apply mb-2 text-2xl font-medium;
+}
+
+.modal-header p {
+	@apply text-sm leading-tight;
+}
+
+.modal-header .rating {
+	@apply ml-auto mt-6 flex w-max flex-row items-center gap-2 text-right;
+}
+
+.modal-header img {
+	@apply max-h-[320px] max-w-[450px] object-cover object-top;
+}
+
+.badge {
+	@apply flex w-max items-center gap-1 rounded-xl border bg-slate-100 px-2 py-1 text-xs font-medium leading-tight tracking-tight text-slate-900;
+}
+
+.modal-main {
+	@apply grid grid-cols-1 gap-16 bg-white p-8 pb-24 md:grid-cols-[1fr_350px];
+}
+
+.modal-main .badge-wrapper {
+	@apply flex flex-col gap-2;
+}
+
+.modal-main .sidebar {
+	@apply flex flex-col gap-8;
+}
+
+.modal-main .sidebar ul {
+	@apply list-none;
+}
+
+.modal-main .sidebar .course-authors-title {
+	@apply my-1 block text-sm;
+}
+
+.modal-main .about {
+	@apply rounded-xl bg-slate-50 p-4;
+}
+
+.modal-main .about span {
+	@apply mb-6 block font-medium;
+}
+
+.modal-main .share {
+	@apply flex flex-col gap-1;
+}
+
+.modal-main .share h2 {
+	@apply block text-xl;
+}
+
+.modal-main .share .ya-share2 {
+	@apply rounded-xl bg-slate-50 p-4;
+}
+
+.modal-content {
+	@apply flex flex-col gap-2;
+}
+
+.modal-content ol,
+modal-content ul {
+	@apply list-disc pl-4;
+}
+
+.modal-content li::marker {
+	@apply text-primary;
+}
+
+.modal-content .course-testimonials-wrapper {
+	@apply mt-12 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4;
+}
+
+.modal-content .course-testimonials-wrapper .testimonial {
+	@apply relative flex flex-col items-start gap-2 rounded-lg border border-slate-100 shadow-lg;
+}
+
+.modal-content .course-testimonials-wrapper .testimonial .testimonial-quote {
+	@apply absolute -bottom-6 right-4 h-12 w-12 opacity-15;
+}
+
+.modal-content .course-testimonials-wrapper .testimonial .testimonial-quote svg {
+	@apply h-12 w-12;
+}
+
+.modal-content .course-testimonials-wrapper .testimonial-photo {
+	@apply relative flex h-20 w-full flex-row items-end gap-2 rounded-t-lg bg-primary p-4 pl-24;
+}
+
+.modal-content .course-testimonials-wrapper .testimonial-photo img {
+	@apply absolute -bottom-4 left-4 h-16 w-16 rounded-full border-4 border-white object-cover object-center;
+}
+
+.modal-content .course-testimonials-wrapper .testimonial-photo figcaption {
+	@apply text-pretty text-sm font-medium leading-tight tracking-tight text-white;
+}
+
+.modal-content .course-testimonials-wrapper .testimonial-text {
+	@apply p-4 pb-8 text-xs tracking-tight;
+}
+
+#modal-close {
+	@apply absolute right-2 top-2 z-50 drop-shadow-lg filter;
 }
