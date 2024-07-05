@@ -1,11 +1,14 @@
 import { ICourse } from '../../interfaces';
+import { drawProgram } from './program';
 import { drawTestimonials } from './testimonials';
 
 const drawElement = (content: string, title: string) => {
 	return content
 		? `
-		<p><strong>${title}:</strong></p>
-		<span style="padding-left: 1rem;">${content}</span>
+		<div class="modal-content-element">
+			<p><strong>${title}:</strong></p>
+			<span style="padding-left: 1rem;">${content}</span>
+		</div>
 		`
 		: '';
 };
@@ -31,6 +34,8 @@ const drawContent = (course: ICourse) => {
 				${drawElement(competencies, 'Компетеции, необходимые для зачисления на курс')}
 				${drawElement(control, 'Промежуточный итоговый контроль')}
 				${drawElement(duration, 'Длительность курса')}	
+
+				${drawProgram(course)}
 
 				${drawTestimonials(course)}
 			</div>`;

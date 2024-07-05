@@ -3,6 +3,7 @@ import { ICourse } from '../../interfaces';
 import { drawAuthors } from './authors';
 import { drawBadge } from './badge';
 import { drawSidebarButton } from './sidebar-button';
+import { drawSidebarClose } from './sidebar-close';
 import { drawSidebarDesc } from './sidebar-desc';
 import { drawSidebarShare } from './sidebar-share';
 
@@ -33,6 +34,7 @@ const drawSidebar = (course: ICourse) => {
 		${drawSidebarShare(course)}
 		
 		${drawSidebarButton(course)}
+		${drawSidebarClose()}
 	</div>
     `;
 };

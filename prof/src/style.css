@@ -156,6 +156,10 @@ strong {
 	@apply px-4 py-1 text-sm tracking-tighter shadow-none;
 }
 
+.button.button-secondary {
+	@apply border-slate-800 bg-slate-400 from-slate-500 to-slate-600 text-white shadow-none;
+}
+
 /**
  *  Banner
  */
@@ -720,6 +724,10 @@ section {
 	@apply rounded-xl bg-slate-50 p-4;
 }
 
+.modal-content .about p {
+	@apply text-gray-700;
+}
+
 .modal-main .about span {
 	@apply mb-6 block font-medium;
 }
@@ -738,6 +746,14 @@ section {
 
 .modal-content {
 	@apply flex flex-col gap-2;
+}
+
+.modal-content .modal-content-element {
+	@apply flex flex-col gap-1;
+}
+
+.modal-content .modal-content-element span {
+	@apply text-gray-700;
 }
 
 .modal-content ol,
@@ -778,7 +794,23 @@ modal-content ul {
 }
 
 .modal-content .course-testimonials-wrapper .testimonial-text {
-	@apply p-4 pb-8 text-xs tracking-tight;
+	@apply p-4 pb-8 text-xs tracking-tight text-gray-700;
+}
+
+.modal-content .programs-wrapper {
+	@apply flex flex-col gap-2;
+}
+
+.modal-content details summary {
+	@apply mb-2;
+}
+
+.modal-content details {
+	@apply cursor-pointer text-lg tracking-tight;
+}
+
+.modal-content details ul {
+	@apply mb-2 pl-6 text-base text-gray-700;
 }
 
 #modal-close {

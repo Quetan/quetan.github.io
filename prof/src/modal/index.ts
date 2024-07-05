@@ -36,6 +36,11 @@ const handleModal = (courses: ICourse[]) => {
 				MODAL_CLOSE?.addEventListener('click', closeModal);
 			}
 
+			const MODAL_SIDEBAR_CLOSE = MODAL_WRAPPER.querySelector('#modal-sidebar-close');
+			if (MODAL_SIDEBAR_CLOSE) {
+				MODAL_SIDEBAR_CLOSE?.addEventListener('click', closeModal);
+			}
+
 			MODAL_WRAPPER?.showModal();
 		});
 	});

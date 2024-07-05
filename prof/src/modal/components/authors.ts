@@ -1,4 +1,4 @@
-import { extractContent, extractPhoto } from '../../_utils';
+import { extractContent, extractPhoto, getPhotoByRawUrl } from '../../_utils';
 import { ICourse } from '../../interfaces';
 
 interface IAuthor {
@@ -28,9 +28,9 @@ const authorsHtml = (authors: IAuthor[]) => {
 	let html = '';
 	authors.forEach(
 		author =>
-			(html += `<img title="${author.name}" src="${
-				author.photo ? author.photo : './avatar.svg'
-			}" alt="${author.name}" />`)
+			(html += `<img title="${author.name}" src="${getPhotoByRawUrl(author.photo)}" alt="${
+				author.name
+			}" />`)
 	);
 	return html;
 };

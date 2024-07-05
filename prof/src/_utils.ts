@@ -1,3 +1,5 @@
+import { _MOODLE_TOKEN } from './api';
+
 const createSummary = (summary: string) => {
 	if (!summary) return '';
 	const summaryNode = document.createElement('p');
@@ -15,10 +17,17 @@ const extractContent = (s: string) => {
 	return span.textContent || span.innerText;
 };
 
-const extractPhoto = (s: string) => {
-	var span = document.createElement('span');
-	span.innerHTML = s;
-	return span.querySelector('img')?.src;
+const getPhotoByRawUrl = (rawUrl: string | undefined): string => {
+	if (!rawUrl) return './avatar.svg';
+	const filePath = new URL(rawUrl).pathname.split('pluginfile.php/')[1];
+	const url = new URL(`https://edu2pro.ru/portal/webservice/pluginfile.php/${filePath}`);
+	url.searchParams.append('token', _MOODLE_TOKEN);
+	return url.toString();
 };
 
-export { createSummary, extractContent, extractPhoto };
+const extractPhoto = (s: string) => {
+	const rawUrl = s.match(/src="(.*?)"/)?.[1];
+	return getPhotoByRawUrl(rawUrl);
+};
+
+export { createSummary, extractContent, extractPhoto, getPhotoByRawUrl };

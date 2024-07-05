@@ -4,8 +4,8 @@ const drawSidebarDesc = (course: ICourse) => {
 	const shortdesc = course.customfields.find(field => field.shortname === 'shortdesc')?.value ?? '';
 	return `
     <div class="about">
-        <p style="font-weight: 500;">Информация о курсе</p>
-        <div style="margin-bottom: 1.5rem; margin-top: 1.5rem;">
+        <p style="font-weight: 500;">Кратко о курсе</p>
+        <div style="margin-bottom: 1.5rem; margin-top: 1.5rem; color: rgb(55 65 81 / var(--tw-text-opacity));"
         ${shortdesc}
         </div>
         <a href="https://edu2pro.ru/portal/course/view.php?id=${course.id}" 
