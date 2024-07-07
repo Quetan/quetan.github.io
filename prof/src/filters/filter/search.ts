@@ -1,4 +1,5 @@
-import { type Search, setFilterState } from '../state';
+import { Search } from '../../interfaces';
+import { setFilterState } from '../state';
 import { searchFilter } from './_nodes';
 
 const drawSearchFilter = () => {

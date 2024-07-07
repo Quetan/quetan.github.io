@@ -3,14 +3,16 @@ import { createSummary } from '../_utils';
 import * as api from '../api';
 import { SEMINAR_WRAPPER } from '../nodes';
 
-const getSeminarCourses = (courses: ICourse[]) => {
-	return (
-		courses
-			// .filter(
-			// 	course => course.customfields.find(field => field.shortname === 'flagmain')?.value === 'Да'
-			// )
-			.filter(course => course.categoryname === 'Заседания и семинары')
-	);
+const getSeminarCourses = (courses: ICourse[]): ICourse[] => {
+	return courses
+		.filter(course => course.visible === 1)
+		.filter(course => course.categoryname === 'Заседания и семинары')
+		.map(course => {
+			return {
+				...course,
+				courseType: 'seminar',
+			};
+		});
 };
 
 const drawSeminarCourses = (seminarCourses: ICourse[]) => {

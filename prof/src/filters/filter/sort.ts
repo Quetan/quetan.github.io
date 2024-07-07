@@ -1,4 +1,5 @@
-import { setFilterState, Sort } from '../state';
+import { Sort } from '../../interfaces';
+import { setFilterState } from '../state';
 import { sortFilter } from './_nodes';
 
 const drawSortFilter = () => {

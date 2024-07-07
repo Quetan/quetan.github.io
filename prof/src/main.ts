@@ -1,26 +1,23 @@
 import './style.css';
-import * as api from './api';
 
 import { handleModal } from './modal';
 import { mobileMenu } from './mobile';
 
-import { drawCourses } from './courses';
+import { drawAllCourses, drawCourses } from './courses';
 import { drawFilters } from './filters';
+import { courses } from './api';
 
 const initCourses = async () => {
-	const courses = await api.getCourses();
 	if (!courses) return null;
-
 	drawCourses(courses);
 	handleModal(courses);
 };
 
 const initFilters = async () => {
-	const courses = await api.getCourses();
 	if (!courses) return null;
-
 	drawFilters(courses);
 	handleModal(courses);
+	drawAllCourses();
 };
 
 mobileMenu();

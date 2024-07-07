@@ -7,6 +7,8 @@ const _MOODLE_TOKEN: string = '652c71f433ea0d910b172fa0b9f224bf';
 const _MOODLE_FUNCTION: string = 'core_course_get_courses_by_field';
 const _MOODLE_REST_FORMAT: string = 'json';
 
+let isPending: boolean = false;
+
 function getCourses() {
 	return axios
 		.get(_MOODLE_API_URL, {
@@ -23,6 +25,8 @@ function getCourses() {
 		});
 }
 
+const courses = await getCourses();
+
 export {
 	_MOODLE_BASE_URL,
 	_MOODLE_API_URL,
@@ -30,4 +34,6 @@ export {
 	_MOODLE_FUNCTION,
 	_MOODLE_REST_FORMAT,
 	getCourses,
+	courses,
+	isPending,
 };

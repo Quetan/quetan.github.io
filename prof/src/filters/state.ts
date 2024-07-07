@@ -1,16 +1,6 @@
+import { drawAllCourses } from '../courses';
+import { FilterState } from '../interfaces';
 import { categoryFilter, searchFilter, sortFilter, tagFilter } from './filter/_nodes';
-
-type Category = 'all' | 'personal' | 'group' | 'seminar' | 'media';
-type Sort = 'new' | 'old';
-type Tag = string;
-type Search = string;
-
-interface FilterState {
-	search: Search;
-	type: Category;
-	tag: Tag;
-	sort: Sort;
-}
 
 const defaultState: FilterState = {
 	search: '',
@@ -26,6 +16,7 @@ function setFilterState<K extends keyof FilterState, V extends (typeof filterSta
 	value: V
 ): FilterState {
 	filterState[key] = value;
+	drawAllCourses();
 	return filterState;
 }
 
@@ -37,8 +28,9 @@ function resetFilterState(): FilterState {
 	if (searchFilter) searchFilter.value = filterState.search;
 	if (sortFilter) sortFilter.value = filterState.sort;
 
+	drawAllCourses();
 	return filterState;
 }
 
 export { filterState, setFilterState, resetFilterState };
-export type { Category, Sort, Tag, Search, FilterState };
+export type { FilterState };

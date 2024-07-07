@@ -1,8 +1,8 @@
-import { Course } from '../../interfaces';
-import { setFilterState, type Tag } from '../state';
+import { ICourse, Tag } from '../../interfaces';
+import { setFilterState } from '../state';
 import { tagFilter } from './_nodes';
 
-const drawTagFilter = (courses: Course[]) => {
+const drawTagFilter = (courses: ICourse[]) => {
 	if (!tagFilter) return null;
 
 	console.log(courses);

@@ -1,4 +1,5 @@
-import { setFilterState, type Category } from '../state';
+import { Category } from '../../interfaces';
+import { setFilterState } from '../state';
 import { categoryFilter } from './_nodes';
 
 const drawCategoryFilter = () => {

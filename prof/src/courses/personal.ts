@@ -4,12 +4,19 @@ import * as api from '../api';
 import { IND_WRAPPER } from '../nodes';
 import { drawAuthors } from '../modal/components/authors';
 
-const getPersonalCourses = (courses: ICourse[]) => {
+const getPersonalCourses = (courses: ICourse[]): ICourse[] => {
 	return courses
+		.filter(course => course.visible === 1)
 		.filter(
 			course => course.customfields.find(field => field.shortname === 'flagmain')?.value === 'Да'
 		)
-		.filter(course => course.categoryname === 'Cамостоятельное обучение');
+		.filter(course => course.categoryname === 'Cамостоятельное обучение')
+		.map(course => {
+			return {
+				...course,
+				courseType: 'personal',
+			};
+		});
 };
 
 const drawPersonalCourses = (personalCourses: ICourse[]) => {

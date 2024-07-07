@@ -4,12 +4,19 @@ import * as api from '../api';
 import { GROUP_WRAPPER } from '../nodes';
 import { drawAuthors } from '../modal/components/authors';
 
-const getGroupCourses = (courses: ICourse[]) => {
+const getGroupCourses = (courses: ICourse[]): ICourse[] => {
 	return courses
+		.filter(course => course.visible === 1)
 		.filter(
 			course => course.customfields.find(field => field.shortname === 'flagmain')?.value === 'Да'
 		)
-		.filter(course => course.categoryname === 'Групповое обучение');
+		.filter(course => course.categoryname === 'Групповое обучение')
+		.map(course => {
+			return {
+				...course,
+				courseType: 'group',
+			};
+		});
 };
 
 const drawGroupCourses = (groupCourses: ICourse[]) => {
