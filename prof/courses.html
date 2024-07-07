@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+		<link rel="manifest" href="./favicon/site.webmanifest" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Дистанционная образовательная среда | Общероссийский Профсоюз образования</title>
+	</head>
+	<body>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			(function (m, e, t, r, i, k, a) {
+				m[i] =
+					m[i] ||
+					function () {
+						(m[i].a = m[i].a || []).push(arguments);
+					};
+				m[i].l = 1 * new Date();
+				for (var j = 0; j < document.scripts.length; j++) {
+					if (document.scripts[j].src === r) {
+						return;
+					}
+				}
+				(k = e.createElement(t)),
+					(a = e.getElementsByTagName(t)[0]),
+					(k.async = 1),
+					(k.src = r),
+					a.parentNode.insertBefore(k, a);
+			})(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+			ym(95584272, 'init', {
+				clickmap: true,
+				trackLinks: true,
+				accurateTrackBounce: true,
+				webvisor: true,
+			});
+		</script>
+		<noscript
+			><div>
+				<img
+					src="https://mc.yandex.ru/watch/95584272"
+					style="position: absolute; left: -9999px"
+					alt="" /></div
+		></noscript>
+		<!-- /Yandex.Metrika counter -->
+		<header class="header">
+			<div class="gap-4 px-8">
+				<div class="flex w-full flex-row items-center justify-between gap-4">
+					<div class="flex flex-row">
+						<a href="https://www.eseur.ru/" class="header-logo header-mobile">
+							<img src="./logo.svg" alt="Логотип учебного центра" />
+							<h1 class="header-title">Общероссийский Профсоюз образования</h1>
+						</a>
+						<a href="https://ec-eseur.ru/" class="header-logo">
+							<img src="./logo.svg" alt="Логотип учебного центра" />
+							<h1 class="header-title">Учебный центр Общероссийского Профсоюза образования</h1>
+						</a>
+					</div>
+					<div class="flex flex-col gap-4">
+						<div class="header-contacts">
+							<div class="flex flex-row gap-1 contrast-50">
+								<span>Тех. поддержка:</span>
+								<a href="mailto:support@edu2pro.ru"> support@edu2pro.ru </a>
+							</div>
+							<a
+								href="https://edu2pro.ru/portal/login/index.php"
+								class="button button-sm ml-4 block"
+								>Войти</a
+							>
+						</div>
+						<div class="hidden w-full flex-row justify-end lg:flex">
+							<nav class="header-nav">
+								<ul>
+									<li><a href="#ind">Самостоятельное обучение</a></li>
+									<li><a href="#group">Обучение в группе</a></li>
+									<li><a href="#seminar">Семинары</a></li>
+									<li><a href="#media">Медиатека</a></li>
+								</ul>
+							</nav>
+						</div>
+						<button class="lg:hidden" id="nav-mobile-button">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="36"
+								height="36"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="3"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="lucide lucide-menu">
+								<line x1="4" x2="20" y1="12" y2="12" />
+								<line x1="4" x2="20" y1="6" y2="6" />
+								<line x1="4" x2="20" y1="18" y2="18" />
+							</svg>
+						</button>
+						<div
+							id="nav-mobile-menu"
+							class="close h-screen w-full bg-gradient-to-r from-sky-700 to-primary">
+							<nav>
+								<button class="absolute right-12 top-12" id="nav-mobile-button-close">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="48"
+										height="48"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="lucide lucide-x">
+										<path d="M18 6 6 18" />
+										<path d="m6 6 12 12" />
+									</svg>
+								</button>
+								<ul>
+									<li><a href="#ind">Самостоятельное обучение</a></li>
+									<li><a href="#group">Обучение в группе</a></li>
+									<li><a href="#seminar">Семинары</a></li>
+									<li><a href="#media">Медиатека</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main courses-main">
+			<section class="section-block filters">
+				<h1 class="section-title mx-auto">Все курсы</h1>
+
+				<div class="filters-wrapper">
+					<div class="filter-item">
+						<label for="course-search">Поиск:</label>
+						<input
+							type="text"
+							class="filter-input"
+							id="course-search"
+							placeholder="Поиск по названию курса" />
+					</div>
+					<div class="filter-item">
+						<label for="course-type">Категория:</label>
+						<select class="filter-select" id="course-type">
+							<option value="all">Все</option>
+							<option value="personal">Самостоятельное обучение</option>
+							<option value="group">Обучение в группе</option>
+							<option value="seminar">Семинары</option>
+							<option value="media">Медиатека</option>
+						</select>
+					</div>
+					<div class="filter-item">
+						<label for="course-tags">Тег:</label>
+						<select class="filter-select" id="course-tags"></select>
+					</div>
+					<div class="filter-item">
+						<label for="course-sort">Сортировка:</label>
+						<select class="filter-select" id="course-sort">
+							<option value="new">Сначала новые</option>
+							<option value="old">Сначала старые</option>
+						</select>
+					</div>
+					<button class="button button-sm" id="reset-filters">Сбросить</button>
+				</div>
+			</section>
+		</main>
+		<footer class="footer" id="contacts">
+			<a href="/" class="footer-logo">
+				<img src="./logo.png" alt="Логотип учебного центра" />
+				<span>Учебный центр Общероссийского Профсоюза образования</span>
+			</a>
+			<div class="footer-col footer-contacts">
+				<span class="footer-title">Контакты</span>
+				<ul>
+					<li>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							class="h-6 w-6">
+							<path
+								fill-rule="evenodd"
+								d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+								clip-rule="evenodd" />
+						</svg>
+						117342, г.Москва, ул.Бутлерова, д.17
+					</li>
+					<li>
+						<a href="mailto:mail@ec-eseur.ru">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								class="h-6 w-6">
+								<path
+									d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+								<path
+									d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+							</svg>
+							mail@ec-eseur.ru
+						</a>
+					</li>
+					<li>
+						<a href="tel:+74951343010">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								class="h-6 w-6">
+								<path
+									fill-rule="evenodd"
+									d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+									clip-rule="evenodd" />
+							</svg>
+							+7 (495) 134-30-10
+						</a>
+					</li>
+					<li>
+						<a href="tel:+79150751207">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								class="h-6 w-6">
+								<path
+									fill-rule="evenodd"
+									d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+									clip-rule="evenodd" />
+							</svg>
+							+7 (915) 075-12-07
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<script type="module" src="/src/main.ts"></script>
+		<script src="https://yastatic.net/share2/share.js"></script>
+	</body>
+</html>

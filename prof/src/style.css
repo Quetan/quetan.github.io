@@ -21,6 +21,11 @@
 	--background-blur-color: #192eb46d;
 }
 
+* {
+	scrollbar-color: #d1d5db #ffffff;
+	scrollbar-width: thin;
+}
+
 html {
 	@apply overflow-x-hidden;
 }
@@ -119,6 +124,9 @@ strong {
 /**
  *  Main
  */
+.main {
+	@apply min-h-[80vh];
+}
 .section {
 	@apply container relative my-4 min-h-[400px] py-16;
 }
@@ -424,70 +432,6 @@ strong {
 	@apply list-item;
 }
 
-/* VERSION 2 */
-/* .header {
-	@apply shadow-none;
-}
-.main {
-	@apply container;
-}
-.layout {
-	@apply relative grid gap-16 overflow-x-hidden;
-	grid-template-columns: 1fr 1fr;
-}
-.layout-content {
-	@apply pt-[150px];
-}
-section {
-	@apply rounded-md border-4 border-sky-900 border-opacity-10 bg-white px-4 py-8 shadow-md;
-}
-.footer {
-	@apply z-10 flex min-h-[150px] w-full border-t-2 border-t-sky-900 pb-7 pt-5 before:hidden;
-}
-.advantages-item {
-	@apply gap-1;
-}
-.advantages-item svg {
-	@apply mb-3 h-20 w-20 p-2;
-}
-.advantages-item figcaption {
-	@apply text-base leading-5;
-}
-.courses-wrapper {
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-}
-.courses-item span.courses-title {
-	@apply text-sm leading-4 tracking-tight;
-}
-.courses-item span.courses-description {
-	@apply hidden;
-}
-.courses-item img {
-	@apply h-[150px];
-}
-.partners-wrapper {
-	@apply flex flex-row flex-wrap items-center justify-start;
-}
-.staff-item img {
-	@apply h-[250px];
-}
-.staff-item {
-	@apply border-none bg-white shadow-none;
-}
-.banner-quote {
-	@apply flex w-full max-w-full flex-row gap-8 p-0;
-}
-.banner-quote figcaption {
-	@apply relative bottom-0 border-none p-0 shadow-none;
-}
-.banner-quote img {
-	@apply w-1/2 border-none;
-}
-.banner-quote figcaption::before {
-	@apply -left-14 -top-4;
-} */
-
-/* VERSION 3 */
 .footer {
 	@apply z-10 flex min-h-[150px] w-full border-t-2 border-t-sky-900 pb-7 pt-5 before:hidden;
 }
@@ -571,6 +515,7 @@ section {
 }
 
 /* Course card */
+
 .cards-wrapper {
 	@apply grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3;
 }
@@ -665,11 +610,19 @@ section {
 	}
 }
 
+/**
+ *  Modal
+ */
+
 .show {
 	@apply flex !important;
 }
 .hide {
 	@apply hidden !important;
+}
+
+#modal {
+	@apply shadow-2xl;
 }
 
 .modal-wrapper {
@@ -815,4 +768,28 @@ modal-content ul {
 
 #modal-close {
 	@apply absolute right-2 top-2 z-50 drop-shadow-lg filter;
+}
+
+/**
+ *  Courses
+ */
+
+.courses-main {
+	@apply container pt-32;
+}
+
+.filters-wrapper {
+	@apply mb-12 flex flex-row flex-wrap items-center gap-4;
+}
+
+.filters select {
+	@apply rounded-lg bg-slate-200 p-2;
+}
+
+.filters .filter-item {
+	@apply flex flex-row items-center gap-2;
+}
+
+.filters .filter-input {
+	@apply flex flex-row flex-nowrap rounded-lg bg-slate-200 p-2;
 }

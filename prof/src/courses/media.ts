@@ -96,9 +96,9 @@ const createMediaCourse = (course: ICourse | undefined) => {
 							<p class="course-description">
 								${createSummary(course.summary)}
 							</p>
-							<a
-								href="https://edu2pro.ru/portal/course/view.php?id=${course.id}"
-								class="button button-sm ml-auto mt-auto block"
+							<button
+								class="button button-sm ml-auto mt-auto block open-course"
+								data-course="${course.id}"
 								>Подробнее
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -112,15 +112,15 @@ const createMediaCourse = (course: ICourse | undefined) => {
 									stroke-linejoin="round"
 									class="lucide lucide-arrow-right">
 									<path d="M5 12h14" />
-									<path d="m12 5 7 7-7 7" /></svg
-							></a>
+									<path d="m12 5 7 7-7 7" /></svg>
+							</button>
 						</main>
 					</article>`;
 };
 
-// <button
-// class="button button-sm ml-auto mt-auto block open-course"
-// data-course="${course.id}"
+// <a
+// href="https://edu2pro.ru/portal/course/view.php?id=${course.id}"
+// class="button button-sm ml-auto mt-auto block"
 // >Подробнее
 // <svg
 // 	xmlns="http://www.w3.org/2000/svg"
@@ -135,6 +135,6 @@ const createMediaCourse = (course: ICourse | undefined) => {
 // 	class="lucide lucide-arrow-right">
 // 	<path d="M5 12h14" />
 // 	<path d="m12 5 7 7-7 7" /></svg
-// ></button>
+// ></a>
 
 export { createMediaCourse, drawMediaCourses, getMediaCourses };
