@@ -1,9 +1,12 @@
 import { ICourse, Tag } from '../../interfaces';
 import { setFilterState } from '../state';
+import { params } from '../URLSearchParams';
 import { tagFilter } from './_nodes';
 
 const drawTagFilter = (courses: ICourse[]) => {
 	if (!tagFilter) return null;
+
+	tagFilter.value = params.tag;
 
 	console.log(courses);
 
