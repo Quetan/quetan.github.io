@@ -1,12 +1,12 @@
 import { ICourse } from '../interfaces';
-import { drawGroupCourses, getGroupCourses } from './group';
-import { drawMediaCourses, getMediaCourses } from './media';
-import { drawPersonalCourses, getPersonalCourses } from './personal';
-import { drawSeminarCourses, getSeminarCourses } from './seminar';
+import { drawGroupCourses, getGroupCourses } from './categoiries/group';
+import { drawMediaCourses, getMediaCourses } from './categoiries/media';
+import { drawPersonalCourses, getPersonalCourses } from './categoiries/personal';
+import { drawSeminarCourses, getSeminarCourses } from './categoiries/seminar';
 import { filterCourses } from '../filters';
-import { createCourse } from './common';
 import { getCourses } from '../api';
 import { handleModal } from '../modal';
+import { createCourse } from './categoiries/common';
 
 const drawCourses = (courses: ICourse[]): void => {
 	const personalCourses = getPersonalCourses(courses);

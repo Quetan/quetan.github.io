@@ -563,6 +563,9 @@ strong {
 .course-topline {
 	@apply mb-2 flex flex-row flex-wrap gap-x-2 gap-y-1 text-xs;
 }
+.course-topline:empty {
+	@apply hidden;
+}
 .course-topline a {
 	@apply underline;
 }

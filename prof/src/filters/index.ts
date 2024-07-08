@@ -14,31 +14,6 @@ const drawFilters = () => {
 	drawResetFilters();
 };
 
-// const filterCourses = (courses: ICourse[]) => {
-// 	const filteredByType =
-// 		filterState.type === 'all'
-// 			? courses
-// 			: courses.filter(course => course.courseType === filterState.type);
-
-// 	const filteredBySearch = filteredByType.filter(course =>
-// 		course.fullname.toLowerCase().includes(filterState.search.toLowerCase())
-// 	);
-
-// 	const filteredByDate = filteredBySearch.sort((a, b) => {
-// 		if (filterState.sort === 'new') {
-// 			if (a.timecreated < b.timecreated) return 1;
-// 			return -1;
-// 		}
-// 		if (filterState.sort === 'old') {
-// 			if (a.timecreated > b.timecreated) return 1;
-// 			return -1;
-// 		}
-// 		return 0;
-// 	});
-
-// 	return filteredByDate;
-// };
-
 const filterCourses = (courses: ICourse[]) => {
 	const searchLower = filterState.search.toLowerCase();
 	const type = filterState.type;

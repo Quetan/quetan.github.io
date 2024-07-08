@@ -1,5 +1,5 @@
 import { ICourse } from '../interfaces';
-import { MODAL_WRAPPER } from '../nodes';
+import { MODAL_WRAPPER } from '../courses/nodes';
 import { drawContent } from './components/content';
 import { drawSidebar } from './components/sidebar';
 import { drawHeader } from './components/header';

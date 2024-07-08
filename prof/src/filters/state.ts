@@ -10,7 +10,7 @@ const defaultState: FilterState = {
 	sort: 'new',
 } as const;
 
-let filterState: FilterState = Object.assign({}, params);
+let filterState: FilterState = { ...params };
 
 function setFilterState<K extends keyof FilterState, V extends (typeof filterState)[K]>(
 	key: K,
@@ -23,19 +23,22 @@ function setFilterState<K extends keyof FilterState, V extends (typeof filterSta
 }
 
 function resetFilterState(): FilterState {
-	filterState = Object.assign({}, defaultState);
+	filterState = { ...defaultState };
 
-	if (categoryFilter) categoryFilter.value = filterState.type;
-	if (tagFilter) tagFilter.value = filterState.tag;
-	if (searchFilter) searchFilter.value = filterState.search;
-	if (sortFilter) sortFilter.value = filterState.sort;
+	const { type, tag, search, sort } = filterState;
 
-	setURLSearchParam('search', filterState.search);
-	setURLSearchParam('type', filterState.type);
-	setURLSearchParam('tag', filterState.tag);
-	setURLSearchParam('sort', filterState.sort);
+	if (categoryFilter) categoryFilter.value = type;
+	if (tagFilter) tagFilter.value = tag;
+	if (searchFilter) searchFilter.value = search;
+	if (sortFilter) sortFilter.value = sort;
+
+	setURLSearchParam('search', search);
+	setURLSearchParam('type', type);
+	setURLSearchParam('tag', tag);
+	setURLSearchParam('sort', sort);
 
 	drawAllCourses();
+
 	return filterState;
 }
 
