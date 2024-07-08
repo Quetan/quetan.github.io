@@ -3,9 +3,10 @@ import { drawGroupCourses, getGroupCourses } from './group';
 import { drawMediaCourses, getMediaCourses } from './media';
 import { drawPersonalCourses, getPersonalCourses } from './personal';
 import { drawSeminarCourses, getSeminarCourses } from './seminar';
-import { courses } from '../api';
 import { filterCourses } from '../filters';
 import { createCourse } from './common';
+import { getCourses } from '../api';
+import { handleModal } from '../modal';
 
 const drawCourses = (courses: ICourse[]): void => {
 	const personalCourses = getPersonalCourses(courses);
@@ -17,11 +18,14 @@ const drawCourses = (courses: ICourse[]): void => {
 	groupCourses && drawGroupCourses(groupCourses);
 	seminarCourses && drawSeminarCourses(seminarCourses);
 	mediaCourses && drawMediaCourses(mediaCourses);
+
+	handleModal(courses);
 };
 
 const wrapper = document.getElementById('filtered-courses');
 
 const drawAllCourses = async () => {
+	const courses = await getCourses();
 	if (!wrapper || !courses) return null;
 
 	const personalCourses = getPersonalCourses(courses);
@@ -41,6 +45,8 @@ const drawAllCourses = async () => {
 	filteredCourses.forEach(course => {
 		wrapper.innerHTML += createCourse(course);
 	});
+
+	handleModal(courses);
 };
 
 export { drawCourses, drawAllCourses };

@@ -67,9 +67,9 @@ const createMediaCourse = (course: ICourse | undefined) => {
 										<path d="M7 7h.01" />
 									</svg>
 									Категория:
-									<a href="https://edu2pro.ru/portal/course/index.php?categoryid=${course.categoryid}">${
-										course.categoryname
-									}</a>
+									<a href="https://edu2pro.ru/portal/course/index.php?categoryid=${
+										course.categoryid
+									}" target="_blank">${course.categoryname}</a>
 								</p>
 							</div>
 							<p class="course-description">

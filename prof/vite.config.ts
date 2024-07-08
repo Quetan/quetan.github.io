@@ -6,10 +6,11 @@ export default defineConfig({
 	base: './',
 	plugins: [],
 	build: {
+		target: 'es2022',
 		rollupOptions: {
 			input: {
 				main: resolve(__dirname, 'index.html'),
-				primer: resolve(__dirname, 'primer.html'),
+				courses: resolve(__dirname, 'courses.html'),
 			},
 		},
 	},

@@ -10,7 +10,7 @@ const drawSidebarDesc = (course: ICourse) => {
             ${shortdesc}
         </div>
         </div>
-        <a href="https://edu2pro.ru/portal/course/view.php?id=${course.id}" 
+        <a href="https://edu2pro.ru/portal/course/view.php?id=${course.id}"  target="_blank"
         style="display: block; margin-bottom: 0.5rem; margin-top: 1.5rem; color: #0077ff;" >
             Программа курса
         </a>

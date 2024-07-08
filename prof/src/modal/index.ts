@@ -16,8 +16,8 @@ const closeModal = () => {
 
 const handleModal = (courses: ICourse[]) => {
 	if (!MODAL_WRAPPER) return null;
-
 	const MODAL_BUTTONS: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.open-course');
+
 	MODAL_BUTTONS.forEach(button => {
 		const courseId: number = Number.parseInt(button.dataset.course ?? '', 10);
 		const course = courses.find((c: ICourse) => c.id === courseId);

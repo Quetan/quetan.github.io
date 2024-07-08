@@ -19,8 +19,8 @@ const drawCloseButton = () => {
 
 const drawHeader = (course: ICourse) => {
 	if (!course) return '';
-
-	const img = course.overviewfiles.length !== 0 ? course.overviewfiles[0]?.fileurl : '';
+	const img =
+		course.overviewfiles.length !== 0 ? course.overviewfiles[0]?.fileurl : './placeholder.webp';
 	const startdate = new Date(course.startdate * 1000).toLocaleDateString();
 
 	return `

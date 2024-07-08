@@ -24,7 +24,7 @@ const createCourse = (course: ICourse) => {
             <div class="course-topline">
                 <p>${
 									course.courseType
-										? drawBadge('Категория', categoryName[course.courseType], 'docend')
+										? drawBadge('Категория', categoryName[course.courseType], 'tag')
 										: ''
 								}</p>
             </div>

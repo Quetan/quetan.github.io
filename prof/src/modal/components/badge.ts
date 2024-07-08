@@ -29,10 +29,11 @@ const foruserIcon = `
     <path d="M18 21a8 8 0 0 0-16 0" />
     <circle cx="10" cy="8" r="5" />
     <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" />
-</svg>`;
+</svg>
+`;
 
 const docendIcon = `
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g> <path d="M8 12H9M16 12H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path> <path d="M16 8H15M12 8H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path> <path d="M8 16H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path> <path d="M3 14V10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157C20.4816 3.82476 20.7706 4.69989 20.8985 6M21 10V14C21 17.7712 21 19.6569 19.8284 20.8284C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8284C3.51839 20.1752 3.22937 19.3001 3.10149 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-badge"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M5 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M7 16.5 8 22l-3-1-3 1 1-5.5"/></svg>
 `;
 
 const dateIcon = `
@@ -58,16 +59,21 @@ const dateIcon = `
 </svg>
 `;
 
-const icons: Record<string, string> = {
+const tagIcon = `
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tags"><path d="m15 5 6.3 6.3a2.4 2.4 0 0 1 0 3.4L17 19"/><path d="M9.586 5.586A2 2 0 0 0 8.172 5H3a1 1 0 0 0-1 1v5.172a2 2 0 0 0 .586 1.414L8.29 18.29a2.426 2.426 0 0 0 3.42 0l3.58-3.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="6.5" cy="9.5" r=".5" fill="currentColor"/></svg>
+`;
+
+type Icon = 'duration' | 'foruser' | 'docend' | 'date' | 'tag';
+
+const icons: Record<Icon, string> = {
 	duration: durationIcon,
 	foruser: foruserIcon,
 	docend: docendIcon,
 	date: dateIcon,
+	tag: tagIcon,
 };
 
-type icon = 'duration' | 'foruser' | 'docend' | 'date';
-
-const drawBadge = (title: string, data: string, icon: icon) => {
+const drawBadge = (title: string, data: string, icon: Icon) => {
 	if (!title || !data) return '';
 
 	return `

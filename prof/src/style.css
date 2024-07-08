@@ -567,7 +567,7 @@ strong {
 	@apply underline;
 }
 .course-description {
-	@apply line-clamp-3 text-ellipsis py-1 pr-4 text-sm leading-tight tracking-tighter hover:text-clip;
+	@apply mb-4 line-clamp-3 text-ellipsis pr-4 pt-1 text-sm leading-tight tracking-tighter hover:text-clip;
 }
 .course-author {
 	@apply mb-5;
