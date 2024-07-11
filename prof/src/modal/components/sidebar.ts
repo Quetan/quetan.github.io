@@ -1,4 +1,4 @@
-import { extractContent } from '../../_utils';
+import { extractContent, extractSelectedTagNames } from '../../_utils';
 import { ICourse } from '../../interfaces';
 import { drawAuthors } from './authors';
 import { drawBadge } from './badge';
@@ -8,15 +8,19 @@ import { drawSidebarDesc } from './sidebar-desc';
 import { drawSidebarShare } from './sidebar-share';
 
 const drawSidebar = (course: ICourse) => {
+	const { customfields } = course;
+
 	const duration = extractContent(
-		course.customfields.find(field => field.shortname === 'durationkurs')?.value ?? ''
+		customfields.find(field => field.shortname === 'durationkurs')?.value ?? ''
 	);
 	const docend = extractContent(
-		course.customfields.find(field => field.shortname === 'docend')?.value ?? ''
+		customfields.find(field => field.shortname === 'docend')?.value ?? ''
 	);
 	const foruser = extractContent(
-		course.customfields.find(field => field.shortname === 'foruser')?.value ?? ''
+		customfields.find(field => field.shortname === 'foruser')?.value ?? ''
 	);
+
+	const tags = extractSelectedTagNames(course);
 
 	return `
     <div class="sidebar">
@@ -25,6 +29,7 @@ const drawSidebar = (course: ICourse) => {
 		${drawAuthors(course)}
 
 		<div class="badge-wrapper">
+			${drawBadge('Теги', tags.join(', '), 'tag')}
 			${drawBadge('Документ об окончании курса', docend, 'docend')}
 			${drawBadge('Для кого', foruser, 'foruser')}
 			${drawBadge('Продолжительность', duration, 'duration')}

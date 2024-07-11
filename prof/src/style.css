@@ -663,7 +663,7 @@ strong {
 }
 
 .badge {
-	@apply flex w-max items-center gap-1 rounded-xl border bg-slate-100 px-2 py-1 text-xs font-medium leading-tight tracking-tight text-slate-900;
+	@apply grid w-max max-w-full grid-cols-[14px_1fr] items-center gap-1 rounded-xl border bg-slate-100 px-2 py-1 text-xs font-medium leading-tight tracking-tight text-slate-900;
 }
 
 .modal-main {
@@ -690,12 +690,16 @@ strong {
 	@apply rounded-xl bg-slate-50 p-4;
 }
 
-.modal-content .about p {
-	@apply text-gray-700;
+.modal-main .about .about-text {
+	@apply my-6 text-gray-700;
 }
 
-.modal-main .about span {
-	@apply mb-6 block font-medium;
+.modal-main .about .about-timemodified {
+	@apply text-xs;
+}
+
+.modal-content .about p {
+	@apply text-gray-700;
 }
 
 .modal-main .share {
