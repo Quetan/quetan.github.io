@@ -1,5 +1,5 @@
 import { ICourse } from '../../interfaces';
-import { createSummary, extractContent } from '../../_utils';
+import { createSummary, extractContent, extractSelectedTags } from '../../_utils';
 import { GROUP_WRAPPER } from '../nodes';
 import { _MOODLE_TOKEN } from '../../api';
 import { drawBadge } from '../../modal/components/badge';
@@ -48,10 +48,13 @@ const createGroupCourse = (course: ICourse | undefined) => {
 			? `<img class="course-cover" src="./coursecards/contract2.webp" alt="${shortname}" />`
 			: `<img class="course-cover" src="${overviewfiles[0]?.fileurl}?token=${_MOODLE_TOKEN}" alt="${shortname}" />`;
 
+	const tags = extractSelectedTags(course);
+	const tagsBadge = tags.length > 0 ? drawBadge('Теги', tags.join(', '), 'tag') : '';
+
 	const components: CourseCardComponents = {
 		courseImage,
 		name: fullname,
-		badges: [durationBadge, foruserBadge].join(''),
+		badges: [tagsBadge, durationBadge, foruserBadge].join(''),
 		description: createSummary(summary),
 		openButton: drawOpenButton(id),
 		authors: drawAuthors(course),

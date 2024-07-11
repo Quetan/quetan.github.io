@@ -1,5 +1,5 @@
 import { ICourse } from '../../interfaces';
-import { createSummary, extractContent } from '../../_utils';
+import { createSummary, extractContent, extractSelectedTags } from '../../_utils';
 import * as api from '../../api';
 import { IND_WRAPPER } from '../nodes';
 import { drawAuthors } from '../../modal/components/authors';
@@ -49,10 +49,13 @@ const createPersonalCourse = (course: ICourse | undefined) => {
 			? `<img class="course-cover" src="./coursecards/sam${placeholderIndex}.webp" alt="${shortname}" />`
 			: `<img class="course-cover" src="${overviewfiles[0].fileurl}?token=${api._MOODLE_TOKEN}" alt="${shortname}" />`;
 
+	const tags = extractSelectedTags(course);
+	const tagsBadge = tags.length > 0 ? drawBadge('Теги', tags.join(', '), 'tag') : '';
+
 	const components: CourseCardComponents = {
 		courseImage,
 		name: fullname,
-		badges: [startBadge, foruserBadge].join(''),
+		badges: [tagsBadge, startBadge, foruserBadge].join(''),
 		description: createSummary(summary),
 		openButton: drawOpenButton(id),
 		authors: drawAuthors(course),

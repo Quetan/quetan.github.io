@@ -1,10 +1,11 @@
 import { ICourse } from '../../interfaces';
-import { createSummary } from '../../_utils';
+import { createSummary, extractSelectedTags } from '../../_utils';
 import { MEDIA_WRAPPER } from '../nodes';
 import { _MOODLE_TOKEN } from '../../api';
 import { drawCategoryBadge } from '../components/category-badge';
 import { drawOpenButton } from '../components/open-button';
 import { CourseCardComponents, drawCourseCard } from './_node-constructor';
+import { drawBadge } from '../../modal/components/badge';
 
 const getMediaCourses = (courses: ICourse[]): ICourse[] => {
 	return courses
@@ -50,10 +51,14 @@ const createMediaCourse = (course: ICourse | undefined) => {
 			? `<img class="course-cover" src="./media.webp" alt="${shortname}" />`
 			: `<img class="course-cover" src="${overviewfiles[0]?.fileurl}?token=${_MOODLE_TOKEN}" alt="${fullname}" />`;
 
+	const tags = extractSelectedTags(course);
+	const tagsBadge = tags.length > 0 ? drawBadge('Теги', tags.join(', '), 'tag') : '';
+	const categoryBadge = drawCategoryBadge(categoryid, categoryname);
+
 	const components: CourseCardComponents = {
 		courseImage,
 		name: fullname,
-		badges: drawCategoryBadge(categoryid, categoryname),
+		badges: [tagsBadge, categoryBadge].join(''),
 		description: createSummary(summary),
 		openButton: drawOpenButton(id),
 	};

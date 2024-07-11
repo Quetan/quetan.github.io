@@ -1,4 +1,4 @@
-import { createSummary } from '../../_utils';
+import { createSummary, extractSelectedTags } from '../../_utils';
 import { _MOODLE_TOKEN } from '../../api';
 import { Category, ICourse } from '../../interfaces';
 import { drawBadge } from '../../modal/components/badge';
@@ -20,12 +20,16 @@ const createCourse = (course: ICourse) => {
 		overviewfiles.length === 0
 			? `<img class="course-cover" src="./media.webp" alt="${shortname}" />`
 			: `<img class="course-cover" src="${overviewfiles[0]?.fileurl}?token=${_MOODLE_TOKEN}" alt="${shortname}" />`;
-	const categoryBadge = courseType ? drawBadge('Категория', categoryName[courseType], 'tag') : '';
+	const categoryBadge = courseType
+		? drawBadge('Категория', categoryName[courseType], 'foruser')
+		: '';
+	const tags = extractSelectedTags(course);
+	const tagsBadge = tags.length > 0 ? drawBadge('Теги', tags.join(', '), 'tag') : '';
 
 	const components: CourseCardComponents = {
 		courseImage,
 		name: fullname,
-		badges: categoryBadge,
+		badges: [categoryBadge, tagsBadge].join(''),
 		description: createSummary(summary),
 		openButton: drawOpenButton(id),
 	};

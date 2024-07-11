@@ -1,4 +1,5 @@
 import { _MOODLE_TOKEN } from './api';
+import { ICourse } from './interfaces';
 
 const createSummary = (summary: string) => {
 	if (!summary) return '';
@@ -30,4 +31,19 @@ const extractPhoto = (s: string) => {
 	return getPhotoByRawUrl(rawUrl);
 };
 
-export { createSummary, extractContent, extractPhoto, getPhotoByRawUrl };
+const extractTags = (course: ICourse) =>
+	course.customfields.filter(field => field.shortname.includes('tag_'));
+
+const extractSelectedTags = (course: ICourse) =>
+	course.customfields
+		.filter(field => field.shortname.includes('tag_') && field.valueraw > 0)
+		.map(field => field.name);
+
+export {
+	createSummary,
+	extractContent,
+	extractPhoto,
+	getPhotoByRawUrl,
+	extractTags,
+	extractSelectedTags,
+};
