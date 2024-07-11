@@ -76,7 +76,14 @@ export type ICourse = {
 
 export type Category = 'all' | 'personal' | 'group' | 'seminar' | 'media';
 export type Sort = 'new' | 'old';
-export type Tag = string;
+export type Tag =
+	| 'all'
+	| 'tag_2023'
+	| 'tag_2024'
+	| 'tag_chairman_assist'
+	| 'tag_personal_growth'
+	| 'tag_reports_and_elections'
+	| 'tag_ppo';
 export type Search = string;
 
 export interface FilterState {

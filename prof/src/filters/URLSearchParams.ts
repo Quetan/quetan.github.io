@@ -1,4 +1,4 @@
-import { Category, FilterState, Sort } from '../interfaces';
+import { Category, FilterState, Sort, Tag } from '../interfaces';
 import { filterState } from './state';
 
 const queryString = window.location.search;
@@ -16,7 +16,7 @@ function setURLSearchParam<K extends keyof FilterState, V extends (typeof filter
 const params: FilterState = {
 	search: searchParams.get('search') || '',
 	type: (searchParams.get('type') as Category) || ('all' as Category),
-	tag: searchParams.get('tag') || '',
+	tag: (searchParams.get('tag') as Tag) || ('all' as Tag),
 	sort: (searchParams.get('sort') as Sort) || ('new' as Sort),
 };
 

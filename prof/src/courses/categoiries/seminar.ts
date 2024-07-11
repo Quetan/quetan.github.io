@@ -1,5 +1,5 @@
 import { ICourse } from '../../interfaces';
-import { createSummary, extractSelectedTags } from '../../_utils';
+import { createSummary, extractSelectedTagNames } from '../../_utils';
 import { SEMINAR_WRAPPER } from '../nodes';
 import { _MOODLE_TOKEN } from '../../api';
 import { drawOpenButton } from '../components/open-button';
@@ -40,7 +40,7 @@ const createSeminarCourse = (course: ICourse | undefined) => {
 			? `<img class="course-cover" src="./coursecards/seminar${placeholderIndex}.webp" alt="${shortname}" />`
 			: `<img class="course-cover" src="${overviewfiles[0].fileurl}?token=${_MOODLE_TOKEN}" alt="${shortname}" />`;
 
-	const tags = extractSelectedTags(course);
+	const tags = extractSelectedTagNames(course);
 	const tagsBadge = tags.length > 0 ? drawBadge('Теги', tags.join(', '), 'tag') : '';
 
 	const components: CourseCardComponents = {

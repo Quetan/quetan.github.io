@@ -1,5 +1,5 @@
 import { ICourse } from '../../interfaces';
-import { createSummary, extractSelectedTags } from '../../_utils';
+import { createSummary, extractSelectedTagNames } from '../../_utils';
 import { MEDIA_WRAPPER } from '../nodes';
 import { _MOODLE_TOKEN } from '../../api';
 import { drawCategoryBadge } from '../components/category-badge';
@@ -51,7 +51,7 @@ const createMediaCourse = (course: ICourse | undefined) => {
 			? `<img class="course-cover" src="./media.webp" alt="${shortname}" />`
 			: `<img class="course-cover" src="${overviewfiles[0]?.fileurl}?token=${_MOODLE_TOKEN}" alt="${fullname}" />`;
 
-	const tags = extractSelectedTags(course);
+	const tags = extractSelectedTagNames(course);
 	const tagsBadge = tags.length > 0 ? drawBadge('Теги', tags.join(', '), 'tag') : '';
 	const categoryBadge = drawCategoryBadge(categoryid, categoryname);
 

@@ -6,7 +6,7 @@ import { params, setURLSearchParam } from './URLSearchParams';
 const defaultState: FilterState = {
 	search: '',
 	type: 'all',
-	tag: '',
+	tag: 'all',
 	sort: 'new',
 } as const;
 

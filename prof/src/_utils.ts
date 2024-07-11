@@ -35,6 +35,11 @@ const extractTags = (course: ICourse) =>
 	course.customfields.filter(field => field.shortname.includes('tag_'));
 
 const extractSelectedTags = (course: ICourse) =>
+	extractTags(course)
+		.filter(tag => tag.valueraw === 1)
+		.map(tag => tag.shortname);
+
+const extractSelectedTagNames = (course: ICourse) =>
 	course.customfields
 		.filter(field => field.shortname.includes('tag_') && field.valueraw > 0)
 		.map(field => field.name);
@@ -46,4 +51,5 @@ export {
 	getPhotoByRawUrl,
 	extractTags,
 	extractSelectedTags,
+	extractSelectedTagNames,
 };

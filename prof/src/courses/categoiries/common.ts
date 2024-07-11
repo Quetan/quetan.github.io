@@ -1,4 +1,4 @@
-import { createSummary, extractSelectedTags } from '../../_utils';
+import { createSummary, extractSelectedTagNames } from '../../_utils';
 import { _MOODLE_TOKEN } from '../../api';
 import { Category, ICourse } from '../../interfaces';
 import { drawBadge } from '../../modal/components/badge';
@@ -23,7 +23,7 @@ const createCourse = (course: ICourse) => {
 	const categoryBadge = courseType
 		? drawBadge('Категория', categoryName[courseType], 'foruser')
 		: '';
-	const tags = extractSelectedTags(course);
+	const tags = extractSelectedTagNames(course);
 	const tagsBadge = tags.length > 0 ? drawBadge('Теги', tags.join(', '), 'tag') : '';
 
 	const components: CourseCardComponents = {
