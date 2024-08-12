@@ -5,6 +5,7 @@ import { _MOODLE_TOKEN } from '../../api';
 import { drawOpenButton } from '../components/open-button';
 import { CourseCardComponents, drawCourseCard } from './_node-constructor';
 import { drawBadge } from '../../modal/components/badge';
+import { drawShowAllButton } from '../components/show-all-button';
 
 const getSeminarCourses = (courses: ICourse[]): ICourse[] => {
 	return courses
@@ -26,6 +27,7 @@ const drawSeminarCourses = (seminarCourses: ICourse[]) => {
 	});
 
 	SEMINAR_WRAPPER.innerHTML = seminarCoursesNodes.join('');
+	SEMINAR_WRAPPER.innerHTML += drawShowAllButton('seminar');
 };
 
 const createSeminarCourse = (course: ICourse | undefined) => {

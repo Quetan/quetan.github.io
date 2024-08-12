@@ -6,6 +6,7 @@ import { drawAuthors } from '../../modal/components/authors';
 import { drawBadge } from '../../modal/components/badge';
 import { drawOpenButton } from '../components/open-button';
 import { CourseCardComponents, drawCourseCard } from './_node-constructor';
+import { drawShowAllButton } from '../components/show-all-button';
 
 const getPersonalCourses = (courses: ICourse[]): ICourse[] => {
 	return courses
@@ -28,6 +29,7 @@ const drawPersonalCourses = (personalCourses: ICourse[]) => {
 		return createPersonalCourse(course);
 	});
 	IND_WRAPPER.innerHTML = personalCoursesNodes.join('');
+	IND_WRAPPER.innerHTML += drawShowAllButton('personal');
 };
 
 const createPersonalCourse = (course: ICourse | undefined) => {

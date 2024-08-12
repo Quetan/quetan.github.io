@@ -6,6 +6,7 @@ import { drawBadge } from '../../modal/components/badge';
 import { drawOpenButton } from '../components/open-button';
 import { CourseCardComponents, drawCourseCard } from './_node-constructor';
 import { drawAuthors } from '../../modal/components/authors';
+import { drawShowAllButton } from '../components/show-all-button';
 
 const getGroupCourses = (courses: ICourse[]): ICourse[] => {
 	return courses
@@ -28,6 +29,7 @@ const drawGroupCourses = (groupCourses: ICourse[]) => {
 		return createGroupCourse(course);
 	});
 	GROUP_WRAPPER.innerHTML = groupCoursesNodes.join('');
+	GROUP_WRAPPER.innerHTML += drawShowAllButton('group');
 };
 
 const createGroupCourse = (course: ICourse | undefined) => {

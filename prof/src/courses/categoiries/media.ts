@@ -6,6 +6,7 @@ import { drawCategoryBadge } from '../components/category-badge';
 import { drawOpenButton } from '../components/open-button';
 import { CourseCardComponents, drawCourseCard } from './_node-constructor';
 import { drawBadge } from '../../modal/components/badge';
+import { drawShowAllButton } from '../components/show-all-button';
 
 const getMediaCourses = (courses: ICourse[]): ICourse[] => {
 	return courses
@@ -40,6 +41,7 @@ const drawMediaCourses = (mediaCourses: ICourse[]) => {
 	const mediaCoursesNodes = media.map(m => createMediaCourse(m));
 
 	MEDIA_WRAPPER.innerHTML = mediaCoursesNodes.join('');
+	MEDIA_WRAPPER.innerHTML += drawShowAllButton('media');
 };
 
 const createMediaCourse = (course: ICourse | undefined) => {
