@@ -29,6 +29,9 @@ const createDetails = (content: string) => {
 
 const drawProgram = (course: ICourse) => {
 	const program = course.customfields.find(field => field.shortname === 'program')?.value ?? '';
+
+	if (!Boolean(program)) return '';
+
 	return `
         <p><strong>Программа курса:</strong></p>
         ${createDetails(program)}
