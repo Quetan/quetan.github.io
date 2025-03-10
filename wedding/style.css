@@ -183,12 +183,42 @@ section {
   position: relative;
 }
 
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.cta {
+  display: block;
+  padding: 1em 3em;
+  font-size: 1.2em;
+  line-height: 1;
+  border-radius: 42px;
+  background-color: var(--light-green-opacity-color);
+  width: max-content;
+  margin: 1em auto;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+  letter-spacing: 0.02em;
+  animation: pulse 2s infinite;
+}
+
+.cta:hover {
+  box-shadow: 2px 3px 10px var(--light-green-opacity-color);
+}
+
 /* Section Styles */
 .content {
   padding: 2em 1em 6em 1em;
   max-width: 800px;
   margin: 0 auto;
   position: relative;
+  text-wrap: balance;
 }
 
 .hero {
@@ -290,15 +320,15 @@ p {
 .venue .route {
   display: block;
   margin: 4rem auto 0 auto;
-  padding: 0.5rem 4rem 0.5rem 2rem;
+  padding: 0.75rem 4rem 0.75rem 2rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  color: var(--bg-color);
-  background-color: var(--semilight-green-color);
+  background-color: var(--light-green-opacity-color);
   border-radius: 48px;
   letter-spacing: -0.04em;
   position: relative;
+  border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .venue .route svg {
@@ -515,6 +545,11 @@ footer {
     font-size: 4rem;
     margin-bottom: 1rem;
     padding: 1rem 0;
+  }
+
+  .cta {
+    padding: 0.8em 1.5em;
+    font-size: 1em;
   }
 
   .schedule-list li {

@@ -13,6 +13,9 @@
   <header>
     <h1>Кирилл <span class="divider">&</span> Мария</h1>
     <h2>Wedding day</h2>
+    <a class="cta" href="#rsvp">
+      Заполнить анкету
+    </a>
 
     <nav>
       <a href="#hero">Приглашение</a>
@@ -161,6 +164,10 @@
           <strong>Завершение</strong>
         </li>
       </ul>
+
+      <a class="cta" href="#rsvp">
+        Заполнить анкету
+      </a>
     </div>
   </section>
 
@@ -195,6 +202,8 @@
     <img class="decoration rightcenter" loading="lazy" src="./img/branch_topleft.webp" alt="">
     <div class="content">
       <h2>Анкета</h2>
+      <p>Просим Вас заполнить анкету или сообщить о Вашем решении в личном сообщении до <strong>10.04.2025 г.</strong>
+      </p>
       <div id="rsvpForm">
         <script src="https://forms.yandex.ru/_static/embed.js"></script>
         <iframe src="https://forms.yandex.ru/cloud/67c9ae9790fa7b16542c48a1/?iframe=1" frameborder="0"
@@ -218,20 +227,21 @@
   <script>
     const paramsString = window.location.search;
     const searchParams = new URLSearchParams(paramsString);
+    const recipientParam = 'recipient'
 
-    const recepientName = searchParams.get('recepient') ?? 'гость'
+    const recipientName = searchParams.get(recipientParam) ?? 'гость'
 
     const singleWomenList = ['Анастасия', 'Елизавета']
 
-    const isCouple = recepientName.includes(' и ')
+    const isCouple = recipientName.includes(' и ')
     const isSingleWoman = isCouple
       ? false
-      : singleWomenList.some(name => recepientName.includes(name))
+      : singleWomenList.some(name => recipientName.includes(name))
 
     const welcomeText = isCouple ? 'Дорогие' : isSingleWoman ? 'Дорогая' : 'Дорогой'
 
-    const recepientInviteTitleNode = document.getElementById('recepientInviteTitle');
-    recepientInviteTitleNode.innerText = `${welcomeText}\n${recepientName}!`;
+    const recipientInviteTitleNode = document.getElementById('recepientInviteTitle');
+    recipientInviteTitleNode.innerText = `${welcomeText}\n${recipientName}!`;
 
     const paletteSize = 9;
     const paletteNode = document.getElementById('palette');
