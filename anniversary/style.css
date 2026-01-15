@@ -14,12 +14,12 @@
   --bg-color: #fff;
   --light-bg-color: #faf3f3;
 
-  --light-green-color: #fe8f98;
-  --semilight-green-color: #de4f5b;
+  --light-blue-color: #5bb1e6;
+  --semilight-blue-color: #2b93d3;
 
-  --light-green-opacity-color: #de4f5b81;
+  --light-blue-opacity-color: #2b93d3;
 
-  --navigation: var(--light-green-color);
+  --navigation: var(--light-blue-color);
   --navigation-text: var(--light-bg-color);
 
   --base-font: "Gabriela", system-ui, -apple-system, BlinkMacSystemFont,
@@ -103,7 +103,7 @@ header h1 .divider {
   line-height: 0;
   opacity: 0.1;
   font-family: serif;
-  color: var(--light-green-color);
+  color: var(--light-blue-color);
 }
 
 header h2 {
@@ -253,7 +253,7 @@ section .decoration.topleft {
   left: 20%;
   right: 0;
   pointer-events: none;
-  background-color: var(--light-green-color);
+  background-color: var(--light-blue-color);
   -webkit-filter: blur(2px);
   filter: blur(2px);
   opacity: 0.1;
@@ -281,7 +281,7 @@ p {
   width: -moz-max-content;
   width: max-content;
   color: var(--bg-color);
-  background-color: var(--semilight-green-color);
+  background-color: var(--semilight-blue-color);
   border-radius: 48px;
   letter-spacing: -0.04em;
   position: relative;
@@ -336,7 +336,7 @@ p {
 }
 
 .schedule-list li .srow {
-  border-bottom: 2px dotted var(--light-green-color);
+  border-bottom: 2px dotted var(--light-blue-color);
   height: 2px;
   width: 100%;
   -ms-flex-negative: 1;
@@ -348,7 +348,7 @@ p {
   font-weight: 700;
   letter-spacing: -0.07em;
   line-height: 1;
-  color: var(--light-green-color);
+  color: var(--light-blue-color);
   opacity: 0.5;
 }
 
@@ -360,12 +360,12 @@ p {
   position: relative;
   padding: 2em 3em;
   border-radius: var(--border-radius);
-  background-color: var(--light-green-opacity-color);
+  background-color: var(--light-blue-opacity-color);
   width: 100%;
   max-width: 100%;
   font-family: var(--base-font);
-  -webkit-box-shadow: 2px 3px 10px var(--light-green-opacity-color);
-  box-shadow: 2px 3px 10px var(--light-green-opacity-color);
+  -webkit-box-shadow: 2px 3px 10px var(--light-blue-opacity-color);
+  box-shadow: 2px 3px 10px var(--light-blue-opacity-color);
 }
 
 .calendar table {
@@ -408,22 +408,28 @@ p {
   position: relative;
 }
 
-.calendar table td.highlight .heart {
+.calendar table td.highlight::after {
+  content: "";
   position: absolute;
+  display: block;
   left: 50%;
-  top: 40%;
-  height: 150px;
-  width: auto;
+  top: 50%;
+  height: 75px;
+  width: 75px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  background-color: var(--link-color);
+  border-radius: 100%;
+  aspect-ratio: 1;
+  opacity: 0.15;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 1em;
-  background: var(--semilight-green-color);
+  background: var(--semilight-blue-color);
   font-size: 0.9em;
   color: var(--bg-color);
 }
